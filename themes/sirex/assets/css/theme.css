@@ -208,6 +208,9 @@ body {
 :link, :visited {
 	color: #729fcf;
 }
+:link:hover, :visited:hover {
+	text-decoration: underline;
+}
 
 
 #brand :link,

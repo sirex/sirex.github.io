@@ -40,8 +40,9 @@ tr:hover {
 } 
 
 blockquote {
-    color: #C9C9C9;
+    background-color: #2F3638;
     border-left: 3px solid #B5B5B5;
+    padding: 2px;
     padding-left: 17px;
     margin-left: -20px;
     font-style: italic;
