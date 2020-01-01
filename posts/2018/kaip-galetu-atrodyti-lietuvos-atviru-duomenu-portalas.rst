@@ -1,0 +1,693 @@
+.. title: Kaip galėtų atrodyti Lietuvos atvirų duomenų portalas
+.. slug: kaip-galetu-atrodyti-lietuvos-atviru-duomenu-portalas
+.. date: 2018-09-05
+.. tags: openddata
+.. type: text
+
+Lietuvoje įsibėgėja atvirų duomenų portalo (ADP) projektas, kuriam yra skirta
+`2,6 mln. €`__. Šiuo metu rengiama ADP techninė specifikacija. Šio projekto
+eigą atidžiai stebiu nuo pat pradžių. Jei tiksliau, atvirų duomenų sritį
+pradėjau stebėti nuo 2012 metų, o ADP projektas prasidėjo 2017 metais.
+
+.. __: https://ivpk.lrv.lt/lt/apie-ivpk/vykdomi-projektai/atviru-duomenu-platformos-igalinancios-efektyvu-viesojo-sektoriaus-informacijos-pakartotini-panaudojima-verslui-ir-jos-valdymo-irankiu-sukurimas
+
+Noriu pasidžiaugti, kad tiek IVPK_, tiek tiekėjai sutinka bendrauti ir dalinasi
+informacija apie projekto eigą ir progresą, padeda suprasti, kas vyksta.
+
+.. _IVPK: https://ivpk.lrv.lt/
+
+Per 6 metus esu paleidęs nuo nulio `kurtą`__ atvirų duomenų portalą, keletą
+kartų esu paleidęs CKAN_ sistemą, kelis__ kartus__ esu__ `perkėlęs`__ `IVPK
+IRS`_ sistemos duomenis į CKAN__. Esu daręs duomenų surinkimą naudojant Scrapy_
+ir BeatifulSoap_, esu sukūręs savo `karkasą`__ duomenims atverti ir to `karkaso
+pagalba`__ esu `atvėręs apie 10 duomenų rinkinių`__. Atvertus duomenis esu
+panaudojęs projektuose manoseimas.lt_, manopozicija.lt_, esu `analizavęs`__ duomenis
+panaudodamas mašinų mokymosi algoritmus. Dariau `apklausą`__ dėl atvirų duomenų
+poreikio. Apklausos pagrindu parengiau `inventorizacijos ir prašymo gauti
+duomenis pavyzdines formas`__. Esu skaitęs daugybę dokumentų, tokių kaip
+investiciniai projektai, projekto nuostatai, viešojo pirkimo dokumentai,
+galimybių tyrimai ir pan.
+
+.. __: https://github.com/sirex/atviriduomenys.lt
+.. __: https://bitbucket.org/sirex/ckan-ivpk-import
+.. __: https://github.com/sirex/ckan-ivpk-import
+.. __: https://github.com/sirex/opendata.gov.lt-mysql-import
+.. __: https://github.com/ivpk/opendata.gov.lt-mysql-import
+.. __: http://ckan.opendata.gov.lt/
+.. __: https://github.com/sirex/databot
+.. __: https://github.com/sirex/databot-bots
+.. __: http://atviriduomenys.lt/data/
+.. __: https://www.kaggle.com/sirexo/similar-groups-by-votes
+.. __: https://goo.gl/forms/NG1N5GDfAHX1JvS22
+.. __: https://github.com/ivpk/metadata
+
+.. _CKAN: https://ckan.org/
+.. _IVPK IRS: http://opendata.gov.lt/
+.. _Scrapy: https://scrapy.org/
+.. _BeatifulSoap: https://www.crummy.com/software/BeautifulSoup/
+.. _manoseimas.lt: http://manoseimas.lt
+.. _manopozicija.lt: http://manopozicija.lt
+
+Visu tuo noriu pasakyti, kad esu išsamiai susipažinęs su atvirų duomenų
+klausimu. Kadangi šiuo metu yra rengiama techninė atvirų duomenų portalo
+specifikacija, noriu pasidalinti savo patirtimi ir matymu, kaip galėtų būti
+kuriamas atvirų duomenų portalas.
+
+Mano vertinimu, atvirų duomenų projektas turėtų būti sudarytas iš šių esminių
+dalių (kiekvienos dalies apimtį įvertinau pinigais, kad geriau atspindėti tos
+dalies svorį visame projekte):
+
+- **7,3 mln. €** duomenų inventorizavimo ir atvėrimo darbai, jei būtų atveriami
+  absoliučiai visi atvertini valstybinių įstaigų duomenys.
+
+- **0,2 mln. €** priemonių kūrimas duomenų inventorizavimui, prašymų teikimui,
+  atvėrimui ir viso proceso stebėsenai.
+
+- **0,03 mln. €** duomenų vitrinos CKAN pagrindu paleidimas.
+
+- **0,006 mln. €** infrastruktūros kaina per metus.
+
+Paaiškinimą iš kur gavau tokius skaičius rasite skyrelyje finansų paskirstymas.
+7,3 mln. € kaina duomenų inventorizavimui ir atvėrimui yra gerokai didesnė, nei
+skirtas finansavimas. Bet mano vertinimu tiek galėtų kainuoti absoliučiai visų
+valstybinių duomenų atvėrimas. Akivaizdu, kad skirto finansavimo neužteks
+visiems duomenis atverti, todėl labai svarbu tinkamai nusistatyti prioritetus.
+Jei bus atverti esminiai ir labiausiai reikalingi duomenų rinkiniai, to turėtų
+užtekti didžiajai daliai projektų įgyvendinti. Jei duomenys bus atveriami
+neatsižvelgiant į poreikį, tada pinigai bus išleisti, dalis duomenų bus
+atverta, tačiau projektai negalės judėti į priekį, jei jiems trūks duomenų,
+kurie nebuvo atverti.
+
+Duomenų brandos lygiai
+======================
+
+Valstybinės įstaigos pateikia gan daug duomenų ir informacijos savo svetainėse. Todėl atsiranda klausimas, kam reikia šio atvirų duomenų projekto, jei ir taip viskas jau yra pateikta. Atsakymas yra toks, kad šio atvirų duomenų projekto esmė yra pakelti duomenų brandos lygį.
+
+Remiantis `5 ★ Open Data`_ skale yra tokie brandos lygiai:
+
+.. _5 ★ Open Data: https://5stardata.info/
+
+1. ★ duomenys yra pateikti viešai, pagal atvirą licenciją, bet kokiu formatu ar
+   pavidalu.
+
+2. ★★ duomenys yra pateikti struktūruotu pavidalu, pavyzdžiui skaičiuoklės
+   lentelėmis, o ne teksto dokumentais.
+
+3. ★★★ duomenys yra pateikti atviru duomenų formatu, pavyzdžiui CSV formatu, o
+   ne skaičiuoklės dokumento failais.
+
+4. ★★★★ duomenų įrašai turi globalius identifikatorius ir skirtingi duomenų
+   rinkiniai gali būti susieti tarpusavyje globalių identifikatorių dėka.
+
+5. ★★★★★ duomenys aprašyti naudojant bendrai naudojamus žodynus.
+
+Viso atvirų duomenų projekto tikslas, kelti duomenų brandos lygį, kad duomenis
+būtų lengviau panaudoti įvairiuose projektuose.
+
+Nuo ko pradėti?
+===============
+
+Labai svarbu darbus pradėti nuo teisingo galo. Mano manymu, pradėti reikėtų nuo
+duomenų atvėrimo. Pradžiai reikėtų pasirinkti nesudėtingą ir nedidelės apimties
+duomenų rinkinį, pasidaryti inventorizaciją ir atverti duomenis.
+
+Tik turint realios patirties, bent su vienu ar keliais duomenų rinkiniais,
+galima pradėti kurti priemones, kurios palengvintu inventorizavimo ir atvėrimo
+darbus.
+
+Atlikus kelių duomenų rinkinių inventorizaciją, galima pereiti prie prašymų
+gauti duomenis. Prašymai žinoma turėtų būti ne A4 lapas su tekstu, o
+kompiuteriui suprantamo formato duomenų failas, kuriame būtų surašyti projektui
+reikalingi laukai. Pradžiai, prašymų formos gali būti pateiktos paprastų
+skaičiuoklių forma. Vėliau, išbandžius prašymų teikimo ir priėmimo procesą
+praktiškai, galima sukurti patogesnius įrankius, vietoj skaičiuoklės lentelių.
+
+Turint procesą prašymų pateikimui ir priėmimui, duomenų atvėrimo prioritetas
+turėtų būti nustatomas remiantis prašymų duomenimis. Kuo daugiau pateikta
+prašymų tam tikriems duomenims gauti, tuo tų duomenų atvėrimo prioritetas
+turėtų būti didesnis. Žinoma vadovautis reikėtų ne tik prašymu skaičiumi, bet
+ir projekto, kuriam reikalingi duomenys rodikliais. Didelės apimties projektai,
+turintys didžiausią socialinę ir ekonominę naudą, turėtų būti aukštesnio
+prioriteto, nei nedideli ir mažos svarbos asmeniniai duomenų panaudojimo
+projektėliai.
+
+Didėjant atvertų rinkmenų kiekiui reikalinga stebėsenos sistema, kurioje turėtų
+atsispindėti esminiai veiklos rodikliai. Turėtų matytis kiek prašymų jau
+patenkinta, kiek procentų liko iki tol, kol bus patenkinti visi prašymai arba
+kiek procentų liko, kol bus pilnai patenkinti konkrečių projektų prašymai.
+Turėtų būti galimybė stebėti atveriamų duomenų prognozuojama socialinė ir
+ekonominė nauda. Visa stebėsena žinoma turėtų vykti realiu laiku.
+
+Nuolat didėjant atvertų duomenų rinkinių skaičiui, reikėtų apsirašyti metodiką,
+kurioje būtų dokumentuoti duomenų atvėrimo procesai. Ši metodika turėtų padėti
+išlaikyti vientisumą atveriant vis daugiau duomenų. Įgaunant vis naujos
+patirties atveriant duomenis, metodika turėtų būti nuolat atnaujinama.
+Realybėje, ADP projekte darbai buvo pradėti ne nuo duomenų atvėrimo, o nuo
+metodikos rengimo, kas mano manymu nėra gerai. Galima bandyti aprašyti pyrago
+valgymo metodiką, jo neparagavus, bet vis dėl to geriau atsikąsti bent vieną
+kąsnį, o tada imtis metodikos, remiantis praktine patirtimi.
+
+Paskutiniame etape, turint pakankamai daug atvertų duomenų galima įsidiegti
+atvirų duomenų vitriną. Atvirų duomenų vitrinoje būtų galima greitai susirasti
+atvertus duomenų rinkinius, juos filtruoti pagal kategorijas, raktinius žodžius
+ir pan. Vitrinoje galima demonstruoti, kokie projektai kokius duomenis naudoja.
+Nėra prasmės paleidinėti vitrinos projekto pradžioje, neturint duomenų.
+
+Kiek etapų reikia šiam projektui?
+=================================
+
+Šiuo metu ADP projektas yra suskirstytas į bent penkis skirtingus etapus.
+Projekto pradžioje man kilo tam tikrų klausimų į kuriuos buvo atsakyta, kad
+šiame etape tai nenumatyta, bet tai bus daroma vėlesniuose etapuose. Etapų
+gausa trukdo sekti projekto eigą. Nėra garantijos, kad pažadėti darbai
+sekančiuose etapuose tikrai bus vykdomi. Be to, kiekvienas etapas reikalauja
+atskiro viešojo pirkimo, skirtingus etapus gali vykdyti skirtingi tiekėjai
+turinti visiškai kitą pasaulio suvokimą.
+
+Idealiu atveju, geriausia apsiriboti vienu etapu, kuriame turi būti padaryta
+viskas, be atidėliojimų ateities etapams. Vienam etapui užtektų vieno viešojo
+pirkimo, nedidelės komandos paslaugoms, kuri toliau galėtų žongliruoti
+įvairiais tiekėjais, žinoma skaidriai ir kompiuteriui įskaitomu formatu
+atsiskaitydama už panaudotas lėšas.
+
+Kas turėtų būti atsakingas už duomenų atvėrimą?
+===============================================
+
+Duomenų atvėrimo darbų jokiu būdu nereikėtų permesti įstaigų atsakomybei.
+Skirtingos įstaigos turi skirtingus IT pajėgumus, kai kurios iš vis neturi IT
+skyriaus. Dažnai įstaigos informacines sistemas yra užsakiusios iš tiekėjų ir
+pačios, be tiekėjų pagalbos negalėtų atverti duomenų. Su tiekėjais dažnai būna
+pasibaigusios sutartys. Net jei įstaiga turi stiprų IT skyrių, tai nereiškia,
+kad vidinis IT skyrius turi pakankamas kompetencijas duomenims atverti. Yra
+keletas pavyzdžių, kai net ir atvėrus duomenis, atvertų duomenų brandos lygis
+yra gan prastas ir prie duomenų reikia dar įdėti nemažai darbo, kad juos būtų
+galima naudoti. Be to, įstaigos nėra labai entuziastingai nusiteikusios atvirų
+duomenų klausimų. Žinoma, dėl entuziazmo, pasitaiko išimčių.
+
+Šiuo metu svarstomas variantas, kad duomenis turėtų savarankiškai atverti
+pačios įstaigos. Manau tai yra labai prasta mintis. Pilnas duomenų atvėrimas
+įskaitant inventorizaciją, nuasmeninimą ir transformavimą yra rankinis ir daug
+laiko reikalaujantis darbas, kurį gali atlikti tik kompetentingi specialistai.
+
+Duomenų atvėrimą turėtų atlikti išoriniai paslaugų tiekėjai, dirbdami kartu su
+įstaigomis. Tokius paslaugų tiekėjus reikėtų samdyti pagal valandinius
+įkainius, kadangi duomenų atvėrimas nėra aiškiai apibrėžtas ir baigtinis
+darbas. Visus tiekėjus dirbančius prie duomenų atvėrimo turėtų kontroliuoti
+viena komanda, kurios tikslas užtikrinti, kad būtų laikomasi vieningų
+standartų.
+
+Duomenų atvėrimo organizavimas
+==============================
+
+Visą duomenų atvėrimo procesą turėtų koordinuoti viena dedikuota komanda. Tokia
+dedikuota komanda vertintu skirtingų tiekėjų atliktą darbą, grąžintų tiekėjui
+taisyti, jei randa klaidų ar neatitikimų. Dedikuota komanda užtikrintu, kad
+visos tiekėjų komandos, darbus atliktų kokybiškai ir taikant vieningus
+standartus.
+
+Duomenų atvėrimo skriptai turėtų būti atviro kodo. Dažnai duomenų naudotojai
+randa duomenyse klaidą, tačiau nežino klaidos šaltinio. Turinti visą duomenų
+transformacijos istoriją ir atvėrimo skriptus, duomenų naudotojas gali tiksliai
+identifikuoti klaidos šaltinį ir pasiūlyti pataisymą.
+
+Didelių projektų naudojančių atvirus duomenis komandos greičiausiai bus
+suinteresuotos pačios apsiimti duomenų atvėrimu, kurių jiems reikia. Tokių
+komandų darbas gali būtį kompensuojamas arba skatinamas iš atvirų duomenų
+projekto biudžeto ir koordinuojamas dedikuotos komandos.
+
+Dažnai, visiškai nesusijusiems duomenų rinkiniams tinka tie patys duomenų
+transformavimo algoritmai. Todėl turint bendrą atviro kodo repozitoriją, galima
+dalintis kodu.
+
+Įstaigos, kurių duomenys inventorizuojami ir atveriami, turėtų bendradarbiauti
+su duomenis atveriančiomis komandomis ir padėti toms komandoms gauti visą
+reikalingą informaciją ar pavyzdinius duomenis.
+
+Atrodo, kad turint didelį skaičių tiekėjų, bus labai daug biurokratijos ir
+viešųjų pirkimų. Manau tai galima išspręsti vienu pirkimu, įsigyjant dedikuotos
+komandos paslaugas, kuri būtų atsakinga už subkontraktorių paiešką ir jų
+paslaugų pirkimu ir atliekamo darbo priežiūra. Tik tokiu atveju, reikėtų
+reikalauti, kad būtų pateiktos tikslios ataskaitos (atvirų duomenų pavidalu
+žinoma), kur, kam ir kodėl buvo išleisti pinigai. Pinigai skirti duomenims
+atverti galėtų matytis atvirų duomenų stebėsenos sistemoje, kurioje būtų galima
+rodyti koks tiekėjas, kiek pinigų sunaudojo atverdamas konkretų duomenų
+rinkinį. Tai būtų visiškai skaidru.
+
+Duomenų inventorizavimas
+========================
+
+Duomenų inventorizavimas yra toks procesas, kurio metu valstybinės įstaigos
+surašo, kokius duomenis turi. Duomenis galima inventorizuoti įvairiais detalumo
+lygiais:
+
+- **Rinkinys**. Galima abstrakčiai nurodyti duomenų rinkinį, kurį sudaro grupė
+  įvairių duomenų rinkmenų. Pavyzdžiui „Seimo balsavimų duomenų rinkinys“ į
+  kurį įeitų seimo narių, kadencijų, sesijų, posėdžių, registracijų,
+  stenogramų, balsavimų ir teisės aktų duomenų rinkmenos.
+
+- **Rinkmena**. Duomenų rinkinys sudarytas iš duomenų rinkmenų. Rinkmena yra
+  viena lentelė, vienas duomenų failas ar vienos rūšies objektų rinkinys.
+  Pavyzdžiui seimo narių sąrašas būtų konkreti duomenų rinkmena.
+
+- **Laukas**. Vieną rinkmeną sudaro laukai, lentelės stulpeliai arba objekto
+  savybės. Pavyzdžiui seimo nario vardas, pavardė, frakcija, mandato pradžios
+  ir pabaigos data ir t.t.
+
+- **Tipas**. Laukai turi duomenų reikšmių tipus, pavyzdžiui vardas yra tam
+  tikro ilgio simbolių eilutė, mandato pradžios data yra datos tipo ir pan.
+
+- **Ryšys**. Skirtingi duomenų objektai gali būti susieti ryšiais tarp objektų,
+  pavyzdžiui seimo nario objektas gali būti susietas su frakcijos objektu, abu
+  šie objektai priklauso skirtingoms duomenų rinkmenoms, bet turint vieningus
+  objektų identifikatorius, rinkmenas nesunkiai galima sujungti ir gauti naujas
+  išvestines rinkmenas.
+
+- **Žodynai**. Objektų ir laukų pavadinimai skirtinguose duomenų rinkiniuose
+  gali būti skirtingi. Šie skirtingi pavadinimai gali būti susieti su bendrai
+  naudojamais arba viešai publikuojamais žodynais. Pavyzdžiui lauko vardas
+  pavadinimas gali būti susietas su foaf:firstName.
+
+- **Klasifikavimas**. Žodynuose esantys objektai ir laukai gali būti
+  klasifikuojami pagal bendrai naudojamą klasių hierarchiją. Pavyzdžiui, seimo
+  narį galima priskirti asmens klasei, asmenį galima priskirti žinduolio klasei
+  ir t.t.  Toks klasifikavimas suteikia daugiau galimybių valdyti duomenis ir
+  išplėsti duomenų panaudojimo galimybes.
+
+Inventorizavimą reikėtų pradėti nuo mažiausio detalumo ir atsižvelgiant į
+prioritetus didinti detalumą arba didinti duomenų brandos lygį.
+
+Duomenų inventorizavimą galima pradėti naudojant paprasčiausias `skaičiuoklės
+lenteles`__ arba `duomenų aprašymo kalbas`__, tokias kaip JSON ar YAML. Vėliau,
+turint pakankamai daug pavyzdžių, kaip turėtų būti inventorizuojami duomenys,
+galima pradėti kurti patogesnę naudotoją sąsają duomenų inventorizavimui.
+
+.. __: https://github.com/ivpk/metadata
+.. __: https://github.com/sirex/atviru-duomenu-poreikio-tyrimas
+
+Prašymai duomenims gauti
+========================
+
+Projektų kūrėjai, norėdami gauti jiems reikalingus duomenis turėtų teikti
+prašymus duomenims gauti. Prašymai būtų pateikiami ne A4 lapo dokumentais su
+tekstu, o kompiuteriui suprantamu pavyzdžiui JSON arba YAML formatu. Iš bėdos,
+galima prašymus pateikti ir skaičiuoklės lentelėmis, aiškiai susitarus dėl
+lentelės struktūros.
+
+Prašymuose, projektų kūrėjai turėtų tiksliai surašyti, kokių duomenų laukų
+projektui. Prašymai duomenims gauti ir inventorizacijos aprašai turėtų naudoti
+suderinama formatą, kad būtų galima palyginti inventorizuotus ir prašomus
+duomenis. Teikiant prašymus duomenims gauti, prašymas, kaip ir inventorizacijos
+atveju, iš pradžių gali būti pateikiamas mažesniu detalumu, o vėliau esant
+reikalui detalumas gali būti didinamas.
+
+Prašyme reikėtų nurodyti projektui reikalingus duomenis, o ne tai, kokius
+duomenis kaupia valstybinės įstaigos. Jei prašomų duomenų nėra inventorizacijos
+įrašuose arba įstaiga tiesiog tokių duomenų nekaupia, tada tai turėtų būti
+ženklas, kad gal būt tokius duomenis reikėtų pradėti kaupti, nes yra poreikis
+juos naudoti. Yra labai daug projektams reikalingų duomenų, kurių valstybinės
+įstaigos nekaupia, nors galėtų kaupti. Valstybinėse įstaigose labai daug
+duomenų yra „paslėpta“ A4 lapuose.
+
+Vienas iš pavyzdžių apie nekaupiamus duomenis galėtų būti teisės aktų duomenys.
+Šiuo metu teisės aktai yra spausdinimui paruošti dokumentai, kuriuose nėra
+sužymėta kokią funkcija dokumente atlieka atskiros pastraipos ar atskiri teksto
+fragmentai. Teisės aktų keitimo projektų tekste nėra mašininiu būdu nuskaitomos
+informacijos apie tai, kas tiksliai keičiama. Tokie duomenys yra labai naudingi
+įvairiuose taikymuose, tačiau jie nėra kaupiami.
+
+Baiminamasi, kad atvirų duomenų naudotojų bendruomenė yra labai nedidelė ir
+labai pasyvi, dėl to niekas neteiks prašymu. Manau dėl to tikrai nereikėtų
+nerimauti, svarbu sudaryti priemones pateikti prašymus duomenims gauti ir
+tinkamai apie tai informuoti visuomenę. Reikėtų aiškiai nurodyti, kad duomenys
+bus atveriami prašymų skaičiaus prioriteto tvarka. Jei atsiras, bent vienas
+prašymas, reiškia prioritetas yra aiškus, kadangi yra konkretus suinteresuotas
+asmuo, kuris tuos duomenis planuoja naudoti. Jei prašymo nėra, tada nėra jokių
+garantijų, kad atvėrus duomenis, kas nors juos naudos.
+
+Šiuo metu žiniasklaidos priemonėse galima rasti keletą užsakomųjų straipsnių,
+kurie supažindina visuomenę su atvirais duomenimis. Problema yra ta, kad
+duomenų kol kas nėra ir tokie straipsniai galėtų informuoti apie tvarką, kaip
+teikti prašymus duomenims gauti. Jei tai bus aiškiai iškomunikuota, prašymų
+tikrai netrūks.
+
+Teikiant prašymus reikėtų įvertinti esamą/numatomą projekto naudotojų skaičių
+ir esamą/numatomą pelną ar kitus rodiklius. Tokiu būdu atsiras galimybė realiu
+laiku paskaičiuoti, kiek pelno generuoja atviri duomenys ir kiek naudotojų
+naudoja paslaugas atvirų duomenų dėka. Papildomai, galima įvertinti ateities
+pelno ir naudotojų prognozes. Tokie rodikliai gali būti naudojami tiksliau
+įvertinti atvertinų duomenų prioritetą. Duomenys reikalingi didelio masto ir
+poveikio projektui turėtų būti aukštesnio prioriteto, nei vieno asmens prašymas
+gauti duomenis asmeniniams tikslams.
+
+Vyriausybė taip pat turėtų teikti prašymus gauti duomenis, vadovaujantis turima
+strategija ir veiklos sritimis. Strategija ir veiklos sritys yra mažo detalumo,
+todėl prašyme reikėtų tiksliau aprašyti galimus duomenų panaudojimo atvejus
+kiekvienoje srityje ir sužymėti, kokių konkrečių duomenų laukų reikėtų šiems
+projektams. Tokiu būdu, net ir neturint prašymų duomenims gauti, būtų galima
+vadovautis strateginiais prioritetais.
+
+Atveriant duomenis prioritetą reikėtų teikti didesnį detalumą turintiems
+prašymams.
+
+Bendrasis žodynas
+=================
+
+Kadangi skirtingos įstaigos ir skirtingų projektų autoriai naudoja skirtingus
+pavadinimus tam pačiam dalykui pavadinti reikia turėti bendrąjį žodyną, kad
+būtų įmanoma susikalbėti, tiek žmogiškąja tiek kompiuterine prasme.
+
+Turint inventorizacijos ir prašymų duomenis, juos reikėtų „išversti“ iš vidinės
+terminologijos į bendrojo žodyno terminologiją. Pavyzdžiui, turi būti galimybė
+nurodyti, kad inventorizacijos duomenyse naudojamas fname laukas yra tas pats,
+kas vardas. Tokiu būdu, atsiranda galimybė įvertinti poreikį automatiniu būdu,
+siejant inventorizacijos ir prašymų duomenis per bendrąjį žodyną.
+
+Bendrojo žodyno nereikėtų painioti su viešai skelbiamais žodynais, tokias kaip
+DCAT_, FOAF_, `Dublin Core`_ ir pan. Bendrasis žodynas yra skirtas tik vidinėms
+inventorizacijos ir prašymų teikimo reikmėms. Viešieji žodynai dengia
+specifines ir siauras sritis. Tinkamų viešųjų žodynų paieška ir susiejimas yra
+daug laiko reikalaujantis darbas, be to viešieji žodynai dengia tik nedidelę
+dalį visų terminų. Kai kurie viešieji žodynai dengia tuos pačius terminus,
+todėl reikia atsirinkti kurį žodyną naudoti.
+
+.. _DCAT: https://www.w3.org/TR/vocab-dcat/
+.. _FOAF: http://xmlns.com/foaf/spec/
+.. _Dublin Core: http://dublincore.org/
+
+Kadangi darbas su viešaisiais žodynais yra gan sudėtingas ir reikalauja daug
+laiko, geriausia naudoti tik vidinėms reikmėms skirtą bendrąjį žodyną, kuris
+būtų kuriamas ir pildomas bendromis pastangomis. Vėliau siekiant didesnės
+integracijos, bendrasis žodynas gali būti susietas ir su viešaisiais žodynas.
+
+Atliekant inventorizaciją ir teikiant prašymus, reikėtų vadovautis bendruoju
+žodynu.
+
+Duomenų nuasmeninimas
+=====================
+
+Duomenų nuasmeninimą galima iš dalies automatizuoti turinti pakankamai detalią
+inventorizaciją. Jei inventorizacijos metu yra nurodyta kurie laukai siejasi su
+asmens duomenimis, tada nesunkiai galima įvertinti, kokie duomenys ir kaip
+tiksliai gali identifikuoti asmenį. Papildomai, pasitelkus duomenų analizę,
+galima tiksliai įvertinti ar siejant duomenis galima identifikuoti asmenį ar
+ne.
+
+Jei automatinės priemonės aptinka, kad asmuo gali būti identifikuotas, tada
+galima atverti apibendrintus duomenis, pateikiant vidurkius, medianas,
+standartinį nuokrypį ir pan.
+
+Ne viską reikia nuasmeninti. Yra išimčių, kada asmeniniai duomenys gali būti
+viešinami. Pavyzdžiui, viešieji asmenys, tokie kaip Seimo nariai privalo
+viešinti tam tikrą informaciją apie save. Todėl tam tikrais atvejais,
+pavyzdžiui dalyvaujant rinkimuose, asmenys sutinka viešinti tam tikrus
+asmeninius duomenis, kurie gali būti atverti.
+
+Duomenų surinkimas
+==================
+
+Naudojantis inventorizacijos duomenimis, jei inventorizacija yra pakankamai
+detali, tada dalis duomenų atvėrimo darbo jau padaryta. Jei inventorizacijos
+metu yra surašyti tikslūs laukų pavadinimai ir reikšmių tipai, laukai yra
+sužymėti nuasmeninimo žymėmis, galima automatiškai vykdyti duomenų ištraukimą
+iš duomenų bazių ar kitų saugyklų. Nuasmeninti duomenys turi būti periodiškai
+surenkami ir išsaugomi atskiroje duomenų saugykloje. To reikia tam, kad
+netrikdyti veikiančių informacinių sistemų darbo, tuo atveju jei atvirų duomenų
+naudojimas yra gan intensyvus.
+
+Turi būti mechanizmai, kurie padeda unikaliai identifikuoti atskirus objektus.
+Tokiu būdu galima užtikrinti efektyvesnį duomenų surinkimą, atnaujinant
+duomenis tik tada, kai jie pasikeitė.
+
+Duomenų objektai turėtų turėti žymes nurodančias, iš kur gauti duomenys, kada
+jie gauti, kada pasikeitė, kada paskutinį kartą buvo atnaujinti. Šie
+metaduomenys yra labai svarbūs sprendžiant įvairius duomenų surinkimo
+sutrikimus.
+
+Tais atvejais, kai tiekėjo duomenų srautas yra labai didelis, geriausia duomenų
+nekopijuoti į tarpinę saugyklą, o pateikti tiesioginę prieigą prie pirminės
+duomenų saugyklos, jei įmanoma. Tokiu būdu bus užtikrinta realaus laiko prieiga
+prie duomenų. Jei duomenys būtų kopijuojami į tarpinę saugyklą, tada būtų
+uždelsimas teikiant duomenis.
+
+Duomenų transformavimas
+=======================
+
+Pirminiai duomenys dažnai būna pritaikyti tam tikrai siaurai taikymo sričiai.
+Pavyzdžiui, adreso laukas gali būti paprastos tekstinės formos, be koordinačių
+žemėlapyje. Tas pats adresas gali būti užrašytas įvairiomis formomis. Toks
+pateikimas įstaigos poreikius tenkina, kadangi jie nedaro duomenų atvaizdavimo
+žemėlapyje, tačiau atvirų duomenų naudotojai tokius duomenis vertins, kaip žemo
+pirmo brandos lygio, nestruktūruotus duomenis. Tam, kad pakelti tokių duomenų
+brandos lygį, reikia transformuoti adreso tekstinę reikšmę į koordinates
+žemėlapyje ir susieti su konkrečiais vektorinių objektų identifikatoriais.
+
+Toks duomenų transformavimas yra labai sudėtingas ir rankinis procesas,
+reikalaujantis daug laiko. Būtina atsižvelgti į poreikio duomenis, tam, kad
+laikas skirtas transformuojant duomenis būtų skirtas tik tuo atveju, jei
+duomenų tikrai reikia (t.y. jų prašo bent vienas projektas).
+
+Atliekant duomenų transformavimą, reikėtų išlaikyti originalius pirminius
+duomenis, kurių pagrindu buvo atlikta transformacija. Transformuotus duomenis
+reikėtų sužymėti žymėmis, nurodančiomis duomenų šaltinį, transformavimo
+algoritmą, klaidas jei tokių buvo transformavimo metu.
+
+Išlaikant pirminius duomenis, paliekama galimybė greičiau surasti problemines
+vietas ir pataisyti transformaciją tik tose vietose, kuriose ji veikia blogai.
+Dažnai didesnio duomenų kiekio transformavimas gali trukti valandas ar net
+dienas. Pavyzdžiui teksto išrinkimas iš įvairių formatų dokumentų yra gan lėtas
+procesas ir gali trukti, gan ligai. Jei vėliau iš to teksto daromos dar kelios
+transformacijos, labai naudinga turėti pirminį šaltinį, kai pastebima klaida
+paskutiniame transformacijos žingsnyje, kad nereikėtų visko kartoti nuo
+pradžių.
+
+Duomenų susiejimas
+==================
+
+Duomenys surinkti iš įvairių nepriklausomų šaltinių neturi aiškių globalių
+identifikatorių. Todėl, norint turėti galimybę jungti nesusijusių šaltinių
+duomenis, reikia duomenims suteikti globalius identifikatorius ir susieti
+duomenis taikant įvairias palyginimo ir spėjimo operacijas.
+
+Susiejimas dažnai daromas naudojant vardus, pavadinimus ir kitus kriterijus,
+kurie unikaliai identifikuoja objektą. Ne visus duomenis įmanoma susieti
+automatizuotu būdu, kartais duomenys neturi unikalių bendrai naudojamų
+reikšmių, pavyzdžiui įmonių pavadinimai gali kartotis, gali būti užrašomi
+skirtingomis formomis ir pan. Tokiu atveju padeda turėti kanoninį pavadinimų
+sąrašą, kuriuo vadovaujantis atliekamas susiejimas.
+
+Duomenų tikrinimas
+==================
+
+Yra daugybė vietų, kuriose duomenys galim būti iškraipyti. Duomenis gali būti
+klaidingai suvesti, klaidingai transformuoti, klaidingai susieti ir t.t.
+
+Kad užtikrinti atvertų duomenų kokybę, atvertus duomenis reikia tikrinti.
+Tikrinimui reikia aprašyti taisykles, tokias, kaip amžius turi būti teigiamas
+skaičius ir mažesnis už vyriausią gyvenantį žmogų. Datos formatas, turi
+atitikti vieningai naudojamą datos formatą. Koordinatės turi būti apibrėžto
+regiono ribose. Tokio pobūdžio patikrinimai padeda rasti įvairias klaidas ir
+užtikrina duomenų kokybę.
+
+Duomenų sinchronizavimas
+========================
+
+Dažnai duomenų naudotojai daro atvirų duomenų kopijas savo vidinėse duomenų
+bazėse. Darant tokias kopijas, tam tikrais laiko intervalais tikrinama ar nėra
+naujų duomenų. Kad toks duomenų sinchronizavimas būtų kuo sklandesnis, visi
+atverti duomenys turėtų turėti monotoniškai didėjantį pakeitimo numerį arba
+kursorių. Turinti duomenų keitimo numerį, duomenų naudotojas gali išsisaugoti
+paskutinio sinchronizavimo pakeitimo numerį ir toliau atvirų duomenų platformos
+užklausti tik naujų duomenų, nuo nurodyto paskutinio pakeitimo numerio.
+
+Toks srautinis duomenų pateikimas išsprendžia gan didelę nuolatinio duomenų
+sinchronizavimo problemą, ypač tais atvejais, kai duomenų kiekis yra didelis.
+
+Rankinis duomenų suvedimas ir taisymas
+======================================
+
+Deja ne visais atvejais įmanoma arba racionalu daryti automatinį duomenų
+transformavimą arba valymą. Kai kuriais duomenys nėra kaupiami, todėl reikia
+juos suvesti rankiniu būdu. Yra atvejų, kai duomenys yra labai išbarstyti ir
+tiesiog suvesti juos rankiniu būdu yra paprasčiau ir greičiau. Kartais
+pasitaiko vienetinės išimtinės situacijos, kurias paprasčiau pataisyti rankiniu
+būdu.
+
+Visais tokiais atvejai reikalinga priemonė, kuri leistų peržiūrėti vieną
+duomenų įrašą ir leistų pranešti apie klaidą arba tiesiog pataisyti reikšmę
+rankiniu būdu.
+
+Panašus projektas, kuris leidžia tai daryti yra WikiData. Panašus principas
+galėtų būti taikomas ir atvirų duomenų portale. Yra daug atvejų, kur duomenys
+tiesiog nekaupiami struktūruotu pavidalu ir yra išbarstyti po skirtingas
+įstaigas. Vienas toks pavyzdys yra įstaigos būstinių adresai arba darbuotojų
+kontaktai. Visos įstaigos galėtu suvesti savo būstinių adresus ir darbuotojų
+kontaktus vienoje vietoje, atvirų duomenų portale.
+
+Lietuvos istorijos archyvas turi daug skaitmenintų rankraščių, kurie pateikiami
+kaip paveiksliukai. Tokiems paveiksliukams, galima būtų suteikti galimybę
+perrašyti tekstą. Metrikų knygų paveiksliukus galima būtų perrašyti
+struktūruotu pavidalu, nurodant gimimo, santuokos, mirties datas, vardus,
+pavardes ir giminystės ryšius.
+
+Esminių veiklos rodiklių stebėsena
+==================================
+
+Remiantis inventorizacijos ir prašymų duomenimis galėtų būti pateiktas visų
+laukų sąrašas. Tame sąraše galėtų būti rodoma, pateiktų prašymų skaičius,
+numatyta atvėrimo data, panaudotas finansavimas, atsakingas tiekėjas už
+atvėrimą, įstaigos teikiančios duomenis ir pan. Jei duomenys jau atverti, turi
+būti rodoma informacija, kada duomenys buvo atnaujinti, ar atnaujinimo metu
+nebuvo klaidų, kiek kartų duomenys yra pasisiųsti ar kiek naudotojų nuolat
+atlieka duomenų sinchronizavimą, kiek kainavo duomenų atvėrimas.
+
+Visa tai turėtų būti rūšiuojama, pagal prašymų skaičių, pagal esamą/numatomą
+pelną, naudotojų skaičių, atvėrimo kainą.
+
+Jei duomenys yra išvestiniai, turi būti nuoroda į šaltinį, iš kurių duomenys
+buvo išvesti.
+
+Galėtų būti rodomi statistiniai duomenys apie tai, koks procentas prašymų gauti
+duomenis yra patenkintas, kiek dar liko atverti duomenų, kiek liko skirto
+finansavimo pinigų, kokie teikiamų duomenų brandos lygiai. Galima apskaičiuoti
+kokių įstaigų duomenų labiausiai prašoma ir kiek jų yra atverta. Galima realiu
+laiku rodyti bendrą atvirų duomenų generuojamą pelną ir naudotojų skaičių.
+Galima įvertinti ar išleisti pinigai duomenims atverti jau atsipirko ar dar ne.
+
+Duomenų naudotojai, naudojantis duomenų portalo API galėtų teikti atsiliepimus
+apie naudojamus duomenis. Galėtų informuoti, kiek projektas turi naudotojų,
+kiek pelno generuoja, galėtų informuoti apie klaidas ir pan.
+
+Atvirų duomenų metodika
+=======================
+
+Įgaunant vis daugiau patirties atveriant duomenis, galima pradėti rašyti ir
+nuolat atnaujinti atvirų duomenų metodiką. Galima dokumentuoti naudojamus
+įrankius, galima susitarti kaip tiksliai inventorizuojami duomenys ir kokie
+metaduomenys turi būti pateikiami inventorizacijos metu.
+
+Metodika turėtų būti ne el. paštu siuntinėjamas keliasdešimt lapų apimties
+dokumentas, o aiški ir patogi naudoti, nuolat atnaujinama dokumentacija, su
+nuorodomis ir versijomis. Dokumentacija galėtų turėti mokomąją medžiagą, kur
+būtų pateikti konkretūs atvėrimo pavyzdžiai su visomis detalėmis.
+
+Atvirų duomenų vitrina
+======================
+
+Viską, kas iki šiol yra paminėta yra techniniai dalykai, sunkiai suprantami
+plačiajai visuomenės daliai. Tikriausiai nedaugeliui yra aišku, kas yra duomenų
+schema ir rinkinių laukai, jų tipai ir ryšiai tarp rinkinių.
+
+Todėl atskirai nuo duomenų atvėrimo virtuvės atverti duomenys galėtų būti
+demonstruojami atvirų duomenų vitrinose. Vitrinose, duomenų rinkiniai turėtų
+būti aiškiai aprašyti, sužymėti žymėmis, suskirstyti į kategorijas ir pan.
+Turėtų veikti duomenų rinkinių paieška.
+
+Duomenų vitrina turėtų būti suderinama su DCAT žodynų, kad būtų galimybė
+keistis duomenimis su kitais duomenų portalais, tokiais kaip Europos atvirų
+duomenų portalas.
+
+Finansų paskirstymas
+====================
+
+Jau `ne kartą`__ yra `pademonstruota`__, kad paleisti duomenų vitriną CKAN_ pagrindu
+trunka vidutiniškai vieną savaitgalį. Mano vertinimu, norint padaryti duomenų
+perkėlimą iš senos `IVPK IRS`_ į CKAN__, prijungti arba sukurti trūkstamas
+funkcijas, padaryti projekto CI/CD, patalpinti serveryje ir pan. gali prireikti
+apie 3 mėnesių vieno žmogaus darbo, ribojant apetitą naujoms funkcijoms ir
+apsiribojant tuo, ką turi CKAN. Vertinant pinigais tai būtų 65 €/h × 8 h/d × 20
+d/mėn × 3 mėn = 0,0312 mln. € arba 1,2% skirto `2.6 mln. €`__ finansavimo. Mano
+vertinimu, duomenų vitrina yra mažiausiai svarbus dalykas šiame projekte.
+Žymiai svarbesnis dalykas yra duomenys, jei nėra duomenų, tai nėra ir ką dėti į
+vitriną.
+
+.. __: http://opendata.lt/
+.. __: http://ckan.opendata.gov.lt/
+.. __: http://ckan.opendata.gov.lt/
+.. __: https://ivpk.lrv.lt/lt/apie-ivpk/vykdomi-projektai/atviru-duomenu-platformos-igalinancios-efektyvu-viesojo-sektoriaus-informacijos-pakartotini-panaudojima-verslui-ir-jos-valdymo-irankiu-sukurimas
+
+Kita duomenų atvėrimo vidinės virtuvės dalis yra kiek sudėtingesnė, kadangi
+šiam reikalui jau sukurto įrankio nėra. Yra daug atskirų įrankių duomenų
+surinkimui, transformavimui, pateikimui ir pan. Bet nėra tokio, dalyko, kuris
+visą tai susietų į vieną vietą. Duomenų inventorizacijos, prašymų teikimo,
+stebėsenos ir duomenų suvedimo ir keitimo naudotojo sąsajai sukurti, mano
+vertinimu gali reikėti 12 mėnesių vieno žmogaus darbo. Pinigais tai gautųsi
+apie 65 €/h × 8 h/d × 20 d/mėn × 12 mėn = 0,1248 mln. € arba 4,8% skirto
+finansavimo.
+
+Visą tai paskaičiavus, duomenų atvėrimui liktų 2,4 mln. €.
+
+Dėl pačio duomenų atvėrimo, mano vertinimu, vidutiniškai, vienam žmogui, norint
+atverti vieną duomenų rinkinį įskaitant pilną detalią inventorizaciją,
+nuasmeninimą, transformaciją ir susiejimą, gali reikėti vieno mėnesio laiko.
+Kai kurie atvejai gali būti paprastesni, kiti sudėtingesni, bet manau
+vidutiniškai tai būtų apie mėnuo laiko. Šiuo metu IVPK IRS yra registruota apie
+700 duomenų rinkinių. Visą tai pavertus pinigais, gautųsi 65 €/h × 8 h/d × 20
+d/mėn × 1 mėn × ~700 rinkmenų = ~7,3 mln. €. Kaip ir minėjau, duomenų atvėrimas
+yra daug laiko reikalaujantis, rankinis darbas ir visiems duomenis atverti,
+skirto finansavimo tikrai neužteks. Tačiau finansavimo turėtų užtekti, norint
+atverti bent 30% aukščiausio prioriteto duomenų, o tai yra labai daug. 30%
+aukščiausio prioriteto duomenų, ko gero turėtų pilnai patenkinti visus
+pateiktus prašymus duomenims gauti, darant prielaidą, kad pradžioje nebus labai
+didelis atvirų duomenų naudojimo aktyvumas.
+
+Dar yra viena svarbi kainos dedamoji, tai vieta serveryje, kur bus saugomi
+duomenys ir vykdomas duomenų apdorojimas. Tarkime, 100TB duomenų saugykla,
+sudaryta iš kelių virtualių serverių tikriausiai kainuos apie 6000 € per metus.
+Žiūrint dešimt metų į priekį, tai kainuotų 60 000 € per metus arba 0,06 mln. €
+arba 2,3% viso finansavimo 10-čiai metų.
+
+Tikriausiai, kažkiek pinigų reikėtų teisininkų paslaugoms. Dalis valstybinių
+įstaigų valdančių didelius duomenų registrus nenusiteikusios dalintis
+duomenimis, kadangi iš duomenų gerai uždirba. Tokiais atvejais, bet teisininkų
+pagalbos matyt išsiversti nepavyks.
+
+Išvados arba TL;DR
+==================
+
+Stengiausi viską surašyti glaustai, bet gavosi daug temų ir daug teksto, todėl
+išvadose rasite labai apibendrintą variantą.
+
+Esminės vietos, kurias norėjau aprašyti yra šios:
+
+- **Darbų atlikimo tvarka**. Šiuo metu projektas vykdomas atskirais etapais
+  tokia eilės tvarka: projekto nuostatos ir partnerių sutinkančių atverti
+  duomenis pasirinkimas, metodikos rengimas, techninė specifika portalui,
+  portalo įgyvendinimas pagal specifikaciją ir paskutinėje vietoje pasirinktų
+  partnerių duomenų atvėrimas. Tuo tarpu mano siūlymas nedaryti tokio griežto
+  suskirstymo etapais, o koncentruotis ties duomenų atvėrimu ir pakeliui
+  pasidaryti viską, ko reikia duomenų atvėrimui, daryti tik tai ko tikrai
+  reikia, be išankstinių teorinių metodikų ar specifikacijų.
+
+- **Darbų apimtis**. Įvairiuose dokumentuose daug dėmesio skirta duomenų
+  vitrinai, kuri pagal mano skaičiavimus yra mažiausios apimties darbas visame
+  šiame projekte. Todėl norėjau perteikti skaičiais realų atskirų projektų
+  dalių svorį.
+
+- **Atveriamų duomenų prioriteto svarba**. Noriu pabrėžti, kad labai svarbu ne
+  kiekybė, o atveriamų duomenų kokybė. Jei bus atverta tik pusė projektui
+  reikalingų duomenų, projektas negalės būti pabaigtas. Todėl labai svarbu
+  atverti tuos duomenis, kurių reikia realiems projektams.
+
+- **Duomenų detalumas**. Dažnai, kalbant apie duomenis, vertinamos labai
+  abstrakčios duomenų kategorijos, tokios kaip geografiniai duomenys,
+  transporto duomenys ir pan. Kalbant apie duomenis, reikia kalbėti apie
+  duomenų laukus, bent jau atliekant inventorizaciją ir priimant prašymus
+  duomenims gauti.
+
+- **Esminiai veiklos rodikliai**. Norint suprasti ar projektas buvo sėkmingas
+  ar ne, reikia galimybės realiu laiku stebėti esminius veiklos rodiklius.
+  Tokiu būdu galima įsivertinti ar projektas pasiekė kokius nors rezultatus ar
+  ne.
+
+- **Skaidrumas**. Šiam projektui skirtų pinigų panaudojimo atvejus galima taip
+  pat interpretuoti kaip duomenis ir integruoti į sistemą. Tokiu būdu bus
+  tiksliai matyti kas kiek kainavo ir kodėl.
+
+Manau skirtas 2,6 mln. € finansavimas tikrai gali stipriai stumtelėti atvirų
+duomenų situaciją Lietuvoje ir nesunkiai galime tapti pavyzdys kitoms šalims.
+Bet visą tai yra įmanoma, tik tinkamai organizuojant darbus ir leidžiant
+pinigus tik ten, kur jų tikrai reikia.
+
+Nesilaikant geros projekto disciplinos, galima labai greitai išleisti visus
+pinigus dalykams kurie yra mažos vertės ir nelabai kam reikalingi. Reikia
+tikėtis, kad taip nenutiks.

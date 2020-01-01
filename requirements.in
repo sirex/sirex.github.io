@@ -1,0 +1,8 @@
+Nikola[extras]
+matplotlib
+numpy
+pandas
+requests
+beautifulsoup4
+ipython
+ghp-import2
