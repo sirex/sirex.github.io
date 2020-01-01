@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about django-cms)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/django-cms.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python, Django, Django CMS!</title><link>https://sirex.lt/posts/2010/python-django-django-cms/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jau senai svajojau išsilaisvinti iš PHP priklausomybės ir susirasti normalų
+Python programuotojo darbą. Galiausiai apsisprendžiau ir tai padariau – išėjau
+iš darbo, kuriame dirbau su PHP ir visą laiką skyriau Python programuotojo
+darbo paieškoms. Susitikus su visais penkiais Vilniuje, Python darbą
+siūlančiais įmonių vadovais, įsidarbinti pavyko tik penktojo susitikimo metu.&lt;/p&gt;
+&lt;p&gt;Tiek istorijos. Dabar apie tai, ką nuveikiau gero per pirmą darbo savaitę.&lt;/p&gt;
+&lt;div class="section" id="django-cms"&gt;
+&lt;h2&gt;Django CMS&lt;/h2&gt;
+&lt;p&gt;Naujame darbe daugiausiai programuojame naudojant &lt;a class="reference external" href="http://www.djangoproject.com/"&gt;Django karkasą&lt;/a&gt;. Pats Django yra gan plikas, todėl jei
+svetainė nėra labai išskirtinė, geriau darbą pradėti su &lt;a class="reference external" href="http://www.django-cms.org/"&gt;Django CMS&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.django-cms.org/"&gt;Django CMS&lt;/a&gt; yra tas pats Django, tik su
+įrankiais skirtais turinio valdymui. Plikas Django nėra jau toks plikas, nes
+turi automatizuotą administravimo sąsają. Django CMS dviračio neišradinėja ir
+esamą Django funkcionalumą praplečia elementais skirtais svetainės turiniui
+valdyti.&lt;/p&gt;
+&lt;p&gt;Trumpai apie Django CMS funkcijas:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Svetainės front-end dalies administravimas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Media duomenų (paveiksliukai, dokumentai, video medžiaga) administravimas ir
+galimybė pateikti svetainėje.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Keičiamo svetainės turinio versijavimas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Naudotojų ir jų teisių valdymas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SEO optimizacija&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Kelių skirtingų svetainių palaikymas naudojant tą pačią administravimo
+sąsają.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ir galiausiai įskiepių ir kitokių įterpiamų programinių dalių galimybės, kas
+daro Django CMS labai lankstų ir puikiausiai suderinamu su Django.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Šios funkcijos yra tai, kas pateikiama kartu su Django CMS ir veikia out of the
+box. Gan solidus pagrindas paprastai svetainei, bet daugelio dalykų dar
+trūksta, tokių kaip naujienų, komentarų, galerijų, kategorijų ir pan. Šių
+dalykų nėra out of the box, tačiau jie pateikiami įskiepių ar modulių pavidalu.
+Viskas, būtų kaip ir gerai, bet kadangi Django CMS yra gan naujas dalykas, tai
+viso to trečiųjų šalių gėrio nėra labai gausu, o tai kas yra, integruojama ne
+visada sklandžiai.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-cms-diegimas"&gt;
+&lt;h2&gt;Django CMS diegimas&lt;/h2&gt;
+&lt;p&gt;Django CMS diegimas nuo nulio nėra labai paprastas uždavinys. Reikia atlikti
+gan nemažai rankinio darbo, yra nemažai vietų kur galima suklysti ir vėliau
+ilgai aiškintis, kas blogai.&lt;/p&gt;
+&lt;p&gt;Kad viso to išvengti, darbe parašiau paleidimo skriptą, kurio dėka diegimas
+supaprastėjo iki kelių komandų. Skriptą rasite čia:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://bitbucket.org/sirex/django_cms_template"&gt;http://bitbucket.org/sirex/django_cms_template&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Django CMS diegimo instrukcija, naudojantis šiuo skriptu pateikiu žemiau.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo apt-get install python-dev python-setuptools subversion
+sudo python-pip virtualenv mercurial
+virtualenv --no-site-packages sandbox
+cd sandbox
+./bin/pip install -e hg+http://bitbucket.org/sirex/django_cms_template#egg=django_cms_template
+./bin/paster create -t django_cms_21 myapp
+cd myapp
+make
+make run&lt;/pre&gt;
+&lt;p&gt;Kai šios komandos atliks savo darbą, Django CMS pasileisite adresu:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://localhost:8000/"&gt;http://localhost:8000/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Django CMS turi vidinį serverį, naudoja vidinę Sqlite3 duomenų bazę, todėl
+absoliučiai nieko papildomo įdieginėti nereikės.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>django</category><category>django-cms</category><category>python</category><guid>https://sirex.lt/posts/2010/python-django-django-cms/</guid><pubDate>Thu, 16 Sep 2010 19:12:00 GMT</pubDate></item></channel></rss>

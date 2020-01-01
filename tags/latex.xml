@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about latex)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/latex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip pateiktis kuria tikri vyrai!</title><link>https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Paskutiniu metu teko paruošti kelias &lt;a class="reference external" href="http://www.likit.lt/term/p/pateiktis.html"&gt;pateiktis&lt;/a&gt;, vieną darbe, kitą &lt;a class="reference external" href="http://www.ubuntu.lt/node/522"&gt;OpenCamp
+renginiui&lt;/a&gt;. Nusprendžiau pasidalinti
+patirtimi, kaip paprastai sukurti pateiktis naudojant :math:LaTeX beamer
+klasę.&lt;/p&gt;
+&lt;p&gt;Daugelis tikriausiai yra įpratę rašyti pateiktis naudodamiesi M$ PowerPoint
+arba &lt;a class="reference external" href="http://www.openoffice.org/product/impress.html"&gt;OpenOffice.org Impress&lt;/a&gt;. Pateikčių rašymas,
+naudojantis šiomis priemonėmis dažnai užima gan daug laiko.  Daugiausiai laiko
+atima ne idėjos dėstymas, o visokie grafiniai apipavidalinimai, efektai ir
+panašiai. Tenka dažnai matyti, kai žmonės su efektais persistengia ir pateiktys
+gaunasi gan neskoningai efektais perkrautos.&lt;/p&gt;
+&lt;p&gt;LaTeX yra &lt;a class="reference external" href="http://www.likit.lt/term/z2/z2enklinimo_kalba.html"&gt;ženklinimo kalba&lt;/a&gt; skirta dokumentų
+ruošimui. Daugelis mokslinių darbų yra parašyti būtent naudojantis LaTeX.&lt;/p&gt;
+&lt;div class="section" id="kaip-idiegti"&gt;
+&lt;h2&gt;Kaip įdiegti?&lt;/h2&gt;
+&lt;p&gt;Įdiegti į Ubuntu LaTeX yra labai paprasta, užtenka įdiegti du paketus iš
+programų centro (Programos - Ubuntu programų centras): &lt;em&gt;texlive&lt;/em&gt; ir &lt;em&gt;littex&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kaip-naudoti"&gt;
+&lt;h2&gt;Kaip naudoti?&lt;/h2&gt;
+&lt;p&gt;LaTeX galima rašyti su bet kokiu teksto redaktoriumi, tačiau yra specialiai tam
+skirtų programų, kurios palengvina darbą. Aš pats naudoju &lt;a class="reference external" href="http://www.xm1math.net/texmaker/"&gt;Texmaker&lt;/a&gt; programą. Viskas ką reikia žinoti apie šią
+programa tai ši vieta:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" src="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/files/Pa%C5%BEym%C4%97jimas_001.png"&gt;&lt;/p&gt;
+&lt;p&gt;Sukūrus dokumentą pirmiausia reikia paspausti rodyklę prie „PDFLaTeX“, kad
+sugeneruoti PDF dokumentą, vėliau rodyklę prie „View PDF“, kad peržiūrėti PDF
+dokumentą.&lt;/p&gt;
+&lt;p&gt;Visos kitos funkcijos &lt;a class="reference external" href="http://www.xm1math.net/texmaker/"&gt;Texmaker&lt;/a&gt; programoje
+yra intuityvios.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kaip-sukurti-pateikti-su-texmaker"&gt;
+&lt;h2&gt;Kaip sukurti pateiktį su Texmaker?&lt;/h2&gt;
+&lt;p&gt;Naują pateiktį sukursite labai paprastai. Pirmiausia iš Texmaker meniu
+pasirinkite: File - New. Tada Wizard - Quick Start. Atsiradusiame lange
+nurodykite tokius duomenis:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" src="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/files/texmaker-quickstart.png"&gt;&lt;/p&gt;
+&lt;p&gt;Kai paspausite OK, Texmaker sugeneruos dokumento griaučius:&lt;/p&gt;
+&lt;pre class="code latex"&gt;&lt;a name="rest_code_555cb13d9590464c86d6c446b13c09c0-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="na"&gt;[12pt,a4paper]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;beamer&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_555cb13d9590464c86d6c446b13c09c0-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[utf8x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;inputenc&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_555cb13d9590464c86d6c446b13c09c0-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;ucs&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_555cb13d9590464c86d6c446b13c09c0-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mantas Zimnickas&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_555cb13d9590464c86d6c446b13c09c0-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_555cb13d9590464c86d6c446b13c09c0-6"&gt;&lt;/a&gt;•
+&lt;a name="rest_code_555cb13d9590464c86d6c446b13c09c0-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Nepamirškite įrašyti dvi eilutes, kurių pagalba galėsite rašyti lietuviškai:&lt;/p&gt;
+&lt;pre class="code latex"&gt;&lt;a name="rest_code_4f793ae3ec674c4eab5c3bb488932f91-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[L7x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontenc&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_4f793ae3ec674c4eab5c3bb488932f91-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[lithuanian]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;babel&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="pirmoji-pateiktis"&gt;
+&lt;h2&gt;Pirmoji pateiktis&lt;/h2&gt;
+&lt;p&gt;Štai pilnas pateikties pavyzdys su dviem skaidrėmis:&lt;/p&gt;
+&lt;pre class="code latex"&gt;&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="na"&gt;[12pt,a4paper]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;beamer&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[utf8x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;inputenc&lt;span class="nb"&gt;}&lt;/span&gt; &lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;ucs&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[L7x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontenc&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[lithuanian]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;babel&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mantas Zimnickas&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;\title&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mano pirmoji pateiktis&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-9"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-10"&gt;&lt;/a&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-11"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;\frame&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\titlepage&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-13"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-14"&gt;&lt;/a&gt;&lt;span class="k"&gt;\frame&lt;/span&gt; &lt;span class="nb"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;\frametitle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Sveikas pasauli!&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-16"&gt;&lt;/a&gt;    Mano pirmoji pateiktis.
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-17"&gt;&lt;/a&gt;&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-18"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-19"&gt;&lt;/a&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Išsaugokite šį dokumentą į atskirą katalogą ir naudokitės aukščiau aprašytomis
+rodyklėmis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="isvaizda"&gt;
+&lt;h2&gt;Išvaizda&lt;/h2&gt;
+&lt;p&gt;Beamer turi rinkinį temų, kaip jos atrodo galite apžiūrėti čia:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.pletscher.org/writings/latex/beamerthemes.php"&gt;http://www.pletscher.org/writings/latex/beamerthemes.php&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Temą nurodyti galima taip:&lt;/p&gt;
+&lt;pre class="code latex"&gt;&lt;a name="rest_code_2047566994104af7856fb09d488f9f75-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usetheme&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Malmoe&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="mano-pateiktis"&gt;
+&lt;h2&gt;Mano pateiktis&lt;/h2&gt;
+&lt;p&gt;Mano pateiktį, kurią paruošiau OpenCamp renginiu galite peržiūrėti čia:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/sirexas/django-akllt-naujas-veidas"&gt;http://www.slideshare.net/sirexas/django-akllt-naujas-veidas&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;TeX failą prisegu žemiau.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>latex</category><guid>https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/</guid><pubDate>Sun, 23 May 2010 14:22:00 GMT</pubDate></item></channel></rss>

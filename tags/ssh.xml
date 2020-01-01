@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about ssh)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/ssh.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SSH pamokėlės</title><link>https://sirex.lt/posts/2010/ssh-pamokeles/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;div class="section" id="kas-yra-ssh"&gt;
+&lt;h2&gt;Kas yra SSH?&lt;/h2&gt;
+&lt;p&gt;SSH yra Secure SHell.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-shell"&gt;
+&lt;h2&gt;Kas yra Shell?&lt;/h2&gt;
+&lt;p&gt;Shell yra programa suteikianti naudotojui tam tikrą sąsają. Linux pasaulyje,
+Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kuo-skiriasi-shell-nuo-ssh"&gt;
+&lt;h2&gt;Kuo skiriasi Shell nuo SSH?&lt;/h2&gt;
+&lt;p&gt;Paprasta Shell programa suteikia galimybę valdyti kompiuterį, kuriame ji
+paleista, tuo tarpu SSH, suteikia galimybę valdyti kitą tinklo kompiuterį,
+nuotoliniu būdu.&lt;/p&gt;
+&lt;p&gt;Tarkime, norint iškviesti Shell programą &lt;code class="docutils literal"&gt;bash&lt;/code&gt;, reikia:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;bash&lt;/pre&gt;
+&lt;p&gt;Norint iškviesti Shell programą bash kitame kompiuteryje reikia:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh kitas-kompiuteris bash&lt;/pre&gt;
+&lt;p&gt;Kaip matote, viskas, ką daro SSH, tai suteikia saugią prieigą prie nutolusio
+kompiuterio Shell programos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-ssh-raktas"&gt;
+&lt;h2&gt;Kas yra SSH raktas?&lt;/h2&gt;
+&lt;p&gt;SSH suteikia saugią prieigą prie kito kompiuterio, todėl jungiantis visą laiką
+prašomas kito kompiuterio naudotojo prieigos slaptažodis. SSH raktų dėka,
+galima susikurti vieną raktį nuo visų durų. Tai daroma taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh-keygen -C jusu@elpastas.lt
+scp ~/.ssh/id_rsa.pub kitas-kompiuteris:.ssh/authorized_keys&lt;/pre&gt;
+&lt;p&gt;Nuo šiol, prie kito kompiuterio galėsite jungtis be slaptažodžio, jei turite
+veikiantį taip vadinamą, raktų agentą. Ubuntu sistemoje raktų agentas veikia,
+todėl jungiantis prie kito kompiuterio, jūsų tik vieną kartą paklaus
+slaptažodžio nuo raktinės.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-ssh-keygen"&gt;
+&lt;h2&gt;Kas yra ssh-keygen?&lt;/h2&gt;
+&lt;p&gt;ssh-keygen yra programa, kuri sukuria viešąjį (&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.ssh/id_rsa.pub&lt;/span&gt;&lt;/code&gt;) ir
+privatųjį (&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.ssh/id_rsa&lt;/span&gt;&lt;/code&gt;) SSH raktus. Raktai išsaugomi failuose, kuriuos
+nurodžiau skliausteliuose.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-ssh-authorized-keys"&gt;
+&lt;h2&gt;Kas yra ~/.ssh/authorized_keys&lt;/h2&gt;
+&lt;p&gt;Tai yra paprasčiausias tekstinis failas, kuriame gali būti surašyti viešieji
+naudotojų raktai, kurie gali prisijungti naudodamiesi savo privažiuoju raktu.&lt;/p&gt;
+&lt;p&gt;Faile, vienas viešasis raktas saugomas vienoje eilutėje.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-scp"&gt;
+&lt;h2&gt;Kas yra scp?&lt;/h2&gt;
+&lt;p&gt;&lt;code class="docutils literal"&gt;scp&lt;/code&gt; yra Secure CoPy. Veikiai labai panašiai, kaip komanda cp, tik kopijuoja
+iš vieno kompiuterio, į kitą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;cp failas-a.txt failas-b.txt
+scp failas-a.txt kitas-kompiuteris:failas-b.txt&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-sftp"&gt;
+&lt;h2&gt;Kas yra sftp?&lt;/h2&gt;
+&lt;p&gt;&lt;code class="docutils literal"&gt;sftp&lt;/code&gt; yra SSH File Transfer Protocol, veikia panašiai, kaip FTP, tik naudoja
+tą patį SSH. Štai paprastas būdas prisijungti prie kito kompiuterio, per
+&lt;code class="docutils literal"&gt;sftp&lt;/code&gt;, naudojantis failų naršymo programa nautilus:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;nautilus sftp://kitas-kompiuteris&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ar-galiu-apjungti-shell-ir-ssh-komandas"&gt;
+&lt;h2&gt;Ar galiu apjungti Shell ir SSH komandas?&lt;/h2&gt;
+&lt;p&gt;Taip. Tarkime norite iš kitas-kompiuteris eksportuoti MySQL duomenų bazę ir
+importuoti ją į savo kompiuterio MySQL duomenų bazę:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh kitas-kompiuteris 'mysqldump tavodb' | mysql manodb&lt;/pre&gt;
+&lt;p&gt;Šiame pavyzdyje, nutolusiame kompiuteryje iškviečiate komandą &lt;code class="docutils literal"&gt;mysqldump
+tavodb&lt;/code&gt;, kuri į ekraną išveda visą duomenų bazės turinį.  Toliau simbolio
+&lt;code class="docutils literal"&gt;|&lt;/code&gt; pagalba, tai kas išvedama į ekraną, nukreipiate į kitą komandą 'mysql
+manodb', kuri surenka visą duomenų bazės turinį ir importuoja jį į jūsų duomenų
+bazę.&lt;/p&gt;
+&lt;p&gt;Pasitaiko, kad tarp kompiuterių yra mažas tarptinklinis pralaidumas, todėl kad
+pagreitinti duomenų perdavimą, galima perduodamus duomenis suspausti:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh kitas-kompiuteris 'mysqldump tavodb | gzip -c' | gunzip -c | mysql manodb&lt;/pre&gt;
+&lt;p&gt;Tai tiek. Tikiuosi „pagavote kampą“ kas yra SSH, ir kaip paprastai galima juo
+naudotis sutaupant daug laiko.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>shell</category><category>ssh</category><guid>https://sirex.lt/posts/2010/ssh-pamokeles/</guid><pubDate>Thu, 04 Feb 2010 17:41:00 GMT</pubDate></item><item><title>SSH serveris chroot aplinkoje</title><link>https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jau seniai esu girdėjęs ir daugiau mažiau žinojau chroot aplinkos veikimo
+principus, tačiau pačiam to dar neteko daryti. Prieš kelias dienas
+konfigūruodamas vieną kompą su Ubuntu Server Hardy Herron OS, pagaliau teko ir
+man patirti šį malonumą, chroot aplinkos pakūrimą... :) Pasirodo tai kur kas
+paprasčiau nei maniau! Tai gi pasidalinsiu patirtimi ir su kitais.&lt;/p&gt;
+&lt;p&gt;Viską pavyko padaryti sekant vieno &lt;a class="reference external" href="http://ubuntuforums.org/showthread.php?t=408019"&gt;ubuntuforums.org įrašo nuorodomis&lt;/a&gt;. Labai neišsiplėsdamas
+paprasčiausiai pakartosiu kas ten rašoma ir kai kur pakomentuosiu.&lt;/p&gt;
+&lt;div class="section" id="zingsnis"&gt;
+&lt;h2&gt;1. Žingsnis&lt;/h2&gt;
+&lt;pre class="literal-block"&gt;sudo apt-get install dchroot debootstrap
+sudo mkdir /chroot/
+sudo echo "hoary /chroot" &amp;gt;&amp;gt; /etc/dchroot.conf
+sudo debootstrap --arch i386 hardy /chroot/ http://lt.litnet.lt/pub/ubuntu
+sudo chroot /chroot/ dpkg-reconfigure locales&lt;/pre&gt;
+&lt;p&gt;Su šiuo žingsniu manu viskas labai aišku ir paprasta. Puikiojo įrankio
+debootstrap dėka, savo OS viduje sukuriama nauja sistema, o tiksliau
+paprasčiausiai parsiunčiami jos failai. Taip pat nurodžiau Lietuvišką Ubuntu
+repozitoriumo serverį, ko dėka, su gera interneto linija į Lietuva, šis
+procesas vyks labai greitai.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;2. Žingsnis&lt;/h2&gt;
+&lt;p&gt;Šiame žingsnyje pasileiskite kitą terminalo langą, nes pirmame žingsnyje jūs
+esate chroot viduje, o naujame terminale turėtumėte būti išorėje.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;echo "http://ftp.litnet.lt/pub/ubuntu hardy main restricted universe multiverse" &amp;gt;&amp;gt; /chroot/etc/apt/sources.list
+echo "http://security.ubuntu.com/ubuntu hardy-security main restricted universe multiverse" &amp;gt;&amp;gt; /chroot/etc/apt/sources.list&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;3. Žingsnis&lt;/h2&gt;
+&lt;p&gt;Vėl grįžkite į chroot vidų ir tęskite:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;apt-get update ; apt-get upgrade&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;4. Žingsnis&lt;/h2&gt;
+&lt;p&gt;Vėl grįžkite į kitą terminalą, kuri būtų išorėje (ne chroot aplinkos viduje):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo cp /etc/passwd /chroot/etc/
+sudo cp /etc/shadow /chroot/etc/
+sudo cp /etc/group /chroot/etc/
+sudo cp /etc/sudoers /chroot/etc/
+sudo cp /etc/hosts /chroot/etc/
+echo "/tmp /chroot/tmp none bind 0 0" &amp;gt;&amp;gt; /etc/fstab
+echo "/dev /chroot/dev none bind 0 0" &amp;gt;&amp;gt; /etc/fstab
+echo "/proc /chroot/proc proc defaults 0 0" &amp;gt;&amp;gt; /etc/fstab
+sudo mkdir -p /chroot/usr/share/fonts
+echo "/usr/share/fonts /chroot/usr/share/fonts none bind 0 0" &amp;gt;&amp;gt; /etc/fstab&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;5. Žingsnis&lt;/h2&gt;
+&lt;p&gt;Dabar ko gero sudėtingiausia dalis, kurią bandžiau visaip apeiti, nenorėdamas
+kompiluoti kažkokio nežinomo kodo dėl saugom... Tačiau nieko nepavyko ir teko
+susikompiluoti pateiktą C kodą, po ko viskas pradėjo veikti.&lt;/p&gt;
+&lt;p&gt;Tai gi, prieš kompiliuojant, jei išmanote C kodą, siūlau užmesti akį į
+&lt;a class="reference external" href="http://kegel.com/crosstool/current/chrootshell.c"&gt;chrootshell.c&lt;/a&gt; ir tada
+tęsti chroot išorėje:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;cd /tmp
+wget http://kegel.com/crosstool/current/chrootshell.c cc chrootshell.c -o chrootshell
+sudo install -o root -m 4755 chrootshell /sbin/chrootshell
+echo "/sbin/chrootshell" &amp;gt;&amp;gt; /etc/shells&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h2&gt;6. Žingsnis&lt;/h2&gt;
+&lt;p&gt;Galiausiai chroot išorėje, faile &lt;code class="docutils literal"&gt;/etc/passwd&lt;/code&gt;, visiems naudotojams, kurie
+prisijungimo metu turės būti nukreipiami į chroot aplinką, reikia pakeisti namų
+katalogą į &lt;code class="docutils literal"&gt;/chroot&lt;/code&gt;, o shellą į &lt;code class="docutils literal"&gt;/sbin/chrootshell&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pavyzdys:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;petras:1000:1000:Petras Petraitis:/chroot:/sbin/chrootshell&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id6"&gt;
+&lt;h2&gt;6. Žingsnis&lt;/h2&gt;
+&lt;p&gt;Vidiniame &lt;code class="docutils literal"&gt;/etc/passwd&lt;/code&gt; faile turi būti tokie patys naudotojai, tik su
+tikrais duomenimis, su tikru, chroot viduje egzistuojančiu namų katalogu ir
+shellu.&lt;/p&gt;
+&lt;p&gt;Pavyzdys:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;vardas:1000:1000:Vardas Pavardenis:/home/vardas:/bin/bash&lt;/pre&gt;
+&lt;p&gt;Jei naudotojus kūrėte, tiesiog sukurdami įrašą &lt;code class="docutils literal"&gt;/etc/passwd&lt;/code&gt; failo viduje,
+tada kiekvienam sukurtam naudotojui reikia sukurti ir po namų katalogą, tam
+puikiai tinka toks paprastas shell skriptas, kuris turėti būti paleistas chroot
+išorėje:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_9a20b05a00d5432399cfd7f8bc0935b3-1"&gt;&lt;/a&gt;awk -F &lt;span class="s2"&gt;":"&lt;/span&gt; &lt;span class="s1"&gt;'/chrootshell/ { print $1 }'&lt;/span&gt; /etc/passwd &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; chrootusr &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;a name="rest_code_9a20b05a00d5432399cfd7f8bc0935b3-2"&gt;&lt;/a&gt;    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; ! -d /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a name="rest_code_9a20b05a00d5432399cfd7f8bc0935b3-3"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"Creating home dir for: &lt;/span&gt;&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;a name="rest_code_9a20b05a00d5432399cfd7f8bc0935b3-4"&gt;&lt;/a&gt;        sudo mkdir -p /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;
+&lt;a name="rest_code_9a20b05a00d5432399cfd7f8bc0935b3-5"&gt;&lt;/a&gt;        sudo chown &lt;span class="nv"&gt;$chrootusr&lt;/span&gt;:&lt;span class="nv"&gt;$chrootusr&lt;/span&gt; /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;
+&lt;a name="rest_code_9a20b05a00d5432399cfd7f8bc0935b3-6"&gt;&lt;/a&gt;        sudo chmod &lt;span class="m"&gt;700&lt;/span&gt; /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;
+&lt;a name="rest_code_9a20b05a00d5432399cfd7f8bc0935b3-7"&gt;&lt;/a&gt;    &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;a name="rest_code_9a20b05a00d5432399cfd7f8bc0935b3-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="id7"&gt;
+&lt;h2&gt;7. Žingsnis&lt;/h2&gt;
+&lt;p&gt;Galiausiai bandykite jungtis, kaip chroot įkalintas naudotojas:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh petras@localhost&lt;/pre&gt;
+&lt;p&gt;Tai tiek informacijos. Viskas labai paprastai pasidaro. Pasinaudojant
+&lt;code class="docutils literal"&gt;debootstrap&lt;/code&gt; ir &lt;code class="docutils literal"&gt;chroot&lt;/code&gt; įrankiais, labai nesunkiai, galima susikurti
+testinę aplinką, kuri nedarys jokios įtakos jūsų darbinei aplinkai ir ten
+testuotis kokias nors serverio konfigūracijas ar panašiai. &lt;code class="docutils literal"&gt;debootstrap&lt;/code&gt;
+įrankio sukurta aplinka užima vos 300 Mb disko vietos, su minimalia Ubuntu
+serverio instaliacija. Na, tikrai puikus dalykas... :)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="informacijos-saltiniai"&gt;
+&lt;h2&gt;Informacijos šaltiniai&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://ubuntuforums.org/showthread.php?t=408019"&gt;ubuntuforums.org&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>shell</category><category>ssh</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/</guid><pubDate>Tue, 23 Dec 2008 07:06:00 GMT</pubDate></item></channel></rss>

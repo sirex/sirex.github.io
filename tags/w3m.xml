@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about w3m)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/w3m.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>w3m</title><link>https://sirex.lt/posts/2009/w3m/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Visų pirma noriu visus apšviesti, kad pirmoje vietoje internetą naršau su
+Firefox, Chromium arba Opera. Tačiau kartais atverti svetainę tekstiniame
+režime yra kur kas patogiau, išvengiant visokių mirguliuojančių spalvų, keistų
+dizainerio ketinimų ir panašiai.&lt;/p&gt;
+&lt;p&gt;Interneto naršymui tekstiniame režime esu išbandęs lynx, links, elinks ir w3m.
+Ilgiau apsistojau prie elinks ir w3m, tačiau galiausiai pasirinkau w3m. Tokį
+pasirinkimą lėmė tai, kad w3m pateiktas interneto svetainės tekstinis
+variantas, daugeliu atvejų atrodo geriau, aiškiau ir tiksliau.&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/w3m.png"&gt;&lt;img alt="/images/w3m.thumbnail.png" src="https://sirex.lt/images/w3m.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;Nors w3m naudoju jau gan seniai, tačiau tik visai neseniai nusprendžiau
+nuodugniau patyrinėti šį įrankį ir radau visai įdomių dalykų...&lt;/p&gt;
+&lt;div class="section" id="w3m-valdymas-klaviatura"&gt;
+&lt;h2&gt;W3M valdymas klaviatūra&lt;/h2&gt;
+&lt;p&gt;Naudoju nestandartinį LEKPa klaviatūros išdėstymą, todėl labai svarbu, kad
+naudojamas įrankis lengvai pasiduotų konfigūruojamas šioje srityje.  Įtariu,
+kad w3m kažkokiu būdų gali suprasti ir utf-8 klavišus, tačiau to išsiaiškinti
+nepavyko. Visa kita veikia kuo puikiausiai. Daugiau ar mažiau, po klavišų
+kombinacijų konfigūravimo, w3m galima valdyti beveik kaip vi teksto redaktorių.
+Puiku!&lt;/p&gt;
+&lt;p&gt;Klavišų konfigūravimą galima atlikti &lt;em&gt;~/.w3m/keymap&lt;/em&gt; faile. Štai maniškis:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;keymap  n   UP
+keymap  e   DOWN
+keymap  C-n NEXT_PAGE
+keymap  C-e PREV_PAGE
+keymap  p   BACK
+keymap  i   PREV
+keymap  b   SEARCH_NEXT
+keymap  B   SEARCH_PREV
+keymap  R   EDIT
+keymap  L   RELOAD
+keymap  U   VIEW_IMAGE
+keymap  J   GOTO
+keymap  E   NEXT_LEFT_UP
+keymap  N   NEXT_RIGHT_DOWN
+keymap  m   BEGIN
+keymap  M   END&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="mailcap-ir-mime-types"&gt;
+&lt;h2&gt;mailcap ir mime-types&lt;/h2&gt;
+&lt;p&gt;w3m atpažįsta failo tipą ir sugeba atidaryti failą su tam skirta programa. Jei
+svetainėje nuoroda veda į PDF failą, tai atvėrus tą nuorodą, failas bus
+parsiųstas ir atidarytas su PDF peržiūros programa, nurodyta &lt;em&gt;~/.mailcap&lt;/em&gt;
+faile. &lt;em&gt;~/.mailcap&lt;/em&gt; arba /&lt;em&gt;etc/mailcap&lt;/em&gt; failus naudoja daugelis programų. Failo
+sintaksė nesudėtinga, todėl visiškai nesudėtinga pačia susitvarkyti programų
+sąrašus ir priskirti juos atitinkamiems failų tipams. Štai maniškio failo
+turinys:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;image/*; muttbgrun qiv %s
+text/html; w3m %s; nametemplate=%s.html;
+text/html; w3m -dump %s; nametemplate=%s.html; copiousoutput;
+application/msword; antiword %s; copiousoutput;
+application/octet-stream; antiword %s; copiousoutput;
+application/pdf; muttbgrun xpdf '%s';
+application/pdf; pdftotext %s -; copiousoutput;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="nuorodos"&gt;
+&lt;h2&gt;Nuorodos&lt;/h2&gt;
+&lt;p&gt;Forumuose dažnai pasitaiko nuorodų, kurios užrašytos kaip paprastas tekstas,
+todėl norint tokias nuorodas atverti, reikia jas pažymėti, nukopijuoti ir tada
+įkėlus į naršyklės adreso eilutę atverti.&lt;/p&gt;
+&lt;p&gt;w3m šioje vietoje turi puikią priemonę &lt;strong&gt;MARK_URL&lt;/strong&gt;. Pamačius tokias tekstines
+nuorodas, užtenka paspausti dvitaškį „:“ ir visos nuorodas pavirsta tikromis,
+aktyviomis nuorodomis, todėl galima tęsti įprastą naršymą, pamirštant apie
+žymėjimą ir kopijavimą į adreso juostą.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="man-w3mman"&gt;
+&lt;h2&gt;man → w3mman&lt;/h2&gt;
+&lt;p&gt;Pasirodo, w3m galima naudoti &lt;strong&gt;man&lt;/strong&gt; puslapių naršymui! Iki šiol kankinausi dėl
+LEKPa klaviatūros išdėstymo, nes man įrankio klaviatūros sąsaja nesutapdavo su
+mano spaudomais klavišais. Bet kam tai rūpi, kai galiu naudoti tą patį puikiai
+sukonfigūruotą w3m. Beje, man puslapiuose dažnai galima rasti nuorodas į
+programos svetainę ir panašiai, su w3m galiu tas nuorodas atidaryti vienu
+klavišo paspaudimu...&lt;/p&gt;
+&lt;p&gt;w3mman man taip patiko, kad savo &lt;em&gt;~/.zshrc&lt;/em&gt; faile įrašiau tokią eilutę:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;alias man='w3mman'&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="less-w3m"&gt;
+&lt;h2&gt;less → w3m&lt;/h2&gt;
+&lt;p&gt;Iš w3m svetainės: „w3m is a text-based web browser as well as a pager like
+`more' or `less'“. Ką gi, pabandžiau, patiko, tuo labiau, kad 'less' turi tų
+pačių problemų su klavišų kombinacijomis, todėl w3m puikiausiai tinka naudoti
+kaip „pagerį“. Tačiau dirbant su dideliais arba kintančio turinio failais, vis
+tik less yra nepakeičiamas, todėl, kad šioje vietoje jis veikia tiesiog
+žaibiškai greitai. w3m taip pat atidaro didelius failus, tačiau ne taip
+greitai, nes atidarymas nuskaito visą failo turinį.&lt;/p&gt;
+&lt;p&gt;Išvada: mažiems failams - w3m, dideliems arba kintančio turinio – less.  Tam
+reikalui, keli įrašai į &lt;em&gt;~/.zshrc&lt;/em&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;alias less='w3m' alias more='/bin/less -S'&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="newsbeuter-w3m"&gt;
+&lt;h2&gt;newsbeuter + w3m&lt;/h2&gt;
+&lt;p&gt;RSS srautus skaitau tekstiniame režime naudodamas &lt;strong&gt;newsbeuter&lt;/strong&gt;. Kai noriu
+atverti visą straipsnį iš RSS'o, naudoju w3m, kuris yra susietas su
+&lt;strong&gt;newsbeuter&lt;/strong&gt;. Kodėl? Todėl, kad skaitant straipsnius, svarbiausia tekstas, o
+jei tekste yra paveiksliukas, tai jį nesunkiai galima atverti paveiksliukų
+peržiūros programoje, gebančioje paveiksliuką padidinti, sumažinti, pasukti ir
+pan.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="mutt-w3m"&gt;
+&lt;h2&gt;mutt + w3m&lt;/h2&gt;
+&lt;p&gt;w3m puikiausiai atlieka html konvertavimą į paprastą tekstą. Dažnai laiškus
+gaunu tik html formatu, todėl w3m pagalba, mutt programoje html laiškus,
+skaitau, kaip paprastus tekstinius laiškus.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>shell</category><category>w3m</category><guid>https://sirex.lt/posts/2009/w3m/</guid><pubDate>Mon, 31 Aug 2009 06:31:00 GMT</pubDate></item></channel></rss>

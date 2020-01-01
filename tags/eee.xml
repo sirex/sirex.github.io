@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about eee)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/eee.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ubuntu Eee ant Eee PC 900</title><link>https://sirex.lt/posts/2008/ubuntu-eee-ant-eee-pc-900/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Kaip žinia nesenai BMS pardavinėjo Asus Eee PC 900 po 599 Lt. Tai aš irgi vieną
+įsigijau, ne sau, bes savo sesei.&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/small_eee.png"&gt;&lt;img alt="/images/small_eee.thumbnail.png" src="https://sirex.lt/images/small_eee.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;Kadangi pagal nutylėjimą įdiegta Xandros operacinė sistema yra tokia ganėtinai
+vaikiška, tai nusprendžiau į jį įdiegti &lt;a class="reference external" href="http://www.ubuntu-eee.com/"&gt;Ubuntu eee&lt;/a&gt;. Nors tikėjausi, kad įdiegus viskas pradės
+veikti iš karto, bet deja taip nebuvo, teko sekti nurodymus ir derinti, bet
+galiausiai turiu pilnai veikiančią sistemą.  Nors yra ne vienas įrankis LiveUSB
+kūrimui iš ISO atvaizdų, tačiau Ubuntu Eee atveju, reikia naudotis kankrečiai
+jų pagamintu įrankiu UNetbootin, nes kiti neveiks. Standartiniai LiveUSB kūrimo
+įrankiai paprasčiausiai užrašo ISO failo turiny ant USB failų sistemos. O
+UNetbootin paprasčiausiai kopijuoja failus, o po to padaro reikiamus boot
+įrašus.  Diegimo metu reikėtu atsižvelgti į &lt;a class="reference external" href="https://help.ubuntu.com/community/EeePC/Installation"&gt;vienintelę rekomendaciją&lt;/a&gt;, disko skirstymo metu
+naudoti &lt;code class="docutils literal"&gt;Ext2&lt;/code&gt; failų sistemą. Taip pat diskų tvarkymo dalyje, aš pasirinkau
+rankinį diskų tvarkymo režimą, ten ištryniau visus Eee 900 diskus, kurių buvo 4
+ir sukūriau vieną &lt;code class="docutils literal"&gt;Ext2&lt;/code&gt; skirsnį, kuriam priskyriau &lt;code class="docutils literal"&gt;/&lt;/code&gt; montavimo tašką.
+&lt;strong&gt;Kas neveikė po įdiegimo ir kaip tai sutvarkyti&lt;/strong&gt; Kadangi iš esmės daugelis
+dalykų veikė, tai aprašysiu, kas neveikė:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Garso įrašymas (&lt;a class="reference external" href="https://help.ubuntu.com/community/EeePC/Fixes#Microphone"&gt;instrukcijos kaip taisyti&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Optimizacijos mažinančios skaitymų/rašymų skaičių į Eee Flash atminies
+kortelę (&lt;a class="reference external" href="https://help.ubuntu.com/community/EeePC/Using#Reducing%20Drive%20Writes"&gt;instrukcijos kaip taisyti&lt;/a&gt;),
+šioje vietoje būkite atsargūs, jei netyčia klaidingai ką nors nurodysite,
+gali nebe užsikrauti grafinė aplinka, kaip kad man ir atsitiko. Jei taip
+atsitiks ir jums, tai užkraukite Eee PC iš LiveUSB, primontuokite sugadintą
+skirsnį sudo mount -t ext2 -o rw /dev/sda1 /mnt ir pataisykite ką sugadinote
+faile sudo gedit /mnt/etc/fstab.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ne visada suveikia shut down (&lt;a class="reference external" href="https://help.ubuntu.com/community/EeePC/Fixes#Shutdown"&gt;instrukcijos kaip taisyti&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Neveikė webcam (internetinė kamera), nors tiesą sąkant ji veikė, tik tiek,
+kad buvo išjungta BIOS nustatymuose, bet kokiu atveju, galite žiūrėti
+&lt;a class="reference external" href="https://help.ubuntu.com/community/EeePC/Fixes#Webcam"&gt;instrukcijas kaip taisyti&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Problemos su atnaujinimais, siūlo atlikti „Partial Update“, dėl kažkokių tai
+blogų paketų. Tai aš paprasčiausiai užėjau į Home - Administravimas -
+Software Sources - Third-Party Software ir atžymėjau paskutinį repozitoriumą
+(&lt;a class="reference external" href="http://www.array.org/ubuntu"&gt;http://www.array.org/ubuntu&lt;/a&gt; hardy eeepc), tada visi atnaujinimai įsidiegė
+sėkmingai. Po atnaujinimo, jei paprašys perkrauti kompiuterį, taip ir
+padarykite.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Home mygtuko funkcija – grįžimas į pradinį desktopą &lt;a class="reference external" href="http://www.ubuntu-eee.com/wiki/index.php5?title=How_to:_Set_Super_button_to_show_desktop"&gt;instrukcijos kaip
+nustatyti&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CPU Frequency Scaling, šiaip tai tas dalykas veikia normaliai, tik tiek, kad
+į panelę įkėlus CPU Frequency Scaling apletą, neleidžia pasirinkti
+procesoriau dažnio, tam reikia įvesti tokią komandą ir pradės veikti: sudo
+chmod +s /usr/bin/cpufreq-selector&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Baterijos įkrovos indikatorius neįspėja apie tai, kad baterija jau išsikrovė,
+kompiuteris tiesiog išsijungia. Man taip nutiko intensyvaus atnaujinimo metu.
+Baterijos indikatorius rodė, kad dar yra 5 minutės laiko. Po to kai Eee
+išsijungė, gavau pranešimą, kad reikia paleisti fsck rankiniu būdu, tačiau
+tam reikia prisijungti su sistemos administratoriaus slaptažodžiu.
+Slaptažodis kažkodėl nesuveikė, tai paleidau Eee iš LiveUSB, ten įsijungiau
+terminalą ir paleidau fsck rankiniu būdu: sudo fsck.ext2 -y /dev/sda1. Fsck
+kažką surado, kažką pataisė ir perkrovus Eee vėl pradėjo veikti. Tai gi,
+būkite atsargūs su baterija. Jei rodo, kad liko 20%, tai jau galite pradėti
+krauti.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Atrodo apturėjau visas įmanomas problemas, todėl tikiuosi jums bus lengviau jas
+spręsti.. :)&lt;/p&gt;
+&lt;div class="section" id="lietuviu-kalbos-pilnas-idiegimas"&gt;
+&lt;h2&gt;Lietuvių kalbos pilnas įdiegimas&lt;/h2&gt;
+&lt;p&gt;Čia tiems, kurie nori turėti Lietuvišką naudotojo sąsają. Tikriausiai diegimo
+metu jau pasirinkote Lietuvių kalbą, tačiau to nepakanka, nes į vieną LiveUSB
+visų kalbų pilno palaikymo nesutalpinsi. Tai gi, kad turėtumėte pilnai
+lietuvišką naudotojo sąsają eikite į: Home - Administravimas - Language
+Support, sąraše suraskite 'Lithuanian' ir uždėkite paukščiuką ir spauskite
+'Apply'. Po šių veiksmų bus įdiegti visi reikalingi dalykai Lietuvių kalbai.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="standartiniu-xandros-programu-idiegimas"&gt;
+&lt;h2&gt;Standartinių Xandros programų įdiegimas&lt;/h2&gt;
+&lt;p&gt;Jei žiūrinėjote standartines Eee PC programas, tai radote daug visokių programų
+mokymuisi, visokių žaidimų ir t.t. Ubuntu Eee galite turėti viską ir dar
+daugiau. Nežinau kodėl, bet programų paleidimo panelėje nėra įrankio
+„Įdiegti/pašalinti...“. Jį galima įkelti labai paprastai.  Spauskite Alt+F2 ir
+įrašykite: alacarte. Atsidariusiame lange šone pasirinkite „Programos“, o
+dešinėje, tempkite „Įdiegti/Pašalinti..“ ant „Favorites“. Po šių veiksmų
+pagrindinėje panelėje turėtu atsirasti „Programos“, kur ir rasite
+„Įdiegti/Pašalinti“.  Paleidus „Įdiegti/Pašalinti“ galėsite sužymėti visas
+programas kurių reikia ir iš karto visas įdiegti.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="lietuviu-anlgu-kalbu-zodymas-opendict"&gt;
+&lt;h2&gt;Lietuvių - Anlgų kalbų žodymas Opendict&lt;/h2&gt;
+&lt;p&gt;Tikriausiai prisireiks šio dalyko, kuris pagal nutylėjimą nėra įdiegtas.
+Žodynas vadinasi „Opendict“, todėl galite jį susirasti aukščiau aprašytame
+programų diegimo įrankyje, pažymėti ir įdiegti. Taip pat galite pasinaudoti
+viena komanda: sudo apt-get install opendict.  Žodynus Opendict programai
+galite atsisiųsti iš šių vietų:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://files.akl.lt/baltix-linux/Baltix-Ubuntu-packages/baltix-3.x/opendict-led/"&gt;Anglų - Lietuvių, Vokiečių - Lietuvių&lt;/a&gt;
+spauskite ant .deb failų.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.ubuntu.lt/render/Forum;thread,2932"&gt;Anglonas&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="ftp://debian.home.lt/debian/pool/contrib/o/opendict-dictionaric/"&gt;Pracūzų - Lietuvių&lt;/a&gt;
+spauskite ant .deb failų.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="daugiau-vaizdu"&gt;
+&lt;h2&gt;Daugiau vaizdų&lt;/h2&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/small_eee2.png"&gt;&lt;img alt="/images/small_eee2.thumbnail.png" src="https://sirex.lt/images/small_eee2.thumbnail.png" style="height: 200px;"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/small_eee3.png"&gt;&lt;img alt="/images/small_eee3.thumbnail.png" src="https://sirex.lt/images/small_eee3.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka-1.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka-1.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka-1.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka-2.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka-2.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka-2.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka-4.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka-4.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka-4.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka-5.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka-5.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka-5.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka-6.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka-6.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka-6.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka-7.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka-7.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka-7.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka-8.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka-8.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka-8.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>eee</category><category>floss</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/ubuntu-eee-ant-eee-pc-900/</guid><pubDate>Wed, 19 Nov 2008 09:43:00 GMT</pubDate></item></channel></rss>

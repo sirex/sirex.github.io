@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Iššokstantis terminalo langas bet kurioje vietoje | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2009/issokstantis-terminalo-langas-bet-kurioje-vietoje/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../kaip-kopijuoti-didelius-failus-komandineje-eiluteje/" title="Kaip kopijuoti didelius failus konsolėje?" type="text/html">
+<link rel="next" href="../kas-geriau-pradedanciajam-gimp-ar-photoshop/" title="Kas geriau pradedančiajam, Gimp ar Photoshop?" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Iššokstantis terminalo langas bet kurioje vietoje">
+<meta property="og:url" content="https://sirex.lt/posts/2009/issokstantis-terminalo-langas-bet-kurioje-vietoje/">
+<meta property="og:description" content="Kadangi labai dažnai naudojuosi komandine eilute, tai labai patogu, kai
+terminalo langas visada po ranka. Tam labai tinka Quake tipo terminalo langas,
+kuris išvažiuoja iš ekrano viršaus paspaudus tam ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2009-06-03T17:37:00+02:00">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="shell">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Iššokstantis terminalo langas bet kurioje vietoje</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2009-06-03T17:37:00+02:00" itemprop="datePublished" title="2009-06-03 17:37">2009-06-03 17:37</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/python/" rel="tag">python</a>,                    <a class="tag p-category" href="../../../tags/shell/" rel="tag">shell</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Kadangi labai dažnai naudojuosi komandine eilute, tai labai patogu, kai
+terminalo langas visada po ranka. Tam labai tinka Quake tipo terminalo langas,
+kuris išvažiuoja iš ekrano viršaus paspaudus tam tikrą klavišų kombinaciją.
+Gnome turi kažką panašaus – Tilda, tačiau paskutiniu metu <a class="reference external" href="https://bugs.launchpad.net/ubuntu/+source/tilda/+bug/111571">Tilda veikia labai
+sunkiai</a>, nuolat
+segmentuoja, lūžinėja ir t.t.</p>
+<p>Neapsikentęs sugalvojau padaryti kažką panašaus, į pagalbą vėl gi pasitelkiau
+Python ir padariau tokią labai primityvią programikę, kurios pagrindinė
+paskirtis – parodyti terminalo langą paspaudus tam tikrą klavišų kombinaciją.
+Patalpinau programikę į <a class="reference external" href="https://edge.launchpad.net/quaketerm/">launchpad.net</a>. Taip pat žemiau pateikiu kodą,
+kadangi jo nėra labai daug:</p>
+<pre class="code python"><a name="rest_code_5693652e87634182afd7c8f23ddda0a6-1"></a><span class="ch">#!/usr/bin/env python</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-2"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-3"></a><span class="kn">import</span> <span class="nn">os</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-4"></a><span class="kn">import</span> <span class="nn">gtk</span><span class="o">,</span> <span class="nn">wnck</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-5"></a><span class="kn">import</span> <span class="nn">time</span><span class="p">;</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-6"></a><span class="kn">from</span> <span class="nn">deskbar.core.keybinder._keybinder</span> \
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-7"></a>    <span class="kn">import</span> <span class="nn">tomboy_keybinder_bind</span> <span class="k">as</span> <span class="nn">bindkey</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-8"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-9"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-10"></a><span class="k">class</span> <span class="nc">QTerm</span><span class="p">:</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-11"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-12"></a>    <span class="n">window</span> <span class="o">=</span> <span class="kc">None</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-13"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-14"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pid</span><span class="p">):</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">pid</span> <span class="o">=</span> <span class="n">pid</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">screen</span> <span class="o">=</span> <span class="n">wnck</span><span class="o">.</span><span class="n">screen_get_default</span><span class="p">()</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-17"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">watch_handler</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'window-opened'</span><span class="p">,</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">watchWindow</span><span class="p">)</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-19"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-20"></a>    <span class="k">def</span> <span class="nf">watchWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-21"></a>        <span class="k">if</span> <span class="n">window</span><span class="o">.</span><span class="n">get_pid</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">pid</span><span class="p">:</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-22"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">window</span> <span class="o">=</span> <span class="n">window</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-23"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-24"></a>            <span class="n">swidth</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-25"></a>            <span class="n">width</span> <span class="o">=</span> <span class="n">swidth</span> <span class="o">-</span> <span class="p">(</span><span class="n">swidth</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-26"></a>            <span class="n">height</span> <span class="o">=</span> <span class="mi">400</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-27"></a>            <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">swidth</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-28"></a>            <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-29"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">set_geometry</span><span class="p">(</span><span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_GRAVITY_CURRENT</span><span class="p">,</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-30"></a>                                     <span class="p">(</span><span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_X</span> <span class="o">|</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-31"></a>                                      <span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_Y</span> <span class="o">|</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-32"></a>                                      <span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_WIDTH</span> <span class="o">|</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-33"></a>                                      <span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_HEIGHT</span><span class="p">),</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-34"></a>                                     <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-35"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-36"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">watch_handler</span><span class="p">)</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-37"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-38"></a>    <span class="k">def</span> <span class="nf">getTimestamp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-39"></a>        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">mktime</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">timetuple</span><span class="p">()))</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-40"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-41"></a>    <span class="k">def</span> <span class="nf">onHotKeyPress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-42"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">:</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-43"></a>            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">is_active</span><span class="p">()):</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-44"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">minimize</span><span class="p">()</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-45"></a>            <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-46"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getTimestamp</span><span class="p">())</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-47"></a>        <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-48"></a>            <span class="nb">print</span> <span class="s2">"Terminal window not found."</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-49"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-50"></a>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-51"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-52"></a>    <span class="n">pid</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">fork</span><span class="p">()</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-53"></a>    <span class="k">if</span> <span class="n">pid</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-54"></a>        <span class="n">os</span><span class="o">.</span><span class="n">execlp</span><span class="p">(</span><span class="s1">'xterm'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-55"></a>    <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-56"></a>        <span class="n">qterm</span> <span class="o">=</span> <span class="n">QTerm</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-57"></a>        <span class="n">bindkey</span><span class="p">(</span><span class="s2">"&lt;Alt&gt;grave"</span><span class="p">,</span> <span class="n">qterm</span><span class="o">.</span><span class="n">onHotKeyPress</span><span class="p">)</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-58"></a>        <span class="k">try</span><span class="p">:</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-59"></a>            <span class="n">gtk</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-60"></a>        <span class="k">except</span> <span class="p">(</span><span class="ne">KeyboardInterrupt</span><span class="p">,</span> <span class="ne">SystemExit</span><span class="p">):</span>
+<a name="rest_code_5693652e87634182afd7c8f23ddda0a6-61"></a>            <span class="k">pass</span>
+</pre>
+<p>Kad paleisti galima išsaugoti kodą į kokį nors failą ir jį paleisti su python.
+Kaip programa bus paleista, turėtu iššokti XTerm langas. Jį paslėpti galima su
+Grave (Alt + `), su tais pačiais klavišais galima ir iškviesti.</p>
+<p>Teoriškai vietoje XTerm galima naudoti bet kokį kitą terminalą, taip pat galima
+pasikeisti ir klavišų kombinaciją. Keičiant terminalą reikia atminti, kad
+terminalo lango PID turi sutapti su forkinto proceso PID, pavyzdžiui
+gnome-terminal pats fokinasi, todėl lango PID būna kotoks ir klavišų
+kombinacija neveikia.</p>
+<p>Kad būtų pilnas komplektas, siūlau dar parsisiųsti puikią <a class="reference external" href="http://www.brockman.se/software/zenburn/look-zenburn.xrdb">Zenburn spalvų temą
+XTermui</a>.  Kadangi
+Zenburn spalvų tema brockman.se serveryje yra kiek pasenus reikia į failo
+pabaigą įdėti tokias eilutes:</p>
+<pre class="literal-block">*VT100*foreground: #dcdccc
+*VT100*background: #3f3f3f
+
+*VT100*color0: #3f3f3f
+*VT100*color1: #705050
+*VT100*color2: #60b48a
+*VT100*color3: #dfaf8f
+*VT100*color4: #506070
+*VT100*color5: #dc8cc3
+*VT100*color6: #8cd0d3
+*VT100*color7: #dcdccc
+
+*VT100*color8: #709080
+*VT100*color9: #dca3a3
+*VT100*color10: #c3bf9f
+*VT100*color11: #f0dfaf
+*VT100*color12: #94bff3
+*VT100*color13: #ec93d3
+*VT100*color14: #93e0e3
+*VT100*color15: #ffffff</pre>
+<p>Ir tada viskas veiks tiesiog nepriekaištingai.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../kaip-kopijuoti-didelius-failus-komandineje-eiluteje/" rel="prev" title="Kaip kopijuoti didelius failus konsolėje?">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../kas-geriau-pradedanciajam-gimp-ar-photoshop/" rel="next" title="Kas geriau pradedančiajam, Gimp ar Photoshop?">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

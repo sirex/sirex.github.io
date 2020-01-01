@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about sirex)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/sirex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Svetainės istorija</title><link>https://sirex.lt/posts/2011/svetaines-istorija/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;2007-05-05&lt;/h2&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/drupal_logo.png"&gt;&lt;img alt="Drupal" class="align-right" src="https://sirex.lt/images/u1/drupal_logo.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;Deja nėra daug laiko tobulinti savo svetainę, todėl pasiskaitinėjęs pagalvojau,
+kad reikia išbandyti &lt;a class="reference external" href="http://drupal.org/"&gt;Drupal&lt;/a&gt; ir tuo pačiu ant jo perkelti savo svetainę/blogą.&lt;/p&gt;
+&lt;p&gt;Na pasibandysim ir žiūrėsim ar Drupal iš ties geras daigtas :)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;2009-02-09&lt;/h2&gt;
+&lt;p&gt;Jau 100 metų ruošiausi ir šį savaitgalį, netikėtai prisiruošiau atsinaujinti
+savo blogo vidurius. Dar penktadienį sukosi Drupal 5.1, o jau dabar, šviežiai
+paleistas Drupal 6.9 :)&lt;/p&gt;
+&lt;p&gt;Buvau nustebintas, bet migravimo procesas iš 5.1 į 6.9 buvo visiškai sklandus
+ir nesusidūriau su jokiomis problemomis. Šiaip tai jau kelis kartus planavau
+pakeisti Drupal kuo nors kitu, dėl jo didumo ir tokio, ganėtinai keisto
+svetainės administravimo būdo, nekalbant apie pačios sistemos kodo struktūrą.
+Tačiau vis tik tūkstančiai modulių, paruoštų visiems gyvenimo atvejams duoda
+savo... :)&lt;/p&gt;
+&lt;p&gt;Dažnai sugalvoju, kad reikėtų vieno ar kito. Vos tik žvilgtelėjus
+&lt;a class="reference external" href="http://drupalmodules.com"&gt;drupalmodules.com&lt;/a&gt;, tas noras akimirksniu tampa
+realybe... Kadangi jau prisiruošiau pereiti prie Drupal 6.9, tai tikriausiai
+pasiliksiu su juo dar ilgam.&lt;/p&gt;
+&lt;p&gt;Štai sąrašas modulių, kuriuos įdiegiau į naująją versiją (abėcėlės tvarka):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;admin_menu&lt;/strong&gt; – puikusis administravimo meniu.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;captcha&lt;/strong&gt; – apsauga nuo spamo.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;cck&lt;/strong&gt; – Content Construction Kit, būtent jo pagalba labai paprastai
+realizavau skiltį &lt;a class="reference external" href="https://sirex.lt/darbai"&gt;Darbai&lt;/a&gt;, ką padaryti planavau jau labai senai.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;comment_notify&lt;/strong&gt; – galimybė sekti komentarus.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;commentrss&lt;/strong&gt; – galimybė užsiprenumeruoti komentarų RSS.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;extlink&lt;/strong&gt; – mažas moduliukas, kuris sužymi išorines nuorodas ir el.  pašto
+adresus.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;feedburner&lt;/strong&gt; – FeedBurner integracija.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;geshifilter&lt;/strong&gt; – šį naudoju kodo spalvinimui ir net gi pats parašiau Zenburn
+spalvų schemą... :)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;google_analytics&lt;/strong&gt; – Google Analytics integracija.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;google_cse&lt;/strong&gt; – Google Custom Search Engine integracija.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;gravatar&lt;/strong&gt; – Gravatar integracija.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;poormanscron&lt;/strong&gt; – modulis, kuris neįpareigoja naudoti serverio crono.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;tagadelic&lt;/strong&gt; – šoninis žymių debesis.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;twitter&lt;/strong&gt; – Twitter integracija.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;views&lt;/strong&gt; – nuostabusis ir puikusis Views modulis, būtent su juo generuoju
+&lt;a class="reference external" href="https://sirex.lt/darbai"&gt;„Darbų“&lt;/a&gt; skilties sąrašą.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nors Drupal modulių yra visa galybė, tačiau vieno modulio surasti taip ir
+nepavyko – OpenID laukas komentaruose. Bet radau forumuose užsimezgusias
+diskusijas, tai gal greitu laiku, kas nors tai padarys. O gal ir pačiam reikės
+tuo užsiimti. Bus matyt.&lt;/p&gt;
+&lt;p&gt;Be visų modulių ir kitokio gėrio, visiškai perrašiau savo blogo Drupal temą,
+kuri dabar yra kur kas lengvesnė ir labiau išbaigta.&lt;/p&gt;
+&lt;p&gt;Be viso to, kas akivaizdžiai matosi, nuveikiau dar labai daug. Visų
+pirmiausiai, pagaliau prisiruošiau sukonstruoti skriptą, kuris automatiškai
+darytų blogo atsargines kopijas, nes vieną kartą palūžus serveriui, jei esu
+praradęs šiek tiek duomenų. Tačiau pasidaręs pirmą atsarginės kopijos archyvą,
+pastebėjau, kad per laiką yra susikaupę visa galybė šlamšto, tiek duomenų
+bazėje, tiek pačiame serveryje. Išvalyti serverį buvo labai nesudėtinga:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo rm -rf *&lt;/pre&gt;
+&lt;p&gt;Tačiau su duomenų baze tai turėjau šiek tiek vargo. Kadangi per apsileidimą
+niekaip nesuradau laiko sutvarkyti Drupal crono, tai buvo susikaupę labai daug
+lankomumo žurnalo įrašų ir visa galybė spaminių komentarų, dar nuo tų laikų,
+kai nebuvau įdiegęs CAPTCHA modulio. Tačiau šiek tiek įsigilinus į duomenų
+bazės lenteles ir pasitelkus subselectus, gan sėkmingai pavyko viską išvalyti.
+Duomenų bazė prieš tai svėrė 350 Mb, o po išvalymo 7.5 Mb.&lt;/p&gt;
+&lt;p&gt;Tai gi, reziumuojant, šis savaitgalis buvo praleistas labai turiningai,
+išvalytas serveris, išvalyta duomenų bazė, numigruota prie Drupal 6.9,
+perrašytas Drupal tema ir įdiegta daug visokių modulių...&lt;/p&gt;
+&lt;p&gt;Jei, kas pastebėsite kokių nors netikslumų, kurių tikėtina gali atsirasti, tai
+rašykit. Kol dar neišblėso entuziazmas, sutvarkysiu :)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;2011-07-15&lt;/h2&gt;
+&lt;p&gt;Visas svetainės turinys perkeltas iš &lt;a class="reference external" href="http://drupal.org/"&gt;Drupal&lt;/a&gt; į &lt;a class="reference external" href="https://sirex.lt/posts/2008/pelican/"&gt;Pelican&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;2019-12-31&lt;/h2&gt;
+&lt;p&gt;Visas svetainės turinys perkeltas iš &lt;a class="reference external" href="https://sirex.lt/posts/2008/pelican/"&gt;Pelican&lt;/a&gt; į &lt;a class="reference external" href="https://www.getnikola.com/"&gt;Nikola&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>sirex</category><guid>https://sirex.lt/posts/2011/svetaines-istorija/</guid><pubDate>Thu, 14 Jul 2011 21:00:00 GMT</pubDate></item><item><title>Mano darbastalis</title><link>https://sirex.lt/posts/2007/mano-darbastalis/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Štai taip atrodo mano paskutinis darbo laukas:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/Screenshot.png"&gt;&lt;img alt="/images/u1/Screenshot.thumbnail.png" src="https://sirex.lt/images/u1/Screenshot.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;Šiame darbastalyje naudojama Gnome grafinė aplinka, tik vietoje stadartinės
+langų tvarkyklės Metacitį, naudojama Sawfish. Priekyje paleista FireFox
+naršyklė su VIMperator exstesionu. Fone matyti GVim teksto redaktorius, su
+dbext pluginu, skirtu valdyti duomenų bazei.&lt;/p&gt;&lt;/div&gt;</description><category>sirex</category><guid>https://sirex.lt/posts/2007/mano-darbastalis/</guid><pubDate>Thu, 02 Aug 2007 10:19:00 GMT</pubDate></item></channel></rss>

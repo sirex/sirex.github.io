@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Ubuntu Eee ant Eee PC 900 | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2008/ubuntu-eee-ant-eee-pc-900/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../it-evoliucija/" title="IT evoliucija" type="text/html">
+<link rel="next" href="../mac-os-x-ispustas-burbulas/" title="Mac OS X išpūstas burbulas?" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Ubuntu Eee ant Eee PC 900">
+<meta property="og:url" content="https://sirex.lt/posts/2008/ubuntu-eee-ant-eee-pc-900/">
+<meta property="og:description" content="Kaip žinia nesenai BMS pardavinėjo Asus Eee PC 900 po 599 Lt. Tai aš irgi vieną
+įsigijau, ne sau, bes savo sesei.
+
+Kadangi pagal nutylėjimą įdiegta Xandros operacinė sistema yra tokia ganėtinai
+vaikiš">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2008-11-19T11:43:00+02:00">
+<meta property="article:tag" content="eee">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="ubuntu">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Ubuntu Eee ant Eee PC 900</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2008-11-19T11:43:00+02:00" itemprop="datePublished" title="2008-11-19 11:43">2008-11-19 11:43</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/eee/" rel="tag">eee</a>,                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/ubuntu/" rel="tag">ubuntu</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Kaip žinia nesenai BMS pardavinėjo Asus Eee PC 900 po 599 Lt. Tai aš irgi vieną
+įsigijau, ne sau, bes savo sesei.</p>
+<a class="reference external image-reference" href="../../../images/small_eee.png"><img alt="/images/small_eee.thumbnail.png" src="../../../images/small_eee.thumbnail.png"></a>
+<p>Kadangi pagal nutylėjimą įdiegta Xandros operacinė sistema yra tokia ganėtinai
+vaikiška, tai nusprendžiau į jį įdiegti <a class="reference external" href="http://www.ubuntu-eee.com/">Ubuntu eee</a>. Nors tikėjausi, kad įdiegus viskas pradės
+veikti iš karto, bet deja taip nebuvo, teko sekti nurodymus ir derinti, bet
+galiausiai turiu pilnai veikiančią sistemą.  Nors yra ne vienas įrankis LiveUSB
+kūrimui iš ISO atvaizdų, tačiau Ubuntu Eee atveju, reikia naudotis kankrečiai
+jų pagamintu įrankiu UNetbootin, nes kiti neveiks. Standartiniai LiveUSB kūrimo
+įrankiai paprasčiausiai užrašo ISO failo turiny ant USB failų sistemos. O
+UNetbootin paprasčiausiai kopijuoja failus, o po to padaro reikiamus boot
+įrašus.  Diegimo metu reikėtu atsižvelgti į <a class="reference external" href="https://help.ubuntu.com/community/EeePC/Installation">vienintelę rekomendaciją</a>, disko skirstymo metu
+naudoti <code class="docutils literal">Ext2</code> failų sistemą. Taip pat diskų tvarkymo dalyje, aš pasirinkau
+rankinį diskų tvarkymo režimą, ten ištryniau visus Eee 900 diskus, kurių buvo 4
+ir sukūriau vieną <code class="docutils literal">Ext2</code> skirsnį, kuriam priskyriau <code class="docutils literal">/</code> montavimo tašką.
+<strong>Kas neveikė po įdiegimo ir kaip tai sutvarkyti</strong> Kadangi iš esmės daugelis
+dalykų veikė, tai aprašysiu, kas neveikė:</p>
+<ul class="simple">
+<li><p>Garso įrašymas (<a class="reference external" href="https://help.ubuntu.com/community/EeePC/Fixes#Microphone">instrukcijos kaip taisyti</a>)</p></li>
+<li><p>Optimizacijos mažinančios skaitymų/rašymų skaičių į Eee Flash atminies
+kortelę (<a class="reference external" href="https://help.ubuntu.com/community/EeePC/Using#Reducing%20Drive%20Writes">instrukcijos kaip taisyti</a>),
+šioje vietoje būkite atsargūs, jei netyčia klaidingai ką nors nurodysite,
+gali nebe užsikrauti grafinė aplinka, kaip kad man ir atsitiko. Jei taip
+atsitiks ir jums, tai užkraukite Eee PC iš LiveUSB, primontuokite sugadintą
+skirsnį sudo mount -t ext2 -o rw /dev/sda1 /mnt ir pataisykite ką sugadinote
+faile sudo gedit /mnt/etc/fstab.</p></li>
+<li><p>Ne visada suveikia shut down (<a class="reference external" href="https://help.ubuntu.com/community/EeePC/Fixes#Shutdown">instrukcijos kaip taisyti</a>)</p></li>
+<li><p>Neveikė webcam (internetinė kamera), nors tiesą sąkant ji veikė, tik tiek,
+kad buvo išjungta BIOS nustatymuose, bet kokiu atveju, galite žiūrėti
+<a class="reference external" href="https://help.ubuntu.com/community/EeePC/Fixes#Webcam">instrukcijas kaip taisyti</a></p></li>
+<li><p>Problemos su atnaujinimais, siūlo atlikti „Partial Update“, dėl kažkokių tai
+blogų paketų. Tai aš paprasčiausiai užėjau į Home - Administravimas -
+Software Sources - Third-Party Software ir atžymėjau paskutinį repozitoriumą
+(<a class="reference external" href="http://www.array.org/ubuntu">http://www.array.org/ubuntu</a> hardy eeepc), tada visi atnaujinimai įsidiegė
+sėkmingai. Po atnaujinimo, jei paprašys perkrauti kompiuterį, taip ir padarykite.</p></li>
+<li><p>Home mygtuko funkcija – grįžimas į pradinį desktopą <a class="reference external" href="http://www.ubuntu-eee.com/wiki/index.php5?title=How_to:_Set_Super_button_to_show_desktop">instrukcijos kaip nustatyti</a></p></li>
+<li><p>CPU Frequency Scaling, šiaip tai tas dalykas veikia normaliai, tik tiek, kad
+į panelę įkėlus CPU Frequency Scaling apletą, neleidžia pasirinkti
+procesoriau dažnio, tam reikia įvesti tokią komandą ir pradės veikti: sudo
+chmod +s /usr/bin/cpufreq-selector</p></li>
+<li><p>Baterijos įkrovos indikatorius neįspėja apie tai, kad baterija jau išsikrovė,
+kompiuteris tiesiog išsijungia. Man taip nutiko intensyvaus atnaujinimo metu.
+Baterijos indikatorius rodė, kad dar yra 5 minutės laiko. Po to kai Eee
+išsijungė, gavau pranešimą, kad reikia paleisti fsck rankiniu būdu, tačiau
+tam reikia prisijungti su sistemos administratoriaus slaptažodžiu.
+Slaptažodis kažkodėl nesuveikė, tai paleidau Eee iš LiveUSB, ten įsijungiau
+terminalą ir paleidau fsck rankiniu būdu: sudo fsck.ext2 -y /dev/sda1. Fsck
+kažką surado, kažką pataisė ir perkrovus Eee vėl pradėjo veikti. Tai gi,
+būkite atsargūs su baterija. Jei rodo, kad liko 20%, tai jau galite pradėti krauti.</p></li>
+</ul>
+<p>Atrodo apturėjau visas įmanomas problemas, todėl tikiuosi jums bus lengviau jas
+spręsti.. :)</p>
+<div class="section" id="lietuviu-kalbos-pilnas-idiegimas">
+<h2>Lietuvių kalbos pilnas įdiegimas<a href="#lietuviu-kalbos-pilnas-idiegimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Čia tiems, kurie nori turėti Lietuvišką naudotojo sąsają. Tikriausiai diegimo
+metu jau pasirinkote Lietuvių kalbą, tačiau to nepakanka, nes į vieną LiveUSB
+visų kalbų pilno palaikymo nesutalpinsi. Tai gi, kad turėtumėte pilnai
+lietuvišką naudotojo sąsają eikite į: Home - Administravimas - Language
+Support, sąraše suraskite ‘Lithuanian’ ir uždėkite paukščiuką ir spauskite
+‘Apply’. Po šių veiksmų bus įdiegti visi reikalingi dalykai Lietuvių kalbai.</p>
+</div>
+<div class="section" id="standartiniu-xandros-programu-idiegimas">
+<h2>Standartinių Xandros programų įdiegimas<a href="#standartiniu-xandros-programu-idiegimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Jei žiūrinėjote standartines Eee PC programas, tai radote daug visokių programų
+mokymuisi, visokių žaidimų ir t.t. Ubuntu Eee galite turėti viską ir dar
+daugiau. Nežinau kodėl, bet programų paleidimo panelėje nėra įrankio
+„Įdiegti/pašalinti…“. Jį galima įkelti labai paprastai.  Spauskite Alt+F2 ir
+įrašykite: alacarte. Atsidariusiame lange šone pasirinkite „Programos“, o
+dešinėje, tempkite „Įdiegti/Pašalinti..“ ant „Favorites“. Po šių veiksmų
+pagrindinėje panelėje turėtu atsirasti „Programos“, kur ir rasite
+„Įdiegti/Pašalinti“.  Paleidus „Įdiegti/Pašalinti“ galėsite sužymėti visas
+programas kurių reikia ir iš karto visas įdiegti.</p>
+</div>
+<div class="section" id="lietuviu-anlgu-kalbu-zodymas-opendict">
+<h2>Lietuvių - Anlgų kalbų žodymas Opendict<a href="#lietuviu-anlgu-kalbu-zodymas-opendict" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Tikriausiai prisireiks šio dalyko, kuris pagal nutylėjimą nėra įdiegtas.
+Žodynas vadinasi „Opendict“, todėl galite jį susirasti aukščiau aprašytame
+programų diegimo įrankyje, pažymėti ir įdiegti. Taip pat galite pasinaudoti
+viena komanda: sudo apt-get install opendict.  Žodynus Opendict programai
+galite atsisiųsti iš šių vietų:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://files.akl.lt/baltix-linux/Baltix-Ubuntu-packages/baltix-3.x/opendict-led/">Anglų - Lietuvių, Vokiečių - Lietuvių</a>
+spauskite ant .deb failų.</p></li>
+<li><p><a class="reference external" href="http://www.ubuntu.lt/render/Forum;thread,2932">Anglonas</a></p></li>
+<li><p><a class="reference external" href="ftp://debian.home.lt/debian/pool/contrib/o/opendict-dictionaric/">Pracūzų - Lietuvių</a>
+spauskite ant .deb failų.</p></li>
+</ul>
+</div>
+<div class="section" id="daugiau-vaizdu">
+<h2>Daugiau vaizdų<a href="#daugiau-vaizdu" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<a class="reference external image-reference" href="../../../images/small_eee2.png"><img alt="/images/small_eee2.thumbnail.png" src="../../../images/small_eee2.thumbnail.png" style="height: 200px;"></a>
+<a class="reference external image-reference" href="../../../images/small_eee3.png"><img alt="/images/small_eee3.thumbnail.png" src="../../../images/small_eee3.thumbnail.png" style="width: 200px;"></a>
+<a class="reference external image-reference" href="../../../images/eee/small_Nuotrauka.png"><img alt="/images/eee/small_Nuotrauka.thumbnail.png" src="../../../images/eee/small_Nuotrauka.thumbnail.png" style="width: 200px;"></a>
+<a class="reference external image-reference" href="../../../images/eee/small_Nuotrauka-1.png"><img alt="/images/eee/small_Nuotrauka-1.thumbnail.png" src="../../../images/eee/small_Nuotrauka-1.thumbnail.png" style="width: 200px;"></a>
+<a class="reference external image-reference" href="../../../images/eee/small_Nuotrauka-2.png"><img alt="/images/eee/small_Nuotrauka-2.thumbnail.png" src="../../../images/eee/small_Nuotrauka-2.thumbnail.png" style="width: 200px;"></a>
+<a class="reference external image-reference" href="../../../images/eee/small_Nuotrauka-4.png"><img alt="/images/eee/small_Nuotrauka-4.thumbnail.png" src="../../../images/eee/small_Nuotrauka-4.thumbnail.png" style="width: 200px;"></a>
+<a class="reference external image-reference" href="../../../images/eee/small_Nuotrauka-5.png"><img alt="/images/eee/small_Nuotrauka-5.thumbnail.png" src="../../../images/eee/small_Nuotrauka-5.thumbnail.png" style="width: 200px;"></a>
+<a class="reference external image-reference" href="../../../images/eee/small_Nuotrauka-6.png"><img alt="/images/eee/small_Nuotrauka-6.thumbnail.png" src="../../../images/eee/small_Nuotrauka-6.thumbnail.png" style="width: 200px;"></a>
+<a class="reference external image-reference" href="../../../images/eee/small_Nuotrauka-7.png"><img alt="/images/eee/small_Nuotrauka-7.thumbnail.png" src="../../../images/eee/small_Nuotrauka-7.thumbnail.png" style="width: 200px;"></a>
+<a class="reference external image-reference" href="../../../images/eee/small_Nuotrauka-8.png"><img alt="/images/eee/small_Nuotrauka-8.thumbnail.png" src="../../../images/eee/small_Nuotrauka-8.thumbnail.png" style="width: 200px;"></a>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../it-evoliucija/" rel="prev" title="IT evoliucija">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../mac-os-x-ispustas-burbulas/" rel="next" title="Mac OS X išpūstas burbulas?">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

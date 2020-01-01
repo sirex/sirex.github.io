@@ -1,0 +1,4 @@
+Sitemap: https://sirex.lt/sitemapindex.xml
+
+User-Agent: *
+Host: sirex.lt

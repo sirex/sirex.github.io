@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Muzika iš komandinės eilutės | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../kodel-php-nera-programavimo-kalba/" title="Kodėl PHP nėra programavimo kalba?" type="text/html">
+<link rel="next" href="../pyjunior/" title="PyJunior" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Muzika iš komandinės eilutės">
+<meta property="og:url" content="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/">
+<meta property="og:description" content="Mėgstu klausytis muzikos ir patinka, kai muzika tiesiog groja. Ilgą laiką
+naudojuosi MPD muzikos demonu, kuris nuolat sukasi kompiuteryje ir klauso kas
+jam liepiama daryti.
+MPD yra geras tuo, kad jį g">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-04-05T21:43:00+02:00">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="shell">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Muzika iš komandinės eilutės</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2010-04-05T21:43:00+02:00" itemprop="datePublished" title="2010-04-05 21:43">2010-04-05 21:43</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/shell/" rel="tag">shell</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Mėgstu klausytis muzikos ir patinka, kai muzika tiesiog groja. Ilgą laiką
+naudojuosi MPD muzikos demonu, kuris nuolat sukasi kompiuteryje ir klauso kas
+jam liepiama daryti.</p>
+<p>MPD yra geras tuo, kad jį galima paleisti kompiuteriu kraunantis nebijant, kad
+tai apsunkins kompiuterio darbą, nes MPD demonas yra labai lengvas. Tada, bet
+kuriuo metu pakanka nuspausti mygtuką klaviatūroje „Play“ ir MPD gavęs signalą,
+pradeda groti muziką. Panašiai grojamą muziką galima pristabdyti, sustabdyti,
+paleisti sekančią dainą ar grąžinti prieš tai buvusią.</p>
+<p>Tačiau, jei reikia paklausyti atsitiktinę dainą arba užkrauti vieną katalogą,
+MPD nėra labai patogus, nes tenka žaisti su muzikos biblioteka, įvedinėti
+visokias komandas ir pan.</p>
+<p>Greitam muzikos klausymui ir atrankai, kur kas labiau tinka muzikos grotuvas
+CMUS, kuris yra paprastas, greitas ir turi panašumu su teksto redaktorių VIM.</p>
+<p>Kad MPD ir CMUS derėtų tarpusavyje, esu pasirašęs paprastą SHELL skriptą, kurio
+pagalba paspaudus „Play“ patikrinama ar yra paleistas CMUS ir jei jis veikia,
+tuomet paleidžiama groti daina per CMUS, o jei jis išjungtas, tuomet naudojamas
+nuolat budintis MPD. Skriptas atrodo taip:</p>
+<pre class="code bash"><a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-1"></a><span class="ch">#!/bin/bash</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-2"></a>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-3"></a><span class="k">case</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> in
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-4"></a>    toggle<span class="o">)</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-5"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-6"></a>            cmus-remote --pause
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-7"></a>        <span class="k">else</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-8"></a>            mpc toggle
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-9"></a>        <span class="k">fi</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-10"></a>        <span class="p">;;</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-11"></a>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-12"></a>    stop<span class="o">)</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-13"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-14"></a>            cmus-remote --stop
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-15"></a>        <span class="k">else</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-16"></a>            mpc stop
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-17"></a>        <span class="k">fi</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-18"></a>        <span class="p">;;</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-19"></a>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-20"></a>    next<span class="o">)</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-21"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-22"></a>            cmus-remote --next
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-23"></a>        <span class="k">else</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-24"></a>            mpc next
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-25"></a>        <span class="k">fi</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-26"></a>        <span class="p">;;</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-27"></a>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-28"></a>    prev<span class="o">)</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-29"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-30"></a>            cmus-remote --prev
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-31"></a>        <span class="k">else</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-32"></a>            mpc prev
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-33"></a>        <span class="k">fi</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-34"></a>        <span class="p">;;</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-35"></a>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-36"></a>    *<span class="o">)</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-37"></a>        <span class="nb">echo</span> <span class="s2">"usage: </span><span class="nv">$0</span><span class="s2"> {toggle|stop|next|prev}"</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-38"></a><span class="k">esac</span>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-39"></a>
+<a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-40"></a><span class="nb">exit</span> <span class="m">0</span>
+</pre>
+<div class="section" id="cmus">
+<h2>CMUS<a href="#cmus" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Kadangi CMUS yra labai paprastas, tai užtenka jį įdiegti, paleisti iš
+komandinės eilutės:</p>
+<pre class="literal-block">cmus</pre>
+<p>ir įkelti norima katalogą ar failą grojimui:</p>
+<pre class="literal-block">:add ~/music</pre>
+</div>
+<div class="section" id="mpd">
+<h2>MPD<a href="#mpd" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>MPD yra sudėtingesnis, nes veikia, kaip serveris. Pirmiausia, prieš pradedant
+jį naudot, reikia aprašyti konfigūracinį failą <code class="docutils literal"><span class="pre">~/.mpdconf</span></code>:</p>
+<pre class="literal-block">music_directory "~/music/"
+playlist_directory "~/.mpd/playlists"
+db_file "~/.mpd/mpd.db"
+log_file "~/.mpd/mpd.log"
+error_file "~/.mpd/mpd.error"
+pid_file "~/.mpd/mpd.pid"
+state_file "~/.mpd/mpdstate"</pre>
+<p>Tada į kartu su kompiuteriu paleidžiamas programas įkelkite programą <em>mpd</em>.
+Norėdami patestuoti iš karto, komandinėje eilutėje įveskite <em>mpd</em> ir paruoškite grojaraštį:</p>
+<pre class="literal-block">mpc update
+mpc clear
+mpc mpc listall | mpc add
+mpc play</pre>
+<p>Viskas, MPD paruoštas, pasileis kartu su kompiuteriu ir bet kuriuo metu bus
+pasiruošęs skleisti muzikos garsus.</p>
+<p>Norėdami kontroliuoti MPD, galite naudoti komandinės eilutės klientą mpc arba
+ncurses klientą <em>ncmpcpp</em>.</p>
+</div>
+<div class="section" id="media-klavisai">
+<h2>Media klavišai<a href="#media-klavisai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Paskutinis dalykas – media klavišų susiejimas, su aukščiau pateiktu <em>music.sh</em>
+skritpu. Tai padarysite, nurodydami tokias komandas, atitinkamiems klavišams:</p>
+<pre class="literal-block">/home/naudotojovardas/bin/music.sh toggle
+/home/naudotojovardas/bin/music.sh stop
+/home/naudotojovardas/bin/music.sh next
+/home/naudotojovardas/bin/music.sh prev</pre>
+</div>
+<div class="section" id="audio-scrobbler">
+<h2>Audio scrobbler<a href="#audio-scrobbler" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Ar jums įdomu ką klausote? Man, taip, todėl naudojuosi audio scrobbling
+technologija klausomos muzikos statistikai vestis. Visą informaciją apie
+klausytą muziką siunčiu last.fm portalui, kur vėliau galiu parodyti draugams
+kokią muziką mėgstu ir pats pasižiūrėti klausomos muzikos statistiką. Mano
+last.fm profilis:</p>
+<p><a class="reference external" href="http://www.last.fm/user/sirexas">http://www.last.fm/user/sirexas</a></p>
+<p>MPD demonui naudoju <a class="reference external" href="http://mpd.wikia.com/wiki/Client:Mpdscribble">mpdscribble</a>. CMUS – <a class="reference external" href="http://github.com/freshprince/cmuscrobbler">cmuscrobbler</a>.  Turint taip
+sukonfigūruotą sistemą, galima pamiršti apie muzikos programas ir tiesiog
+dirbant savo darbus klausytis muzikos!</p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../kodel-php-nera-programavimo-kalba/" rel="prev" title="Kodėl PHP nėra programavimo kalba?">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../pyjunior/" rel="next" title="PyJunior">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

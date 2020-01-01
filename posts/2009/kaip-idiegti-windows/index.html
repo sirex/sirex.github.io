@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Kaip įdiegti Windows? | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2009/kaip-idiegti-windows/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../kaip-paleisti-darbini-lamp-serveri-su-buildout/" title="Kaip paleisti darbinį LAMP serverį su buildout?" type="text/html">
+<link rel="next" href="../kaip-atsinaujinti-drupal-modulius-greitai/" title="Kaip atsinaujinti Drupal modulius greitai?" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Kaip įdiegti Windows?">
+<meta property="og:url" content="https://sirex.lt/posts/2009/kaip-idiegti-windows/">
+<meta property="og:description" content="Istorija tokia, darbe teko testuoti svetainę su IE naršyklėmis. Kadangi prie
+projekto dirbau vienas ir nebuvo porininko naudojančio Windows, tai tas bjaurus
+darbas teko man pačiam... :/
+Darbe naudoju ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2009-10-19T22:52:00+02:00">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="qemu">
+<meta property="article:tag" content="ubuntu">
+<meta property="article:tag" content="windows">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Kaip įdiegti Windows?</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2009-10-19T22:52:00+02:00" itemprop="datePublished" title="2009-10-19 22:52">2009-10-19 22:52</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/qemu/" rel="tag">qemu</a>,                    <a class="tag p-category" href="../../../tags/ubuntu/" rel="tag">ubuntu</a>,                    <a class="tag p-category" href="../../../tags/windows/" rel="tag">windows</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Istorija tokia, darbe teko testuoti svetainę su IE naršyklėmis. Kadangi prie
+projekto dirbau vienas ir nebuvo porininko naudojančio Windows, tai tas bjaurus
+darbas teko man pačiam… :/</p>
+<p>Darbe naudoju Ubuntu, tai jokio IE neturėjau. Ačiū <a class="reference external" href="http://www.tatanka.com.br/ies4linux/">IEs4Linux projektui</a>, kurio dėka IE6 daugiau/mažiau veikia
+per <a class="reference external" href="http://www.winehq.org/">Wine (**W**ine **I**s **N**ot an **E**mulator!)</a>. Deja to pačio padaryti su IE7 nepavyko. Sprendimas
+– greitai įsidiegti Windows į virtualią mašiną ir ten testuoti.</p>
+<p>Įdiegti Ubuntu galima iš CD, USB, per tinklą ar internetą ir net gi <a class="reference external" href="http://wubi-installer.org/">tiesiai į
+Windows, nekeičiant disko skirsnių</a>. Kiek žinau,
+Windows galima įdiegti tik per CD…</p>
+<div class="section" id="kaip-idiegti-windows">
+<h2>Kaip įdiegti Windows?<a href="#kaip-idiegti-windows" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Virtualizacijos dėka ribotos Windows įdiegimo galimybės nesudaro jokių
+problemų. Šiam reikalui pasirinkau <a class="reference external" href="http://www.qemu.org/">QEMU</a>.  Kodėl?
+Todėl, kad tai yra lengvas. paprastas virtualios mašinos emuliatorius.</p>
+<p><strong>1. Įdiegiame QEMU:</strong></p>
+<pre class="literal-block">$ sudo apt-get install qemu kqemu-source</pre>
+<p><em>kqemu-source</em> yra Linux branduolio modulis, kuris paspartina QEMU virtualios
+mašinos darbą. Viskas veiks ir be šio paketo, tačiau lėčiau.</p>
+<p><strong>2. Susikuriame virtualų diską:</strong></p>
+<pre class="literal-block">$ qemu-img create -f qcow2 windows.img 8G</pre>
+<p>Nors nurodyta 8G diskas, tačiau pats virtualaus disko failas užims vos kelis
+kilobaitus. Failo dydis proporcingas naudojamai virtualaus disko vietai.</p>
+<p><strong>3. Windows diegimas iš ISO arba CD</strong></p>
+<pre class="literal-block">$ qemu -cdrom windows.iso -hda windows.img -m 256 -boot d</pre>
+<p>Jei turite nelegaliai pasidarę legalių Windows CD kopiją į ISO failą, tuomet
+galite nurodyti virtualiai mašinai, kad tiesiog užsikrauto iš to ISO failo.
+Tačiau galite į CD-ROM įrenginį įdėti ir legalių Windows CD, tuomet vietoje
+<em>windows.iso</em> reikės nurodyti <em>/dev/cdrom</em>.</p>
+<p>Beje, viskas veiks ir su nelegalia Windows kopija :)</p>
+<p>Po šios komandos paleidimo pasileist Windows diegimo vedlys. Įdiekite Windows
+kaip visada. Jei nei karto neteko diegti Windows, paprašykite draugo pagalbos.</p>
+<p>Priklausomai nuo jūsų kompiuterio spartos, diegimas truks apie valandą.</p>
+</div>
+<div class="section" id="po-idiegimo">
+<h2>Po įdiegimo<a href="#po-idiegimo" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Kai jau turėsite veikiančius Windows, išsaugotus virtualiame diske, nebereikės
+kartoti diegimo, norint vėl juos paliesti. Jau įdiegtus Windows iškviesite taip:</p>
+<pre class="literal-block">$ qemu -hda windows.img -m 256</pre>
+<p>Kadangi Windows mėgsta virusai ir kitokios nelaimės, tai siūlau pasidaryti
+virtualaus disko kopiją su šviežiai įdiegtais Windows. Galite viską įsirašyti į
+kokį DVD ar šiaip kur nors pasidėti. Jei kas nors nutiks, bet kada vėl galėsite
+paleisti šviežiai įdiegtus Windows iš atsarginės virtualaus disko kopijos.</p>
+<p>Pats tai išbandžiau, pavyko sėkmingai ištestuoti svetainę su IE naršykle ir
+pataisyti klaidas.</p>
+<p>Naudojantis QEMU galima testuoti ir kitas operacines sistemas, pavyzdžiui
+Ubuntu Alpha ar Beta versijas. Daugiau apie QEMU galite pasiskaityti <a class="reference external" href="http://www.qemu.org/">qemu.org</a> svetainėje.</p>
+<p><img alt="image0" src="files/qemu-windows.png"></p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../kaip-paleisti-darbini-lamp-serveri-su-buildout/" rel="prev" title="Kaip paleisti darbinį LAMP serverį su buildout?">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../kaip-atsinaujinti-drupal-modulius-greitai/" rel="next" title="Kaip atsinaujinti Drupal modulius greitai?">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

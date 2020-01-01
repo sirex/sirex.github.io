@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about vim)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/vim.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Priemonės darbui su Python ir Django</title><link>https://sirex.lt/posts/2010/priemones-darbui-su-python-ir-django/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Iš anksto įspėju, kad čia aprašytos priemonės toli gražu nėra skirtos
+pradedantiesiems programuotojams.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Naujame darbe pradėjęs programuoti Python skyriau šiek tiek laiko darbo
+priemonių paruošimui ir nusprendžiau pasidalint savo naudojamo arsenalo sąrašu
+su visais. Jei trumpai, pagrindinės darbo priemonės kurias naudoju yra šios:
+&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Xterm"&gt;Xterm&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/GNU_Screen"&gt;screen&lt;/a&gt;, &lt;a class="reference external" href="http://www.zsh.org/"&gt;zsh&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Vim_(text_editor)"&gt;vim&lt;/a&gt;, &lt;a class="reference external" href="http://ctags.sourceforge.net/"&gt;ctags&lt;/a&gt;, &lt;a class="reference external" href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt;, &lt;a class="reference external" href="http://dreampie.sourceforge.net/"&gt;DreamPie&lt;/a&gt;, &lt;a class="reference external" href="http://virtualenv.openplans.org/"&gt;virtualenv&lt;/a&gt;, &lt;a class="reference external" href="http://www.buildout.org/"&gt;buildout&lt;/a&gt;,
+&lt;a class="reference external" href="http://sphinx.pocoo.org/"&gt;Sphinx&lt;/a&gt;, &lt;a class="reference external" href="http://pypi.python.org/pypi/pylint"&gt;pylint&lt;/a&gt;, &lt;a class="reference external" href="http://github.com/robhudson/django-debug-toolbar"&gt;django-debug-toolbar&lt;/a&gt;, &lt;a class="reference external" href="http://south.aeracode.org/docs/about.html"&gt;South&lt;/a&gt;, &lt;a class="reference external" href="http://pypi.python.org/pypi/ipdb"&gt;ipdb&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Štai kaip viskas atrodo bendroje visumoje:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/Darbalaukis_1_003.png"&gt;&lt;img alt="Priemonės darbui su Python" class="previewimage" src="https://sirex.lt/images/Darbalaukis_1_003.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;Visų šių programų konfigūraciniai failai guli viešai prieinamoje vietoje:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://bitbucket.org/sirex/home/src/"&gt;http://bitbucket.org/sirex/home/src/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XTerm&lt;/strong&gt; yra paprastas, gan greitas (kur kas greitesnis už gnome-terminal ir
+šiek tiek lėtesnis už rxvt) ir labai lankstus terminalo emuliatorius.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;screen&lt;/strong&gt; yra virtualus terminalų multiplexeris, suteikiantis viename
+terminalo lange naudoti kelias terminalo sesijas. Be šios savybės screen turi
+dar daug visokių įdomių funkcijų, tokių kaip virtualūs terminalų langai ir jų
+dalinimas, kopijavimas iš terminalo išvesties, terminalo išvesties saugojimas,
+virtualių terminalų sesijos atskyrimas ir t.t.  Išmokus juo naudotis,
+praktikoje tikrai praverčia.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;zsh&lt;/strong&gt; – tiesiog gera komandinės eilutės sąsaja (shell). Naudoju jį todėl, kad
+jis tiesiog yra tobulas ir turi viską, ko gali prireikti.  Plačiau:
+&lt;a class="reference external" href="http://grml.org/zsh/zsh-lovers.html"&gt;http://grml.org/zsh/zsh-lovers.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ko gero daugiausia zsh man patinka todėl, kad paspaudus TAB, praktiškai visada
+gausi tai ko reikia... Taip, zsh taip pat supranta ir djanogo-admin.py
+sub-komandas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tikriausiai visi ir taip žino, kas yra Vim. Jei nežinot, tai Vim yra vadinamas
+„programmers editor“ (programuotojų teksto redaktorius). Vim yra vienas
+populiariausių programuotojų tekstų redaktorius visame pasaulyje.&lt;/p&gt;
+&lt;p&gt;Naudoju šiuos Vim įskiepius: &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=42"&gt;BuffExplorer&lt;/a&gt;, &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1506"&gt;LargeFile&lt;/a&gt;, &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2540"&gt;snipMate&lt;/a&gt;, &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1697"&gt;surround&lt;/a&gt;, &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2981"&gt;ZenCoding&lt;/a&gt;, &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;PyFlakes&lt;/a&gt;,
+&lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2754"&gt;delimitMate&lt;/a&gt;.  Visą
+kitą Vim'as turi pagal nutylėjimą, sintaksės spalvinimas, galimybė atitraukti
+Python blokus nuo krašto, omnicompletion funkcija ir pan.  Naudojant &lt;a class="reference external" href="http://ctags.sourceforge.net/"&gt;ctags&lt;/a&gt; galima šokinėti per visas Python funkcijas ir
+klases esančias bet kuriame projekto faile.  snipMate turi ne tik python
+iškarpas, bet ir django.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;snipMate&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- missing video:
+&lt;iframe src="http://player.vimeo.com/video/3535418" frameborder="0" height="281" width="500"&gt;&lt;/iframe&gt; --&gt;
+&lt;p&gt;&lt;strong&gt;ctags&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Pagrindinė šio įrankio paskirtis – surinkti informaciją apie visus kode
+naudojamus objektus, surašyti vietas, kur jie yra aprašyti ir viską
+suindeksuoti, kad būtų galima vykdyti greitą paiešką. Surenkami objektai yra
+klasės, funkcijos, konstantos, kintamieji ir t.t. ctags veikia neįtikėtinai
+greitai, per kelias sekundes suindeksuoja didžiules kodo bibliotekas.&lt;/p&gt;
+&lt;p&gt;Vim supranta ctags ir gali naudoti suindeksuotą informaciją, todėl
+programuojant, labai lengva šokinėti nuo vienos funkcijos, prie kitos,
+skirtinguose failuose ar net paketuose.&lt;/p&gt;
+&lt;p&gt;ctags puikiai integruojasi su buildout, naudojant &lt;a class="reference external" href="http://pypi.python.org/pypi/z3c.recipe.tag/"&gt;z3c.recipe.tag&lt;/a&gt; receptą, kurio dėka galima
+suindeksuoti ne tik savo projektą, bet ir visus kitus priklausomus paketus,
+kuriuos naudoja projektas!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mercurial&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Decentralizuota versijų kontrolės sistema. Praktiškai, prieš pradėdamas kažką
+programuoti, instinktyviai suvedu šią komandą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg init&lt;/pre&gt;
+&lt;p&gt;Tada tiesiog rašau kodą, dažnai komitinu ir esu ramus, nebaisu, kad mano
+parašytas kodas kažkur pradings. Kažkiek vertą dėmesio kodą, mercurial pagalba,
+tiesiai iš komandinės eilutės siunčiu į &lt;a class="reference external" href="http://bitbucket.org/sirex"&gt;bitbucket.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Mercurial patogus tuo, kad yra puikiai suderinamas su kitomis išorinėmis
+priemonėmis. Todėl be problemų galiu dirbti su git ropozitoriumais, naudodamas
+&lt;a class="reference external" href="http://hg-git.github.com/"&gt;hg-git&lt;/a&gt; įskiepį, čia daugiausiai tais atvejais,
+kai reikia forkinti kažką iš &lt;a class="reference external" href="http://github.com/"&gt;github.com&lt;/a&gt;. Be šito,
+naudoju mercurial su meld ir kdiff programomis, pakeitimams peržiūrėti.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DreamPie&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DreamPie yra patogi priemonė, kai reikia testuoti atskiras kodo vietas.
+Panašią funkciją atlieka ipython, kurį taip pat dažnai naudoju ir sakyčiau
+ipython daugeliu atveju net gi yra pranašesnis už DreamPie, išskyrus vieną –
+zsh sunku naudoti, kai reikia testuoti kelių eilučių kodą. DreamPie puikiai
+veikia ir tais atvejais, kai reikia testuoti kelias eilutes, ciklus ir pan.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;virtualenv, buildout&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Abi šios priemonės yra nepakeičiamos programuojant Python. Tiek virtualenv,
+tiek buildout atlieka panašią funkciją – sukuria izoliuotą aplinką, kurioje
+nepriklausomai nuo sistemos galima įdiegti reikiamas Python paketų versija ir
+programuojant naudoti būtent tos izoliuotos aplinkos paketus.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;virtualenv&lt;/strong&gt; daugiau skirtas testinės aplinkos kūrimui, kurioje galima
+įdiegti norimą ištestuoti savo paketą, o kartu į tą pačią izoliuotą aplinką
+galima įdiegti ir visus susijusius paketus.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;buildout&lt;/strong&gt; yra kur kas sudėtingesnis dalykas ir daugiau skirtas būtent
+programavimo ir deployinimo reikmėms. Buildout gėris yra tame, kad jis turi
+visą galybę taip vadinamų receptų, kurių pagalba galima susikurti labai patogią
+programavimo aplinką. Programuojant Django naudoju &lt;a class="reference external" href="http://pypi.python.org/pypi/djangorecipe"&gt;djangorecipe&lt;/a&gt;,kurio pagalba gaunu veikiantį
+django projekto katalogą ir visą rinkinį galimybių tą projektą valdyti. Verta
+paminėti vieną iš tokių galimybių – wsgi vykdomojo skripto generavimas, kuri
+panaudojus labai paprasta projektą paleisti bet kokiame serveryje.&lt;/p&gt;
+&lt;p&gt;Gan dažnai pasitaiko, kad dirbant, net ir tam pačiam projektui sukuriamos
+kelios buildout aplinkos. Kad kiekvienai iš tų aplinkų nereikėtų vėl
+pakartotinai siųstis visų paketų ir diegti visų paketų, kas kartais užtrunka
+gan ilgai, buildout suteikia galimybę savo namų kataloge nurodyti kur saugoti
+bendrai naudojamus paketus. Tai reiškia, kad visi paketai ir visos skirtingos
+jų versijos suvažiuoja į vieną bendrą katalogą ir visos buildout aplinkos
+bendrai naudoja tuos paketus.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://pypi.python.org/pypi/collective.recipe.omelette"&gt;omelette&lt;/a&gt; yra buildout receptas, kuris tvarkingai išdėlioja visus
+projekte naudojamus išorinius paketus viename kataloge. Tai yra tikras
+išsigelbėjimas, nes kaip žinia kiekvienas python paketas įdiegiamas atskiruose
+kataloguose, o tie atskiri katalogai gali būti bet kuriame sys.path sąrašo
+kataloge.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sphinx&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Apie Sphinx žmonės kalba taip: „A great tool that actually makes programmers
+want to write documentation!“. Programuojant būtina rašyti dokumentaciją, kad
+net ir pats grįžęs prie to pačio kodo po metų, žinotum kas ten padaryta. Sphinx
+yra labai patogi dokumentacijos ruošimo priemonė, kurioje iš esmės rašomas
+išplėstas &lt;a class="reference external" href="http://docutils.sf.net/rst.html"&gt;reStructuredText&lt;/a&gt; tekstas.
+Pasinaudojus išplėtimais į dokumentacijos tekstą galima įtraukti ištisą modulio
+dokumentaciją specialių raktinių žodžių pagalba. Į nurodytas dokumentacijos
+vietas, iš pačio kodo docstringų senrenkama informacija ir suformuojama graži
+API dokumentacija. Sphinx puikiai integruojasi į buildout aplinką, dėl ko
+rašyti dokumentacijas dar paprasčiau.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;pylint&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tai yra &lt;a class="reference external" href="http://pychecker.sourceforge.net/"&gt;pyChecker&lt;/a&gt; arba &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;PyFlakes&lt;/a&gt;
+analogas išsiskiriantis tuo, kad turi daugiausiai funkcijų ir lyginant su
+pyChecker veikia kur kas stabiliau.  pylint paskirtis – kodo tikrinimas,
+surenkant visas programavimo klaidas, vietas kuriose nesilaikoma apibrėžto kodo
+standarto, vietas, kurios panašios į blogo programavimo praktiką ir pan. pylint
+prasineša pro visą kodą, kurį nurodai ir sugeneruoja didžiulę ataskaitą (dydis
+priklauso nuo klaidų gausos...  :) ). Ataskaitoje suskaičiuojamas kodo kokybės
+įvertinimas 10 balų sistemoje ir pateikiama išsami statistika apie klaidas, jų
+pasiskirstymą, dažnumą ir pan.  Manau tai yra must-have įrankis programuojant
+Python.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;django-debug-toolbar&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Programuojant su Django tai yra must-have įrankis, kuris rodo visą informaciją
+apie užklausą: užklausos trukmė, užklausų sąrašas ir kiekvienos užklausos
+trukmė, užkrauti šablonai ir juose naudoti kontekstiniai kintamieji, užklausai
+perduoti kintamieji ir t.t. ir t.t.  django-debug-toolbar integruojasi į
+svetainę ir atvaizduojamas pasislepiančios žymės pavidalu, kurią paspaudus bet
+kuriame labe išsiskleidžia visas gėris, kuris taip pat geba sustabdyti
+užklausą, jei jos pabaigoje vyksta redirect'as.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;South&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;South yra vienas iš perspektyviausių Django duomenų bazių migracijos sprendimų
+ir ko gero greitu laiku bus įtrauktas į Django branduolį.  South geba išsaugoti
+duomenų bazės būseną failų pavidalu, kuriuos galima įtraukti į versijų
+kontrolės sistemą ir turėti galimybę sklandžiai migruoti duomenų bazę,
+keičiantis jos struktūrai.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ipdb&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;BDD (Bug Driven Development) praktikoje kartais prireikia ir debugerio.  Tam
+reikalui python turi vidinį debugerį &lt;a class="reference external" href="http://docs.python.org/library/pdb.html"&gt;pdb&lt;/a&gt;, bet aš naudoju šiek tiek pagerintą
+variantą: ipdb. ipdb yra tas pats pdb tik išplėstas ipython funkcijomis.
+Naudojant šį debugerį galima naudoti visas standartinio debugerio funkcijas ir
+daugiau.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reziumė&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Didžiąją dalį čia aprašytų dalykų reziumuoja vienas paprastas, nedidelis
+buildout konfigūracinis failas:&lt;/p&gt;
+&lt;pre class="code ini"&gt;&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[buildout]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;parts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-3"&gt;&lt;/a&gt;&lt;span class="s"&gt;    django&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-4"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ctags&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-5"&gt;&lt;/a&gt;&lt;span class="s"&gt;    omelette&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-6"&gt;&lt;/a&gt;&lt;span class="s"&gt;    sphinx&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-7"&gt;&lt;/a&gt;&lt;span class="s"&gt;    pylint&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-9"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-10"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ipdb&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-11"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ipython&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-12"&gt;&lt;/a&gt;&lt;span class="s"&gt;    South&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-13"&gt;&lt;/a&gt;&lt;span class="s"&gt;    django-debug-toolbar&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-14"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-15"&gt;&lt;/a&gt;&lt;span class="k"&gt;[django]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-16"&gt;&lt;/a&gt;&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;djangorecipe&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-17"&gt;&lt;/a&gt;&lt;span class="na"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;1.2&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-18"&gt;&lt;/a&gt;&lt;span class="na"&gt;project&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;myproject&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-19"&gt;&lt;/a&gt;&lt;span class="na"&gt;settings&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;development&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-20"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;${buildout:eggs}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-21"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-22"&gt;&lt;/a&gt;&lt;span class="k"&gt;[ctags]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-23"&gt;&lt;/a&gt;&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;z3c.recipe.tag:tags&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-24"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;${buildout:eggs}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-25"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-26"&gt;&lt;/a&gt;&lt;span class="k"&gt;[omelette]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-27"&gt;&lt;/a&gt;&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;collective.recipe.omelette&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-28"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;${buildout:eggs}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-29"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-30"&gt;&lt;/a&gt;&lt;span class="k"&gt;[sphinx]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-31"&gt;&lt;/a&gt;&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;zc.recipe.egg&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-32"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-33"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${buildout:eggs}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-34"&gt;&lt;/a&gt;&lt;span class="s"&gt;    Sphinx&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-35"&gt;&lt;/a&gt;&lt;span class="na"&gt;scripts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-36"&gt;&lt;/a&gt;&lt;span class="s"&gt;    sphinx-build&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-37"&gt;&lt;/a&gt;&lt;span class="s"&gt;    sphinx-quickstart&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-38"&gt;&lt;/a&gt;&lt;span class="na"&gt;extra-paths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-39"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${django:location}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-40"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${buildout:directory}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-41"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-42"&gt;&lt;/a&gt;&lt;span class="k"&gt;[pylint]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-43"&gt;&lt;/a&gt;&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;zc.recipe.egg&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-44"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-45"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${buildout:eggs}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-46"&gt;&lt;/a&gt;&lt;span class="s"&gt;    pylint&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-47"&gt;&lt;/a&gt;&lt;span class="na"&gt;extra-paths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-48"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${django:location}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-49"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${buildout:directory}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-50"&gt;&lt;/a&gt;&lt;span class="na"&gt;entry-points&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-51"&gt;&lt;/a&gt;&lt;span class="s"&gt;    pylint=pylint.lint:Run&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-52"&gt;&lt;/a&gt;&lt;span class="s"&gt;    arguments = sys.argv[1:]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>django</category><category>python</category><category>vim</category><guid>https://sirex.lt/posts/2010/priemones-darbui-su-python-ir-django/</guid><pubDate>Mon, 20 Sep 2010 19:26:00 GMT</pubDate></item><item><title>VIMperator</title><link>https://sirex.lt/posts/2007/vimperator/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Netyčia Internete radau tiesiog puikų Firefox &lt;em&gt;extensioną&lt;/em&gt;, kuris vadinasi
+&lt;strong&gt;vimperator&lt;/strong&gt;. Šio &lt;em&gt;extensiono&lt;/em&gt; pagalba Firefoxas tiesiog pavirsta į &lt;strong&gt;VIM&lt;/strong&gt;
+rekatorių. Pašalinamos atdreso ir mygtukų juostos, apačioje atsirada komandinė
+ir statuso eilutės kurios yra ir &lt;strong&gt;VIM&lt;/strong&gt; redaktoriuje.  Paspaudus &lt;code class="docutils literal"&gt;:&lt;/code&gt;
+veikstmas persikelias į komandinę eilutę, kurioje galima įvesti tarkime:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;:open www.google.com&lt;/pre&gt;
+&lt;p&gt;Kai paspaudi ENTER atsidaro nurodytasis puslapis, jei nurodomas ne Internetinis
+adresas, tada viskas kas parašyta perduodama Google paieškos sistemai.&lt;/p&gt;
+&lt;p&gt;Navigacija ir valdymas tiesiog tobuli:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;o&lt;/code&gt; - atliekamas veikstasm: &lt;code class="docutils literal"&gt;:open&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;O&lt;/code&gt; - panašus veiksmas, tik iš karto perkeliamas ir esamas adresas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;t&lt;/code&gt; - panašiai kaip ir &lt;code class="docutils literal"&gt;o&lt;/code&gt;, tik adresas atidaromas naujami tablike.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;d&lt;/code&gt; - uždaromas aktyvus tabikas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;h&lt;/code&gt;, &lt;code class="docutils literal"&gt;j&lt;/code&gt;, &lt;code class="docutils literal"&gt;k&lt;/code&gt;, &lt;code class="docutils literal"&gt;l&lt;/code&gt; - šie klavišai veikia lygiai taip pat kaip ir
+&lt;strong&gt;VIM&lt;/strong&gt; redaktoriuje, jie skirti navigacijai puslapyje.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;f&lt;/code&gt; - tai stebuklingas klavišas, kurio pagalba pasiekiamas bet kuris
+interaktyvus svetainės elementas be pelės pagalbos.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tiem, kurie neabejing &lt;strong&gt;VIM&lt;/strong&gt; redoktoriui šis exstensionas turėtu būti tikrai
+naudingas.&lt;/p&gt;&lt;/div&gt;</description><category>vim</category><guid>https://sirex.lt/posts/2007/vimperator/</guid><pubDate>Thu, 12 Jul 2007 19:48:00 GMT</pubDate></item><item><title>Vi tutorialas</title><link>https://sirex.lt/posts/2007/vim-vadovelis/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Netyčia aptikau &lt;a class="reference external" href="http://www-acs.ucsd.edu/info/vi_tutorial.php"&gt;dar vieną **vi** tekstų redaktoriaus tutorialą&lt;/a&gt;. Tai gi siūlau visiems, kas
+dar nesusidraugavo su vi arba vim, pabandyti DAR KARTĄ! Aš pats vi
+prisijaukinau tik iš kokio trečio karto ir dabar sėkmingai juo naudojuosi jau
+beveik tris metus, kiekvieną dieną.  Žinoma yra labai daug vi tekstų
+redaktoriaus tutorialų, bet vis tik vienas yra pats geriausias ir kol kas
+nepralenkiamas - &lt;a class="reference external" href="http://web.engr.oregonstate.edu/~shuman/Code/Tutorial/VIM_Tutor.txt"&gt;vimtutor&lt;/a&gt;.&lt;/p&gt;</description><category>vim</category><guid>https://sirex.lt/posts/2007/vim-vadovelis/</guid><pubDate>Tue, 03 Jul 2007 19:19:00 GMT</pubDate></item></channel></rss>

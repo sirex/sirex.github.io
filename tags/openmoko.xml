@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about openmoko)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/openmoko.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Linux + GPS</title><link>https://sirex.lt/posts/2009/linux-gps/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;a class="reference external image-reference" href="https://sirex.lt/images/neo.png"&gt;&lt;img alt="Neo Freerunner" class="previewimage" src="https://sirex.lt/images/neo.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;Pastaruoju metu gan dažnai tenka naudotis GPS įranga, todėl nusprendžiau
+pasidalinti informacija, kaip tai sekasi daryti su Linux.&lt;/p&gt;
+&lt;div class="section" id="naudojama-iranga"&gt;
+&lt;h2&gt;Naudojama Įranga&lt;/h2&gt;
+&lt;p&gt;Iš esmės tinka bet kuris GPS imtuvas, pageidautina, suderinamas su
+&lt;a class="reference external" href="http://www.openstreetmap.org/"&gt;OpenStreetMap&lt;/a&gt; žemėlapiais ir žinoma Linux.
+Konkrečiai naudoju tokią įrangą:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.openmoko.com/freerunner.html"&gt;Neo Freeruneer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.svp.co.uk/sport-and-leisure/in-car-equipment/satellite-navigation/vivanco-usb-car-charger-adapter-vivanco056_in-car-usb-charger-adapter.html"&gt;Automobilinis USB pakrovėjas&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.thinkwiki.org/wiki/Category:X61_Tablet"&gt;Lenovo ThinkPad X61 Tablet&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="programine-iranga"&gt;
+&lt;h2&gt;Programinė įranga&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://gpsd.berlios.de/"&gt;gpsd&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.tangogps.org/"&gt;TangoGPS&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.tangogps.org/"&gt;Navit&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://josm.openstreetmap.de/"&gt;JOSM&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="zemelapiai"&gt;
+&lt;h2&gt;Žemėlapiai&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.openstreetmap.org/"&gt;OpenStreetMap&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="neo-freerunner"&gt;
+&lt;h2&gt;Neo FreeRunner&lt;/h2&gt;
+&lt;p&gt;Tai yra atviras „telefonas“, puikiai suderinamas ir pritaikytas darbui su Linux
+ir turintis GPS įrangą. Jame galima kompiliuoti, naudotis komandine eilute,
+prisijungti per SSH ir daryti ką tik nori. Įrenginyje veikia visa aukščiau
+išvardinta programinė įranga. Į FR galima įrašyti &lt;a class="reference external" href="http://wiki.openmoko.org/wiki/Distributions"&gt;visą gausybę Linux
+distribucijų&lt;/a&gt;, pastaruoju
+naudoju &lt;a class="reference external" href="http://wiki.shr-project.org/"&gt;SHR&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Laikant visą laiką įjungtą ekrano apšvietimą ir GPS, Neo baterija laiko apie
+3-4 valandas, tačiau nustačius automatinį ekrano išjungimą po 2 minučių ir
+automatinį užmigdymą, po 2:30 minučių, naviguotis galima visą dieną ir ilgiau.
+Neo pabunda iš užmigdymo stadijos labai greitai, o signalą pasigauna taip gan
+greitai, per 1-5 minutes, priklausomai nuo signalo stiprumo.&lt;/p&gt;
+&lt;p&gt;Važiuojant mašina, dažnai praverčia USB adapteris, kadangi Neo gali įsikrauti
+per USB laidą, tai visas komplektas puikiai veikia ir nebaisu, kad viduryje
+kelionės išsikraus baterija.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;Openstreetmap&lt;/h2&gt;
+&lt;p&gt;Iš pradžių bandžiau naudoti &lt;a class="reference external" href="http://maps.lt/"&gt;maps.lt&lt;/a&gt; duomenis, tačiau jie
+nesuderinami su jokiais paplitusiais formatais, bandžiau naudoti &lt;a class="reference external" href="http://maps.google.com/"&gt;Google Maps&lt;/a&gt; duomenis, tačiau gauti jų žemėlapius taip pat gan
+sudėtinga, nes siuntimai ribojami tiek apsaugant paveiksliukų adresus, tiek
+įvairiai ribojant atsiųstų paveiksliukų kiekį, per tam tikrą laiką. Be to abiem
+atvejais, galima gauti tik paveiksliukus, o ne vektorinius duomenis.
+&lt;a class="reference external" href="http://www.openstreetmap.org/"&gt;Openstreetmap&lt;/a&gt; netaiko jokių ribojimų, galima
+gauti ir paveiksliukus ir vektorinius duomenis, be to žemėlapius galima ir
+pačiam taisyti. Vis tik atviras kodas yra atviras kodas... :)&lt;/p&gt;
+&lt;p&gt;Openstreetmap veikia panašiu į Wiki principu, kur kiekvienas gali kurti turinį,
+kadangi tą turinį stebi daug akių, tai apsaugo nuo klaidingų duomenų patekimo.
+OSM žemėlapiais naudojuosi jau gal metus laiko, per visą tą laiką teko
+susidurti gal su dviem netikslumais, kuriuos iš karto pataisiau.&lt;/p&gt;
+&lt;p&gt;Žemėlapių detalumas, kai kuriose vietose gan skurdus, tačiau ten kur yra
+padirbėja OSM aktyvistai, galima rasti visus keliukus ir šunkelius. OSM
+žemėlapis keičiasi ir yra atnaujinamas kiekvieną dieną, jei atsiranda naujo
+kelio statybos, tai nors kelias dar nėra baigtas, jau atsiranda žemėlapyje, tuo
+tarpu nuosavybiniuose žemėlapiuose dažnai pateikiame pasenę duomenys.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;Navit&lt;/h2&gt;
+&lt;p&gt;Ilgą laiką naudojau TangoGPS, nes tai yra labai paprasta programa, naudojanti
+žemėlapio paveiksliukus, vadinamus &lt;em&gt;tiles&lt;/em&gt;. Tačiau, kai susipažinau su Navit,
+TangoGPS naudoju tik kaip atsarginį variantą, peržiūrėti žemėlapiams dideliu
+masteliu. Tiek Navit, tiek TangoGPS, kaip ir daugelis kitų programų naudoja
+gpsd demoną, informacijai apie esamą poziciją nustatyti. Taip pat abi programos
+puikiai veikia ir mano kompiuteryje, todėl Neo galiu naudoti kaip GPS serverį
+ir prie jo jungtis per kompiuterį, tam, kad žemėlapius ir esamą poziciją
+matyčiau dideliame ekrane, improvizacijai nėra ribų... :)&lt;/p&gt;
+&lt;p&gt;Navit yra aktyviai kuriamas projektas, kol kas gan sudėtingai konfigūruojamas
+per XML konfigūracinį failą, tačiau toks konfigūravimo būdas suteikia labai
+daug galimybių, tereikia tik įsigilinti, kaip viskas veikia.&lt;/p&gt;
+&lt;p&gt;Mano Navit konfigūraciją galite rasti: &lt;a class="reference external" href="http://bitbucket.org/sirex/navit-xml/src/"&gt;bitbucket.org/sirex/navit-xml/src/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O štai galutinis variantas, kaip atrodo Navit:&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="Neo FreeRunner Navit" src="https://sirex.lt/posts/2009/linux-gps/files/neo-navit.png"&gt;
+&lt;p class="caption"&gt;Neo FreeRunner Navit&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Su Navit galima:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Matuoti atstumus tarp pasirinktų taškų&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Yra integruotas kompasas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Automatiškai pasukamas žemėlapis pagal važiavimo kryptį&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Galima įjungti automatinį nuvažiuoto maršruto saugojimą GPX formatu&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Automatinis greičiausio kelio skaičiavimas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Skaičiuojama kiek laiko truks kelionė ir kurią valandą bus pasiektas
+tikslas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sąsaja pritaikyta lietimui jautriems ekranams ir valdymui pirštais&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2d/3d režimai&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tai tik kelios Navit savybės, o jų yra kur kas daugiau.&lt;/p&gt;
+&lt;p&gt;Dėl žemėlapių, juos galite parsisiųsti iš &lt;a class="reference external" href="http://maps.navit-project.org/download/"&gt;maps.navit-project.org/download/&lt;/a&gt;.  Visas Lietuvos žemėlapis,
+apimantis visą Latviją, dalį Estijos, pusę Baltarusijos ir nemažą gabalą
+Lenkijos užima apie 60 Mb. Visos Žemės žemėlapis užima apie 2.2 Gb.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h2&gt;JOSM&lt;/h2&gt;
+&lt;p&gt;Galiausiai po pasivažinėjimų su Neo, galima susirinkti visus GPX failus ir
+žiūrėti kur buvo važiuota, jei OSM žemėlapyje ko nors trūksta, labai paprastai
+galima įkelti visas trūkstamas vietas, surašyti pavadinimus ir t.t.&lt;/p&gt;
+&lt;p&gt;Štai kaip atrodo JOSM:&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="files/josm.png" src="https://sirex.lt/posts/2009/linux-gps/files/josm.png"&gt;
+&lt;p class="caption"&gt;JOSM&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;O čia mano kaimo žemėlapis: &lt;a class="reference external" href="http://osm.org/go/0leEwu34--"&gt;osm.org/go/0leEwu34--&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="reziume"&gt;
+&lt;h2&gt;Reziume&lt;/h2&gt;
+&lt;p&gt;Nors tobulėti yra kur, tačiau tiek pats openstreetmap projektas, tiek
+navigacijai ir darbui su žemėlapiais skirtos programos puikiai atitinka
+esminius poreikius, norint sėkmingai susiorientuoti ir kur nors nuvažiuoti –
+&lt;strong&gt;išbandyta praktiškai, naudodamasis aprašytomis priemonėmis esu apvažiavęs
+didžiąją dalį Lietuvos ir didelį gabalą Baltarusijos&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>gps</category><category>linux</category><category>openmoko</category><guid>https://sirex.lt/posts/2009/linux-gps/</guid><pubDate>Wed, 18 Nov 2009 22:01:00 GMT</pubDate></item><item><title>Neo FreeRunner belaukiant...</title><link>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Pagaliau pasirodė ilgai lauktas Openmoko telefonas: &lt;strong&gt;Neo FreeRunner&lt;/strong&gt;.
+Šį įrenginį jau užsakiau ir 2-3 savaičių bėgyje turėtu atkeliauti į
+mano rankas :)&lt;/p&gt;
+&lt;p&gt;O belaukiant, galima viska išsibandyti emuliatoriuje. Štai kaip tai
+atrodo:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_today.jpg"&gt;&lt;img alt="Openmoko emuliatoriuje" src="https://sirex.lt/images/u1/neofr_today.thumbnail.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;Štai instrukcijos kaip tai padaryti (instrukcijos skirtos Ubuntu Gutsy
+Gibbon operacinei sistemai):&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p&gt;Perkonfigūruojame &lt;em&gt;dash&lt;/em&gt; paketą, kai jūsų paklaus ar norite pakeisti
+&lt;em&gt;/bin/sh&lt;/em&gt; į &lt;em&gt;dash&lt;/em&gt;, atsakykite &lt;strong&gt;ne&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo dpkg-reconfigure dash&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pirmiausiai reikia atitinkamai paruošti Ubuntu sistemą, o tiksliau reikia
+įdiegti keletą paketų:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo apt-get install monotone git-core git-svn git-email \
+git-cvs git-arch gitk python-dev ccache m4 sed bison make cvs gawk \
+libc6-dev g++ subversion sharutils docbook openjade quilt libmpfr-dev \
+libpcre3-dev texinfo texi2html libboost-date-time-dev libboost-filesystem-dev \
+libboost-regex-dev libboost-test-dev libboost-dev zlib1g-dev build-essential \
+dh-make debhelper devscripts gcc-3.4 lynx netpbm libsdl1.2-dev dosfstools \
+help2man python-psyco lynx mtools&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Susikurkite katalogą, kuriame saugosite visus Openmoko failus:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;mkdir openmoko
+cd openmoko&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Parsisiunčiame MokoMakefile failą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;wget http://www.rwhitby.net/files/openmoko/Makefile&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Leidžiame Makefile dirbti savo darbą (tai truks apie 15 min. ir daugiau,
+priklausomai nuo kompiuterio ir interneto spartos):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;make qemu&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Po viso šito turėtu pasileisti veikianti Openmoko sistema. Pradžioje,
+atsidariusiame meniu reikia spausti tarpo klavišą, turėtu būti pažymėta
+&lt;em&gt;boot&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Jei pasileidusi sistema nebus funkcionali, t.y. niekas neveiks, tada reikia
+atlikt dar sekančius žingsnius:&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p&gt;Uždarykite emuliatorių, jei jis atidarytas.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;openmoko&lt;/em&gt; kataloge paredaguokite &lt;em&gt;build/qemu/openmoko/env&lt;/em&gt; failą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;vi build/qemu/openmoko/env&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tame faile suraskite mano pavyzdyje užkomentuotas eilutes ir pakeiskite
+jas atkomentuotomis:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;# rootfs_wildcard="Open?oko-openmoko-*image*-om-gta01.rootfs.jffs2"
+rootfs_wildcard="Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2"
+# download_dir="http://buildhost.openmoko.org/daily/neo1973/deploy/glibc/images/neo1973/"
+download_dir="http://buildhost.openmoko.org/daily/neo1973/200807/20080706/"&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Atsisiųskite
+&lt;em&gt;http://buildhost.openmoko.org/daily/neo1973/200807/20080706/Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2&lt;/em&gt;
+ir išsaugokite jį &lt;em&gt;images/openmoko/&lt;/em&gt; kataloge:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;wget http://buildhost.openmoko.org/daily/neo1973/200807/20080706/Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2 \
+    -O images/openmoko/Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Paleiskite komandą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;make flash-qemu-official&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ir galiausiai paleiskite emuliatorių:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;make run-qemu&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Visa tai detaliai aprašyta šiuo adresu:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://wiki.openmoko.org/wiki/Automatic_emulation_in_Ubuntu"&gt;http://wiki.openmoko.org/wiki/Automatic_emulation_in_Ubuntu&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ko gero smagiausias dalykas yra tas, kad viduje sukas paprasčiausias Linux
+branduolys ir yra Terminalo programa, kurios pagalba galiu daryti viską, ką ir
+savo kompiuterio XTerm lange!&lt;/p&gt;
+&lt;p&gt;Štai daugiau vaizdų, kaip viskas atrodo:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_menu.jpg"&gt;&lt;img alt="Pagrindinis meniu" src="https://sirex.lt/images/u1/neofr_menu.thumbnail.jpg"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr-terminal.jpg"&gt;&lt;img alt="Terminalo emuliatorius" src="https://sirex.lt/images/u1/neofr-terminal.thumbnail.jpg"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_vi.jpg"&gt;&lt;img alt="vim - teksto redaktorius" src="https://sirex.lt/images/u1/neofr_vi.thumbnail.jpg"&gt;&lt;/a&gt;&lt;/div&gt;</description><category>floss</category><category>openmoko</category><category>qemu</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</guid><pubDate>Fri, 18 Jul 2008 22:51:00 GMT</pubDate></item></channel></rss>

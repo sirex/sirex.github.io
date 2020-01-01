@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Pencijų fondai | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2019/penciju-fondai/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../../2016/scoop/" title="SCOOP" type="text/html">
+<link rel="next" href="../../2018/hello-asgi/" title="Hello ASGI" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Pencijų fondai">
+<meta property="og:url" content="https://sirex.lt/posts/2019/penciju-fondai/">
+<meta property="og:description" content="Duomenys imami iš Lietuvos Banko svetainės.
+Fondai lyginami pagal IRR rodiklį.
+IRR (internal rate of return – vidinė grąžos norma) parodo, kiek per metus
+vidutiniškai paauga (procentais) kiekvienas iš">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-09-22T07:35:00+03:00">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Pencijų fondai</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2016-09-22T07:35:00+03:00" itemprop="datePublished" title="2016-09-22 07:35">2016-09-22 07:35</time></a>
+
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Duomenys imami iš <a class="reference external" href="https://www.lb.lt/ii_pakopos_pensiju_fondu_irr_rodiklis">Lietuvos Banko svetainės</a>.</p>
+<p>Fondai lyginami pagal <a class="reference external" href="https://www.lb.lt/ii_pakopos_pensiju_fondu_irr_rodiklis">IRR rodiklį</a>.</p>
+<p>IRR (<em>internal rate of return</em> – vidinė grąžos norma) parodo, kiek per metus
+vidutiniškai paauga (procentais) kiekvienas iš atliktų SODRA pervedimų
+(investicijų) į pensijų fondus. IRR atsižvelgia į visus pensijų fondų
+atskaitymus bei į lėšų pervedimo laiką.</p>
+<p>Palyginimui paimti duomenys 3 metų trukmės fondo veiklos laikotarpio.</p>
+<!-- import os
+import re
+import collections
+import numpy as np
+import pandas as pd
+import matplotlib as mpl
+import requests
+import bs4
+import matplotlib.pyplot as plt
+from IPython.display import display -->
+<!-- mpl.rc('figure', figsize=(16, 10)) -->
+<div class="section" id="duomenu-surinkimas-ir-valymas">
+<h2>Duomenų surinkimas ir valymas<a href="#duomenu-surinkimas-ir-valymas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Lietuvos bankas, duomenis apie pensijų fondus pateikia formatu, kurį sunku
+analizuoti, todėl, pirmiausia reikia susirinkti duomenis ir juos susitvarkyti,
+taip, kad būtų galima atlikti duomenų analizę.</p>
+<p>Pirmiausiai parsisiunčiame visus ataskaitų failus:</p>
+<pre class="code ipython"><a name="rest_code_731b731934fd4670ba43dcc18d02f262-1"></a><span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://www.lb.lt/ii_pakopos_pensiju_fondu_irr_rodiklis'</span><span class="p">)</span>
+<a name="rest_code_731b731934fd4670ba43dcc18d02f262-2"></a><span class="n">soap</span> <span class="o">=</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">'lxml'</span><span class="p">)</span>
+<a name="rest_code_731b731934fd4670ba43dcc18d02f262-3"></a><span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s1">'value'</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">soap</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">'select.samewin option'</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s1">'value'</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'#'</span><span class="p">]</span>
+<a name="rest_code_731b731934fd4670ba43dcc18d02f262-4"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'urls'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a name="rest_code_731b731934fd4670ba43dcc18d02f262-5"></a>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+<a name="rest_code_731b731934fd4670ba43dcc18d02f262-6"></a>        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'https://www.lb.lt/</span><span class="si">%s</span><span class="se">\n</span><span class="s1">'</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
+<a name="rest_code_731b731934fd4670ba43dcc18d02f262-7"></a><span class="o">!</span>wget --quiet --input-file urls
+</pre>
+<p>Analizei bus naudojami šių ataskaitų duomenis:</p>
+<pre class="code ipython"><a name="rest_code_1b6373900479479ca1b76c0234b7b180-1"></a><span class="o">!</span>cat urls
+</pre>
+<pre class="literal-block">https://www.lb.lt/irr_2016-06-30
+https://www.lb.lt/irr_2016-03-31
+https://www.lb.lt/irr_2015-12-31
+https://www.lb.lt/irr_2015-09-30
+https://www.lb.lt/irr_2015-06-30
+https://www.lb.lt/irr_2015-03-31
+https://www.lb.lt/irr_2014-12-31
+https://www.lb.lt/irr_2014-09-30
+https://www.lb.lt/irr_2014-06-30
+https://www.lb.lt/irr_2014-03-31
+https://www.lb.lt/irr_2013-12-31
+https://www.lb.lt/irr_2013-08-31
+https://www.lb.lt/irr_2013-05-31
+https://www.lb.lt/irr_2012-12-31
+https://www.lb.lt/irr_2012-08-31
+https://www.lb.lt/irr_20120531
+https://www.lb.lt/irr_20120229
+https://www.lb.lt/irr_20110831
+https://www.lb.lt/irr_20110331
+https://www.lb.lt/irr_20110228
+https://www.lb.lt/irr_20101231
+https://www.lb.lt/irr_20100930
+https://www.lb.lt/irr_20100331
+https://www.lb.lt/irr_20091231
+https://www.lb.lt/irr_20090615</pre>
+<p>Išvalome ir sujungiame visus duomenų failus:</p>
+<pre class="code ipython"><a name="rest_code_6a18ee4c7260484588b912f7a92df720-1"></a><span class="n">sheet_names</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-2"></a>    <span class="s1">'irr_20090615'</span><span class="p">:</span> <span class="s1">'IRR'</span><span class="p">,</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-3"></a><span class="p">}</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-4"></a><span class="n">clean</span> <span class="o">=</span> <span class="p">[]</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-5"></a><span class="c1"># Atidarome visus duomenų failus</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-6"></a><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-7"></a>    <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sheetname</span><span class="o">=</span><span class="n">sheet_names</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-8"></a>    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'irr_'</span><span class="p">)</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-9"></a><span class="p">]</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-10"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-11"></a>    <span class="k">try</span><span class="p">:</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-12"></a>        <span class="c1"># Randame eilutę, kurioje yra 'IRR*' stulpelis.</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-13"></a>        <span class="n">column_row</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">Index</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">itertuples</span><span class="p">()</span> <span class="k">if</span> <span class="s1">'IRR*'</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">or</span> <span class="s1">'IRR'</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-14"></a>        <span class="c1"># Ataskaitos failo data.</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-15"></a>        <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">'Suskaičiuota (.+) dienai'</span><span class="p">,</span> <span class="n">d</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-16"></a>        <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-17"></a>            <span class="n">dt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-18"></a>        <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-19"></a>            <span class="n">dt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-20"></a>        <span class="c1"># Keičiame lentelės stulpelių pavadinimus į eilutę, kurioje radom 'IRR*' stulpelį.</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-21"></a>        <span class="n">d</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">column_row</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-22"></a>        <span class="c1"># Konvertuojame 'IRR*' stulpelį į skaitinį tipą.</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-23"></a>        <span class="n">d</span><span class="p">[</span><span class="s1">'IRR'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">'IRR*'</span><span class="p">]</span> <span class="k">if</span> <span class="s1">'IRR*'</span> <span class="ow">in</span> <span class="n">d</span> <span class="k">else</span> <span class="n">d</span><span class="p">[</span><span class="s1">'IRR'</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-24"></a>        <span class="c1"># Pridedame naują stulpelį į lentelę su ataskaitos data.</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-25"></a>        <span class="n">d</span><span class="p">[</span><span class="s1">'Data'</span><span class="p">]</span> <span class="o">=</span> <span class="n">dt</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-26"></a>        <span class="c1"># Pašaliname visas eilutes iš lentelės, kurios neturi IRR reikšmės.</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-27"></a>        <span class="n">d</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">'IRR'</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-28"></a>        <span class="c1"># Kai kuriose ataskaitose nepateikiama pensijų kaupimo bendrovė</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-29"></a>        <span class="k">if</span> <span class="s1">'Pensijų kaupimo bendrovė'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-30"></a>            <span class="n">d</span><span class="p">[</span><span class="s1">'Pensijų kaupimo bendrovė'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-31"></a>            <span class="n">d</span><span class="p">[</span><span class="s1">'Pensijų fondo pavadinimas'</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s1">'Fondas'</span><span class="p">]</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-32"></a>        <span class="c1"># Iš lentelės pasirenkame mus dominančius stulpelius.</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-33"></a>        <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="p">[[</span><span class="s1">'Pensijų kaupimo bendrovė'</span><span class="p">,</span> <span class="s1">'Pensijų fondo pavadinimas'</span><span class="p">,</span> <span class="s1">'Data'</span><span class="p">,</span> <span class="s1">'IRR'</span><span class="p">]]</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-34"></a>        <span class="c1"># Išsisaugome išvalytę lentelę.</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-35"></a>        <span class="n">clean</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-36"></a>    <span class="k">except</span><span class="p">:</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-37"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-38"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-39"></a>        <span class="n">display</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-40"></a>        <span class="k">raise</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-41"></a><span class="c1"># Sujungiame visų ataskaitų lenteles į vieną lentelę.</span>
+<a name="rest_code_6a18ee4c7260484588b912f7a92df720-42"></a><span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">clean</span><span class="p">)</span>
+</pre>
+<p>Suvienodiname pasikeitusių bendrovių ir fondų pavadinimus:</p>
+<pre class="code ipython"><a name="rest_code_bd11d16ed8db495baf70636434197a08-1"></a><span class="n">renames</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-2"></a>    <span class="s1">'Danske konservatyvaus valdymo'</span><span class="p">:</span> <span class="s1">'Danske pensija'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-3"></a>    <span class="s1">'Konservatyvaus valdymo Danske pensija'</span><span class="p">:</span> <span class="s1">'Danske pensija'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-4"></a>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-5"></a>    <span class="s1">'ERGO Life Insurance SE'</span><span class="p">:</span> <span class="s1">'UAB "ERGO Lietuva gyvybės draudimas"'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-6"></a>    <span class="s1">'ERGO Balans'</span><span class="p">:</span> <span class="s1">'ERGO balans'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-7"></a>    <span class="s1">'ERGO Konservatyvusis'</span><span class="p">:</span> <span class="s1">'ERGO konservatyvusis'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-8"></a>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-9"></a>    <span class="c1"># http://www.invaldalt.com/lt/main/naujienos/Kitos_naujienos?ID=1331</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-10"></a>    <span class="s1">'UAB "Finasta Asset Management"'</span><span class="p">:</span> <span class="s1">'UAB "INVL Asset Management"'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-11"></a>    <span class="s1">'Finasta Konservatyvaus investavimo'</span><span class="p">:</span> <span class="s1">'INVL STABILO II 58+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-12"></a>    <span class="s1">'Finasta Aktyvaus investavimo'</span><span class="p">:</span> <span class="s1">'INVL MEDIO II 47+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-13"></a>    <span class="s1">'Finasta Racionalios rizikos'</span><span class="p">:</span> <span class="s1">'INVL EXTREMO II 16+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-14"></a>    <span class="s1">'Finasta Nuosaikus'</span><span class="p">:</span> <span class="s1">'INVL STABILO II 58+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-15"></a>    <span class="s1">'Finasta Augančio pajamingumo'</span><span class="p">:</span> <span class="s1">'INVL MEZZO II 53+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-16"></a>    <span class="s1">'Finasta Subalansuotas'</span><span class="p">:</span> <span class="s1">'INVL MEDIO II 47+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-17"></a>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-18"></a>    <span class="s1">'UAB "MP Pension Funds Baltic"'</span><span class="p">:</span> <span class="s1">'UAB "INVL Asset Management"'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-19"></a>    <span class="s1">'MP Stabilo II'</span><span class="p">:</span> <span class="s1">'INVL STABILO II 58+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-20"></a>    <span class="s1">'MP Medio II'</span><span class="p">:</span> <span class="s1">'INVL MEDIO II 47+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-21"></a>    <span class="s1">'MP Extremo II'</span><span class="p">:</span> <span class="s1">'INVL EXTREMO II 16+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-22"></a>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-23"></a>    <span class="s1">'Invalda Konservatyvus'</span><span class="p">:</span> <span class="s1">'INVL STABILO II 58+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-24"></a>    <span class="s1">'Invalda Nuosaikus'</span><span class="p">:</span> <span class="s1">'INVL STABILO II 58+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-25"></a>    <span class="s1">'Invalda Augančio pajamingumo'</span><span class="p">:</span> <span class="s1">'INVL MEZZO II 53+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-26"></a>    <span class="s1">'Invalda Aktyvaus investavimo'</span><span class="p">:</span> <span class="s1">'INVL MEDIO II 47+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-27"></a>    <span class="s1">'Invalda Subalansuotas'</span><span class="p">:</span> <span class="s1">'INVL MEDIO II 47+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-28"></a>    <span class="s1">'Invalda Racionalios rizikos'</span><span class="p">:</span> <span class="s1">'INVL EXTREMO II 16+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-29"></a>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-30"></a>    <span class="s1">'INVL aktyvaus investavimo'</span><span class="p">:</span> <span class="s1">'INVL MEDIO II 47+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-31"></a>    <span class="s1">'INVL racionalios rizikos'</span><span class="p">:</span> <span class="s1">'INVL EXTREMO II 16+'</span><span class="p">,</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-32"></a><span class="p">}</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-33"></a><span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-34"></a>    <span class="k">if</span> <span class="n">x</span><span class="p">:</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-35"></a>        <span class="n">x</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-36"></a>            <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-37"></a>            <span class="n">replace</span><span class="p">(</span><span class="s1">'Pensija'</span><span class="p">,</span> <span class="s1">'pensija'</span><span class="p">)</span><span class="o">.</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-38"></a>            <span class="n">replace</span><span class="p">(</span><span class="s1">'Ekstra'</span><span class="p">,</span> <span class="s1">'ekstra'</span><span class="p">)</span><span class="o">.</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-39"></a>            <span class="n">replace</span><span class="p">(</span><span class="s1">'DnB NORD'</span><span class="p">,</span> <span class="s1">'DNB'</span><span class="p">)</span><span class="o">.</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-40"></a>            <span class="n">replace</span><span class="p">(</span><span class="s1">'DnB'</span><span class="p">,</span> <span class="s1">'DNB'</span><span class="p">)</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-41"></a>        <span class="p">)</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-42"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">renames</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-43"></a>    <span class="k">return</span> <span class="n">x</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-44"></a><span class="n">d</span><span class="p">[</span><span class="s1">'Pensijų kaupimo bendrovė'</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s1">'Pensijų kaupimo bendrovė'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">apply</span><span class="p">)</span>
+<a name="rest_code_bd11d16ed8db495baf70636434197a08-45"></a><span class="n">d</span><span class="p">[</span><span class="s1">'Pensijų fondo pavadinimas'</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s1">'Pensijų fondo pavadinimas'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">apply</span><span class="p">)</span>
+</pre>
+<p>Atstatome bendrovių pavadinimus, lentelėse, kuriose jie nebuvo pateikti.
+Bendrovių pavadinimai atstatomi pagal fondų pavadinimus.</p>
+<pre class="code ipython"><a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-1"></a><span class="n">unique</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-2"></a><span class="n">bendroves</span> <span class="o">=</span> <span class="p">{</span>
+<a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-3"></a>    <span class="n">x</span><span class="p">:</span> <span class="n">unique</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="s1">'Pensijų fondo pavadinimas'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-4"></a>    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">'Pensijų kaupimo bendrovė'</span><span class="p">])</span>
+<a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-5"></a><span class="p">}</span>
+<a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-6"></a><span class="n">fondai</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">bendroves</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">v</span><span class="p">}</span>
+<a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-7"></a><span class="n">d</span><span class="p">[</span><span class="s1">'Pensijų kaupimo bendrovė'</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span>
+<a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-8"></a>    <span class="n">x</span><span class="p">[</span><span class="s1">'Pensijų kaupimo bendrovė'</span><span class="p">]</span>
+<a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-9"></a>    <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s1">'Pensijų kaupimo bendrovė'</span><span class="p">]</span>
+<a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-10"></a>    <span class="k">else</span> <span class="n">fondai</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s1">'Pensijų fondo pavadinimas'</span><span class="p">]]</span>
+<a name="rest_code_4f5683e3860047d6bd15a14dfd30c748-11"></a><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre>
+<p>Galiausiai gauname išvalytą lenterę su duomenimis iš visų Lietuvos banko
+ataskaitų, kuri tarodo taip:</p>
+<pre class="code ipython"><a name="rest_code_ca017fd0bcd54516a2e1ce7d40c76379-1"></a><span class="n">d</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre>
+<table>
+<colgroup>
+<col style="width: 2%">
+<col style="width: 48%">
+<col style="width: 30%">
+<col style="width: 13%">
+<col style="width: 7%">
+</colgroup>
+<thead><tr>
+<th class="head"><p>#</p></th>
+<th class="head"><p>Pensijų kaupimo bendrovė</p></th>
+<th class="head"><p>Pensijų fondo pavadinimas</p></th>
+<th class="head"><p>Data</p></th>
+<th class="head"><p>IRR</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>4</p></td>
+<td><p>UAGDPB “AVIVA Lietuva”</p></td>
+<td><p>Aviva Europensija</p></td>
+<td><p>2014-06-30</p></td>
+<td><p>0.0302</p></td>
+</tr>
+<tr>
+<td><p>5</p></td>
+<td><p>UAB “Danske Capital investicijų valdymas”</p></td>
+<td><p>Danske pensija</p></td>
+<td><p>2014-06-30</p></td>
+<td><p>0.0316</p></td>
+</tr>
+<tr>
+<td><p>6</p></td>
+<td><p>UAB “DNB investicijų valdymas”</p></td>
+<td><p>DNB pensija 1</p></td>
+<td><p>2014-06-30</p></td>
+<td><p>0.0257</p></td>
+</tr>
+<tr>
+<td><p>7</p></td>
+<td><p>UAB “ERGO Lietuva gyvybės draudimas”</p></td>
+<td><p>ERGO konservatyvusis</p></td>
+<td><p>2014-06-30</p></td>
+<td><p>0.0272</p></td>
+</tr>
+<tr>
+<td><p>8</p></td>
+<td><p>UAB “INVL Asset Management”</p></td>
+<td><p>INVL STABILO II 58+</p></td>
+<td><p>2014-06-30</p></td>
+<td><p>0.0507</p></td>
+</tr>
+</tbody>
+</table>
+<p>Transformuojame lentelę į tokį pavidalą, kuris leidžia palyginti IRR įvairiais pjūviais.</p>
+<pre class="code ipython"><a name="rest_code_1ad4e8f5c6354a63985af682945c046c-1"></a><span class="n">pivot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">'Data'</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">'IRR'</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span>
+<a name="rest_code_1ad4e8f5c6354a63985af682945c046c-2"></a>    <span class="s1">'Pensijų kaupimo bendrovė'</span><span class="p">,</span>
+<a name="rest_code_1ad4e8f5c6354a63985af682945c046c-3"></a>    <span class="s1">'Pensijų fondo pavadinimas'</span><span class="p">,</span>
+<a name="rest_code_1ad4e8f5c6354a63985af682945c046c-4"></a><span class="p">])</span>
+<a name="rest_code_1ad4e8f5c6354a63985af682945c046c-5"></a><span class="n">pivot</span><span class="o">.</span><span class="n">ix</span><span class="p">[:</span><span class="mi">3</span><span class="p">,:</span><span class="mi">6</span><span class="p">]</span>
+</pre>
+<table>
+<colgroup>
+<col style="width: 23%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr>
+<th class="head"><p>Pensijų kaupimo bendrovė</p></th>
+<th class="head" colspan="2"><p>UAB “Citadele investicijų valdymas”</p></th>
+<th class="head" colspan="4"><p>UAB “DNB investicijų valdymas”</p></th>
+</tr>
+<tr>
+<th class="head"><p>Pensijų fondo pavadinimas</p></th>
+<th class="head"><p>Citadele pensija 1</p></th>
+<th class="head"><p>Citadele pensija 2</p></th>
+<th class="head"><p>DNB pensija 1</p></th>
+<th class="head"><p>DNB pensija 2</p></th>
+<th class="head"><p>DNB pensija 3</p></th>
+<th class="head"><p>ERGO balans</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Data</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td><p>2009-06-15</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>0.019374</p></td>
+<td><p>0.001624</p></td>
+<td><p>-0.020811</p></td>
+<td><p>NaN</p></td>
+</tr>
+<tr>
+<td><p>2009-12-31</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>0.076045</p></td>
+<td><p>0.161496</p></td>
+<td><p>0.219199</p></td>
+<td><p>NaN</p></td>
+</tr>
+<tr>
+<td><p>2010-03-31</p></td>
+<td><p>NaN</p></td>
+<td><p>NaN</p></td>
+<td><p>0.034633</p></td>
+<td><p>0.041592</p></td>
+<td><p>0.041157</p></td>
+<td><p>NaN</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pensiju-kaupimo-bendroviu-palyginimas">
+<h2>Pensijų kaupimo bendrovių palyginimas<a href="#pensiju-kaupimo-bendroviu-palyginimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="visu-bendroviu-visu-fondu-vidutinis-irr">
+<h3>Visų bendrovių, visų fondų vidutinis IRR<a href="#visu-bendroviu-visu-fondu-vidutinis-irr" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<pre class="code ipython"><a name="rest_code_13643f1a45304a6abe4c2fff4016e30a-1"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<a name="rest_code_13643f1a45304a6abe4c2fff4016e30a-2"></a><span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pivot</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">pivot</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">pivot</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<a name="rest_code_13643f1a45304a6abe4c2fff4016e30a-3"></a><span class="n">frame</span> <span class="o">=</span> <span class="n">pivot</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<a name="rest_code_13643f1a45304a6abe4c2fff4016e30a-4"></a><span class="n">frame</span><span class="p">[</span><span class="n">frame</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">'jet'</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<a name="rest_code_13643f1a45304a6abe4c2fff4016e30a-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'IRR'</span><span class="p">)</span>
+</pre>
+<a class="reference external image-reference" href="../../../images/2019/pensiju-fondai/vidutinis-irr.png"><img alt="Visų bendrovių, visų fondų vidutinis IRR" class="whitebg" src="../../../images/2019/pensiju-fondai/vidutinis-irr.thumbnail.png"></a>
+</div>
+<div class="section" id="kievienos-bendroves-fondu-palyginimas">
+<h3>Kievienos bendrovės fondų palyginimas<a href="#kievienos-bendroves-fondu-palyginimas" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>Žemiau pateikiamas sąrašas grafikų, kuriuose pavaizduoti kiekvienos bendrovės
+fondų IRR rodikliai, laike. Šviesiai pilkas fonas rodo geriausių ir blogiausių
+fondų IRR ribas, o tamsiai pilkas fonas parodo visų fondų vidurkio standartinio
+nuokrypio ribas.</p>
+<pre class="code ipython"><a name="rest_code_b3853a2d3a9f40fcbfaa31fcf8009e82-1"></a><span class="n">names</span> <span class="o">=</span> <span class="n">pivot</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">index</span>
+<a name="rest_code_b3853a2d3a9f40fcbfaa31fcf8009e82-2"></a><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)))</span>
+<a name="rest_code_b3853a2d3a9f40fcbfaa31fcf8009e82-3"></a><span class="n">mean</span><span class="p">,</span> <span class="n">std</span> <span class="o">=</span> <span class="n">pivot</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">pivot</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a name="rest_code_b3853a2d3a9f40fcbfaa31fcf8009e82-4"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+<a name="rest_code_b3853a2d3a9f40fcbfaa31fcf8009e82-5"></a>    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pivot</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">pivot</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">pivot</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<a name="rest_code_b3853a2d3a9f40fcbfaa31fcf8009e82-6"></a>    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">pivot</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">mean</span><span class="o">-</span><span class="n">std</span><span class="p">,</span> <span class="n">mean</span><span class="o">+</span><span class="n">std</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<a name="rest_code_b3853a2d3a9f40fcbfaa31fcf8009e82-7"></a>    <span class="n">pivot</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a name="rest_code_b3853a2d3a9f40fcbfaa31fcf8009e82-8"></a>    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'IRR'</span><span class="p">)</span>
+<a name="rest_code_b3853a2d3a9f40fcbfaa31fcf8009e82-9"></a>    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre>
+<a class="reference external image-reference" href="../../../images/2019/pensiju-fondai/fondai.png"><img alt="Kievienos bendrovės fondų palyginimas" class="whitebg" src="../../../images/2019/pensiju-fondai/fondai.thumbnail.png"></a>
+</div>
+<div class="section" id="visu-fondu-irr-rodiklio-vidurkis">
+<h3>Visų fondų IRR rodiklio vidurkis<a href="#visu-fondu-irr-rodiklio-vidurkis" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<pre class="code ipython"><a name="rest_code_43c0738f553646619b8fb6f086c8126d-1"></a><span class="n">pivot</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">()</span>
+</pre>
+<a class="reference external image-reference" href="../../../images/2019/pensiju-fondai/irr-vidurkis.png"><img alt="Visų fondų IRR rodiklio vidurkis" class="whitebg" src="../../../images/2019/pensiju-fondai/irr-vidurkis.thumbnail.png"></a>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../2016/scoop/" rel="prev" title="SCOOP">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../2018/hello-asgi/" rel="next" title="Hello ASGI">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

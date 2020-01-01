@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about mercurial)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/mercurial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Mercurial server konfigūravimas</title><link>https://sirex.lt/posts/2013/mercurial-server/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Instrukcija apie tai kaip įsidiegti &lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt; į savo serverį. Kartu
+pateikiu ir keletą patarimų, kaip organizuoti darbą naudojant &lt;a class="reference external" href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt;
+versijų kontrolės sistemą.&lt;/p&gt;
+&lt;div class="section" id="kas-yra-mercurial-server"&gt;
+&lt;h2&gt;Kas yra mercurial-server?&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt; yra nedidelis skriptų rinkinys, padedantis organizuoti darbą
+su &lt;a class="reference external" href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt; repozitorijomis viename serveryje, per vieną &lt;code class="docutils literal"&gt;hg&lt;/code&gt; naudotoją.
+Naudojamas SSH protokolas, o repozitorijų naudotojai identifikuojami SSH raktų
+pagalba.&lt;/p&gt;
+&lt;p&gt;Įdiegus &lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt;, serveryje nepaleidžiami jokie nauji demonai, kadangi
+visa komunikacija vyksta per &lt;code class="docutils literal"&gt;sshd&lt;/code&gt; demoną.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt; suteikia galimybę paprastai kurti naujus naudotojus, tiesiog
+pridedant jų SSH raktą, yra galimybė valdyti naudotojų teises. Labai paprasta
+kurti naujas repozitorijas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pries-pradedant"&gt;
+&lt;h2&gt;Prieš pradedant&lt;/h2&gt;
+&lt;p&gt;Čia pateikta informacija praktiškai išbandyta su &lt;a class="reference external" href="http://www.ubuntu.com/"&gt;Ubuntu&lt;/a&gt; 12.04 distribucija.
+Instrukcija ko gero galios ir visoms kitoms &lt;a class="reference external" href="http://www.debian.org/"&gt;Debian&lt;/a&gt; pagrindu sukurtoms
+&lt;a class="reference external" href="http://www.gnu.org/gnu/linux-and-gnu.html"&gt;GNU/Linux&lt;/a&gt; distribucijoms.&lt;/p&gt;
+&lt;p&gt;Visos instrukcijos žemiau, bus naudojami tokie vardai:&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;&lt;code class="docutils literal"&gt;vardenis&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Jūsų naudotojo vardas.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;code class="docutils literal"&gt;skreitinukas&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Jūsų kompiuterio vardas (angl. &lt;em&gt;hostname&lt;/em&gt;).&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;code class="docutils literal"&gt;serveris&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Serverio vardas (angl. &lt;em&gt;hostname&lt;/em&gt;).&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class="section" id="diegimas"&gt;
+&lt;h2&gt;Diegimas&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt; galima įsidiegti iš paketų repozitorijos:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo apt-get install mercurial-server&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ssh-raktai"&gt;
+&lt;h2&gt;SSH raktai&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt; veikia saugaus SSH protokolo ir SSH raktų pagalba. Todėl
+būtina susikurti SSH raktą, jei jo dar neturite:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh-keygen -C vardenis@skreitinukas&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="mercurial-server-pirmojo-naudotojo-kurimas"&gt;
+&lt;h2&gt;mercurial-server pirmojo naudotojo kūrimas&lt;/h2&gt;
+&lt;p&gt;Prieš pradedant bet kokį &lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt; konfigūravimą, būtina susikurti
+pirmąjį administratoriaus naudotoją, kuris galės keisti &lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt;
+konfigūraciją ir suteikti prieigą prie repozitorijų, kitiems naudotojams.&lt;/p&gt;
+&lt;p&gt;Tam jums reikės įkelti savo viešąjį SSH raktą, į serverį ir paleisti
+&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;refresh-auth&lt;/span&gt;&lt;/code&gt; komandą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;scp ~/.ssh/id_rsa.pub vardenis@serveris:
+ssh vardenis@serveris
+sudo mkdir -p /etc/mercurial-server/keys/root/vardenis
+sudo cp id_rsa.pub /etc/mercurial-server/keys/root/vardenis/skreitinukas
+sudo -u hg /usr/share/mercurial-server/refresh-auth
+rm id_rsa.pub&lt;/pre&gt;
+&lt;p&gt;Po šių komandų, bus sukurtas pirmasis naudotojas, kuris jau gali pilnai
+naudotis visomis funkcijomis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="naudotoju-kurimas-ir-valdymas"&gt;
+&lt;h2&gt;Naudotojų kūrimas ir valdymas&lt;/h2&gt;
+&lt;p&gt;Jei norite, kad prie repozitorijų priėjimą turėtų daugiau nei vienas
+naudotojas, tuomet, galite susikurti daugiau naudotojų, įkeldami kiekvieno iš
+jų SSH viešąjį raktą, tokiu būdu:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg clone ssh://hg@serveris/hgadmin
+cd hgadmin
+mkdir -p keys/users/jonas
+cp ~/jono-raktas.pub keys/users/jonas/jonoskreitinukas
+hg add
+hg commit -m "Įkeltas Jono raktas."
+hg push&lt;/pre&gt;
+&lt;p&gt;Komandos aukščiau turi būti vykdomos &lt;code class="docutils literal"&gt;vardenis&lt;/code&gt; naudotojo kompiuteryje, o ne
+serveryje. &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/jono-raktas.pub&lt;/span&gt;&lt;/code&gt; yra kito naudotojo raktas. Jei naudotojai
+raktą siunčia el. paštu, įsitikinkite, kad raktas nesulaužytas į kelias
+eilutes, visas SSH raktas, turi būti viena eilutė.&lt;/p&gt;
+&lt;p&gt;Įvykdžius paskutinę komandą &lt;code class="docutils literal"&gt;hg push&lt;/code&gt;, serveryje, &lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt;
+automatiškai paleist &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;/usr/share/mercurial-server/refresh-auth&lt;/span&gt;&lt;/code&gt; skriptą ir
+atnaujins konfigūraciją.&lt;/p&gt;
+&lt;p&gt;Atkreipkite dėmesio, kad administratoriaus raktas buvo įkeltas į &lt;code class="docutils literal"&gt;keys/root&lt;/code&gt;
+katalogą, o paprasto naudotojo į &lt;code class="docutils literal"&gt;keys/users&lt;/code&gt;. Priklausomai nuo to, į kokį
+katalogą įkeltas naudotojo raktas, tokios teisės jam ir bus suteiktos. Pagal
+nutylėjimą, yra sukurtos dvi naudotojų grupės, &lt;code class="docutils literal"&gt;root&lt;/code&gt; ir &lt;code class="docutils literal"&gt;users&lt;/code&gt;. &lt;code class="docutils literal"&gt;users&lt;/code&gt;
+naudotojai, neturi priėjimo prie &lt;code class="docutils literal"&gt;hgadmin&lt;/code&gt; repozitorijos, todėl neturi
+galimybės kurti naujus naudotojus, ar keisti konfigūraciją.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="mercurial-server-konfiguravimas"&gt;
+&lt;h2&gt;mercurial-server konfigūravimas&lt;/h2&gt;
+&lt;p&gt;Kaip jau pastebėjote, &lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt; konfigūraciniai failai laikomi dviejose
+vietose, serveryje, &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;/etc/mercurial-server&lt;/span&gt;&lt;/code&gt; kataloge ir &lt;code class="docutils literal"&gt;hgadmin&lt;/code&gt;
+repozitorijoje. Rekomenduoju visą konfigūraciją laikyti versijuojamoje
+&lt;code class="docutils literal"&gt;hgadmin&lt;/code&gt; repozitorijoje.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="naudotoju-teisiu-valdymas"&gt;
+&lt;h2&gt;Naudotojų teisių valdymas&lt;/h2&gt;
+&lt;p&gt;Naudotojų teisės valdomos per &lt;code class="docutils literal"&gt;access.conf&lt;/code&gt; konfigūracijos failą, esantį
+&lt;code class="docutils literal"&gt;hgadmin&lt;/code&gt; repozitorijoje. Pagal nutylėjimą, šis failas, serveryje
+(&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;/etc/mercurial-server/access.conf&lt;/span&gt;&lt;/code&gt;) atrodo taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;init user=root/**
+deny repo=hgadmin
+write user=users/**&lt;/pre&gt;
+&lt;p&gt;Galite susikurti naują &lt;code class="docutils literal"&gt;access.conf&lt;/code&gt; failą &lt;code class="docutils literal"&gt;hgadmin&lt;/code&gt; repozitorijoje ir
+apsirašyti naujus nustatymus, kurie įsigalios po &lt;code class="docutils literal"&gt;hg push&lt;/code&gt; (įkėlimo į
+serverį) komandos.&lt;/p&gt;
+&lt;p&gt;Viena konfigūracijos failo eilutė susideda iš tokių dalių:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;&amp;lt;leidimas&amp;gt; &amp;lt;taisyklė 1&amp;gt; &amp;lt;taisyklė 2&amp;gt; &amp;lt;taisyklė N&amp;gt; ...&lt;/pre&gt;
+&lt;p&gt;Leidimai gali būti tokie:&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;&lt;code class="docutils literal"&gt;init&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Leisti kurti naują, rašyti į ir skaityti repozitorijas aprašytas taisyklėse
+nurodytiems naudotojams.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;code class="docutils literal"&gt;write&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Leisti rašyti ir rašyti į ir skaityti.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;code class="docutils literal"&gt;read&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Leisti tik skaityti.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;code class="docutils literal"&gt;deny&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Drausti priėjimą prie repozitorijos.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Plačiau apie tai galite pasiskaityti &lt;a class="reference external" href="http://dev.lshift.net/paul/mercurial-server/docbook.html"&gt;mercurial-server dokumentacijoje&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="repozitoriju-kurimas"&gt;
+&lt;h2&gt;Repozitorijų kūrimas&lt;/h2&gt;
+&lt;p&gt;Repozitorijos serveryje kuriamos labai paprastai, jei turite &lt;code class="docutils literal"&gt;init&lt;/code&gt; teisę,
+tada naują repozitoriją serveryje sukursite taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg clone lokali/repozitorija ssh://hg@serveris/nauja-repozitorija&lt;/pre&gt;
+&lt;p&gt;Po šios komandos, serveryje bus sukurta nauja repozitorija pavadinimu
+&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;nauja-repozitorija&lt;/span&gt;&lt;/code&gt; ir į ją bus perkeltas visas &lt;code class="docutils literal"&gt;lokali/repozitorija&lt;/code&gt;
+turinys. Lokalią repozitoriją galite susikurti taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg init lokali/repozitorija&lt;/pre&gt;
+&lt;p&gt;Iš serverio, į savo kompiuterį bet kurią repozitoriją, prie kurios turite
+priėjimą, atsisiūsite taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg clone ssh://hg@serveris/nauja-repozitorija&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="darbo-organizavimas"&gt;
+&lt;h2&gt;Darbo organizavimas&lt;/h2&gt;
+&lt;p&gt;Yra daugybė būdų, kaip galima organizuoti darbus, naudojant versijų kontrolės
+sistemas. Pateiksiu kelis patarimus, kuriuos esu išbandęs praktiškai.&lt;/p&gt;
+&lt;p&gt;Visų pirmą, turite suprasti, kad &lt;a class="reference external" href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt; turi tris šakų tipus:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://stevelosh.com/blog/2009/08/a-guide-to-branching-in-mercurial/#branching-with-clones"&gt;klonuotos šakos&lt;/a&gt; (angl. &lt;em&gt;cloned branches&lt;/em&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://mercurial.selenic.com/wiki/NamedBranches"&gt;pavadintos šakos&lt;/a&gt; (angl. &lt;em&gt;named branches&lt;/em&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://stevelosh.com/blog/2009/08/a-guide-to-branching-in-mercurial/#branching-anonymously"&gt;paprastos šakos&lt;/a&gt; (angl. &lt;em&gt;branches&lt;/em&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="klonuotos-sakos"&gt;
+&lt;h3&gt;Klonuotos šakos&lt;/h3&gt;
+&lt;p&gt;Klonuotos šakos yra visiškai atskiros repozitorijos, sukurtos kitos
+repozitorijos pagrindu, toks repozitorijų šakų kūrimas angliškai dažnai
+vadinamas &lt;em&gt;forking&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Klonuotos šakos yra saugios nuo bet kokių repozitorijos sugadinimų, todėl, kad
+visa istorija vedama atskiroje repozitorijoje. Žinoma, esant reikalui,
+klonuotas šakas galima sulieti į vieną.&lt;/p&gt;
+&lt;p&gt;Rekomenduoju šio tipo šakas naudoti kuriant naujas funkcijas, eksperimentams ir
+pan. Be to, naudinga, turėti atskirą klonuotą šaką produkto (angl.
+&lt;em&gt;production&lt;/em&gt;) kodui, kurioje visą laiką yra tik tie pakeitimai, kurie įkelti į
+veikiantį produkto serverį.&lt;/p&gt;
+&lt;p&gt;Kadangi naudinga turėti daug klonuotų šakų, todėl serveryje, repozitorijas
+reikia organizuoti taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh://hg@serveris/projektas
+ssh://hg@serveris/projektas/production
+ssh://hg@serveris/projektas/funkcija-x
+ssh://hg@serveris/projektas/funkcija-y
+ssh://hg@serveris/projektas/vardenis
+ssh://hg@serveris/projektas/vardenis/funkcija-x
+ssh://hg@serveris/projektas/jonas&lt;/pre&gt;
+&lt;p&gt;Šiame pavyzdyje, pagrindinė repozitorija yra &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;ssh://hg@serveris/projektas&lt;/span&gt;&lt;/code&gt;,
+šioje klonuotoje šakoje turėtų būti saugoma naujausią veikianti versija,
+&lt;a class="reference external" href="http://subversion.apache.org/"&gt;Subversion&lt;/a&gt; terminais kalbant, tai vadinama &lt;code class="docutils literal"&gt;trunk&lt;/code&gt;, &lt;a class="reference external" href="http://git-scm.com/"&gt;git&lt;/a&gt; terminais
+&lt;code class="docutils literal"&gt;master&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Taip pat yra produkto šaka &lt;code class="docutils literal"&gt;projektas/production&lt;/code&gt;, kurioje turėtų būti
+laikomi tokie patys pakeitimai, kurie yra produkcinėje versijoje.&lt;/p&gt;
+&lt;p&gt;Kitos šakos &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;projektas/funkcija-x&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;projektas/funkcija-y&lt;/span&gt;&lt;/code&gt; yra skirtos
+ilgiau vystomoms funkcijoms. Taip pat, kiekvienas naudotojas gali turėti po
+savo klonuotą šaką, kuri gali saugoti nebaigtus pakeitimus.&lt;/p&gt;
+&lt;p&gt;Klonuotą šaką sukursite taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg clone . ssh://hg@serveris/projektas/funkcija-x&lt;/pre&gt;
+&lt;p&gt;Kad būtų paprasčiau dirbti su klonuotomis šakomis siūlau naudoti kelio
+trumpinius, kuriuos galite apsirašyti repozitorijos &lt;code class="docutils literal"&gt;.hg/hgrc&lt;/code&gt; faile:&lt;/p&gt;
+&lt;pre class="code cfg"&gt;&lt;a name="rest_code_a610dce27dd046ada464de21d55fd983-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[paths]&lt;/span&gt;
+&lt;a name="rest_code_a610dce27dd046ada464de21d55fd983-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;default&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas&lt;/span&gt;
+&lt;a name="rest_code_a610dce27dd046ada464de21d55fd983-3"&gt;&lt;/a&gt;&lt;span class="na"&gt;production&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/production&lt;/span&gt;
+&lt;a name="rest_code_a610dce27dd046ada464de21d55fd983-4"&gt;&lt;/a&gt;&lt;span class="na"&gt;funkcija-x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/funkcija-x&lt;/span&gt;
+&lt;a name="rest_code_a610dce27dd046ada464de21d55fd983-5"&gt;&lt;/a&gt;&lt;span class="na"&gt;funkcija-y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/funkcija-y&lt;/span&gt;
+&lt;a name="rest_code_a610dce27dd046ada464de21d55fd983-6"&gt;&lt;/a&gt;&lt;span class="na"&gt;vardenis&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/vardenis&lt;/span&gt;
+&lt;a name="rest_code_a610dce27dd046ada464de21d55fd983-7"&gt;&lt;/a&gt;&lt;span class="na"&gt;jonas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/jonas&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Turin tokius aprašus, galite naudoti trumpuosius vardus (&lt;code class="docutils literal"&gt;default&lt;/code&gt; turi
+ypatingą prasmę ir šis kelias naudojamas tada, kai nenurodote nieko):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg push
+hg push production
+hg push funkcija-x
+hg pull jonas&lt;/pre&gt;
+&lt;p&gt;Taip pat galite naudoti &lt;a class="reference external" href="http://mercurial.selenic.com/wiki/SchemesExtension"&gt;Schemes&lt;/a&gt; išplėtimą, kurį įjungsite savo &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.hgrc&lt;/span&gt;&lt;/code&gt;
+faile taip:&lt;/p&gt;
+&lt;pre class="code cfg"&gt;&lt;a name="rest_code_60e293928362461f9616cc41b7e9f2ce-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[extensions]&lt;/span&gt;
+&lt;a name="rest_code_60e293928362461f9616cc41b7e9f2ce-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;hgext.schemes&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;a name="rest_code_60e293928362461f9616cc41b7e9f2ce-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_60e293928362461f9616cc41b7e9f2ce-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;[schemes]&lt;/span&gt;
+&lt;a name="rest_code_60e293928362461f9616cc41b7e9f2ce-5"&gt;&lt;/a&gt;&lt;span class="na"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Tada dirbti galite taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg push p://production
+hg push p://funkcija-x
+hg pull p://jonas&lt;/pre&gt;
+&lt;p&gt;Atkreipkite dėmesį, kad dirbant su klonuotomis šakomis, rekomenduojama savo
+kompiuteryje, taip pat turėti panašią katalogų struktūrą, su keliomis to pačio
+projekto kopijomis, skirtinguose kataloguose. Pavyzdžiui:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dirbate prie &lt;code class="docutils literal"&gt;default&lt;/code&gt; šakos ir staiga atsiranda poreikis, pataisyti
+klaidą &lt;code class="docutils literal"&gt;production&lt;/code&gt; šakoje. Tada tiesiog keičiate aktyvų katalogą
+&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;../production&lt;/span&gt;&lt;/code&gt;, ten pataisote klaidą, išsaugote pakeitimus &lt;code class="docutils literal"&gt;hg commit&lt;/code&gt;
+ir įkeliate pakeitimus į serveryje esančią repozitoriją &lt;code class="docutils literal"&gt;hg push
+production&lt;/code&gt;. Galiausiai, grįžtate atgal prie savo darbo &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;../projektas&lt;/span&gt;&lt;/code&gt;,
+ten baigiate pakeitimus, juos išsaugote &lt;code class="docutils literal"&gt;hg commit&lt;/code&gt; ir pasiimate klaidos
+pataisymą iš kitos šakos &lt;code class="docutils literal"&gt;hg pull production&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pavadintos-sakos"&gt;
+&lt;h3&gt;Pavadintos šakos&lt;/h3&gt;
+&lt;p&gt;Pavadintos šakos yra vidinės repozitorijos šakos, kurios turi pavadinimą. Šio
+tipo šakos įeina į repozitorijos istoriją ir jų negalima ištrinti (t.y.
+negalima ištrinti paprastai).&lt;/p&gt;
+&lt;p&gt;Siūlau šio tipo šakas naudoti pagrindinėms versijoms žymėti. Pavyzdžiu,
+tarkime, kad jūsų projektas, turi dvi pagrindines ir palaikomas versijas,
+&lt;code class="docutils literal"&gt;1.1&lt;/code&gt; ir &lt;code class="docutils literal"&gt;1.2&lt;/code&gt;, tuomet, galite susikurti dvi pavadintas šakas:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg branch 1.1
+hg ci -m "Nauja šaka versijai 1.1."
+
+hg branch 1.2
+hg ci -m "Nauja šaka versijai 1.2."&lt;/pre&gt;
+&lt;p&gt;Pereiti prie kitos pavadintos šakos galite taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg update 1.1&lt;/pre&gt;
+&lt;p&gt;Pasitikrinti, kuri šaka yra aktyvi šiuo metu galite taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg branch&lt;/pre&gt;
+&lt;p&gt;Pavadintos šakos turi tokią savybę, kad joje galite atlikti naujus pakeitimus
+ir ji visą laiką rodys į naujausią pakeitimą. Versijuojant, stambioms versijoms
+tokia savybė labai tinka. Išleidžiant naujas galutines versijas, kuriose jau
+nebegali būti daromi jokie pakeitimai, galima naudoti žymes, o pavadinta šaka,
+&lt;code class="docutils literal"&gt;1.2&lt;/code&gt; visą laiką rodys į naujausią galutinę versiją.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="paprastos-sakos"&gt;
+&lt;h3&gt;Paprastos šakos&lt;/h3&gt;
+&lt;p&gt;Paprastos šakos yra vidinės šakos ir jos susikuria automatiškai, kiekvieną
+kartą, kai reikia. Pavyzdžiui:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Naudotojas A padarė pakeitimą x, lygiai tuo pat metu naudotojas B padarė
+pakeitimą y. Naudotojas A, pirmesnis įkėlė savo pakeitimą į serverį, todėl
+naudotojui B iššoko pranešimas, kad serveryje yra naujų pakeitimų, kurių
+jis neturi. Tada naudotojas B, turi atsinaujinti (angl. &lt;em&gt;pull&lt;/em&gt;) pakeitimus
+iš serverio, ko pasekoje bus automatiškai sukurta šaka, viena naudotojo A,
+kita naudotojo B. Galiausiai naudotojas B turi tas šakas sulieti (angl.
+&lt;em&gt;merge&lt;/em&gt;) ir tik tada įkelti savo pakeitimus ir suliejimą į serverį.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>mercurial</category><guid>https://sirex.lt/posts/2013/mercurial-server/</guid><pubDate>Wed, 17 Apr 2013 16:03:00 GMT</pubDate></item><item><title>Kaip pašalinti nereikalingus keitimus su mercurial transplant?</title><link>https://sirex.lt/posts/2010/kaip-pasalinti-nereikalingus-keitimus-su-mercurial-transplant/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Išsiaiškinau įdomų dalyką, nusprendžiau pasidalinti atradimu.&lt;/p&gt;
+&lt;p&gt;Tarkime turite visą eilę pakeitimu, failuose su kuriais dirbate. Visus
+pakeitimus saugote Mercurial DVCS pagalba. Po kurio laiko pastebite, kad dalis
+darytų pakeitimų, gadina jūsų darbą ir norite juos pašalinti.&lt;/p&gt;
+&lt;p&gt;Pateiksiu pavyzdį, su vienu failu, kad būtų aiškiau. Tarkime turiu tokių
+keitimų sąrašą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;@ changeset: 6:e17baf640494
+| user: sirex
+| date: Tue Jan 12 22:20:33 2010 +0200
+| summary: c
+|
+o changeset: 5:95fc32abe5f2
+| user: sirex
+| date: Tue Jan 12 22:20:27 2010 +0200
+| summary: b
+|
+o changeset: 4:66c0e9ff6c77
+| user: sirex
+| date: Tue Jan 12 22:20:21 2010 +0200
+| summary: a
+|
+o changeset: 3:9f0e3fcf1600
+| user: sirex
+| date: Tue Jan 12 22:20:04 2010 +0200
+| summary: b
+|
+o changeset: 2:53fb42c364d2
+| user: sirex
+| date: Tue Jan 12 22:19:57 2010 +0200
+| summary: a
+|
+o changeset: 1:c9fa842d083d
+| user: sirex
+| date: Tue Jan 12 22:19:43 2010 +0200
+| summary: b
+|
+o changeset: 0:9c2929bb13fc
+  user: sirex
+  date: Tue Jan 12 22:19:11 2010 +0200
+  summary: a&lt;/pre&gt;
+&lt;p&gt;Visi šie keitimai keičia failą &lt;code class="docutils literal"&gt;file.txt&lt;/code&gt;, kiekviename pakeitime į failą
+įkelta nauja eilute su raide, kuri nurodytą keitimo aprašyme.  Galutinis failo
+turinys yra toks:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ cat file.txt
+a
+b
+a
+b
+a
+b
+c&lt;/pre&gt;
+&lt;p&gt;Mano užduotis – pašalinti visus &lt;code class="docutils literal"&gt;b&lt;/code&gt; keitimus. Norint tai atlinkti, reikia
+visus gerus pakeitimus iškelti į kitą šaką.&lt;/p&gt;
+&lt;p&gt;Prieš pradedant &lt;code class="docutils literal"&gt;transplant&lt;/code&gt; veiksmą, grąžiname savo darbinį katalogą į
+paskutinį gerą keitimą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ hg up 0&lt;/pre&gt;
+&lt;p&gt;Tada pradedam &lt;code class="docutils literal"&gt;transplant&lt;/code&gt; veiksmą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ hg transplant -b 6
+changeset: 1:c9fa842d083d
+user: sirex &amp;lt;sirexas@gmail.com&amp;gt;
+date: Tue Jan 12 22:19:43 2010 +0200
+summary: b
+
+apply changeset? [ynmpcq?]: ?
+y: transplant this changeset
+n: skip this changeset
+m: merge at this changeset
+p: show patch
+c: commit selected changesets
+q: cancel transplant
+?: show this help
+apply changeset? [ynmpcq?]:&lt;/pre&gt;
+&lt;p&gt;Toliau reikia tiesiog spaudyti &lt;code class="docutils literal"&gt;y&lt;/code&gt;, jei pakeitimas yra geras arba &lt;code class="docutils literal"&gt;n&lt;/code&gt;, jei
+blogas.&lt;/p&gt;
+&lt;p&gt;Jei geras keitimas yra susijęs su bloguoju, mercurial gali nesugebėti įkelti
+gero keitimo, nes paprasčiausiai failo turinys, kurio pagrindu buvo atliktas
+gerasis keitimas pasikeitė, pašalinus blogą keitimą.&lt;/p&gt;
+&lt;p&gt;Gaila, bet &lt;code class="docutils literal"&gt;m: merge at this changeset&lt;/code&gt; nepavyko panaudoti, todėl jei
+nepavyksta sujungti keitimų, tenka tai spręsti rankiniu būdu, taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;applying 9e6f5cccf15b
+patching file file.txt
+Hunk #1 FAILED at 0
+1 out of 1 hunks FAILED -- saving rejects to file file.txt.rej
+patch failed to apply
+abort: Fix up the merge and run hg transplant --continue&lt;/pre&gt;
+&lt;p&gt;Atsidarykite nurodytą failą &lt;code class="docutils literal"&gt;file.txt&lt;/code&gt; ir informacinį failą su informacija
+apie nesutampantį fragmentą &lt;code class="docutils literal"&gt;file.txt.rej&lt;/code&gt;. Peržiūrėkite kas nesutampa ir
+pataisykite originalų failą &lt;code class="docutils literal"&gt;file.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Galiausiai turėsite naują šaką, tik su gerais pakeitimais:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;@ changeset: 9:e17baf640494
+| user: sirex
+| date: Tue Jan 12 22:20:33 2010 +0200
+| summary: c
+|
+o changeset: 8:c4671106cf7a
+| user: sirex
+| date: Tue Jan 12 22:20:21 2010 +0200
+| summary: a
+|
+o changeset: 7:f45376781321
+| parent: 0:9c2929bb13fc
+| user: sirex
+| date: Tue Jan 12 22:19:57 2010 +0200
+| summary: a
+|
+o | changeset: 6:e17baf640494
+| | user: sirex
+| | date: Tue Jan 12 22:20:33 2010 +0200
+| | summary: c
+| |
+o | changeset: 5:95fc32abe5f2
+| | user: sirex
+| | date: Tue Jan 12 22:20:27 2010 +0200
+| | summary: b
+| |
+o | changeset: 4:66c0e9ff6c77
+| | user: sirex
+| | date: Tue Jan 12 22:20:21 2010 +0200
+| | summary: a
+| |
+o | changeset: 3:9f0e3fcf1600
+| | user: sirex
+| | date: Tue Jan 12 22:20:04 2010 +0200
+| | summary: b
+| |
+o | changeset: 2:53fb42c364d2
+| | user: sirex
+| | date: Tue Jan 12 22:19:57 2010 +0200
+| | summary: a
+| |
+o | changeset: 1:c9fa842d083d
+| | user: sirex
+| | date: Tue Jan 12 22:19:43 2010 +0200
+| | summary: b
+|/
+o changeset: 0:9c2929bb13fc
+  user: sirex
+  date: Tue Jan 12 22:19:11 2010 +0200
+  summary: a&lt;/pre&gt;
+&lt;p&gt;Grįžtame atgal į pagrindinę šaką ir prijungiame atrinktus geruosius keitimus,
+visiškai eliminuojant bloguosius:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ hg up 6
+$ hg --config ui.merge=internal:other merge 9
+$ hg ci -m "Atstatyti tik gerieji keitimai."&lt;/pre&gt;
+&lt;p&gt;Galiausiai gausite tokį &lt;em&gt;file.txt&lt;/em&gt; turinį:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ cat file.txt
+a
+a
+a
+c&lt;/pre&gt;
+&lt;p&gt;Ir tokį keitimų medį:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;@ changeset: 9:e17baf640494
+| user: sirex
+| date: Tue Jan 12 22:20:33 2010 +0200
+| summary: Atstatyti tik gerieji keitimai.
+|\
+| o changeset: 9:e17baf640494
+| | user: sirex
+| | date: Tue Jan 12 22:20:33 2010 +0200
+| | summary: c
+| |
+| o changeset: 8:c4671106cf7a
+| | user: sirex
+| | date: Tue Jan 12 22:20:21 2010 +0200
+| | summary: a
+| |
+| o changeset: 7:f45376781321
+| | parent: 0:9c2929bb13fc
+| | user: sirex
+| | date: Tue Jan 12 22:19:57 2010 +0200
+| | summary: a
+| |
+o | changeset: 6:e17baf640494
+| | user: sirex
+| | date: Tue Jan 12 22:20:33 2010 +0200
+| | summary: c
+| |
+o | changeset: 5:95fc32abe5f2
+| | user: sirex
+| | date: Tue Jan 12 22:20:27 2010 +0200
+| | summary: b
+| |
+o | changeset: 4:66c0e9ff6c77
+| | user: sirex
+| | date: Tue Jan 12 22:20:21 2010 +0200
+| | summary: a
+| |
+o | changeset: 3:9f0e3fcf1600
+| | user: sirex
+| | date: Tue Jan 12 22:20:04 2010 +0200
+| | summary: b
+| |
+o | changeset: 2:53fb42c364d2
+| | user: sirex
+| | date: Tue Jan 12 22:19:57 2010 +0200
+| | summary: a
+| |
+o | changeset: 1:c9fa842d083d
+| | user: sirex
+| | date: Tue Jan 12 22:19:43 2010 +0200
+| | summary: b
+|/
+o changeset: 0:9c2929bb13fc
+  user: sirex
+  date: Tue Jan 12 22:19:11 2010 +0200
+  summary: a&lt;/pre&gt;&lt;/div&gt;</description><category>mercurial</category><guid>https://sirex.lt/posts/2010/kaip-pasalinti-nereikalingus-keitimus-su-mercurial-transplant/</guid><pubDate>Wed, 13 Jan 2010 06:31:00 GMT</pubDate></item><item><title>Mercurial Web programuotojams</title><link>https://sirex.lt/posts/2009/mercurial-web-programuotojams/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Kadangi &lt;a class="reference external" href="http://www.ubuntu.lt/"&gt;ubuntu.lt&lt;/a&gt; kodą buvo nuspręsta perkelti po
+&lt;a class="reference external" href="https://code.launchpad.net/~sirex/ubuntu.lt/main"&gt;Launchpad.net stogu&lt;/a&gt;, tai
+teko šiek tiek pasidomėti &lt;a class="reference external" href="http://bazaar-vcs.org/"&gt;bazaar&lt;/a&gt; versijų kontrolės
+sistema. Radau įdomų dalyką – &lt;a class="reference external" href="http://doc.bazaar-vcs.org/latest/en/tutorials/tutorial.html#publishing-your-branch"&gt;Publishing your branch&lt;/a&gt;!
+Bazaar gali siųsti pakeitimus tiesiai į SFTP serverį.&lt;/p&gt;
+&lt;p&gt;Tikriausiai daugelis Web programuotojų keičia kodą savo kompiuteryje, o vėliau
+tai kas pakeista siunčia per FTP į Web serverį. Aš darau būtent taip ir darau
+tai labai dažnai. Iki šiol pakeitimų į Web serverį siuntimui naudojau Makefile
++ lftp. Tačiau pasiskaitęs apie Bazaar nusprendžiau pasidomėti ar Mercurial
+turi kokias nors priemones „push'inti“ į FTP. Pasirodo turi! :)&lt;/p&gt;
+&lt;div class="section" id="atradimas"&gt;
+&lt;h2&gt;Atradimas&lt;/h2&gt;
+&lt;p&gt;Radau Mercurial &lt;a class="reference external" href="http://bitbucket.org/misery/hgftp/wiki/Home"&gt;FTPExtension&lt;/a&gt;, kuris daro būtent tai, ko reikia!&lt;/p&gt;
+&lt;p&gt;Trumpai aprašysiu kaip dirbu su kodu ir kaip jį siunčiu į Web serverį, per FTP.&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p&gt;Keičiu kodą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ vim index.php&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fiksuoju tai ką keičiu:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ hg ci -m "Aprašymas ką ir kodėl keičiau."&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Magija prasideda :) Siunčiu pakeistus failus į Web serverį, per FTP:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ hg ftp -u&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code class="docutils literal"&gt;hg ftp &lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/code&gt; komanda surenka visus pakeitimus nuo paskutinio siuntimo į Web
+serverį ir siunčia naujus ir keistus failus, o taip pat ištrina tai, kas buvo
+ištrinta. Tačiau neliečia nei vieno failo Web serveryje, kurio nėra Mercurial
+repozitoriume. Tai reiškia, kad serveryje gali būti kokių tik nori failų,
+tačiau atnaujinama bus tik tai, kas konkrečiai keičiasi kode. Bent jau mano
+darbe tai yra labai naudingas dalykas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kaip-idiegti-ftpextension"&gt;
+&lt;h2&gt;Kaip įdiegti FTPExtension?&lt;/h2&gt;
+&lt;p&gt;Labai paprastai:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ mkdir -p ~/.hgext
+$ cd ~/.hgext
+$ hg clone http://bitbucket.org/misery/hgftp/&lt;/pre&gt;
+&lt;p&gt;Po šių veiksmų, galite įjungti šį praplėtimą globaliai (&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.hgrc&lt;/span&gt;&lt;/code&gt;), arba tik
+konkrečiam repozitoriumui (&lt;em&gt;./.hg/hgrc&lt;/em&gt;) į nurodytą failą įrašydami:&lt;/p&gt;
+&lt;pre class="code ini"&gt;&lt;a name="rest_code_2bf9dc33b3d04a99a0ce5806cc2817d4-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[extensions]&lt;/span&gt;
+&lt;a name="rest_code_2bf9dc33b3d04a99a0ce5806cc2817d4-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;hgext.ftp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;~/.hgext/hgftp/ftp.py&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="ftpextension-konfiguravimas"&gt;
+&lt;h2&gt;FTPExtension konfigūravimas&lt;/h2&gt;
+&lt;p&gt;Kai jau turite veikiantį praplėtimą, konkrečiam Web projekto repozitoriumui
+galite nurodyti FTP prisijungimą, kur bus siunčiami duomenys. Tai galite
+padaryti repozitormiumo konfigūraciniame faile &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;./.hg/hgrc&lt;/span&gt;&lt;/code&gt;, nurodydami:&lt;/p&gt;
+&lt;pre class="code ini"&gt;&lt;a name="rest_code_30b49481d215447d96a2b7c27e7d9022-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[paths]&lt;/span&gt;
+&lt;a name="rest_code_30b49481d215447d96a2b7c27e7d9022-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;ftp&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ftp://[user[:pass]@]host[:port]/[path]&lt;/span&gt;
+&lt;a name="rest_code_30b49481d215447d96a2b7c27e7d9022-3"&gt;&lt;/a&gt;&lt;span class="na"&gt;myhost&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ftp://andre@incubo.de/htdocs&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Jei prisijungimo eilutę priskirsite specialią paskirtį turinčiam žodeliui
+'ftp', tuomet šis FTP serveris bus naudojamas pagal nutylėjimą ir galėsite
+tiesiog naudoti &lt;code class="docutils literal"&gt;hg ftp &lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/code&gt;. Kitais atvejais, reikia nurodyti serverį taip:
+&lt;code class="docutils literal"&gt;hg ftp &lt;span class="pre"&gt;-u&lt;/span&gt; myhost&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Toliau reikia nurodyti reviziją, nuo kurios bus siunčiami atnaujinimai.
+FTPExtension pakeitimus siunčia nuo revizijos, kuri pažymėta žyme
+&lt;a class="reference external" href="mailto:'uploaded@host"&gt;'uploaded@host&lt;/a&gt;'. Žinoma 'host', reikia pakeisti į konkretų hostą, tai myhost
+atveju, turėtų būti &lt;a class="reference external" href="mailto:'uploaded@incubo.de"&gt;'uploaded@incubo.de&lt;/a&gt;'. Einamajai revizijai lokalią žymę
+uždėsite taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ hg tag -l uploaded@host&lt;/pre&gt;
+&lt;p&gt;Viskas, kai jau FTPExtension žino reviziją, nuo kurios siųsti pakeitimus,
+galite keisti kodą, fiksuoti pakeitimus ir siųsti juos per ftp labai paprastai
+ir labai greitai. Daugiau nereikės sukti galvos dėl to kas buvo keista, kada
+atnaujinta ir pan.&lt;/p&gt;
+&lt;p&gt;Pabaigai, siūlau pasiskaityti daugiau apie tai, kaip naudoti šį praplėtimą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ hg help ftp&lt;/pre&gt;
+&lt;p&gt;Daugiau informacijos praplėtimo svetainėje:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://bitbucket.org/misery/hgftp/wiki/Home"&gt;FTPExtension&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>mercurial</category><guid>https://sirex.lt/posts/2009/mercurial-web-programuotojams/</guid><pubDate>Tue, 06 Oct 2009 20:51:00 GMT</pubDate></item><item><title>Versijų kontrolės sistema – Mercurial</title><link>https://sirex.lt/posts/2009/mercurial/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Pirmiausia nežinantiems, trumpai apie tai, kas yra &lt;a class="reference external" href="http://lt.wikipedia.org/wiki/Versij%C5%B3_kontrol%C4%97s_sistema"&gt;versijų kontrolės sistema&lt;/a&gt;. Tai programinė
+įranga, kurios pagalba galima išsaugoti daug skirtingų failo versijų. Tai
+reiškia, kad pakeitę failą, galite užfiksuoti pakeitimą, nurodydami ką ir kodėl
+keitėte. Vėliau, bet kada galėsite peržiūrėti ir atstatyti tuos pakeitimus.
+Tokias sistemas daugiausiai naudoja programuotojai, nes jie keičia daug failų
+ir nori žinoti kas kada ir kodėl buvo pakeista. Versijų kontrolės sistemos taip
+giliai įaugo į programavimo procesą, kad failų versijos naudojamos labai
+plačiai, pavyzdžiui programuotojo našumui apskaičiuoti. Tačiau failų versijų
+sekimas aktualus ne tik programuotojams...&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/logo-droplets-200.png"&gt;&lt;img alt="/images/logo-droplets-200.thumbnail.png" src="https://sirex.lt/images/logo-droplets-200.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;Jau senai planavau visus savo konfigūracinius failus patikėti versijų kontrolės
+sistemai, buvo bandymų daryti tai su Subversion, tačiau jis nėra toks lankstus,
+galiausiai išbandžiau Mercuriai, kuris gerokai pranoko mano lūkesčius.
+Pasidalinsiu patirtimi kaip sekėsi tai daryti.  Kadangi kompiuteris bet kada
+gali sugesti ir sugadinti duomenis, tai patikimiau svarbius duomenis saugoti ne
+vienoje vietoje. Be to, tuos pačius konfigūracinius failus naudoju ne viename
+kompiuteryje. Tam reikalui puikiai tinka &lt;a class="reference external" href="http://bitbucket.org/"&gt;bitbucket.org&lt;/a&gt; svetainė, kurioje galima talpinti iki 150 Mb duomenų.
+Susikūrus naują repozitoriumą atsisiunčiu jį į savo kompiuterį, pradžiai į
+laikiną katalogą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ cd /tmp
+$ hg clone http://bitbucket.org/sirex/home/&lt;/pre&gt;
+&lt;p&gt;CVS turi bjaurų įprotį kiekviename kataloge prišiukšlinti paliekant 'CVS'
+katalogą, Subversion daro laba panašiai, tik katalogas vadinasi '.svn', tuo
+tarpu Mercurial viską saugo tik viename kataloge pavadinimu '.hg', kuris yra
+šakniniame repozitoriumo kataloge. Jokių šiukšlių, esant reikalui labai patogu
+perkelti versijų informaciją į kitą vietą, taip ir padarykime... Kadangi turiu
+tuščią repozitoriumą, tai galima perkelti versijų informaciją į mano namų
+katalogą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ cd ~
+$ cp -r /tmp/home/.hg .hg&lt;/pre&gt;
+&lt;p&gt;Mercurial neprisiriša prie konkretaus kelio failų sistemoje, todėl galima sau
+leisti improvizuoti ir dažniausiai įvairios improvizacijos pasiteisina.&lt;/p&gt;
+&lt;p&gt;Mano namų katalogas jau globojamas VKS, tačiau į ją dar niekas neįkelta.
+Kadangi noriu įkelti tik tam tikrus failus, tai galiu nurodyti faile
+&lt;code class="docutils literal"&gt;.hgignore&lt;/code&gt;, štai failo turinys:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;syntax: regexp
+^(?!\.hgrc|\.hgignore)&lt;/pre&gt;
+&lt;p&gt;Pirmoji eilutė nurodo, kad ignoruojamiems failams aprašyti bus naudojamas
+regexp. Kol kas nurodau, kad bus versijuojami tik .hgrc ir .hgignore failai.
+Įkeliame juos į repozitoriumą ir nusiunčiame visus pakeitimus į bitbucket.org
+serverį:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ hg add
+$ hg ci -m "Pradinis įtraukimas."
+$ hg push&lt;/pre&gt;
+&lt;p&gt;Dabar bet kuriame kitame kompiuteryje galiu atsisiųsti savo konfigūracinius
+failus:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ hg clone http://bitbucket.org/sirex/home/ /tmp/home
+$ cp -r /tmp/home/.hg ~/.hg&lt;/pre&gt;
+&lt;p&gt;O vėliau atsinaujinti, jei kažką keičiau:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ hg pull
+$ hg up&lt;/pre&gt;
+&lt;p&gt;Kol kas esu įtraukęs tik Mercurial ir Vim konfigūracinius failus, vėliau reikės
+įtraukti daugiau. Viskas guli čia:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://bitbucket.org/sirex/home/"&gt;http://bitbucket.org/sirex/home/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>mercurial</category><category>python</category><guid>https://sirex.lt/posts/2009/mercurial/</guid><pubDate>Mon, 14 Sep 2009 22:14:00 GMT</pubDate></item></channel></rss>

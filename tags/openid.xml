@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about openid)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/openid.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>OpenID</title><link>https://sirex.lt/posts/2007/openid/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Pagaliau, gal po kokių pusės metų prisiruošiau savo bloge taip pat pajungti
+OpenID. Deje buvau šiek tiek nuviltas Drupal OpenID moduliu.  Modulis veikia,
+tačiau tai daugiau panašu tiesiog į galimybės buvimą, bet rialiai pritaikyti ir
+efektyviai naudoti nelabai galima.&lt;/p&gt;
+&lt;p&gt;Tai gi, jei kam kils noras parašyti komentarą naudojantis OpenID, tai jam iš
+pradžiū tiks užsiregitstruoti. Deje tik taip.&lt;/p&gt;
+&lt;p&gt;Manau greitu laiku reikės keisti Drupal į kitą sistemą, tada ir OpenID veiks
+normaliai.&lt;/p&gt;&lt;/div&gt;</description><category>openid</category><guid>https://sirex.lt/posts/2007/openid/</guid><pubDate>Wed, 12 Dec 2007 19:17:00 GMT</pubDate></item></channel></rss>

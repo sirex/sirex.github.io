@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Po Intrepid Ibex išleidimo atsinaujinau į Linux Mint | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2008/po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../neo-freerunner-belaukiant/" title="Neo FreeRunner belaukiant..." type="text/html">
+<link rel="next" href="../kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/" title="Kaip pakeisti daug failų komandinės eilutės ir perl pagalba" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Po Intrepid Ibex išleidimo atsinaujinau į Linux Mint">
+<meta property="og:url" content="https://sirex.lt/posts/2008/po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/">
+<meta property="og:description" content="Belaukiant Intrepid Ibex išleidimo buvau numatęs kelis dalykus kurių laukiau ir
+norėjau išbandyti: Kubuntu su KDE 4.1, Private katalogas, GNU Tar 1.20. Tačiau
+po Inrepid išleidimo viskas apsivertė auk">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2008-11-06T16:49:00+02:00">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="kde">
+<meta property="article:tag" content="ubuntu">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Po Intrepid Ibex išleidimo atsinaujinau į Linux Mint</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2008-11-06T16:49:00+02:00" itemprop="datePublished" title="2008-11-06 16:49">2008-11-06 16:49</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/kde/" rel="tag">kde</a>,                    <a class="tag p-category" href="../../../tags/ubuntu/" rel="tag">ubuntu</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Belaukiant Intrepid Ibex išleidimo buvau numatęs kelis dalykus kurių laukiau ir
+norėjau išbandyti: Kubuntu su KDE 4.1, Private katalogas, GNU Tar 1.20. Tačiau
+po Inrepid išleidimo viskas apsivertė aukštyn kojom, na išskyrus GNU Tar.</p>
+<p>Pirmiausia, darbe, naudodamasis atnaujinimo priemone išbandžiau <a class="reference external" href="https://wiki.ubuntu.com/EncryptedPrivateDirectory">Private
+Directory</a>, tačiau likau
+nusivylęs. Aišku neturėjau pakankamai laiko gerai įsigilinti, bet tikėjausi,
+kad gilintis ir nereikės, nes funkcija tiesiog veiks sklandžiai ir intuityviai.
+Deja teko įdiegti paketą ecryptfs-utils, o po to, net nesupratau, kaip tuo
+katalogu naudotis. Bandant jį primontuoti pasirodė kažkoks klaidos pranešimas.
+Neturėjau laiko gilintis, tai viską taip ir palikau. Aišku, gal būt tai puikus
+dalykas, bet reikės iki galo išsiaiškinti vėliau.</p>
+<p>Kitas didelis nusivylimas yra Kubuntu. Bandydamas Kubuntu patyriau eilę nusivylimų:</p>
+<ul class="simple">
+<li><p><strong>Veikia lėtai</strong>. Kažkada bandžiau KDE 4.0, jis man taip pat veikė lėtai, bet
+tikėjausi, kad įdiegus šviežiai tai susitvarkys, bet deja.  Lėtai veikia ne
+pati sistema, bet konkrečiai grafika, langų piešimas, atnaujinimas ir t.t. Po
+ilgų klaidžiojimų po konfigūraciją išsiaiškinau, kad reikia pakeisti grafikos
+variklį iš OpenGL į XRenderer. Tai padarius, grafikos greitis panašu, kad susitvarkė.</p></li>
+<li><p><strong>Nestabilumas</strong>. Įvairiose vietose patyriau KDE 4.1 nestabilumą, tai susiję
+tiek su panelės valdymu, tiek su Plasma ir konfigūracijos įrankiu. Labiausiai
+nepatiko tai, kad tvarkant grafikos problemas, konfigūracijos įrankis tiesiog
+perkrauna grafinę aplinką, ko pasekoje dingsta visi neišsaugoti duomenys ir
+t.t., nebūna jokio įspėjimo.  Galiausiai viskas užsibaigė tuo, kad tvarkant
+grafikos problemas, pasirinkus <em>OpenGL fallback</em> įvyko eilinis grafinės
+aplinkos perkrovimas ir po to KDE nebeužsikrovė visiškai.</p></li>
+<li><p><strong>KDE Control Center</strong>. Dar viena nelaimė – KDE Control Center. Jau buvau
+pamiršęs kaip nerviškai veikia klaidžiojimas po įvairiausius konfigūracijos
+langus. Kiekvieną kartą norint išbandyti kitą nustatymą, tenka keliauti per
+visokius meniu į tą pačią vietą, kurią ne visada randi iš pirmo karto. Visų
+nustatymų aprašymai apgailėtini, o tiksliau nieko nesako. Vos pradėjus
+naudotis KDE Control Center spėjau pasiilgti tekstinių konfigūracijų failų,
+kuriuose kiekvienas parametras kuo puikiausiai dokumentuotas, pateikti
+naudojimo pavyzdžiai ir t.t. Be to, kiekvieną kartą norint ką nors surasti
+galima puikiausiai išnaudoti visas teksto paieškos galimybes, kurios tik yra.</p></li>
+<li><p>Paskutinis užkliuvęs dalykas, kuris galutinai pastumėjo trinti Kubuntu yra
+tas, kad KDE daugelis sisteminių programų nežinia kaip surištos viena su kita
+ir įvykus tokiai nelaimei, kai nebeužsikrauna grafinė aplinka, ką nors
+pakeisti iš komandinės eilutės labai sunku.  Bent jau man nepavyko surasti,
+kaip atstatyti tą <em>OpenGL fallback</em> parametrą į vietą. Paleidus praktiškai
+bet kurią programą <em>Fail-Safe</em> režimu, prasidedančią raide <strong>k</strong>, pasirodo
+klaidų pranešimai apie tai, kad nepaleistas koks tai KDE initializatorius ir
+panašūs dalykai.</p></li>
+</ul>
+<p>Tai tokia mano pažintis su Kubuntu ir KDE 4.1. Suprantu, kad KDE 4.1, kol kas
+yra dar labai jaunas, todėl jam reikia laiko, o be to gavau pastabų, kad daug
+problemų yra susijusių su tuo, kad Debian iki šiol dar nėra suintegravusi KDE
+4.1, ko pasekoje Ubuntu taip pat matyt to pasekmės. Kitas dalykas yra tas, kad
+Ubuntu daugiausiai dėmesio skiria būtent Ubuntu distribucijai, o ne Kubuntu.</p>
+<p>Užteks apie nenusisekusius dalykus, pereisiu prie gerųjų. Tai gi, taip
+bežaidžiant su Kubuntu, galiausiai supratau, kad tam dar ne laikas.  Kadangi
+Intrepid versija neturi labai daug naujovių, tai nusprendžiau išbandyti ką nors
+naujo. Kadangi betvarkant neužsikraunantį KDE teko įsidiegti Fluxbox’ą, kad
+turėti nors kažkokį langų valdytoją, nusprendžiau išbandyti kokią nors Fluxbox
+distribuciją. Fluxbox’ą esu ankčiau naudojęs gal pusę metų, o ir šį kartą jis
+įsidiegė ir pasileido gal per minutę ir veikė kaip visada be priekaištų. <a class="reference external" href="http://zuper.lt/">Mano
+kolegos</a> komentaras: <em>tobula yra ne tai, prie ko gali kažką
+pridėti, o tai iš ko negali nieko atimti“</em>. Fluxbox būtent toks ir yra :)</p>
+<p>Nusprendus įsidiegti distribuciją, naudojančią Fluxbox aplinką radau šiuos variantus:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://fluxbuntu.org/">fluxbuntu</a> – pasiskaitinėjus supratau, kad šis
+projektas praktiškai miręs, paskutinė versija pastatyta ant Ubuntu 7.10, o
+tai buvo prieš metus.</p></li>
+<li><p><a class="reference external" href="http://www.damnsmalllinux.org/">Damn Small Linux</a>, gal ir visai nieko, bet
+kiek per mažas ir neturi Ubuntu <em>backgroundo</em>.</p></li>
+<li><p><a class="reference external" href="http://www.linuxmint.com/">Linux Mint Fluxbox</a> – puiki, aktyvi Ubuntu
+pagrindu sukurta distribucija.</p></li>
+<li><p>Daugelis kitų žiūrėti distribucijo nesudomino vien dėt to, kad neturi apt-get
+paketų valdymo sistemos.</p></li>
+</ul>
+<p>Ilgai nesvarsčiu pasirinkau <a class="reference external" href="http://www.linuxmint.com/">Linux Mint Fluxbox</a>.
+Nors jis ir pastatytas ant Ubuntu Hardy, tačiau peršokti į vienu žingsniu
+naujesnę versiją visai nesunku.  Parsisiuntus ir įdiegus išvydau pasakišką vaizdą:</p>
+<a class="reference external image-reference" href="../../../images/shot-1225910240.png"><img alt="Linux Mint Fluxbox" src="../../../images/shot-1225910240.thumbnail.png"></a>
+<p>Fluxbox veikia tiesiog žaibiškai greitai, užsikrauna akimirksniu.
+Minimalistinis stilius slepia dideles galimybes. Kartu su Linux Mint, Fluxbox
+ateina paruoštas pilnaverčiui darbui, belaidis internetas veikia puikiai, taip
+pat įdėta ir garso valdymo piktograma, kurios pasigesdavau anksčiau.</p>
+<p>Žodžiu, viskas tiesiog veikia, jokių bereikalingų efektų ir nesibaigiančių
+konfigūracijų langų. Paprasta ir patogu naudoti.</p>
+<p>Štai daugiau vaizdų:</p>
+<a class="reference external image-reference" href="../../../images/shot-1225902916.png"><img alt="/images/shot-1225902916.thumbnail.png" src="../../../images/shot-1225902916.thumbnail.png"></a>
+<a class="reference external image-reference" href="../../../images/shot-1225903090.png"><img alt="/images/shot-1225903090.thumbnail.png" src="../../../images/shot-1225903090.thumbnail.png"></a>
+<a class="reference external image-reference" href="../../../images/shot-1225903230.png"><img alt="/images/shot-1225903230.thumbnail.png" src="../../../images/shot-1225903230.thumbnail.png"></a>
+<a class="reference external image-reference" href="../../../images/shot-1225903268.png"><img alt="/images/shot-1225903268.thumbnail.png" src="../../../images/shot-1225903268.thumbnail.png"></a>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../neo-freerunner-belaukiant/" rel="prev" title="Neo FreeRunner belaukiant...">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/" rel="next" title="Kaip pakeisti daug failų komandinės eilutės ir perl pagalba">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

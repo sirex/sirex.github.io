@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Neo FreeRunner belaukiant… | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2008/neo-freerunner-belaukiant/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../web-programavimas-ubuntu-aplinkoje/" title="Web programavimas Ubuntu aplinkoje" type="text/html">
+<link rel="next" href="../po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/" title="Po Intrepid Ibex išleidimo atsinaujinau į Linux Mint" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Neo FreeRunner belaukiant...">
+<meta property="og:url" content="https://sirex.lt/posts/2008/neo-freerunner-belaukiant/">
+<meta property="og:description" content="Pagaliau pasirodė ilgai lauktas Openmoko telefonas: Neo FreeRunner.
+Šį įrenginį jau užsakiau ir 2-3 savaičių bėgyje turėtu atkeliauti į
+mano rankas :)
+O belaukiant, galima viska išsibandyti emuliatori">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2008-07-19T00:51:00+02:00">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="openmoko">
+<meta property="article:tag" content="qemu">
+<meta property="article:tag" content="ubuntu">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Neo FreeRunner belaukiant…</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2008-07-19T00:51:00+02:00" itemprop="datePublished" title="2008-07-19 00:51">2008-07-19 00:51</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/openmoko/" rel="tag">openmoko</a>,                    <a class="tag p-category" href="../../../tags/qemu/" rel="tag">qemu</a>,                    <a class="tag p-category" href="../../../tags/ubuntu/" rel="tag">ubuntu</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Pagaliau pasirodė ilgai lauktas Openmoko telefonas: <strong>Neo FreeRunner</strong>.
+Šį įrenginį jau užsakiau ir 2-3 savaičių bėgyje turėtu atkeliauti į
+mano rankas :)</p>
+<p>O belaukiant, galima viska išsibandyti emuliatoriuje. Štai kaip tai atrodo:</p>
+<a class="reference external image-reference" href="../../../images/u1/neofr_today.jpg"><img alt="Openmoko emuliatoriuje" src="../../../images/u1/neofr_today.thumbnail.jpg"></a>
+<p>Štai instrukcijos kaip tai padaryti (instrukcijos skirtos Ubuntu Gutsy
+Gibbon operacinei sistemai):</p>
+<ol class="arabic">
+<li>
+<p>Perkonfigūruojame <em>dash</em> paketą, kai jūsų paklaus ar norite pakeisti
+<em>/bin/sh</em> į <em>dash</em>, atsakykite <strong>ne</strong>:</p>
+<pre class="literal-block">sudo dpkg-reconfigure dash</pre>
+</li>
+<li>
+<p>Pirmiausiai reikia atitinkamai paruošti Ubuntu sistemą, o tiksliau reikia
+įdiegti keletą paketų:</p>
+<pre class="literal-block">sudo apt-get install monotone git-core git-svn git-email \
+git-cvs git-arch gitk python-dev ccache m4 sed bison make cvs gawk \
+libc6-dev g++ subversion sharutils docbook openjade quilt libmpfr-dev \
+libpcre3-dev texinfo texi2html libboost-date-time-dev libboost-filesystem-dev \
+libboost-regex-dev libboost-test-dev libboost-dev zlib1g-dev build-essential \
+dh-make debhelper devscripts gcc-3.4 lynx netpbm libsdl1.2-dev dosfstools \
+help2man python-psyco lynx mtools</pre>
+</li>
+<li>
+<p>Susikurkite katalogą, kuriame saugosite visus Openmoko failus:</p>
+<pre class="literal-block">mkdir openmoko
+cd openmoko</pre>
+</li>
+<li>
+<p>Parsisiunčiame MokoMakefile failą:</p>
+<pre class="literal-block">wget http://www.rwhitby.net/files/openmoko/Makefile</pre>
+</li>
+<li>
+<p>Leidžiame Makefile dirbti savo darbą (tai truks apie 15 min. ir daugiau,
+priklausomai nuo kompiuterio ir interneto spartos):</p>
+<pre class="literal-block">make qemu</pre>
+</li>
+<li><p>Po viso šito turėtu pasileisti veikianti Openmoko sistema. Pradžioje,
+atsidariusiame meniu reikia spausti tarpo klavišą, turėtu būti pažymėta
+<em>boot</em>.</p></li>
+<li>
+<p>Jei pasileidusi sistema nebus funkcionali, t.y. niekas neveiks, tada reikia
+atlikt dar sekančius žingsnius:</p>
+<ol class="arabic">
+<li><p>Uždarykite emuliatorių, jei jis atidarytas.</p></li>
+<li>
+<p><em>openmoko</em> kataloge paredaguokite <em>build/qemu/openmoko/env</em> failą:</p>
+<pre class="literal-block">vi build/qemu/openmoko/env</pre>
+</li>
+<li>
+<p>Tame faile suraskite mano pavyzdyje užkomentuotas eilutes ir pakeiskite
+jas atkomentuotomis:</p>
+<pre class="literal-block"># rootfs_wildcard="Open?oko-openmoko-*image*-om-gta01.rootfs.jffs2"
+rootfs_wildcard="Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2"
+# download_dir="http://buildhost.openmoko.org/daily/neo1973/deploy/glibc/images/neo1973/"
+download_dir="http://buildhost.openmoko.org/daily/neo1973/200807/20080706/"</pre>
+</li>
+<li>
+<p>Atsisiųskite
+<em>http://buildhost.openmoko.org/daily/neo1973/200807/20080706/Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2</em>
+ir išsaugokite jį <em>images/openmoko/</em> kataloge:</p>
+<pre class="literal-block">wget http://buildhost.openmoko.org/daily/neo1973/200807/20080706/Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2 \
+    -O images/openmoko/Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2</pre>
+</li>
+<li>
+<p>Paleiskite komandą:</p>
+<pre class="literal-block">make flash-qemu-official</pre>
+</li>
+<li>
+<p>Ir galiausiai paleiskite emuliatorių:</p>
+<pre class="literal-block">make run-qemu</pre>
+</li>
+</ol>
+</li>
+</ol>
+<p>Visa tai detaliai aprašyta šiuo adresu:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.openmoko.org/wiki/Automatic_emulation_in_Ubuntu">http://wiki.openmoko.org/wiki/Automatic_emulation_in_Ubuntu</a></p></li>
+</ul>
+<p>Ko gero smagiausias dalykas yra tas, kad viduje sukas paprasčiausias Linux
+branduolys ir yra Terminalo programa, kurios pagalba galiu daryti viską, ką ir
+savo kompiuterio XTerm lange!</p>
+<p>Štai daugiau vaizdų, kaip viskas atrodo:</p>
+<a class="reference external image-reference" href="../../../images/u1/neofr_menu.jpg"><img alt="Pagrindinis meniu" src="../../../images/u1/neofr_menu.thumbnail.jpg"></a>
+<a class="reference external image-reference" href="../../../images/u1/neofr-terminal.jpg"><img alt="Terminalo emuliatorius" src="../../../images/u1/neofr-terminal.thumbnail.jpg"></a>
+<a class="reference external image-reference" href="../../../images/u1/neofr_vi.jpg"><img alt="vim - teksto redaktorius" src="../../../images/u1/neofr_vi.thumbnail.jpg"></a>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../web-programavimas-ubuntu-aplinkoje/" rel="prev" title="Web programavimas Ubuntu aplinkoje">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/" rel="next" title="Po Intrepid Ibex išleidimo atsinaujinau į Linux Mint">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

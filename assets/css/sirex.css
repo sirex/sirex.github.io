@@ -1,0 +1,63 @@
+.h-entry .published {
+    color: #B5B5B5;
+}
+
+.post-list-title {
+    padding-left: 10px;
+}
+
+.tagpage header {
+    padding-bottom: 10px;
+}
+
+.post-text h2 {
+    border-bottom: 1px solid #555753;
+    margin-top: 30px;
+}
+
+.headerlink {
+    display: inline-block;
+    float: right;
+}
+
+.previewimage {
+    display: block;
+    margin: 40px auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border-bottom: 1px solid #555753;
+} 
+td > p {
+    margin: 2px;
+    margin-top: 6px;
+}
+tr:hover {
+    background-color: #2E3436;
+} 
+
+blockquote {
+    color: #C9C9C9;
+    border-left: 3px solid #B5B5B5;
+    padding-left: 17px;
+    margin-left: -20px;
+    font-style: italic;
+}
+
+div.admonition.note {
+    background-color: #2F3638;
+    color: #FFFFFF;
+    margin: 0;
+}
+div.admonition.note p.admonition-title {
+    margin: 0;
+    padding: 0 18px;
+    padding-top: 10px;
+}
+
+img.whitebg {
+    background-color: #FFFFFF;
+}

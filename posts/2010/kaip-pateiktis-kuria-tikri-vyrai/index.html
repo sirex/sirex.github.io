@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Kaip pateiktis kuria tikri vyrai! | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../pyjunior/" title="PyJunior" type="text/html">
+<link rel="next" href="../naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/" title="Naudok priemonę labiausiai tinkančią užduočiai spręsti" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Kaip pateiktis kuria tikri vyrai!">
+<meta property="og:url" content="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/">
+<meta property="og:description" content="Paskutiniu metu teko paruošti kelias pateiktis, vieną darbe, kitą OpenCamp
+renginiui. Nusprendžiau pasidalinti
+patirtimi, kaip paprastai sukurti pateiktis naudojant :math:LaTeX beamer
+klasę.
+Daugelis ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-05-23T16:22:00+02:00">
+<meta property="article:tag" content="latex">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Kaip pateiktis kuria tikri vyrai!</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2010-05-23T16:22:00+02:00" itemprop="datePublished" title="2010-05-23 16:22">2010-05-23 16:22</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/latex/" rel="tag">latex</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Paskutiniu metu teko paruošti kelias <a class="reference external" href="http://www.likit.lt/term/p/pateiktis.html">pateiktis</a>, vieną darbe, kitą <a class="reference external" href="http://www.ubuntu.lt/node/522">OpenCamp
+renginiui</a>. Nusprendžiau pasidalinti
+patirtimi, kaip paprastai sukurti pateiktis naudojant :math:LaTeX beamer klasę.</p>
+<p>Daugelis tikriausiai yra įpratę rašyti pateiktis naudodamiesi M$ PowerPoint
+arba <a class="reference external" href="http://www.openoffice.org/product/impress.html">OpenOffice.org Impress</a>. Pateikčių rašymas,
+naudojantis šiomis priemonėmis dažnai užima gan daug laiko.  Daugiausiai laiko
+atima ne idėjos dėstymas, o visokie grafiniai apipavidalinimai, efektai ir
+panašiai. Tenka dažnai matyti, kai žmonės su efektais persistengia ir pateiktys
+gaunasi gan neskoningai efektais perkrautos.</p>
+<p>LaTeX yra <a class="reference external" href="http://www.likit.lt/term/z2/z2enklinimo_kalba.html">ženklinimo kalba</a> skirta dokumentų
+ruošimui. Daugelis mokslinių darbų yra parašyti būtent naudojantis LaTeX.</p>
+<div class="section" id="kaip-idiegti">
+<h2>Kaip įdiegti?<a href="#kaip-idiegti" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Įdiegti į Ubuntu LaTeX yra labai paprasta, užtenka įdiegti du paketus iš
+programų centro (Programos - Ubuntu programų centras): <em>texlive</em> ir <em>littex</em>.</p>
+</div>
+<div class="section" id="kaip-naudoti">
+<h2>Kaip naudoti?<a href="#kaip-naudoti" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>LaTeX galima rašyti su bet kokiu teksto redaktoriumi, tačiau yra specialiai tam
+skirtų programų, kurios palengvina darbą. Aš pats naudoju <a class="reference external" href="http://www.xm1math.net/texmaker/">Texmaker</a> programą. Viskas ką reikia žinoti apie šią
+programa tai ši vieta:</p>
+<p><img alt="image0" src="files/Pa%C5%BEym%C4%97jimas_001.png"></p>
+<p>Sukūrus dokumentą pirmiausia reikia paspausti rodyklę prie „PDFLaTeX“, kad
+sugeneruoti PDF dokumentą, vėliau rodyklę prie „View PDF“, kad peržiūrėti PDF dokumentą.</p>
+<p>Visos kitos funkcijos <a class="reference external" href="http://www.xm1math.net/texmaker/">Texmaker</a> programoje
+yra intuityvios.</p>
+</div>
+<div class="section" id="kaip-sukurti-pateikti-su-texmaker">
+<h2>Kaip sukurti pateiktį su Texmaker?<a href="#kaip-sukurti-pateikti-su-texmaker" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Naują pateiktį sukursite labai paprastai. Pirmiausia iš Texmaker meniu
+pasirinkite: File - New. Tada Wizard - Quick Start. Atsiradusiame lange
+nurodykite tokius duomenis:</p>
+<p><img alt="image1" src="files/texmaker-quickstart.png"></p>
+<p>Kai paspausite OK, Texmaker sugeneruos dokumento griaučius:</p>
+<pre class="code latex"><a name="rest_code_555cb13d9590464c86d6c446b13c09c0-1"></a><span class="k">\documentclass</span><span class="na">[12pt,a4paper]</span><span class="nb">{</span>beamer<span class="nb">}</span>
+<a name="rest_code_555cb13d9590464c86d6c446b13c09c0-2"></a><span class="k">\usepackage</span><span class="na">[utf8x]</span><span class="nb">{</span>inputenc<span class="nb">}</span>
+<a name="rest_code_555cb13d9590464c86d6c446b13c09c0-3"></a><span class="k">\usepackage</span><span class="nb">{</span>ucs<span class="nb">}</span>
+<a name="rest_code_555cb13d9590464c86d6c446b13c09c0-4"></a><span class="k">\author</span><span class="nb">{</span>Mantas Zimnickas<span class="nb">}</span>
+<a name="rest_code_555cb13d9590464c86d6c446b13c09c0-5"></a><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<a name="rest_code_555cb13d9590464c86d6c446b13c09c0-6"></a>•
+<a name="rest_code_555cb13d9590464c86d6c446b13c09c0-7"></a><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre>
+<p>Nepamirškite įrašyti dvi eilutes, kurių pagalba galėsite rašyti lietuviškai:</p>
+<pre class="code latex"><a name="rest_code_4f793ae3ec674c4eab5c3bb488932f91-1"></a><span class="k">\usepackage</span><span class="na">[L7x]</span><span class="nb">{</span>fontenc<span class="nb">}</span>
+<a name="rest_code_4f793ae3ec674c4eab5c3bb488932f91-2"></a><span class="k">\usepackage</span><span class="na">[lithuanian]</span><span class="nb">{</span>babel<span class="nb">}</span>
+</pre>
+</div>
+<div class="section" id="pirmoji-pateiktis">
+<h2>Pirmoji pateiktis<a href="#pirmoji-pateiktis" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Štai pilnas pateikties pavyzdys su dviem skaidrėmis:</p>
+<pre class="code latex"><a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-1"></a><span class="k">\documentclass</span><span class="na">[12pt,a4paper]</span><span class="nb">{</span>beamer<span class="nb">}</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-2"></a>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-3"></a><span class="k">\usepackage</span><span class="na">[utf8x]</span><span class="nb">{</span>inputenc<span class="nb">}</span> <span class="k">\usepackage</span><span class="nb">{</span>ucs<span class="nb">}</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-4"></a><span class="k">\usepackage</span><span class="na">[L7x]</span><span class="nb">{</span>fontenc<span class="nb">}</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-5"></a><span class="k">\usepackage</span><span class="na">[lithuanian]</span><span class="nb">{</span>babel<span class="nb">}</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-6"></a>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-7"></a><span class="k">\author</span><span class="nb">{</span>Mantas Zimnickas<span class="nb">}</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-8"></a><span class="k">\title</span><span class="nb">{</span>Mano pirmoji pateiktis<span class="nb">}</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-9"></a>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-10"></a><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-11"></a>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-12"></a><span class="k">\frame</span><span class="nb">{</span><span class="k">\titlepage</span><span class="nb">}</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-13"></a>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-14"></a><span class="k">\frame</span> <span class="nb">{</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-15"></a>    <span class="k">\frametitle</span><span class="nb">{</span>Sveikas pasauli!<span class="nb">}</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-16"></a>    Mano pirmoji pateiktis.
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-17"></a><span class="nb">}</span>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-18"></a>
+<a name="rest_code_0b8c65d184854ab098c62ab58ecd1d03-19"></a><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre>
+<p>Išsaugokite šį dokumentą į atskirą katalogą ir naudokitės aukščiau aprašytomis rodyklėmis.</p>
+</div>
+<div class="section" id="isvaizda">
+<h2>Išvaizda<a href="#isvaizda" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Beamer turi rinkinį temų, kaip jos atrodo galite apžiūrėti čia:</p>
+<blockquote>
+<p><a class="reference external" href="http://www.pletscher.org/writings/latex/beamerthemes.php">http://www.pletscher.org/writings/latex/beamerthemes.php</a></p>
+</blockquote>
+<p>Temą nurodyti galima taip:</p>
+<pre class="code latex"><a name="rest_code_2047566994104af7856fb09d488f9f75-1"></a><span class="k">\usetheme</span><span class="nb">{</span>Malmoe<span class="nb">}</span>
+</pre>
+</div>
+<div class="section" id="mano-pateiktis">
+<h2>Mano pateiktis<a href="#mano-pateiktis" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Mano pateiktį, kurią paruošiau OpenCamp renginiu galite peržiūrėti čia:</p>
+<blockquote>
+<p><a class="reference external" href="http://www.slideshare.net/sirexas/django-akllt-naujas-veidas">http://www.slideshare.net/sirexas/django-akllt-naujas-veidas</a></p>
+</blockquote>
+<p>TeX failą prisegu žemiau.</p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../pyjunior/" rel="prev" title="PyJunior">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/" rel="next" title="Naudok priemonę labiausiai tinkančią užduočiai spręsti">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

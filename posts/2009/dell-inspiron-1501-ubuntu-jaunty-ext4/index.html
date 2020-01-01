@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Dell Inspiron 1501 + Ubuntu Jaunty + Ext4 | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../enlightenment-beauty-at-your-fingertips/" title="Enlightenment - Beauty at your fingertips" type="text/html">
+<link rel="next" href="../kaip-idiegti-tas-pacias-programas-kurios-buvo-anksciau/" title="Kaip į diegti tas pačias programas, kurios buvo anksčiau?" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Dell Inspiron 1501 + Ubuntu Jaunty + Ext4">
+<meta property="og:url" content="https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/">
+<meta property="og:description" content="Nesenai pakeičiau darbo kompiuterį, gavau Dell Inspiron 1501. Deja diegimo ir
+kompiuterio paruošimo darbui procedūra vyko ne itin sklandžiai...
+Aprašysiu visas problemas, jei kas susidurs, gal ši info">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2009-06-02T22:32:00+02:00">
+<meta property="article:tag" content="ext4">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="ubuntu">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Dell Inspiron 1501 + Ubuntu Jaunty + Ext4</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2009-06-02T22:32:00+02:00" itemprop="datePublished" title="2009-06-02 22:32">2009-06-02 22:32</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/ext4/" rel="tag">ext4</a>,                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/ubuntu/" rel="tag">ubuntu</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Nesenai pakeičiau darbo kompiuterį, gavau Dell Inspiron 1501. Deja diegimo ir
+kompiuterio paruošimo darbui procedūra vyko ne itin sklandžiai…</p>
+<p>Aprašysiu visas problemas, jei kas susidurs, gal ši informacija padės.</p>
+<div class="section" id="wifi">
+<h2>WiFi<a href="#wifi" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Jei naudojate Linux, venkite Broadcom BCM4311 WLAN plokščių… Nes jos neveikia
+„out of the box“.</p>
+<p>Tačiau, jei turite galimybę prisijungti prie interneto laidų, tai didesnių
+problemų neiškils:</p>
+<blockquote>
+<p>Sistema » Administravimas » Aparatinės įrangos valdyklės</p>
+</blockquote>
+<p>Atsidariusiame „Aparatinės įrangos valdyklės“ lange, pasirinkite „Broadcom B43
+wireless driver“ ir spauskite mygtuką „Activate“.</p>
+<p>Nors ši WLAN plokštė neveikia iš karto, tačiau diegimas, kaip matote, nėra sudėtingas.</p>
+<p><strong>Klaikus pypsėjimas</strong></p>
+<p>Sekantis, erzinantis ne tik mane, bet ir mano bendradarbius, reiškinys</p>
+<dl>
+<dt>– pypsėjimas išsijungiant ir ką nors ne taip paspaudus terminalo lange.</dt>
+<dd>
+<p>Sprendimas labai paprastas:</p>
+<pre class="literal-block">$ sudo rmmod pcspkr
+$ sudo sh -c 'echo blacklist pcspkr &gt;&gt; /etc/modprobe.d/blacklist'</pre>
+</dd>
+</dl>
+</div>
+<div class="section" id="ext4-kol-kas-nerekomenduociau">
+<h2>Ext4 – kol kas nerekomenduočiau<a href="#ext4-kol-kas-nerekomenduociau" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Kadangi kartu su Jaunty versija atsirado galimybė naudoti Ext4 failų sistemą,
+kuri buvo gausiai afišuota. Tai žinoma net nedvejodamas pasirinkau Ext4 visuose skirsniuose.</p>
+<p>Tačiau toks pasirinkimas buvo didelė klaida! Problemos pasireiškė jau diegimo
+metu, kai praktiškai viską įdiegus Ubuntu ėmė ir sustingo, teko daryti „hard reboot“.</p>
+<p>Pradžiai pamaniau, kad tai tik koks nors atsitiktinis nesklandumas ir
+nekreipiau į tai dėmesio. Tačiau tą pačią dieną sustingimas vėl pasikartojo.
+Dėl to apkaltinau ATI vaizdo tvarkykles. Kadangi po to sustingimų nebuvo kelias
+savaites, tai nieko nedariau.</p>
+<p>Praėjus kelioms savaitėms, testavau programą, kurios veikimo metu kuriama daug
+mažų failų. Tuo metu ir prasidėjo visos bėdos, dėl kurių sugaišau puse darbo
+dienos. Mažų failų kūrimo metu, daugeliu atveju Ubuntu sustingdavo ir tekdavo
+daryti „hard reboot“. Tačiau šį dėsningumą pastebėjau ne iš karto. Įtariau ATI
+vaizdo tvarkykles, tačiau po įvairių bandymu, net gi su VESA tvarkyklėmis vėl
+pasikartojo sustingimas. Toliau įtarinėjau WLAN tvarkykles, tačiau jas išjungus
+sustingimas vėl pasikartojo. Taip pat, pasikartojus sustingimui, bandžiau
+jungtis iš kito kompiuterio per SSH, tačiau tokioje būsenoje, kompiuteris buvo
+nepasiekiamas. Galiausiai atlikus kelis bandymus, galutiniai įsitikinau, kad
+sustingimai atsiranda dėl Ext4 failų sistemos kaltės ir būtent tuomet, kai
+failų sistema intensyviai naudojama atliekant operacijas su nedideliais failais.</p>
+<p>Ką gi, po tokių išgyvenimų, galiu drąsiai teigti – Ext4 tikrai dar nėra
+pakankamai stabili, kad būtų galima ją naudoti darbo ar namų kompiuteryje,
+nekalbant apie serverius…</p>
+<p>Kadangi Ext4 vis dar nėra tinkamas kasdieniam naudojimui, nusprendžiau
+paeksperimentuoti su JFS. Kol kas veikia gerai… :)</p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../enlightenment-beauty-at-your-fingertips/" rel="prev" title="Enlightenment - Beauty at your fingertips">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../kaip-idiegti-tas-pacias-programas-kurios-buvo-anksciau/" rel="next" title="Kaip į diegti tas pačias programas, kurios buvo anksčiau?">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

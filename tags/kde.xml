@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about kde)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/kde.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Po Intrepid Ibex išleidimo atsinaujinau į Linux Mint</title><link>https://sirex.lt/posts/2008/po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Belaukiant Intrepid Ibex išleidimo buvau numatęs kelis dalykus kurių laukiau ir
+norėjau išbandyti: Kubuntu su KDE 4.1, Private katalogas, GNU Tar 1.20. Tačiau
+po Inrepid išleidimo viskas apsivertė aukštyn kojom, na išskyrus GNU Tar.&lt;/p&gt;
+&lt;p&gt;Pirmiausia, darbe, naudodamasis atnaujinimo priemone išbandžiau &lt;a class="reference external" href="https://wiki.ubuntu.com/EncryptedPrivateDirectory"&gt;Private
+Directory&lt;/a&gt;, tačiau likau
+nusivylęs. Aišku neturėjau pakankamai laiko gerai įsigilinti, bet tikėjausi,
+kad gilintis ir nereikės, nes funkcija tiesiog veiks sklandžiai ir intuityviai.
+Deja teko įdiegti paketą ecryptfs-utils, o po to, net nesupratau, kaip tuo
+katalogu naudotis. Bandant jį primontuoti pasirodė kažkoks klaidos pranešimas.
+Neturėjau laiko gilintis, tai viską taip ir palikau. Aišku, gal būt tai puikus
+dalykas, bet reikės iki galo išsiaiškinti vėliau.&lt;/p&gt;
+&lt;p&gt;Kitas didelis nusivylimas yra Kubuntu. Bandydamas Kubuntu patyriau eilę
+nusivylimų:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Veikia lėtai&lt;/strong&gt;. Kažkada bandžiau KDE 4.0, jis man taip pat veikė lėtai, bet
+tikėjausi, kad įdiegus šviežiai tai susitvarkys, bet deja.  Lėtai veikia ne
+pati sistema, bet konkrečiai grafika, langų piešimas, atnaujinimas ir t.t. Po
+ilgų klaidžiojimų po konfigūraciją išsiaiškinau, kad reikia pakeisti grafikos
+variklį iš OpenGL į XRenderer. Tai padarius, grafikos greitis panašu, kad
+susitvarkė.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Nestabilumas&lt;/strong&gt;. Įvairiose vietose patyriau KDE 4.1 nestabilumą, tai susiję
+tiek su panelės valdymu, tiek su Plasma ir konfigūracijos įrankiu. Labiausiai
+nepatiko tai, kad tvarkant grafikos problemas, konfigūracijos įrankis tiesiog
+perkrauna grafinę aplinką, ko pasekoje dingsta visi neišsaugoti duomenys ir
+t.t., nebūna jokio įspėjimo.  Galiausiai viskas užsibaigė tuo, kad tvarkant
+grafikos problemas, pasirinkus &lt;em&gt;OpenGL fallback&lt;/em&gt; įvyko eilinis grafinės
+aplinkos perkrovimas ir po to KDE nebeužsikrovė visiškai.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;KDE Control Center&lt;/strong&gt;. Dar viena nelaimė – KDE Control Center. Jau buvau
+pamiršęs kaip nerviškai veikia klaidžiojimas po įvairiausius konfigūracijos
+langus. Kiekvieną kartą norint išbandyti kitą nustatymą, tenka keliauti per
+visokius meniu į tą pačią vietą, kurią ne visada randi iš pirmo karto. Visų
+nustatymų aprašymai apgailėtini, o tiksliau nieko nesako. Vos pradėjus
+naudotis KDE Control Center spėjau pasiilgti tekstinių konfigūracijų failų,
+kuriuose kiekvienas parametras kuo puikiausiai dokumentuotas, pateikti
+naudojimo pavyzdžiai ir t.t. Be to, kiekvieną kartą norint ką nors surasti
+galima puikiausiai išnaudoti visas teksto paieškos galimybes, kurios tik yra.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Paskutinis užkliuvęs dalykas, kuris galutinai pastumėjo trinti Kubuntu yra
+tas, kad KDE daugelis sisteminių programų nežinia kaip surištos viena su kita
+ir įvykus tokiai nelaimei, kai nebeužsikrauna grafinė aplinka, ką nors
+pakeisti iš komandinės eilutės labai sunku.  Bent jau man nepavyko surasti,
+kaip atstatyti tą &lt;em&gt;OpenGL fallback&lt;/em&gt; parametrą į vietą. Paleidus praktiškai
+bet kurią programą &lt;em&gt;Fail-Safe&lt;/em&gt; režimu, prasidedančią raide &lt;strong&gt;k&lt;/strong&gt;, pasirodo
+klaidų pranešimai apie tai, kad nepaleistas koks tai KDE initializatorius ir
+panašūs dalykai.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tai tokia mano pažintis su Kubuntu ir KDE 4.1. Suprantu, kad KDE 4.1, kol kas
+yra dar labai jaunas, todėl jam reikia laiko, o be to gavau pastabų, kad daug
+problemų yra susijusių su tuo, kad Debian iki šiol dar nėra suintegravusi KDE
+4.1, ko pasekoje Ubuntu taip pat matyt to pasekmės. Kitas dalykas yra tas, kad
+Ubuntu daugiausiai dėmesio skiria būtent Ubuntu distribucijai, o ne Kubuntu.&lt;/p&gt;
+&lt;p&gt;Užteks apie nenusisekusius dalykus, pereisiu prie gerųjų. Tai gi, taip
+bežaidžiant su Kubuntu, galiausiai supratau, kad tam dar ne laikas.  Kadangi
+Intrepid versija neturi labai daug naujovių, tai nusprendžiau išbandyti ką nors
+naujo. Kadangi betvarkant neužsikraunantį KDE teko įsidiegti Fluxbox'ą, kad
+turėti nors kažkokį langų valdytoją, nusprendžiau išbandyti kokią nors Fluxbox
+distribuciją. Fluxbox'ą esu ankčiau naudojęs gal pusę metų, o ir šį kartą jis
+įsidiegė ir pasileido gal per minutę ir veikė kaip visada be priekaištų. &lt;a class="reference external" href="http://zuper.lt/"&gt;Mano
+kolegos&lt;/a&gt; komentaras: &lt;em&gt;tobula yra ne tai, prie ko gali kažką
+pridėti, o tai iš ko negali nieko atimti“&lt;/em&gt;. Fluxbox būtent toks ir yra :)&lt;/p&gt;
+&lt;p&gt;Nusprendus įsidiegti distribuciją, naudojančią Fluxbox aplinką radau šiuos
+variantus:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://fluxbuntu.org/"&gt;fluxbuntu&lt;/a&gt; – pasiskaitinėjus supratau, kad šis
+projektas praktiškai miręs, paskutinė versija pastatyta ant Ubuntu 7.10, o
+tai buvo prieš metus.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.damnsmalllinux.org/"&gt;Damn Small Linux&lt;/a&gt;, gal ir visai nieko, bet
+kiek per mažas ir neturi Ubuntu &lt;em&gt;backgroundo&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.linuxmint.com/"&gt;Linux Mint Fluxbox&lt;/a&gt; – puiki, aktyvi Ubuntu
+pagrindu sukurta distribucija.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Daugelis kitų žiūrėti distribucijo nesudomino vien dėt to, kad neturi apt-get
+paketų valdymo sistemos.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ilgai nesvarsčiu pasirinkau &lt;a class="reference external" href="http://www.linuxmint.com/"&gt;Linux Mint Fluxbox&lt;/a&gt;.
+Nors jis ir pastatytas ant Ubuntu Hardy, tačiau peršokti į vienu žingsniu
+naujesnę versiją visai nesunku.  Parsisiuntus ir įdiegus išvydau pasakišką
+vaizdą:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/shot-1225910240.png"&gt;&lt;img alt="Linux Mint Fluxbox" src="https://sirex.lt/images/shot-1225910240.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;Fluxbox veikia tiesiog žaibiškai greitai, užsikrauna akimirksniu.
+Minimalistinis stilius slepia dideles galimybes. Kartu su Linux Mint, Fluxbox
+ateina paruoštas pilnaverčiui darbui, belaidis internetas veikia puikiai, taip
+pat įdėta ir garso valdymo piktograma, kurios pasigesdavau anksčiau.&lt;/p&gt;
+&lt;p&gt;Žodžiu, viskas tiesiog veikia, jokių bereikalingų efektų ir nesibaigiančių
+konfigūracijų langų. Paprasta ir patogu naudoti.&lt;/p&gt;
+&lt;p&gt;Štai daugiau vaizdų:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/shot-1225902916.png"&gt;&lt;img alt="/images/shot-1225902916.thumbnail.png" src="https://sirex.lt/images/shot-1225902916.thumbnail.png"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/shot-1225903090.png"&gt;&lt;img alt="/images/shot-1225903090.thumbnail.png" src="https://sirex.lt/images/shot-1225903090.thumbnail.png"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/shot-1225903230.png"&gt;&lt;img alt="/images/shot-1225903230.thumbnail.png" src="https://sirex.lt/images/shot-1225903230.thumbnail.png"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/shot-1225903268.png"&gt;&lt;img alt="/images/shot-1225903268.thumbnail.png" src="https://sirex.lt/images/shot-1225903268.thumbnail.png"&gt;&lt;/a&gt;&lt;/div&gt;</description><category>floss</category><category>kde</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/</guid><pubDate>Thu, 06 Nov 2008 14:49:00 GMT</pubDate></item></channel></rss>

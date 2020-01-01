@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about programavimas)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/programavimas.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python vs Pascal</title><link>https://sirex.lt/posts/2008/python-vs-pascal/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Mokytis programuoti pradėjau dar neturėdamas kompiuterio ir pirmoji
+programavimo kalba, kurios mokiausi buvo &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Pascal_(programming_language)"&gt;Pascal&lt;/a&gt;. Iš patirties galiu pasakyti,
+kad mokymuisi &lt;em&gt;pascal&lt;/em&gt; tikrai labai nepatogi. Gal būt galima aiškintis kaip
+veikia ciklas ar kiti pagrindiniai valdymo blokai, tačiau jei besimokydamas
+bandai suprogramuoti ką nors rimtesnio, didžiąją laiko dalį praleidi
+aiškindamasis &lt;em&gt;pascal&lt;/em&gt; sudėtingas vingrybes, kurios atsiranda dėl pačios kalbos
+ribotumo.&lt;/p&gt;
+&lt;p&gt;Nors &lt;em&gt;pascal&lt;/em&gt; kalba po truputį tampa istorija, tačiau mokyklose jos vis dar
+moko. Ko gero vienintelis ir pagrindinis argumentas, kodėl taip yra ir turėtu
+būti: mokomoji medžiaga. Kadangi &lt;em&gt;pascal&lt;/em&gt; mokoma jau nuo seno, tai yra paruošta
+pakankamai mokomosios medžiagos.&lt;/p&gt;
+&lt;p&gt;Kadangi IT srityje viskas keičiasi tiesiog žaibiškai greitai, tai minėtasis
+argumentas tiesiog netenka prasmės. IT sparčiai tobulėja, todėl mokyklos tikrai
+neturėtu atsilikti, vien tik tam, kad mokytojai neturi iš ko mokyti... Manau
+atsiradus poreikiui, greitai atsirastu ir mokomoji medžiaga, ypač naudojantis
+šiuolaikinėmis, bendro turinio rengimo priemonėmis (Lietuviška Vikipedija
+puikus pavyzdys).&lt;/p&gt;
+&lt;p&gt;Kad kalbos, neliktu kalbomis, bandysiu trupai pateikti kelias pagrindines
+programavimo pamokas &lt;em&gt;pascal&lt;/em&gt; ir &lt;em&gt;python&lt;/em&gt; kalbomis.&lt;/p&gt;
+&lt;div class="section" id="pirmoji-pamoka-sveikas-pasauli"&gt;
+&lt;h2&gt;Pirmoji pamoka – Sveikas pasauli&lt;/h2&gt;
+&lt;p&gt;Pamokos tikslas – sukirti pačią paprasčiausią programa ir ją paleisti.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;python&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Naudojantis, bet kokiu teksto redaktoriumi sukuriamas programos tekstas. Ir
+paleidžiama pati programa:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;python programa.py&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;pascal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Naudojantis, bet kokiu teksto redaktoriumi sukuriamas programos tekstas.
+Programos tekstas sukompiliuojamas į mašininį kodą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;fpc programa&lt;/pre&gt;
+&lt;p&gt;Paleidžiama pati programa:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;./programa&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;python&lt;/strong&gt; programos tekstas:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_6811ea6b74854e439da0a32afb8758f0-1"&gt;&lt;/a&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Sveikas pasauli"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;pascal&lt;/strong&gt; programos tekstas:&lt;/p&gt;
+&lt;pre class="code pascal"&gt;&lt;a name="rest_code_29f90299a3fd49a7b395c5fab3b33142-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;program&lt;/span&gt; &lt;span class="n"&gt;SveikasPasauli&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_29f90299a3fd49a7b395c5fab3b33142-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;a name="rest_code_29f90299a3fd49a7b395c5fab3b33142-3"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;writeln&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Sveikas pasauli'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_29f90299a3fd49a7b395c5fab3b33142-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Trūkumai:&lt;/em&gt; Pascal programas reikia kompiliuoti, nėra interpretatoriaus.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Trūkumai:&lt;/em&gt; Pascal sintaksėje yra daug visokių raktinių žodžių ir simbolių
+kuriuos reikia prisimint. Paskutinis programos žodis &lt;em&gt;end&lt;/em&gt; būtinai turi baigtis
+tašku.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="antroji-pamoka-kintamieji"&gt;
+&lt;h2&gt;Antroji pamoka – Kintamieji&lt;/h2&gt;
+&lt;p&gt;Pamokos tikslas – pažintis su kintamaisiais.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;python&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_31dd12b96b9341ea8167108f80ee2f07-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;a name="rest_code_31dd12b96b9341ea8167108f80ee2f07-2"&gt;&lt;/a&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;a name="rest_code_31dd12b96b9341ea8167108f80ee2f07-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;a name="rest_code_31dd12b96b9341ea8167108f80ee2f07-4"&gt;&lt;/a&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"a + b + 5 ="&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;pascal&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code pascal"&gt;&lt;a name="rest_code_5b2819fa67844b04a787e405d47cded7-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;program&lt;/span&gt; &lt;span class="n"&gt;Kintamieji&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_5b2819fa67844b04a787e405d47cded7-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;integer&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_5b2819fa67844b04a787e405d47cded7-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;a name="rest_code_5b2819fa67844b04a787e405d47cded7-4"&gt;&lt;/a&gt;    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_5b2819fa67844b04a787e405d47cded7-5"&gt;&lt;/a&gt;    &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_5b2819fa67844b04a787e405d47cded7-6"&gt;&lt;/a&gt;    &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_5b2819fa67844b04a787e405d47cded7-7"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;writeln&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'a + b + 5 = '&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_5b2819fa67844b04a787e405d47cded7-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Trūkumai:&lt;/em&gt; Statiškai tipizuojami kintamieji.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="trecioji-pamoka-salygos-sakiniai"&gt;
+&lt;h2&gt;Trečioji pamoka – Sąlygos sakiniai&lt;/h2&gt;
+&lt;p&gt;Pamokos tikslas – pažintis su kintamaisiais.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;python&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_14c3a4dec03342d5a43c26298217d7ce-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Įveskite skaičių: "&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_14c3a4dec03342d5a43c26298217d7ce-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_14c3a4dec03342d5a43c26298217d7ce-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_14c3a4dec03342d5a43c26298217d7ce-4"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Daugiau už 5"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_14c3a4dec03342d5a43c26298217d7ce-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_14c3a4dec03342d5a43c26298217d7ce-6"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Mažiau už 6"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;pascal&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code pascal"&gt;&lt;a name="rest_code_c062589601da4e17bad24af155847113-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;program&lt;/span&gt; &lt;span class="n"&gt;Kintamieji&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_c062589601da4e17bad24af155847113-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;integer&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_c062589601da4e17bad24af155847113-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;a name="rest_code_c062589601da4e17bad24af155847113-4"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Įveskite skaičių: '&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_c062589601da4e17bad24af155847113-5"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_c062589601da4e17bad24af155847113-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a name="rest_code_c062589601da4e17bad24af155847113-7"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;writeln&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Daugiau už 5'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_c062589601da4e17bad24af155847113-8"&gt;&lt;/a&gt;    &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a name="rest_code_c062589601da4e17bad24af155847113-9"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;writeln&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'Mačiau už 6'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_c062589601da4e17bad24af155847113-10"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Trūkumai:&lt;/em&gt; Reikia įrašyti keistai atrodančią eilutę (&lt;code class="docutils literal"&gt;encoding: &lt;span class="pre"&gt;utf-8&lt;/span&gt;&lt;/code&gt;).
+Tačiau ši problema sekančioje python versijoje bus išspręsta.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Trūkumai:&lt;/em&gt; Reikia atsiminti, kad prieš else negalima dėti kabliataškio, kaip
+visur kitur.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ketvirtoji-pamoka-ciklo-sakinys"&gt;
+&lt;h2&gt;Ketvirtoji pamoka – Ciklo sakinys&lt;/h2&gt;
+&lt;p&gt;Pamokos tikslas – pažintis su ciklais.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;python&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_461e719d0b4749ffb042ad1e475715da-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_461e719d0b4749ffb042ad1e475715da-2"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;pascal&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code pascal"&gt;&lt;a name="rest_code_c5e06716129d44cd9d51d3b524955c7b-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;program&lt;/span&gt; &lt;span class="n"&gt;Ciklas&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_c5e06716129d44cd9d51d3b524955c7b-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;integer&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_c5e06716129d44cd9d51d3b524955c7b-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;a name="rest_code_c5e06716129d44cd9d51d3b524955c7b-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;a name="rest_code_c5e06716129d44cd9d51d3b524955c7b-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;a name="rest_code_c5e06716129d44cd9d51d3b524955c7b-6"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;writeln&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_c5e06716129d44cd9d51d3b524955c7b-7"&gt;&lt;/a&gt;    &lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_c5e06716129d44cd9d51d3b524955c7b-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Trūkumai:&lt;/em&gt; Reikia atsiminti, kad kai kur reikia naudoti bigin end, o kai kur
+ne.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="penktoji-pamoka-procedurinio-programavimo-pagrindai"&gt;
+&lt;h2&gt;Penktoji pamoka – Procedūrinio programavimo pagrindai&lt;/h2&gt;
+&lt;p&gt;Pamokos tikslas – pažintis su procedūrinio programavimo principais.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;python&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_25f587c30d264b14835a4a0c120acadd-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;ciklas&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;a name="rest_code_25f587c30d264b14835a4a0c120acadd-2"&gt;&lt;/a&gt;    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_25f587c30d264b14835a4a0c120acadd-3"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_25f587c30d264b14835a4a0c120acadd-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_25f587c30d264b14835a4a0c120acadd-5"&gt;&lt;/a&gt;&lt;span class="n"&gt;ciklas&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;pascal&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code pascal"&gt;&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;program&lt;/span&gt; &lt;span class="n"&gt;Proceduros&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;integer&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;procedure&lt;/span&gt; &lt;span class="nf"&gt;ciklas&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-7"&gt;&lt;/a&gt;    &lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-8"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;writeln&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-9"&gt;&lt;/a&gt;    &lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-10"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-11"&gt;&lt;/a&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-13"&gt;&lt;/a&gt;    &lt;span class="n"&gt;ciklas&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_6a8bf12453ed47108fb472b686040a83-14"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Trūkumai:&lt;/em&gt; Reikia atsiminti, kad procedūros ir funkcijos aprašomos skirtingai.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Trūkumai:&lt;/em&gt; Reikia žinoti kurioje tiksliai vietoje ir kokia tvarka reikia
+surašyti procedūras.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Trūkimai:&lt;/em&gt; Ganėtinai sudėtinga parametrų sistema.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="sestoji-pamoka-objektinio-programavimo-pagrindai"&gt;
+&lt;h2&gt;Šeštoji pamoka – objektinio programavimo pagrindai&lt;/h2&gt;
+&lt;p&gt;Pamokos tikslas – pažintis su objektinio programavimo principais.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;python&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_b9f2226ab91d46e0ba00f681f2dbd0ce-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ObjektoAprasas&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_b9f2226ab91d46e0ba00f681f2dbd0ce-2"&gt;&lt;/a&gt;    &lt;span class="n"&gt;parametras&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;a name="rest_code_b9f2226ab91d46e0ba00f681f2dbd0ce-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_b9f2226ab91d46e0ba00f681f2dbd0ce-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;metodas&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_b9f2226ab91d46e0ba00f681f2dbd0ce-5"&gt;&lt;/a&gt;        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parametras&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;a name="rest_code_b9f2226ab91d46e0ba00f681f2dbd0ce-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_b9f2226ab91d46e0ba00f681f2dbd0ce-7"&gt;&lt;/a&gt;&lt;span class="n"&gt;objektas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ObjektoAprasas&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_b9f2226ab91d46e0ba00f681f2dbd0ce-8"&gt;&lt;/a&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;objektas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parametras&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_b9f2226ab91d46e0ba00f681f2dbd0ce-9"&gt;&lt;/a&gt;&lt;span class="n"&gt;objektas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;metodas&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_b9f2226ab91d46e0ba00f681f2dbd0ce-10"&gt;&lt;/a&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;objektas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parametras&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;pascal&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code pascal"&gt;&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;program&lt;/span&gt; &lt;span class="n"&gt;Objektai&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-3"&gt;&lt;/a&gt;&lt;span class="cm"&gt;{$mode objfpc}&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;type&lt;/span&gt; &lt;span class="n"&gt;TObjektoAprasas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;Class&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;TObject&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-5"&gt;&lt;/a&gt;    &lt;span class="kp"&gt;public&lt;/span&gt; &lt;span class="n"&gt;parametras&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;integer&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;procedure&lt;/span&gt; &lt;span class="nf"&gt;metodas&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-9"&gt;&lt;/a&gt;&lt;span class="k"&gt;procedure&lt;/span&gt; &lt;span class="nc"&gt;TObjektoAprasas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;metodas&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-10"&gt;&lt;/a&gt;&lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-11"&gt;&lt;/a&gt;    &lt;span class="n"&gt;parametras&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-13"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-14"&gt;&lt;/a&gt;&lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="n"&gt;objektas&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;TObjektoAprasas&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-15"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-16"&gt;&lt;/a&gt;&lt;span class="k"&gt;begin&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-17"&gt;&lt;/a&gt;    &lt;span class="n"&gt;objektas&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="n"&gt;TObjektoAprasas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-18"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;writeln&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;objektas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parametras&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-19"&gt;&lt;/a&gt;    &lt;span class="n"&gt;objektas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;metodas&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-20"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;writeln&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;objektas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parametras&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3d6c9d52735e4e56b7e96a930cbaf9a1-21"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Trūkumai:&lt;/em&gt; Labai daug informacijos, kurią reikia žinoti, norint programuoti
+objektiškai su &lt;em&gt;pascal&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="isvados"&gt;
+&lt;h2&gt;Išvados&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;pascal&lt;/em&gt; kalboje, mokantis programavimo, reikia atsiminti labai daug kalbos
+specifinių aspektų, kas trukdo suvokti programavimo esmę.  Mokomasi daugiau ne
+programuoti, o &lt;em&gt;pascal&lt;/em&gt; sintaksės ir jos išimčių.  Tuo tarpu &lt;em&gt;python&lt;/em&gt; kalboje
+daugelis pagrindinių programavimo principų realizuojama visiškai paprastai.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;pascal&lt;/em&gt; kalbos pagalba galima iš bėdos demonstruoti nebent elementariausius
+programavimo pavyzdžius, tačiau labai sudėtinga aiškinti ir demonstruoti
+sudėtingesnius, tačiau šiuolaikinėje programuotojų visuomenėje labai plačiai
+taikomus programavimo principus.  Manyčiau, kad &lt;em&gt;pascal&lt;/em&gt; mokymas mokykloje,
+prilygsta aukštosios matematikos mokymui pradinėse klasėse.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>programavimas</category><category>python</category><guid>https://sirex.lt/posts/2008/python-vs-pascal/</guid><pubDate>Thu, 18 Dec 2008 22:20:00 GMT</pubDate></item></channel></rss>

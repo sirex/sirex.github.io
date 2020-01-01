@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Kaip į diegti tas pačias programas, kurios buvo anksčiau? | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2009/kaip-idiegti-tas-pacias-programas-kurios-buvo-anksciau/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../dell-inspiron-1501-ubuntu-jaunty-ext4/" title="Dell Inspiron 1501 + Ubuntu Jaunty + Ext4" type="text/html">
+<link rel="next" href="../myliu-komandine-eilute/" title="Myliu komandinę eilutę ❤" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Kaip į diegti tas pačias programas, kurios buvo anksčiau?">
+<meta property="og:url" content="https://sirex.lt/posts/2009/kaip-idiegti-tas-pacias-programas-kurios-buvo-anksciau/">
+<meta property="og:description" content="Tikriausiai žinote, kad labai patogu laikyti / ir /home katalogus
+atskiruose skirsniuose, kad vėliau iš naujo įdiegus Linux sistemą, viskas
+išliktų kaip buvę.
+Dažniausiai visi naudotojo duomenys laiko">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2009-06-03T09:27:00+02:00">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="shell">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Kaip į diegti tas pačias programas, kurios buvo anksčiau?</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2009-06-03T09:27:00+02:00" itemprop="datePublished" title="2009-06-03 09:27">2009-06-03 09:27</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/linux/" rel="tag">linux</a>,                    <a class="tag p-category" href="../../../tags/shell/" rel="tag">shell</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Tikriausiai žinote, kad labai patogu laikyti <code class="docutils literal">/</code> ir <code class="docutils literal">/home</code> katalogus
+atskiruose skirsniuose, kad vėliau iš naujo įdiegus Linux sistemą, viskas
+išliktų kaip buvę.</p>
+<p>Dažniausiai visi naudotojo duomenys laikomi namų (/home) kataloge.  Tačiau,
+dažnai būna daug programų, kurias įdiegėte ir norėtumėte vėl turėti tą patį.</p>
+<p>Susigrąžinti visas anksčiau įdiegtas programas labai paprasta, reikia vos kelių komandų.</p>
+<p>Šios instrukcijos tinka visoms Linux distribucijoms, kurios naudoja apt-get
+paketų sistemą. Tačiau analogiškai galima daryti ir su kitomis distribucijomis…</p>
+<p>Prieš diegdami Linux, pasidarykite įdiegtų paketų sąrašą ir išsaugokite jį į
+failą dpkg-list.old. Šį failą išsisaugokite, kad vėliau galėtumėte atstatyti
+visas įdiegtas programas.</p>
+<pre class="literal-block">$ dpkg -l | awk '/^ii/ { print $2 }' &gt; dpkg-list.old</pre>
+<p>Šviežiai įdiegus Linux, susiraskite iš anksto padarytą dpkg-list.old failą ir
+įveskite šias dvi komandas, kurių dėka, bus iš karto įdiegta tai, ką turėjote anksčiau.</p>
+<pre class="literal-block">$ dpkg -l | awk '/^ii/ { print $2 }' &gt; dpkg-list.new
+$ diff dpkg-list.old dpkg-list.new | awk '/^</pre>
+<p><em>Pastaba:</em> nepamirškite išsisaugoti ir <code class="docutils literal">/etc/apt/sources.list</code> failo, nes kai
+kurios programos gali būti įdiegtos iš saugyklų, kurių po įdiegimo, pagal
+nutylėjimą nebus šiame faile.</p>
+<div class="section" id="papildymas-galimos-problemos-ir-ju-sprendimai">
+<h2>Papildymas: Galimos problemos ir jų sprendimai<a href="#papildymas-galimos-problemos-ir-ju-sprendimai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Praktiškai išbandžius aukščiau aprašytas komandas susidūriau su šiokiais
+tokiais sunkumais.</p>
+<p><em>Kadangi pas mane buvo labai didelis paketų skaičius įdiegimui, tai neaišku dėl
+kokių priežasčių, toje vietoje kur klausiama ar tikrai norite įdiegti šiuos
+paketus, apt-get nutraukdavo darbą.</em></p>
+<p><em>Sprendimas:</em> apt-get komandai reikia perduoti -y</p>
+<pre class="literal-block">$ diff dpkg-list.old dpkg-list.new | awk '/^</pre>
+<p><em>Kadangi kai kuriuos paketus buvau įdiegęs ne iš repozitorijų, tai žinoma, jų
+neradus, apt-get nutraukia darbą ir praneša, kad toks ir toks paketas nerastas.</em></p>
+<p><em>Sprendimas:</em> tokiu atveju geriau išsisaugoti paketų sąrašą diegimui atskirai
+ir tiesiog iš to failo ištrinti tuos trūkstamus paketus:</p>
+<pre class="literal-block">$ diff dpkg-list.old dpkg-list.new | awk '/^ dpkg-missing
+$ gedit dpkg-missing
+$ cat dpkg-missing | xargs sudo apt-get install -y</pre>
+<p><em>Diegiant MySQL Server, atsidarė slaptažodžio įvedimo langas ir dėl kažkokių
+priežasčių, nieko negalėjau įvesti, teko nutraukti diegimą su Ctrl+C. Po tokio
+nutraukimo toliau diegimo negalėjau tęsti, dėl to, kad paketų sistema liko užsirakinusi.</em></p>
+<p><em>Sprendimas:</em> reikia perkrauti kompiuterį (gal būt yra ir paprastesnis būdas?)
+ir tęsti toliau tokiomis komandomis:</p>
+<pre class="literal-block">$ sudo apt-get install -f
+$ sudo dpkg --configure -a
+$ cat dpkg-missing | xargs sudo apt-get install -y</pre>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../dell-inspiron-1501-ubuntu-jaunty-ext4/" rel="prev" title="Dell Inspiron 1501 + Ubuntu Jaunty + Ext4">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../myliu-komandine-eilute/" rel="next" title="Myliu komandinę eilutę ❤">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

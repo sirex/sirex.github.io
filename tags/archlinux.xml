@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about archlinux)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/archlinux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Automatinis laiškų persiuntimas į Trac</title><link>https://sirex.lt/posts/2009/automatinis-laisku-persiuntimas-i-trac/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Pradėjęs naudoti Archlinux taip pat radau ir naują įrankį laiškų parsiuntimui:
+fdm. Jis man pasirodė kur kas paprastesnis, nei fetchmail ir net gi turintis
+daugiau reikalingų funkcijų. Dėl tam tikrų funkcijų atsisakiau ir procmail, nes
+fdm gali puikiausiai atlikti ir procmail funkciją... :)&lt;/p&gt;
+&lt;p&gt;Kitas dalykas, jei dirbate su kokiais nors projektais, tai tikriausiai gaunate
+daug laiškų, kuriuos perskirstote ir talpinate į kokią nors Web pagrindu
+veikiančią projektų ar užduočių valdymo sistemą. Na, bent jau aš dirbu panašiai
+taip, kaip apibūdinau ir visai nesenai, mano kolega paklausė, ar įmanoma, kaip
+nors tuos laiškus persiųsti tiesiai į užduočių valdymo sistemą, kad ji iš to
+laiško sukurtų naują užduoti.  Pagalvojau, kad tai tikrai puiki mintis. Tačiau
+paieškojęs internete neradau jokių panašių realizacijų, &lt;a class="reference external" href="http://trac.edgewall.org/"&gt;Trac&lt;/a&gt; sistemai, kurią naudojuosi.&lt;/p&gt;
+&lt;p&gt;Bet, pasirodo, kad tokį dalyką padaryti, įtraukiant į darbą fdm ir šiek tiek
+Python kodo, yra visiškai nesudėtinga.&lt;/p&gt;
+&lt;p&gt;Štai ką aš dariau, kad atsirastų galimybė persiųsti laišką tiesiai į Trac
+sistemą, kaip naują užduotį.&lt;/p&gt;
+&lt;div class="section" id="testines-trac-aplinkos-diegimas"&gt;
+&lt;h2&gt;Testinės Trac aplinkos diegimas.&lt;/h2&gt;
+&lt;p&gt;Kadangi nenorėjau žaisti su veikiančiai sistemą, susikūriau atskirą aplinką
+testavimams:&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p&gt;Įdiegiau Python paketų valdymo įrankį &lt;code class="docutils literal"&gt;easy_install&lt;/code&gt; į Archlinuxą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo pacman -S setuptools&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Įdiegiau Python virtualios aplinkos kūrimo įrankį:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo easy_install virtualenv&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Susikūriau virtualią aplinką Trac programai:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;cd ~/www/sandbox
+virtualenv trac&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Aktyvavau virtualią aplinką esamame shelle:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;cd trac
+source bin/activate&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Įdiegiau Trac į virtualią aplinką:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;easy_install trac&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Susikūriau testinį Trac instancą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;trac-admin test initenv
+trac-admin test permission add anonymous TRAC_ADMIN&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Paleidau Trac sistemą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;tracd --port 8000 test&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Atsidariau paleistą Trac interneto naršyklėje:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;firefox http://localhost:8000/test&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="fdm-konfiguravimas"&gt;
+&lt;h2&gt;fdm konfigūravimas&lt;/h2&gt;
+&lt;p&gt;Sekantis žingsnis fdm konfigūravimas ir štai, kaip turėtu atrodyti failo
+&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.fdm.conf&lt;/span&gt;&lt;/code&gt; turinys:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;action "newticket" pipe "%h/www/sandbox/trac/mailpipe.py"
+account "stdin" disabled
+stdin match "(To|Cc):.*trac@localhost" action "newticket"``&lt;/pre&gt;
+&lt;p&gt;Pagal šią konfigūraciją, fdm, visus laiškus su &lt;a class="reference external" href="mailto:trac@localhost"&gt;trac@localhost&lt;/a&gt; perduos Python
+scriptui, kuris sukurs naują ticketą Track užduočių sistemoje.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="python-skriptas-nauju-uzduociu-kurimui"&gt;
+&lt;h2&gt;Python skriptas naujų užduočių kūrimui&lt;/h2&gt;
+&lt;p&gt;Tai sunkiausia dalis, nes Trac sistema, apsaugai nuo spamo naudoja visokius
+parametrus, todėl reikia iš pradžių nuskaityti naujo užduoties įvedimo formą,
+kurios užkrovimo metu sukuriama sesija ir tam tikri sausainiukai. Tada iš tos
+formos reikia pasiimti specialų kintamąjį, kuris nurodo, kad formos duomenys
+buvo išsiūsti iš ten kur reikia. Ir galiausiai reikia išsiūsti reikiamus
+duomenis, kad būti sukurta nauja užduotis.&lt;/p&gt;
+&lt;p&gt;Šioje vietoje nedariau jokios naudotojų autentifikacijos, bet tai nesunku
+prijungti, esant poreikiui.&lt;/p&gt;
+&lt;p&gt;Jei kam įdomu, tai aiškindamasis ką reikia perduoti Trac sistemai, panaudojau
+puikų Web debuginimo proxį burpsuite. Archlinux sistemoje jį galima įsidiegti
+iš nuostabiojo AUR:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;yaourt -S burpsuite&lt;/pre&gt;
+&lt;p&gt;Štai Python scriptas, kuris daro visą darbą (atkreipkite dėmesį, kad šis
+skriptas parašytas Python 3.0 versijai, todėl su senesne neveiks):&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/usr/bin/env python3&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-2"&gt;&lt;/a&gt;&lt;span class="sd"&gt;"""This is pipe script for fdm.&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-3"&gt;&lt;/a&gt;&lt;span class="sd"&gt;"""&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-5"&gt;&lt;/a&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-6"&gt;&lt;/a&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;email&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-7"&gt;&lt;/a&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib.parse&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-8"&gt;&lt;/a&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-9"&gt;&lt;/a&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;http.cookiejar&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-10"&gt;&lt;/a&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;html.parser&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTMLParser&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-11"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;InputFieldsParser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;HTMLParser&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-13"&gt;&lt;/a&gt;    &lt;span class="sd"&gt;"""Parse all input fields from given html string.&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-14"&gt;&lt;/a&gt;&lt;span class="sd"&gt;    """&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-15"&gt;&lt;/a&gt;    &lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-16"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-17"&gt;&lt;/a&gt;    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;handle_starttag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-18"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;tag&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'input'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-19"&gt;&lt;/a&gt;            &lt;span class="n"&gt;attrs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-20"&gt;&lt;/a&gt;            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s1"&gt;'name'&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="s1"&gt;'value'&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-21"&gt;&lt;/a&gt;                &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'name'&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'value'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-22"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-23"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_html_fields&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-24"&gt;&lt;/a&gt;    &lt;span class="sd"&gt;"""Returns all input fields from given html string.&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-25"&gt;&lt;/a&gt;&lt;span class="sd"&gt;    """&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-26"&gt;&lt;/a&gt;    &lt;span class="n"&gt;parser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;InputFieldsParser&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-27"&gt;&lt;/a&gt;    &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;feed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-28"&gt;&lt;/a&gt;    &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-29"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fields&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-30"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-31"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_url_opener&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-32"&gt;&lt;/a&gt;    &lt;span class="sd"&gt;"""Returns urllib OpenerDirector for sending correct request...&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-33"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-34"&gt;&lt;/a&gt;&lt;span class="sd"&gt;    This openner acts like a web browser with Mozilla user agent and cookies&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-35"&gt;&lt;/a&gt;&lt;span class="sd"&gt;    support.&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-36"&gt;&lt;/a&gt;&lt;span class="sd"&gt;    """&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-37"&gt;&lt;/a&gt;    &lt;span class="n"&gt;cj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cookiejar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CookieJar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-38"&gt;&lt;/a&gt;    &lt;span class="n"&gt;cookie_processor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HTTPCookieProcessor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-39"&gt;&lt;/a&gt;    &lt;span class="n"&gt;opener&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;build_opener&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cookie_processor&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-40"&gt;&lt;/a&gt;    &lt;span class="n"&gt;opener&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addheaders&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[(&lt;/span&gt;&lt;span class="s1"&gt;'User-agent'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'Mozilla/5.0'&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-41"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;opener&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-42"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-43"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;submit_to_trac&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-44"&gt;&lt;/a&gt;    &lt;span class="sd"&gt;"""Function to submit new ticket to Trac system.&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-45"&gt;&lt;/a&gt;&lt;span class="sd"&gt;    """&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-46"&gt;&lt;/a&gt;    &lt;span class="n"&gt;params&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-47"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'author'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'anonymous'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-48"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_summary'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-49"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_reporter'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'anonymous'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-50"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_description'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-51"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_type'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'defect'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-52"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_priority'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'major'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-53"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_milestone'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-54"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_component'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'component1'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-55"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_version'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-56"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_keywords'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-57"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_cc'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-58"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_owner'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-59"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'field_status'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'new'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-60"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'submit'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'Create+ticket'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-61"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-62"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-63"&gt;&lt;/a&gt;    &lt;span class="n"&gt;opener&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_url_opener&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-64"&gt;&lt;/a&gt;    &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'http://localhost:8000/test/newticket'&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-65"&gt;&lt;/a&gt;    &lt;span class="n"&gt;fields&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_html_fields&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;opener&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()))&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-66"&gt;&lt;/a&gt;    &lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'__FORM_TOKEN'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fields&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'__FORM_TOKEN'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-67"&gt;&lt;/a&gt;    &lt;span class="n"&gt;params&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlencode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-68"&gt;&lt;/a&gt;    &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;opener&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"http://localhost:8000/test/newticket"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;params&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-69"&gt;&lt;/a&gt;    &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-70"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-71"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-72"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;submit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-73"&gt;&lt;/a&gt;    &lt;span class="sd"&gt;"""Does all submission job to a web page form.&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-74"&gt;&lt;/a&gt;&lt;span class="sd"&gt;    """&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-75"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-76"&gt;&lt;/a&gt;    &lt;span class="c1"&gt;# Create new functions and change this line,&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-77"&gt;&lt;/a&gt;    &lt;span class="c1"&gt;# for support to other systems.&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-78"&gt;&lt;/a&gt;    &lt;span class="n"&gt;submit_to_trac&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-79"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-80"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-81"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_message_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-82"&gt;&lt;/a&gt;    &lt;span class="sd"&gt;"""Returns email message body.&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-83"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-84"&gt;&lt;/a&gt;&lt;span class="sd"&gt;    Only text/plain message parts are supported.&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-85"&gt;&lt;/a&gt;&lt;span class="sd"&gt;    """&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-86"&gt;&lt;/a&gt;    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;part&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;walk&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-87"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;part&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_content_type&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'text/plain'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-88"&gt;&lt;/a&gt;            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;part&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_payload&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-89"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-90"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-91"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-92"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-93"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-94"&gt;&lt;/a&gt;    &lt;span class="sd"&gt;"""The main function of this script.&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-95"&gt;&lt;/a&gt;&lt;span class="sd"&gt;    """&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-96"&gt;&lt;/a&gt;    &lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;email&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;message_from_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-97"&gt;&lt;/a&gt;    &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'subject'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-98"&gt;&lt;/a&gt;    &lt;span class="n"&gt;body&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_message_body&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-99"&gt;&lt;/a&gt;    &lt;span class="n"&gt;submit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-100"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-101"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-102"&gt;&lt;/a&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'__main__'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_bf24704f3ddb439598c30334120a4d9d-103"&gt;&lt;/a&gt;    &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="testavimas"&gt;
+&lt;h2&gt;Testavimas&lt;/h2&gt;
+&lt;p&gt;Galiausiai viską sujungus į vieną vietą galima pradėti testuoti. Kad nereikėtų
+siuntinėti laiškų į kažkokius serverius, tai tam reikalui paprasčiausiai
+susikūriau laišką ir išsaugojau jį į failą. Štai laiško turinys:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;From: sirex@localhost
+To: trac@localhost
+Subject: Testinė užduotis.
+
+Testinė užduotis Trac sistemai.&lt;/pre&gt;
+&lt;p&gt;O štai komanda, kurios pagalba laiškas perduodamas fdm programai, kuri
+patikrina laiško headerius, pritaiko reikiamą veiksmą ir perduodą Python
+scriptui, kuris paverčia laiško turinį į naują Trac užduotį:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;cat newmail | fdm -vma stdin fetch&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pabaigai"&gt;
+&lt;h2&gt;Pabaigai&lt;/h2&gt;
+&lt;p&gt;Jei visi testavimai praeina sėkmingai, tai belieka susikurti pašto dėžutę į
+kurią sunčiami laiškai, automatiškai bus paverčiami Trac sistemos užduotimis.
+Žinoma reikės atitinkamai pakeisti fdm konfigūraciją, kad laiškai būtų imami ne
+iš stdin, o iš naujai susikurtos pašto dėžutės.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>archlinux</category><category>python</category><category>trac</category><guid>https://sirex.lt/posts/2009/automatinis-laisku-persiuntimas-i-trac/</guid><pubDate>Sun, 18 Jan 2009 00:29:00 GMT</pubDate></item><item><title>Mano Archlinux konfigūracija</title><link>https://sirex.lt/posts/2009/mano-archlinux-konfiguracija/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jau praėjo daugiau kaip savaitė, kaip naudoju Archlinux. Per tą laiką
+spėjau visiškai pilnai sukonfigūruoti sistemą ir pritaikyti savo
+poreikiams. Anksčiau esu rašęs įrašą apie tai, &lt;a class="reference external" href="http://sirex.lt/node/40"&gt;kokias programas
+naudoju&lt;/a&gt;. Tačiau tai buvo Ubuntu ir jau
+praėjo lygiai 1 metai ir 5 dienos. Todėl sugalvojau tokią apžvalgą
+padaryti naujai.&lt;/p&gt;
+&lt;p&gt;Pradžiai, štai kaip atrodo dabartinis mano darbo laukas:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://sirex.lt/files/archdesktop.jpg"&gt;|image0|&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Trumpas pasirinktų paketų/programų sąrašas:&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 40%"&gt;
+&lt;col style="width: 60%"&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Operacinė sistema&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;Archlinux&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Login menedžeris&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;SLiM&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Darbo aplinka&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;Fluxbox&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tema: &lt;strong&gt;bora_black&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Klaviatūros išdėstymas&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;LEKPa&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Shell'as&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;zsh&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Terminalo emuliatorius&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;xterm + screen&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Šriftas: &lt;strong&gt;Terminus&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Spalvos: &lt;strong&gt;Zenburn&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;System monitor&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;conky&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Network Manager&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;Wicd&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;File Manager&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;Thunar&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Paveiksliukų peržiūra&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;GQView&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Interneto naršyklė&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;Firefox, Opera&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;El. paštas&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;MUA: &lt;strong&gt;mutt&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;MTA: &lt;strong&gt;msmtp&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;MRA, MDA: &lt;strong&gt;fdm&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Biff: &lt;strong&gt;mail-notification&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;FTP&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;lftp&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;RSS&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;newsbeuter&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Paketų valdymo sistema&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;pacman, yaourt&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Mirror:&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;atviras.lt/archmirror&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Teksto redaktorius&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Spalvos: &lt;strong&gt;Zenburn&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;IM&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;Gajim&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;IRC&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;irssi&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Muzika&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;&lt;strong&gt;mpd&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Klientas: &lt;strong&gt;mpc&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Valdymas: &lt;strong&gt;~/.fluxbox/keys + mpc&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;last.fm: &lt;strong&gt;lastfmsubmitd + lastmp&lt;/strong&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;</description><category>archlinux</category><guid>https://sirex.lt/posts/2009/mano-archlinux-konfiguracija/</guid><pubDate>Sun, 11 Jan 2009 21:25:00 GMT</pubDate></item><item><title>Pažintis su Archlinux</title><link>https://sirex.lt/posts/2009/pazintis-su-archlinux/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;a class="reference external image-reference" href="https://sirex.lt/images/arch-linux-logo.png"&gt;&lt;img alt="Archlinux Logo" class="previewimage" src="https://sirex.lt/images/arch-linux-logo.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;Kokią savaitę prieš naujuosius metus, įkvėptas &lt;a class="reference external" href="http://www.ubuntu.lt/render/Forum;thread,3203"&gt;ubuntu.lt forumo temos apie
+Archlinux&lt;/a&gt;, nusprendžiau ir
+pats išbandyti &lt;a class="reference external" href="http://archlinux.org/"&gt;Archlinux&lt;/a&gt;!  Labiausiai sudomino tai,
+kad jis labai greitas, bent jau taip pavaizduota YouTubėje: &lt;a class="reference external" href="http://www.youtube.com/watch?v=A5h7wtkg4Bc"&gt;How fast is Arch
+Linux?&lt;/a&gt; Užsikabinęs, nusprendžiau
+&lt;a class="reference external" href="http://wiki.archlinux.org/index.php/Arch_vs_Others"&gt;pasidomėti plačiau&lt;/a&gt; ir
+radau dar daugiau įdomių savybių:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Arch is text-based and command-line oriented.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://wiki.archlinux.org/index.php/Beginners_Guide#The_beauty_of_the_Arch_rolling_release_model"&gt;The beauty of the Arch rolling release model&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/KISS_principle"&gt;The Arch Philosophy, best summarized by the acronym KISS for Keep It Simple,
+Stupid&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://wiki.archlinux.org/index.php/FAQ#Q.29_I_am_a_complete_GNU.2FLinux_beginner._Should_I_use_Arch.3F"&gt;Arch is targeted at more-advanced GNU/Linux users, but some people feel
+"Arch is a good place to start".&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://wiki.archlinux.org/index.php/AUR_Q_&amp;amp;_A"&gt;Arch User Repository&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Prieš naujuosius dar visą savaitę skaitinėjau, kas ir kaip, o po naujųjų, visas
+išeigines dienas pašvenčiau Archlinux bandymams.&lt;/p&gt;
+&lt;p&gt;Pirmiausiai išbandžiau jį įdiegdamas į vmware virtualią mašiną, viskas suveikė
+gan sklandžia, tai greitai tą patį padariau ir ant savo kompiuterio.&lt;/p&gt;
+&lt;div class="section" id="bendras-ispudis"&gt;
+&lt;h2&gt;Bendras įspūdis&lt;/h2&gt;
+&lt;p&gt;Kažkaip nepastebėjau labai didelio greičio skirtumo, lyginant su Ubuntu.
+Bendras visų programų veikimo ir pasileidimo greitis yra daug maž vienodas,
+tačiau kai kurios programos vis tik pradėjo veikti žymiai greičiau. Labiausiai
+tai matyti su &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt;, kuris su 10 tūkstančių laiškų
+užsikrauna kokius 3 kartus greičiau nei anksčiau. Tuo tarpu Firefox užsikrauna
+taip pat lėtai kaip ir anksčiau, gal keliomis sekundėmis ir greičiau,
+neskaičiavau, bet aiškaus pagreitėjimo nematyti. Gal būt tas pagreitėjimas
+labiau jaučiasi naudojant KDE su &lt;a class="reference external" href="http://kdemod.ath.cx/about-kdemod.html"&gt;KDEmod&lt;/a&gt;...  Lyginant su Ubuntu, Archlinux
+yra ganėtinai nestabilus, dažnai teko susidurti su visokiomis problemomis ir
+bugais. Mano kompiuterio geležis yra puikiai suderinama su Linux branduoliu,
+todėl Ubuntu, po 20 minučių trukusio diegimo veikia tiesiog Out of The Box. Tuo
+tarpu Archlinux diegimas ir konfigūravimas užtruko 3 dienas (ko gero
+konfigūravimas dar nesibaigė ir greitai nesibaigs, tobulumui nėra ribų :) ).
+Bet kokiu atveju, diegti Archlinux buvo tikrai įdomu ir apturėjau daug
+malonumo...  :)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-patiko"&gt;
+&lt;h2&gt;Kas patiko&lt;/h2&gt;
+&lt;div class="section" id="rolling-release"&gt;
+&lt;h3&gt;Rolling release&lt;/h3&gt;
+&lt;p&gt;Ko gero vienas iš labiausiai patikusių dalykų yra tai, kad Archlinux
+repozitorijose galima rasti pačias naujausias programų versijas iš karto po jų
+išleidimo. Žinomo toks gėris kainuoja tai, kad neretai programos būna ne iki
+galo ištestuotos. Bet, bent kiek labiau patyrusiam kompiuterio naudotojui tai
+neturėtų būti problema.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kiss"&gt;
+&lt;h3&gt;KISS&lt;/h3&gt;
+&lt;p&gt;Paprastumo principas Archlinux sistemoje pasireiškia tuo, kad pateikiama labai
+paprasta sistema, kurią, praktiškai nuo nulio turi susikonfigūruoti pats, taip
+kaip nori.&lt;/p&gt;
+&lt;p&gt;Didžiausias gėris yra tame, kad pats savo rankomis statydamas tokią sistemą,
+turi galimybę iš pagrindų susipažinti su pačia sistema ir tuo, kaip ji veikia.
+Tai ne tik praturtina žiniomis, bet ir atsitikus kokiai nors nelaimei, bent jau
+bus daugiau/mažiau aišku ką ir kur žiūrėti.  Bet to, pati visos sistemos
+struktūra yra visiškai paprasta, todėl jautiesi taip, lyg iš tikrųjų, pats
+valdai sistemą nuo A iki Z.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="arch-is-text-based-and-command-line-oriented"&gt;
+&lt;h3&gt;Arch is text-based and command-line oriented&lt;/h3&gt;
+&lt;p&gt;Jau senai esu įpratęs daugelį visų veiksmų atlikti komandinėje eilutėje, žinant
+vos kelias komandas ir nesivarginant kiekvienam menkniekiui ieškoti, kažkokio
+automatizuoto grafinio įrankio. Archlinux tikrai yra visiškai command-line
+friendly... :)&lt;/p&gt;
+&lt;p&gt;Bet to, diegimo meto, kol sukonfigūruojama grafinė aplinka, reikia nemažai
+padirbėti visiškai tekstiniame režime. Todėl gerai susikonfigūravau ne tik
+grafinę aplinką, bet ir tekstinio režimo daly, be grafinės aplinkos. Grub meniu
+yra net gi du punktas, vienas – paleisti su grafine aplinka, kitas, be grafinės
+aplinkos... :)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="aur"&gt;
+&lt;h3&gt;AUR&lt;/h3&gt;
+&lt;p&gt;Ganėtinai įdomus pasirodė paketų vystymo procesas.  &lt;a class="reference external" href="http://wiki.archlinux.org/index.php/ArchLinux_User-community_Repository_(AUR)"&gt;AUR&lt;/a&gt;
+yra toks paketų repozitoriumas, kur pateikiami Archlinux naudotojų source
+paketai, kuriuos gali parsisiųsti ir pats susikompiliuoti, patikrindamas ar
+viskas gerai. Kompiliavimo procesas, naudojant &lt;a class="reference external" href="http://wiki.archlinux.org/index.php/Yaourt"&gt;Yaourt&lt;/a&gt; yra visiškai automatizuotas ir
+labai paprastas. Po kompiliavimo, jei paketas sudarytas gerai ir veikia
+puikiai, galima balsuoti už tą paketą, kad jis iš AUR, butų perkeltas į
+Community repozitoriumą ir įgytų patikimo paketo statusą.&lt;/p&gt;
+&lt;p&gt;Gal būt ir yra šioks toks pavojus dėl kokių nors nepatikimų paketų, bet
+vis tik, mano manymų, tai yra puikiai sumanyta paketų vystymo sistema.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kita"&gt;
+&lt;h3&gt;Kita...&lt;/h3&gt;
+&lt;p&gt;Kol kas Archlinux naudoju vos kelias dienas, todėl manau, kad bus dar daug gerų
+dalykų. Kol kas nebandžiau &lt;a class="reference external" href="http://wiki.archlinux.org/index.php/ABS_-_The_Arch_Build_System"&gt;ABS&lt;/a&gt; ir
+tikriausiai dar daugiau įdomių dalykų.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="problemos"&gt;
+&lt;h2&gt;Problemos&lt;/h2&gt;
+&lt;p&gt;Aprašysiu konkrečias problemas, su kuriomis susidūriau.&lt;/p&gt;
+&lt;div class="section" id="livecd-bugas"&gt;
+&lt;h3&gt;LiveCD bugas&lt;/h3&gt;
+&lt;p&gt;Nelaimės prasidėjo nuo livecd. Iš pradžių parsisiunčiau oficialų
+archlinux-2008.06-core-i686 livecd. Tačiau paleisti iš jo live sistemos taip ir
+nepavyko. Pamaniau, kad problema pačiame CD, bandžiau įrašyti tą livecd
+atvaizdą gal kokius 10 į skirtingus CD visokiais greičiais ir visokiais būdais,
+kol galiausiai išsiaiškinau, kad tai yra &lt;a class="reference external" href="http://bugs.archlinux.org/task/11408?project=1&amp;amp;cat=5&amp;amp;dev=&amp;amp;sev=&amp;amp;status=&amp;amp;toggleadvanced=1&amp;amp;order=dateopened&amp;amp;sort=desc&amp;amp;order2=attachments&amp;amp;sort2=desc"&gt;senas bugas&lt;/a&gt;.
+Teko siųstis neoficialų archlinux-2008.12-archboot CD atvaizdą, kuris turi
+ISOLINUX boot loaderį ir kuris pasileido sėkmingai.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cfdisk-problema"&gt;
+&lt;h3&gt;cfdisk problema&lt;/h3&gt;
+&lt;p&gt;Įpusėjus diegimą susidūriau su disko skaldymo problema, nes cfdisk pareiškė,
+kad mano extention dalyje esantis disko skirsnis viršija patį extenteion
+skirsnio dydį, kuriame jis yra. Ir dėl to cfdisk paprasčiausiai nepasileido
+visai. Nežinau kaip tai nutiko, bet fdisk -l tikrai patvirtino, tai, ką pasakė
+cfdisk. Laimei su fdisk pavyko sutvarkyti disko skirsnius, nežiūrint į
+nesklandumą su extention dalies perviršiu.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="xdm-taip-ir-nepavyko-paleisti"&gt;
+&lt;h3&gt;XDM taip ir nepavyko paleisti&lt;/h3&gt;
+&lt;p&gt;Kadangi buvau apsisprendęs naudoti Fluxbox, tai kaip login managerį pasirinkau
+XDM, kuris bent jau Archlinux wikyje siūlomas pagal nutylėjimą. Tačiau jo
+paleisti taip ir nepavyko. Išsiaiškinau tik tiek, kad problema susijusi su hal,
+į kurį XDM dėl kažkokių priežasčių nesėkmingai bando kreiptis. hal demonas
+paleistas prieš XDM, todėl įtariau, kad problema slypi pačiame XDM. Galiausiai
+įdiegiau kitą login managerį &lt;a class="reference external" href="http://slim.berlios.de/"&gt;slim&lt;/a&gt; ir problemos
+baigėsi.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="problemos-su-paketu-priklausomybemis-dependencies"&gt;
+&lt;h3&gt;Problemos su paketų priklausomybėmis (dependencies)&lt;/h3&gt;
+&lt;p&gt;Nežinau ar tai paketų priklausomybių problema ar pačių paketų problema, bet
+susidūriau su tokiomis problemomis, kaip mime types failų nesugeneravimas,
+reikalingų piktogramų neparsiuntimas ir pan. Konkrečiai dėl mime tipų failų
+nesugeneravimo, nepasileido kai kurios programos, kurios tai naudoja, nes
+paprasčiausiai tos programos negalėjo užkrauti paveiksliukų, dėl mime types
+informacijos nebuvimo.&lt;/p&gt;
+&lt;p&gt;Bet kokiu atveju, savarankiškai įdiegus kažkokį tai paketą, mime types problema
+išsisprendė, tačiau kai kurių piktogramų nerodo iki šiol.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kitos-problemos"&gt;
+&lt;h3&gt;Kitos problemos&lt;/h3&gt;
+&lt;p&gt;Susidūriau su visa eile kitų problemų, kurios atsirado ne dėl kokios nors
+Archlinux kaltės, o paprasčiausiai todėl, kad daug dalykų reikia daryti
+rankiniu būdu, todėl reikia labai gerai įsiskaityti į taip, kaip viskas veikia,
+kad nepadarytum kokios nors klaidos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>archlinux</category><category>floss</category><guid>https://sirex.lt/posts/2009/pazintis-su-archlinux/</guid><pubDate>Mon, 05 Jan 2009 07:58:00 GMT</pubDate></item></channel></rss>

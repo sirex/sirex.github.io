@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Priemonės darbui su Python ir Django | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2010/priemones-darbui-su-python-ir-django/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../python-django-django-cms/" title="Python, Django, Django CMS!" type="text/html">
+<link rel="next" href="../ubuntu-1010/" title="Ubuntu 10.10" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Priemonės darbui su Python ir Django">
+<meta property="og:url" content="https://sirex.lt/posts/2010/priemones-darbui-su-python-ir-django/">
+<meta property="og:description" content="Iš anksto įspėju, kad čia aprašytos priemonės toli gražu nėra skirtos
+pradedantiesiems programuotojams.
+Naujame darbe pradėjęs programuoti Python skyriau šiek tiek laiko darbo
+priemonių paruošimui ir ">
+<meta property="og:image" content="https://sirex.lt/images/Darbalaukis_1_003.png">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-09-20T21:26:00+02:00">
+<meta property="article:tag" content="django">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="vim">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Priemonės darbui su Python ir Django</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2010-09-20T21:26:00+02:00" itemprop="datePublished" title="2010-09-20 21:26">2010-09-20 21:26</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/django/" rel="tag">django</a>,                    <a class="tag p-category" href="../../../tags/python/" rel="tag">python</a>,                    <a class="tag p-category" href="../../../tags/vim/" rel="tag">vim</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p><strong>Iš anksto įspėju, kad čia aprašytos priemonės toli gražu nėra skirtos
+pradedantiesiems programuotojams.</strong></p>
+<p>Naujame darbe pradėjęs programuoti Python skyriau šiek tiek laiko darbo
+priemonių paruošimui ir nusprendžiau pasidalint savo naudojamo arsenalo sąrašu
+su visais. Jei trumpai, pagrindinės darbo priemonės kurias naudoju yra šios:
+<a class="reference external" href="http://en.wikipedia.org/wiki/Xterm">Xterm</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/GNU_Screen">screen</a>, <a class="reference external" href="http://www.zsh.org/">zsh</a>, <a class="reference external" href="http://en.wikipedia.org/wiki/Vim_(text_editor)">vim</a>, <a class="reference external" href="http://ctags.sourceforge.net/">ctags</a>, <a class="reference external" href="http://mercurial.selenic.com/">mercurial</a>, <a class="reference external" href="http://dreampie.sourceforge.net/">DreamPie</a>, <a class="reference external" href="http://virtualenv.openplans.org/">virtualenv</a>, <a class="reference external" href="http://www.buildout.org/">buildout</a>,
+<a class="reference external" href="http://sphinx.pocoo.org/">Sphinx</a>, <a class="reference external" href="http://pypi.python.org/pypi/pylint">pylint</a>, <a class="reference external" href="http://github.com/robhudson/django-debug-toolbar">django-debug-toolbar</a>, <a class="reference external" href="http://south.aeracode.org/docs/about.html">South</a>, <a class="reference external" href="http://pypi.python.org/pypi/ipdb">ipdb</a>.</p>
+<p>Štai kaip viskas atrodo bendroje visumoje:</p>
+<a class="reference external image-reference" href="../../../images/Darbalaukis_1_003.png"><img alt="Priemonės darbui su Python" class="previewimage" src="../../../images/Darbalaukis_1_003.thumbnail.png"></a>
+<p>Visų šių programų konfigūraciniai failai guli viešai prieinamoje vietoje:</p>
+<p><a class="reference external" href="http://bitbucket.org/sirex/home/src/">http://bitbucket.org/sirex/home/src/</a></p>
+<p><strong>XTerm</strong> yra paprastas, gan greitas (kur kas greitesnis už gnome-terminal ir
+šiek tiek lėtesnis už rxvt) ir labai lankstus terminalo emuliatorius.</p>
+<p><strong>screen</strong> yra virtualus terminalų multiplexeris, suteikiantis viename
+terminalo lange naudoti kelias terminalo sesijas. Be šios savybės screen turi
+dar daug visokių įdomių funkcijų, tokių kaip virtualūs terminalų langai ir jų
+dalinimas, kopijavimas iš terminalo išvesties, terminalo išvesties saugojimas,
+virtualių terminalų sesijos atskyrimas ir t.t.  Išmokus juo naudotis,
+praktikoje tikrai praverčia.</p>
+<p><strong>zsh</strong> – tiesiog gera komandinės eilutės sąsaja (shell). Naudoju jį todėl, kad
+jis tiesiog yra tobulas ir turi viską, ko gali prireikti.  Plačiau:
+<a class="reference external" href="http://grml.org/zsh/zsh-lovers.html">http://grml.org/zsh/zsh-lovers.html</a></p>
+<p>Ko gero daugiausia zsh man patinka todėl, kad paspaudus TAB, praktiškai visada
+gausi tai ko reikia… Taip, zsh taip pat supranta ir djanogo-admin.py sub-komandas.</p>
+<p><strong>vim</strong></p>
+<p>Tikriausiai visi ir taip žino, kas yra Vim. Jei nežinot, tai Vim yra vadinamas
+„programmers editor“ (programuotojų teksto redaktorius). Vim yra vienas
+populiariausių programuotojų tekstų redaktorius visame pasaulyje.</p>
+<p>Naudoju šiuos Vim įskiepius: <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=42">BuffExplorer</a>, <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1506">LargeFile</a>, <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2540">snipMate</a>, <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1697">surround</a>, <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2981">ZenCoding</a>, <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2441">PyFlakes</a>,
+<a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2754">delimitMate</a>.  Visą
+kitą Vim’as turi pagal nutylėjimą, sintaksės spalvinimas, galimybė atitraukti
+Python blokus nuo krašto, omnicompletion funkcija ir pan.  Naudojant <a class="reference external" href="http://ctags.sourceforge.net/">ctags</a> galima šokinėti per visas Python funkcijas ir
+klases esančias bet kuriame projekto faile.  snipMate turi ne tik python
+iškarpas, bet ir django.</p>
+<p><strong>snipMate</strong></p>
+<!-- missing video:
+<iframe src="http://player.vimeo.com/video/3535418" frameborder="0" height="281" width="500"></iframe> -->
+<p><strong>ctags</strong></p>
+<p>Pagrindinė šio įrankio paskirtis – surinkti informaciją apie visus kode
+naudojamus objektus, surašyti vietas, kur jie yra aprašyti ir viską
+suindeksuoti, kad būtų galima vykdyti greitą paiešką. Surenkami objektai yra
+klasės, funkcijos, konstantos, kintamieji ir t.t. ctags veikia neįtikėtinai
+greitai, per kelias sekundes suindeksuoja didžiules kodo bibliotekas.</p>
+<p>Vim supranta ctags ir gali naudoti suindeksuotą informaciją, todėl
+programuojant, labai lengva šokinėti nuo vienos funkcijos, prie kitos,
+skirtinguose failuose ar net paketuose.</p>
+<p>ctags puikiai integruojasi su buildout, naudojant <a class="reference external" href="http://pypi.python.org/pypi/z3c.recipe.tag/">z3c.recipe.tag</a> receptą, kurio dėka galima
+suindeksuoti ne tik savo projektą, bet ir visus kitus priklausomus paketus,
+kuriuos naudoja projektas!</p>
+<p><strong>mercurial</strong></p>
+<p>Decentralizuota versijų kontrolės sistema. Praktiškai, prieš pradėdamas kažką
+programuoti, instinktyviai suvedu šią komandą:</p>
+<pre class="literal-block">hg init</pre>
+<p>Tada tiesiog rašau kodą, dažnai komitinu ir esu ramus, nebaisu, kad mano
+parašytas kodas kažkur pradings. Kažkiek vertą dėmesio kodą, mercurial pagalba,
+tiesiai iš komandinės eilutės siunčiu į <a class="reference external" href="http://bitbucket.org/sirex">bitbucket.org</a>.</p>
+<p>Mercurial patogus tuo, kad yra puikiai suderinamas su kitomis išorinėmis
+priemonėmis. Todėl be problemų galiu dirbti su git ropozitoriumais, naudodamas
+<a class="reference external" href="http://hg-git.github.com/">hg-git</a> įskiepį, čia daugiausiai tais atvejais,
+kai reikia forkinti kažką iš <a class="reference external" href="http://github.com/">github.com</a>. Be šito,
+naudoju mercurial su meld ir kdiff programomis, pakeitimams peržiūrėti.</p>
+<p><strong>DreamPie</strong></p>
+<p>DreamPie yra patogi priemonė, kai reikia testuoti atskiras kodo vietas.
+Panašią funkciją atlieka ipython, kurį taip pat dažnai naudoju ir sakyčiau
+ipython daugeliu atveju net gi yra pranašesnis už DreamPie, išskyrus vieną –
+zsh sunku naudoti, kai reikia testuoti kelių eilučių kodą. DreamPie puikiai
+veikia ir tais atvejais, kai reikia testuoti kelias eilutes, ciklus ir pan.</p>
+<p><strong>virtualenv, buildout</strong></p>
+<p>Abi šios priemonės yra nepakeičiamos programuojant Python. Tiek virtualenv,
+tiek buildout atlieka panašią funkciją – sukuria izoliuotą aplinką, kurioje
+nepriklausomai nuo sistemos galima įdiegti reikiamas Python paketų versija ir
+programuojant naudoti būtent tos izoliuotos aplinkos paketus.</p>
+<p><strong>virtualenv</strong> daugiau skirtas testinės aplinkos kūrimui, kurioje galima
+įdiegti norimą ištestuoti savo paketą, o kartu į tą pačią izoliuotą aplinką
+galima įdiegti ir visus susijusius paketus.</p>
+<p><strong>buildout</strong> yra kur kas sudėtingesnis dalykas ir daugiau skirtas būtent
+programavimo ir deployinimo reikmėms. Buildout gėris yra tame, kad jis turi
+visą galybę taip vadinamų receptų, kurių pagalba galima susikurti labai patogią
+programavimo aplinką. Programuojant Django naudoju <a class="reference external" href="http://pypi.python.org/pypi/djangorecipe">djangorecipe</a>,kurio pagalba gaunu veikiantį
+django projekto katalogą ir visą rinkinį galimybių tą projektą valdyti. Verta
+paminėti vieną iš tokių galimybių – wsgi vykdomojo skripto generavimas, kuri
+panaudojus labai paprasta projektą paleisti bet kokiame serveryje.</p>
+<p>Gan dažnai pasitaiko, kad dirbant, net ir tam pačiam projektui sukuriamos
+kelios buildout aplinkos. Kad kiekvienai iš tų aplinkų nereikėtų vėl
+pakartotinai siųstis visų paketų ir diegti visų paketų, kas kartais užtrunka
+gan ilgai, buildout suteikia galimybę savo namų kataloge nurodyti kur saugoti
+bendrai naudojamus paketus. Tai reiškia, kad visi paketai ir visos skirtingos
+jų versijos suvažiuoja į vieną bendrą katalogą ir visos buildout aplinkos
+bendrai naudoja tuos paketus.</p>
+<p><a class="reference external" href="http://pypi.python.org/pypi/collective.recipe.omelette">omelette</a> yra buildout receptas, kuris tvarkingai išdėlioja visus
+projekte naudojamus išorinius paketus viename kataloge. Tai yra tikras
+išsigelbėjimas, nes kaip žinia kiekvienas python paketas įdiegiamas atskiruose
+kataloguose, o tie atskiri katalogai gali būti bet kuriame sys.path sąrašo kataloge.</p>
+<p><strong>Sphinx</strong></p>
+<p>Apie Sphinx žmonės kalba taip: „A great tool that actually makes programmers
+want to write documentation!“. Programuojant būtina rašyti dokumentaciją, kad
+net ir pats grįžęs prie to pačio kodo po metų, žinotum kas ten padaryta. Sphinx
+yra labai patogi dokumentacijos ruošimo priemonė, kurioje iš esmės rašomas
+išplėstas <a class="reference external" href="http://docutils.sf.net/rst.html">reStructuredText</a> tekstas.
+Pasinaudojus išplėtimais į dokumentacijos tekstą galima įtraukti ištisą modulio
+dokumentaciją specialių raktinių žodžių pagalba. Į nurodytas dokumentacijos
+vietas, iš pačio kodo docstringų senrenkama informacija ir suformuojama graži
+API dokumentacija. Sphinx puikiai integruojasi į buildout aplinką, dėl ko
+rašyti dokumentacijas dar paprasčiau.</p>
+<p><strong>pylint</strong></p>
+<p>Tai yra <a class="reference external" href="http://pychecker.sourceforge.net/">pyChecker</a> arba <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2441">PyFlakes</a>
+analogas išsiskiriantis tuo, kad turi daugiausiai funkcijų ir lyginant su
+pyChecker veikia kur kas stabiliau.  pylint paskirtis – kodo tikrinimas,
+surenkant visas programavimo klaidas, vietas kuriose nesilaikoma apibrėžto kodo
+standarto, vietas, kurios panašios į blogo programavimo praktiką ir pan. pylint
+prasineša pro visą kodą, kurį nurodai ir sugeneruoja didžiulę ataskaitą (dydis
+priklauso nuo klaidų gausos…  :) ). Ataskaitoje suskaičiuojamas kodo kokybės
+įvertinimas 10 balų sistemoje ir pateikiama išsami statistika apie klaidas, jų
+pasiskirstymą, dažnumą ir pan.  Manau tai yra must-have įrankis programuojant Python.</p>
+<p><strong>django-debug-toolbar</strong></p>
+<p>Programuojant su Django tai yra must-have įrankis, kuris rodo visą informaciją
+apie užklausą: užklausos trukmė, užklausų sąrašas ir kiekvienos užklausos
+trukmė, užkrauti šablonai ir juose naudoti kontekstiniai kintamieji, užklausai
+perduoti kintamieji ir t.t. ir t.t.  django-debug-toolbar integruojasi į
+svetainę ir atvaizduojamas pasislepiančios žymės pavidalu, kurią paspaudus bet
+kuriame labe išsiskleidžia visas gėris, kuris taip pat geba sustabdyti
+užklausą, jei jos pabaigoje vyksta redirect’as.</p>
+<p><strong>South</strong></p>
+<p>South yra vienas iš perspektyviausių Django duomenų bazių migracijos sprendimų
+ir ko gero greitu laiku bus įtrauktas į Django branduolį.  South geba išsaugoti
+duomenų bazės būseną failų pavidalu, kuriuos galima įtraukti į versijų
+kontrolės sistemą ir turėti galimybę sklandžiai migruoti duomenų bazę,
+keičiantis jos struktūrai.</p>
+<p><strong>ipdb</strong></p>
+<p>BDD (Bug Driven Development) praktikoje kartais prireikia ir debugerio.  Tam
+reikalui python turi vidinį debugerį <a class="reference external" href="http://docs.python.org/library/pdb.html">pdb</a>, bet aš naudoju šiek tiek pagerintą
+variantą: ipdb. ipdb yra tas pats pdb tik išplėstas ipython funkcijomis.
+Naudojant šį debugerį galima naudoti visas standartinio debugerio funkcijas ir daugiau.</p>
+<p><strong>Reziumė</strong></p>
+<p>Didžiąją dalį čia aprašytų dalykų reziumuoja vienas paprastas, nedidelis
+buildout konfigūracinis failas:</p>
+<pre class="code ini"><a name="rest_code_8e283351bc394eb6bac8f168735eb16d-1"></a><span class="k">[buildout]</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-2"></a><span class="na">parts</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-3"></a><span class="s">    django</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-4"></a><span class="s">    ctags</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-5"></a><span class="s">    omelette</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-6"></a><span class="s">    sphinx</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-7"></a><span class="s">    pylint</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-8"></a>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-9"></a><span class="na">eggs</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-10"></a><span class="s">    ipdb</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-11"></a><span class="s">    ipython</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-12"></a><span class="s">    South</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-13"></a><span class="s">    django-debug-toolbar</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-14"></a>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-15"></a><span class="k">[django]</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-16"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">djangorecipe</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-17"></a><span class="na">version</span> <span class="o">=</span> <span class="s">1.2</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-18"></a><span class="na">project</span> <span class="o">=</span> <span class="s">myproject</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-19"></a><span class="na">settings</span> <span class="o">=</span> <span class="s">development</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-20"></a><span class="na">eggs</span> <span class="o">=</span> <span class="s">${buildout:eggs}</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-21"></a>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-22"></a><span class="k">[ctags]</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-23"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">z3c.recipe.tag:tags</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-24"></a><span class="na">eggs</span> <span class="o">=</span> <span class="s">${buildout:eggs}</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-25"></a>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-26"></a><span class="k">[omelette]</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-27"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">collective.recipe.omelette</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-28"></a><span class="na">eggs</span> <span class="o">=</span> <span class="s">${buildout:eggs}</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-29"></a>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-30"></a><span class="k">[sphinx]</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-31"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">zc.recipe.egg</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-32"></a><span class="na">eggs</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-33"></a><span class="s">    ${buildout:eggs}</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-34"></a><span class="s">    Sphinx</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-35"></a><span class="na">scripts</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-36"></a><span class="s">    sphinx-build</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-37"></a><span class="s">    sphinx-quickstart</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-38"></a><span class="na">extra-paths</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-39"></a><span class="s">    ${django:location}</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-40"></a><span class="s">    ${buildout:directory}</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-41"></a>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-42"></a><span class="k">[pylint]</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-43"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">zc.recipe.egg</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-44"></a><span class="na">eggs</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-45"></a><span class="s">    ${buildout:eggs}</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-46"></a><span class="s">    pylint</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-47"></a><span class="na">extra-paths</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-48"></a><span class="s">    ${django:location}</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-49"></a><span class="s">    ${buildout:directory}</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-50"></a><span class="na">entry-points</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-51"></a><span class="s">    pylint=pylint.lint:Run</span>
+<a name="rest_code_8e283351bc394eb6bac8f168735eb16d-52"></a><span class="s">    arguments = sys.argv[1:]</span>
+</pre>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../python-django-django-cms/" rel="prev" title="Python, Django, Django CMS!">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../ubuntu-1010/" rel="next" title="Ubuntu 10.10">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

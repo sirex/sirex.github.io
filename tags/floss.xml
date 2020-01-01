@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about floss)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/floss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Radio stočių surinkimas į audacious</title><link>https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Internete galima rasti daug nuorodų į internetines radio stotis. Štai vienas iš
+pavyzdžių:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://rock-radio.50webs.com/"&gt;http://rock-radio.50webs.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ten pateikta gan nemažai nuorodų į internetines radio stotis. Šiuo metu kai
+rašau, yra 42 nuorodos. Peržiūrėti ir paklausyti visas šias radio stotis yra
+gan sudėtinga, jei kiekvieną nuorodą reikėtų įkelti į grojaraštį rankiniu būdu.&lt;/p&gt;
+&lt;p&gt;Štai būdas, kaip visas nuorodas galima surinkti ir įkelti į audacious:&lt;/p&gt;
+&lt;pre class="code sh"&gt;&lt;a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-1"&gt;&lt;/a&gt;wget http://rock-radio.50webs.com/ -O- &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-2"&gt;&lt;/a&gt;    egrep -o &lt;span class="s1"&gt;'http://[^"]+'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-3"&gt;&lt;/a&gt;    egrep &lt;span class="s1"&gt;'(pls|m3u)$'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; url &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-5"&gt;&lt;/a&gt;        audacious2 -e &lt;span class="nv"&gt;$url&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Įvykdžius šią komandą, visos nuorodos į radio stotis, pateiktos toje svetainėje
+atsidurs audacious grojaraštyje, vienu sartu.&lt;/p&gt;
+&lt;p&gt;Tą patį galima padaryti ir su &lt;a class="reference external" href="http://www.klausyk.lt/lt/visos_radijo_stotys/"&gt;lietuviškomis radio stotimis&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class="code sh"&gt;&lt;a name="rest_code_b1624ae3cc9340da805f16e369f4914e-1"&gt;&lt;/a&gt;wget http://www.klausyk.lt/lt/visos_radijo_stotys/ -O- &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a name="rest_code_b1624ae3cc9340da805f16e369f4914e-2"&gt;&lt;/a&gt;    egrep -o &lt;span class="s1"&gt;'http://[^"]+'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a name="rest_code_b1624ae3cc9340da805f16e369f4914e-3"&gt;&lt;/a&gt;    egrep &lt;span class="s1"&gt;'(pls|m3u)$'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a name="rest_code_b1624ae3cc9340da805f16e369f4914e-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; url &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a name="rest_code_b1624ae3cc9340da805f16e369f4914e-5"&gt;&lt;/a&gt;        audacious2 -e &lt;span class="nv"&gt;$url&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a name="rest_code_b1624ae3cc9340da805f16e369f4914e-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Gero klausymosi.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;Pateikta informacija tinka visoms unix-like operacinėms sistemoms.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>audacious</category><category>floss</category><category>shell</category><guid>https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/</guid><pubDate>Wed, 20 Jul 2011 21:00:00 GMT</pubDate></item><item><title>Linux viešosiose vietose</title><link>https://sirex.lt/posts/2011/linux-viesosiose-vietose/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Ar jums teko matyti Linux, naudojamus viešosiose vietose? Jei taip, prašau
+nepasididžiuoti ir pasidalinkite informacija ar vaizdine medžiaga, jei tokią
+turite.&lt;/p&gt;
+&lt;p&gt;Žemiau pateikiu visų Linux panaudojimo viešose vietose atvejų rinkinį.&lt;/p&gt;
+&lt;div class="section" id="mint-vinetu"&gt;
+&lt;h2&gt;Mint Vinetu&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.mintvinetu.com/"&gt;Mint Vinetu&lt;/a&gt; yra neįprastas knygynas arba jauki vieta, kur galima pigiau
+įsigyti rekomenduojamas knygas, skaityti gurkšnojant mėtų arbatą ar priduoti
+perskaitytas knygas, nes dalintis yra džiaugsmas.&lt;/p&gt;
+&lt;p&gt;Jei dar ten nebuvote, siūlau apsilankyti.&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/mint-vinetu-ubuntu.jpg"&gt;&lt;img alt="Ubuntu darbo vieta, `Mint Vinetu`_ knygyne" src="https://sirex.lt/images/mint-vinetu-ubuntu.thumbnail.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;Ubuntu šioje vietoje naudojamas kompiuteryje, kuriuo gali naudotis knygyno
+lankytojai.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="fotoservisas"&gt;
+&lt;h2&gt;Fotoservisas&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://fotoservisas.lt/"&gt;Fotoservisas&lt;/a&gt; yra internetinė foto laboratorija, kurioje internetu galite
+užsisakyti nuotraukų gaminimą ir atsiimti artimiausiame salone pagamintas
+nuotraukas popieriniame variante.&lt;/p&gt;
+&lt;p&gt;Ubuntu šioje vietoje naudojamas kompiuteryje, kuris skirtas nuotraukų peržiūrai
+prieš spausdinant, kad būtų galimybė atsirinkti kurias nuotraukas norite
+spausdinti. Kadangi yra nemaža tikimybė, kad kai kurie lankytojai prie to
+kompiuterio prijungs laikmenas užkrėstas virusais, tai Ubuntu, būdamas atsparus
+kompiuteriniams virusams puikiai gelbsti.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>linux</category><category>ubuntu</category><guid>https://sirex.lt/posts/2011/linux-viesosiose-vietose/</guid><pubDate>Mon, 18 Jul 2011 21:00:00 GMT</pubDate></item><item><title>Lietuvos blogeriai neabejingi GNU/Linux OS</title><link>https://sirex.lt/posts/2010/lietuvos-blogeriai-neabejingi-gnulinux-os/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Kilo mintis padaryti šiokią tokią Lietuvos blogų apžvalgą, rašančių apie Atvirą
+kodą arba GNU/Linux. Šaltiniai, kuriuose ieškojau blogų yra &lt;a class="reference external" href="http://planet.akl.lt/"&gt;planet.akl.lt&lt;/a&gt;, &lt;a class="reference external" href="http://www.ubuntu.lt/"&gt;ubuntu.lt&lt;/a&gt; ir mano blogo
+referrer'iai. Jei kažką praleidau, tai rašykite į komentarus, sąrašą
+papildysiu.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://planet.akl.lt/"&gt;planet.akl.lt&lt;/a&gt; – blogų planeta&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://linuksoidas.lt/"&gt;Linuksoidas&lt;/a&gt; – pamiršk windows kaip blogą sapną&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://linuxnews.lt/"&gt;Linux News&lt;/a&gt; – atviro kodo naujienos&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://pawka.linija.net/"&gt;Povilas Balzaravičius&lt;/a&gt; – apie IT, Ubuntu,
+programavimą, ir t.t.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://manomint.blogspot.com/"&gt;Apocalipso&lt;/a&gt; – Linux, Ubuntu, Linux Mint ir
+t.t.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://vytax.blogspot.com/"&gt;Vytax blogas&lt;/a&gt; – KDE, Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.nezinau.lt/category/siuntinukai/linux"&gt;nežinau.lt&lt;/a&gt; – Linux
+skaitinukai&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://cybersig.blogspot.com/"&gt;Sigitas Kalinas&lt;/a&gt; – Ubuntu, Linux, Esperanto&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://versme.net/blog/"&gt;Versme.net blog&lt;/a&gt; – Linux, programos ir pan.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://dg.lapas.info/"&gt;Donatas Glodenis&lt;/a&gt; – KDE, Kubuntu&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://aur1mas.sektorius.info/"&gt;aur1mas&lt;/a&gt; – programavimas, PHP, Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.kroitus.com/category/atviras-kodas/linux/"&gt;Blog de la Kroitus&lt;/a&gt;
+– Linux, Atviras kodas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://foss-lt.blogspot.com/"&gt;Dūmo blogas apie Linux&lt;/a&gt; – tiesiog, Dūmo
+blogas apie Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://karolis.pocius.lt/tag/linux/"&gt;Karolis Pocius&lt;/a&gt; – Linux Mint, Ubuntu,
+Android&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.webpadange.lt/"&gt;Edvinas Stonikas&lt;/a&gt; – apie IT, tame tarpe ir
+Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.geefre.com/"&gt;Paulius Pečiūra&lt;/a&gt; – įvairūs, tačiau pasitaiko įrašų
+ir apie Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://mantas.lt/category/nix/"&gt;Mantas&lt;/a&gt; – asmeniniai patyrimia, serveriai,
+Linux, Ubuntu&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://manoerdve.net/?tag=linux"&gt;Aivaro blogas&lt;/a&gt; – apie viską, Atvirą kodą
+ir Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.geko.lt/blog/"&gt;Paulius Sladkevičius&lt;/a&gt; – Atviras kodas, Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://damn.lt/"&gt;damn.lt&lt;/a&gt; – IT pasaulis, Linux, BSD, MySQL ir t.t.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://warshke.livejournal.com/"&gt;warshke&lt;/a&gt; – Debian, Hacks ir panašiai&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://laisvosprogramos.blogspot.com/"&gt;AK naujienėlės iš pasaulio&lt;/a&gt; –
+daugiausiai atviras kodas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://blender.lt/"&gt;Blenderija&lt;/a&gt; – naujienos ir patarimai apie 3D
+modeliavimo programą Blender&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://dooo.domenas.net/atidarytuvas/"&gt;Atidarytuvas&lt;/a&gt; – laisvos programos&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://ubuntult.blogas.lt/"&gt;Karolis Keturka&lt;/a&gt; – Ubuntu&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://blog.sandbox.lt/"&gt;Daliaus blikis&lt;/a&gt; – Python, Ubuntu ir šiaip&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://blog.mandriva.lt/"&gt;Mandriva.lt&lt;/a&gt; – Mandriva&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://nook.lt/"&gt;Dainius Malachovskis&lt;/a&gt; – Atviras kodas, Open ERP, Verslo
+valdymo sistemos&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://emilis.info/"&gt;emilis.info&lt;/a&gt; – atviras kodas, programavimas,
+gyvenimas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://rtfb.lt/"&gt;rtfb&lt;/a&gt; – atviras kodas, programavimas, C/C++, Vim.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://mintys.org/"&gt;Aurimas Kerza&lt;/a&gt; – gyvenimas virtualiame pasaulyje ir
+truputėlis realybės&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://skladukas.blogspot.com/search/label/Linux"&gt;Debeselio Skladukas&lt;/a&gt; –
+Linux, Atviro kodo programos ir kita&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.emanuelis.eu/"&gt;emanuelis.eu&lt;/a&gt; – Linux, Ubuntu&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gavosi ne taip ir mažai. Žinoma kai kurie blogai yra šiek tiek apmirę, kai
+kurių iš vis neįtraukiau. Bendra situacija patenkinama... :)&lt;/p&gt;&lt;/div&gt;</description><category>floss</category><category>linux</category><guid>https://sirex.lt/posts/2010/lietuvos-blogeriai-neabejingi-gnulinux-os/</guid><pubDate>Sat, 19 Jun 2010 18:47:00 GMT</pubDate></item><item><title>Naudok priemonę labiausiai tinkančią užduočiai spręsti</title><link>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Kadangi esu programuotojas, mėgstu įvairias užduotis automatizuoti.  Kartais
+automatizavimas sutaupo labai daug laiko, kartais galima sugaišti labai daug
+laiko automatizuojant, bet šį kartą ne apie tai...&lt;/p&gt;
+&lt;p&gt;Trumpai apžvelgsiu priemones, kurias naudoju užduočių automatizavimui.&lt;/p&gt;
+&lt;div class="section" id="makefile"&gt;
+&lt;h2&gt;Makefile&lt;/h2&gt;
+&lt;p&gt;Labai naudinga priemonė ypač programuotojams, tačiau aš tai naudoju ne tik
+programavime. Pavyzdžiui esu pasidaręs Neo Freerunner sinchronizavimą su
+kompiuterių. Dažnai kataloge tiesiog aprašau Makefile, pamirštu ką jis daro ir
+kam jis skirtas, bet jei matau, kad kataloge yra Makefile, tai nesigilindamas
+rašau make ir darbas atliktas.&lt;/p&gt;
+&lt;p&gt;Tikriausiai 90% visų atviro kodo paketų naudoja Makefile, todėl įrankis tikrai
+laiko ir naudotojų gausos išbandytas ir atidirbtas. Gėris.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="shell-skriptai"&gt;
+&lt;h2&gt;Shell skriptai&lt;/h2&gt;
+&lt;p&gt;Jei kažką sunkiai sekasi aprašyti Makefile'uose, į pagalbą galima
+pasitelkti shell skriptus. Jei dar nežinote, tai nustebsite kiek daug
+galima pasiekti naudojant shell skriptus. Mano namų bin kataloge yra
+visa gausybė shell skriptų visiems gyvenimo atvejams. Šiuo metu ten yra:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ ls ~/bin | wc -l
+65&lt;/pre&gt;
+&lt;p&gt;65 skriptai.&lt;/p&gt;
+&lt;p&gt;Štai paprastas shell skripto pavyzdys, kuris gali praversti kas dieną:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_9a94c3261f784cbba268c201d54f2d6f-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;a name="rest_code_9a94c3261f784cbba268c201d54f2d6f-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;URL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'http://translate.google.lt/translate_t?q='&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s1"&gt;'#auto|lt'&lt;/span&gt;
+&lt;a name="rest_code_9a94c3261f784cbba268c201d54f2d6f-3"&gt;&lt;/a&gt;w3m -dump &lt;span class="nv"&gt;$URL&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt; egrep &lt;span class="s1"&gt;'^Žodynas'&lt;/span&gt; -A10
+&lt;/pre&gt;&lt;p&gt;Rezultatas gaunasi toks:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;test.sh shell
+Žodynas
+
+daiktavardis
+
+1. apvalkalas
+2. lukštas
+3. karkasas
+4. kiautas
+5. įdėklas
+6. šarvas veiksmažodis
+7. sluoksnis&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="sed-awk-ir-draugai"&gt;
+&lt;h2&gt;sed, awk ir draugai&lt;/h2&gt;
+&lt;p&gt;Rašant shell skriptus šių komandų gan dažnai prireikia, norint apdoroti
+kažkokią tekstinę informaciją. Čia daug ką kalbėti ir nebūtina, tiesiog
+pateiksiu paprasčiausią pavyzdį komandos, kuri pakeičia visų lentelių
+pavadinimus duomenų bazės faile:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ du -sh data.sql
+2,1G
+$ sed -i data.sql
+$ time sed -i 's/site1_prefix_/site2_prefix_/g' data.sql
+35,27s user 51,79s system 59% cpu 2:26,58 total&lt;/pre&gt;
+&lt;p&gt;Visas failas pakeistas per 2,5 minutes! Įdomu per kiek laiko šį failą atidarytų
+jūsų teksto redaktorius? :D&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="perl"&gt;
+&lt;h2&gt;perl&lt;/h2&gt;
+&lt;p&gt;Visi aukščiau išvardinti įrankiai yra puikūs, tačiau kai reikia atlikti šį tą
+sudėtingesnio, visada verta prisiminti perl.&lt;/p&gt;
+&lt;p&gt;Perl yra pilnavertė programavimo kalba, tačiau turi funkcijų panšių į sed ir
+awk, ne gana to, perl dirba labai greitai:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ time perl -i -nle 's/site1_prefix_/site2_prefix_/g; print' data.sql
+19,60s user 9,54s system 36% cpu 1:20,46 total&lt;/pre&gt;
+&lt;p&gt;Perl tą patį darbą atliko minute greičiau, nei sed! Bet dirbant su perl, reikia
+turėti kiek daugiau žinių, nei su sed.&lt;/p&gt;
+&lt;p&gt;Perl gali puikiausiai apdoroti tekstinius duomenis, o rezultatą įrašyti į
+duomenų bazę ar panašiai, kaip tai padaryta šiame pavyzdyje:&lt;/p&gt;
+&lt;pre class="code perl"&gt;&lt;a name="rest_code_3cdd8e3c452540429fb2523957c05628-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/usr/bin/perl -nl&lt;/span&gt;
+&lt;a name="rest_code_3cdd8e3c452540429fb2523957c05628-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3cdd8e3c452540429fb2523957c05628-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_3cdd8e3c452540429fb2523957c05628-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nn"&gt;DBI&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_3cdd8e3c452540429fb2523957c05628-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;our&lt;/span&gt; &lt;span class="nv"&gt;$dbh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nn"&gt;DBI&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"dbi:SQLite:dbname=/tmp/lines.db"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_3cdd8e3c452540429fb2523957c05628-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;our&lt;/span&gt; &lt;span class="nv"&gt;$sth&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$dbh&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;prepare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"INSERT INTO lines VALUES (?)"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_3cdd8e3c452540429fb2523957c05628-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_3cdd8e3c452540429fb2523957c05628-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_3cdd8e3c452540429fb2523957c05628-9"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$sth&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$_&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>perl</category><category>shell</category><guid>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</guid><pubDate>Thu, 17 Jun 2010 05:40:00 GMT</pubDate></item><item><title>PyJunior</title><link>https://sirex.lt/posts/2010/pyjunior/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Užtikau Jono Bacon, žmogaus atsakingo už Ubuntu bendruomenės reikalus, &lt;a class="reference external" href="http://www.jonobacon.org/2010/04/08/pyjunior-call-for-documentation-help/"&gt;įrašą
+apie PyJunior&lt;/a&gt;.
+Sudomino, įsidiegiau, išbandžiau, išverčiau į Lietuvių kalbą ir nusprendžiau
+pasidalinti šiuo atradimu.&lt;/p&gt;
+&lt;p&gt;Pirmiausia, štai kaip atrodo pati programa, su lietuvišku vertimu:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/pyjunior.png"&gt;&lt;img alt="PyJunior" class="previewimage" src="https://sirex.lt/images/pyjunior.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://launchpad.net/pyjunior/"&gt;PyJunior&lt;/a&gt; yra programa skirta Python
+mokymuisi. Nors Jono šią programą skiria vaikams, bet manau ji gali būti
+naudinga ne tik vaikams, bet visiems norintiems išmokti Python.&lt;/p&gt;
+&lt;p&gt;Programą Jono parašė per kelias valandas, bet pradžia gera ir programą jau
+galima naudoti, ji sėkmingai atlieka savo paskirtį. Įtariu Jono tinklaraštį
+seka gan daug žmonių, tai programa jau spėjo sulaukti pagalbos iš kitų
+programuotojų. Taip, pat programa jau išversta į Lietuvių ir Lenkų kalbas. Nors
+programa pradėta kurti vos prieš dvi dienas, bet jau sulaukė dėmesio ir
+nuveikta gan nemažai – (&lt;em&gt;the open source power! :)&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PyJunior&lt;/em&gt; leidžia lengvai kurti Python programas, visos programos pateikiamos
+bendrame sąraše, todėl nereikia dirbti su failais. Iš sąrašo akimirksniu galima
+atverti pasirinktą savo programą ir ją įvykdyti, pataisyti ir vėl vykdyti. Jei
+greitai reikia kažką patestuoti, PyJunior puikiai tam tinka.&lt;/p&gt;
+&lt;p&gt;Pats &lt;em&gt;PyJunior&lt;/em&gt; taip pat parašytas su Python. Dažniausiai dideli, ilgą laiką
+vystomi projektai yra sudėtingi. Šiuo atveju, &lt;em&gt;PyJunior&lt;/em&gt; yra vos kelių dienų
+amžius, todėl visi norintys išmokti Python gali studijuoti kol kas nedidelės
+apimties &lt;em&gt;PyJunior&lt;/em&gt; kodą, jį tobulinti, patobulinimus siūlyti Jono. Trumpai
+tariant, tai puiki vieta įsilieti į atviro kodo bendruomenę.&lt;/p&gt;
+&lt;p&gt;Kol kas nėra jokio &lt;em&gt;PyJunior&lt;/em&gt; Ubuntu paketo, taip pat nėra ir &lt;a class="reference external" href="https://sirex.lt/pazintis-su-archlinux.html"&gt;Archlinux&lt;/a&gt;
+paketo, todėl norint išbandyti programą, teks tai daryti rankiniu būdu.
+Pasileidau &lt;em&gt;virtualenv&lt;/em&gt; aplinka ir sutvarkius visas priklausomybes paleidau.&lt;/p&gt;
+&lt;p&gt;Štai trumpos instrukcijos, kaip paleisti:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ virtualenv pyjunior &amp;amp;&amp;amp; cd pyjunior
+$ mkdir src &amp;amp;&amp;amp; cd src
+$ bzr branch lp:python-distutils-extra
+$ ../bin/easy_install --find-links . python-distutils-extra
+$ ../bin/easy_install CouchDB
+$ bzr branch lp:desktopcouch
+$ sed -ri 's/\/(usr|etc)\//\1\//g' desktopcouch/setup.py
+$ ../bin/easy_install --find-links . desktopcouch
+$ ../bin/easy_install oauth
+$ bzr branch lp:pyjunior
+$ cd pyjunior
+$ ../../bin/python setup.py install
+$ ../..
+$ ./bin/pyjunior``&lt;/pre&gt;
+&lt;p&gt;Prieš tai, naudojantis savo distribucijos paketų sistema reikia įsidiegti
+couchdb paketą.&lt;/p&gt;&lt;/div&gt;</description><category>couchdb</category><category>floss</category><category>python</category><category>ubuntu</category><guid>https://sirex.lt/posts/2010/pyjunior/</guid><pubDate>Sat, 10 Apr 2010 16:34:00 GMT</pubDate></item><item><title>Muzika iš komandinės eilutės</title><link>https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Mėgstu klausytis muzikos ir patinka, kai muzika tiesiog groja. Ilgą laiką
+naudojuosi MPD muzikos demonu, kuris nuolat sukasi kompiuteryje ir klauso kas
+jam liepiama daryti.&lt;/p&gt;
+&lt;p&gt;MPD yra geras tuo, kad jį galima paleisti kompiuteriu kraunantis nebijant, kad
+tai apsunkins kompiuterio darbą, nes MPD demonas yra labai lengvas. Tada, bet
+kuriuo metu pakanka nuspausti mygtuką klaviatūroje „Play“ ir MPD gavęs signalą,
+pradeda groti muziką. Panašiai grojamą muziką galima pristabdyti, sustabdyti,
+paleisti sekančią dainą ar grąžinti prieš tai buvusią.&lt;/p&gt;
+&lt;p&gt;Tačiau, jei reikia paklausyti atsitiktinę dainą arba užkrauti vieną katalogą,
+MPD nėra labai patogus, nes tenka žaisti su muzikos biblioteka, įvedinėti
+visokias komandas ir pan.&lt;/p&gt;
+&lt;p&gt;Greitam muzikos klausymui ir atrankai, kur kas labiau tinka muzikos grotuvas
+CMUS, kuris yra paprastas, greitas ir turi panašumu su teksto redaktorių VIM.&lt;/p&gt;
+&lt;p&gt;Kad MPD ir CMUS derėtų tarpusavyje, esu pasirašęs paprastą SHELL skriptą, kurio
+pagalba paspaudus „Play“ patikrinama ar yra paleistas CMUS ir jei jis veikia,
+tuomet paleidžiama groti daina per CMUS, o jei jis išjungtas, tuomet naudojamas
+nuolat budintis MPD. Skriptas atrodo taip:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; in
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-4"&gt;&lt;/a&gt;    toggle&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-5"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-6"&gt;&lt;/a&gt;            cmus-remote --pause
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-7"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-8"&gt;&lt;/a&gt;            mpc toggle
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-9"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-10"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-11"&gt;&lt;/a&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-12"&gt;&lt;/a&gt;    stop&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-13"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-14"&gt;&lt;/a&gt;            cmus-remote --stop
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-15"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-16"&gt;&lt;/a&gt;            mpc stop
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-17"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-18"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-19"&gt;&lt;/a&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-20"&gt;&lt;/a&gt;    next&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-21"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-22"&gt;&lt;/a&gt;            cmus-remote --next
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-23"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-24"&gt;&lt;/a&gt;            mpc next
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-25"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-26"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-27"&gt;&lt;/a&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-28"&gt;&lt;/a&gt;    prev&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-29"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-30"&gt;&lt;/a&gt;            cmus-remote --prev
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-31"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-32"&gt;&lt;/a&gt;            mpc prev
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-33"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-34"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-35"&gt;&lt;/a&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-36"&gt;&lt;/a&gt;    *&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-37"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"usage: &lt;/span&gt;&lt;span class="nv"&gt;$0&lt;/span&gt;&lt;span class="s2"&gt; {toggle|stop|next|prev}"&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-38"&gt;&lt;/a&gt;&lt;span class="k"&gt;esac&lt;/span&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-39"&gt;&lt;/a&gt;
+&lt;a name="rest_code_7c1ced7384f74c83a3eca5d1a40284e8-40"&gt;&lt;/a&gt;&lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;div class="section" id="cmus"&gt;
+&lt;h2&gt;CMUS&lt;/h2&gt;
+&lt;p&gt;Kadangi CMUS yra labai paprastas, tai užtenka jį įdiegti, paleisti iš
+komandinės eilutės:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;cmus&lt;/pre&gt;
+&lt;p&gt;ir įkelti norima katalogą ar failą grojimui:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;:add ~/music&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="mpd"&gt;
+&lt;h2&gt;MPD&lt;/h2&gt;
+&lt;p&gt;MPD yra sudėtingesnis, nes veikia, kaip serveris. Pirmiausia, prieš pradedant
+jį naudot, reikia aprašyti konfigūracinį failą &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.mpdconf&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;music_directory "~/music/"
+playlist_directory "~/.mpd/playlists"
+db_file "~/.mpd/mpd.db"
+log_file "~/.mpd/mpd.log"
+error_file "~/.mpd/mpd.error"
+pid_file "~/.mpd/mpd.pid"
+state_file "~/.mpd/mpdstate"&lt;/pre&gt;
+&lt;p&gt;Tada į kartu su kompiuteriu paleidžiamas programas įkelkite programą &lt;em&gt;mpd&lt;/em&gt;.
+Norėdami patestuoti iš karto, komandinėje eilutėje įveskite &lt;em&gt;mpd&lt;/em&gt; ir paruoškite
+grojaraštį:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;mpc update
+mpc clear
+mpc mpc listall | mpc add
+mpc play&lt;/pre&gt;
+&lt;p&gt;Viskas, MPD paruoštas, pasileis kartu su kompiuteriu ir bet kuriuo metu bus
+pasiruošęs skleisti muzikos garsus.&lt;/p&gt;
+&lt;p&gt;Norėdami kontroliuoti MPD, galite naudoti komandinės eilutės klientą mpc arba
+ncurses klientą &lt;em&gt;ncmpcpp&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="media-klavisai"&gt;
+&lt;h2&gt;Media klavišai&lt;/h2&gt;
+&lt;p&gt;Paskutinis dalykas – media klavišų susiejimas, su aukščiau pateiktu &lt;em&gt;music.sh&lt;/em&gt;
+skritpu. Tai padarysite, nurodydami tokias komandas, atitinkamiems klavišams:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;/home/naudotojovardas/bin/music.sh toggle
+/home/naudotojovardas/bin/music.sh stop
+/home/naudotojovardas/bin/music.sh next
+/home/naudotojovardas/bin/music.sh prev&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="audio-scrobbler"&gt;
+&lt;h2&gt;Audio scrobbler&lt;/h2&gt;
+&lt;p&gt;Ar jums įdomu ką klausote? Man, taip, todėl naudojuosi audio scrobbling
+technologija klausomos muzikos statistikai vestis. Visą informaciją apie
+klausytą muziką siunčiu last.fm portalui, kur vėliau galiu parodyti draugams
+kokią muziką mėgstu ir pats pasižiūrėti klausomos muzikos statistiką. Mano
+last.fm profilis:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.last.fm/user/sirexas"&gt;http://www.last.fm/user/sirexas&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MPD demonui naudoju &lt;a class="reference external" href="http://mpd.wikia.com/wiki/Client:Mpdscribble"&gt;mpdscribble&lt;/a&gt;. CMUS – &lt;a class="reference external" href="http://github.com/freshprince/cmuscrobbler"&gt;cmuscrobbler&lt;/a&gt;.  Turint taip
+sukonfigūruotą sistemą, galima pamiršti apie muzikos programas ir tiesiog
+dirbant savo darbus klausytis muzikos!&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>shell</category><guid>https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/</guid><pubDate>Mon, 05 Apr 2010 19:43:00 GMT</pubDate></item><item><title>Windows tinklas</title><link>https://sirex.lt/posts/2010/windows-tinklas/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Kartas nuo karto, vis tenka susidurti su SAMBA serveriais, tiksliau su M$
+Windows naudotojų šarinamais failais. Dažniausiai su tuo būna įvairiausių
+problemų. Šį kartą vėl susidūriau su panašia problema.&lt;/p&gt;
+&lt;p&gt;Papasakosiu viską nuosekliai, kaip naudojantis komandine eilute, pilnavertiškai
+prieiti prie pašarintų failų.&lt;/p&gt;
+&lt;p&gt;Pirmas dalykas - reikia įsidiegti reikalingus paketus:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ sudo apt-get install smbclient smbfs&lt;/pre&gt;
+&lt;p&gt;Toliau - tikrinam tinkle esančius kompiuterius, kurie teikia vienokas ar
+kitokias SAMBA paslaugas:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ smbtree -U%&lt;/pre&gt;
+&lt;p&gt;Šios komandos pagalba paprasčiausiai bus grąžintas sąrašas visų kompiuterių
+tinkle, kurie turi kokių nors pašarintų failų, spausdintuvų ir pan. Parametras
+&lt;strong&gt;-U%&lt;/strong&gt; nurodo, kad jungiamasis be jokio naudotojo, kaip svečias. Jei norite
+jungtis tam tikru naudotojų, tada šis parametras turėtu atrodyti taip:
+&lt;strong&gt;-Unaudotojovardas%slaptazodis&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Kartais prireikia sužinoti tinklo naudotojo IP adresą, pagal jo sambos vardą,
+tai galima sužinoti tokios komandos pagalba:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ nmblookup KOMPIUITERIO_PAVADINIMAS&lt;/pre&gt;
+&lt;p&gt;Kai jau žinomas kompiuterio pavadinimas, prie kurio galima jungtis, tada reikia
+sužinoti ką jis šarina, tai galima sužinoti tokios komandos pagalba:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ smbclient -L KOMPIUTERIO_PAVADINIMAS -U%&lt;/pre&gt;
+&lt;p&gt;Jei greitai reikia parsisiųsti kokį nors vieną failą, tai paprastai galima
+padaryti prisijungus prie smbclient'o:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ smbclient //KOMPIUTERIO_PAVADINIMAS/SARINAMAS_KATALOGAS -U%
+$ ls
+$ cd kitas_katalogas
+$ ls
+$ get failo_pavadinimas&lt;/pre&gt;
+&lt;p&gt;Viskas, failas bus parsiūstas. Prisijungus šiuo būdu, gaunamas šelas, kuriame
+galima naudoti standartines komandas, tokias kaip &lt;em&gt;cd&lt;/em&gt;, &lt;em&gt;ls&lt;/em&gt; ir panašiai. Kad
+sužinotumėte kokios dar komandos yra, galite paprasčiausiai parašyti &lt;em&gt;help&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Jei norite panašyti po katalogus ir išsirinkti tai ko reikia, patogiausia tai
+daryti primontavus šarinamą katalogą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ sudo mount -t smbfs \
+    -o username=password=//KOMPIUTERIO_PAVADINIMAS/SARINAMAS_KATALOGAS /mnt&lt;/pre&gt;
+&lt;p&gt;Po šios komandos tinklo kompiuterio šarinamas katalogas bus pasiekiamas lyg jis
+būtų lokalus jūsų kompiuterio katalogas. Toliau galite spausit F2 ir atsidaryti
+&lt;em&gt;/mnt&lt;/em&gt; katalogą, kuriame ir bus tinklo kompiugterio failai.&lt;/p&gt;&lt;/div&gt;</description><category>floss</category><category>tinklas</category><guid>https://sirex.lt/posts/2010/windows-tinklas/</guid><pubDate>Mon, 08 Mar 2010 21:59:00 GMT</pubDate></item><item><title>Facebook jau palaiko Jabber/XMPP pokalbių protokolą!</title><link>https://sirex.lt/posts/2010/facebook-jau-palaiko-jabberxmpp-pokalbiu-protokola/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Puiki žinia, &lt;a class="reference external" href="http://developers.facebook.com/news.php?blog=1&amp;amp;story=361"&gt;Facebook pokalbiai jau veikia per Jabber/XMPP protokolą!&lt;/a&gt;.  Visiems, kas
+nekantrauja tai išbandyti, reikalingus prisijungimo duomenis rasite čia (reikia
+būti prisijungus prie Facebook):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.facebook.com/sitetour/chat.php"&gt;http://www.facebook.com/sitetour/chat.php&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="section" id="kas-yra-tas-jabber-xmpp"&gt;
+&lt;h2&gt;Kas yra tas Jabber/XMPP?&lt;/h2&gt;
+&lt;p&gt;Jabber/XMPP yra pokalbių protokolo atviras standartas. Šiuo metu tai yra
+de-facto pokalbių protokolo standartas, labiausiai prigijęs ir daugiausiai
+naudojamas. Šio standarto dėka, visiškai skirtingos programos, vadovaudamosi
+nustatytomis protokolo taisyklėmis gali kurti savo programas, kurios sėkmingai
+tarpusavyje susiderina.  Tai kažkas panašaus į XHTML standartą, daugelis
+naršyklių laikosi šio standarto, todėl nereikia skirtingų svetainių atidarinėti
+su skirtingomis naršyklėmis.&lt;/p&gt;
+&lt;p&gt;Jabber/XMPP atveju, daugelis pokalbių programų kalba ta pačia kalba, todėl
+pavyzdžiui Gajim programos naudotojai gali sėkmingai bendrauti su Google Talk
+naudotojais, o dabar lygiai taip pat atsirado galimybė bendrauti ir su Facebook
+svetainės lankytojais.&lt;/p&gt;
+&lt;p&gt;Pastaba. Lietuvoje populiari pokalbių programa Skype, nepaiso jokių standartų,
+todėl Skype nėra suderinamas su jokiomis kitomis programomis ar protokolais.
+Skype naudotojai gali bendrauti, tik su Skype naudotojais. Padėti pasikeistų,
+jei Skype pagaliau pradėtų paisyti standartų ir taip pat naudotų Jabber/XMPP
+protokolą.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="prisijungimo-instrukcijos-gajim-programai"&gt;
+&lt;h2&gt;Prisijungimo instrukcijos Gajim programai&lt;/h2&gt;
+&lt;p&gt;Žemiau pateikiu instrukcijas, kaip prisijungti prie Facebook per &lt;a class="reference external" href="http://www.gajim.org/"&gt;Gajim
+programą&lt;/a&gt;.&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p&gt;Atsidarykite pokalbių prieigų valdymo langą ir atsidariusiame lange
+pasirinkite „Pridėti“:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/gajim-menu-prieigos.png"&gt;&lt;img alt="/images/gajim-menu-prieigos.thumbnail.png" src="https://sirex.lt/images/gajim-menu-prieigos.thumbnail.png"&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Toliau atsivėrusiame lange pasirinkite „Jau turiu prieigą, kurią noriu
+naudoti“:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/gajim-nauja-prieiga.png"&gt;&lt;img alt="/images/gajim-nauja-prieiga.thumbnail.png" src="https://sirex.lt/images/gajim-nauja-prieiga.thumbnail.png"&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Įveskite duomenis, kuriuos pateikia Facebook, adresu:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.facebook.com/sitetour/chat.php"&gt;http://www.facebook.com/sitetour/chat.php&lt;/a&gt;&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/gajim-prieigos-duomenys.png"&gt;&lt;img alt="/images/gajim-prieigos-duomenys.thumbnail.png" src="https://sirex.lt/images/gajim-prieigos-duomenys.thumbnail.png"&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Galiausiai naujame langelyje spauskite „Baigti“:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/gajim-nauja-prieiga-pabaiga.png"&gt;&lt;img alt="/images/gajim-nauja-prieiga-pabaiga.thumbnail.png" src="https://sirex.lt/images/gajim-nauja-prieiga-pabaiga.thumbnail.png"&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Kadangi Facebook pokalbių serveris nenaudoja SSL/TLS šifravimo, tai Gajim
+įspės jus apie tai. Pasirodžiusiame langelyje pažymėkite abu paukščiukus ir
+spauskite „Gerai“:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/gajim-nesaugus-rysys.png"&gt;&lt;img alt="/images/gajim-nesaugus-rysys.thumbnail.png" src="https://sirex.lt/images/gajim-nesaugus-rysys.thumbnail.png"&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>facebook</category><category>floss</category><category>jabber</category><guid>https://sirex.lt/posts/2010/facebook-jau-palaiko-jabberxmpp-pokalbiu-protokola/</guid><pubDate>Sun, 14 Feb 2010 10:43:00 GMT</pubDate></item><item><title>SSH pamokėlės</title><link>https://sirex.lt/posts/2010/ssh-pamokeles/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;div class="section" id="kas-yra-ssh"&gt;
+&lt;h2&gt;Kas yra SSH?&lt;/h2&gt;
+&lt;p&gt;SSH yra Secure SHell.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-shell"&gt;
+&lt;h2&gt;Kas yra Shell?&lt;/h2&gt;
+&lt;p&gt;Shell yra programa suteikianti naudotojui tam tikrą sąsają. Linux pasaulyje,
+Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kuo-skiriasi-shell-nuo-ssh"&gt;
+&lt;h2&gt;Kuo skiriasi Shell nuo SSH?&lt;/h2&gt;
+&lt;p&gt;Paprasta Shell programa suteikia galimybę valdyti kompiuterį, kuriame ji
+paleista, tuo tarpu SSH, suteikia galimybę valdyti kitą tinklo kompiuterį,
+nuotoliniu būdu.&lt;/p&gt;
+&lt;p&gt;Tarkime, norint iškviesti Shell programą &lt;code class="docutils literal"&gt;bash&lt;/code&gt;, reikia:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;bash&lt;/pre&gt;
+&lt;p&gt;Norint iškviesti Shell programą bash kitame kompiuteryje reikia:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh kitas-kompiuteris bash&lt;/pre&gt;
+&lt;p&gt;Kaip matote, viskas, ką daro SSH, tai suteikia saugią prieigą prie nutolusio
+kompiuterio Shell programos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-ssh-raktas"&gt;
+&lt;h2&gt;Kas yra SSH raktas?&lt;/h2&gt;
+&lt;p&gt;SSH suteikia saugią prieigą prie kito kompiuterio, todėl jungiantis visą laiką
+prašomas kito kompiuterio naudotojo prieigos slaptažodis. SSH raktų dėka,
+galima susikurti vieną raktį nuo visų durų. Tai daroma taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh-keygen -C jusu@elpastas.lt
+scp ~/.ssh/id_rsa.pub kitas-kompiuteris:.ssh/authorized_keys&lt;/pre&gt;
+&lt;p&gt;Nuo šiol, prie kito kompiuterio galėsite jungtis be slaptažodžio, jei turite
+veikiantį taip vadinamą, raktų agentą. Ubuntu sistemoje raktų agentas veikia,
+todėl jungiantis prie kito kompiuterio, jūsų tik vieną kartą paklaus
+slaptažodžio nuo raktinės.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-ssh-keygen"&gt;
+&lt;h2&gt;Kas yra ssh-keygen?&lt;/h2&gt;
+&lt;p&gt;ssh-keygen yra programa, kuri sukuria viešąjį (&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.ssh/id_rsa.pub&lt;/span&gt;&lt;/code&gt;) ir
+privatųjį (&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.ssh/id_rsa&lt;/span&gt;&lt;/code&gt;) SSH raktus. Raktai išsaugomi failuose, kuriuos
+nurodžiau skliausteliuose.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-ssh-authorized-keys"&gt;
+&lt;h2&gt;Kas yra ~/.ssh/authorized_keys&lt;/h2&gt;
+&lt;p&gt;Tai yra paprasčiausias tekstinis failas, kuriame gali būti surašyti viešieji
+naudotojų raktai, kurie gali prisijungti naudodamiesi savo privažiuoju raktu.&lt;/p&gt;
+&lt;p&gt;Faile, vienas viešasis raktas saugomas vienoje eilutėje.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-scp"&gt;
+&lt;h2&gt;Kas yra scp?&lt;/h2&gt;
+&lt;p&gt;&lt;code class="docutils literal"&gt;scp&lt;/code&gt; yra Secure CoPy. Veikiai labai panašiai, kaip komanda cp, tik kopijuoja
+iš vieno kompiuterio, į kitą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;cp failas-a.txt failas-b.txt
+scp failas-a.txt kitas-kompiuteris:failas-b.txt&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kas-yra-sftp"&gt;
+&lt;h2&gt;Kas yra sftp?&lt;/h2&gt;
+&lt;p&gt;&lt;code class="docutils literal"&gt;sftp&lt;/code&gt; yra SSH File Transfer Protocol, veikia panašiai, kaip FTP, tik naudoja
+tą patį SSH. Štai paprastas būdas prisijungti prie kito kompiuterio, per
+&lt;code class="docutils literal"&gt;sftp&lt;/code&gt;, naudojantis failų naršymo programa nautilus:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;nautilus sftp://kitas-kompiuteris&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ar-galiu-apjungti-shell-ir-ssh-komandas"&gt;
+&lt;h2&gt;Ar galiu apjungti Shell ir SSH komandas?&lt;/h2&gt;
+&lt;p&gt;Taip. Tarkime norite iš kitas-kompiuteris eksportuoti MySQL duomenų bazę ir
+importuoti ją į savo kompiuterio MySQL duomenų bazę:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh kitas-kompiuteris 'mysqldump tavodb' | mysql manodb&lt;/pre&gt;
+&lt;p&gt;Šiame pavyzdyje, nutolusiame kompiuteryje iškviečiate komandą &lt;code class="docutils literal"&gt;mysqldump
+tavodb&lt;/code&gt;, kuri į ekraną išveda visą duomenų bazės turinį.  Toliau simbolio
+&lt;code class="docutils literal"&gt;|&lt;/code&gt; pagalba, tai kas išvedama į ekraną, nukreipiate į kitą komandą 'mysql
+manodb', kuri surenka visą duomenų bazės turinį ir importuoja jį į jūsų duomenų
+bazę.&lt;/p&gt;
+&lt;p&gt;Pasitaiko, kad tarp kompiuterių yra mažas tarptinklinis pralaidumas, todėl kad
+pagreitinti duomenų perdavimą, galima perduodamus duomenis suspausti:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ssh kitas-kompiuteris 'mysqldump tavodb | gzip -c' | gunzip -c | mysql manodb&lt;/pre&gt;
+&lt;p&gt;Tai tiek. Tikiuosi „pagavote kampą“ kas yra SSH, ir kaip paprastai galima juo
+naudotis sutaupant daug laiko.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>shell</category><category>ssh</category><guid>https://sirex.lt/posts/2010/ssh-pamokeles/</guid><pubDate>Thu, 04 Feb 2010 17:41:00 GMT</pubDate></item><item><title>GPL ar LGPL?</title><link>https://sirex.lt/posts/2010/gpl-ar-lgpl/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Šiandien rašydamas eilinę programą, kaip visada į failo pradžią įkėliau GPL
+šabloną:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre class="literal-block"&gt;Copyright (C)     This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License as
+published  the Free Software Foundation, either version 3 of the License,
+or (at your option) any later version.  This program is distributed in the
+hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU General Public License for more details.  You should have
+received a copy of the GNU General Public License along with this program.
+If not, see .&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Programa, kurią rašiau yra viešo naudojimo programinė biblioteka.  Visoms
+kitoms su GPL nesuderinamoms programoms, negalima naudoti GPL licencijuoto
+kodo.&lt;/p&gt;
+&lt;p&gt;Šiek tiek pasiskaitęs išsiaiškinau, kad programinėms bibliotekoms labiau tinka
+naudoti LGPL licenciją, kurios saugomą programą galima naudoti kartu su kitomis
+nežiūrint, nebūtinai suderinamomis su GPL.  Tai gi, jei rašote atviro kodo
+programą ir norite ją apsaugoti nuo piktų ketinimų, geriau tai programai
+taikyti GPL licenciją.&lt;/p&gt;
+&lt;p&gt;Tačiau, jei norite, kad jūsų parašyta programa būtų naudojama tiek su GPL
+suderinamomis programomis, tiek su nuosavybinėmis, tada geriau taikyti LGPL
+licenciją.&lt;/p&gt;
+&lt;p&gt;Daugiau informacijos apie GPL licencijas rasite:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.gnu.org/licenses/"&gt;gnu.org/licenses&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>floss</category><category>gpl</category><category>lgpl</category><guid>https://sirex.lt/posts/2010/gpl-ar-lgpl/</guid><pubDate>Thu, 21 Jan 2010 19:55:00 GMT</pubDate></item></channel></rss>

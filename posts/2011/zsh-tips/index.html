@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>ZSH Tips | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2011/zsh-tips/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../pypi/" title="Python paketai" type="text/html">
+<link rel="next" href="../../2012/barsavimas-internetu/" title="Balsavimas internetu" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="ZSH Tips">
+<meta property="og:url" content="https://sirex.lt/posts/2011/zsh-tips/">
+<meta property="og:description" content="Failų sąrašo išskleidimas
+Elementariausias pavyzdys:
+ls *
+Šiuo atveju, bus išskleidžiami visi failai, esantis aktyviame kataloge.
+Zsh failų sąrašo išskleidimui galima naudoti modifikatorius, kuriuos r">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2011-10-06T00:00:00+03:00">
+<meta property="article:tag" content="shell">
+<meta property="article:tag" content="zsh">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">ZSH Tips</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2011-10-06T00:00:00+03:00" itemprop="datePublished" title="2011-10-06 00:00">2011-10-06 00:00</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/shell/" rel="tag">shell</a>,                    <a class="tag p-category" href="../../../tags/zsh/" rel="tag">zsh</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="section" id="failu-saraso-isskleidimas">
+<h2>Failų sąrašo išskleidimas<a href="#failu-saraso-isskleidimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Elementariausias pavyzdys:</p>
+<pre class="literal-block">ls *</pre>
+<p>Šiuo atveju, bus išskleidžiami visi failai, esantis aktyviame kataloge.</p>
+<p>Zsh failų sąrašo išskleidimui galima naudoti modifikatorius, kuriuos reikia
+nurodyti skliausteliuose. Pavyzdys:</p>
+<pre class="literal-block">ls -lt **/*.rst(.om[0,8])</pre>
+<p>Pavyzdyje <code class="docutils literal">**/</code> rekursyviai išskleis visus failus ir katalogus su
+pakatalogiais ir failais juose. <code class="docutils literal">*.rst</code> išskleidžia bet kokius failus ar
+katalogus, su galūne <code class="docutils literal">.rst</code>. Toliau skliausteliuose nurodomi modifikatoriai,
+iš kurių <code class="docutils literal">.</code> išskleidžia tik paprastus failus, <code class="docutils literal">om</code> rezultatą rūšiuoja
+pagal failo keitimo datą, <code class="docutils literal">[0,8]</code> išskleidžia tik pirmus aštuonis failus.</p>
+<div class="section" id="failo-tipo-modifikatoriai">
+<h3>Failo tipo modifikatoriai<a href="#failo-tipo-modifikatoriai" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<table>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 84%">
+</colgroup>
+<tbody>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">*(/)</span></code></p></td>
+<td><p>tik katalogus</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">*(.)</span></code></p></td>
+<td><p>tik failus</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">*(@)</span></code></p></td>
+<td><p>tik simbolines nuorodas</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">*(=)</span></code></p></td>
+<td><p>tik socket failus</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">*(p)</code></p></td>
+<td><p>tik named pipe (FIFO)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">*(*)</span></code></p></td>
+<td><p>tik vykdomuosius failus (bet ne katalogus)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">*(%)</span></code></p></td>
+<td><p>tik įrenginių failus (simbolių arba blokų tipo)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">*(%b)</span></code></p></td>
+<td><p>tik blokų tipo specialiuosius failus</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">*(%c)</span></code></p></td>
+<td><p>tik simbolių tipo specialiuosius failus</p></td>
+</tr>
+</tbody>
+</table>
+<p>Pavyzdžiai:</p>
+<pre class="literal-block">ls *(/)</pre>
+<p>Parodyti aktyviame kataloge esančius pakatalogius.</p>
+<pre class="literal-block">ls *(*)</pre>
+<p>Parodyti aktyviame kataloge esančius vykdomuosius failus.</p>
+</div>
+<div class="section" id="failu-teisiu-modifikatoriai">
+<h3>Failų teisių modifikatoriai<a href="#failu-teisiu-modifikatoriai" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>Pagal failų skaitymo, rašymo ir vykdymo teises:</p>
+<table>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 28%">
+<col style="width: 24%">
+<col style="width: 26%">
+</colgroup>
+<tbody>
+<tr>
+<td><ul class="simple"><li>
+</li></ul></td>
+<td><p>gali skaityti</p></td>
+<td><p>gali rašyti</p></td>
+<td><p>gali vykdyti</p></td>
+</tr>
+<tr>
+<td><p>savininkas</p></td>
+<td><p><code class="docutils literal">*(r)</code></p></td>
+<td><p><code class="docutils literal">*(w)</code></p></td>
+<td><p><code class="docutils literal">*(x)</code></p></td>
+</tr>
+<tr>
+<td><p>grupė</p></td>
+<td><p><code class="docutils literal">*(A)</code></p></td>
+<td><p><code class="docutils literal">*(I)</code></p></td>
+<td><p><code class="docutils literal">*(E)</code></p></td>
+</tr>
+<tr>
+<td><p>visi</p></td>
+<td><p><code class="docutils literal">*(R)</code></p></td>
+<td><p><code class="docutils literal">*(W)</code></p></td>
+<td><p><code class="docutils literal">*(X)</code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Pagal tiksliai nurodytas failų teises:</p>
+<pre class="literal-block">*(fCHMOD)</pre>
+<p>Išskleisti tik tuos failus, kurių teisės tiksliai atitinka nurodytą CHMOD
+teisių aprašą. CHMOD turi būti septintainis skaičius, pavyzdžiui: <em>0755</em>.</p>
+<p>Pagal specialiąsias failų teises:</p>
+<table>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 81%">
+</colgroup>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">*(s)</code></p></td>
+<td><p>tik setuid failus (04000)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">*(S)</code></p></td>
+<td><p>tik setgid failus (02000)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">*(t)</code></p></td>
+<td><p>tik failus su sticky bitu (01000)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Pagal failų savininkus ir grupes:</p>
+<table>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">*(U)</code></p></td>
+<td><p>savininkas yra einamasis naudotojas</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">*(G)</code></p></td>
+<td><p>grupė yra einamojo naudotojo grupė</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">*(uUID)</code></p></td>
+<td><p>savininkas yra UID</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">*(gGID)</code></p></td>
+<td><p>savininkas yra GID</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="failu-atidarymo-ir-keitimo-modifikatoriai">
+<h3>Failų atidarymo ir keitimo modifikatoriai<a href="#failu-atidarymo-ir-keitimo-modifikatoriai" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>Gali būti tokie modifikatoriai:</p>
+<pre class="literal-block">*(a[Mwhm][-|+]n)
+*(m[Mwhm][-|+]n)
+*(c[Mwhm][-|+]n)</pre>
+<p>Pirmoji raidė reiškia:</p>
+<table>
+<colgroup>
+<col style="width: 3%">
+<col style="width: 97%">
+</colgroup>
+<tbody>
+<tr>
+<td><p>a</p></td>
+<td><p>failo atidarymo laikas</p></td>
+</tr>
+<tr>
+<td><p>m</p></td>
+<td><p>failo informacijos keitimo laikas</p></td>
+</tr>
+<tr>
+<td><p>c</p></td>
+<td><p>failo turinio keitimo laikas</p></td>
+</tr>
+</tbody>
+</table>
+<p>Antroji raidė reiškia:</p>
+<table>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 91%">
+</colgroup>
+<tbody>
+<tr>
+<td><p>M</p></td>
+<td><p>mėnuo</p></td>
+</tr>
+<tr>
+<td><p>w</p></td>
+<td><p>savaitė</p></td>
+</tr>
+<tr>
+<td><p>h</p></td>
+<td><p>valanda</p></td>
+</tr>
+<tr>
+<td><p>m</p></td>
+<td><p>minutė</p></td>
+</tr>
+</tbody>
+</table>
+<p>Jei antroji raidė nenurodyta, laikas bus skaičiuojamas dienomis.</p>
+<p>Trečiasis simbolis gali būti (-) - nurodo išskleisti failus, kurių nurodytas
+laiko parametras yra mažesnis už <em>n</em>, (+) - nurodo išskleisti failus, kurių
+nurodytas laiko parametras yra didesnis nei <em>n</em>. Jei trečiasis simbolis
+nenurodytas, bus išskleidžiami tik tie failai, kurie tiksliai atitinka nurodytą
+laiko parametrą.</p>
+<p>Paskutinis simbolis arba likę simboliai yra skaičius, kuris nurodo laiko kiekį.</p>
+<p>Pavyzdys:</p>
+<pre class="literal-block">ls *(c-3)</pre>
+<p>Bus išskleisti failai, kurių turinys buvo keistas trijų dienų bėgyje.</p>
+<pre class="literal-block">ls *(ch+5)</pre>
+<p>Bus išskleisti failai, kurių turinys buvo keistas daugiau nei prieš 5 valandas.</p>
+</div>
+</div>
+<div class="section" id="naudotu-komandu-pernaudojimas">
+<h2>Naudotų komandų pernaudojimas<a href="#naudotu-komandu-pernaudojimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Pernaudoti anksčiau panaudotas komandas, galima šauktuko (<code class="docutils literal">!</code>) simbolio
+pagalba. Pavyzdžiai:</p>
+<table>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 82%">
+</colgroup>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">!!</code></p></td>
+<td><p>prieš tai įvesta komandos eilutė</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">!#</code></p></td>
+<td><p>visa, šiuo metu įvesta komanda, komandų eilutėje</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">!1</code></p></td>
+<td><p>pirma įvesta komanda iš komandų istorijos</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">!-2</span></code></p></td>
+<td><p>antra nuo galo komanda</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">!?ls</span></code></p></td>
+<td><p>paskutinė komanda iš komandų istorijos, prasidedanti <code class="docutils literal">ls</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="komandu-argumentu-pernaudojimas">
+<h3>Komandų argumentų pernaudojimas<a href="#komandu-argumentu-pernaudojimas" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>Galima pernaudoti ne tik visą komandų eilutę, bet tik tam tikrus jos
+argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:</p>
+<table>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 82%">
+</colgroup>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">!^</code></p></td>
+<td><p>pirmas argumentas</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">!$</code></p></td>
+<td><p>paskutinis argumentas</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">!*</code></p></td>
+<td><p>visi argumentai</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">!:2</code></p></td>
+<td><p>antras argumentas</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">!:3*</code></p></td>
+<td><p>visi argumentai, nuo trečio iki pabaigos</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">!:3-</code></p></td>
+<td><p>visi argumentai, nuo trečio iki pabaigos, išskyrus paskutinį</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">!:1-3</span></code></p></td>
+<td><p>argumentai, nuo antro iki trečio</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="keitiniai">
+<h2>Keitiniai<a href="#keitiniai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Kelio keitiniai:</p>
+<table>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 84%">
+</colgroup>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">:h</code></p></td>
+<td><p>pašalina vieną kelio elementą, nuo kelio pabaigos</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">:t</code></p></td>
+<td><p>grąžina paskutinį kelio elementą (failo ar katalogo pavadinimą)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">:r</code></p></td>
+<td><p>pašalina failo plėtinį</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">:e</code></p></td>
+<td><p>palikti tik failo plėtinį</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">:a</code></p></td>
+<td><p>absoliutus kelias</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">:A</code></p></td>
+<td><p>absoliutus kelias, išskleidžiant simbolines nuorodas</p></td>
+</tr>
+</tbody>
+</table>
+<p>Raidžių keitimas didžiosiomis/mažosiomis:</p>
+<table>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 84%">
+</colgroup>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">:l</code></p></td>
+<td><p>keičia raides mažosiomis</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">:u</code></p></td>
+<td><p>keičia raides didžiosiomis</p></td>
+</tr>
+</tbody>
+</table>
+<p>Kabučių valdymas:</p>
+<table>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 84%">
+</colgroup>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">:q</code></p></td>
+<td><p>uždeda kabutes, kad keitinį būtų galima naudoti kitiems keitiniams</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">:x</code></p></td>
+<td><p>uždeda kabutes visoms dalims, atskirtoms tarpais</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">:Q</code></p></td>
+<td><p>pašalina kabutes</p></td>
+</tr>
+</tbody>
+</table>
+<p>Žodžių paieška ir keitimas:</p>
+<table>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 84%">
+</colgroup>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">:s</code></p></td>
+<td><p>randa ir keičia žodžius, pvz.: <code class="docutils literal">:s/abc/xyz/</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">:&amp;</code></p></td>
+<td><p>kartoti paskutinį <code class="docutils literal">:s</code> keitinį dar kartą</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">:g</code></p></td>
+<td><p>globaliai taikyti <code class="docutils literal">:s</code> arba <code class="docutils literal">&amp;</code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Kita:</p>
+<table>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 84%">
+</colgroup>
+<tbody><tr>
+<td><p><code class="docutils literal">:p</code></p></td>
+<td><p>išveda keitinį, jo nevykdydamas</p></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../pypi/" rel="prev" title="Python paketai">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../2012/barsavimas-internetu/" rel="next" title="Balsavimas internetu">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

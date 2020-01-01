@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>SSH pamokėlės | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2010/ssh-pamokeles/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../gpl-ar-lgpl/" title="GPL ar LGPL?" type="text/html">
+<link rel="next" href="../facebook-jau-palaiko-jabberxmpp-pokalbiu-protokola/" title="Facebook jau palaiko Jabber/XMPP pokalbių protokolą!" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="SSH pamokėlės">
+<meta property="og:url" content="https://sirex.lt/posts/2010/ssh-pamokeles/">
+<meta property="og:description" content="Kas yra SSH?
+SSH yra Secure SHell.
+
+
+Kas yra Shell?
+Shell yra programa suteikianti naudotojui tam tikrą sąsają. Linux pasaulyje,
+Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-02-04T19:41:00+02:00">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="shell">
+<meta property="article:tag" content="ssh">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">SSH pamokėlės</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2010-02-04T19:41:00+02:00" itemprop="datePublished" title="2010-02-04 19:41">2010-02-04 19:41</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/shell/" rel="tag">shell</a>,                    <a class="tag p-category" href="../../../tags/ssh/" rel="tag">ssh</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="section" id="kas-yra-ssh">
+<h2>Kas yra SSH?<a href="#kas-yra-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>SSH yra Secure SHell.</p>
+</div>
+<div class="section" id="kas-yra-shell">
+<h2>Kas yra Shell?<a href="#kas-yra-shell" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Shell yra programa suteikianti naudotojui tam tikrą sąsają. Linux pasaulyje,
+Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.</p>
+</div>
+<div class="section" id="kuo-skiriasi-shell-nuo-ssh">
+<h2>Kuo skiriasi Shell nuo SSH?<a href="#kuo-skiriasi-shell-nuo-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Paprasta Shell programa suteikia galimybę valdyti kompiuterį, kuriame ji
+paleista, tuo tarpu SSH, suteikia galimybę valdyti kitą tinklo kompiuterį,
+nuotoliniu būdu.</p>
+<p>Tarkime, norint iškviesti Shell programą <code class="docutils literal">bash</code>, reikia:</p>
+<pre class="literal-block">bash</pre>
+<p>Norint iškviesti Shell programą bash kitame kompiuteryje reikia:</p>
+<pre class="literal-block">ssh kitas-kompiuteris bash</pre>
+<p>Kaip matote, viskas, ką daro SSH, tai suteikia saugią prieigą prie nutolusio
+kompiuterio Shell programos.</p>
+</div>
+<div class="section" id="kas-yra-ssh-raktas">
+<h2>Kas yra SSH raktas?<a href="#kas-yra-ssh-raktas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>SSH suteikia saugią prieigą prie kito kompiuterio, todėl jungiantis visą laiką
+prašomas kito kompiuterio naudotojo prieigos slaptažodis. SSH raktų dėka,
+galima susikurti vieną raktį nuo visų durų. Tai daroma taip:</p>
+<pre class="literal-block">ssh-keygen -C jusu@elpastas.lt
+scp ~/.ssh/id_rsa.pub kitas-kompiuteris:.ssh/authorized_keys</pre>
+<p>Nuo šiol, prie kito kompiuterio galėsite jungtis be slaptažodžio, jei turite
+veikiantį taip vadinamą, raktų agentą. Ubuntu sistemoje raktų agentas veikia,
+todėl jungiantis prie kito kompiuterio, jūsų tik vieną kartą paklaus
+slaptažodžio nuo raktinės.</p>
+</div>
+<div class="section" id="kas-yra-ssh-keygen">
+<h2>Kas yra ssh-keygen?<a href="#kas-yra-ssh-keygen" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>ssh-keygen yra programa, kuri sukuria viešąjį (<code class="docutils literal"><span class="pre">~/.ssh/id_rsa.pub</span></code>) ir
+privatųjį (<code class="docutils literal"><span class="pre">~/.ssh/id_rsa</span></code>) SSH raktus. Raktai išsaugomi failuose, kuriuos
+nurodžiau skliausteliuose.</p>
+</div>
+<div class="section" id="kas-yra-ssh-authorized-keys">
+<h2>Kas yra ~/.ssh/authorized_keys<a href="#kas-yra-ssh-authorized-keys" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Tai yra paprasčiausias tekstinis failas, kuriame gali būti surašyti viešieji
+naudotojų raktai, kurie gali prisijungti naudodamiesi savo privažiuoju raktu.</p>
+<p>Faile, vienas viešasis raktas saugomas vienoje eilutėje.</p>
+</div>
+<div class="section" id="kas-yra-scp">
+<h2>Kas yra scp?<a href="#kas-yra-scp" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><code class="docutils literal">scp</code> yra Secure CoPy. Veikiai labai panašiai, kaip komanda cp, tik kopijuoja
+iš vieno kompiuterio, į kitą:</p>
+<pre class="literal-block">cp failas-a.txt failas-b.txt
+scp failas-a.txt kitas-kompiuteris:failas-b.txt</pre>
+</div>
+<div class="section" id="kas-yra-sftp">
+<h2>Kas yra sftp?<a href="#kas-yra-sftp" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><code class="docutils literal">sftp</code> yra SSH File Transfer Protocol, veikia panašiai, kaip FTP, tik naudoja
+tą patį SSH. Štai paprastas būdas prisijungti prie kito kompiuterio, per
+<code class="docutils literal">sftp</code>, naudojantis failų naršymo programa nautilus:</p>
+<pre class="literal-block">nautilus sftp://kitas-kompiuteris</pre>
+</div>
+<div class="section" id="ar-galiu-apjungti-shell-ir-ssh-komandas">
+<h2>Ar galiu apjungti Shell ir SSH komandas?<a href="#ar-galiu-apjungti-shell-ir-ssh-komandas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Taip. Tarkime norite iš kitas-kompiuteris eksportuoti MySQL duomenų bazę ir
+importuoti ją į savo kompiuterio MySQL duomenų bazę:</p>
+<pre class="literal-block">ssh kitas-kompiuteris 'mysqldump tavodb' | mysql manodb</pre>
+<p>Šiame pavyzdyje, nutolusiame kompiuteryje iškviečiate komandą <code class="docutils literal">mysqldump
+tavodb</code>, kuri į ekraną išveda visą duomenų bazės turinį.  Toliau simbolio
+<code class="docutils literal">|</code> pagalba, tai kas išvedama į ekraną, nukreipiate į kitą komandą ‘mysql
+manodb’, kuri surenka visą duomenų bazės turinį ir importuoja jį į jūsų duomenų bazę.</p>
+<p>Pasitaiko, kad tarp kompiuterių yra mažas tarptinklinis pralaidumas, todėl kad
+pagreitinti duomenų perdavimą, galima perduodamus duomenis suspausti:</p>
+<pre class="literal-block">ssh kitas-kompiuteris 'mysqldump tavodb | gzip -c' | gunzip -c | mysql manodb</pre>
+<p>Tai tiek. Tikiuosi „pagavote kampą“ kas yra SSH, ir kaip paprastai galima juo
+naudotis sutaupant daug laiko.</p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../gpl-ar-lgpl/" rel="prev" title="GPL ar LGPL?">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../facebook-jau-palaiko-jabberxmpp-pokalbiu-protokola/" rel="next" title="Facebook jau palaiko Jabber/XMPP pokalbių protokolą!">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

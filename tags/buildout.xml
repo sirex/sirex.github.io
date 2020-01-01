@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about buildout)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/buildout.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip paleisti darbinį LAMP serverį su buildout?</title><link>https://sirex.lt/posts/2009/kaip-paleisti-darbini-lamp-serveri-su-buildout/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jei kada bandėte programuoti su PHP, tikriausiai susidūrėte su LAMP serverio
+diegimu ir konfigūravimu. Žinoma Ubuntu aplinkoje tai padaroma vienos komandos
+pagalba, tačiau turi šiokių tokių minusų:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;PHP, Apache ir MySQL versijos yra tokios, kokias pateikia distribucija&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pagal nutylėjimą, web-root katalogas yra /var/www ir turi ne itin draugiškas
+failų ir katalogų teises.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Įdiegus LAMP, kiekvieną kartą paleidus kompiuterį, automatiškai startuoja
+Apache ir MySQL.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yra kur kas paprastesnis ir švaresnis būdas programuoti su PHP, panaudojant
+puikųjį buildout'ą. Nesiplečiant, štai komandos, kurių dėka turėsite pilnai
+paruoštą darbui LAMP serverį:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ sudo apt-get install mercurial python-setuptools
+$ hg clone http://bitbucket.org/sirex/lamp-buildout/ web
+$ cd web
+$ python bootstrap.py
+$ bin/buildout&lt;/pre&gt;
+&lt;p&gt;Paskutinė komanda parsisiųs naujausius Apache, PHP, MySQL, PhpMyAdmin,
+Supervisor ir kitų paketų išeities tekstus, juos sukompiliuos, įdiegs į uždarą
+buildout aplinką, sukonfigūruos ir paruoš pilnai veikiantį LAMP serverį.&lt;/p&gt;
+&lt;p&gt;Apache ir MySQL paleisti galėsite taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ bin/supervisord&lt;/pre&gt;
+&lt;p&gt;Tai, kas paleista, galėsite kontroliuoti Web aplinkoje, adresu &lt;a class="reference external" href="http://localhost:9001/"&gt;localhost:9001&lt;/a&gt;. Pats Web'as bus pasiekiamas adresu: &lt;a class="reference external" href="http://localhost:9002/"&gt;localhost:9002&lt;/a&gt;. Portus galėsite keisti buildout.cfg faile.&lt;/p&gt;
+&lt;p&gt;PHP skriptus galėsite rašyti savo naudotojo teisėmis, web/htdocs kataloge.
+Viskas, kas bus įdiegta visiškai nesipjaus su jūsų sistema.  Redaguodami
+buildout.cfg failą, galėsite nusistatyti ką tik norite.  Galėsite nurodyti
+kitas paketų versijas, įtraukti papildomus paketus, nurodyti PHP ar MySQL
+kompiliavimo parametrus ir pan. Vėliau,&lt;/p&gt;
+&lt;p&gt;išsisaugoję šį failą, labai nesunkiai galėsite vėl atkurti viską, ką turėjote.&lt;/p&gt;
+&lt;p&gt;Mintį radau šioje svetainėje:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://aclark.net/team/aclark/blog/a-lamp-buildout-for-wordpress-and-other-php-apps"&gt;http://aclark.net/team/aclark/blog/a-lamp-buildout-for-wordpress-and-other-php-apps&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>buildout</category><category>floss</category><category>python</category><guid>https://sirex.lt/posts/2009/kaip-paleisti-darbini-lamp-serveri-su-buildout/</guid><pubDate>Fri, 16 Oct 2009 16:38:00 GMT</pubDate></item></channel></rss>

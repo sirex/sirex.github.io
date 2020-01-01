@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about macosx)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/macosx.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Mac OS X išpūstas burbulas?</title><link>https://sirex.lt/posts/2008/mac-os-x-ispustas-burbulas/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Tikriausiai susilauksiu visokių puldinėjimų iš Mac OS X gerbėjų, tačiau
+pacituosiu ir pakomentuosiu vieną forumo įrašą, kuris man patiko ir sukėlė
+visokių minčių.&lt;/p&gt;
+&lt;p&gt;Štai įrašas iš &lt;a class="reference external" href="http://www.ubuntu.lt/render/Forum;thread,3060"&gt;ubuntu.lt forumo&lt;/a&gt;, autorius &lt;a class="reference external" href="http://www.ubuntu.lt/render/User;e,about;uid,3640"&gt;arski&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apple macOS, tai isvis yra pavizdys, kaip gerai reikia moket legaliai is sh
+sviesta spaust ir darytis gera $. Taip, ten kazkiek modifikuotas BSD,
+pririshtas prie hardwaro. ta pati galejo padaryt kokia nors Toshiba. Esme,
+kad ten viskas veikia ir tai yra patrauklu vartotojui, taciau ten yra
+elementarus, gerai atkonfigintas unixas. Is Apple nauda tik tada jei dirbi
+su garsu arba dizainu, nes ten yra tam tikro softo, kuris "tiesiog veiks",
+taciau su brandu padarytas overhypas, kuris pritraukia tam tikra dali
+asmenybiu, kurie yra shventai isitikine, kad Apple turejimas yra kazkoks
+jau gero lygio irodymas...kas beje nera, nes is betkurio kompo ismetus
+MacOS ir instaliavus Windows, tarkim, tai pamatytum, kad uz hardwara
+permokejai i dausas.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Kas man sukėlė apmąstymų, o gi tai, kad paėmus pačią paprasčiausią Ubuntu, ant
+gerai suderinamos geležies, per kelias valandas galima jį sukonfigūruoti taip,
+kad jis mažai kuo tesi skirtų nuo Mac OS X. Taip sakau todėl, kad pats prieš
+kiek laiko bandžiau &lt;a class="reference external" href="http://sirex.lt/node/37"&gt;taip sukonfigūruoti Ubuntu&lt;/a&gt;.
+Rezultatais buvau patenkintas.  Jei tai galiu padaryti aš, tai įsivaizduokite,
+ką gali padaryti rimta kompaniją, kad ir tokia kaip &lt;a class="reference external" href="http://www.dell.com/content/topics/segtopic.aspx/linux_3x?c=us&amp;amp;cs=19&amp;amp;l=en&amp;amp;s=dhs"&gt;Dell&lt;/a&gt;.
+Tarkime, būtų įgyvendintas toks projektas, kuriam būtų sukurta speciali
+geležis, tai geležiai padaryta nauja distribucija, kad ir Ubuntu pagrindu. Ta
+distrubucija turėtų daug visokių „Eye Candy“ dalykėlių ir dar visokių
+smulkmenų, kurios puikiai derėtų su geležimi ir tiesiog veiktų. Manau labai
+nesunkiai būtų galima pasiekti Mac OS X lygį.  Skamba visai gražiai. Bet
+pagalvojus su kuo reikės konkuruoti – Microsoft Windows, kurie dantimis
+įsikandę laikosi savo rinkos dalies, nors kažkokių naujovių, nelabais ir
+pasiūlo. Tai ko gero daugeliui rankos greitai nusileistų. Tuo labiau, kad Apple
+Mac OS X su tokiu PR ir tai vos vos rinka te sugeba atsikovoti. Tai
+atsiradusiai naujai operacinei sistemai būtų dar sunkiau.&lt;/p&gt;
+&lt;p&gt;Tačiau visai tikėtina, kad tarkim koks Google galėtų ryžtis tokiam žingsniui,
+nes kaip žinia kitų metų pradžioje, Google planuoja išleisti savo interneto
+naršyklę Chrome.&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>macosx</category><guid>https://sirex.lt/posts/2008/mac-os-x-ispustas-burbulas/</guid><pubDate>Tue, 25 Nov 2008 08:46:00 GMT</pubDate></item></channel></rss>

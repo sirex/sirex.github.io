@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>GPG | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2009/gpg/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../youtube-video-is-komandines-eilutes/" title="Youtube video iš komandinės eilutės" type="text/html">
+<link rel="next" href="../lietuvos-tukstantmecio-vaikai-neturi-jokio-supratimo-apie-atvira-koda/" title="Lietuvos tūkstantmečio vaikai neturi jokio supratimo apie atvirą kodą!!!" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="GPG">
+<meta property="og:url" content="https://sirex.lt/posts/2009/gpg/">
+<meta property="og:description" content="Jau senai planavau susikurti GPG raktą ir susikonfigūruoti savo pašto klientą, kad šis automatiškai uždėtu GPG parašą ant mano siunčiamų laiškų. Šiandien pagaliau nusprendžiau tai padaryti. Pamaniau g">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2009-06-10T22:14:00+02:00">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="gpg">
+<meta property="article:tag" content="shell">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">GPG</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2009-06-10T22:14:00+02:00" itemprop="datePublished" title="2009-06-10 22:14">2009-06-10 22:14</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/gpg/" rel="tag">gpg</a>,                    <a class="tag p-category" href="../../../tags/shell/" rel="tag">shell</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Jau senai planavau susikurti GPG raktą ir susikonfigūruoti savo pašto klientą, kad šis automatiškai uždėtu GPG parašą ant mano siunčiamų laiškų. Šiandien pagaliau nusprendžiau tai padaryti. Pamaniau gal būt dar kam nors bus įdomu sužinoti kaip tai daroma.</p>
+<div class="section" id="kam-reikalingas-elektroninis-parasas">
+<h2>Kam reikalingas elektroninis parašas?<a href="#kam-reikalingas-elektroninis-parasas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Elektroninis parašas užtikrina, kad pasirašytasis tekstas po pasirašymo nebuvo pakeistas ir išliko lygiai toks pats, koks buvo prieš pasirašant.  Taip pat yra galimybė patikrinti ar parašo savininkas tikrai pasirašė naudodamasis savo parašu.</p>
+<p>Trumpai tariant parašo dėka galima identifikuoti parašo savininką ir įsitikinti, kad pasirašytieji duomenys nebuvo pakeisi trečiųjų šalių.</p>
+</div>
+<div class="section" id="elektroninio-paraso-veikimo-principas">
+<h2>Elektroninio parašo veikimo principas<a href="#elektroninio-paraso-veikimo-principas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>El. paraše esminis dalykas yra privatusis ir viešasis raktai. Privatųjį rakta žino tik to rakto savininkas, o viešasis raktas žinomas visiems.  Vienu iš šių raktų galima duomenis užkoduoti, o kitu iškoduoti. Norint pasirašyti po kokiais nors duomenimis iš pradžių sukuriamas tų duomenų vienkryptis atvaizdas (<em>angl.  hash</em>), tai reiškia kad duomenys paverčiami į nedidelę įvairių simbolių eilutę.  Vėliau panaudojant privatų raktą gautoji duomenų eilutė užkoduojama ir gaunamas parašas.  Kaip ir minėjau, kas yra užkoduota naudojant vieną raktą, kito pagalba gali būti atkoduojama. Šiuo atveju parašas gali būti atkoduotas naudojant viešąjį raktą. Atkodavus parašą gaunamas duomenų atvaizdas.  Pasirašytuosius duomenis pavertus į duomenų atvaizdą ir palyginus jį su iškoduotu raktu galima įsitikinti ar duomenys buvo keisti ar ne.</p>
+</div>
+<div class="section" id="kaip-susikurti-savo-privatu-ir-viesaji-raktus">
+<h2>Kaip susikurti savo privatų ir viešąjį raktus?<a href="#kaip-susikurti-savo-privatu-ir-viesaji-raktus" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Susikurti savo privatų ir viešąjį raktus nesudėtinga. Paleiskite komandą ir sekite instrukcijas:</p>
+<pre class="literal-block">$ gpg --gen-key</pre>
+<p>Po kurio laiko bus sugeneruoti raktai. Juos galite pamatyti įvykdę tokią komandą:</p>
+<pre class="literal-block">$ gpg --list-keys</pre>
+<p>Savo viešąjį raktą reikia išeksportuoti ir paviešinti, galima jį persiųsti savo
+draugams, patalpinti savo asmeninėje svetainėje arba bendruose raktų
+serveriuose. Raktas išeksportuojamas taip:</p>
+<pre class="literal-block">$ gpg -a --export tavo-el-pasto@adresas.lt &gt; tavoviesasisraktas.asc</pre>
+<p># Kaip sužinoti savo rakto ID ir fingerprint?</p>
+<p>Įvedus tokią komandą:</p>
+<pre class="literal-block">$ gpg --list-public-keys el.pastas@example.com
+pub   11111/AAAAAAAA 2001-01-01
+      Key fingerprint = AAAA AAAA AAAA AAAA AAAA  AAAA AAAA AAAA AAAA AAAA
+uid                  Name Surname &lt;el.pastas@example.com&gt;
+sub   22222/BBBBBBBB 2001-01-01</pre>
+<p>Į ekraną bus išvestas rakto ID ir fingerpring. Šiuo atveju rakto ID yra
+<cite>AAAAAAAA</cite>, o fingerpring yra tai kas parašyta po „Key fingerpring = “ eilute.</p>
+<p># Kaip išsiųsti savo raktą į raktų serverį?</p>
+<p>Savo raktą į raktų serverį išsiųsite taip:</p>
+<pre class="literal-block">$ gpg --send-keys AAAAAAAA</pre>
+<p># Kaip importuoti kito žmogaus raktą į savo raktinę?</p>
+<p>Jei žinote rakto ID:</p>
+<pre class="literal-block">$ gpg --recv-keys AAAAAAAA</pre>
+<p>Jei žinote tik el. pašto adresą arba rakto savininko vardą:</p>
+<pre class="literal-block">$ gpg --search-keys vardas@example.com</pre>
+<p>Suradus ieškomą raktą, galima jį importuoti pagal ID, taip kaip aprašyta aukščiau.</p>
+<p>Jei turite viešojo rakto failą, jį importuoti galima taip:</p>
+<pre class="literal-block">$ gpg --import &lt;failo/vardas.asc&gt;</pre>
+<p># Kaip pasirašyti kitą viešąjį raktą?</p>
+<p>Norint pasirašyti kieno nors raktą, pirmiausia reikia importuoti to žmogaus
+raktą į savo raktinę. Kai raktas jau yra importuotas į raktinę, pasirašyti
+raktą galima taip:</p>
+<pre class="literal-block">$ gpg --sign-key AAAAAAAA</pre>
+<p>Papildomai galima nustatyti rakto patikimumo lygį naudojant šią komandą:</p>
+<pre class="literal-block">$ pgp --edit-key AAAAAAAA</pre>
+<p>Paleidus šią komandą reikia įvesti subkomandą <cite>trust</cite> ir sekti instrukcijas. Atlikus pakeitimus reikia įvesti <cite>save</cite> subkomandą.</p>
+<p>Galiausiai raktą reikia išsiųsti į raktų serverį tokiu būdu:</p>
+<pre class="literal-block">$ gpg --send-keys AAAAAAAA</pre>
+</div>
+<div class="section" id="gpg-ir-mutt">
+<h2>GPG ir mutt<a href="#gpg-ir-mutt" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Kai visi reikiami raktai sukurti, galima sukonfigūruoti programas, kurios su tuo dirbs. Pašto programa <em>mutt</em> konfigūruojama labai paprastai, tiesiog faile <cite>~/.mutt/muttrc</cite> reikia įrašyti tokias eilutes:</p>
+<pre class="literal-block">set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
+set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
+set pgp_decrypt_command="gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
+set pgp_sign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_only_command="pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0xC9C40C31 -- -r %r -- %f"
+set pgp_encrypt_sign_command="pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xC9C40C31 -- -r %r -- %f"
+set pgp_import_command="gpg --no-verbose --import -v %f"
+set pgp_export_command="gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys %r"
+set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r"
+set pgp_autosign=yes
+set pgp_sign_as=0xABCABCAB
+set pgp_replyencrypt=yes
+set pgp_timeout=1800
+set pgp_good_sign="^gpg: Good signature from"</pre>
+<p><strong>Pastaba:</strong> pakeiskite viešojo rakto kodą <em>ABCABCAB</em> savuoju. Jį galima sužinoti iš <cite>gpg —list-keys</cite> komandos išvesties (kodas yra paryškintas):</p>
+<pre class="literal-block">pub   1024D/ABCABCAB 2007-10-13
+uid                  Vardas Pavardaitis
+sub   2048g/A3BA3BA 2007-10-13</pre>
+<p>Po to, kai išsaugosite <em>mutt</em> konfigūracinį failą ir bandysite siųsti laišką, prie jo bus prisegamas parašas.</p>
+</div>
+<div class="section" id="gpg-ir-gajim">
+<h2>GPG ir Gajim<a href="#gpg-ir-gajim" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Pokalbiams naudoju Jabber klientą Gajim. Kai kurie Jabber serveriai naudoja apsaugotą SSL protokolą žinučių perdavimui. Tačiau Jabber protokolas veikia decentralizuotai, tai reiškia, kad žinutės gali keliauti ir į kitus serverius, kurie nebūtinai yra apsaugoti SSL. Jei žinutės keliauja neapsaugotais kanalais, tada bet kas gali tas žinutes perskaityti. Naudojant GPG galima žinutes užkoduoti, tada jos iš siuntėjo, iki pat gavėjo keliaus užkoduotos ir jas perskaityti galės tik tas, kam jos skirtos.</p>
+<p>Kad žinutės keliautu užkoduotos, Gajim kontaktų sąraše reikia pasirinkti „Edit – Accounts“, atsidariusiame lange reikia pasirinkti redaguoti prieigą. Prieigos lange, „Personal Information“ žymelėje reikia nurodyti savo viešąjį raktą.  Kitas žmogus, su kuriuo bendraujama Jabber protokolu, turėtu atlikti panašius veiksmus. Taip pat reikia turėti kito pašnekovo viešąjį raktą ir jį importuoti:</p>
+<pre class="literal-block">$ gpg --import kitas_pasnekovas.asc</pre>
+<p>Importavus kito pašnekovo viešąjį raktą, Gajim kontaktų sąraše, dešiniuoju pelės klavišu paspaudus ant kito pašnekovo ir pasirinkus „Assign OpenPGP Key“ nurodomas to pašnekovo raktas. Po šių veiksmų visos žinutės bus koduojamos.</p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../youtube-video-is-komandines-eilutes/" rel="prev" title="Youtube video iš komandinės eilutės">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../lietuvos-tukstantmecio-vaikai-neturi-jokio-supratimo-apie-atvira-koda/" rel="next" title="Lietuvos tūkstantmečio vaikai neturi jokio supratimo apie atvirą kodą!!!">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

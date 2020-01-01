@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about vizija)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/vizija.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>IT evoliucija</title><link>https://sirex.lt/posts/2008/it-evoliucija/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Forume radau tokį įdomų klausimą apie tai, &lt;a class="reference external" href="http://www.ubuntu.lt/render/Forum;thread,3060"&gt;kokia ateitis laukia Windows OS&lt;/a&gt;. Pradėjęs rašyti savo nuomonę
+tiek išsiplėčiau, kad net nusprendžiau atsakymą perkelti į naują blogo įrašą.&lt;/p&gt;
+&lt;p&gt;Taigi, nesu koks tai aiškiaregys, todėl dėl Windows OS ateities sunku ką ir
+išprognozuoti. Tačiau stebint visą operacinių sistemų vystymosi istoriją matyti
+keli etapai:&lt;/p&gt;
+&lt;div class="section" id="praeitis"&gt;
+&lt;h2&gt;Praeitis&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;p&gt;Tamsieji amžiai, kompiuterių nėra, nėra ir operacinių sistemų.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pradžia, atsiranda kompiuteriai, įsigali unix sistemos, valdomos komandinės
+eilutės pagalba (kuri klesti iki šiol).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Kompiuteriai iš mokslininkų laboratorijų patenka į verslininkų rankas.
+Žvaigždės taip lėmė, kad jaunajam Biliui labiausiai pasisekė išnaudojant šią
+nišą ir nuo pradžios susikrovus nemenką kapitalą jis dėjo visas pastangas,
+kad į jo daržą niekas nė kojos nebandytų įkelti (taip yra iki šių dienų).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Panašiai tuo pačiu laiku atsirado ir atvirojo kodo programinės įrangos
+judėjimas GNU, tačiau gero kapitalo iš to nesusikrausi, todėl vystymasis
+gerokai atsilieka nuo MS kompanijos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;GNU suranda Linux ir atsiranda GNU/Linux, vėl gi, kapitalo iš to
+nesusikrausi, bet progresas vyksta, nors ir lėtai, bet užtikrintai.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dabartis"&gt;
+&lt;h2&gt;Dabartis&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;MS klestėjimo pabaiga. Nors MS vis dar klestėjimo viršūnėje, tačiau tai tęsis
+neilgai. Supratimo lygis apie IT technologijas vis auga, todėl tiek
+valstybinės institucijos, tiek verslo žmonės vis mažiau užsikabina ant gero
+marketingo ir renkasi tai, kas turi šviesią ateitį ir didesni potencialą
+tobulėti.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Po truputį kyla Apple, kurie taikosi į namų kompiuterius. Nors valstybinės
+institucijos ir verslas po truputį pradeda suprasti IT, tačiau paprastiems
+namų naudotojams iki to dar toli, todėl jie nė nedvejodami pasikabina ant
+gero marketingo nesusimastydami apie pasekmes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;GNU/Linux ir toliau iš lėto, bet užtikrintai progresuoja. Atsiranda vis
+daugiau žmonių, kurie ieško naujovių ir palaiko atvirojo kodo filosofiją,
+žvelgdami toli į ateitį.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ateitis"&gt;
+&lt;h2&gt;Ateitis&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;p&gt;Pagaliau programinės įrangos standartai įgaus realią prasmę ir jų bus
+griežtai laikomasi. Išnyks bandymai išlaikyti pozicijas pririšant naudotojus
+prie uždarų programinės įrangos formatų.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Mokyklose mokytojų lygis IT srityje šiek tiek pakils ir mokytojai supras
+bent jau tiek, kad reikia mokinius išmokyti paruošti dokumentą, o ne
+naudotis MS Word programa.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Universitetai privalės naudoti tik atvirojo kodo programinę įrangą, kurią
+patys ir tobulins. Nes kokia gi universitetinio mokymo prasmė mokyti to, ko
+negali patobulinti.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Valstybinės institucijos privalomai naudos tik atvirojo kodo programinę
+įrangą. Galiausiai bus suprasta, kad valstybė tiesiog privalo būti skaidri,
+naudoti atvirus, visiems prieinamus standartus ir laisvą programinę įrangą.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tiek MS Windows, tiek Apple, tiek GNU/Linux operacinės sistemos susilies į
+vieną, bendrai atviro kodo principais vystomą, platformą, kurios dėka išnyks
+operacinių sistemų barjeras. Vietoje to atsiras įvairios platformos
+modifikacijos pritaikytos įvairioms situacijoms.  Standartų dėka, žmonės
+paprasčiausiai naudos efektyviausias priemones tikslui pasiekti, vietoje to,
+kad lygintų ant kokios OS ir kaip veikia viena ar kita priemonė.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Galiausiai IT technologijos, nepastebimai pasieks savo brandos lygį.  Šis
+etapas bus ne kas kita, o pradžioje atsiradusio atvirojo kodo judėjimo
+klestėjimo viršūnė, kuri tęsis nepalyginamai ilgiau, nei MS pataikymas
+užšokti ant bangos IT technologijų vystymosi pradžioje.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Žmonės bus pakankamai intelektualūs ir kur kas labiau vertins atradimų
+ieškojimo jėgą, nei pelną, nes būtent naujausių atradimų dėka, nebereikės
+ieškoti pelno, reikės ieškoti to, kas dar neatrasta...&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Čia mano akimis tokia IT istorijos apžvalga ir ateities vizija... kuri parodo,
+kad būtent atvirojo kodo ir GNU/Linux vystoma kryptis sulauks didžiausio
+klestėjimo.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>vizija</category><guid>https://sirex.lt/posts/2008/it-evoliucija/</guid><pubDate>Wed, 19 Nov 2008 06:13:00 GMT</pubDate></item></channel></rss>

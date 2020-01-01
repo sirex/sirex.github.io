@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Kaip paleisti darbinį LAMP serverį su buildout? | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2009/kaip-paleisti-darbini-lamp-serveri-su-buildout/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../mercurial-web-programuotojams/" title="Mercurial Web programuotojams" type="text/html">
+<link rel="next" href="../kaip-idiegti-windows/" title="Kaip įdiegti Windows?" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Kaip paleisti darbinį LAMP serverį su buildout?">
+<meta property="og:url" content="https://sirex.lt/posts/2009/kaip-paleisti-darbini-lamp-serveri-su-buildout/">
+<meta property="og:description" content="Jei kada bandėte programuoti su PHP, tikriausiai susidūrėte su LAMP serverio
+diegimu ir konfigūravimu. Žinoma Ubuntu aplinkoje tai padaroma vienos komandos
+pagalba, tačiau turi šiokių tokių minusų:
+
+P">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2009-10-16T18:38:00+02:00">
+<meta property="article:tag" content="buildout">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="python">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Kaip paleisti darbinį LAMP serverį su buildout?</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2009-10-16T18:38:00+02:00" itemprop="datePublished" title="2009-10-16 18:38">2009-10-16 18:38</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/buildout/" rel="tag">buildout</a>,                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/python/" rel="tag">python</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Jei kada bandėte programuoti su PHP, tikriausiai susidūrėte su LAMP serverio
+diegimu ir konfigūravimu. Žinoma Ubuntu aplinkoje tai padaroma vienos komandos
+pagalba, tačiau turi šiokių tokių minusų:</p>
+<ul class="simple">
+<li><p>PHP, Apache ir MySQL versijos yra tokios, kokias pateikia distribucija</p></li>
+<li><p>Pagal nutylėjimą, web-root katalogas yra /var/www ir turi ne itin draugiškas
+failų ir katalogų teises.</p></li>
+<li><p>Įdiegus LAMP, kiekvieną kartą paleidus kompiuterį, automatiškai startuoja
+Apache ir MySQL.</p></li>
+</ul>
+<p>Yra kur kas paprastesnis ir švaresnis būdas programuoti su PHP, panaudojant
+puikųjį buildout’ą. Nesiplečiant, štai komandos, kurių dėka turėsite pilnai
+paruoštą darbui LAMP serverį:</p>
+<pre class="literal-block">$ sudo apt-get install mercurial python-setuptools
+$ hg clone http://bitbucket.org/sirex/lamp-buildout/ web
+$ cd web
+$ python bootstrap.py
+$ bin/buildout</pre>
+<p>Paskutinė komanda parsisiųs naujausius Apache, PHP, MySQL, PhpMyAdmin,
+Supervisor ir kitų paketų išeities tekstus, juos sukompiliuos, įdiegs į uždarą
+buildout aplinką, sukonfigūruos ir paruoš pilnai veikiantį LAMP serverį.</p>
+<p>Apache ir MySQL paleisti galėsite taip:</p>
+<pre class="literal-block">$ bin/supervisord</pre>
+<p>Tai, kas paleista, galėsite kontroliuoti Web aplinkoje, adresu <a class="reference external" href="http://localhost:9001/">localhost:9001</a>. Pats Web’as bus pasiekiamas adresu: <a class="reference external" href="http://localhost:9002/">localhost:9002</a>. Portus galėsite keisti buildout.cfg faile.</p>
+<p>PHP skriptus galėsite rašyti savo naudotojo teisėmis, web/htdocs kataloge.
+Viskas, kas bus įdiegta visiškai nesipjaus su jūsų sistema.  Redaguodami
+buildout.cfg failą, galėsite nusistatyti ką tik norite.  Galėsite nurodyti
+kitas paketų versijas, įtraukti papildomus paketus, nurodyti PHP ar MySQL
+kompiliavimo parametrus ir pan. Vėliau,</p>
+<p>išsisaugoję šį failą, labai nesunkiai galėsite vėl atkurti viską, ką turėjote.</p>
+<p>Mintį radau šioje svetainėje:</p>
+<blockquote>
+<p><a class="reference external" href="http://aclark.net/team/aclark/blog/a-lamp-buildout-for-wordpress-and-other-php-apps">http://aclark.net/team/aclark/blog/a-lamp-buildout-for-wordpress-and-other-php-apps</a></p>
+</blockquote>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../mercurial-web-programuotojams/" rel="prev" title="Mercurial Web programuotojams">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../kaip-idiegti-windows/" rel="next" title="Kaip įdiegti Windows?">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

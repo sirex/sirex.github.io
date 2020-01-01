@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about gpg)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/gpg.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>GPG</title><link>https://sirex.lt/posts/2009/gpg/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jau senai planavau susikurti GPG raktą ir susikonfigūruoti savo pašto klientą, kad šis automatiškai uždėtu GPG parašą ant mano siunčiamų laiškų. Šiandien pagaliau nusprendžiau tai padaryti. Pamaniau gal būt dar kam nors bus įdomu sužinoti kaip tai daroma.&lt;/p&gt;
+&lt;div class="section" id="kam-reikalingas-elektroninis-parasas"&gt;
+&lt;h2&gt;Kam reikalingas elektroninis parašas?&lt;/h2&gt;
+&lt;p&gt;Elektroninis parašas užtikrina, kad pasirašytasis tekstas po pasirašymo nebuvo pakeistas ir išliko lygiai toks pats, koks buvo prieš pasirašant.  Taip pat yra galimybė patikrinti ar parašo savininkas tikrai pasirašė naudodamasis savo parašu.&lt;/p&gt;
+&lt;p&gt;Trumpai tariant parašo dėka galima identifikuoti parašo savininką ir įsitikinti, kad pasirašytieji duomenys nebuvo pakeisi trečiųjų šalių.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="elektroninio-paraso-veikimo-principas"&gt;
+&lt;h2&gt;Elektroninio parašo veikimo principas&lt;/h2&gt;
+&lt;p&gt;El. paraše esminis dalykas yra privatusis ir viešasis raktai. Privatųjį rakta žino tik to rakto savininkas, o viešasis raktas žinomas visiems.  Vienu iš šių raktų galima duomenis užkoduoti, o kitu iškoduoti. Norint pasirašyti po kokiais nors duomenimis iš pradžių sukuriamas tų duomenų vienkryptis atvaizdas (&lt;em&gt;angl.  hash&lt;/em&gt;), tai reiškia kad duomenys paverčiami į nedidelę įvairių simbolių eilutę.  Vėliau panaudojant privatų raktą gautoji duomenų eilutė užkoduojama ir gaunamas parašas.  Kaip ir minėjau, kas yra užkoduota naudojant vieną raktą, kito pagalba gali būti atkoduojama. Šiuo atveju parašas gali būti atkoduotas naudojant viešąjį raktą. Atkodavus parašą gaunamas duomenų atvaizdas.  Pasirašytuosius duomenis pavertus į duomenų atvaizdą ir palyginus jį su iškoduotu raktu galima įsitikinti ar duomenys buvo keisti ar ne.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="kaip-susikurti-savo-privatu-ir-viesaji-raktus"&gt;
+&lt;h2&gt;Kaip susikurti savo privatų ir viešąjį raktus?&lt;/h2&gt;
+&lt;p&gt;Susikurti savo privatų ir viešąjį raktus nesudėtinga. Paleiskite komandą ir sekite instrukcijas:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg --gen-key&lt;/pre&gt;
+&lt;p&gt;Po kurio laiko bus sugeneruoti raktai. Juos galite pamatyti įvykdę tokią komandą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg --list-keys&lt;/pre&gt;
+&lt;p&gt;Savo viešąjį raktą reikia išeksportuoti ir paviešinti, galima jį persiųsti savo
+draugams, patalpinti savo asmeninėje svetainėje arba bendruose raktų
+serveriuose. Raktas išeksportuojamas taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg -a --export tavo-el-pasto@adresas.lt &amp;gt; tavoviesasisraktas.asc&lt;/pre&gt;
+&lt;p&gt;# Kaip sužinoti savo rakto ID ir fingerprint?&lt;/p&gt;
+&lt;p&gt;Įvedus tokią komandą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg --list-public-keys el.pastas@example.com
+pub   11111/AAAAAAAA 2001-01-01
+      Key fingerprint = AAAA AAAA AAAA AAAA AAAA  AAAA AAAA AAAA AAAA AAAA
+uid                  Name Surname &amp;lt;el.pastas@example.com&amp;gt;
+sub   22222/BBBBBBBB 2001-01-01&lt;/pre&gt;
+&lt;p&gt;Į ekraną bus išvestas rakto ID ir fingerpring. Šiuo atveju rakto ID yra
+&lt;cite&gt;AAAAAAAA&lt;/cite&gt;, o fingerpring yra tai kas parašyta po „Key fingerpring = “ eilute.&lt;/p&gt;
+&lt;p&gt;# Kaip išsiųsti savo raktą į raktų serverį?&lt;/p&gt;
+&lt;p&gt;Savo raktą į raktų serverį išsiųsite taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg --send-keys AAAAAAAA&lt;/pre&gt;
+&lt;p&gt;# Kaip importuoti kito žmogaus raktą į savo raktinę?&lt;/p&gt;
+&lt;p&gt;Jei žinote rakto ID:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg --recv-keys AAAAAAAA&lt;/pre&gt;
+&lt;p&gt;Jei žinote tik el. pašto adresą arba rakto savininko vardą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg --search-keys vardas@example.com&lt;/pre&gt;
+&lt;p&gt;Suradus ieškomą raktą, galima jį importuoti pagal ID, taip kaip aprašyta aukščiau.&lt;/p&gt;
+&lt;p&gt;Jei turite viešojo rakto failą, jį importuoti galima taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg --import &amp;lt;failo/vardas.asc&amp;gt;&lt;/pre&gt;
+&lt;p&gt;# Kaip pasirašyti kitą viešąjį raktą?&lt;/p&gt;
+&lt;p&gt;Norint pasirašyti kieno nors raktą, pirmiausia reikia importuoti to žmogaus
+raktą į savo raktinę. Kai raktas jau yra importuotas į raktinę, pasirašyti
+raktą galima taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg --sign-key AAAAAAAA&lt;/pre&gt;
+&lt;p&gt;Papildomai galima nustatyti rakto patikimumo lygį naudojant šią komandą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ pgp --edit-key AAAAAAAA&lt;/pre&gt;
+&lt;p&gt;Paleidus šią komandą reikia įvesti subkomandą &lt;cite&gt;trust&lt;/cite&gt; ir sekti instrukcijas. Atlikus pakeitimus reikia įvesti &lt;cite&gt;save&lt;/cite&gt; subkomandą.&lt;/p&gt;
+&lt;p&gt;Galiausiai raktą reikia išsiųsti į raktų serverį tokiu būdu:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg --send-keys AAAAAAAA&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="gpg-ir-mutt"&gt;
+&lt;h2&gt;GPG ir mutt&lt;/h2&gt;
+&lt;p&gt;Kai visi reikiami raktai sukurti, galima sukonfigūruoti programas, kurios su tuo dirbs. Pašto programa &lt;em&gt;mutt&lt;/em&gt; konfigūruojama labai paprastai, tiesiog faile &lt;cite&gt;~/.mutt/muttrc&lt;/cite&gt; reikia įrašyti tokias eilutes:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
+set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
+set pgp_decrypt_command="gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
+set pgp_sign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command="gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_only_command="pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0xC9C40C31 -- -r %r -- %f"
+set pgp_encrypt_sign_command="pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0xC9C40C31 -- -r %r -- %f"
+set pgp_import_command="gpg --no-verbose --import -v %f"
+set pgp_export_command="gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command="gpg --no-verbose --batch --with-colons --list-keys %r"
+set pgp_list_secring_command="gpg --no-verbose --batch --with-colons --list-secret-keys %r"
+set pgp_autosign=yes
+set pgp_sign_as=0xABCABCAB
+set pgp_replyencrypt=yes
+set pgp_timeout=1800
+set pgp_good_sign="^gpg: Good signature from"&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Pastaba:&lt;/strong&gt; pakeiskite viešojo rakto kodą &lt;em&gt;ABCABCAB&lt;/em&gt; savuoju. Jį galima sužinoti iš &lt;cite&gt;gpg --list-keys&lt;/cite&gt; komandos išvesties (kodas yra paryškintas):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;pub   1024D/ABCABCAB 2007-10-13
+uid                  Vardas Pavardaitis
+sub   2048g/A3BA3BA 2007-10-13&lt;/pre&gt;
+&lt;p&gt;Po to, kai išsaugosite &lt;em&gt;mutt&lt;/em&gt; konfigūracinį failą ir bandysite siųsti laišką, prie jo bus prisegamas parašas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="gpg-ir-gajim"&gt;
+&lt;h2&gt;GPG ir Gajim&lt;/h2&gt;
+&lt;p&gt;Pokalbiams naudoju Jabber klientą Gajim. Kai kurie Jabber serveriai naudoja apsaugotą SSL protokolą žinučių perdavimui. Tačiau Jabber protokolas veikia decentralizuotai, tai reiškia, kad žinutės gali keliauti ir į kitus serverius, kurie nebūtinai yra apsaugoti SSL. Jei žinutės keliauja neapsaugotais kanalais, tada bet kas gali tas žinutes perskaityti. Naudojant GPG galima žinutes užkoduoti, tada jos iš siuntėjo, iki pat gavėjo keliaus užkoduotos ir jas perskaityti galės tik tas, kam jos skirtos.&lt;/p&gt;
+&lt;p&gt;Kad žinutės keliautu užkoduotos, Gajim kontaktų sąraše reikia pasirinkti „Edit – Accounts“, atsidariusiame lange reikia pasirinkti redaguoti prieigą. Prieigos lange, „Personal Information“ žymelėje reikia nurodyti savo viešąjį raktą.  Kitas žmogus, su kuriuo bendraujama Jabber protokolu, turėtu atlikti panašius veiksmus. Taip pat reikia turėti kito pašnekovo viešąjį raktą ir jį importuoti:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ gpg --import kitas_pasnekovas.asc&lt;/pre&gt;
+&lt;p&gt;Importavus kito pašnekovo viešąjį raktą, Gajim kontaktų sąraše, dešiniuoju pelės klavišu paspaudus ant kito pašnekovo ir pasirinkus „Assign OpenPGP Key“ nurodomas to pašnekovo raktas. Po šių veiksmų visos žinutės bus koduojamos.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>gpg</category><category>shell</category><guid>https://sirex.lt/posts/2009/gpg/</guid><pubDate>Wed, 10 Jun 2009 20:14:00 GMT</pubDate></item></channel></rss>

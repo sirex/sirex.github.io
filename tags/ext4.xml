@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about ext4)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/ext4.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dell Inspiron 1501 + Ubuntu Jaunty + Ext4</title><link>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Nesenai pakeičiau darbo kompiuterį, gavau Dell Inspiron 1501. Deja diegimo ir
+kompiuterio paruošimo darbui procedūra vyko ne itin sklandžiai...&lt;/p&gt;
+&lt;p&gt;Aprašysiu visas problemas, jei kas susidurs, gal ši informacija padės.&lt;/p&gt;
+&lt;div class="section" id="wifi"&gt;
+&lt;h2&gt;WiFi&lt;/h2&gt;
+&lt;p&gt;Jei naudojate Linux, venkite Broadcom BCM4311 WLAN plokščių... Nes jos neveikia
+„out of the box“.&lt;/p&gt;
+&lt;p&gt;Tačiau, jei turite galimybę prisijungti prie interneto laidų, tai didesnių
+problemų neiškils:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sistema » Administravimas » Aparatinės įrangos valdyklės&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Atsidariusiame „Aparatinės įrangos valdyklės“ lange, pasirinkite „Broadcom B43
+wireless driver“ ir spauskite mygtuką „Activate“.&lt;/p&gt;
+&lt;p&gt;Nors ši WLAN plokštė neveikia iš karto, tačiau diegimas, kaip matote, nėra
+sudėtingas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Klaikus pypsėjimas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sekantis, erzinantis ne tik mane, bet ir mano bendradarbius, reiškinys&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;– pypsėjimas išsijungiant ir ką nors ne taip paspaudus terminalo lange.&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Sprendimas labai paprastas:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ sudo rmmod pcspkr
+$ sudo sh -c 'echo blacklist pcspkr &amp;gt;&amp;gt; /etc/modprobe.d/blacklist'&lt;/pre&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ext4-kol-kas-nerekomenduociau"&gt;
+&lt;h2&gt;Ext4 – kol kas nerekomenduočiau&lt;/h2&gt;
+&lt;p&gt;Kadangi kartu su Jaunty versija atsirado galimybė naudoti Ext4 failų sistemą,
+kuri buvo gausiai afišuota. Tai žinoma net nedvejodamas pasirinkau Ext4 visuose
+skirsniuose.&lt;/p&gt;
+&lt;p&gt;Tačiau toks pasirinkimas buvo didelė klaida! Problemos pasireiškė jau diegimo
+metu, kai praktiškai viską įdiegus Ubuntu ėmė ir sustingo, teko daryti „hard
+reboot“.&lt;/p&gt;
+&lt;p&gt;Pradžiai pamaniau, kad tai tik koks nors atsitiktinis nesklandumas ir
+nekreipiau į tai dėmesio. Tačiau tą pačią dieną sustingimas vėl pasikartojo.
+Dėl to apkaltinau ATI vaizdo tvarkykles. Kadangi po to sustingimų nebuvo kelias
+savaites, tai nieko nedariau.&lt;/p&gt;
+&lt;p&gt;Praėjus kelioms savaitėms, testavau programą, kurios veikimo metu kuriama daug
+mažų failų. Tuo metu ir prasidėjo visos bėdos, dėl kurių sugaišau puse darbo
+dienos. Mažų failų kūrimo metu, daugeliu atveju Ubuntu sustingdavo ir tekdavo
+daryti „hard reboot“. Tačiau šį dėsningumą pastebėjau ne iš karto. Įtariau ATI
+vaizdo tvarkykles, tačiau po įvairių bandymu, net gi su VESA tvarkyklėmis vėl
+pasikartojo sustingimas. Toliau įtarinėjau WLAN tvarkykles, tačiau jas išjungus
+sustingimas vėl pasikartojo. Taip pat, pasikartojus sustingimui, bandžiau
+jungtis iš kito kompiuterio per SSH, tačiau tokioje būsenoje, kompiuteris buvo
+nepasiekiamas. Galiausiai atlikus kelis bandymus, galutiniai įsitikinau, kad
+sustingimai atsiranda dėl Ext4 failų sistemos kaltės ir būtent tuomet, kai
+failų sistema intensyviai naudojama atliekant operacijas su nedideliais
+failais.&lt;/p&gt;
+&lt;p&gt;Ką gi, po tokių išgyvenimų, galiu drąsiai teigti – Ext4 tikrai dar nėra
+pakankamai stabili, kad būtų galima ją naudoti darbo ar namų kompiuteryje,
+nekalbant apie serverius...&lt;/p&gt;
+&lt;p&gt;Kadangi Ext4 vis dar nėra tinkamas kasdieniam naudojimui, nusprendžiau
+paeksperimentuoti su JFS. Kol kas veikia gerai... :)&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>ext4</category><category>floss</category><category>ubuntu</category><guid>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</guid><pubDate>Tue, 02 Jun 2009 20:32:00 GMT</pubDate></item></channel></rss>

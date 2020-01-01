@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Linux + GPS | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2009/linux-gps/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../kritine-mase/" title="Kritinė masė" type="text/html">
+<link rel="next" href="../../2010/jabberxmpp-po-truputi-tampa-de-facto-standartu/" title="Jabber/XMPP po truputį tampa de-facto standartu?" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Linux + GPS">
+<meta property="og:url" content="https://sirex.lt/posts/2009/linux-gps/">
+<meta property="og:description" content="Pastaruoju metu gan dažnai tenka naudotis GPS įranga, todėl nusprendžiau
+pasidalinti informacija, kaip tai sekasi daryti su Linux.
+
+Naudojama Įranga
+Iš esmės tinka bet kuris GPS imtuvas, pageidautina,">
+<meta property="og:image" content="https://sirex.lt/images/neo.png">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2009-11-19T00:01:00+02:00">
+<meta property="article:tag" content="floss">
+<meta property="article:tag" content="gps">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="openmoko">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Linux + GPS</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2009-11-19T00:01:00+02:00" itemprop="datePublished" title="2009-11-19 00:01">2009-11-19 00:01</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/gps/" rel="tag">gps</a>,                    <a class="tag p-category" href="../../../tags/linux/" rel="tag">linux</a>,                    <a class="tag p-category" href="../../../tags/openmoko/" rel="tag">openmoko</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<a class="reference external image-reference" href="../../../images/neo.png"><img alt="Neo Freerunner" class="previewimage" src="../../../images/neo.thumbnail.png"></a>
+<p>Pastaruoju metu gan dažnai tenka naudotis GPS įranga, todėl nusprendžiau
+pasidalinti informacija, kaip tai sekasi daryti su Linux.</p>
+<div class="section" id="naudojama-iranga">
+<h2>Naudojama Įranga<a href="#naudojama-iranga" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Iš esmės tinka bet kuris GPS imtuvas, pageidautina, suderinamas su
+<a class="reference external" href="http://www.openstreetmap.org/">OpenStreetMap</a> žemėlapiais ir žinoma Linux.
+Konkrečiai naudoju tokią įrangą:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.openmoko.com/freerunner.html">Neo Freeruneer</a></p></li>
+<li><p><a class="reference external" href="http://www.svp.co.uk/sport-and-leisure/in-car-equipment/satellite-navigation/vivanco-usb-car-charger-adapter-vivanco056_in-car-usb-charger-adapter.html">Automobilinis USB pakrovėjas</a></p></li>
+<li><p><a class="reference external" href="http://www.thinkwiki.org/wiki/Category:X61_Tablet">Lenovo ThinkPad X61 Tablet</a></p></li>
+</ul>
+</div>
+<div class="section" id="programine-iranga">
+<h2>Programinė įranga<a href="#programine-iranga" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://gpsd.berlios.de/">gpsd</a></p></li>
+<li><p><a class="reference external" href="http://www.tangogps.org/">TangoGPS</a></p></li>
+<li><p><a class="reference external" href="http://www.tangogps.org/">Navit</a></p></li>
+<li><p><a class="reference external" href="http://josm.openstreetmap.de/">JOSM</a></p></li>
+</ul>
+</div>
+<div class="section" id="zemelapiai">
+<h2>Žemėlapiai<a href="#zemelapiai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.openstreetmap.org/">OpenStreetMap</a></p></li>
+</ul>
+</div>
+<div class="section" id="neo-freerunner">
+<h2>Neo FreeRunner<a href="#neo-freerunner" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Tai yra atviras „telefonas“, puikiai suderinamas ir pritaikytas darbui su Linux
+ir turintis GPS įrangą. Jame galima kompiliuoti, naudotis komandine eilute,
+prisijungti per SSH ir daryti ką tik nori. Įrenginyje veikia visa aukščiau
+išvardinta programinė įranga. Į FR galima įrašyti <a class="reference external" href="http://wiki.openmoko.org/wiki/Distributions">visą gausybę Linux
+distribucijų</a>, pastaruoju
+naudoju <a class="reference external" href="http://wiki.shr-project.org/">SHR</a>.</p>
+<p>Laikant visą laiką įjungtą ekrano apšvietimą ir GPS, Neo baterija laiko apie
+3-4 valandas, tačiau nustačius automatinį ekrano išjungimą po 2 minučių ir
+automatinį užmigdymą, po 2:30 minučių, naviguotis galima visą dieną ir ilgiau.
+Neo pabunda iš užmigdymo stadijos labai greitai, o signalą pasigauna taip gan
+greitai, per 1-5 minutes, priklausomai nuo signalo stiprumo.</p>
+<p>Važiuojant mašina, dažnai praverčia USB adapteris, kadangi Neo gali įsikrauti
+per USB laidą, tai visas komplektas puikiai veikia ir nebaisu, kad viduryje
+kelionės išsikraus baterija.</p>
+</div>
+<div class="section" id="id2">
+<h2>Openstreetmap<a href="#id2" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Iš pradžių bandžiau naudoti <a class="reference external" href="http://maps.lt/">maps.lt</a> duomenis, tačiau jie
+nesuderinami su jokiais paplitusiais formatais, bandžiau naudoti <a class="reference external" href="http://maps.google.com/">Google Maps</a> duomenis, tačiau gauti jų žemėlapius taip pat gan
+sudėtinga, nes siuntimai ribojami tiek apsaugant paveiksliukų adresus, tiek
+įvairiai ribojant atsiųstų paveiksliukų kiekį, per tam tikrą laiką. Be to abiem
+atvejais, galima gauti tik paveiksliukus, o ne vektorinius duomenis.
+<a class="reference external" href="http://www.openstreetmap.org/">Openstreetmap</a> netaiko jokių ribojimų, galima
+gauti ir paveiksliukus ir vektorinius duomenis, be to žemėlapius galima ir
+pačiam taisyti. Vis tik atviras kodas yra atviras kodas… :)</p>
+<p>Openstreetmap veikia panašiu į Wiki principu, kur kiekvienas gali kurti turinį,
+kadangi tą turinį stebi daug akių, tai apsaugo nuo klaidingų duomenų patekimo.
+OSM žemėlapiais naudojuosi jau gal metus laiko, per visą tą laiką teko
+susidurti gal su dviem netikslumais, kuriuos iš karto pataisiau.</p>
+<p>Žemėlapių detalumas, kai kuriose vietose gan skurdus, tačiau ten kur yra
+padirbėja OSM aktyvistai, galima rasti visus keliukus ir šunkelius. OSM
+žemėlapis keičiasi ir yra atnaujinamas kiekvieną dieną, jei atsiranda naujo
+kelio statybos, tai nors kelias dar nėra baigtas, jau atsiranda žemėlapyje, tuo
+tarpu nuosavybiniuose žemėlapiuose dažnai pateikiame pasenę duomenys.</p>
+</div>
+<div class="section" id="id4">
+<h2>Navit<a href="#id4" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Ilgą laiką naudojau TangoGPS, nes tai yra labai paprasta programa, naudojanti
+žemėlapio paveiksliukus, vadinamus <em>tiles</em>. Tačiau, kai susipažinau su Navit,
+TangoGPS naudoju tik kaip atsarginį variantą, peržiūrėti žemėlapiams dideliu
+masteliu. Tiek Navit, tiek TangoGPS, kaip ir daugelis kitų programų naudoja
+gpsd demoną, informacijai apie esamą poziciją nustatyti. Taip pat abi programos
+puikiai veikia ir mano kompiuteryje, todėl Neo galiu naudoti kaip GPS serverį
+ir prie jo jungtis per kompiuterį, tam, kad žemėlapius ir esamą poziciją
+matyčiau dideliame ekrane, improvizacijai nėra ribų… :)</p>
+<p>Navit yra aktyviai kuriamas projektas, kol kas gan sudėtingai konfigūruojamas
+per XML konfigūracinį failą, tačiau toks konfigūravimo būdas suteikia labai
+daug galimybių, tereikia tik įsigilinti, kaip viskas veikia.</p>
+<p>Mano Navit konfigūraciją galite rasti: <a class="reference external" href="http://bitbucket.org/sirex/navit-xml/src/">bitbucket.org/sirex/navit-xml/src/</a>.</p>
+<p>O štai galutinis variantas, kaip atrodo Navit:</p>
+<div class="figure align-center">
+<img alt="Neo FreeRunner Navit" src="files/neo-navit.png"><p class="caption">Neo FreeRunner Navit</p>
+</div>
+<p>Su Navit galima:</p>
+<ul class="simple">
+<li><p>Matuoti atstumus tarp pasirinktų taškų</p></li>
+<li><p>Yra integruotas kompasas</p></li>
+<li><p>Automatiškai pasukamas žemėlapis pagal važiavimo kryptį</p></li>
+<li><p>Galima įjungti automatinį nuvažiuoto maršruto saugojimą GPX formatu</p></li>
+<li><p>Automatinis greičiausio kelio skaičiavimas</p></li>
+<li><p>Skaičiuojama kiek laiko truks kelionė ir kurią valandą bus pasiektas tikslas</p></li>
+<li><p>Sąsaja pritaikyta lietimui jautriems ekranams ir valdymui pirštais</p></li>
+<li><p>2d/3d režimai</p></li>
+</ul>
+<p>Tai tik kelios Navit savybės, o jų yra kur kas daugiau.</p>
+<p>Dėl žemėlapių, juos galite parsisiųsti iš <a class="reference external" href="http://maps.navit-project.org/download/">maps.navit-project.org/download/</a>.  Visas Lietuvos žemėlapis,
+apimantis visą Latviją, dalį Estijos, pusę Baltarusijos ir nemažą gabalą
+Lenkijos užima apie 60 Mb. Visos Žemės žemėlapis užima apie 2.2 Gb.</p>
+</div>
+<div class="section" id="id5">
+<h2>JOSM<a href="#id5" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Galiausiai po pasivažinėjimų su Neo, galima susirinkti visus GPX failus ir
+žiūrėti kur buvo važiuota, jei OSM žemėlapyje ko nors trūksta, labai paprastai
+galima įkelti visas trūkstamas vietas, surašyti pavadinimus ir t.t.</p>
+<p>Štai kaip atrodo JOSM:</p>
+<div class="figure">
+<img alt="files/josm.png" src="files/josm.png"><p class="caption">JOSM</p>
+</div>
+<p>O čia mano kaimo žemėlapis: <a class="reference external" href="http://osm.org/go/0leEwu34--">osm.org/go/0leEwu34—</a></p>
+</div>
+<div class="section" id="reziume">
+<h2>Reziume<a href="#reziume" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nors tobulėti yra kur, tačiau tiek pats openstreetmap projektas, tiek
+navigacijai ir darbui su žemėlapiais skirtos programos puikiai atitinka
+esminius poreikius, norint sėkmingai susiorientuoti ir kur nors nuvažiuoti –
+<strong>išbandyta praktiškai, naudodamasis aprašytomis priemonėmis esu apvažiavęs
+didžiąją dalį Lietuvos ir didelį gabalą Baltarusijos</strong>.</p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../kritine-mase/" rel="prev" title="Kritinė masė">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../2010/jabberxmpp-po-truputi-tampa-de-facto-standartu/" rel="next" title="Jabber/XMPP po truputį tampa de-facto standartu?">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

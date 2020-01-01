@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about qemu)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/qemu.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip įdiegti Windows?</title><link>https://sirex.lt/posts/2009/kaip-idiegti-windows/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Istorija tokia, darbe teko testuoti svetainę su IE naršyklėmis. Kadangi prie
+projekto dirbau vienas ir nebuvo porininko naudojančio Windows, tai tas bjaurus
+darbas teko man pačiam... :/&lt;/p&gt;
+&lt;p&gt;Darbe naudoju Ubuntu, tai jokio IE neturėjau. Ačiū &lt;a class="reference external" href="http://www.tatanka.com.br/ies4linux/"&gt;IEs4Linux projektui&lt;/a&gt;, kurio dėka IE6 daugiau/mažiau veikia
+per &lt;a class="reference external" href="http://www.winehq.org/"&gt;Wine (**W**ine **I**s **N**ot an **E**mulator!)&lt;/a&gt;. Deja to pačio padaryti su IE7 nepavyko. Sprendimas
+– greitai įsidiegti Windows į virtualią mašiną ir ten testuoti.&lt;/p&gt;
+&lt;p&gt;Įdiegti Ubuntu galima iš CD, USB, per tinklą ar internetą ir net gi &lt;a class="reference external" href="http://wubi-installer.org/"&gt;tiesiai į
+Windows, nekeičiant disko skirsnių&lt;/a&gt;. Kiek žinau,
+Windows galima įdiegti tik per CD...&lt;/p&gt;
+&lt;div class="section" id="kaip-idiegti-windows"&gt;
+&lt;h2&gt;Kaip įdiegti Windows?&lt;/h2&gt;
+&lt;p&gt;Virtualizacijos dėka ribotos Windows įdiegimo galimybės nesudaro jokių
+problemų. Šiam reikalui pasirinkau &lt;a class="reference external" href="http://www.qemu.org/"&gt;QEMU&lt;/a&gt;.  Kodėl?
+Todėl, kad tai yra lengvas. paprastas virtualios mašinos emuliatorius.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Įdiegiame QEMU:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ sudo apt-get install qemu kqemu-source&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;kqemu-source&lt;/em&gt; yra Linux branduolio modulis, kuris paspartina QEMU virtualios
+mašinos darbą. Viskas veiks ir be šio paketo, tačiau lėčiau.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Susikuriame virtualų diską:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ qemu-img create -f qcow2 windows.img 8G&lt;/pre&gt;
+&lt;p&gt;Nors nurodyta 8G diskas, tačiau pats virtualaus disko failas užims vos kelis
+kilobaitus. Failo dydis proporcingas naudojamai virtualaus disko vietai.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Windows diegimas iš ISO arba CD&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ qemu -cdrom windows.iso -hda windows.img -m 256 -boot d&lt;/pre&gt;
+&lt;p&gt;Jei turite nelegaliai pasidarę legalių Windows CD kopiją į ISO failą, tuomet
+galite nurodyti virtualiai mašinai, kad tiesiog užsikrauto iš to ISO failo.
+Tačiau galite į CD-ROM įrenginį įdėti ir legalių Windows CD, tuomet vietoje
+&lt;em&gt;windows.iso&lt;/em&gt; reikės nurodyti &lt;em&gt;/dev/cdrom&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Beje, viskas veiks ir su nelegalia Windows kopija :)&lt;/p&gt;
+&lt;p&gt;Po šios komandos paleidimo pasileist Windows diegimo vedlys. Įdiekite Windows
+kaip visada. Jei nei karto neteko diegti Windows, paprašykite draugo pagalbos.&lt;/p&gt;
+&lt;p&gt;Priklausomai nuo jūsų kompiuterio spartos, diegimas truks apie valandą.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="po-idiegimo"&gt;
+&lt;h2&gt;Po įdiegimo&lt;/h2&gt;
+&lt;p&gt;Kai jau turėsite veikiančius Windows, išsaugotus virtualiame diske, nebereikės
+kartoti diegimo, norint vėl juos paliesti. Jau įdiegtus Windows iškviesite
+taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ qemu -hda windows.img -m 256&lt;/pre&gt;
+&lt;p&gt;Kadangi Windows mėgsta virusai ir kitokios nelaimės, tai siūlau pasidaryti
+virtualaus disko kopiją su šviežiai įdiegtais Windows. Galite viską įsirašyti į
+kokį DVD ar šiaip kur nors pasidėti. Jei kas nors nutiks, bet kada vėl galėsite
+paleisti šviežiai įdiegtus Windows iš atsarginės virtualaus disko kopijos.&lt;/p&gt;
+&lt;p&gt;Pats tai išbandžiau, pavyko sėkmingai ištestuoti svetainę su IE naršykle ir
+pataisyti klaidas.&lt;/p&gt;
+&lt;p&gt;Naudojantis QEMU galima testuoti ir kitas operacines sistemas, pavyzdžiui
+Ubuntu Alpha ar Beta versijas. Daugiau apie QEMU galite pasiskaityti &lt;a class="reference external" href="http://www.qemu.org/"&gt;qemu.org&lt;/a&gt; svetainėje.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" src="https://sirex.lt/posts/2009/kaip-idiegti-windows/files/qemu-windows.png"&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>qemu</category><category>ubuntu</category><category>windows</category><guid>https://sirex.lt/posts/2009/kaip-idiegti-windows/</guid><pubDate>Mon, 19 Oct 2009 20:52:00 GMT</pubDate></item><item><title>Neo FreeRunner belaukiant...</title><link>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Pagaliau pasirodė ilgai lauktas Openmoko telefonas: &lt;strong&gt;Neo FreeRunner&lt;/strong&gt;.
+Šį įrenginį jau užsakiau ir 2-3 savaičių bėgyje turėtu atkeliauti į
+mano rankas :)&lt;/p&gt;
+&lt;p&gt;O belaukiant, galima viska išsibandyti emuliatoriuje. Štai kaip tai
+atrodo:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_today.jpg"&gt;&lt;img alt="Openmoko emuliatoriuje" src="https://sirex.lt/images/u1/neofr_today.thumbnail.jpg"&gt;&lt;/a&gt;
+&lt;p&gt;Štai instrukcijos kaip tai padaryti (instrukcijos skirtos Ubuntu Gutsy
+Gibbon operacinei sistemai):&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p&gt;Perkonfigūruojame &lt;em&gt;dash&lt;/em&gt; paketą, kai jūsų paklaus ar norite pakeisti
+&lt;em&gt;/bin/sh&lt;/em&gt; į &lt;em&gt;dash&lt;/em&gt;, atsakykite &lt;strong&gt;ne&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo dpkg-reconfigure dash&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pirmiausiai reikia atitinkamai paruošti Ubuntu sistemą, o tiksliau reikia
+įdiegti keletą paketų:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo apt-get install monotone git-core git-svn git-email \
+git-cvs git-arch gitk python-dev ccache m4 sed bison make cvs gawk \
+libc6-dev g++ subversion sharutils docbook openjade quilt libmpfr-dev \
+libpcre3-dev texinfo texi2html libboost-date-time-dev libboost-filesystem-dev \
+libboost-regex-dev libboost-test-dev libboost-dev zlib1g-dev build-essential \
+dh-make debhelper devscripts gcc-3.4 lynx netpbm libsdl1.2-dev dosfstools \
+help2man python-psyco lynx mtools&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Susikurkite katalogą, kuriame saugosite visus Openmoko failus:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;mkdir openmoko
+cd openmoko&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Parsisiunčiame MokoMakefile failą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;wget http://www.rwhitby.net/files/openmoko/Makefile&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Leidžiame Makefile dirbti savo darbą (tai truks apie 15 min. ir daugiau,
+priklausomai nuo kompiuterio ir interneto spartos):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;make qemu&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Po viso šito turėtu pasileisti veikianti Openmoko sistema. Pradžioje,
+atsidariusiame meniu reikia spausti tarpo klavišą, turėtu būti pažymėta
+&lt;em&gt;boot&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Jei pasileidusi sistema nebus funkcionali, t.y. niekas neveiks, tada reikia
+atlikt dar sekančius žingsnius:&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p&gt;Uždarykite emuliatorių, jei jis atidarytas.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;openmoko&lt;/em&gt; kataloge paredaguokite &lt;em&gt;build/qemu/openmoko/env&lt;/em&gt; failą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;vi build/qemu/openmoko/env&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tame faile suraskite mano pavyzdyje užkomentuotas eilutes ir pakeiskite
+jas atkomentuotomis:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;# rootfs_wildcard="Open?oko-openmoko-*image*-om-gta01.rootfs.jffs2"
+rootfs_wildcard="Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2"
+# download_dir="http://buildhost.openmoko.org/daily/neo1973/deploy/glibc/images/neo1973/"
+download_dir="http://buildhost.openmoko.org/daily/neo1973/200807/20080706/"&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Atsisiųskite
+&lt;em&gt;http://buildhost.openmoko.org/daily/neo1973/200807/20080706/Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2&lt;/em&gt;
+ir išsaugokite jį &lt;em&gt;images/openmoko/&lt;/em&gt; kataloge:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;wget http://buildhost.openmoko.org/daily/neo1973/200807/20080706/Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2 \
+    -O images/openmoko/Openmoko-openmoko-devel-image-glibc-ipk-P1-Snapshot-20080706-om-gta01.rootfs.jffs2&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Paleiskite komandą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;make flash-qemu-official&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ir galiausiai paleiskite emuliatorių:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;make run-qemu&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Visa tai detaliai aprašyta šiuo adresu:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://wiki.openmoko.org/wiki/Automatic_emulation_in_Ubuntu"&gt;http://wiki.openmoko.org/wiki/Automatic_emulation_in_Ubuntu&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ko gero smagiausias dalykas yra tas, kad viduje sukas paprasčiausias Linux
+branduolys ir yra Terminalo programa, kurios pagalba galiu daryti viską, ką ir
+savo kompiuterio XTerm lange!&lt;/p&gt;
+&lt;p&gt;Štai daugiau vaizdų, kaip viskas atrodo:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_menu.jpg"&gt;&lt;img alt="Pagrindinis meniu" src="https://sirex.lt/images/u1/neofr_menu.thumbnail.jpg"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr-terminal.jpg"&gt;&lt;img alt="Terminalo emuliatorius" src="https://sirex.lt/images/u1/neofr-terminal.thumbnail.jpg"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_vi.jpg"&gt;&lt;img alt="vim - teksto redaktorius" src="https://sirex.lt/images/u1/neofr_vi.thumbnail.jpg"&gt;&lt;/a&gt;&lt;/div&gt;</description><category>floss</category><category>openmoko</category><category>qemu</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</guid><pubDate>Fri, 18 Jul 2008 22:51:00 GMT</pubDate></item></channel></rss>

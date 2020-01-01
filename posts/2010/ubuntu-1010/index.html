@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Ubuntu 10.10 | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2010/ubuntu-1010/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../priemones-darbui-su-python-ir-django/" title="Priemonės darbui su Python ir Django" type="text/html">
+<link rel="next" href="../../2011/fedora/" title="Fedora 15" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Ubuntu 10.10">
+<meta property="og:url" content="https://sirex.lt/posts/2010/ubuntu-1010/">
+<meta property="og:description" content="Nesenai vykusioje Ubuntu 10.10 Release Party mini konferencijoje vedžiau
+install fest, net 2 valandas! Kad išsamiai ir nuosekliai viską nupasakočiau,
+buvau pasiruošęs visą sąrašą dalykų, kuriuos reiki">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-10-17T22:50:00+02:00">
+<meta property="article:tag" content="ubuntu">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Ubuntu 10.10</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2010-10-17T22:50:00+02:00" itemprop="datePublished" title="2010-10-17 22:50">2010-10-17 22:50</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/ubuntu/" rel="tag">ubuntu</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Nesenai vykusioje Ubuntu 10.10 Release Party mini konferencijoje vedžiau
+install fest, net 2 valandas! Kad išsamiai ir nuosekliai viską nupasakočiau,
+buvau pasiruošęs visą sąrašą dalykų, kuriuos reikia paminėti. Nusprendžiau
+paskelbti šį sąrašą ir čia.</p>
+<p>Tik noriu iš kart įspėti, kad sąrašas netvarkytas ir kai kuriose vietose gali
+būti neaiškus.</p>
+<div class="section" id="ar-verta-diegti-ubuntu">
+<h2>Ar verta diegti Ubuntu?<a href="#ar-verta-diegti-ubuntu" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li>
+<p>Taip, nebent:</p>
+<ul>
+<li><p>Esate priklausomas nuo video žaidimų, kurie veikia tik Windows aplinkoje.</p></li>
+<li><p>Kiekvieną dieną dirbate su specializuotomis programomis, tokiomis kaip
+AutoCAD ir pan., kurios veikia tik Windows aplinkoje.</p></li>
+<li><p>Turite kompiuterį, kuris yra nesuderinamas su Linux</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="pasiruosimas-diegimui">
+<h2>Pasiruošimas diegimui<a href="#pasiruosimas-diegimui" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li>
+<p>Upgrade versus fresh install</p>
+<ul class="simple">
+<li><p>Rekomenduoju daryti Fresh Install</p></li>
+</ul>
+</li>
+<li>
+<p>Iš kur gauti Ubuntu?</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.ubuntu.com/desktop/get-ubuntu/download">http://www.ubuntu.com/desktop/get-ubuntu/download</a></p></li>
+</ul>
+</li>
+<li>
+<p>LTS vs ne LTS</p>
+<ul class="simple">
+<li><p>Jei esate koncervatyvus ir bijote naujovių, tuomet rinkitės LTS</p></li>
+</ul>
+</li>
+<li>
+<p>32bit VS 64bit</p>
+<ul class="simple">
+<li><p>Jei jūsų kompiuteris yra 64bit architektūros, rinkitės 64bit</p></li>
+</ul>
+</li>
+<li>
+<p>desktop VS alternate</p>
+<ul class="simple">
+<li><p>Rinkitės desktop diegimo variantą</p></li>
+</ul>
+</li>
+<li>
+<p>ubuntu VS kubuntu VS xubuntu VS baltix VS UNE VS …</p>
+<ul class="simple">
+<li><p>Dažniausiai patartina rinktis Ubuntu</p></li>
+<li><p>kubuntu skirtas KDE naudotojams, tačiau ši aplinka kitose distribucijose,
+kokiose, kaip OpenSuse yra labiau išbaigta</p></li>
+<li><p>Xubuntu skirtas silpniems kompiuteriams</p></li>
+<li><p>Baltix, pritaikytas Lietuvai</p></li>
+<li><p>Ubuntu Netbook Edition skirtas internetiniams kompiuteriams su mažais ekranais</p></li>
+</ul>
+</li>
+<li>
+<p>Atsisiuntus patikrinti MD5SUM:</p>
+<pre class="literal-block">md5sum -c MD5SUMS</pre>
+</li>
+<li>
+<p>CD VS USB</p>
+<ul class="simple">
+<li><p>Jei jūsų kompiuteris gali užsikrauti iš USB, diegimą atlikite iš USB,
+greičiau ir patogiau</p></li>
+</ul>
+</li>
+<li>
+<p>Kaip įsirašyti CD?</p>
+<ul class="simple">
+<li><p>Reikia įrašinėt bootable CD</p></li>
+</ul>
+</li>
+<li>
+<p>Kaip įsirašyti USB?</p>
+<ul class="simple">
+<li><p>Sistema - Administravimas - Paleidimo laikmenos kūrimas</p></li>
+<li>
+<p>Jei turite problemų su SYSLINUX:</p>
+<ul>
+<li><p><a class="reference external" href="http://mirrors.kernel.org/ubuntu/pool/main/s/syslinux/">http://mirrors.kernel.org/ubuntu/pool/main/s/syslinux/</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Wubi</p>
+<ul class="simple">
+<li><p>Patariu naudoti tik Ubuntu testavimui</p></li>
+</ul>
+</li>
+<li>
+<p>Atsarginių kopijų darymas naudojant <a class="reference external" href="#ubuntu%20one">Ubuntu One</a></p>
+<ul class="simple">
+<li><p>Katalogų sinchronizavimas su Ubuntu One</p></li>
+<li><p>Tomboy užrašų sinchronizavimas su Ubuntu One</p></li>
+</ul>
+</li>
+<li><p>Konfigūracinių failų saugojimas Mercurial repozitoriume</p></li>
+<li>
+<p>Naudojamų programų sąrašo išsaugojimas ir atstatymas:</p>
+<pre class="code sh"><a name="rest_code_142d6f3001b84c1fb558150961539d03-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-2"></a>dpkg --get-selections &gt; old
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-3"></a>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-4"></a><span class="c1"># Po įdiegimo</span>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-5"></a>dpkg --get-selections &gt; new
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-6"></a>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-8"></a>comm -23 old new &gt; sel
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-9"></a>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-10"></a><span class="c1"># Peržiūrim ko reikia</span>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-11"></a>vim sel
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-12"></a>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-15"></a>sudo apt-get dselect-upgrade
+</pre>
+<p>Idėja: <a class="reference external" href="http://brainstorm.ubuntu.com/idea/25839/">http://brainstorm.ubuntu.com/idea/25839/</a></p>
+</li>
+<li>
+<p>Atsarginių kopijų darymas, rekomenduoju Back In Time, taip pat: sbackup
+(Simple Backup Suit) arba grsync</p>
+<ul class="simple">
+<li><p>Prieš naujai įdiegiant Ubuntu, atsarginių kopijų darymas turi būti
+paskutinis dalykas ir tai reikia daryti išjungus visas programas.</p></li>
+</ul>
+</li>
+<li><p>Namų katalogo išvalymas, prieš darant fresh install</p></li>
+</ul>
+</div>
+<div class="section" id="diegimas">
+<h2>Diegimas<a href="#diegimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>BIOS nustatymai</p></li>
+<li>
+<p>Kalba: geriau rinktis lietuvių, nes:</p>
+<ul>
+<li><p>Vertimus daro patys Ubuntu naudotojai, o ne užsakomos firmos</p></li>
+<li><p>Automatiškai sukonfigūruojami visi Lietuvai ir Lietuviams būdingi nustatymai</p></li>
+<li><p>Automatiškai įdiegiami gramatikos tikrinimo žodynai ir t.t.</p></li>
+</ul>
+</li>
+<li>
+<p>Disko skirsniai</p>
+<ul>
+<li><p>Ubuntu gali pats suskaldyti diską, taip, kaip reikia (pagal nutylėjimą
+sukuriama tik root ir swap skirsniai)</p></li>
+<li><p>Jei turite keturis ar mažiau skirsnių, nėra jokios būtinybės kurti
+„extended“ skirsnius</p></li>
+<li><p><code class="docutils literal">/home</code> katalogą rekomenduojama iškelti į atskirą skirsnį</p></li>
+<li>
+<p>Dažniausiai skirsnių eilės tvarka yra tokia:</p>
+<ul>
+<li><p>sistema, kur laikomi įkrovimo failai ( / )</p></li>
+<li><p>swap</p></li>
+<li><p>home (<code class="docutils literal">/home</code>)</p></li>
+</ul>
+</li>
+<li><p>Rekomenduojama Ext4 failų sistemą, veikia greičiausiai</p></li>
+<li><p>Swap yra nebūtinas, bet rekomenduotinas</p></li>
+<li><p>Swap skirsnis gali būti ir pirminis ir loginis</p></li>
+<li>
+<p>Kiek vietos išskirti Swap’ui?</p>
+<ul>
+<li><p>Jei naudojate hibernate funkciją, tada swap turi būti ne mažesnis, kaip
+RAM, jei nenaudojate hibernate ir turite daug RAM, tada swap gali būti
+ir 1G</p></li>
+</ul>
+</li>
+<li><p>Rekomenduojamu išskirti 10G sistemai, Swap, ir kas liko home</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="po-idiegimo">
+<h2>Po įdiegimo<a href="#po-idiegimo" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li>
+<p>Keyring slaptažodis</p>
+<ul>
+<li><p>Jei neįvesite jokio slaptažodžio, tada jūsų slaptažodžiai bus nesaugūs,
+bet keyring neklausinės kas kartą įvesti slaptažodžio</p></li>
+</ul>
+</li>
+<li><p>Rekomenduojama įsidiegti visus atnaujinimus iš karto po įdiegimo</p></li>
+<li><p>Įsidiegti paketą: ubuntu-restricted-extras</p></li>
+<li><p>Susikonfigūruokite Ubuntu One</p></li>
+<li><p>Compiz įjungimas (veikia ne visur, jei veikia jūsų kompiuteryje, tai bus
+įjungtas pagal nutylėjimą)</p></li>
+<li>
+<p>Pašto klientas, rekomenduoju Thunderbird</p>
+<ul>
+<li><p>Calendar Extension for Thunderbird - Google Calendar support</p></li>
+<li><p>Thunderbird plėtinys „Enigmail“</p></li>
+<li><p>Calendar Extension for Thunderbird</p></li>
+<li><p>Indicators for Thunderbird <a class="reference external" href="https://launchpad.net/libnotify-mozilla">https://launchpad.net/libnotify-mozilla</a></p></li>
+<li><p>FireTray</p></li>
+<li><p>Lightning</p></li>
+</ul>
+</li>
+<li><p>Gwibber</p></li>
+<li><p>Chat</p></li>
+<li><p>Žodynas: GoldenDict arba OpenDict, rekomenduoju GoldenDict</p></li>
+<li>
+<p>Gnome panelė:</p>
+<ul>
+<li><p>tomboy užrašai</p></li>
+<li><p>procesoriaus apkrovimas</p></li>
+</ul>
+</li>
+<li><p>Gnome-do - must have</p></li>
+</ul>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../priemones-darbui-su-python-ir-django/" rel="prev" title="Priemonės darbui su Python ir Django">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../2011/fedora/" rel="next" title="Fedora 15">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

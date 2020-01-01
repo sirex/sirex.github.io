@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about youtube)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/youtube.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Youtube video iš komandinės eilutės</title><link>https://sirex.lt/posts/2009/youtube-video-is-komandines-eilutes/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Ar bandėte kada nors žiūrėti Youtube video, HD formatu? Nežinau, kaip pas jus,
+bet pas mane tuos HD rodo labai sunkiai. CPU dirba pilnu pajėgumu, o video
+rodymas labai stabdo...&lt;/p&gt;
+&lt;p&gt;Kas iš tos HD kokybės, jei vis tiek ja negali pasidžiaugti.. :) Visiškai
+nesenai, radau paprastą sprendimą:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://bitbucket.org/rg3/youtube-dl"&gt;youtube-dl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Tai python skriptas, kuris geba parsiųsti video failą į kompiuterį vėlesniam
+peržiūrėjimui. Tai, kas parsiųsta, galima žiūrėti su mplayer, be jokio
+stabdymo, kaip normalų filmą.&lt;/p&gt;
+&lt;p&gt;Nerašysiu kaip įsidiegti youtube-dl, pateiksiu tik keletą variacijų, kaip jis
+gali būti naudojamas.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tarkime gavote youtube nuorodą ir nenorite jungti naršyklės, norite tik
+peržiūrėti video.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Sprendimas:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ youtube-dl -g "http://www.youtube.com/watch?v=EWBwWHHD1Pc" | xargs mplayer&lt;/pre&gt;
+&lt;p&gt;Jei turite greitą interneto ryšį, pridėjus -b parametrą, bus siunčiama
+geriausia prieinama video kokybė.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tarkime, naršote Youtube ir ieškote įdomių filmukų, kuriuos norėsite
+peržiūrėti vėliau.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Sprendimas: surašykite visas rastas filmukų nuorodas į vieną failą ir šios
+komandos pagalba, iš karto galėsite viską parsisiųsti:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ youtube-dl -bta failas-su-nuorodomis.txt&lt;/pre&gt;
+&lt;p&gt;Čia tik keli pavyzdžiai, kaip galima panaudoti šį skriptą.&lt;/p&gt;
+&lt;p&gt;Atsiminkite, kad yra toks skriptas, pasitelkite išradingumą, fantaziją ir
+ateityje tikrai rasite kur jį pritaikyti.&lt;/p&gt;&lt;/div&gt;</description><category>shell</category><category>youtube</category><guid>https://sirex.lt/posts/2009/youtube-video-is-komandines-eilutes/</guid><pubDate>Thu, 04 Jun 2009 20:41:00 GMT</pubDate></item></channel></rss>

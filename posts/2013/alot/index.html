@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>El. pašto klientas alot | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2013/alot/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../../2012/barsavimas-internetu/" title="Balsavimas internetu" type="text/html">
+<link rel="next" href="../mercurial-server/" title="Mercurial server konfigūravimas" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="El. pašto klientas alot">
+<meta property="og:url" content="https://sirex.lt/posts/2013/alot/">
+<meta property="og:description" content="Po to, kai Gmail privalomai įjungė naują laiškų rašymo funkciją,
+nebeapsikenčiau ir nusprendžiau susirasti normalų pašto klientą.
+Anksčiau ilgą laiką naudojau mutt, bet deja, su dideliais laiškų kieki">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2013-04-14T14:36:00+02:00">
+<meta property="article:tag" content="alot">
+<meta property="article:tag" content="mail">
+<meta property="article:tag" content="software">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">El. pašto klientas alot</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2013-04-14T14:36:00+02:00" itemprop="datePublished" title="2013-04-14 14:36">2013-04-14 14:36</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/alot/" rel="tag">alot</a>,                    <a class="tag p-category" href="../../../tags/mail/" rel="tag">mail</a>,                    <a class="tag p-category" href="../../../tags/software/" rel="tag">software</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Po to, kai Gmail privalomai įjungė <a class="reference external" href="http://gmailblog.blogspot.com/2012/10/introducing-new-compose-in-gmail.html">naują laiškų rašymo funkciją</a>,
+nebeapsikenčiau ir nusprendžiau susirasti normalų pašto klientą.</p>
+<p>Anksčiau ilgą laiką naudojau <a class="reference external" href="http://www.mutt.org/">mutt</a>, bet deja, su dideliais laiškų kiekiais
+viename kataloge, <a class="reference external" href="http://www.mutt.org/">mutt</a> veikia gan lėtai, neturi greito ir patogaus laiškų
+filtravimo ir panašu, kad yra vis mažiau palaikomas.</p>
+<p>Panašu, kad <a class="reference external" href="http://www.mutt.org/">mutt</a> greitu laiku pakeis <a class="reference external" href="http://sup.rubyforge.org/">sup</a> ir jo klonai. <a class="reference external" href="http://sup.rubyforge.org/">sup</a> gan nemažai gerų
+dalykų pasiskolino iš Gmail, o tuo pačiu pakeitė visus blogus dalykus. Man,
+keičiančiam Gmail, <a class="reference external" href="http://sup.rubyforge.org/">sup</a> yra kaip tik tai, ko reikia. Tačiau apsižvalgius ir
+apsiskaičius, radau, kad <a class="reference external" href="https://github.com/pazz/alot">alot</a> (<a class="reference external" href="http://sup.rubyforge.org/">sup</a> klonas) yra net gi dar geriau.</p>
+<p>Kol kas apsisprendžiau išbandyti <a class="reference external" href="https://github.com/pazz/alot">alot</a>, žemiau pateikiu informaciją, kaip viską
+sukonfigūravau, gal būt, kam nors pravers.</p>
+<p>O konfigūravimas nėra paprastas, todėl iš karto įspėju, kad <a class="reference external" href="https://github.com/pazz/alot">alot</a> pašto
+klientas skirtas daugiau patyrusiems kompiuterių naudotojams.</p>
+<div class="section" id="slaptazodziai">
+<h2>Slaptažodžiai<a href="#slaptazodziai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Pirmiausia saugumas, rekomenduoju įsidiegti <a class="reference external" href="http://www.keepassx.org/">KeepPassX</a> programą ir jos
+pagalba susigeneruoti ilgą ir sudėtingą Gmail ar kito pašto serverio
+slaptažodį, kadangi jis bus naudojamas konfigūraciniuose failuose.</p>
+<p>Šiam žingsniui reikės įsidiegti šiuos paketus:</p>
+<pre class="literal-block">sudo apt-get install python-keyring</pre>
+<p>Toliau pasirašiau nedidelį skriptą, kuris išsaugo arba nuskaito slaptažodį
+iš slaptažodžių raktinės. Skripto kodas:</p>
+<blockquote>
+<p><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/bin/keyring">https://bitbucket.org/sirex/home/src/default/bin/keyring</a></p>
+</blockquote>
+</div>
+<div class="section" id="laisku-katalogo-sifravimas">
+<h2>Laiškų katalogo šifravimas<a href="#laisku-katalogo-sifravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Kadangi laiškai bus atsiųsti ir išsaugoti jūsų kompiuteryje, reikėtų juos
+saugoti užšifruotame kataloge, kad niekas be jūsų negalėtų jų perskaityti.
+Žinoma tai nėra privaloma, tačiau dažnai el.  paštu atsiunčiami
+slaptažodžiai ir kita asmeninė informacija, todėl jei paštą tikrinate darbo
+kompiuteryje, laiškų šifravimas tikrai rekomenduojamas.</p>
+<p>Laiškų katalogo šifravimui pasirinkau <a class="reference external" href="http://www.arg0.net/encfsintro">encfs</a> program, ją galite įsidiegti taip:</p>
+<pre class="literal-block">sudo apt-get install encfs</pre>
+<p>Toliau susikurkite užšifruotą katalogą taip:</p>
+<pre class="literal-block">mkdir -p ~/.secure/mail ~/.mail
+encfs -f ~/.secure/mail ~/.mail</pre>
+<p>Sukūrus užšifruotą katalogą, slaptažodį, kurį nurodėte, įveskite į raktinę, taip:</p>
+<pre class="literal-block">keyring encfs mail --set</pre>
+<p>Visi failai esantys <code class="docutils literal"><span class="pre">~/.mail</span></code> kataloge bus užšifruoti, kad laiškus būtų
+galima atsiūsti ir skaityti, paleiskite šią komandą:</p>
+<pre class="literal-block">encfs --ondemand --idle=5 --extpass='keyring encfs mail' ~/.secure/mail ~/.mail</pre>
+<p>Ši komanda gali veikti kaip demonas, galite ją paleisti užsikrovus
+kompiuteriui. Laiškų katalogas visą laiką bus užrakintas, nebent kas nors
+bandys kreiptis į tą katalogą, kai tai atsitiks, <code class="docutils literal">encfs</code> kreipsis į
+raktinę slaptažodžio, gavus slaptažodį, automatiškai, penkioms minutėms
+atrakins laiškų katalogą, o po penkių minučių vėl užrakins.</p>
+</div>
+<div class="section" id="laisku-sinchronizavimas">
+<h2>Laiškų sinchronizavimas<a href="#laisku-sinchronizavimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Laiškų sinchronizavimui pasirinkau <a class="reference external" href="http://offlineimap.org/">offlineimap</a> programą. Jai sukonfigūruoti
+reikia dviejų konfigūracijos failų:</p>
+<blockquote>
+<p><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/.offlineimaprc">https://bitbucket.org/sirex/home/src/default/.offlineimaprc</a>
+<a class="reference external" href="https://bitbucket.org/sirex/home/src/default/.offlineimap.py">https://bitbucket.org/sirex/home/src/default/.offlineimap.py</a></p>
+</blockquote>
+<p>Nepamirškite į raktinę įkelti jūsų el. pašto slaptažodžio:</p>
+<pre class="literal-block">keyring gmail vardenis.pavardenis@gmail.com --set</pre>
+<p>O taip pat įdiegti <a class="reference external" href="http://offlineimap.org/">offlineimap</a>:</p>
+<pre class="literal-block">sudo apt-get install offlineimap</pre>
+<p>Tokia <a class="reference external" href="http://offlineimap.org/">offlineimap</a> konfigūracija, atsiūs laiškus, kas penkias minutes,
+išsaugos juos užšifruotame <code class="docutils literal">~/mail</code> kataloge, <a class="reference external" href="http://cr.yp.to/proto/maildir.html">Maildir</a> formatu.
+Kreipiantis į Gmail serverį, slaptažodį ims iš raktinės.</p>
+<p><a class="reference external" href="http://offlineimap.org/">offlineimap</a> leidžia filtruoti ir pervadinti atsiunčiamus katalogus, jūsų
+atveju, katalogai gali būti pavadinti kitaip, todėl gal tekti pasitaisyti
+<code class="docutils literal">nametrans</code> ir <code class="docutils literal">folderfilter</code> funkcijas <code class="docutils literal"><span class="pre">~/.offlineimap.py</span></code> faile.</p>
+<p>Patikrinti, ar katalogų filtravimas ir pervadinimas gerai veikia, galite
+naudoti tokią komandą:</p>
+<pre class="literal-block">offlineimap --info</pre>
+<p>Beje, <code class="docutils literal"><span class="pre">--info</span></code> argumentas atsirado vėlesnėje <a class="reference external" href="http://offlineimap.org/">offlineimap</a> versijoje, nei
+yra pateikiama kartu su Ubuntu 12.04, todėl norint įvykdyti šią komandą,
+jums reikės atsiųsti ir pasileisti naujesnę versiją, taip:</p>
+<pre class="literal-block">git clone git://github.com/spaetz/offlineimap.git
+cd offlineimap
+git checkout v6.5.4
+./offlineimap.py --info</pre>
+<p>Pirmą kartą atsiunčiant laiškus, rekomenduoju paleisti <a class="reference external" href="http://offlineimap.org/">offlineimap</a> grafiniu režimu:</p>
+<pre class="literal-block">offlineimap</pre>
+<p>Jei turite daug laiškų, pirmas sinchronizavimas gali užtrukti ilgai, man, su
+30 000 laiškų užtruko apie dvi valandas.</p>
+<p>O nuolatiniam laiškų atsiuntimui, foniniu režimu:</p>
+<pre class="literal-block">offlineimap -u quiet</pre>
+</div>
+<div class="section" id="laisku-indeksavimo-variklis">
+<h2>Laiškų indeksavimo variklis<a href="#laisku-indeksavimo-variklis" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Greitai laiškų paieškai pasirinkau <a class="reference external" href="http://notmuchmail.org/">notmuch</a> laiškų indeksavimo variklį.
+Kito pasirinkimo ir nebuvo, kadangi nuo šio variklio tiesiogiai yra
+priklausomas <a class="reference external" href="https://github.com/pazz/alot">alot</a> el. pašto klientas.</p>
+<p>Mano konfigūracijos failas atrodo taip <code class="docutils literal"><span class="pre">~/.notmuch-config</span></code>:</p>
+<blockquote>
+<p><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/.notmuch-config">https://bitbucket.org/sirex/home/src/default/.notmuch-config</a></p>
+</blockquote>
+<p>Tokį konfigūracijos failą, galite susigeneruoti <a class="reference external" href="http://notmuchmail.org/">notmuch</a> vedlio pagalba:</p>
+<pre class="literal-block">notmuch setup</pre>
+<p>Laiškų indeksas atnaujinamas tokios komandos pagalba:</p>
+<pre class="literal-block">notmuch new</pre>
+</div>
+<div class="section" id="adresu-knygute">
+<h2>Adresų knygutė<a href="#adresu-knygute" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Dar vienas reikalingas dalykas, adresų knygutė, tam pasirinkau <a class="reference external" href="http://abook.sourceforge.net/">abook</a>,
+kadangi su šia adresų knygute puikiai suderinamas <a class="reference external" href="https://github.com/pazz/alot">alot</a> el. pašto klientas.</p>
+</div>
+<div class="section" id="laisku-issiuntimas">
+<h2>Laiškų išsiuntimas<a href="#laisku-issiuntimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Kadangi <a class="reference external" href="http://www.postfix.org/">postfix</a> yra labai sudėtingas, o <a class="reference external" href="https://wiki.archlinux.org/index.php/SSMTP">ssmtp</a> reikalauja saugoti
+slaptažodžius atviru tekstu konfigūraciniame faile, tai <a class="reference external" href="http://www.python.org/">Python</a> pagalba
+pasirašiau savo laiškų išsiuntimo skriptą:</p>
+<blockquote>
+<p><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/bin/sendgmail">https://bitbucket.org/sirex/home/src/default/bin/sendgmail</a></p>
+</blockquote>
+<p>Šis skriptas slaptažodį ima iš raktinės, taip pat, kaip ir raktinės skriptas:</p>
+<pre class="literal-block">keyring gmail vardenis.pavardenis@gmail.com</pre>
+<p>Beje, rekomenduoju išbandyti ir <a class="reference external" href="http://msmtp.sourceforge.net/">msmtp</a> MUA, kuris atrodo daro lygiai tą patį ir
+tikriausiai geriau.</p>
+</div>
+<div class="section" id="el-pasto-klientas">
+<h2>El. pašto klientas<a href="#el-pasto-klientas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Galiausiai viskas susijungia į vieną vietą <a class="reference external" href="https://github.com/pazz/alot">alot</a> programos pagalba.</p>
+<p>Mano konfigūracijos failas atrodo taip:</p>
+<blockquote>
+<p><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/.config/alot/config">https://bitbucket.org/sirex/home/src/default/.config/alot/config</a></p>
+</blockquote>
+<p>Rekomenduoju <a class="reference external" href="https://github.com/pazz/alot">alot</a> paleidinėti tokiu būdu:</p>
+<pre class="literal-block">notmuch new &amp;&amp; alot</pre>
+<p>Taip, automatiškai bus atnaujinamas indeksas ir tik tada pasileis el. pašto
+klientas. Nebūtina <a class="reference external" href="https://github.com/pazz/alot">alot</a> laikyti nuolat atidarytą, kadangi jis atsidaro labai
+greitai, nepriklausomai nuo laiškų kiekio.</p>
+<p>Mano konfigūraciniame faile f5 klavišas aprašytas taip:</p>
+<pre class="literal-block">f5 = shellescape --refocus=true 'notmuch new' ; refresh</pre>
+<p>Tai, reiškia, kad paspaudus f5, bus atnaujintas laiškų indeksas ir atnaujintas
+laiškų sąrašas <a class="reference external" href="https://github.com/pazz/alot">alot</a> el. pašto kliente.</p>
+</div>
+<div class="section" id="demonai">
+<h2>Demonai<a href="#demonai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Viskam, kas čia aprašyta, reikalingi du demonai, vienas laiškų katalogo
+dešifravimui, kitas laiškų sinchronizavimui.</p>
+<p>Rekomenduoju naudoti <a class="reference external" href="http://supervisord.org/">supervisord</a> demonų valdytoją, kuris puikiai moka
+tvarkytis su demonais, gali juos paleisti iš naujo, jei jie išsijungia dėl
+klaidos, galima stebėti demonų būklę, juos perkrauti ir t.t.</p>
+<p>Supervisord įdiegsite taip:</p>
+<pre class="literal-block">sudo apt-get install supervisor</pre>
+<p>Kadangi naudosime lokalų <a class="reference external" href="http://supervisord.org/">supervisord</a>, tai jei neplanuojate naudoti sisteminio,
+galite jį išjungti taip:</p>
+<pre class="literal-block">sudo update-rc.d -f supervisor disable</pre>
+<p><a class="reference external" href="http://supervisord.org/">Supervisord</a> veikimui, reikia sukurti šį katalogą:</p>
+<pre class="literal-block">mkdir -p ~/.supervisor/logs</pre>
+<p>Taip pat reikia tokių konfigūracinių failų:</p>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/.supervisor/supervisord.conf">https://bitbucket.org/sirex/home/src/default/.supervisor/supervisord.conf</a></div>
+<div class="line"><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/.config/autostart/supervisord.desktop">https://bitbucket.org/sirex/home/src/default/.config/autostart/supervisord.desktop</a></div>
+<div class="line"><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/bin/supervisor-bootstrap">https://bitbucket.org/sirex/home/src/default/bin/supervisor-bootstrap</a></div>
+<div class="line"><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/bin/encfs-daemon">https://bitbucket.org/sirex/home/src/default/bin/encfs-daemon</a></div>
+</div>
+<p><a class="reference external" href="http://supervisord.org/">Supervisord</a> būklę galite stebėti taip:</p>
+<pre class="literal-block">supervisorctl -c ~/.supervisor/supervisord.conf</pre>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../2012/barsavimas-internetu/" rel="prev" title="Balsavimas internetu">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../mercurial-server/" rel="next" title="Mercurial server konfigūravimas">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

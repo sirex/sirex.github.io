@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about django)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/django.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Priemonės darbui su Python ir Django</title><link>https://sirex.lt/posts/2010/priemones-darbui-su-python-ir-django/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Iš anksto įspėju, kad čia aprašytos priemonės toli gražu nėra skirtos
+pradedantiesiems programuotojams.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Naujame darbe pradėjęs programuoti Python skyriau šiek tiek laiko darbo
+priemonių paruošimui ir nusprendžiau pasidalint savo naudojamo arsenalo sąrašu
+su visais. Jei trumpai, pagrindinės darbo priemonės kurias naudoju yra šios:
+&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Xterm"&gt;Xterm&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/GNU_Screen"&gt;screen&lt;/a&gt;, &lt;a class="reference external" href="http://www.zsh.org/"&gt;zsh&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Vim_(text_editor)"&gt;vim&lt;/a&gt;, &lt;a class="reference external" href="http://ctags.sourceforge.net/"&gt;ctags&lt;/a&gt;, &lt;a class="reference external" href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt;, &lt;a class="reference external" href="http://dreampie.sourceforge.net/"&gt;DreamPie&lt;/a&gt;, &lt;a class="reference external" href="http://virtualenv.openplans.org/"&gt;virtualenv&lt;/a&gt;, &lt;a class="reference external" href="http://www.buildout.org/"&gt;buildout&lt;/a&gt;,
+&lt;a class="reference external" href="http://sphinx.pocoo.org/"&gt;Sphinx&lt;/a&gt;, &lt;a class="reference external" href="http://pypi.python.org/pypi/pylint"&gt;pylint&lt;/a&gt;, &lt;a class="reference external" href="http://github.com/robhudson/django-debug-toolbar"&gt;django-debug-toolbar&lt;/a&gt;, &lt;a class="reference external" href="http://south.aeracode.org/docs/about.html"&gt;South&lt;/a&gt;, &lt;a class="reference external" href="http://pypi.python.org/pypi/ipdb"&gt;ipdb&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Štai kaip viskas atrodo bendroje visumoje:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/Darbalaukis_1_003.png"&gt;&lt;img alt="Priemonės darbui su Python" class="previewimage" src="https://sirex.lt/images/Darbalaukis_1_003.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;Visų šių programų konfigūraciniai failai guli viešai prieinamoje vietoje:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://bitbucket.org/sirex/home/src/"&gt;http://bitbucket.org/sirex/home/src/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XTerm&lt;/strong&gt; yra paprastas, gan greitas (kur kas greitesnis už gnome-terminal ir
+šiek tiek lėtesnis už rxvt) ir labai lankstus terminalo emuliatorius.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;screen&lt;/strong&gt; yra virtualus terminalų multiplexeris, suteikiantis viename
+terminalo lange naudoti kelias terminalo sesijas. Be šios savybės screen turi
+dar daug visokių įdomių funkcijų, tokių kaip virtualūs terminalų langai ir jų
+dalinimas, kopijavimas iš terminalo išvesties, terminalo išvesties saugojimas,
+virtualių terminalų sesijos atskyrimas ir t.t.  Išmokus juo naudotis,
+praktikoje tikrai praverčia.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;zsh&lt;/strong&gt; – tiesiog gera komandinės eilutės sąsaja (shell). Naudoju jį todėl, kad
+jis tiesiog yra tobulas ir turi viską, ko gali prireikti.  Plačiau:
+&lt;a class="reference external" href="http://grml.org/zsh/zsh-lovers.html"&gt;http://grml.org/zsh/zsh-lovers.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ko gero daugiausia zsh man patinka todėl, kad paspaudus TAB, praktiškai visada
+gausi tai ko reikia... Taip, zsh taip pat supranta ir djanogo-admin.py
+sub-komandas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tikriausiai visi ir taip žino, kas yra Vim. Jei nežinot, tai Vim yra vadinamas
+„programmers editor“ (programuotojų teksto redaktorius). Vim yra vienas
+populiariausių programuotojų tekstų redaktorius visame pasaulyje.&lt;/p&gt;
+&lt;p&gt;Naudoju šiuos Vim įskiepius: &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=42"&gt;BuffExplorer&lt;/a&gt;, &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1506"&gt;LargeFile&lt;/a&gt;, &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2540"&gt;snipMate&lt;/a&gt;, &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1697"&gt;surround&lt;/a&gt;, &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2981"&gt;ZenCoding&lt;/a&gt;, &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;PyFlakes&lt;/a&gt;,
+&lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2754"&gt;delimitMate&lt;/a&gt;.  Visą
+kitą Vim'as turi pagal nutylėjimą, sintaksės spalvinimas, galimybė atitraukti
+Python blokus nuo krašto, omnicompletion funkcija ir pan.  Naudojant &lt;a class="reference external" href="http://ctags.sourceforge.net/"&gt;ctags&lt;/a&gt; galima šokinėti per visas Python funkcijas ir
+klases esančias bet kuriame projekto faile.  snipMate turi ne tik python
+iškarpas, bet ir django.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;snipMate&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- missing video:
+&lt;iframe src="http://player.vimeo.com/video/3535418" frameborder="0" height="281" width="500"&gt;&lt;/iframe&gt; --&gt;
+&lt;p&gt;&lt;strong&gt;ctags&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Pagrindinė šio įrankio paskirtis – surinkti informaciją apie visus kode
+naudojamus objektus, surašyti vietas, kur jie yra aprašyti ir viską
+suindeksuoti, kad būtų galima vykdyti greitą paiešką. Surenkami objektai yra
+klasės, funkcijos, konstantos, kintamieji ir t.t. ctags veikia neįtikėtinai
+greitai, per kelias sekundes suindeksuoja didžiules kodo bibliotekas.&lt;/p&gt;
+&lt;p&gt;Vim supranta ctags ir gali naudoti suindeksuotą informaciją, todėl
+programuojant, labai lengva šokinėti nuo vienos funkcijos, prie kitos,
+skirtinguose failuose ar net paketuose.&lt;/p&gt;
+&lt;p&gt;ctags puikiai integruojasi su buildout, naudojant &lt;a class="reference external" href="http://pypi.python.org/pypi/z3c.recipe.tag/"&gt;z3c.recipe.tag&lt;/a&gt; receptą, kurio dėka galima
+suindeksuoti ne tik savo projektą, bet ir visus kitus priklausomus paketus,
+kuriuos naudoja projektas!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mercurial&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Decentralizuota versijų kontrolės sistema. Praktiškai, prieš pradėdamas kažką
+programuoti, instinktyviai suvedu šią komandą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;hg init&lt;/pre&gt;
+&lt;p&gt;Tada tiesiog rašau kodą, dažnai komitinu ir esu ramus, nebaisu, kad mano
+parašytas kodas kažkur pradings. Kažkiek vertą dėmesio kodą, mercurial pagalba,
+tiesiai iš komandinės eilutės siunčiu į &lt;a class="reference external" href="http://bitbucket.org/sirex"&gt;bitbucket.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Mercurial patogus tuo, kad yra puikiai suderinamas su kitomis išorinėmis
+priemonėmis. Todėl be problemų galiu dirbti su git ropozitoriumais, naudodamas
+&lt;a class="reference external" href="http://hg-git.github.com/"&gt;hg-git&lt;/a&gt; įskiepį, čia daugiausiai tais atvejais,
+kai reikia forkinti kažką iš &lt;a class="reference external" href="http://github.com/"&gt;github.com&lt;/a&gt;. Be šito,
+naudoju mercurial su meld ir kdiff programomis, pakeitimams peržiūrėti.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DreamPie&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DreamPie yra patogi priemonė, kai reikia testuoti atskiras kodo vietas.
+Panašią funkciją atlieka ipython, kurį taip pat dažnai naudoju ir sakyčiau
+ipython daugeliu atveju net gi yra pranašesnis už DreamPie, išskyrus vieną –
+zsh sunku naudoti, kai reikia testuoti kelių eilučių kodą. DreamPie puikiai
+veikia ir tais atvejais, kai reikia testuoti kelias eilutes, ciklus ir pan.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;virtualenv, buildout&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Abi šios priemonės yra nepakeičiamos programuojant Python. Tiek virtualenv,
+tiek buildout atlieka panašią funkciją – sukuria izoliuotą aplinką, kurioje
+nepriklausomai nuo sistemos galima įdiegti reikiamas Python paketų versija ir
+programuojant naudoti būtent tos izoliuotos aplinkos paketus.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;virtualenv&lt;/strong&gt; daugiau skirtas testinės aplinkos kūrimui, kurioje galima
+įdiegti norimą ištestuoti savo paketą, o kartu į tą pačią izoliuotą aplinką
+galima įdiegti ir visus susijusius paketus.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;buildout&lt;/strong&gt; yra kur kas sudėtingesnis dalykas ir daugiau skirtas būtent
+programavimo ir deployinimo reikmėms. Buildout gėris yra tame, kad jis turi
+visą galybę taip vadinamų receptų, kurių pagalba galima susikurti labai patogią
+programavimo aplinką. Programuojant Django naudoju &lt;a class="reference external" href="http://pypi.python.org/pypi/djangorecipe"&gt;djangorecipe&lt;/a&gt;,kurio pagalba gaunu veikiantį
+django projekto katalogą ir visą rinkinį galimybių tą projektą valdyti. Verta
+paminėti vieną iš tokių galimybių – wsgi vykdomojo skripto generavimas, kuri
+panaudojus labai paprasta projektą paleisti bet kokiame serveryje.&lt;/p&gt;
+&lt;p&gt;Gan dažnai pasitaiko, kad dirbant, net ir tam pačiam projektui sukuriamos
+kelios buildout aplinkos. Kad kiekvienai iš tų aplinkų nereikėtų vėl
+pakartotinai siųstis visų paketų ir diegti visų paketų, kas kartais užtrunka
+gan ilgai, buildout suteikia galimybę savo namų kataloge nurodyti kur saugoti
+bendrai naudojamus paketus. Tai reiškia, kad visi paketai ir visos skirtingos
+jų versijos suvažiuoja į vieną bendrą katalogą ir visos buildout aplinkos
+bendrai naudoja tuos paketus.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://pypi.python.org/pypi/collective.recipe.omelette"&gt;omelette&lt;/a&gt; yra buildout receptas, kuris tvarkingai išdėlioja visus
+projekte naudojamus išorinius paketus viename kataloge. Tai yra tikras
+išsigelbėjimas, nes kaip žinia kiekvienas python paketas įdiegiamas atskiruose
+kataloguose, o tie atskiri katalogai gali būti bet kuriame sys.path sąrašo
+kataloge.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sphinx&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Apie Sphinx žmonės kalba taip: „A great tool that actually makes programmers
+want to write documentation!“. Programuojant būtina rašyti dokumentaciją, kad
+net ir pats grįžęs prie to pačio kodo po metų, žinotum kas ten padaryta. Sphinx
+yra labai patogi dokumentacijos ruošimo priemonė, kurioje iš esmės rašomas
+išplėstas &lt;a class="reference external" href="http://docutils.sf.net/rst.html"&gt;reStructuredText&lt;/a&gt; tekstas.
+Pasinaudojus išplėtimais į dokumentacijos tekstą galima įtraukti ištisą modulio
+dokumentaciją specialių raktinių žodžių pagalba. Į nurodytas dokumentacijos
+vietas, iš pačio kodo docstringų senrenkama informacija ir suformuojama graži
+API dokumentacija. Sphinx puikiai integruojasi į buildout aplinką, dėl ko
+rašyti dokumentacijas dar paprasčiau.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;pylint&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tai yra &lt;a class="reference external" href="http://pychecker.sourceforge.net/"&gt;pyChecker&lt;/a&gt; arba &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2441"&gt;PyFlakes&lt;/a&gt;
+analogas išsiskiriantis tuo, kad turi daugiausiai funkcijų ir lyginant su
+pyChecker veikia kur kas stabiliau.  pylint paskirtis – kodo tikrinimas,
+surenkant visas programavimo klaidas, vietas kuriose nesilaikoma apibrėžto kodo
+standarto, vietas, kurios panašios į blogo programavimo praktiką ir pan. pylint
+prasineša pro visą kodą, kurį nurodai ir sugeneruoja didžiulę ataskaitą (dydis
+priklauso nuo klaidų gausos...  :) ). Ataskaitoje suskaičiuojamas kodo kokybės
+įvertinimas 10 balų sistemoje ir pateikiama išsami statistika apie klaidas, jų
+pasiskirstymą, dažnumą ir pan.  Manau tai yra must-have įrankis programuojant
+Python.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;django-debug-toolbar&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Programuojant su Django tai yra must-have įrankis, kuris rodo visą informaciją
+apie užklausą: užklausos trukmė, užklausų sąrašas ir kiekvienos užklausos
+trukmė, užkrauti šablonai ir juose naudoti kontekstiniai kintamieji, užklausai
+perduoti kintamieji ir t.t. ir t.t.  django-debug-toolbar integruojasi į
+svetainę ir atvaizduojamas pasislepiančios žymės pavidalu, kurią paspaudus bet
+kuriame labe išsiskleidžia visas gėris, kuris taip pat geba sustabdyti
+užklausą, jei jos pabaigoje vyksta redirect'as.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;South&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;South yra vienas iš perspektyviausių Django duomenų bazių migracijos sprendimų
+ir ko gero greitu laiku bus įtrauktas į Django branduolį.  South geba išsaugoti
+duomenų bazės būseną failų pavidalu, kuriuos galima įtraukti į versijų
+kontrolės sistemą ir turėti galimybę sklandžiai migruoti duomenų bazę,
+keičiantis jos struktūrai.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ipdb&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;BDD (Bug Driven Development) praktikoje kartais prireikia ir debugerio.  Tam
+reikalui python turi vidinį debugerį &lt;a class="reference external" href="http://docs.python.org/library/pdb.html"&gt;pdb&lt;/a&gt;, bet aš naudoju šiek tiek pagerintą
+variantą: ipdb. ipdb yra tas pats pdb tik išplėstas ipython funkcijomis.
+Naudojant šį debugerį galima naudoti visas standartinio debugerio funkcijas ir
+daugiau.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reziumė&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Didžiąją dalį čia aprašytų dalykų reziumuoja vienas paprastas, nedidelis
+buildout konfigūracinis failas:&lt;/p&gt;
+&lt;pre class="code ini"&gt;&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[buildout]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;parts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-3"&gt;&lt;/a&gt;&lt;span class="s"&gt;    django&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-4"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ctags&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-5"&gt;&lt;/a&gt;&lt;span class="s"&gt;    omelette&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-6"&gt;&lt;/a&gt;&lt;span class="s"&gt;    sphinx&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-7"&gt;&lt;/a&gt;&lt;span class="s"&gt;    pylint&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-9"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-10"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ipdb&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-11"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ipython&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-12"&gt;&lt;/a&gt;&lt;span class="s"&gt;    South&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-13"&gt;&lt;/a&gt;&lt;span class="s"&gt;    django-debug-toolbar&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-14"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-15"&gt;&lt;/a&gt;&lt;span class="k"&gt;[django]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-16"&gt;&lt;/a&gt;&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;djangorecipe&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-17"&gt;&lt;/a&gt;&lt;span class="na"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;1.2&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-18"&gt;&lt;/a&gt;&lt;span class="na"&gt;project&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;myproject&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-19"&gt;&lt;/a&gt;&lt;span class="na"&gt;settings&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;development&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-20"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;${buildout:eggs}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-21"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-22"&gt;&lt;/a&gt;&lt;span class="k"&gt;[ctags]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-23"&gt;&lt;/a&gt;&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;z3c.recipe.tag:tags&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-24"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;${buildout:eggs}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-25"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-26"&gt;&lt;/a&gt;&lt;span class="k"&gt;[omelette]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-27"&gt;&lt;/a&gt;&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;collective.recipe.omelette&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-28"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;${buildout:eggs}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-29"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-30"&gt;&lt;/a&gt;&lt;span class="k"&gt;[sphinx]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-31"&gt;&lt;/a&gt;&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;zc.recipe.egg&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-32"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-33"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${buildout:eggs}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-34"&gt;&lt;/a&gt;&lt;span class="s"&gt;    Sphinx&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-35"&gt;&lt;/a&gt;&lt;span class="na"&gt;scripts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-36"&gt;&lt;/a&gt;&lt;span class="s"&gt;    sphinx-build&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-37"&gt;&lt;/a&gt;&lt;span class="s"&gt;    sphinx-quickstart&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-38"&gt;&lt;/a&gt;&lt;span class="na"&gt;extra-paths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-39"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${django:location}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-40"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${buildout:directory}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-41"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-42"&gt;&lt;/a&gt;&lt;span class="k"&gt;[pylint]&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-43"&gt;&lt;/a&gt;&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;zc.recipe.egg&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-44"&gt;&lt;/a&gt;&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-45"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${buildout:eggs}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-46"&gt;&lt;/a&gt;&lt;span class="s"&gt;    pylint&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-47"&gt;&lt;/a&gt;&lt;span class="na"&gt;extra-paths&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-48"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${django:location}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-49"&gt;&lt;/a&gt;&lt;span class="s"&gt;    ${buildout:directory}&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-50"&gt;&lt;/a&gt;&lt;span class="na"&gt;entry-points&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-51"&gt;&lt;/a&gt;&lt;span class="s"&gt;    pylint=pylint.lint:Run&lt;/span&gt;
+&lt;a name="rest_code_8e283351bc394eb6bac8f168735eb16d-52"&gt;&lt;/a&gt;&lt;span class="s"&gt;    arguments = sys.argv[1:]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>django</category><category>python</category><category>vim</category><guid>https://sirex.lt/posts/2010/priemones-darbui-su-python-ir-django/</guid><pubDate>Mon, 20 Sep 2010 19:26:00 GMT</pubDate></item><item><title>Python, Django, Django CMS!</title><link>https://sirex.lt/posts/2010/python-django-django-cms/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jau senai svajojau išsilaisvinti iš PHP priklausomybės ir susirasti normalų
+Python programuotojo darbą. Galiausiai apsisprendžiau ir tai padariau – išėjau
+iš darbo, kuriame dirbau su PHP ir visą laiką skyriau Python programuotojo
+darbo paieškoms. Susitikus su visais penkiais Vilniuje, Python darbą
+siūlančiais įmonių vadovais, įsidarbinti pavyko tik penktojo susitikimo metu.&lt;/p&gt;
+&lt;p&gt;Tiek istorijos. Dabar apie tai, ką nuveikiau gero per pirmą darbo savaitę.&lt;/p&gt;
+&lt;div class="section" id="django-cms"&gt;
+&lt;h2&gt;Django CMS&lt;/h2&gt;
+&lt;p&gt;Naujame darbe daugiausiai programuojame naudojant &lt;a class="reference external" href="http://www.djangoproject.com/"&gt;Django karkasą&lt;/a&gt;. Pats Django yra gan plikas, todėl jei
+svetainė nėra labai išskirtinė, geriau darbą pradėti su &lt;a class="reference external" href="http://www.django-cms.org/"&gt;Django CMS&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.django-cms.org/"&gt;Django CMS&lt;/a&gt; yra tas pats Django, tik su
+įrankiais skirtais turinio valdymui. Plikas Django nėra jau toks plikas, nes
+turi automatizuotą administravimo sąsają. Django CMS dviračio neišradinėja ir
+esamą Django funkcionalumą praplečia elementais skirtais svetainės turiniui
+valdyti.&lt;/p&gt;
+&lt;p&gt;Trumpai apie Django CMS funkcijas:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Svetainės front-end dalies administravimas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Media duomenų (paveiksliukai, dokumentai, video medžiaga) administravimas ir
+galimybė pateikti svetainėje.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Keičiamo svetainės turinio versijavimas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Naudotojų ir jų teisių valdymas&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SEO optimizacija&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Kelių skirtingų svetainių palaikymas naudojant tą pačią administravimo
+sąsają.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ir galiausiai įskiepių ir kitokių įterpiamų programinių dalių galimybės, kas
+daro Django CMS labai lankstų ir puikiausiai suderinamu su Django.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Šios funkcijos yra tai, kas pateikiama kartu su Django CMS ir veikia out of the
+box. Gan solidus pagrindas paprastai svetainei, bet daugelio dalykų dar
+trūksta, tokių kaip naujienų, komentarų, galerijų, kategorijų ir pan. Šių
+dalykų nėra out of the box, tačiau jie pateikiami įskiepių ar modulių pavidalu.
+Viskas, būtų kaip ir gerai, bet kadangi Django CMS yra gan naujas dalykas, tai
+viso to trečiųjų šalių gėrio nėra labai gausu, o tai kas yra, integruojama ne
+visada sklandžiai.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-cms-diegimas"&gt;
+&lt;h2&gt;Django CMS diegimas&lt;/h2&gt;
+&lt;p&gt;Django CMS diegimas nuo nulio nėra labai paprastas uždavinys. Reikia atlikti
+gan nemažai rankinio darbo, yra nemažai vietų kur galima suklysti ir vėliau
+ilgai aiškintis, kas blogai.&lt;/p&gt;
+&lt;p&gt;Kad viso to išvengti, darbe parašiau paleidimo skriptą, kurio dėka diegimas
+supaprastėjo iki kelių komandų. Skriptą rasite čia:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://bitbucket.org/sirex/django_cms_template"&gt;http://bitbucket.org/sirex/django_cms_template&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Django CMS diegimo instrukcija, naudojantis šiuo skriptu pateikiu žemiau.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo apt-get install python-dev python-setuptools subversion
+sudo python-pip virtualenv mercurial
+virtualenv --no-site-packages sandbox
+cd sandbox
+./bin/pip install -e hg+http://bitbucket.org/sirex/django_cms_template#egg=django_cms_template
+./bin/paster create -t django_cms_21 myapp
+cd myapp
+make
+make run&lt;/pre&gt;
+&lt;p&gt;Kai šios komandos atliks savo darbą, Django CMS pasileisite adresu:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://localhost:8000/"&gt;http://localhost:8000/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Django CMS turi vidinį serverį, naudoja vidinę Sqlite3 duomenų bazę, todėl
+absoliučiai nieko papildomo įdieginėti nereikės.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>django</category><category>django-cms</category><category>python</category><guid>https://sirex.lt/posts/2010/python-django-django-cms/</guid><pubDate>Thu, 16 Sep 2010 19:12:00 GMT</pubDate></item><item><title>Django VS CakePHP</title><link>https://sirex.lt/posts/2010/django-vs-cakephp/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Stengsiuosi pateikti tik faktus. Kuris iš jų geresnis, spręsti kiekvienam
+asmeniškai.&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 49%"&gt;
+&lt;col style="width: 51%"&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th class="head"&gt;&lt;p&gt;Django&lt;/p&gt;&lt;/th&gt;
+&lt;th class="head"&gt;&lt;p&gt;CakePHP&lt;/p&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img alt="/images/django.png" src="https://sirex.lt/images/django.png"&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;img alt="/images/cakephp.gif" src="https://sirex.lt/images/cakephp.gif"&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan="2"&gt;&lt;p&gt;&lt;strong&gt;Programavimo kalba&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Python&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;PHP&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan="2"&gt;&lt;p&gt;&lt;strong&gt;Pradžia&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;2005 m.&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;2005 m.&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan="2"&gt;&lt;p&gt;&lt;strong&gt;Atviras kodas&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;Taip, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/BSD_License"&gt;BSD Licencija&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Taip, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/MIT_License"&gt;MIT Licencija&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan="2"&gt;&lt;p&gt;&lt;strong&gt;Pagalba per IRC&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;p&gt;#django @ Freenode&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;~700&lt;/strong&gt; dalyvių&lt;/p&gt;
+&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;#cakephp @ Freenode&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;~100&lt;/strong&gt; dalyvių&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="section" id="ror-klonas"&gt;
+&lt;h2&gt;RoR klonas?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Django laikosi populiariausių ir pasiteisinusių dizaino šablonų, tokių, kaip
+MVC, ORM ir panašiai, kurie taip pat naudojami RoR karkase, tačiau daugiau
+didesnių panašumų nėra.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CakePHP yra Ruby on Rails klonas perrašytas PHP kalba. Nors rašoma, kad CakePHP
+nėra RoR klonas, bet daugelis dalykų realizuota lygiai taip pat, kaip tai yra
+padaryta RoR.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dokumentacija"&gt;
+&lt;h2&gt;Dokumentacija&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Puiki ir &lt;a class="reference external" href="http://docs.djangoproject.com/en/1.1/"&gt;išsami dokumentacija&lt;/a&gt;, yra
+&lt;a class="reference external" href="http://www.djangobook.com/"&gt;internetinė&lt;/a&gt; ir &lt;a class="reference external" href="http://www.amazon.com/Definitive-Guide-Django-Development-Right/dp/1590597257"&gt;popierinė knyga.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Dokumentacija nėra išsami ir išbaigta, daugelyje vietų apie funkcijas
+užsimenama tik bendrais bruožais. Yra išleista &lt;a class="reference external" href="http://www.amazon.com/gp/product/1847193897?ie=UTF8&amp;amp;tag=dotcombarga&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1847193897"&gt;knyga apie CakePHP&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="darbo-vietos-paruosimas"&gt;
+&lt;h2&gt;Darbo vietos paruošimas&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Python dėka Django galima įkelti į izoliuotą aplinką, kur visas veiksmas vyks
+viename kataloge.&lt;/p&gt;
+&lt;p&gt;Django turi integruotą web serverį, kuris būtent skirtas programavimui,
+nereikia rūpintis Apache ar pan. konfigūravimu.&lt;/p&gt;
+&lt;p&gt;Django karkasas atskirtas nuo vystomo projekto. Naujas projektas sukuriamas
+automatizuotai, komandos &lt;code class="docutils literal"&gt;startproject&lt;/code&gt; pagalba.&lt;/p&gt;
+&lt;p&gt;Pasiruošti darbui užtenkat šių trijų komandų:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ virtualenv sandbox &amp;amp;&amp;amp; cd sandbox
+$ ./bin/pip django
+$ ./bin/django-admin.py startproject mysite&lt;/pre&gt;
+&lt;p&gt;Be to, programavimo darbams automatizuoti galima naudoti paruoštą &lt;a class="reference external" href="http://pypi.python.org/pypi/djangorecipe"&gt;„Django
+Receptą“&lt;/a&gt; su &lt;a class="reference external" href="http://www.buildout.org/"&gt;buildout įrankiais&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Web serveriu, duomenų baze ir kitais dalykais reikia pasirūpinti pačiam.&lt;/p&gt;
+&lt;p&gt;CakePHP paketas turi iš karto paruoštą projekto katalogą, tačiau galima
+komandos bake project pagalba susikurti jį atskirai, panašiai, kaip tai daroma
+su Django &lt;code class="docutils literal"&gt;startproject&lt;/code&gt; komanda.&lt;/p&gt;
+&lt;p&gt;Susikonfigūravus LAMP serverį, toliau darbo vietos paruošimas vyksta taip:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ wget "http://cakeforge.org/frs/download.php/745/" \
+       "cake_1.3.0-alpha.bz2/donation=complete" -O- \
+       | tar -xjf -
+$ mv 1.3.0-alpha cakephp &amp;amp;&amp;amp; cd cakephp
+$ chown -R www-data app/tmp&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="duomenu-bazes-kurimas-ir-migravimas"&gt;
+&lt;h2&gt;Duomenų bazės kūrimas ir migravimas&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Dirbant su Django duomenų bazės kūrimo ir migravimo problemas galima pamiršti,
+reikia žinoti tik vieną komandą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ ./manage.py syncdb&lt;/pre&gt;
+&lt;p&gt;Duomenų bazės struktūra aprašoma modeliuose, būtent pagal modelių aprašus
+sukuriamos realios lentelės duomenų bazėje. Pasikeitus modelių struktūrai,
+atnaujinamos ir duomenų bazės lentelės įvykdžius syncdb komandą. Procesas
+visiškai automatizuotas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CakePHP duomenų bazės migravimo schemą paveldėjo iš Ruby On Rails.  Duomenų
+bazės kūrimas vykdomas tiesiogiai duomenų bazėje, naudojantis bet kokiomis
+priemonėmis, pavyzdžiui phpMyAdmin. Vėliau sukurtos lentelės susiejamos su
+modeliais. Migruojant duomenų bazės struktūrą, specialių komandų pagalba
+sukuriamas schema.php failas, kuris ir naudojamas atstatant duomenų bazės
+struktūrą.&lt;/p&gt;
+&lt;p&gt;Duomenų bazės schemą sugeneruoti, atkurti ir atnaujinti galima taip:&lt;/p&gt;
+&lt;p&gt;Generuojamas duomenų bazės schemos failas:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ ./cake/console/cake schema generate&lt;/pre&gt;
+&lt;p&gt;Atkuriama duomenų bazė iš schemos failo:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ ./cake/console/cake schema run create&lt;/pre&gt;
+&lt;p&gt;Atnaujinama egzistuojanti duomenų bazė, pagal schemos failą:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;$ ./cake/console/cake schema run update&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="models"&gt;
+&lt;h2&gt;Models&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Django laikosi KISS principo, todėl tai, kas aprašyta modeliuose, naudojama
+duomenų bazės lentelėms kurti, generuoti formoms (CakePHP Scaffolding), duomenų
+tikrinimui atlikit ir t.t.&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_261034898ad34fd6aa2b3e540cccc844-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.db&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;
+&lt;a name="rest_code_261034898ad34fd6aa2b3e540cccc844-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_261034898ad34fd6aa2b3e540cccc844-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_261034898ad34fd6aa2b3e540cccc844-4"&gt;&lt;/a&gt;    &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CharField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_261034898ad34fd6aa2b3e540cccc844-5"&gt;&lt;/a&gt;    &lt;span class="n"&gt;body&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TextField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_261034898ad34fd6aa2b3e540cccc844-6"&gt;&lt;/a&gt;    &lt;span class="n"&gt;created&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTimeField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a name="rest_code_261034898ad34fd6aa2b3e540cccc844-7"&gt;&lt;/a&gt;    &lt;span class="n"&gt;modified&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTimeField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Django neriboja ir leidžia rašyti tiesiogines SQL užklausas, tiek susietas su
+modeliu, tiek nepriklausomas INSERT/UPDATE ar kitoms užklausoms.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CakePHP duomenų struktūra aprašoma tiesiogiai duomenų bazėje kuriant lenteles.
+Modelis pagal pavadinimą arba &lt;code class="docutils literal"&gt;useTable&lt;/code&gt; parametrą, susiejamas su duomenų
+bazės lentele, iš kurios nuskaitomi visi laukai ir kiti duomenys.&lt;/p&gt;
+&lt;pre class="code php"&gt;&lt;a name="rest_code_8be3acde8c3740f38be5ac231530862e-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a name="rest_code_8be3acde8c3740f38be5ac231530862e-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8be3acde8c3740f38be5ac231530862e-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Post&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;AppModel&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_8be3acde8c3740f38be5ac231530862e-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;$name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'Post'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_8be3acde8c3740f38be5ac231530862e-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_8be3acde8c3740f38be5ac231530862e-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8be3acde8c3740f38be5ac231530862e-7"&gt;&lt;/a&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;CakePHP suteikia ribotas galimybes vykdyti tiesiogines SQL užklausas.
+Pateikiamas tik vienas query metodas modelyje. Tiesioginės SQL užklausos
+surišamos su modeliu ir vykdomas fetchAll metodas. Nepaisant to, veikia ir
+INSERT/UPDATE užklausos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="views"&gt;
+&lt;h2&gt;Views&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Django MVC trijulė &lt;a class="reference external" href="http://docs.djangoproject.com/en/dev/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names"&gt;vadinama kiek kitais pavadinimais&lt;/a&gt;,
+todėl Views Django atveju yra tiesiog Templates.&lt;/p&gt;
+&lt;p&gt;Django turi savo šablonų sistemą, turinčią paveldimumo galimybę, funkcionalius
+kintamuosius, filtrus ir taip vadinamas žymes, kurios atlieką visą dinaminio
+turinio kūrimo darbą.&lt;/p&gt;
+&lt;p&gt;Šablonuose naudojami blokai. Vienas šablonas gali paveldėti kitą šabloną,
+perrašant tik reikiamus blokus. Būtent toks šablonų paveldėjimo principas yra
+pagrindinis arkliukas konstruojant sudėtingas svetaines, kurios turi bendrą
+šabloną ir besikeičiančias tam tikras dalis.  Štai kaip atrodo Django šablonas:&lt;/p&gt;
+&lt;pre class="code jinja"&gt;&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="s2"&gt;"base_generic.html"&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-3"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt; &lt;span class="cp"&gt;%}{{&lt;/span&gt; &lt;span class="nv"&gt;section.title&lt;/span&gt; &lt;span class="cp"&gt;}}{%&lt;/span&gt; &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-5"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt; &lt;span class="nv"&gt;content&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-6"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;section.title&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-8"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;story&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;story_list&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-9"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-10"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;a href="&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;story.get_absolute_url&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;"&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-11"&gt;&lt;/a&gt;&lt;span class="x"&gt;        &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;story.headline&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;upper&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-12"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-13"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-14"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;story.tease&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;truncatewords&lt;/span&gt;&lt;span class="s2"&gt;:"100"&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-15"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a name="rest_code_a7794d67ced04c3a9048ee0bf365cfed-16"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CakePHP Views dalis taip pat reiškia šablonus. Šablonai rašomi PHP kalba,
+kadangi PHP pati savaime turi visas šablonams būdingas funkcijas.  Šablonų
+failai, nors ir parašyti PHP kalba, turi .ctp galūnę, kas reiškia „CakePHP
+Template“.&lt;/p&gt;
+&lt;p&gt;CakePHP šablonai turi pagalbines priemones, tokias, kaip Helpers ir Elements.
+Helpers yra paprasčiausios funkcijos, kurios padeda formuoti šabloną. Elements
+iš dalies galima sulyginti su Django Tags. CakePHP Elements atlieka
+pasikartojančių svetainės dalių išvedimą, tokiu pačiu tikslu naudojami ir
+Django Tags, tačiau jų panaudojimo spektras yra kur kas platesnis.&lt;/p&gt;
+&lt;p&gt;CakePHP šablonas atrodo taip:&lt;/p&gt;
+&lt;pre class="code php"&gt;&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$section&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'title'&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-3"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;title&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-5"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="nv"&gt;$story_list&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nv"&gt;$story&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-6"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-7"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;a href="&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;get_absolute_url&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;"&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-8"&gt;&lt;/a&gt;&lt;span class="x"&gt;        &lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nb"&gt;strtoupper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;headline&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-9"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-10"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-11"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$text&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;truncate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;tease&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_e89ebb807ac14efeb4c7becd15f277d8-12"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;endforeach&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="controllers"&gt;
+&lt;h2&gt;Controllers&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Django kontroleriai vadinami Views kartu su adresacijos mechanizmu.  Django
+Views yra paprasčiausios funkcijos, kurios nurodą ką ir kaip grąžinti. Tos
+funkcijos surišamos su adresacijos mechanizmu.  Štai kaip kuriama adresacija:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_d67f7547326e482a935adf47ce164889-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.conf.urls.defaults&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;a name="rest_code_d67f7547326e482a935adf47ce164889-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_d67f7547326e482a935adf47ce164889-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;urlpatterns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;patterns&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_d67f7547326e482a935adf47ce164889-4"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/2003/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.special_case_2003'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;a name="rest_code_d67f7547326e482a935adf47ce164889-5"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/(\d&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s1"&gt;)/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.year_archive'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;a name="rest_code_d67f7547326e482a935adf47ce164889-6"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/(\d&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s1"&gt;)/(\d&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s1"&gt;)/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.month_archive'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;a name="rest_code_d67f7547326e482a935adf47ce164889-7"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/(\d&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s1"&gt;)/(\d&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s1"&gt;)/(\d+)/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.article_detail'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;a name="rest_code_d67f7547326e482a935adf47ce164889-8"&gt;&lt;/a&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Aprašant adresus naudojami Regexp, per kuriuos iš karto atliekamas perduodamų
+parametrų tikrinimas.&lt;/p&gt;
+&lt;p&gt;O štai kaip atrodo Views funkcija:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_9574276540094458b0b95062b7cf8083-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.shortcuts&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;render_to_response&lt;/span&gt;
+&lt;a name="rest_code_9574276540094458b0b95062b7cf8083-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_9574276540094458b0b95062b7cf8083-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_view&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_9574276540094458b0b95062b7cf8083-4"&gt;&lt;/a&gt;    &lt;span class="n"&gt;template_vars&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"foo"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"bar"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_9574276540094458b0b95062b7cf8083-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;render_to_response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'myapp/index.html'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;template_vars&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_9574276540094458b0b95062b7cf8083-6"&gt;&lt;/a&gt;                               &lt;span class="n"&gt;mimetype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"application/xhtml+xml"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Su Django Views galima išvesti ne tik HTML turinį, bet ir paveiksliukus,
+dokumentus, PDF failus ir ką tik nori. Nėra jokių ribojimų, nėra jokio
+tiesioginio privalomo ryšio su šablonais ar panašiais. Su Django Views viskas
+programuotojo rankose.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Django paveldimumas įgyvendintas šablonų lygmenyje (žinoma niekas nedraudžia
+naudotis Python OOP), tuo tarpu CakePHP visa svetainės hierarchija ir
+tarpusavio ryšiai laikomi kontroleriuose. Manau ši vieta yra esminis skirtumas
+tarp Django ir CakePHP. Django užklausimai apdorojami atskiromis funkcijomis,
+perduodant informaciją šablonų hierarchijai, o CakePHP per tarpusavyje
+susijusių klasių hierarchiją į atskirus šablonų gabaliukus.&lt;/p&gt;
+&lt;p&gt;Nors CakePHP turi URL Routes, tačiau pagal nutylėjimą, adresai formuojami pagal
+konrolerio ir jo metodų pavadinimus.  Štai, kaip atrodo CakePHP adresacijos
+mechanizmas:&lt;/p&gt;
+&lt;pre class="code php"&gt;&lt;a name="rest_code_05da728376304880852fa969d69ac230-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a name="rest_code_05da728376304880852fa969d69ac230-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_05da728376304880852fa969d69ac230-3"&gt;&lt;/a&gt;&lt;span class="nx"&gt;Router&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;a name="rest_code_05da728376304880852fa969d69ac230-4"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'controller'&lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="s1"&gt;'posts'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_05da728376304880852fa969d69ac230-5"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'action'&lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_05da728376304880852fa969d69ac230-6"&gt;&lt;/a&gt;    &lt;span class="p"&gt;));&lt;/span&gt;
+&lt;a name="rest_code_05da728376304880852fa969d69ac230-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_05da728376304880852fa969d69ac230-8"&gt;&lt;/a&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Štai, kaip atrodo CakePHP kontroleris:&lt;/p&gt;
+&lt;pre class="code php"&gt;&lt;a name="rest_code_d76227777a784698811d47cb1bc451b4-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a name="rest_code_d76227777a784698811d47cb1bc451b4-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_d76227777a784698811d47cb1bc451b4-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;RecipesController&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;AppController&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_d76227777a784698811d47cb1bc451b4-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;view&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_d76227777a784698811d47cb1bc451b4-5"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'foo'&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;a name="rest_code_d76227777a784698811d47cb1bc451b4-6"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;render&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/myapp/index'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_d76227777a784698811d47cb1bc451b4-7"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_d76227777a784698811d47cb1bc451b4-8"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_d76227777a784698811d47cb1bc451b4-9"&gt;&lt;/a&gt;
+&lt;a name="rest_code_d76227777a784698811d47cb1bc451b4-10"&gt;&lt;/a&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="mvc-pagalbines-priemones"&gt;
+&lt;h2&gt;MVC pagalbinės priemonės&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Django rodiniai (Views) globaliai gali būti kontroliuojami middleware pagalba.
+Middleware yra paprasčiausia klasė, kurios metodai iškviečiami nurodytu
+užklausos vykdymo metu. Rodiniai dar gali būti dekoruojami Python dekoratoriais
+ir rašomi GenericWiews dažnai pasikartojančioms situacijoms.&lt;/p&gt;
+&lt;p&gt;Šablonų kalba pati savaime turi daug visokių pagalbinių funkcijų ir filtrų,
+kuriuos galima pavadinti „Helpers“, kas yra naudojama CakePHP.  Modeliuose
+galima naudoti taip vadinamus „Managers“, kurių pagalba galima išplėsti vieno
+ar kelių modelių galimybes.&lt;/p&gt;
+&lt;p&gt;Be šių išvardintų pagalbinių priemonių, Django turi gan didelę vidinę
+biblioteką, visiems gyvenimo atvejams.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CakePHP Controllers, Models ir Views, atitinkamai naudoja Components, Behaviors
+ir Helpers, kurie išplečia MVC dalių funkcionalumą.&lt;/p&gt;
+&lt;p&gt;CakePHP taip pat turi gan nemažai vidinių pagalbinių priemonių dažnai
+pasitaikančioms situacijoms.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="moduliskumas"&gt;
+&lt;h2&gt;Moduliškumas&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Standartiškai, kiekvieną Django projektą sudaro eilė Django Apps, tai yra
+standartinė praktika ir būtent tai išreiškiamas moduliškumas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CakePHP moduliškumas realizuotas Plugins pagalba ir jie veikia panašiai, kaip
+Django Apps tik dokumentacijoje.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dviracio-isradinejimas"&gt;
+&lt;h2&gt;Dviračio išradinėjimas&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Daugelis funkcijų realizuota standartinėmis Python priemonėmis, daugelis jų yra
+pernaudojamos. Nors Django siūlo savo duomenų bazės valdymo priemones, šablonų
+varikliuką, tačiau nėra jokio ribojimo naudoti kažką kitą.&lt;/p&gt;
+&lt;p&gt;Django turi savo šablonų varikliuką, tačiau to negalima pavadinti išradimu, dėl
+unikalių savybių, kurių dėka šablonų sistema labai gerai dera su visa sistema.
+Vienas iš unikalių dalykų yra šablonų&lt;/p&gt;
+&lt;p&gt;paveldimumas, ko neturi daugelis egzistuojančių šablonų varikliukų.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Kaip ir daugelis kitų PHP kalba rašytų bibliotekų, CakePHP taip pat daugelyje
+vietų bando apeiti PHP kalbos trūkumus. Vienas iš tokių apėjimo pavyzdžių –
+savitas modelių ar kontrolerių įtraukimas naudojant Model::Import() ir panašias
+funkcijas. Kita dalykas, kadangi PHP kalba, iki 5.3 versijos išleidimo neturėjo
+vardų erdvių, tai CakePHP daugelis programavimo elementų aprašomi kaip klasės,
+bandant išvengti funkcijų pavadinimų konflikto.&lt;/p&gt;
+&lt;p&gt;CakePHP nenaudoja standartinės PHP priemonės PDO, jungimuisi prie duomenų
+bazės. Užklausų siuntimui galima naudoti tik vienintelę Query() funkciją, kuri
+visą laiką vykdoma lyg jai būtų perduota SELECT tipo užklausa. Jokių kitų
+priemonių, bendravimui su duomenų baze, išskyrus Query ir CakePHP ORM nėra.&lt;/p&gt;
+&lt;p&gt;Daugelyje vietų, CakePHP siūlo &lt;strong&gt;tik&lt;/strong&gt; savo priemones nesuteikiant galimybės
+realizuoti tam tikras vietas, kitaip, nei tai yra numatę CakePHP
+programuotojai.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="svetainiu-talpinimas-deployment"&gt;
+&lt;h2&gt;Svetainių talpinimas (deployment)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Django galima leisti per mod_wsgi, mod_python, FastCGI, SCGI arba AJP. Jei
+web serveris palaiko bent vieną iš šių technologijų, sėkmingai galėsite naudoti
+Django, kartu su juo.&lt;/p&gt;
+&lt;p&gt;Deja gan mažai svetainių talpinimo paslaugas teikiančių įmonių, siūlo Django
+aplikacijų talpinimą. Tačiau jei turite dedikuotą serverį, problemų nebus. Be
+to, jei reikalausite Django palaikymo, tikėtina, kad jį gausite.&lt;/p&gt;
+&lt;p&gt;Nesenai, Google paskelbė teiksianti nemokamą, svetainių talpinimų paslaugą
+„&lt;a class="reference external" href="https://appengine.google.com/"&gt;Google App Engine&lt;/a&gt;, kur svetainių kūrimui,
+pagal nutylėjimą naudojamas būtent Django.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Kadangi CakePHP parašytas PHP kalba, kuri palaikoma daugelio svetainių
+talpinimo paslaugas teikiančių įmonių, tai tikėtina, kad problemų nebus.  Tai
+yra stiprioji CakePHP pusė.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="isvados"&gt;
+&lt;h2&gt;Išvados&lt;/h2&gt;
+&lt;p&gt;CakePHP turi griežtą struktūrą į kurią privalai įtilpti, iš dalies tai gerai,
+nes skatinamas vienodas ir tos pačios krypties programavimas, bet dažnai galima
+patekti į situaciją, negalima realizuoti vieno ar kito dalyko, ko nebuvo numatę
+CakePHP ir tenka galvoti visokius apėjimo variantus.&lt;/p&gt;
+&lt;p&gt;Jei esate PHP kalbos mėgėjas ir jus tenkina CakePHP rėmai, tuomet ši priemonė
+jums tiks kuo puikiausiai.&lt;/p&gt;
+&lt;p&gt;Django yra labai lankstus ir turintis mažai architektūrinių ribojimų.  Darbą
+pradėti galite labai paprastai, vos apsirašę duomenų bazės struktūrą
+modeliuose, iš karto gausite pilnai veikiančią administravimo sąsają.&lt;/p&gt;
+&lt;p&gt;Jei esate programuotojas idealistas, Django jums puikiai tiks ir patiks.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>cakephp</category><category>django</category><category>floss</category><category>python</category><guid>https://sirex.lt/posts/2010/django-vs-cakephp/</guid><pubDate>Mon, 18 Jan 2010 13:55:00 GMT</pubDate></item></channel></rss>

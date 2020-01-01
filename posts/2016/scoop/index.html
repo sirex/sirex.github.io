@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>SCOOP | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2016/scoop/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../../2013/mercurial-server/" title="Mercurial server konfigūravimas" type="text/html">
+<link rel="next" href="../../2019/penciju-fondai/" title="Pencijų fondai" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="SCOOP">
+<meta property="og:url" content="https://sirex.lt/posts/2016/scoop/">
+<meta property="og:description" content="I found an article about processing Common Crawl data in parallel.
+Decided to try same thing using SCOOP.
+import io
+import csv
+import gzip
+import urllib.parse
+import urllib.request
+
+import scoop
+impor">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-05-29T00:00:00+03:00">
+<meta property="article:tag" content="data">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="streams">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <hr>
+<main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">SCOOP</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2016-05-29T00:00:00+03:00" itemprop="datePublished" title="2016-05-29 00:00">2016-05-29 00:00</time></a>
+
+                ―
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/data/" rel="tag">data</a>,                    <a class="tag p-category" href="../../../tags/python/" rel="tag">python</a>,                    <a class="tag p-category" href="../../../tags/streams/" rel="tag">streams</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>I found an <a class="reference external" href="https://medium.com/@paulrim/mining-common-crawl-with-php-39e14082c55c?source=post_page-----6cc4108e97eb----------------------">article</a> about processing <a class="reference external" href="http://commoncrawl.org/">Common Crawl</a> data in parallel.</p>
+<p>Decided to try same thing using <a class="reference external" href="https://github.com/soravux/scoop">SCOOP</a>.</p>
+<pre class="code python"><a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-1"></a><span class="kn">import</span> <span class="nn">io</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-2"></a><span class="kn">import</span> <span class="nn">csv</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-3"></a><span class="kn">import</span> <span class="nn">gzip</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-4"></a><span class="kn">import</span> <span class="nn">urllib.parse</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-5"></a><span class="kn">import</span> <span class="nn">urllib.request</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-6"></a>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-7"></a><span class="kn">import</span> <span class="nn">scoop</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-8"></a><span class="kn">import</span> <span class="nn">scoop.futures</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-9"></a>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-10"></a>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-11"></a><span class="k">def</span> <span class="nf">read_gzip</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-12"></a>    <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-13"></a>        <span class="k">yield from</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">response</span><span class="p">))</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-14"></a>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-15"></a>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-16"></a><span class="k">def</span> <span class="nf">get_themes</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-17"></a>    <span class="n">themes</span> <span class="o">=</span> <span class="p">[]</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-18"></a>    <span class="n">domain</span> <span class="o">=</span> <span class="kc">None</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-19"></a>    <span class="n">theme_path</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">'wp-content/themes/'</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-20"></a>    <span class="n">scoop</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">'parsing: </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="n">url</span><span class="p">)</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-21"></a>    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">read_gzip</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-22"></a>        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">b</span><span class="s1">'WARC-Target-URI:'</span><span class="p">):</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-23"></a>            <span class="n">domain</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">17</span><span class="p">:]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-24"></a>            <span class="n">domain</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlparse</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span><span class="o">.</span><span class="n">netloc</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-25"></a>        <span class="k">elif</span> <span class="n">theme_path</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-26"></a>            <span class="n">start</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">theme_path</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">theme_path</span><span class="p">)</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-27"></a>            <span class="n">end</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa">b</span><span class="s1">'/'</span><span class="p">,</span> <span class="n">start</span><span class="p">)</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-28"></a>            <span class="k">if</span> <span class="n">end</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-29"></a>                <span class="n">themes</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">domain</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)))</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-30"></a>    <span class="k">return</span> <span class="n">themes</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-31"></a>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-32"></a>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-33"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-34"></a>    <span class="n">lines</span> <span class="o">=</span> <span class="n">read_gzip</span><span class="p">(</span><span class="s1">'https://commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2016-07/warc.paths.gz'</span><span class="p">)</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-35"></a>    <span class="n">paths</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'https://commoncrawl.s3.amazonaws.com/'</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-36"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'results.csv'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-37"></a>        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-38"></a>        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">'domain'</span><span class="p">,</span> <span class="s1">'theme'</span><span class="p">])</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-39"></a>        <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">scoop</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">get_themes</span><span class="p">,</span> <span class="n">paths</span><span class="p">):</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-40"></a>            <span class="k">for</span> <span class="n">domain</span><span class="p">,</span> <span class="n">theme</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-41"></a>                <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">domain</span><span class="p">,</span> <span class="n">theme</span><span class="p">])</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-42"></a>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-43"></a>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-44"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+<a name="rest_code_3f999bf5de0845ac8ca5c0975367cb63-45"></a>    <span class="n">main</span><span class="p">()</span>
+</pre>
+<p><a class="reference external" href="https://github.com/soravux/scoop">SCOOP</a> allows to run scripts on multiple cores locally or on multiple remote
+machines via ssh. In order to do that, you need to install SCOOP and this
+script on each machine and list those machines in a hosts file, that will be
+read by SCOOP. Server setup part probably can be done with Ansible.</p>
+<p>I tried to run this scripts on two servers, each server takes about 15 minutes
+to download one ~800 Mb warc file and 2.5 minutes to process it.</p>
+<p>All processing is done by reading streams, so there is no need for extra
+storage on server nodes.</p>
+<p>Here is how I run it:</p>
+<pre class="code sh"><a name="rest_code_e61b10a6d73345c6a34f34bf182be04a-1"></a>python -m scoop --hostfile hosts --tunnel --python-interpreter /tmp/scoops/bin/python -p /tmp/scoops run.py
+</pre>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../2013/mercurial-server/" rel="prev" title="Mercurial server konfigūravimas">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../2019/penciju-fondai/" rel="next" title="Pencijų fondai">Next post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>

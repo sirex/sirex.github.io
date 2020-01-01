@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about e17)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/e17.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Enlightenment - Beauty at your fingertips</title><link>https://sirex.lt/posts/2009/enlightenment-beauty-at-your-fingertips/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Šis blogo įrašas bus apie Linux langų valdytojus.&lt;/p&gt;
+&lt;p&gt;Ilgą laiką naudojau Fluxbox langų valdytoją. Tačiau prieš kelias dienas
+nusprendžiau dar kartą išmėginti mistiškąjį E17. Prieš pradedant apie jį,
+trumpai apie tai, kuo man neįtiko Fluxbox.&lt;/p&gt;
+&lt;div class="section" id="fluxbox-trukumai"&gt;
+&lt;h2&gt;Fluxbox trūkumai&lt;/h2&gt;
+&lt;p&gt;Man patinka Fluxbox minimalistinis stilius, tačiau mažiau, nereiškia greičiau.
+Nors pats Fluxbox yra labai nedidelis, tačiau lygiai taip pat jis neturi ir
+jokių priemonių, kurios užtikrintų greitą ir sklandų darbą grafinėje aplinkoje.
+Jei konkrečiai, bent jau man akivaizdžiai matomas Fluxbox lėto veikimo pavyzdys
+yra paprasčiausias šokinėjimas tarp langų.  Pavyzdžiui, jei esu atsidaręs
+interneto naršyklę, o virš jos terminalą, tai paspaudus Alt+Tab, plika akimi
+matoma, kaip naršyklės langas paišo terminalo lango atidengtą vietą. Tai tik
+parodo, kad Fluxbox šioje ir panašiose vietose nenaudoja jokių optimizacijų.&lt;/p&gt;
+&lt;p&gt;Kitas bugas vėl gi yra susijęs su Alt+Tab. Nežinau dėl kokios priežasties,
+tačiau su naujausia Fluxbox versija, Alt+Tab man dažnai nesuveikia. Tiksliau
+lango fokusas kaip ir pasikeičia, sprendžiant iš užduočių juostos, tačiau patys
+langai neapsikeičia.&lt;/p&gt;
+&lt;p&gt;Ir paskutinis trūkumas – sisteminis trėjus. Jame karts nuo karto atsiranda
+naujų piktogramų, viena iš tokių – pranešimas apie naują laišką, kur visą laiką
+uždengia garso reguliavimo piktogramą. Tai reiškia, kad norėdamas pareguliuoti
+garsą, jei yra naujų laiškų, tai pirmiausiai turiu peržiūrėti naujus laiškus, o
+po to reguliuoti garsą...  :)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="e17-ispudziai"&gt;
+&lt;h2&gt;E17 įspūdžiai&lt;/h2&gt;
+&lt;p&gt;Tai ko gero yra pagrindiniai trūkumai, kurie pastūmėjo mane dar kartą išbandyti
+E17, kurį jau esu bandęs anksčiau ne vieną kartą. E17 mane sužavėjo nuo pačio
+pirmo išbandymo, tačiau taip gavosi, kad visais kartais neturėjau pakankamai
+laiko, kad išsiaiškinčiau kaip viskas veikia ir susikonfigūruočiau taip kaip
+man patinka. Todėl dažniausiai panaudojęs kelias dienas, neradęs to ko reikia
+grįždavau prie Gnome arba Fluxbox.&lt;/p&gt;
+&lt;p&gt;Šį kartą nusprendžiau nuodugniai išsiaiškinti kas prie ko ir štai rezultatas:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/e17.png"&gt;&lt;img alt="E17" src="https://sirex.lt/images/e17.thumbnail.png"&gt;&lt;/a&gt;
+&lt;p&gt;E17 yra vis dar kūrimo stadijoje ir nėra išleista net Alpha laida.  Tačiau
+nepaisant visko, E17 veikia ir jį galima naudoti.&lt;/p&gt;
+&lt;p&gt;Ko gero E17 labiausiai turėtu patikti tiems, kurie mėgsta įvairius gražius
+dalykėlius, nes tai yra viena iš pagrindinių E17 savybių – gražus darbo laukas.
+Kita taip pat labai svarbi savybė – greitis. Nors visi grafiniai elementai
+naudoja labai daug visokių efektų, tačiau bendrai viskas veikia tikrai greitai.
+E17 susikonfigūravau su įjungtu „compozite“ režimu, tai yra kažkas panašaus į
+tai, ką naudoja „compiz“.  „compozite“ režimas, bent jau man, vizualiai suteikė
+dar daugiau greičio įspūdžio. Priešingai, lyginant su Fluxbox, E17 aplinkoje
+tikrai pastebimas labai sklandus ir gražus visų grafinių elementų veikimas.
+Langai persijunginėja gražiai ir glotniai.&lt;/p&gt;
+&lt;p&gt;Kitas džiuginantis reginys – elementų tarpusavio sąveika. Pavyzdžiui, kad ir
+užduočių juosta, jei joje yra labai daug užduočių ir jos visos netelpa, tai
+tiesiog vedžiojant pele palei juostos kraštus, pati juosta bėgioja ir pagal
+pelės poziciją pasislenka taip kaip reikia. Labai patogu.&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/e17taskbar.png"&gt;&lt;img alt="E17 taskbar" src="https://sirex.lt/images/e17taskbar.thumbnail.png"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="section" id="programu-paleidiklis"&gt;
+&lt;h2&gt;Programų paleidiklis&lt;/h2&gt;
+&lt;p&gt;Fluxbox aplinkoje trūksta gero ir patogaus programų paleidiklio. E17 turi
+integruotą paleidiklį, kuris veikia labai greitai ir vizualiai atrodo labai
+gerai. Štai kaip jis atrodo iš arčiau:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/e17launcher.png"&gt;&lt;img alt="E17 launcher" src="https://sirex.lt/images/e17launcher.thumbnail.png"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="section" id="sisteminis-trejus"&gt;
+&lt;h2&gt;Sisteminis trėjus&lt;/h2&gt;
+&lt;p&gt;E17 neturi jokio sisteminio trėjaus. Radau net gi paaiškinimą, kodėl jo nėra ir
+ko gero nebus:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;„The Systray specification that somehow users seem to ask for and
+applications seem to use that is specified here primarily, is not as nice
+as you may think. It is in fact rather ugly and limited. It leads to awful
+interfaces and inconsistent behavior and display.“&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.rasterman.com/index.php?page=News"&gt;rasterman.com&lt;/a&gt; adresu galima
+rasti detalesnį išaiškinimą, kodėl E17 sistemoje nėra realizuotas joks
+sisteminis trėjus.&lt;/p&gt;
+&lt;p&gt;Kad ir kaip ten bebūtų, kaip ir daugelis kitų E17 naudotojų aš taip pat
+panaudojau &lt;a class="reference external" href="http://stalonetray.sourceforge.net/"&gt;stalonetray&lt;/a&gt;, kuri puikiai
+atlieka savo darbą.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="e17-lentynos-ir-conky"&gt;
+&lt;h2&gt;E17 lentynos ir conky&lt;/h2&gt;
+&lt;p&gt;Jau anksčiau norėjau kur nors ekrano apačioje įmontuoti conky lango juostą,
+kurioje būtų rodomi sistemos parametrai. Su E17 lentynomis „shelves“, tai
+padaryti pavyko kuo puikiausiai! Pasižiūrėkite pagrindinėje ekrano nuotraukoje
+apačioje ir pamatysite kaip tai atrodo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="langai-ir-ju-remeliai"&gt;
+&lt;h2&gt;Langai ir jų rėmeliai&lt;/h2&gt;
+&lt;p&gt;Jau minėjau užduočių juostą. Tai ji man pasirodė tokia patogi ir lanksti, kad
+nusprendžiau visai atsisakyti langų rėmelių, nes užduočių juosta rėmelių
+funkciją kuo puikiausiai pakeičia. Dabar darbo lauke yra daugiau vietos ir
+ypatingai terminalo langai atrodo labai stilingai...  :)&lt;/p&gt;
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/beremu.png"&gt;&lt;img alt="E17 terminalo langas be rėmelių" src="https://sirex.lt/images/beremu.thumbnail.png"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="section" id="isvados"&gt;
+&lt;h2&gt;Išvados&lt;/h2&gt;
+&lt;p&gt;Bent jau pirmas įspūdis yra labai teigiamas. E17 sukasi labai greitai ir
+sklandžiai. Tačiau jį naudoju dar labai trumpai, todėl žiūrėsiu kaip seksis ir
+su kokiomis problemomis susidursiu ateityje.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>e17</category><category>floss</category><category>software</category><guid>https://sirex.lt/posts/2009/enlightenment-beauty-at-your-fingertips/</guid><pubDate>Sat, 14 Feb 2009 00:35:00 GMT</pubDate></item></channel></rss>
