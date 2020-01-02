@@ -52,16 +52,16 @@ reikalauja atnaujinimo…</p>
 keltį per FTP. Tačiau vikrus Linux naudotojas, toks kaip aš, darytų taip:</p>
 <p>Iš atnaujinimų puslapio <code class="docutils literal">/admin/reports/updates</code> išsaugome turinį į
 <code class="docutils literal">/tmp/updates.html</code> ir įvedame kelias komandas:</p>
-<pre class="code bash"><a name="rest_code_3b59ca823ec14d13ae58c3f06fe4377f-1"></a>mkdir /tmp/updates <span class="o">&amp;&amp;</span> <span class="nb">cd</span> /tmp/updates
-<a name="rest_code_3b59ca823ec14d13ae58c3f06fe4377f-2"></a>egrep -o <span class="s1">'http.*?\.tar\.gz'</span> /tmp/updates.html <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_3b59ca823ec14d13ae58c3f06fe4377f-3"></a>  grep -v <span class="s1">'dev\.tar\.gz'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_3b59ca823ec14d13ae58c3f06fe4377f-4"></a>  <span class="k">while</span> <span class="nb">read</span> f <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<a name="rest_code_3b59ca823ec14d13ae58c3f06fe4377f-5"></a>      wget <span class="nv">$f</span> -O- <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_3b59ca823ec14d13ae58c3f06fe4377f-6"></a>      tar -xzf - <span class="p">;</span> <span class="se">\</span>
-<a name="rest_code_3b59ca823ec14d13ae58c3f06fe4377f-7"></a>  <span class="k">done</span>
-<a name="rest_code_3b59ca823ec14d13ae58c3f06fe4377f-8"></a>lftp manosvetaine
-<a name="rest_code_3b59ca823ec14d13ae58c3f06fe4377f-9"></a>lftp me@manosvetaine:/www&gt; <span class="nb">cd</span> sites/all/modules
-<a name="rest_code_3b59ca823ec14d13ae58c3f06fe4377f-10"></a>lftp me@manosvetaine:/www/sites/all/modules&gt; mirror -R
+<pre class="code bash"><a name="rest_code_07f36007447b4f0597857d7190d72e02-1"></a>mkdir /tmp/updates <span class="o">&amp;&amp;</span> <span class="nb">cd</span> /tmp/updates
+<a name="rest_code_07f36007447b4f0597857d7190d72e02-2"></a>egrep -o <span class="s1">'http.*?\.tar\.gz'</span> /tmp/updates.html <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_07f36007447b4f0597857d7190d72e02-3"></a>  grep -v <span class="s1">'dev\.tar\.gz'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_07f36007447b4f0597857d7190d72e02-4"></a>  <span class="k">while</span> <span class="nb">read</span> f <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<a name="rest_code_07f36007447b4f0597857d7190d72e02-5"></a>      wget <span class="nv">$f</span> -O- <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_07f36007447b4f0597857d7190d72e02-6"></a>      tar -xzf - <span class="p">;</span> <span class="se">\</span>
+<a name="rest_code_07f36007447b4f0597857d7190d72e02-7"></a>  <span class="k">done</span>
+<a name="rest_code_07f36007447b4f0597857d7190d72e02-8"></a>lftp manosvetaine
+<a name="rest_code_07f36007447b4f0597857d7190d72e02-9"></a>lftp me@manosvetaine:/www&gt; <span class="nb">cd</span> sites/all/modules
+<a name="rest_code_07f36007447b4f0597857d7190d72e02-10"></a>lftp me@manosvetaine:/www/sites/all/modules&gt; mirror -R
 </pre>
 <p>Aplankome <code class="docutils literal">/update.php</code> ir įdiegiame visus atnaujinimus.  Žinoma, prieš
 darant tokius atnaujinimus, būtina pasidaryti atsargines kopijas.</p>
