@@ -6,3 +6,4 @@ requests
 beautifulsoup4
 ipython
 ghp-import2
+pytest

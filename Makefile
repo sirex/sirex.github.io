@@ -11,7 +11,10 @@ requirements.txt: env/bin/pip-compile requirements.in
 env/bin/pip-compile: env/bin/pip
 	env/bin/pip install pip-tools
 
-deploy: env/done
+run: env/done
+	env/bin/nikola auto -b
+
+push: env/done
 	PATH=env/bin:$(PATH) env/bin/nikola github_deploy
 
-.PHONY: deploy
+.PHONY: push run
