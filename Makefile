@@ -1,3 +1,5 @@
+export PATH := env/bin:$(PATH)
+
 env/done: env/bin/pip requirements.txt
 	env/bin/pip install -r requirements.txt
 	touch env/done
@@ -11,7 +13,11 @@ requirements.txt: env/bin/pip-compile requirements.in
 env/bin/pip-compile: env/bin/pip
 	env/bin/pip install pip-tools
 
-deploy: env/done
-	PATH=env/bin:$(PATH) env/bin/nikola github_deploy
+run: env/done
+	env/bin/nikola auto
 
-.PHONY: deploy
+
+deploy: env/done
+	env/bin/nikola github_deploy
+
+.PHONY: run deploy
