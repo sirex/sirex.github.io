@@ -32,10 +32,9 @@ Bazaar gali siųsti p">
          <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Mercurial Web programuotojams</h1>
         <div class="metadata">
             <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2009-10-06T22:51:00+02:00" itemprop="datePublished" title="2009-10-06 22:51">2009-10-06 22:51</time></a>
+            <time class="published dt-published" datetime="2009-10-06T22:51:00+02:00" itemprop="datePublished" title="2009-10-06 22:51">2009-10-06 22:51</time>
 
-                ―
+                |
                 <span itemprop="keywords" class="tags">
                     <a class="tag p-category" href="../../../tags/mercurial/" rel="tag">mercurial</a>                </span>
 
@@ -87,8 +86,8 @@ $ cd ~/.hgext
 $ hg clone http://bitbucket.org/misery/hgftp/</pre>
 <p>Po šių veiksmų, galite įjungti šį praplėtimą globaliai (<code class="docutils literal"><span class="pre">~/.hgrc</span></code>), arba tik
 konkrečiam repozitoriumui (<em>./.hg/hgrc</em>) į nurodytą failą įrašydami:</p>
-<pre class="code ini"><a name="rest_code_f09c326ae66740e3bef7e8f7820c2641-1"></a><span class="k">[extensions]</span>
-<a name="rest_code_f09c326ae66740e3bef7e8f7820c2641-2"></a><span class="na">hgext.ftp</span> <span class="o">=</span> <span class="s">~/.hgext/hgftp/ftp.py</span>
+<pre class="code ini"><a name="rest_code_2bf9dc33b3d04a99a0ce5806cc2817d4-1"></a><span class="k">[extensions]</span>
+<a name="rest_code_2bf9dc33b3d04a99a0ce5806cc2817d4-2"></a><span class="na">hgext.ftp</span> <span class="o">=</span> <span class="s">~/.hgext/hgftp/ftp.py</span>
 </pre>
 </div>
 <div class="section" id="ftpextension-konfiguravimas">
@@ -96,9 +95,9 @@ konkrečiam repozitoriumui (<em>./.hg/hgrc</em>) į nurodytą failą įrašydam
 <p>Kai jau turite veikiantį praplėtimą, konkrečiam Web projekto repozitoriumui
 galite nurodyti FTP prisijungimą, kur bus siunčiami duomenys. Tai galite
 padaryti repozitormiumo konfigūraciniame faile <code class="docutils literal"><span class="pre">./.hg/hgrc</span></code>, nurodydami:</p>
-<pre class="code ini"><a name="rest_code_a592f76700b14172b71e1baf9bf836a9-1"></a><span class="k">[paths]</span>
-<a name="rest_code_a592f76700b14172b71e1baf9bf836a9-2"></a><span class="na">ftp</span>    <span class="o">=</span> <span class="s">ftp://[user[:pass]@]host[:port]/[path]</span>
-<a name="rest_code_a592f76700b14172b71e1baf9bf836a9-3"></a><span class="na">myhost</span> <span class="o">=</span> <span class="s">ftp://andre@incubo.de/htdocs</span>
+<pre class="code ini"><a name="rest_code_30b49481d215447d96a2b7c27e7d9022-1"></a><span class="k">[paths]</span>
+<a name="rest_code_30b49481d215447d96a2b7c27e7d9022-2"></a><span class="na">ftp</span>    <span class="o">=</span> <span class="s">ftp://[user[:pass]@]host[:port]/[path]</span>
+<a name="rest_code_30b49481d215447d96a2b7c27e7d9022-3"></a><span class="na">myhost</span> <span class="o">=</span> <span class="s">ftp://andre@incubo.de/htdocs</span>
 </pre>
 <p>Jei prisijungimo eilutę priskirsite specialią paskirtį turinčiam žodeliui
 ‘ftp’, tuomet šis FTP serveris bus naudojamas pagal nutylėjimą ir galėsite

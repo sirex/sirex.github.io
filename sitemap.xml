@@ -7,626 +7,634 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://sirex.lt/</loc>
-  <lastmod>2020-01-02T13:58:00Z</lastmod>
+  <lastmod>2020-01-11T09:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://sirex.lt/galleries/</loc>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://sirex.lt/listings/</loc>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-11T09:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/kaip-issirinkti-telefona-uz-1-lt-is-tele2-svetaines/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/kaip-perkelti-faila-is-vieno-kompiuterio-i-kita/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/kokia-failu-sistema-pasirinkti/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/lftp/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/mano-darbastalis/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/mysql-optimizavimas/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/openid/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/sawfish/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/vim-vadovelis/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2007/vimperator/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/isorinis-diskas-wd-my-book-500-gb-ubuntu/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/it-evoliucija/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/mac-os-x-ispustas-burbulas/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/programos/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/python-vs-pascal/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/ubuntu-eee-ant-eee-pc-900/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/ubuntu-supported-hardware-database/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2008/web-programavimas-ubuntu-aplinkoje/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/automatinis-laisku-persiuntimas-i-trac/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/enlightenment-beauty-at-your-fingertips/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/gpg/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/isigyjau-lenovo-thinkpad-x61-tablet/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/isleistas-python-30/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/issokstantis-terminalo-langas-bet-kurioje-vietoje/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/kaip-idiegti-tas-pacias-programas-kurios-buvo-anksciau/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/kaip-idiegti-windows/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/kaip-kopijuoti-didelius-failus-komandineje-eiluteje/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/kaip-paleisti-darbini-lamp-serveri-su-buildout/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/kaip-paleisti-web-serveri-per-5-sekundes-su-python/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/kaip-tapti-hakeriu/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/kas-geriau-pradedanciajam-gimp-ar-photoshop/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/kritine-mase/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/lietuvos-tukstantmecio-vaikai-neturi-jokio-supratimo-apie-atvira-koda/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/linux-gps/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/maistas-ir-e-numeriai/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/mano-archlinux-konfiguracija/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/mercurial-web-programuotojams/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/mercurial/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/myliu-komandine-eilute/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/pazintis-su-archlinux/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/w3m/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/windows-7-nuodemes/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2009/youtube-video-is-komandines-eilutes/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/django-vs-cakephp/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/facebook-jau-palaiko-jabberxmpp-pokalbiu-protokola/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/gpl-ar-lgpl/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/jabberxmpp-po-truputi-tampa-de-facto-standartu/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/kaip-pasalinti-nereikalingus-keitimus-su-mercurial-transplant/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/lietuvos-blogeriai-neabejingi-gnulinux-os/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/priemones-darbui-su-python-ir-django/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/pyjunior/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/python-django-django-cms/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/ssh-pamokeles/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/ubuntu-1010/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2010/windows-tinklas/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2011/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2011/fedora/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2011/linux-viesosiose-vietose/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2011/pypi/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2011/svetaines-istorija/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2011/zsh-tips/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2012/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2012/barsavimas-internetu/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2013/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2013/alot/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2013/mercurial-server/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2016/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2016/scoop/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2018/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2018/hello-asgi/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2018/kaip-galetu-atrodyti-lietuvos-atviru-duomenu-portalas/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2019/</loc>
-  <lastmod>2020-01-02T13:37:00Z</lastmod>
+  <lastmod>2020-01-11T09:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2019/duomenu-atverimas-igauna-pagreiti/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2019/paskelbtas-atviru-duomenu-portalo-viesasis-pirkimas/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2019/penciju-fondai/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2019/test-one-thing-in-one-test-function/</loc>
-  <lastmod>2020-01-02T13:37:00Z</lastmod>
+  <lastmod>2020-01-11T09:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/posts/2020/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-11T09:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/</loc>
-  <lastmod>2020-01-02T13:45:00Z</lastmod>
+  <lastmod>2020-01-11T09:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/alot/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/archlinux/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/asgi/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/atviriduomenys/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/audacious/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/buildout/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/cakephp/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/couchdb/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/data/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/django-cms/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/django/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/drupal/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/dviratis/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/e17/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/eee/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/ext4/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/facebook/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/floss/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/gimp/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/gpg/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/gpl/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/gps/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/hacker/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/hardware/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/health/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/jabber/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/kde/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/latex/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/lenovo/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/lgpl/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/linux/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/macosx/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/mail/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/mercurial/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/mysql/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/openddata/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/openid/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/openmoko/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/perl/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/php/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/programavimas/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/python/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/qemu/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/shell/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/sirex/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/software/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/ssh/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/streams/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/testing/</loc>
-  <lastmod>2020-01-02T13:45:00Z</lastmod>
+  <lastmod>2020-01-11T09:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/thinkpad/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/tinklas/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/trac/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/ubuntu/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/vim/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/vizija/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/w3m/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/web/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/windows/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/x61tablet/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/youtube/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://sirex.lt/tags/zsh/</loc>
-  <lastmod>2020-01-02T13:35:00Z</lastmod>
+  <lastmod>2020-01-01T13:27:00Z</lastmod>
  </url>
 </urlset>

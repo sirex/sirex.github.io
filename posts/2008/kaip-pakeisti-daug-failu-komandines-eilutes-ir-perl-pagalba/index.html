@@ -32,10 +32,9 @@ Pasinaudodamas komandine">
          <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Kaip pakeisti daug failų komandinės eilutės ir perl pagalba</h1>
         <div class="metadata">
             <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2008-11-07T11:54:00+02:00" itemprop="datePublished" title="2008-11-07 11:54">2008-11-07 11:54</time></a>
+            <time class="published dt-published" datetime="2008-11-07T11:54:00+02:00" itemprop="datePublished" title="2008-11-07 11:54">2008-11-07 11:54</time>
 
-                ―
+                |
                 <span itemprop="keywords" class="tags">
                     <a class="tag p-category" href="../../../tags/perl/" rel="tag">perl</a>,                    <a class="tag p-category" href="../../../tags/shell/" rel="tag">shell</a>                </span>
 
@@ -49,20 +48,20 @@ failus, kuriuose nėra aprašytas klasės parametras ir įrašytą tą trūkstam
 parametrą į klasės vidų.</p>
 <p>Pasinaudodamas komandine eilute ir nedideliu perl skriptu tai nesunkiai padariau.</p>
 <p>Perl skriptas atrodo taip:</p>
-<pre class="code perl"><a name="rest_code_18f23be1e9754c84854b987a1f933592-1"></a><span class="k">print</span><span class="p">;</span>
-<a name="rest_code_18f23be1e9754c84854b987a1f933592-2"></a>
-<a name="rest_code_18f23be1e9754c84854b987a1f933592-3"></a><span class="k">if</span> <span class="p">(</span><span class="sr">/^class/</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_18f23be1e9754c84854b987a1f933592-4"></a>    <span class="k">use</span> <span class="nn">File::Basename</span><span class="p">;</span>
-<a name="rest_code_18f23be1e9754c84854b987a1f933592-5"></a>    <span class="k">my</span> <span class="nv">$layout</span> <span class="o">=</span> <span class="n">basename</span><span class="p">(</span><span class="n">dirname</span><span class="p">(</span><span class="nv">$ARGV</span><span class="p">));</span>
-<a name="rest_code_18f23be1e9754c84854b987a1f933592-6"></a>    <span class="k">print</span> <span class="s">"\n   public \$layout = '$layout';\n"</span><span class="p">;</span>
-<a name="rest_code_18f23be1e9754c84854b987a1f933592-7"></a><span class="p">}</span>
+<pre class="code perl"><a name="rest_code_c963b8f9882b4b46aa1be6289965b9cb-1"></a><span class="k">print</span><span class="p">;</span>
+<a name="rest_code_c963b8f9882b4b46aa1be6289965b9cb-2"></a>
+<a name="rest_code_c963b8f9882b4b46aa1be6289965b9cb-3"></a><span class="k">if</span> <span class="p">(</span><span class="sr">/^class/</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_c963b8f9882b4b46aa1be6289965b9cb-4"></a>    <span class="k">use</span> <span class="nn">File::Basename</span><span class="p">;</span>
+<a name="rest_code_c963b8f9882b4b46aa1be6289965b9cb-5"></a>    <span class="k">my</span> <span class="nv">$layout</span> <span class="o">=</span> <span class="n">basename</span><span class="p">(</span><span class="n">dirname</span><span class="p">(</span><span class="nv">$ARGV</span><span class="p">));</span>
+<a name="rest_code_c963b8f9882b4b46aa1be6289965b9cb-6"></a>    <span class="k">print</span> <span class="s">"\n   public \$layout = '$layout';\n"</span><span class="p">;</span>
+<a name="rest_code_c963b8f9882b4b46aa1be6289965b9cb-7"></a><span class="p">}</span>
 </pre>
 <p>O komanda atrodo taip:</p>
-<pre class="code bash"><a name="rest_code_e3af8a228b9345e9b9af37180e65fe6d-1"></a>find -wholename <span class="s2">"*/themes/*/layouts/*/config.php"</span> <span class="se">\</span>
-<a name="rest_code_e3af8a228b9345e9b9af37180e65fe6d-2"></a>    <span class="p">|</span> xargs grep -L <span class="s2">"public \$layout"</span> <span class="se">\</span>
-<a name="rest_code_e3af8a228b9345e9b9af37180e65fe6d-3"></a>    <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> f <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<a name="rest_code_e3af8a228b9345e9b9af37180e65fe6d-4"></a>        perl -ni /tmp/replace.pl <span class="nv">$f</span> <span class="p">;</span> <span class="se">\</span>
-<a name="rest_code_e3af8a228b9345e9b9af37180e65fe6d-5"></a>    <span class="k">done</span>
+<pre class="code bash"><a name="rest_code_d75afbbc2f7e41d686f445d1a4b71f35-1"></a>find -wholename <span class="s2">"*/themes/*/layouts/*/config.php"</span> <span class="se">\</span>
+<a name="rest_code_d75afbbc2f7e41d686f445d1a4b71f35-2"></a>    <span class="p">|</span> xargs grep -L <span class="s2">"public \$layout"</span> <span class="se">\</span>
+<a name="rest_code_d75afbbc2f7e41d686f445d1a4b71f35-3"></a>    <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> f <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<a name="rest_code_d75afbbc2f7e41d686f445d1a4b71f35-4"></a>        perl -ni /tmp/replace.pl <span class="nv">$f</span> <span class="p">;</span> <span class="se">\</span>
+<a name="rest_code_d75afbbc2f7e41d686f445d1a4b71f35-5"></a>    <span class="k">done</span>
 </pre>
 <p>Naudojantis komandine eilute, labai nesunkiai galima automatizuoti įvairiausias
 užduotis. Šiame pavyzdyje, vietoje to, kad keliaučiau per visus failus ir

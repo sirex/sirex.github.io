@@ -30,10 +30,9 @@ buvau pasiruošęs visą sąrašą dalykų, kuriuos reiki">
          <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Ubuntu 10.10</h1>
         <div class="metadata">
             <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2010-10-17T22:50:00+02:00" itemprop="datePublished" title="2010-10-17 22:50">2010-10-17 22:50</time></a>
+            <time class="published dt-published" datetime="2010-10-17T22:50:00+02:00" itemprop="datePublished" title="2010-10-17 22:50">2010-10-17 22:50</time>
 
-                ―
+                |
                 <span itemprop="keywords" class="tags">
                     <a class="tag p-category" href="../../../tags/ubuntu/" rel="tag">ubuntu</a>                </span>
 
@@ -151,21 +150,21 @@ greičiau ir patogiau</p></li>
 <li><p>Konfigūracinių failų saugojimas Mercurial repozitoriume</p></li>
 <li>
 <p>Naudojamų programų sąrašo išsaugojimas ir atstatymas:</p>
-<pre class="code sh"><a name="rest_code_c38b99987603405da1c7b1bc98e09037-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-2"></a>dpkg --get-selections &gt; old
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-3"></a>
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-4"></a><span class="c1"># Po įdiegimo</span>
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-5"></a>dpkg --get-selections &gt; new
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-6"></a>
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-8"></a>comm -23 old new &gt; sel
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-9"></a>
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-10"></a><span class="c1"># Peržiūrim ko reikia</span>
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-11"></a>vim sel
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-12"></a>
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
-<a name="rest_code_c38b99987603405da1c7b1bc98e09037-15"></a>sudo apt-get dselect-upgrade
+<pre class="code sh"><a name="rest_code_142d6f3001b84c1fb558150961539d03-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-2"></a>dpkg --get-selections &gt; old
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-3"></a>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-4"></a><span class="c1"># Po įdiegimo</span>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-5"></a>dpkg --get-selections &gt; new
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-6"></a>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-8"></a>comm -23 old new &gt; sel
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-9"></a>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-10"></a><span class="c1"># Peržiūrim ko reikia</span>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-11"></a>vim sel
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-12"></a>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
+<a name="rest_code_142d6f3001b84c1fb558150961539d03-15"></a>sudo apt-get dselect-upgrade
 </pre>
 <p>Idėja: <a class="reference external" href="http://brainstorm.ubuntu.com/idea/25839/">http://brainstorm.ubuntu.com/idea/25839/</a></p>
 </li>

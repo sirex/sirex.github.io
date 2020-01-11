@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about php)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/php.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Thu, 02 Jan 2020 13:35:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kodėl PHP nėra programavimo kalba?</title><link>https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Nesupraskite šio įrašo antraštės tiesiogiai, taip mes juokaujam darbe
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about php)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/php.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jan 2020 13:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kodėl PHP nėra programavimo kalba?</title><link>https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Nesupraskite šio įrašo antraštės tiesiogiai, taip mes juokaujam darbe
 programuotojų tarpe, kai susiduriam su eiliniu PHP trūkumu...&lt;/p&gt;
 &lt;p&gt;Nors iš tikrųjų, PHP nėra pilnavertė programavimo kalba, ji yra scenarijų
 kūrimo kalba, o jei tiksliau – web scenarijų kūrimo kalba.  Nepaisant didelių
@@ -45,17 +45,17 @@ susiduriate su PHP trūkumais, tai laukiu papildymo komentaruose.&lt;/p&gt;
 kad tai yra labai lankstu, bet kai reikia ieškoti skriptuose paliktų klaidų,
 tai pradedi galvoti kas per žmonės sugalvojo tokią nesamonę...&lt;/p&gt;
 &lt;p&gt;Štai keli pavyzdžiai:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-6"&gt;&lt;/a&gt;    &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-8"&gt;&lt;/a&gt;    &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-9"&gt;&lt;/a&gt;    &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-10"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;a name="rest_code_105a9c6ba1ec41d5a0809c330887f7c3-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-6"&gt;&lt;/a&gt;    &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-8"&gt;&lt;/a&gt;    &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-9"&gt;&lt;/a&gt;    &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-10"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;a name="rest_code_1ece1a11899a41ada8bd20c12a5153bb-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Spėkit, kam bus lygus kintamasis &lt;code class="docutils literal"&gt;$a&lt;/code&gt;? Jis bus lygus True, jei netikit,
 išbandykite patys. Kiekvienas atidesnis programuotojas turėtų pastebėti, kad
 PHP palyginimo operacijos dažnai prasilenkia su logika. Praktikoje tokie
@@ -85,17 +85,17 @@ apdorojimo mechanizmo. Visokie parse error, notice warning ir panašiai
 susiklostė istoriškai, vėliau atsirado exception palaikymas, bet visi seni
 dalykai, taip pat liko.&lt;/p&gt;
 &lt;p&gt;Štai elementariausias pavyzdys, kuriame išlenda klaidų apdorojimo trūkumai:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="nb"&gt;fopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/etc/passwd'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-5"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;fwrite&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"boo&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-6"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;fclose&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-9"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;trigger_error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Error'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;E_USER_WARNING&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-10"&gt;&lt;/a&gt;    &lt;span class="c1"&gt;// or... throw new Exception('Error');&lt;/span&gt;
-&lt;a name="rest_code_5c418f369f8841cbb36b8f3fad8bd109-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="nb"&gt;fopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/etc/passwd'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-5"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;fwrite&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"boo&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-6"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;fclose&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-9"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;trigger_error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Error'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;E_USER_WARNING&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-10"&gt;&lt;/a&gt;    &lt;span class="c1"&gt;// or... throw new Exception('Error');&lt;/span&gt;
+&lt;a name="rest_code_b7f2ee5761a74279916a860cd8f4f455-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Šiame pavyzdyje bandoma tvarkingai atidaryti failą ir apdoroti atvejį, kai to
 failo atidaryti negalima. Deja PHP atveju, jei failo negalima atidaryti,
 paprasčiausiai išspjauna warning tipo klaidą ir vienintelis būdas tokią klaidą
@@ -147,32 +147,32 @@ reiškia, kad atmintyje objekto kintamieji susiejami ryšiais. PHP turi tokią
 ydą, kad jei objektas atmintyje yra susietas su kitu objektu, tuomet tas
 objektas pasidaro nesunaikinamas ir nuolat sėdi atmintyje.  Tai puikiausiai
 iliustruoja žemiau pateiktas pavyzdys:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyParent&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-4"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nv"&gt;$child&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-7"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="fm"&gt;__construct&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-8"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;child&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;MyChild&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-9"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-10"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-13"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyChild&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-14"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-16"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-17"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="fm"&gt;__construct&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-18"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;parent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-19"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-20"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-21"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-22"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-23"&gt;&lt;/a&gt;&lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-24"&gt;&lt;/a&gt;    &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nb"&gt;memory_get_usage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-25"&gt;&lt;/a&gt;    &lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;MyParent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_5434b3b9a69b4755a351623b15e7a8c3-26"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyParent&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nv"&gt;$child&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-7"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="fm"&gt;__construct&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-8"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;child&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;MyChild&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-9"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-10"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-13"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyChild&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-14"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-16"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-17"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="fm"&gt;__construct&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-18"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;parent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-19"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-20"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-21"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-22"&gt;&lt;/a&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-23"&gt;&lt;/a&gt;&lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-24"&gt;&lt;/a&gt;    &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nb"&gt;memory_get_usage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-25"&gt;&lt;/a&gt;    &lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;MyParent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a name="rest_code_bce4512b793b4393b4b24c26b3efe60e-26"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Gausime tokį rezultatą:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;335508
 336160
@@ -192,15 +192,15 @@ programuojant PHP, geriau nenaudoti objektų.&lt;/p&gt;
 &lt;div class="section" id="round-funkcijos-klaida-ar-funkcionalumas"&gt;
 &lt;h3&gt;Round funkcijos klaida ar funkcionalumas?&lt;/h3&gt;
 &lt;p&gt;Spėkit, kam bus lygus kintamasis &lt;code class="docutils literal"&gt;$a&lt;/code&gt;?&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_7e2bcdc609964006aa6b9ea5c5e81ca7-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_7e2bcdc609964006aa6b9ea5c5e81ca7-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7e2bcdc609964006aa6b9ea5c5e81ca7-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nb"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a name="rest_code_62cd3bda667f4fb5b756870c93d72690-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a name="rest_code_62cd3bda667f4fb5b756870c93d72690-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_62cd3bda667f4fb5b756870c93d72690-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nb"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Neatspėjote, &lt;code class="docutils literal"&gt;$a&lt;/code&gt; bus lygus &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;"-0"&lt;/span&gt;&lt;/code&gt; :)&lt;/p&gt;
 &lt;p&gt;Jei manote, kad šioje vietoje PHP yra teisus ir kaltos kreivos rankos, štai dar
 vienas pavyzdys:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_6ca0c1a5bbdc4e46b9abb544f71f6f8e-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_6ca0c1a5bbdc4e46b9abb544f71f6f8e-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_6ca0c1a5bbdc4e46b9abb544f71f6f8e-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a name="rest_code_8dec975c319942308071d1f9d7a01498-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a name="rest_code_8dec975c319942308071d1f9d7a01498-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8dec975c319942308071d1f9d7a01498-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Kintamasis &lt;code class="docutils literal"&gt;$a&lt;/code&gt; bus lygus &lt;code class="docutils literal"&gt;false&lt;/code&gt;...&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

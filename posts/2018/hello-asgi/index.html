@@ -33,10 +33,9 @@ import jso">
          <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Hello ASGI</h1>
         <div class="metadata">
             <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2018-03-30T00:00:00+03:00" itemprop="datePublished" title="2018-03-30 00:00">2018-03-30 00:00</time></a>
+            <time class="published dt-published" datetime="2018-03-30T00:00:00+03:00" itemprop="datePublished" title="2018-03-30 00:00">2018-03-30 00:00</time>
 
-                ―
+                |
                 <span itemprop="keywords" class="tags">
                     <a class="tag p-category" href="../../../tags/asgi/" rel="tag">asgi</a>,                    <a class="tag p-category" href="../../../tags/python/" rel="tag">python</a>,                    <a class="tag p-category" href="../../../tags/web/" rel="tag">web</a>                </span>
 
@@ -48,88 +47,88 @@ import jso">
 <p>Python programming language has <a class="reference external" href="https://www.python.org/dev/peps/pep-0333/">WSGI</a> (Web Server Gateway Interface) standard,
 where web servers can talk to apps using same standartized protocol. Simplest
 WSGI application looks like this:</p>
-<pre class="code python"><a name="rest_code_a9844170a56647b191ab649e60650e09-1"></a><span class="kn">import</span> <span class="nn">json</span>
-<a name="rest_code_a9844170a56647b191ab649e60650e09-2"></a>
-<a name="rest_code_a9844170a56647b191ab649e60650e09-3"></a><span class="k">def</span> <span class="nf">wsgi</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">):</span>
-<a name="rest_code_a9844170a56647b191ab649e60650e09-4"></a>    <span class="n">start_response</span><span class="p">(</span><span class="s1">'200 OK'</span><span class="p">,</span> <span class="p">[</span>
-<a name="rest_code_a9844170a56647b191ab649e60650e09-5"></a>        <span class="p">(</span><span class="s1">'Content-Type'</span><span class="p">,</span> <span class="s1">'application/json'</span><span class="p">),</span>
-<a name="rest_code_a9844170a56647b191ab649e60650e09-6"></a>    <span class="p">])</span>
-<a name="rest_code_a9844170a56647b191ab649e60650e09-7"></a>    <span class="k">yield</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="nb">repr</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_89d6f3e372e942e2b5b86f8d08a484ad-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<a name="rest_code_89d6f3e372e942e2b5b86f8d08a484ad-2"></a>
+<a name="rest_code_89d6f3e372e942e2b5b86f8d08a484ad-3"></a><span class="k">def</span> <span class="nf">wsgi</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">):</span>
+<a name="rest_code_89d6f3e372e942e2b5b86f8d08a484ad-4"></a>    <span class="n">start_response</span><span class="p">(</span><span class="s1">'200 OK'</span><span class="p">,</span> <span class="p">[</span>
+<a name="rest_code_89d6f3e372e942e2b5b86f8d08a484ad-5"></a>        <span class="p">(</span><span class="s1">'Content-Type'</span><span class="p">,</span> <span class="s1">'application/json'</span><span class="p">),</span>
+<a name="rest_code_89d6f3e372e942e2b5b86f8d08a484ad-6"></a>    <span class="p">])</span>
+<a name="rest_code_89d6f3e372e942e2b5b86f8d08a484ad-7"></a>    <span class="k">yield</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="nb">repr</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
 </pre>
 <p>Response:</p>
-<pre class="code json"><a name="rest_code_78ccce40ae894db4a35f456e051f00c9-1"></a><span class="p">{</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-2"></a>  <span class="nt">"wsgi.errors"</span><span class="p">:</span> <span class="s2">"&lt;gunicorn.http.wsgi.WSGIErrorsWrapper object at 0x7fe381c1aef0&gt;"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-3"></a>  <span class="nt">"wsgi.version"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-4"></a>  <span class="nt">"wsgi.multithread"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-5"></a>  <span class="nt">"wsgi.multiprocess"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-6"></a>  <span class="nt">"wsgi.run_once"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-7"></a>  <span class="nt">"wsgi.file_wrapper"</span><span class="p">:</span> <span class="s2">"&lt;class 'gunicorn.http.wsgi.FileWrapper'&gt;"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-8"></a>  <span class="nt">"SERVER_SOFTWARE"</span><span class="p">:</span> <span class="s2">"gunicorn/19.7.1"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-9"></a>  <span class="nt">"wsgi.input"</span><span class="p">:</span> <span class="s2">"&lt;gunicorn.http.body.Body object at 0x7fe381c1af60&gt;"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-10"></a>  <span class="nt">"gunicorn.socket"</span><span class="p">:</span> <span class="s2">"&lt;socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8000), raddr=('127.0.0.1', 59066)&gt;"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-11"></a>  <span class="nt">"REQUEST_METHOD"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-12"></a>  <span class="nt">"QUERY_STRING"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-13"></a>  <span class="nt">"RAW_URI"</span><span class="p">:</span> <span class="s2">"/"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-14"></a>  <span class="nt">"SERVER_PROTOCOL"</span><span class="p">:</span> <span class="s2">"HTTP/1.1"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-15"></a>  <span class="nt">"HTTP_HOST"</span><span class="p">:</span> <span class="s2">"localhost:8000"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-16"></a>  <span class="nt">"HTTP_USER_AGENT"</span><span class="p">:</span> <span class="s2">"curl/7.59.0"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-17"></a>  <span class="nt">"HTTP_ACCEPT"</span><span class="p">:</span> <span class="s2">"*/*"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-18"></a>  <span class="nt">"HTTP_CONNECTION"</span><span class="p">:</span> <span class="s2">"Upgrade, HTTP2-Settings"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-19"></a>  <span class="nt">"HTTP_UPGRADE"</span><span class="p">:</span> <span class="s2">"h2c"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-20"></a>  <span class="nt">"HTTP_HTTP2_SETTINGS"</span><span class="p">:</span> <span class="s2">"AAMAAABkAARAAAAAAAIAAAAA"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-21"></a>  <span class="nt">"wsgi.url_scheme"</span><span class="p">:</span> <span class="s2">"http"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-22"></a>  <span class="nt">"REMOTE_ADDR"</span><span class="p">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-23"></a>  <span class="nt">"REMOTE_PORT"</span><span class="p">:</span> <span class="s2">"59066"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-24"></a>  <span class="nt">"SERVER_NAME"</span><span class="p">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-25"></a>  <span class="nt">"SERVER_PORT"</span><span class="p">:</span> <span class="s2">"8000"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-26"></a>  <span class="nt">"PATH_INFO"</span><span class="p">:</span> <span class="s2">"/"</span><span class="p">,</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-27"></a>  <span class="nt">"SCRIPT_NAME"</span><span class="p">:</span> <span class="s2">""</span>
-<a name="rest_code_78ccce40ae894db4a35f456e051f00c9-28"></a><span class="p">}</span>
+<pre class="code json"><a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-1"></a><span class="p">{</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-2"></a>  <span class="nt">"wsgi.errors"</span><span class="p">:</span> <span class="s2">"&lt;gunicorn.http.wsgi.WSGIErrorsWrapper object at 0x7fe381c1aef0&gt;"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-3"></a>  <span class="nt">"wsgi.version"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-4"></a>  <span class="nt">"wsgi.multithread"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-5"></a>  <span class="nt">"wsgi.multiprocess"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-6"></a>  <span class="nt">"wsgi.run_once"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-7"></a>  <span class="nt">"wsgi.file_wrapper"</span><span class="p">:</span> <span class="s2">"&lt;class 'gunicorn.http.wsgi.FileWrapper'&gt;"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-8"></a>  <span class="nt">"SERVER_SOFTWARE"</span><span class="p">:</span> <span class="s2">"gunicorn/19.7.1"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-9"></a>  <span class="nt">"wsgi.input"</span><span class="p">:</span> <span class="s2">"&lt;gunicorn.http.body.Body object at 0x7fe381c1af60&gt;"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-10"></a>  <span class="nt">"gunicorn.socket"</span><span class="p">:</span> <span class="s2">"&lt;socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8000), raddr=('127.0.0.1', 59066)&gt;"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-11"></a>  <span class="nt">"REQUEST_METHOD"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-12"></a>  <span class="nt">"QUERY_STRING"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-13"></a>  <span class="nt">"RAW_URI"</span><span class="p">:</span> <span class="s2">"/"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-14"></a>  <span class="nt">"SERVER_PROTOCOL"</span><span class="p">:</span> <span class="s2">"HTTP/1.1"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-15"></a>  <span class="nt">"HTTP_HOST"</span><span class="p">:</span> <span class="s2">"localhost:8000"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-16"></a>  <span class="nt">"HTTP_USER_AGENT"</span><span class="p">:</span> <span class="s2">"curl/7.59.0"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-17"></a>  <span class="nt">"HTTP_ACCEPT"</span><span class="p">:</span> <span class="s2">"*/*"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-18"></a>  <span class="nt">"HTTP_CONNECTION"</span><span class="p">:</span> <span class="s2">"Upgrade, HTTP2-Settings"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-19"></a>  <span class="nt">"HTTP_UPGRADE"</span><span class="p">:</span> <span class="s2">"h2c"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-20"></a>  <span class="nt">"HTTP_HTTP2_SETTINGS"</span><span class="p">:</span> <span class="s2">"AAMAAABkAARAAAAAAAIAAAAA"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-21"></a>  <span class="nt">"wsgi.url_scheme"</span><span class="p">:</span> <span class="s2">"http"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-22"></a>  <span class="nt">"REMOTE_ADDR"</span><span class="p">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-23"></a>  <span class="nt">"REMOTE_PORT"</span><span class="p">:</span> <span class="s2">"59066"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-24"></a>  <span class="nt">"SERVER_NAME"</span><span class="p">:</span> <span class="s2">"127.0.0.1"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-25"></a>  <span class="nt">"SERVER_PORT"</span><span class="p">:</span> <span class="s2">"8000"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-26"></a>  <span class="nt">"PATH_INFO"</span><span class="p">:</span> <span class="s2">"/"</span><span class="p">,</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-27"></a>  <span class="nt">"SCRIPT_NAME"</span><span class="p">:</span> <span class="s2">""</span>
+<a name="rest_code_3a3ed9561ba545f390662d1c3aa603c7-28"></a><span class="p">}</span>
 </pre>
 <p>Now there is a new standard emerging, called <a class="reference external" href="https://github.com/django/asgiref/blob/master/specs/asgi.rst">ASGI</a> (Asynchronous Server Gateway
 Interface). This new standard tries to fix WSGI limitations and provides more
 flexible interface, that can support multiple protocols like HTTP, HTTP/2,
 WebSockets and others. In addition ASGI provides possibility to use asyncio in
 web apps. Simples ASGI application looks like this:</p>
-<pre class="code python"><a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-1"></a><span class="kn">import</span> <span class="nn">json</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-2"></a>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-3"></a>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-4"></a><span class="k">def</span> <span class="nf">asgi</span><span class="p">(</span><span class="n">scope</span><span class="p">):</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-5"></a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">chat</span><span class="p">(</span><span class="n">receive</span><span class="p">,</span> <span class="n">send</span><span class="p">):</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-6"></a>        <span class="k">await</span> <span class="n">receive</span><span class="p">()</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-7"></a>        <span class="k">await</span> <span class="n">send</span><span class="p">({</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-8"></a>            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'http.response.start'</span><span class="p">,</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-9"></a>            <span class="s1">'status'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-10"></a>            <span class="s1">'headers'</span><span class="p">:</span> <span class="p">[</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-11"></a>                <span class="p">[</span><span class="sa">b</span><span class="s1">'Content-Type'</span><span class="p">,</span> <span class="sa">b</span><span class="s1">'application/json'</span><span class="p">],</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-12"></a>            <span class="p">],</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-13"></a>        <span class="p">})</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-14"></a>        <span class="k">await</span> <span class="n">send</span><span class="p">({</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-15"></a>            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'http.response.body'</span><span class="p">,</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-16"></a>            <span class="s1">'body'</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">scope</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="nb">bytes</span><span class="o">.</span><span class="n">decode</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-17"></a>        <span class="p">})</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-18"></a>        <span class="k">await</span> <span class="n">send</span><span class="p">({</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-19"></a>            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'http.disconnect'</span><span class="p">,</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-20"></a>        <span class="p">})</span>
-<a name="rest_code_6f6df7d029f948a1b0a9d9e16ffb45d7-21"></a>    <span class="k">return</span> <span class="n">chat</span>
+<pre class="code python"><a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-1"></a><span class="kn">import</span> <span class="nn">json</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-2"></a>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-3"></a>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-4"></a><span class="k">def</span> <span class="nf">asgi</span><span class="p">(</span><span class="n">scope</span><span class="p">):</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-5"></a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">chat</span><span class="p">(</span><span class="n">receive</span><span class="p">,</span> <span class="n">send</span><span class="p">):</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-6"></a>        <span class="k">await</span> <span class="n">receive</span><span class="p">()</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-7"></a>        <span class="k">await</span> <span class="n">send</span><span class="p">({</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-8"></a>            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'http.response.start'</span><span class="p">,</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-9"></a>            <span class="s1">'status'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-10"></a>            <span class="s1">'headers'</span><span class="p">:</span> <span class="p">[</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-11"></a>                <span class="p">[</span><span class="sa">b</span><span class="s1">'Content-Type'</span><span class="p">,</span> <span class="sa">b</span><span class="s1">'application/json'</span><span class="p">],</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-12"></a>            <span class="p">],</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-13"></a>        <span class="p">})</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-14"></a>        <span class="k">await</span> <span class="n">send</span><span class="p">({</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-15"></a>            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'http.response.body'</span><span class="p">,</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-16"></a>            <span class="s1">'body'</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">scope</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="nb">bytes</span><span class="o">.</span><span class="n">decode</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-17"></a>        <span class="p">})</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-18"></a>        <span class="k">await</span> <span class="n">send</span><span class="p">({</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-19"></a>            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'http.disconnect'</span><span class="p">,</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-20"></a>        <span class="p">})</span>
+<a name="rest_code_00c5a56148dd42afbfcfbc540cf9def2-21"></a>    <span class="k">return</span> <span class="n">chat</span>
 </pre>
 <p>Response:</p>
-<pre class="code json"><a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-1"></a><span class="p">{</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-2"></a>  <span class="nt">"type"</span><span class="p">:</span> <span class="s2">"http"</span><span class="p">,</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-3"></a>  <span class="nt">"http_version"</span><span class="p">:</span> <span class="s2">"2"</span><span class="p">,</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-4"></a>  <span class="nt">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-5"></a>  <span class="nt">"path"</span><span class="p">:</span> <span class="s2">"/"</span><span class="p">,</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-6"></a>  <span class="nt">"root_path"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-7"></a>  <span class="nt">"scheme"</span><span class="p">:</span> <span class="s2">"https"</span><span class="p">,</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-8"></a>  <span class="nt">"query_string"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-9"></a>  <span class="nt">"headers"</span><span class="p">:</span> <span class="p">[</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-10"></a>    <span class="p">[</span><span class="s2">"host"</span><span class="p">,</span> <span class="s2">"localhost:8000"</span><span class="p">],</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-11"></a>    <span class="p">[</span><span class="s2">"user-agent"</span><span class="p">,</span> <span class="s2">"curl/7.59.0"</span><span class="p">],</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-12"></a>    <span class="p">[</span><span class="s2">"accept"</span><span class="p">,</span> <span class="s2">"*/*"</span><span class="p">]</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-13"></a>  <span class="p">],</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-14"></a>  <span class="nt">"client"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"127.0.0.1"</span><span class="p">,</span> <span class="mi">59012</span><span class="p">],</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-15"></a>  <span class="nt">"server"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"127.0.0.1"</span><span class="p">,</span> <span class="mi">8000</span><span class="p">]</span>
-<a name="rest_code_d3755ee3a4c7428ca7fbb210a794887f-16"></a><span class="p">}</span>
+<pre class="code json"><a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-1"></a><span class="p">{</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-2"></a>  <span class="nt">"type"</span><span class="p">:</span> <span class="s2">"http"</span><span class="p">,</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-3"></a>  <span class="nt">"http_version"</span><span class="p">:</span> <span class="s2">"2"</span><span class="p">,</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-4"></a>  <span class="nt">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-5"></a>  <span class="nt">"path"</span><span class="p">:</span> <span class="s2">"/"</span><span class="p">,</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-6"></a>  <span class="nt">"root_path"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-7"></a>  <span class="nt">"scheme"</span><span class="p">:</span> <span class="s2">"https"</span><span class="p">,</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-8"></a>  <span class="nt">"query_string"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-9"></a>  <span class="nt">"headers"</span><span class="p">:</span> <span class="p">[</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-10"></a>    <span class="p">[</span><span class="s2">"host"</span><span class="p">,</span> <span class="s2">"localhost:8000"</span><span class="p">],</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-11"></a>    <span class="p">[</span><span class="s2">"user-agent"</span><span class="p">,</span> <span class="s2">"curl/7.59.0"</span><span class="p">],</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-12"></a>    <span class="p">[</span><span class="s2">"accept"</span><span class="p">,</span> <span class="s2">"*/*"</span><span class="p">]</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-13"></a>  <span class="p">],</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-14"></a>  <span class="nt">"client"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"127.0.0.1"</span><span class="p">,</span> <span class="mi">59012</span><span class="p">],</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-15"></a>  <span class="nt">"server"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"127.0.0.1"</span><span class="p">,</span> <span class="mi">8000</span><span class="p">]</span>
+<a name="rest_code_3e2dd89f8df948f4bdae06fcbaa91bae-16"></a><span class="p">}</span>
 </pre>
 <p>ASGI is a bit more complicated, but gives support for modern web protocols and
 <em>asyncio</em>.</p>

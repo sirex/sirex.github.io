@@ -34,10 +34,9 @@ raš">
          <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Radio stočių surinkimas į audacious</h1>
         <div class="metadata">
             <p class="dateline">
-            <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2011-07-21T00:00:00+03:00" itemprop="datePublished" title="2011-07-21 00:00">2011-07-21 00:00</time></a>
+            <time class="published dt-published" datetime="2011-07-21T00:00:00+03:00" itemprop="datePublished" title="2011-07-21 00:00">2011-07-21 00:00</time>
 
-                ―
+                |
                 <span itemprop="keywords" class="tags">
                     <a class="tag p-category" href="../../../tags/audacious/" rel="tag">audacious</a>,                    <a class="tag p-category" href="../../../tags/floss/" rel="tag">floss</a>,                    <a class="tag p-category" href="../../../tags/shell/" rel="tag">shell</a>                </span>
 
@@ -52,22 +51,22 @@ raš">
 rašau, yra 42 nuorodos. Peržiūrėti ir paklausyti visas šias radio stotis yra
 gan sudėtinga, jei kiekvieną nuorodą reikėtų įkelti į grojaraštį rankiniu būdu.</p>
 <p>Štai būdas, kaip visas nuorodas galima surinkti ir įkelti į audacious:</p>
-<pre class="code sh"><a name="rest_code_7331c72a44b3498aa36fd843f5be9207-1"></a>wget http://rock-radio.50webs.com/ -O- <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_7331c72a44b3498aa36fd843f5be9207-2"></a>    egrep -o <span class="s1">'http://[^"]+'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_7331c72a44b3498aa36fd843f5be9207-3"></a>    egrep <span class="s1">'(pls|m3u)$'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_7331c72a44b3498aa36fd843f5be9207-4"></a>    <span class="k">while</span> <span class="nb">read</span> url <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<a name="rest_code_7331c72a44b3498aa36fd843f5be9207-5"></a>        audacious2 -e <span class="nv">$url</span> <span class="p">;</span> <span class="se">\</span>
-<a name="rest_code_7331c72a44b3498aa36fd843f5be9207-6"></a>    <span class="k">done</span>
+<pre class="code sh"><a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-1"></a>wget http://rock-radio.50webs.com/ -O- <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-2"></a>    egrep -o <span class="s1">'http://[^"]+'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-3"></a>    egrep <span class="s1">'(pls|m3u)$'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-4"></a>    <span class="k">while</span> <span class="nb">read</span> url <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-5"></a>        audacious2 -e <span class="nv">$url</span> <span class="p">;</span> <span class="se">\</span>
+<a name="rest_code_e96fc2ce65124ba58d073a5ed330993f-6"></a>    <span class="k">done</span>
 </pre>
 <p>Įvykdžius šią komandą, visos nuorodos į radio stotis, pateiktos toje svetainėje
 atsidurs audacious grojaraštyje, vienu sartu.</p>
 <p>Tą patį galima padaryti ir su <a class="reference external" href="http://www.klausyk.lt/lt/visos_radijo_stotys/">lietuviškomis radio stotimis</a>:</p>
-<pre class="code sh"><a name="rest_code_3719cd9e52394cf589cf53a9dc92852e-1"></a>wget http://www.klausyk.lt/lt/visos_radijo_stotys/ -O- <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_3719cd9e52394cf589cf53a9dc92852e-2"></a>    egrep -o <span class="s1">'http://[^"]+'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_3719cd9e52394cf589cf53a9dc92852e-3"></a>    egrep <span class="s1">'(pls|m3u)$'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_3719cd9e52394cf589cf53a9dc92852e-4"></a>    <span class="k">while</span> <span class="nb">read</span> url <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<a name="rest_code_3719cd9e52394cf589cf53a9dc92852e-5"></a>        audacious2 -e <span class="nv">$url</span> <span class="p">;</span> <span class="se">\</span>
-<a name="rest_code_3719cd9e52394cf589cf53a9dc92852e-6"></a>    <span class="k">done</span>
+<pre class="code sh"><a name="rest_code_b1624ae3cc9340da805f16e369f4914e-1"></a>wget http://www.klausyk.lt/lt/visos_radijo_stotys/ -O- <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_b1624ae3cc9340da805f16e369f4914e-2"></a>    egrep -o <span class="s1">'http://[^"]+'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_b1624ae3cc9340da805f16e369f4914e-3"></a>    egrep <span class="s1">'(pls|m3u)$'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_b1624ae3cc9340da805f16e369f4914e-4"></a>    <span class="k">while</span> <span class="nb">read</span> url <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<a name="rest_code_b1624ae3cc9340da805f16e369f4914e-5"></a>        audacious2 -e <span class="nv">$url</span> <span class="p">;</span> <span class="se">\</span>
+<a name="rest_code_b1624ae3cc9340da805f16e369f4914e-6"></a>    <span class="k">done</span>
 </pre>
 <p>Gero klausymosi.</p>
 <div class="admonition note">
