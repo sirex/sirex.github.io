@@ -16,8 +16,7 @@ env/bin/pip-compile: env/bin/pip
 run: env/done
 	env/bin/nikola auto
 
-
-deploy: env/done
+push: env/done
 	env/bin/nikola github_deploy
 
-.PHONY: run deploy
+.PHONY: push run
