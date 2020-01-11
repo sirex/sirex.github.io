@@ -39,8 +39,8 @@ function. We do that, because this way we need to write less. For example:
         assert list(c) == [('foo', 'bar')]
 
 Here we have a test, where two separate things are tested. It is convenient to
-write tests way, because we only need to do setup once and then test multiple
-things on the same setup.
+write tests this way, because we only need to do setup once and then test
+multiple things on the same setup.
 
 Lets assume, that we wrote `sqlite3` module our tests fail at `test N` step. We
 need to debug what is going one. Usually debuggin requires to hook into for
