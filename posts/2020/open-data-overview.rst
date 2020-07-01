@@ -6,6 +6,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. status: draft
 
 Jau praėjo beveik metai, kai pradėjau kurti atvirų duomenų platformą.
 Platformą statau ant duomenų valdymo karkaso, kurį pavadinau Spinta_.
