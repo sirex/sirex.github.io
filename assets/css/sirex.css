@@ -45,15 +45,20 @@ blockquote {
     padding: 2px;
     padding-left: 17px;
     margin-left: -20px;
+    margin-right: 0;
     font-style: italic;
 }
 
-div.admonition.note {
+blockquote > table p {
+    font-style: normal;
+}
+
+div.admonition {
     background-color: #2F3638;
     color: #FFFFFF;
     margin: 0;
 }
-div.admonition.note p.admonition-title {
+div.admonition p.admonition-title {
     margin: 0;
     padding: 0 18px;
     padding-top: 10px;
@@ -61,4 +66,12 @@ div.admonition.note p.admonition-title {
 
 img.whitebg {
     background-color: #FFFFFF;
+}
+
+table.full-width {
+    width: 100%;
+}
+
+table.right-align-right-col td:last-child {
+    text-align: right;
 }
