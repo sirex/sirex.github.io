@@ -53,12 +53,12 @@ blockquote > table p {
     font-style: normal;
 }
 
-div.admonition.note {
+div.admonition {
     background-color: #2F3638;
     color: #FFFFFF;
     margin: 0;
 }
-div.admonition.note p.admonition-title {
+div.admonition p.admonition-title {
     margin: 0;
     padding: 0 18px;
     padding-top: 10px;

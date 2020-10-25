@@ -13,10 +13,22 @@ requirements.txt: env/bin/pip-compile requirements.in
 env/bin/pip-compile: env/bin/pip
 	env/bin/pip install pip-tools
 
+upgrade: env/bin/pip-compile requirements.in
+	env/bin/pip-compile --upgrade requirements.in -o requirements.txt
+
+new-post: env/done
+	env/bin/nikola new_post
+
 run: env/done
 	env/bin/nikola auto
+
+build:
+	env/bin/nikola build
 
 push: env/done
 	env/bin/nikola github_deploy
 
-.PHONY: push run
+clean:
+	env/bin/nikola clean
+
+.PHONY: upgrade run build push clean
