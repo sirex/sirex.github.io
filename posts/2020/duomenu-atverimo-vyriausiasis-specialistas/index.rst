@@ -6,10 +6,14 @@
 .. link: 
 .. description: 
 .. type: text
-.. status: draft
 
-Šią savaitę, nuo pirmadienio pradėjau dirbti IVPK, `Skaitmeninės aplinkos
-skyriaus`__, duomenų atvėrimo vyriausiuoju specialistu.
+.. admonition:: Įspėjimas
+
+    Visa mano asmeniniame bloge pateikta nuomonė yra mano asmeninė subjektyvi
+    nuomonė, o ne oficiali IVPK pozicija.
+
+Šią savaitę, nuo pirmadienio, pradėjau dirbti IVPK `Skaitmeninės aplinkos
+skyriaus`__ duomenų atvėrimo vyriausiuoju specialistu.
 
 .. __: https://ivpk.lrv.lt/lt/struktura-ir-kontaktai/kontaktai-1
 
@@ -19,7 +23,7 @@ skyriaus`__, duomenų atvėrimo vyriausiuoju specialistu.
     į konkretų skyrių. Nepatogu. Ta pati problema yra ne tik kontaktų puslapyje,
     bet ir kituose puslapiuose, kuriuose naudojami suskleidžiamieji sąrašai.
 
-Su atvirais duomenimis ir kartu su IVPK jau dirbu gan senai. Šią vasarą IVPK
+Su atvirais duomenimis ir kartu su IVPK jau dirbu gan seniai. Šią vasarą IVPK
 nusprendė papildyti atvirų duomenų komandą naujais žmonėmis ir paskelbė, kad
 ieško *duomenų atvėrimo vyriausiojo specialisto*. Ilgai negalvojęs nusprendžiau
 pretenduoti į šią poziciją, kadangi ir taip labai daug laiko skiriu atviriems
@@ -39,7 +43,8 @@ standartų ir pan.
 
 Pirmoji mano užduotis yra techninės specifikacijos paruošimas II etapo viešajam
 pirkimui. Deja viešuosiuose pirkimuose negalima aiškiai ir konkrečiai įvardinti
-ko reikia, tenka tai ko reikia apibūdinti gan abstrakčiais reikalavimais.
+technologijų ar priemonių kurių reikia. Vietoj to, tenka aprašyti ką įrankis
+turi daryti.
 
 Antroji užduotis viešųjų pirkimų tarnybos (VPT) duomenų atvėrimas. VPT duomenis
 jau praktiškai esu atvėręs, tačiau liko dar keletas klaidų, kurias reikia
@@ -57,8 +62,10 @@ II duomenų atvėrimo etapas
 Prieš daugiau nei metus laiko prasidėjo `pirmasis duomenų atvėrimo etapas
 <paskelbtas-atviru-duomenu-portalo-viesasis-pirkimas>`:doc:, kuris jau yra
 baigtas. Pirmo etapo rezultatas, paleistas `data.gov.lt`_ atvirų duomenų
-katalogas CKAN_ pagrindu ir atverti 5 įstaigų duomenis, viso 300 duomenų
-rinkinių.
+katalogas CKAN_ pagrindu ir atverti 5 įstaigų duomenys, viso 300 duomenų
+rinkinių. Pats katalogas nėra skirtas duomenų saugojimui, nors galima įkelti
+ir nedidelės apimties duomenis. Kataloge pateikiama informacija apie duomenų
+rinkinius ir nuorodos į duomenų šaltinius.
 
 .. _data.gov.lt: https://data.gov.lt/
 .. _CKAN: https://ckan.org/
@@ -83,13 +90,15 @@ apsunkina reikalus, kadangi kiekvienas pajudėjimas turi turėti finansavimą,
 teisinį pagrindą ir pan.
 
 Kiek žinau, visam antram etapui bus skirta apie 2.5 mln €. Visi šie pinigai bus
-paskirstyti atvirų duomenų portalo tobulinimui, įstaigoms atveriančioms duomenis
-ir mokymams. Finansai įstaigoms bus skiriami pagal atveriamų duomenų kiekį, bet
-vidutiniškai vienai įstaigai gausis apie 50,000€. Manau skiriami finansai
-pakankamai neblogi ir duomenims atverti turėtų užtekti. Ne šiaip sau CSV failus
-eksportuoti, bet atverti duomenis aukštu brandos lygiu.
+paskirstyti institucijų duomenų atvėrimui, institucijoms ir joms talkinantiems
+paslaugų tiekėjams, institucijų darbuotojų mokymams ir nedidelė dalis - Atvirų
+duomenų katalogui tobulinti. Finansai įstaigoms skiriami pagal atveriamų duomenų
+kiekį ir reikalingų atlikti veiklų apimtį, nuo kelių šimtų iki keliasdešimt
+tūkstančių €. Manau skiriami finansai pakankamai neblogi ir duomenims atverti
+turėtų užtekti. Ne šiaip sau CSV failus eksportuoti, bet atverti duomenis aukštu
+brandos lygiu.
 
-Vienintelė problema, kad visoje lietuvoje valstybinių įstaigų yra apie 4000.
+Vienintelė problema, kad visoje Lietuvoje valstybinių įstaigų yra apie 4000.
 Tai antrasis etapas dengia vos 1.25% viso valstybinio sektoriaus. Na bet
 žinoma, svarbu ne tik kiekybė, bet ir kokybė.
 
@@ -188,9 +197,9 @@ Tiekėjai dažniausiai yra suinteresuoti už kuo didesnę sumą pinigų padaryti
 mažiau darbo. Tai yra visai normalu, nes tiekėjai yra verslo įmonės siekiančios
 gauti pelną.
 
-Todėl mano pagrindinis tikslas padaryti atvirkščiai, kad tiekėjai už kuo mažesnę
-pinigų sumą padaryti kiek įmanoma daugiau darbo. Ką noriu pasakyti, kad
-paprasčiausias CSV failų eksportas nepraeis. Tiekėjams reikės įdėti daugiau
+Todėl visos komandos pagrindinis tikslas padaryti atvirkščiai, kad tiekėjai už
+kuo mažesnę pinigų sumą padaryti kiek įmanoma daugiau darbo. Ką noriu pasakyti,
+kad paprasčiausias CSV failų eksportas nepraeis. Tiekėjams reikės įdėti daugiau
 pastangų.
 
 Tikiuosi galutiniame rezultate gausis geras balansas.
@@ -254,9 +263,8 @@ Tokiu būdu atskiriamas pats duomenų atvėrimas, kuriam užtenka tik parengti
 naudojama visose įstaigose atveriančiose duomenis. Tai turėtų maksimaliai
 optimizuoti duomenų atvėrimo darbus.
 
-Kaip visa tai veikia esu gan išsamiai `dokumentavęs`__. Taip pat toks duomenų
-aprašas yra įtrauktas į IVPK `atvirų duomenų nuostatus`__, šiuos nuostatus
-planuojama įtraukti į bendrąsias duomenų atvėrimo rekomendacijas.
+Kaip visa tai veikia esu gan išsamiai `dokumentavęs`__. Analogiško duomenų
+struktūros aprašo specifikacija yra paskelbta IVPK `atvirų duomenų kataloge`__.
 
 .. __: https://atviriduomenys.readthedocs.io/lt/latest/
 .. __: https://data.gov.lt/opening/learningmaterial/6

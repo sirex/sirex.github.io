@@ -53,12 +53,12 @@ lentelių duomenis. Tuos duomenis perkelti į savo kompiutery, sukeisti
 išeksportuotų lentelių prefiksus ir galiausiai visą tai importuoti į savo
 lokalią MySQL duomenų bazę.</p>
 <p>Šiai užduočiai realizuojama man prireikė tik vienos komandos:</p>
-<pre class="code sh"><a name="rest_code_1382ff17d0504bc89d081ab8df2a7b70-1"></a>mysql -u -p -h  <span class="se">\</span>
-<a name="rest_code_1382ff17d0504bc89d081ab8df2a7b70-2"></a>      -e <span class="s1">'show tables like "some_table_fragment_%"'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_1382ff17d0504bc89d081ab8df2a7b70-3"></a>  awk <span class="s1">'{ if (NR &gt; 1) print $1 }'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_1382ff17d0504bc89d081ab8df2a7b70-4"></a>  xargs mysqldump -u -p -h  <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_1382ff17d0504bc89d081ab8df2a7b70-5"></a>  sed <span class="s1">'s/prefix1/prefix2/g'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_1382ff17d0504bc89d081ab8df2a7b70-6"></a>  mysql -u -p -hlocalhost
+<pre class="code sh"><a name="rest_code_e5be5e43715a45cc97c7f121133e6270-1"></a>mysql -u -p -h  <span class="se">\</span>
+<a name="rest_code_e5be5e43715a45cc97c7f121133e6270-2"></a>      -e <span class="s1">'show tables like "some_table_fragment_%"'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_e5be5e43715a45cc97c7f121133e6270-3"></a>  awk <span class="s1">'{ if (NR &gt; 1) print $1 }'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_e5be5e43715a45cc97c7f121133e6270-4"></a>  xargs mysqldump -u -p -h  <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_e5be5e43715a45cc97c7f121133e6270-5"></a>  sed <span class="s1">'s/prefix1/prefix2/g'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_e5be5e43715a45cc97c7f121133e6270-6"></a>  mysql -u -p -hlocalhost
 </pre>
 <p>Nors komanda iš pirmo žvilgsnio gal būt atrodo sudėtinga, tačiau įsigilinus į
 atskiras jos dalis matyti, kad nieko sudėtingo nėra. Kad parašyti šią komandą

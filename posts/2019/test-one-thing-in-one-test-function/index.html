@@ -13,6 +13,7 @@
 <link rel="canonical" href="https://sirex.lt/posts/2019/test-one-thing-in-one-test-function/">
 <!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
 <link rel="prev" href="../duomenu-atverimas-igauna-pagreiti/" title="Duomenų atvėrimas įgauna pagreitį" type="text/html">
+<link rel="next" href="../../2020/duomenu-atverimo-vyriausiasis-specialistas/" title="Duomenų atvėrimo vyriausiasis specialistas" type="text/html">
 <meta property="og:site_name" content="Sirex web log">
 <meta property="og:title" content="Test one thing in one test function">
 <meta property="og:url" content="https://sirex.lt/posts/2019/test-one-thing-in-one-test-function/">
@@ -49,28 +50,28 @@ def ">
 <p>When writing tests, we usually want to test multiple things in one test
 function. We do that, because this way we need to write less. For example:</p>
 <!-- run: env/bin/py.test -vvx - -color=yes %s -->
-<pre class="code python"><a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-2"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-3"></a>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-4"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">()</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-5"></a><span class="k">def</span> <span class="nf">db</span><span class="p">():</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-6"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">':memory:'</span><span class="p">)</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-7"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'CREATE TABLE t (key TEXT, val TEXT)'</span><span class="p">)</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-8"></a>    <span class="k">return</span> <span class="n">conn</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-9"></a>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-10"></a><span class="k">def</span> <span class="nf">test_sqlite</span><span class="p">(</span><span class="n">db</span><span class="p">):</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-11"></a>    <span class="c1"># setup</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-12"></a>    <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'INSERT INTO t (key, val) VALUES ("foo", "bar")'</span><span class="p">)</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-13"></a>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-14"></a>    <span class="c1"># test 1</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-15"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM t;'</span><span class="p">)</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-16"></a>    <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="p">[(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">)]</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-17"></a>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-18"></a>    <span class="c1"># test ...</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-19"></a>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-20"></a>    <span class="c1"># test N</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-21"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM t WHERE key = "foo";'</span><span class="p">)</span>
-<a name="rest_code_3d4a2a8200cd4816a513d00fb27ee1bf-22"></a>    <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="p">[(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">)]</span>
+<pre class="code python"><a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-2"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-3"></a>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-4"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">()</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-5"></a><span class="k">def</span> <span class="nf">db</span><span class="p">():</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-6"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">':memory:'</span><span class="p">)</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-7"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'CREATE TABLE t (key TEXT, val TEXT)'</span><span class="p">)</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-8"></a>    <span class="k">return</span> <span class="n">conn</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-9"></a>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-10"></a><span class="k">def</span> <span class="nf">test_sqlite</span><span class="p">(</span><span class="n">db</span><span class="p">):</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-11"></a>    <span class="c1"># setup</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-12"></a>    <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'INSERT INTO t (key, val) VALUES ("foo", "bar")'</span><span class="p">)</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-13"></a>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-14"></a>    <span class="c1"># test 1</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-15"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM t;'</span><span class="p">)</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-16"></a>    <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="p">[(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">)]</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-17"></a>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-18"></a>    <span class="c1"># test ...</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-19"></a>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-20"></a>    <span class="c1"># test N</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-21"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM t WHERE key = "foo";'</span><span class="p">)</span>
+<a name="rest_code_fefb701f8d7f40db8ccf6ef2da90f17b-22"></a>    <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="p">[(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">)]</span>
 </pre>
 <p>Here we have a test, where two separate things are tested. It is convenient to
 write tests this way, because we only need to do setup once and then test
@@ -84,17 +85,17 @@ multiple times. That means, we will see too much irrelevant output, which makes
 it difficult to see only relevate output from our last <code class="docutils literal">test N</code> step.</p>
 <p>Usually I end up splitting such tests into many separate tests in order to make
 debugging easier. For example, this test above could be split like this:</p>
-<pre class="code python"><a name="rest_code_429eedd9b91d4bb8906abc3557b39297-1"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">()</span>
-<a name="rest_code_429eedd9b91d4bb8906abc3557b39297-2"></a><span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="n">db</span><span class="p">):</span>
-<a name="rest_code_429eedd9b91d4bb8906abc3557b39297-3"></a>    <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'INSERT INTO t (key, val) VALUES ("foo", "bar")'</span><span class="p">)</span>
-<a name="rest_code_429eedd9b91d4bb8906abc3557b39297-4"></a>
-<a name="rest_code_429eedd9b91d4bb8906abc3557b39297-5"></a><span class="k">def</span> <span class="nf">test_sqlite_1</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-<a name="rest_code_429eedd9b91d4bb8906abc3557b39297-6"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM t;'</span><span class="p">)</span>
-<a name="rest_code_429eedd9b91d4bb8906abc3557b39297-7"></a>    <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="p">[(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">)]</span>
-<a name="rest_code_429eedd9b91d4bb8906abc3557b39297-8"></a>
-<a name="rest_code_429eedd9b91d4bb8906abc3557b39297-9"></a><span class="k">def</span> <span class="nf">test_sqlite_N</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-<a name="rest_code_429eedd9b91d4bb8906abc3557b39297-10"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM t WHERE key = "foo";'</span><span class="p">)</span>
-<a name="rest_code_429eedd9b91d4bb8906abc3557b39297-11"></a>    <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="p">[(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">)]</span>
+<pre class="code python"><a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-1"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">()</span>
+<a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-2"></a><span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="n">db</span><span class="p">):</span>
+<a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-3"></a>    <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'INSERT INTO t (key, val) VALUES ("foo", "bar")'</span><span class="p">)</span>
+<a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-4"></a>
+<a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-5"></a><span class="k">def</span> <span class="nf">test_sqlite_1</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-6"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM t;'</span><span class="p">)</span>
+<a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-7"></a>    <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="p">[(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">)]</span>
+<a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-8"></a>
+<a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-9"></a><span class="k">def</span> <span class="nf">test_sqlite_N</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-10"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM t WHERE key = "foo";'</span><span class="p">)</span>
+<a name="rest_code_872deab34c624cb7a0e5cc3f9903f0f5-11"></a>    <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="p">[(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">)]</span>
 </pre>
 <p>Now that is much better. I can run just <code class="docutils literal">test_sqlite_N</code> and when debuggin, I
 will see only relevant output.</p>
@@ -103,6 +104,9 @@ will see only relevant output.</p>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../duomenu-atverimas-igauna-pagreiti/" rel="prev" title="Duomenų atvėrimas įgauna pagreitį">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../2020/duomenu-atverimo-vyriausiasis-specialistas/" rel="next" title="Duomenų atvėrimo vyriausiasis specialistas">Next post</a>
             </li>
         </ul></nav></aside><nav id="menu"><ul>
 <li><a href="../../../">Index</a></li>

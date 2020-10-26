@@ -86,8 +86,8 @@ $ cd ~/.hgext
 $ hg clone http://bitbucket.org/misery/hgftp/</pre>
 <p>Po šių veiksmų, galite įjungti šį praplėtimą globaliai (<code class="docutils literal"><span class="pre">~/.hgrc</span></code>), arba tik
 konkrečiam repozitoriumui (<em>./.hg/hgrc</em>) į nurodytą failą įrašydami:</p>
-<pre class="code ini"><a name="rest_code_61baa8988c4d4107975a0d57c4e1463e-1"></a><span class="k">[extensions]</span>
-<a name="rest_code_61baa8988c4d4107975a0d57c4e1463e-2"></a><span class="na">hgext.ftp</span> <span class="o">=</span> <span class="s">~/.hgext/hgftp/ftp.py</span>
+<pre class="code ini"><a name="rest_code_86a65226df65435bb0b5a7ccecc27fcc-1"></a><span class="k">[extensions]</span>
+<a name="rest_code_86a65226df65435bb0b5a7ccecc27fcc-2"></a><span class="na">hgext.ftp</span> <span class="o">=</span> <span class="s">~/.hgext/hgftp/ftp.py</span>
 </pre>
 </div>
 <div class="section" id="ftpextension-konfiguravimas">
@@ -95,9 +95,9 @@ konkrečiam repozitoriumui (<em>./.hg/hgrc</em>) į nurodytą failą įrašydam
 <p>Kai jau turite veikiantį praplėtimą, konkrečiam Web projekto repozitoriumui
 galite nurodyti FTP prisijungimą, kur bus siunčiami duomenys. Tai galite
 padaryti repozitormiumo konfigūraciniame faile <code class="docutils literal"><span class="pre">./.hg/hgrc</span></code>, nurodydami:</p>
-<pre class="code ini"><a name="rest_code_80a2c2c9ac7e4e6495859981d9084cf2-1"></a><span class="k">[paths]</span>
-<a name="rest_code_80a2c2c9ac7e4e6495859981d9084cf2-2"></a><span class="na">ftp</span>    <span class="o">=</span> <span class="s">ftp://[user[:pass]@]host[:port]/[path]</span>
-<a name="rest_code_80a2c2c9ac7e4e6495859981d9084cf2-3"></a><span class="na">myhost</span> <span class="o">=</span> <span class="s">ftp://andre@incubo.de/htdocs</span>
+<pre class="code ini"><a name="rest_code_fd47cde3d0c342eab3585cb8833abb71-1"></a><span class="k">[paths]</span>
+<a name="rest_code_fd47cde3d0c342eab3585cb8833abb71-2"></a><span class="na">ftp</span>    <span class="o">=</span> <span class="s">ftp://[user[:pass]@]host[:port]/[path]</span>
+<a name="rest_code_fd47cde3d0c342eab3585cb8833abb71-3"></a><span class="na">myhost</span> <span class="o">=</span> <span class="s">ftp://andre@incubo.de/htdocs</span>
 </pre>
 <p>Jei prisijungimo eilutę priskirsite specialią paskirtį turinčiam žodeliui
 ‘ftp’, tuomet šis FTP serveris bus naudojamas pagal nutylėjimą ir galėsite

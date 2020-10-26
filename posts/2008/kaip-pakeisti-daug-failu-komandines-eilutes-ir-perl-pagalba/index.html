@@ -48,20 +48,20 @@ failus, kuriuose nėra aprašytas klasės parametras ir įrašytą tą trūkstam
 parametrą į klasės vidų.</p>
 <p>Pasinaudodamas komandine eilute ir nedideliu perl skriptu tai nesunkiai padariau.</p>
 <p>Perl skriptas atrodo taip:</p>
-<pre class="code perl"><a name="rest_code_a782a38ef0ef477b822928b48b1bc304-1"></a><span class="k">print</span><span class="p">;</span>
-<a name="rest_code_a782a38ef0ef477b822928b48b1bc304-2"></a>
-<a name="rest_code_a782a38ef0ef477b822928b48b1bc304-3"></a><span class="k">if</span> <span class="p">(</span><span class="sr">/^class/</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_a782a38ef0ef477b822928b48b1bc304-4"></a>    <span class="k">use</span> <span class="nn">File::Basename</span><span class="p">;</span>
-<a name="rest_code_a782a38ef0ef477b822928b48b1bc304-5"></a>    <span class="k">my</span> <span class="nv">$layout</span> <span class="o">=</span> <span class="n">basename</span><span class="p">(</span><span class="n">dirname</span><span class="p">(</span><span class="nv">$ARGV</span><span class="p">));</span>
-<a name="rest_code_a782a38ef0ef477b822928b48b1bc304-6"></a>    <span class="k">print</span> <span class="s">"\n   public \$layout = '$layout';\n"</span><span class="p">;</span>
-<a name="rest_code_a782a38ef0ef477b822928b48b1bc304-7"></a><span class="p">}</span>
+<pre class="code perl"><a name="rest_code_50cc3dd823ae4de2a98d7d944db61628-1"></a><span class="k">print</span><span class="p">;</span>
+<a name="rest_code_50cc3dd823ae4de2a98d7d944db61628-2"></a>
+<a name="rest_code_50cc3dd823ae4de2a98d7d944db61628-3"></a><span class="k">if</span> <span class="p">(</span><span class="sr">/^class/</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_50cc3dd823ae4de2a98d7d944db61628-4"></a>    <span class="k">use</span> <span class="nn">File::Basename</span><span class="p">;</span>
+<a name="rest_code_50cc3dd823ae4de2a98d7d944db61628-5"></a>    <span class="k">my</span> <span class="nv">$layout</span> <span class="o">=</span> <span class="n">basename</span><span class="p">(</span><span class="n">dirname</span><span class="p">(</span><span class="nv">$ARGV</span><span class="p">));</span>
+<a name="rest_code_50cc3dd823ae4de2a98d7d944db61628-6"></a>    <span class="k">print</span> <span class="s">"\n   public \$layout = '$layout';\n"</span><span class="p">;</span>
+<a name="rest_code_50cc3dd823ae4de2a98d7d944db61628-7"></a><span class="p">}</span>
 </pre>
 <p>O komanda atrodo taip:</p>
-<pre class="code bash"><a name="rest_code_1bb8bae39e07461dac24fb8fbd40461f-1"></a>find -wholename <span class="s2">"*/themes/*/layouts/*/config.php"</span> <span class="se">\</span>
-<a name="rest_code_1bb8bae39e07461dac24fb8fbd40461f-2"></a>    <span class="p">|</span> xargs grep -L <span class="s2">"public \$layout"</span> <span class="se">\</span>
-<a name="rest_code_1bb8bae39e07461dac24fb8fbd40461f-3"></a>    <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> f <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<a name="rest_code_1bb8bae39e07461dac24fb8fbd40461f-4"></a>        perl -ni /tmp/replace.pl <span class="nv">$f</span> <span class="p">;</span> <span class="se">\</span>
-<a name="rest_code_1bb8bae39e07461dac24fb8fbd40461f-5"></a>    <span class="k">done</span>
+<pre class="code bash"><a name="rest_code_6e52c823a73c4f369fed4ec3c77887f7-1"></a>find -wholename <span class="s2">"*/themes/*/layouts/*/config.php"</span> <span class="se">\</span>
+<a name="rest_code_6e52c823a73c4f369fed4ec3c77887f7-2"></a>    <span class="p">|</span> xargs grep -L <span class="s2">"public \$layout"</span> <span class="se">\</span>
+<a name="rest_code_6e52c823a73c4f369fed4ec3c77887f7-3"></a>    <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> f <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<a name="rest_code_6e52c823a73c4f369fed4ec3c77887f7-4"></a>        perl -ni /tmp/replace.pl <span class="nv">$f</span> <span class="p">;</span> <span class="se">\</span>
+<a name="rest_code_6e52c823a73c4f369fed4ec3c77887f7-5"></a>    <span class="k">done</span>
 </pre>
 <p>Naudojantis komandine eilute, labai nesunkiai galima automatizuoti įvairiausias
 užduotis. Šiame pavyzdyje, vietoje to, kad keliaučiau per visus failus ir

@@ -87,17 +87,17 @@ susiduriate su PHP trūkumais, tai laukiu papildymo komentaruose.</p>
 kad tai yra labai lankstu, bet kai reikia ieškoti skriptuose paliktų klaidų,
 tai pradedi galvoti kas per žmonės sugalvojo tokią nesamonę…</p>
 <p>Štai keli pavyzdžiai:</p>
-<pre class="code php"><a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-2"></a>
-<a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-4"></a>    <span class="k">false</span> <span class="o">==</span> <span class="s1">''</span> <span class="o">&amp;&amp;</span>
-<a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-5"></a>    <span class="k">false</span> <span class="o">==</span> <span class="s1">'0'</span> <span class="o">&amp;&amp;</span>
-<a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-6"></a>    <span class="s1">''</span> <span class="o">!=</span> <span class="s1">'0'</span> <span class="o">&amp;&amp;</span>
-<a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-7"></a>
-<a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-8"></a>    <span class="mi">0</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span>
-<a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-9"></a>    <span class="mi">0</span> <span class="o">==</span> <span class="k">false</span> <span class="o">&amp;&amp;</span>
-<a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-10"></a>    <span class="k">false</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span>
-<a name="rest_code_03dc3a00349f4ce28f75bdd3c445dda3-11"></a><span class="p">);</span>
+<pre class="code php"><a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-2"></a>
+<a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="p">(</span>
+<a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-4"></a>    <span class="k">false</span> <span class="o">==</span> <span class="s1">''</span> <span class="o">&amp;&amp;</span>
+<a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-5"></a>    <span class="k">false</span> <span class="o">==</span> <span class="s1">'0'</span> <span class="o">&amp;&amp;</span>
+<a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-6"></a>    <span class="s1">''</span> <span class="o">!=</span> <span class="s1">'0'</span> <span class="o">&amp;&amp;</span>
+<a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-7"></a>
+<a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-8"></a>    <span class="mi">0</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span>
+<a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-9"></a>    <span class="mi">0</span> <span class="o">==</span> <span class="k">false</span> <span class="o">&amp;&amp;</span>
+<a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-10"></a>    <span class="k">false</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span>
+<a name="rest_code_29d76d849ac34cfa9b1703aab8e8fa5a-11"></a><span class="p">);</span>
 </pre>
 <p>Spėkit, kam bus lygus kintamasis <code class="docutils literal">$a</code>? Jis bus lygus True, jei netikit,
 išbandykite patys. Kiekvienas atidesnis programuotojas turėtų pastebėti, kad
@@ -132,17 +132,17 @@ apdorojimo mechanizmo. Visokie parse error, notice warning ir panašiai
 susiklostė istoriškai, vėliau atsirado exception palaikymas, bet visi seni
 dalykai, taip pat liko.</p>
 <p>Štai elementariausias pavyzdys, kuriame išlenda klaidų apdorojimo trūkumai:</p>
-<pre class="code php"><a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-2"></a>
-<a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-3"></a><span class="nv">$fp</span> <span class="o">=</span> <span class="o">@</span><span class="nb">fopen</span><span class="p">(</span><span class="s1">'/etc/passwd'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">);</span>
-<a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-4"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$fp</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-5"></a>    <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="s2">"boo</span><span class="se">\n</span><span class="s2">"</span><span class="p">);</span>
-<a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-6"></a>    <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
-<a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-7"></a><span class="p">}</span>
-<a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-8"></a><span class="k">else</span> <span class="p">{</span>
-<a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-9"></a>    <span class="nb">trigger_error</span><span class="p">(</span><span class="s1">'Error'</span><span class="p">,</span> <span class="nx">E_USER_WARNING</span><span class="p">);</span>
-<a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-10"></a>    <span class="c1">// or... throw new Exception('Error');</span>
-<a name="rest_code_6c5c0dbbba534b839f6b6e849519b0a8-11"></a><span class="p">}</span>
+<pre class="code php"><a name="rest_code_ed830407efed4f76809dd7d5de9f594b-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_ed830407efed4f76809dd7d5de9f594b-2"></a>
+<a name="rest_code_ed830407efed4f76809dd7d5de9f594b-3"></a><span class="nv">$fp</span> <span class="o">=</span> <span class="o">@</span><span class="nb">fopen</span><span class="p">(</span><span class="s1">'/etc/passwd'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">);</span>
+<a name="rest_code_ed830407efed4f76809dd7d5de9f594b-4"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$fp</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_ed830407efed4f76809dd7d5de9f594b-5"></a>    <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="s2">"boo</span><span class="se">\n</span><span class="s2">"</span><span class="p">);</span>
+<a name="rest_code_ed830407efed4f76809dd7d5de9f594b-6"></a>    <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
+<a name="rest_code_ed830407efed4f76809dd7d5de9f594b-7"></a><span class="p">}</span>
+<a name="rest_code_ed830407efed4f76809dd7d5de9f594b-8"></a><span class="k">else</span> <span class="p">{</span>
+<a name="rest_code_ed830407efed4f76809dd7d5de9f594b-9"></a>    <span class="nb">trigger_error</span><span class="p">(</span><span class="s1">'Error'</span><span class="p">,</span> <span class="nx">E_USER_WARNING</span><span class="p">);</span>
+<a name="rest_code_ed830407efed4f76809dd7d5de9f594b-10"></a>    <span class="c1">// or... throw new Exception('Error');</span>
+<a name="rest_code_ed830407efed4f76809dd7d5de9f594b-11"></a><span class="p">}</span>
 </pre>
 <p>Šiame pavyzdyje bandoma tvarkingai atidaryti failą ir apdoroti atvejį, kai to
 failo atidaryti negalima. Deja PHP atveju, jei failo negalima atidaryti,
@@ -195,32 +195,32 @@ reiškia, kad atmintyje objekto kintamieji susiejami ryšiais. PHP turi tokią
 ydą, kad jei objektas atmintyje yra susietas su kitu objektu, tuomet tas
 objektas pasidaro nesunaikinamas ir nuolat sėdi atmintyje.  Tai puikiausiai
 iliustruoja žemiau pateiktas pavyzdys:</p>
-<pre class="code php"><a name="rest_code_4718ad91009747d89bff95bf63c8c99c-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-2"></a>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-3"></a><span class="k">class</span> <span class="nc">MyParent</span> <span class="p">{</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-4"></a>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-5"></a>    <span class="k">public</span> <span class="nv">$child</span><span class="p">;</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-6"></a>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-7"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span> <span class="p">{</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-8"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">child</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyChild</span><span class="p">(</span><span class="nv">$this</span><span class="p">);</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-9"></a>    <span class="p">}</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-10"></a>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-11"></a><span class="p">}</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-12"></a>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-13"></a><span class="k">class</span> <span class="nc">MyChild</span> <span class="p">{</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-14"></a>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-15"></a>    <span class="k">public</span> <span class="nv">$parent</span><span class="p">;</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-16"></a>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-17"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$parent</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-18"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">parent</span> <span class="o">=</span> <span class="nv">$parent</span><span class="p">;</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-19"></a>    <span class="p">}</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-20"></a>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-21"></a><span class="p">}</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-22"></a>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-23"></a><span class="k">foreach</span> <span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$i</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-24"></a>    <span class="k">echo</span> <span class="nb">memory_get_usage</span><span class="p">()</span><span class="o">.</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-25"></a>    <span class="nv">$a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyParent</span><span class="p">;</span>
-<a name="rest_code_4718ad91009747d89bff95bf63c8c99c-26"></a><span class="p">}</span>
+<pre class="code php"><a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-2"></a>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-3"></a><span class="k">class</span> <span class="nc">MyParent</span> <span class="p">{</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-4"></a>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-5"></a>    <span class="k">public</span> <span class="nv">$child</span><span class="p">;</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-6"></a>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-7"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span> <span class="p">{</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-8"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">child</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyChild</span><span class="p">(</span><span class="nv">$this</span><span class="p">);</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-9"></a>    <span class="p">}</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-10"></a>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-11"></a><span class="p">}</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-12"></a>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-13"></a><span class="k">class</span> <span class="nc">MyChild</span> <span class="p">{</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-14"></a>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-15"></a>    <span class="k">public</span> <span class="nv">$parent</span><span class="p">;</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-16"></a>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-17"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$parent</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-18"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">parent</span> <span class="o">=</span> <span class="nv">$parent</span><span class="p">;</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-19"></a>    <span class="p">}</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-20"></a>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-21"></a><span class="p">}</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-22"></a>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-23"></a><span class="k">foreach</span> <span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$i</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-24"></a>    <span class="k">echo</span> <span class="nb">memory_get_usage</span><span class="p">()</span><span class="o">.</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-25"></a>    <span class="nv">$a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyParent</span><span class="p">;</span>
+<a name="rest_code_95ceaf2e4bda4d1a8102082aa0bfeb43-26"></a><span class="p">}</span>
 </pre>
 <p>Gausime tokį rezultatą:</p>
 <pre class="literal-block">335508
@@ -241,16 +241,16 @@ programuojant PHP, geriau nenaudoti objektų.</p>
 <div class="section" id="round-funkcijos-klaida-ar-funkcionalumas">
 <h3>Round funkcijos klaida ar funkcionalumas?<a href="#round-funkcijos-klaida-ar-funkcionalumas" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p>Spėkit, kam bus lygus kintamasis <code class="docutils literal">$a</code>?</p>
-<pre class="code php"><a name="rest_code_002612ac3c2a4f809f1c5dcb8ab942d7-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_002612ac3c2a4f809f1c5dcb8ab942d7-2"></a>
-<a name="rest_code_002612ac3c2a4f809f1c5dcb8ab942d7-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">);</span>
+<pre class="code php"><a name="rest_code_aac9f39aeb05477c804ffba7c1b07144-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_aac9f39aeb05477c804ffba7c1b07144-2"></a>
+<a name="rest_code_aac9f39aeb05477c804ffba7c1b07144-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">);</span>
 </pre>
 <p>Neatspėjote, <code class="docutils literal">$a</code> bus lygus <code class="docutils literal"><span class="pre">"-0"</span></code> :)</p>
 <p>Jei manote, kad šioje vietoje PHP yra teisus ir kaltos kreivos rankos, štai dar
 vienas pavyzdys:</p>
-<pre class="code php"><a name="rest_code_8149ad5c469544d8a88392eb44d02eeb-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_8149ad5c469544d8a88392eb44d02eeb-2"></a>
-<a name="rest_code_8149ad5c469544d8a88392eb44d02eeb-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">;</span>
+<pre class="code php"><a name="rest_code_470895ed5beb46cabe3db000d0c9796b-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_470895ed5beb46cabe3db000d0c9796b-2"></a>
+<a name="rest_code_470895ed5beb46cabe3db000d0c9796b-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">;</span>
 </pre>
 <p>Kintamasis <code class="docutils literal">$a</code> bus lygus <code class="docutils literal">false</code>…</p>
 </div>
