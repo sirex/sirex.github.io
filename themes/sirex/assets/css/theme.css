@@ -28,7 +28,7 @@
 
 body {
 	background-color: #222B2E;
-	color: #FFFFFF;
+	color: #d4d4d4;
 	font-family: serif;
 	font-size: 16px;
 	line-height: 1.4;
@@ -311,20 +311,84 @@ code.literal {
     border-radius: 4px;
 }
 
-pre.code, pre.literal-block, code {
+pre.code, pre.literal-block, code,
+.CodeMirror > .highlight > pre,
+.jp-OutputArea-output > pre
+{
 	white-space: pre;
 	word-wrap: normal;
 	overflow: auto;
-        background-color: #171D1F;
-        margin: 0 -20px;
-        padding: 10px 20px;
-        font-size: 15px;
+	background-color: #171d1f;
+	margin: 0 -20px;
+	padding: 10px 20px;
+	font-size: 15px;
+}
+
+.jp-OutputArea-output > pre {
+	background-color: #2F3638;
+    color: #d4d4d4;
 }
 
 blockquote pre.code, blockquote pre.literal-block {
     margin: 0 -4px;
     padding: 10px 8px;
 }
+
+/*
+SOLARIZED HEX     TERMCOL   HEX
+--------- ------- --------- -------
+base03    #002b36 brblack   #1c1c1c
+base02    #073642 black     #262626
+base01    #586e75 brgreen   #4e4e4e
+base00    #657b83 bryellow  #585858
+base0     #839496 brblue    #808080
+base1     #93a1a1 brcyan    #8a8a8a
+base2     #eee8d5 white     #d7d7af
+base3     #fdf6e3 brwhite   #ffffd7
+yellow    #b58900 yellow    #af8700
+orange    #cb4b16 brred     #d75f00
+red       #dc322f red       #d70000
+magenta   #d33682 magenta   #af005f
+violet    #6c71c4 brmagenta #5f5faf
+blue      #268bd2 blue      #0087ff
+cyan      #2aa198 cyan      #00afaf
+green     #859900 green     #5f8700
+ */
+
+.jp-OutputArea-output .ansi-black-fg { color: #073642; }
+.jp-OutputArea-output .ansi-black-bg { background-color: #073642; }
+.jp-OutputArea-output .ansi-black-intense-fg { color: #002b36; }
+.jp-OutputArea-output .ansi-black-intense-bg { background-color: #002b36; }
+.jp-OutputArea-output .ansi-red-fg { color: #dc322f; }
+.jp-OutputArea-output .ansi-red-bg { background-color: #dc322f; }
+.jp-OutputArea-output .ansi-red-intense-fg { color: #cb4b16; }
+.jp-OutputArea-output .ansi-red-intense-bg { background-color: #cb4b16; }
+.jp-OutputArea-output .ansi-green-fg { color: #859900; }
+.jp-OutputArea-output .ansi-green-bg { background-color: #859900; }
+.jp-OutputArea-output .ansi-green-intense-fg { color: #586e75; }
+.jp-OutputArea-output .ansi-green-intense-bg { background-color: #586e75; }
+.jp-OutputArea-output .ansi-yellow-fg { color: #b58900; }
+.jp-OutputArea-output .ansi-yellow-bg { background-color: #b58900; }
+.jp-OutputArea-output .ansi-yellow-intense-fg { color: #657b83; }
+.jp-OutputArea-output .ansi-yellow-intense-bg { background-color: #657b83; }
+.jp-OutputArea-output .ansi-blue-fg { color: #268bd2; }
+.jp-OutputArea-output .ansi-blue-bg { background-color: #268bd2; }
+.jp-OutputArea-output .ansi-blue-intense-fg { color: #839496; }
+.jp-OutputArea-output .ansi-blue-intense-bg { background-color: #839496; }
+.jp-OutputArea-output .ansi-magenta-fg { color: #d33682; }
+.jp-OutputArea-output .ansi-magenta-bg { background-color: #d33682; }
+.jp-OutputArea-output .ansi-magenta-intense-fg { color: #6c71c4; }
+.jp-OutputArea-output .ansi-magenta-intense-bg { background-color: #6c71c4; }
+.jp-OutputArea-output .ansi-cyan-fg { color: #2aa198; }
+.jp-OutputArea-output .ansi-cyan-bg { background-color: #2aa198; }
+.jp-OutputArea-output .ansi-cyan-intense-fg { color: #93a1a1; }
+.jp-OutputArea-output .ansi-cyan-intense-bg { background-color: #93a1a1; }
+.jp-OutputArea-output .ansi-white-fg { color: #eee8d5; }
+.jp-OutputArea-output .ansi-white-bg { background-color: #eee8d5; }
+.jp-OutputArea-output .ansi-white-intense-fg { color: #fdf6e3; }
+.jp-OutputArea-output .ansi-white-intense-bg { background-color: #fdf6e3; }
+.jp-OutputArea-output .ansi-bold { font-weight: bold; }
+
 
 
 /* SOURCE: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */

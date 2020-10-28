@@ -1,4 +1,5 @@
 import time
+from pathlib import Path
 
 BLOG_AUTHOR = "Sirex"
 BLOG_TITLE = "Sirex web log"
@@ -84,6 +85,7 @@ POSTS = (
     ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
+    ("posts/*.ipynb", "posts", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.rst", "pages", "page.tmpl"),
@@ -939,7 +941,23 @@ PRETTY_URLS = True
 # IPYNB_CONFIG = {}
 # With the following example configuration you can use a custom jinja template
 # called `toggle.tpl` which has to be located in your site/blog main folder:
-# IPYNB_CONFIG = {'Exporter': {'template_file': 'toggle'}}
+# https://nbconvert.readthedocs.io/en/latest/config_options.html#exporter-options
+IPYNB_CONFIG = {
+    'Exporter': {
+        # 'extra_template_paths': ['themes/sirex/templates/ipynb'],
+        'template_file': 'lab/base.html.j2',
+    },
+    'HTMLExporter': {
+        'theme': CODE_COLOR_SCHEME,
+        'exclude_anchor_links': True,
+        'exclude_input_prompt': True,
+        'exclude_output_prompt': True,
+    },
+    'CSSHTMLHeaderPreprocessor.style': CODE_COLOR_SCHEME,
+    'CSSHTMLHeaderPreprocessor': {
+        'style': CODE_COLOR_SCHEME,
+    },
+}
 
 # What Markdown extensions to enable?
 # You will also get gist, nikola and podcast because those are
@@ -948,7 +966,11 @@ PRETTY_URLS = True
 #       with the MarkdownExtension class and should not be added here.
 # Defaults are markdown.extensions.(fenced_code|codehilite|extra)
 # markdown.extensions.meta is required for Markdown metadata.
-MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.codehilite', 'markdown.extensions.extra']
+MARKDOWN_EXTENSIONS = [
+    'markdown.extensions.fenced_code',
+    'markdown.extensions.codehilite',
+    'markdown.extensions.extra',
+]
 
 # Options to be passed to markdown extensions (See https://python-markdown.github.io/reference/)
 # Default is {} (no config at all)

@@ -19,8 +19,14 @@ upgrade: env/bin/pip-compile requirements.in
 new-post: env/done
 	env/bin/nikola new_post
 
+new-post-ipynb: env/done
+	env/bin/nikola new_post --format=ipynb
+
 run: env/done
 	env/bin/nikola auto
+
+serve: env/done
+	env/bin/nikola serve
 
 build:
 	env/bin/nikola build
@@ -31,4 +37,10 @@ push: env/done
 clean:
 	env/bin/nikola clean
 
-.PHONY: upgrade run build push clean
+debug: env/done
+	NIKOLA_DEBUG=1 env/bin/nikola build --always-execute \
+		render_sources:output/posts/2020/atviru-duomenu-katalogo-metaduomenu-analize/index.ipynb \
+		render_pages:output/posts/2020/atviru-duomenu-katalogo-metaduomenu-analize/index.html \
+		render_posts:cache/posts/2020/atviru-duomenu-katalogo-metaduomenu-analize.html
+
+.PHONY: upgrade run serve build push clean debug
