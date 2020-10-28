@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width">
 <title>SSH serveris chroot aplinkoje | Sirex web log</title>
 <link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
@@ -120,14 +122,14 @@ tikrais duomenimis, su tikru, chroot viduje egzistuojančiu namų katalogu ir s
 <p>Jei naudotojus kūrėte, tiesiog sukurdami įrašą <code class="docutils literal">/etc/passwd</code> failo viduje,
 tada kiekvienam sukurtam naudotojui reikia sukurti ir po namų katalogą, tam
 puikiai tinka toks paprastas shell skriptas, kuris turėti būti paleistas chroot išorėje:</p>
-<pre class="code bash"><a name="rest_code_c0d5cd7c9e73435f8ff5e20d948ffbe7-1"></a>awk -F <span class="s2">":"</span> <span class="s1">'/chrootshell/ { print $1 }'</span> /etc/passwd <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> chrootusr <span class="p">;</span> <span class="k">do</span>
-<a name="rest_code_c0d5cd7c9e73435f8ff5e20d948ffbe7-2"></a>    <span class="k">if</span> <span class="o">[</span> ! -d /chroot/home/<span class="nv">$chrootusr</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<a name="rest_code_c0d5cd7c9e73435f8ff5e20d948ffbe7-3"></a>        <span class="nb">echo</span> <span class="s2">"Creating home dir for: </span><span class="nv">$chrootusr</span><span class="s2">"</span>
-<a name="rest_code_c0d5cd7c9e73435f8ff5e20d948ffbe7-4"></a>        sudo mkdir -p /chroot/home/<span class="nv">$chrootusr</span>
-<a name="rest_code_c0d5cd7c9e73435f8ff5e20d948ffbe7-5"></a>        sudo chown <span class="nv">$chrootusr</span>:<span class="nv">$chrootusr</span> /chroot/home/<span class="nv">$chrootusr</span>
-<a name="rest_code_c0d5cd7c9e73435f8ff5e20d948ffbe7-6"></a>        sudo chmod <span class="m">700</span> /chroot/home/<span class="nv">$chrootusr</span>
-<a name="rest_code_c0d5cd7c9e73435f8ff5e20d948ffbe7-7"></a>    <span class="k">fi</span>
-<a name="rest_code_c0d5cd7c9e73435f8ff5e20d948ffbe7-8"></a><span class="k">done</span>
+<pre class="code bash"><a name="rest_code_b8ba64186b9e4d4d97df0390fa284298-1"></a>awk -F <span class="s2">":"</span> <span class="s1">'/chrootshell/ { print $1 }'</span> /etc/passwd <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> chrootusr <span class="p">;</span> <span class="k">do</span>
+<a name="rest_code_b8ba64186b9e4d4d97df0390fa284298-2"></a>    <span class="k">if</span> <span class="o">[</span> ! -d /chroot/home/<span class="nv">$chrootusr</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_b8ba64186b9e4d4d97df0390fa284298-3"></a>        <span class="nb">echo</span> <span class="s2">"Creating home dir for: </span><span class="nv">$chrootusr</span><span class="s2">"</span>
+<a name="rest_code_b8ba64186b9e4d4d97df0390fa284298-4"></a>        sudo mkdir -p /chroot/home/<span class="nv">$chrootusr</span>
+<a name="rest_code_b8ba64186b9e4d4d97df0390fa284298-5"></a>        sudo chown <span class="nv">$chrootusr</span>:<span class="nv">$chrootusr</span> /chroot/home/<span class="nv">$chrootusr</span>
+<a name="rest_code_b8ba64186b9e4d4d97df0390fa284298-6"></a>        sudo chmod <span class="m">700</span> /chroot/home/<span class="nv">$chrootusr</span>
+<a name="rest_code_b8ba64186b9e4d4d97df0390fa284298-7"></a>    <span class="k">fi</span>
+<a name="rest_code_b8ba64186b9e4d4d97df0390fa284298-8"></a><span class="k">done</span>
 </pre>
 </div>
 <div class="section" id="id7">

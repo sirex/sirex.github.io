@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width">
 <title>Myliu komandinę eilutę ❤ | Sirex web log</title>
 <link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
@@ -53,12 +55,12 @@ lentelių duomenis. Tuos duomenis perkelti į savo kompiutery, sukeisti
 išeksportuotų lentelių prefiksus ir galiausiai visą tai importuoti į savo
 lokalią MySQL duomenų bazę.</p>
 <p>Šiai užduočiai realizuojama man prireikė tik vienos komandos:</p>
-<pre class="code sh"><a name="rest_code_e5be5e43715a45cc97c7f121133e6270-1"></a>mysql -u -p -h  <span class="se">\</span>
-<a name="rest_code_e5be5e43715a45cc97c7f121133e6270-2"></a>      -e <span class="s1">'show tables like "some_table_fragment_%"'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_e5be5e43715a45cc97c7f121133e6270-3"></a>  awk <span class="s1">'{ if (NR &gt; 1) print $1 }'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_e5be5e43715a45cc97c7f121133e6270-4"></a>  xargs mysqldump -u -p -h  <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_e5be5e43715a45cc97c7f121133e6270-5"></a>  sed <span class="s1">'s/prefix1/prefix2/g'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_e5be5e43715a45cc97c7f121133e6270-6"></a>  mysql -u -p -hlocalhost
+<pre class="code sh"><a name="rest_code_18d47d9c96074fd5b4ef5527f3f1a766-1"></a>mysql -u -p -h  <span class="se">\</span>
+<a name="rest_code_18d47d9c96074fd5b4ef5527f3f1a766-2"></a>      -e <span class="s1">'show tables like "some_table_fragment_%"'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_18d47d9c96074fd5b4ef5527f3f1a766-3"></a>  awk <span class="s1">'{ if (NR &gt; 1) print $1 }'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_18d47d9c96074fd5b4ef5527f3f1a766-4"></a>  xargs mysqldump -u -p -h  <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_18d47d9c96074fd5b4ef5527f3f1a766-5"></a>  sed <span class="s1">'s/prefix1/prefix2/g'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_18d47d9c96074fd5b4ef5527f3f1a766-6"></a>  mysql -u -p -hlocalhost
 </pre>
 <p>Nors komanda iš pirmo žvilgsnio gal būt atrodo sudėtinga, tačiau įsigilinus į
 atskiras jos dalis matyti, kad nieko sudėtingo nėra. Kad parašyti šią komandą

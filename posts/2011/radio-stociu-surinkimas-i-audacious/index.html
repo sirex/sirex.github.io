@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width">
 <title>Radio stočių surinkimas į audacious | Sirex web log</title>
 <link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
@@ -51,22 +53,22 @@ raš">
 rašau, yra 42 nuorodos. Peržiūrėti ir paklausyti visas šias radio stotis yra
 gan sudėtinga, jei kiekvieną nuorodą reikėtų įkelti į grojaraštį rankiniu būdu.</p>
 <p>Štai būdas, kaip visas nuorodas galima surinkti ir įkelti į audacious:</p>
-<pre class="code sh"><a name="rest_code_2f64183319444d3e982e562b8ee75ca5-1"></a>wget http://rock-radio.50webs.com/ -O- <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_2f64183319444d3e982e562b8ee75ca5-2"></a>    egrep -o <span class="s1">'http://[^"]+'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_2f64183319444d3e982e562b8ee75ca5-3"></a>    egrep <span class="s1">'(pls|m3u)$'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_2f64183319444d3e982e562b8ee75ca5-4"></a>    <span class="k">while</span> <span class="nb">read</span> url <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<a name="rest_code_2f64183319444d3e982e562b8ee75ca5-5"></a>        audacious2 -e <span class="nv">$url</span> <span class="p">;</span> <span class="se">\</span>
-<a name="rest_code_2f64183319444d3e982e562b8ee75ca5-6"></a>    <span class="k">done</span>
+<pre class="code sh"><a name="rest_code_7f9183c6129a4cef89c04906727e70e3-1"></a>wget http://rock-radio.50webs.com/ -O- <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_7f9183c6129a4cef89c04906727e70e3-2"></a>    egrep -o <span class="s1">'http://[^"]+'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_7f9183c6129a4cef89c04906727e70e3-3"></a>    egrep <span class="s1">'(pls|m3u)$'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_7f9183c6129a4cef89c04906727e70e3-4"></a>    <span class="k">while</span> <span class="nb">read</span> url <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<a name="rest_code_7f9183c6129a4cef89c04906727e70e3-5"></a>        audacious2 -e <span class="nv">$url</span> <span class="p">;</span> <span class="se">\</span>
+<a name="rest_code_7f9183c6129a4cef89c04906727e70e3-6"></a>    <span class="k">done</span>
 </pre>
 <p>Įvykdžius šią komandą, visos nuorodos į radio stotis, pateiktos toje svetainėje
 atsidurs audacious grojaraštyje, vienu sartu.</p>
 <p>Tą patį galima padaryti ir su <a class="reference external" href="http://www.klausyk.lt/lt/visos_radijo_stotys/">lietuviškomis radio stotimis</a>:</p>
-<pre class="code sh"><a name="rest_code_8323ecdd195c4061a7b6f3b6bf68fadc-1"></a>wget http://www.klausyk.lt/lt/visos_radijo_stotys/ -O- <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_8323ecdd195c4061a7b6f3b6bf68fadc-2"></a>    egrep -o <span class="s1">'http://[^"]+'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_8323ecdd195c4061a7b6f3b6bf68fadc-3"></a>    egrep <span class="s1">'(pls|m3u)$'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_8323ecdd195c4061a7b6f3b6bf68fadc-4"></a>    <span class="k">while</span> <span class="nb">read</span> url <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<a name="rest_code_8323ecdd195c4061a7b6f3b6bf68fadc-5"></a>        audacious2 -e <span class="nv">$url</span> <span class="p">;</span> <span class="se">\</span>
-<a name="rest_code_8323ecdd195c4061a7b6f3b6bf68fadc-6"></a>    <span class="k">done</span>
+<pre class="code sh"><a name="rest_code_0502defbe70f44e7874e144e011ab0a3-1"></a>wget http://www.klausyk.lt/lt/visos_radijo_stotys/ -O- <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_0502defbe70f44e7874e144e011ab0a3-2"></a>    egrep -o <span class="s1">'http://[^"]+'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_0502defbe70f44e7874e144e011ab0a3-3"></a>    egrep <span class="s1">'(pls|m3u)$'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_0502defbe70f44e7874e144e011ab0a3-4"></a>    <span class="k">while</span> <span class="nb">read</span> url <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<a name="rest_code_0502defbe70f44e7874e144e011ab0a3-5"></a>        audacious2 -e <span class="nv">$url</span> <span class="p">;</span> <span class="se">\</span>
+<a name="rest_code_0502defbe70f44e7874e144e011ab0a3-6"></a>    <span class="k">done</span>
 </pre>
 <p>Gero klausymosi.</p>
 <div class="admonition note">

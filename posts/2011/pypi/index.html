@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width">
 <title>Python paketai | Sirex web log</title>
 <link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
@@ -53,24 +55,24 @@ from distutils.core im">
 <dd>
 <p>Pagrindinis paketo failas, kuriame aprašoma paketo meta informacija. Šio
 failo turinys atrodo taip:</p>
-<pre class="code python"><a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-1"></a><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-2"></a>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-3"></a><span class="n">setup</span><span class="p">(</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-4"></a>    <span class="n">name</span><span class="o">=</span><span class="s1">'mypkgname'</span><span class="p">,</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-5"></a>    <span class="n">version</span><span class="o">=</span><span class="s1">'0.1'</span><span class="p">,</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-6"></a>    <span class="n">author</span><span class="o">=</span><span class="s1">'My Name'</span><span class="p">,</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-7"></a>    <span class="n">author_email</span><span class="o">=</span><span class="s1">'my at mail.com'</span><span class="p">,</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-8"></a>    <span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">'pkgmodule'</span><span class="p">],</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-9"></a>    <span class="n">url</span><span class="o">=</span><span class="s1">'pkgurl'</span><span class="p">,</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-10"></a>    <span class="n">license</span><span class="o">=</span><span class="s1">'gpl.txt'</span><span class="p">,</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-11"></a>    <span class="n">description</span><span class="o">=</span><span class="s1">'pkg description'</span><span class="p">,</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-12"></a>    <span class="n">long_description</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">'README.rst'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-13"></a>    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-14"></a>        <span class="s1">'Development Status :: 5 - Production/Stable'</span><span class="p">,</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-15"></a>        <span class="s1">'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)'</span><span class="p">,</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-16"></a>        <span class="s1">'Programming Language :: Python :: 3'</span><span class="p">,</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-17"></a>    <span class="p">]</span>
-<a name="rest_code_114dcb4cfe334728a8532d88eba3fdea-18"></a><span class="p">)</span>
+<pre class="code python"><a name="rest_code_4001cd2bde564618a1d29324f8c26a11-1"></a><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-2"></a>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-3"></a><span class="n">setup</span><span class="p">(</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-4"></a>    <span class="n">name</span><span class="o">=</span><span class="s1">'mypkgname'</span><span class="p">,</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-5"></a>    <span class="n">version</span><span class="o">=</span><span class="s1">'0.1'</span><span class="p">,</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-6"></a>    <span class="n">author</span><span class="o">=</span><span class="s1">'My Name'</span><span class="p">,</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-7"></a>    <span class="n">author_email</span><span class="o">=</span><span class="s1">'my at mail.com'</span><span class="p">,</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-8"></a>    <span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">'pkgmodule'</span><span class="p">],</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-9"></a>    <span class="n">url</span><span class="o">=</span><span class="s1">'pkgurl'</span><span class="p">,</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-10"></a>    <span class="n">license</span><span class="o">=</span><span class="s1">'gpl.txt'</span><span class="p">,</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-11"></a>    <span class="n">description</span><span class="o">=</span><span class="s1">'pkg description'</span><span class="p">,</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-12"></a>    <span class="n">long_description</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">'README.rst'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-13"></a>    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-14"></a>        <span class="s1">'Development Status :: 5 - Production/Stable'</span><span class="p">,</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-15"></a>        <span class="s1">'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)'</span><span class="p">,</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-16"></a>        <span class="s1">'Programming Language :: Python :: 3'</span><span class="p">,</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-17"></a>    <span class="p">]</span>
+<a name="rest_code_4001cd2bde564618a1d29324f8c26a11-18"></a><span class="p">)</span>
 </pre>
 </dd>
 <dt><code class="docutils literal">MANIFEST.in</code></dt>
@@ -142,14 +144,14 @@ source /tmp/pypissh-env/bin/activate</pre>
 <li>
 <p>Toliau reikia susikurti <a class="reference external" href="http://pypi.python.org/pypi">PyPI</a> konfigūracinė falą <code class="docutils literal"><span class="pre">~/.pypirc</span></code>, kurio
 turinys atrodo taip:</p>
-<pre class="code ini"><a name="rest_code_cd031d992fb84daba9a2c329a80a5e6a-1"></a><span class="k">[distutils]</span>
-<a name="rest_code_cd031d992fb84daba9a2c329a80a5e6a-2"></a><span class="na">index-servers</span> <span class="o">=</span><span class="s"></span>
-<a name="rest_code_cd031d992fb84daba9a2c329a80a5e6a-3"></a><span class="s">    pypi</span>
-<a name="rest_code_cd031d992fb84daba9a2c329a80a5e6a-4"></a>
-<a name="rest_code_cd031d992fb84daba9a2c329a80a5e6a-5"></a><span class="k">[pypi]</span>
-<a name="rest_code_cd031d992fb84daba9a2c329a80a5e6a-6"></a><span class="na">repository: httpssh://submit@ssh.pypi.python.org/pypi</span>
-<a name="rest_code_cd031d992fb84daba9a2c329a80a5e6a-7"></a><span class="na">username: yourusername</span>
-<a name="rest_code_cd031d992fb84daba9a2c329a80a5e6a-8"></a><span class="na">password: pypissh</span>
+<pre class="code ini"><a name="rest_code_265a043a4b9c452cae5a3487b7518080-1"></a><span class="k">[distutils]</span>
+<a name="rest_code_265a043a4b9c452cae5a3487b7518080-2"></a><span class="na">index-servers</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_265a043a4b9c452cae5a3487b7518080-3"></a><span class="s">    pypi</span>
+<a name="rest_code_265a043a4b9c452cae5a3487b7518080-4"></a>
+<a name="rest_code_265a043a4b9c452cae5a3487b7518080-5"></a><span class="k">[pypi]</span>
+<a name="rest_code_265a043a4b9c452cae5a3487b7518080-6"></a><span class="na">repository: httpssh://submit@ssh.pypi.python.org/pypi</span>
+<a name="rest_code_265a043a4b9c452cae5a3487b7518080-7"></a><span class="na">username: yourusername</span>
+<a name="rest_code_265a043a4b9c452cae5a3487b7518080-8"></a><span class="na">password: pypissh</span>
 </pre>
 <p>Nepamirškite <code class="docutils literal">yourusername</code> pakeisti į savo <a class="reference external" href="http://pypi.python.org/pypi">PyPI</a> naudotojo vardą,
 slaptažodis gali būti bet, koks (svarbu, ne tuščias). Jei slaptažodis nebus

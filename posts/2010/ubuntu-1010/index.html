@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width">
 <title>Ubuntu 10.10 | Sirex web log</title>
 <link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
@@ -150,21 +152,21 @@ greičiau ir patogiau</p></li>
 <li><p>Konfigūracinių failų saugojimas Mercurial repozitoriume</p></li>
 <li>
 <p>Naudojamų programų sąrašo išsaugojimas ir atstatymas:</p>
-<pre class="code sh"><a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-2"></a>dpkg --get-selections &gt; old
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-3"></a>
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-4"></a><span class="c1"># Po įdiegimo</span>
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-5"></a>dpkg --get-selections &gt; new
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-6"></a>
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-8"></a>comm -23 old new &gt; sel
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-9"></a>
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-10"></a><span class="c1"># Peržiūrim ko reikia</span>
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-11"></a>vim sel
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-12"></a>
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
-<a name="rest_code_7e7cc7e912124036a48b7d6ef18f48fe-15"></a>sudo apt-get dselect-upgrade
+<pre class="code sh"><a name="rest_code_faba8d37791b461e94798ebceb4a14a9-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-2"></a>dpkg --get-selections &gt; old
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-3"></a>
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-4"></a><span class="c1"># Po įdiegimo</span>
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-5"></a>dpkg --get-selections &gt; new
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-6"></a>
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-8"></a>comm -23 old new &gt; sel
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-9"></a>
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-10"></a><span class="c1"># Peržiūrim ko reikia</span>
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-11"></a>vim sel
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-12"></a>
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
+<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-15"></a>sudo apt-get dselect-upgrade
 </pre>
 <p>Idėja: <a class="reference external" href="http://brainstorm.ubuntu.com/idea/25839/">http://brainstorm.ubuntu.com/idea/25839/</a></p>
 </li>

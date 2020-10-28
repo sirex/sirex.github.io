@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width">
 <title>Python vs Pascal | Sirex web log</title>
 <link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
@@ -74,13 +76,13 @@ Programos tekstas sukompiliuojamas į mašininį kodą:</p>
 <p>Paleidžiama pati programa:</p>
 <pre class="literal-block">./programa</pre>
 <p><strong>python</strong> programos tekstas:</p>
-<pre class="code python"><a name="rest_code_d209ee2a0e0e4028b96a944b1f0f6b62-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Sveikas pasauli"</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_4aa221f512a34c0b9521663d0840f982-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Sveikas pasauli"</span><span class="p">)</span>
 </pre>
 <p><strong>pascal</strong> programos tekstas:</p>
-<pre class="code pascal"><a name="rest_code_89d523edf5c14b0ba248b00c48338f87-1"></a><span class="k">program</span> <span class="n">SveikasPasauli</span><span class="o">;</span>
-<a name="rest_code_89d523edf5c14b0ba248b00c48338f87-2"></a><span class="k">begin</span>
-<a name="rest_code_89d523edf5c14b0ba248b00c48338f87-3"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="s">'Sveikas pasauli'</span><span class="p">)</span><span class="o">;</span>
-<a name="rest_code_89d523edf5c14b0ba248b00c48338f87-4"></a><span class="k">end</span><span class="o">.</span>
+<pre class="code pascal"><a name="rest_code_59bb656223aa400bb72b2b23e21f1124-1"></a><span class="k">program</span> <span class="n">SveikasPasauli</span><span class="o">;</span>
+<a name="rest_code_59bb656223aa400bb72b2b23e21f1124-2"></a><span class="k">begin</span>
+<a name="rest_code_59bb656223aa400bb72b2b23e21f1124-3"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="s">'Sveikas pasauli'</span><span class="p">)</span><span class="o">;</span>
+<a name="rest_code_59bb656223aa400bb72b2b23e21f1124-4"></a><span class="k">end</span><span class="o">.</span>
 </pre>
 <p><em>Trūkumai:</em> Pascal programas reikia kompiliuoti, nėra interpretatoriaus.</p>
 <p><em>Trūkumai:</em> Pascal sintaksėje yra daug visokių raktinių žodžių ir simbolių
@@ -90,20 +92,20 @@ kuriuos reikia prisimint. Paskutinis programos žodis <em>end</em> būtinai turi
 <h2>Antroji pamoka – Kintamieji<a href="#antroji-pamoka-kintamieji" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Pamokos tikslas – pažintis su kintamaisiais.</p>
 <p><strong>python</strong></p>
-<pre class="code python"><a name="rest_code_406e08d264804d55be6600e36d524a74-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
-<a name="rest_code_406e08d264804d55be6600e36d524a74-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
-<a name="rest_code_406e08d264804d55be6600e36d524a74-3"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">5</span>
-<a name="rest_code_406e08d264804d55be6600e36d524a74-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"a + b + 5 ="</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_864320c2fedf48bfb8e171f0ae1c1b23-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="rest_code_864320c2fedf48bfb8e171f0ae1c1b23-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<a name="rest_code_864320c2fedf48bfb8e171f0ae1c1b23-3"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">5</span>
+<a name="rest_code_864320c2fedf48bfb8e171f0ae1c1b23-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"a + b + 5 ="</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre>
 <p><strong>pascal</strong></p>
-<pre class="code pascal"><a name="rest_code_af6fa97eae864b7ba3927260add1d368-1"></a><span class="k">program</span> <span class="n">Kintamieji</span><span class="o">;</span>
-<a name="rest_code_af6fa97eae864b7ba3927260add1d368-2"></a><span class="k">var</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">c</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
-<a name="rest_code_af6fa97eae864b7ba3927260add1d368-3"></a><span class="k">begin</span>
-<a name="rest_code_af6fa97eae864b7ba3927260add1d368-4"></a>    <span class="n">a</span> <span class="o">:=</span> <span class="mi">2</span><span class="o">;</span>
-<a name="rest_code_af6fa97eae864b7ba3927260add1d368-5"></a>    <span class="n">b</span> <span class="o">:=</span> <span class="mi">3</span><span class="o">;</span>
-<a name="rest_code_af6fa97eae864b7ba3927260add1d368-6"></a>    <span class="n">c</span> <span class="o">:=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">5</span><span class="o">;</span>
-<a name="rest_code_af6fa97eae864b7ba3927260add1d368-7"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="s">'a + b + 5 = '</span><span class="o">,</span> <span class="n">c</span><span class="p">)</span><span class="o">;</span>
-<a name="rest_code_af6fa97eae864b7ba3927260add1d368-8"></a><span class="k">end</span><span class="o">.</span>
+<pre class="code pascal"><a name="rest_code_9a37bd7b13d5483499ca202e0819d261-1"></a><span class="k">program</span> <span class="n">Kintamieji</span><span class="o">;</span>
+<a name="rest_code_9a37bd7b13d5483499ca202e0819d261-2"></a><span class="k">var</span> <span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">,</span> <span class="n">c</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+<a name="rest_code_9a37bd7b13d5483499ca202e0819d261-3"></a><span class="k">begin</span>
+<a name="rest_code_9a37bd7b13d5483499ca202e0819d261-4"></a>    <span class="n">a</span> <span class="o">:=</span> <span class="mi">2</span><span class="o">;</span>
+<a name="rest_code_9a37bd7b13d5483499ca202e0819d261-5"></a>    <span class="n">b</span> <span class="o">:=</span> <span class="mi">3</span><span class="o">;</span>
+<a name="rest_code_9a37bd7b13d5483499ca202e0819d261-6"></a>    <span class="n">c</span> <span class="o">:=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">5</span><span class="o">;</span>
+<a name="rest_code_9a37bd7b13d5483499ca202e0819d261-7"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="s">'a + b + 5 = '</span><span class="o">,</span> <span class="n">c</span><span class="p">)</span><span class="o">;</span>
+<a name="rest_code_9a37bd7b13d5483499ca202e0819d261-8"></a><span class="k">end</span><span class="o">.</span>
 </pre>
 <p><em>Trūkumai:</em> Statiškai tipizuojami kintamieji.</p>
 </div>
@@ -111,24 +113,24 @@ kuriuos reikia prisimint. Paskutinis programos žodis <em>end</em> būtinai turi
 <h2>Trečioji pamoka – Sąlygos sakiniai<a href="#trecioji-pamoka-salygos-sakiniai" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Pamokos tikslas – pažintis su kintamaisiais.</p>
 <p><strong>python</strong></p>
-<pre class="code python"><a name="rest_code_ce04c9fa979a410396804963fddbbcf5-1"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Įveskite skaičių: "</span><span class="p">)</span>
-<a name="rest_code_ce04c9fa979a410396804963fddbbcf5-2"></a>
-<a name="rest_code_ce04c9fa979a410396804963fddbbcf5-3"></a><span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
-<a name="rest_code_ce04c9fa979a410396804963fddbbcf5-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Daugiau už 5"</span><span class="p">)</span>
-<a name="rest_code_ce04c9fa979a410396804963fddbbcf5-5"></a><span class="k">else</span><span class="p">:</span>
-<a name="rest_code_ce04c9fa979a410396804963fddbbcf5-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Mažiau už 6"</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_368d621624574f9aa0b59b692aeac4ad-1"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Įveskite skaičių: "</span><span class="p">)</span>
+<a name="rest_code_368d621624574f9aa0b59b692aeac4ad-2"></a>
+<a name="rest_code_368d621624574f9aa0b59b692aeac4ad-3"></a><span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<a name="rest_code_368d621624574f9aa0b59b692aeac4ad-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Daugiau už 5"</span><span class="p">)</span>
+<a name="rest_code_368d621624574f9aa0b59b692aeac4ad-5"></a><span class="k">else</span><span class="p">:</span>
+<a name="rest_code_368d621624574f9aa0b59b692aeac4ad-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Mažiau už 6"</span><span class="p">)</span>
 </pre>
 <p><strong>pascal</strong></p>
-<pre class="code pascal"><a name="rest_code_3343b00c0d114259b8732f76771bca63-1"></a><span class="k">program</span> <span class="n">Kintamieji</span><span class="o">;</span>
-<a name="rest_code_3343b00c0d114259b8732f76771bca63-2"></a><span class="k">var</span> <span class="n">a</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
-<a name="rest_code_3343b00c0d114259b8732f76771bca63-3"></a><span class="k">begin</span>
-<a name="rest_code_3343b00c0d114259b8732f76771bca63-4"></a>    <span class="nb">write</span><span class="p">(</span><span class="s">'Įveskite skaičių: '</span><span class="p">)</span><span class="o">;</span>
-<a name="rest_code_3343b00c0d114259b8732f76771bca63-5"></a>    <span class="nb">read</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">;</span>
-<a name="rest_code_3343b00c0d114259b8732f76771bca63-6"></a>    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="k">then</span>
-<a name="rest_code_3343b00c0d114259b8732f76771bca63-7"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="s">'Daugiau už 5'</span><span class="p">)</span>
-<a name="rest_code_3343b00c0d114259b8732f76771bca63-8"></a>    <span class="k">else</span>
-<a name="rest_code_3343b00c0d114259b8732f76771bca63-9"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="s">'Mačiau už 6'</span><span class="p">)</span><span class="o">;</span>
-<a name="rest_code_3343b00c0d114259b8732f76771bca63-10"></a><span class="k">end</span><span class="o">.</span>
+<pre class="code pascal"><a name="rest_code_35533f5485644db4a9009bbad3e0d6ff-1"></a><span class="k">program</span> <span class="n">Kintamieji</span><span class="o">;</span>
+<a name="rest_code_35533f5485644db4a9009bbad3e0d6ff-2"></a><span class="k">var</span> <span class="n">a</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+<a name="rest_code_35533f5485644db4a9009bbad3e0d6ff-3"></a><span class="k">begin</span>
+<a name="rest_code_35533f5485644db4a9009bbad3e0d6ff-4"></a>    <span class="nb">write</span><span class="p">(</span><span class="s">'Įveskite skaičių: '</span><span class="p">)</span><span class="o">;</span>
+<a name="rest_code_35533f5485644db4a9009bbad3e0d6ff-5"></a>    <span class="nb">read</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">;</span>
+<a name="rest_code_35533f5485644db4a9009bbad3e0d6ff-6"></a>    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="k">then</span>
+<a name="rest_code_35533f5485644db4a9009bbad3e0d6ff-7"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="s">'Daugiau už 5'</span><span class="p">)</span>
+<a name="rest_code_35533f5485644db4a9009bbad3e0d6ff-8"></a>    <span class="k">else</span>
+<a name="rest_code_35533f5485644db4a9009bbad3e0d6ff-9"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="s">'Mačiau už 6'</span><span class="p">)</span><span class="o">;</span>
+<a name="rest_code_35533f5485644db4a9009bbad3e0d6ff-10"></a><span class="k">end</span><span class="o">.</span>
 </pre>
 <p><em>Trūkumai:</em> Reikia įrašyti keistai atrodančią eilutę (<code class="docutils literal">encoding: <span class="pre">utf-8</span></code>).
 Tačiau ši problema sekančioje python versijoje bus išspręsta.</p>
@@ -139,18 +141,18 @@ visur kitur.</p>
 <h2>Ketvirtoji pamoka – Ciklo sakinys<a href="#ketvirtoji-pamoka-ciklo-sakinys" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Pamokos tikslas – pažintis su ciklais.</p>
 <p><strong>python</strong></p>
-<pre class="code python"><a name="rest_code_d64a9dd449594e76984aa423b0a431f8-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-<a name="rest_code_d64a9dd449594e76984aa423b0a431f8-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_8690a12f006d46f59c3e20032e6e0a58-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<a name="rest_code_8690a12f006d46f59c3e20032e6e0a58-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre>
 <p><strong>pascal</strong></p>
-<pre class="code pascal"><a name="rest_code_dec40d27b132439485e6f2aa797d2e20-1"></a><span class="k">program</span> <span class="n">Ciklas</span><span class="o">;</span>
-<a name="rest_code_dec40d27b132439485e6f2aa797d2e20-2"></a><span class="k">var</span> <span class="n">i</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
-<a name="rest_code_dec40d27b132439485e6f2aa797d2e20-3"></a><span class="k">begin</span>
-<a name="rest_code_dec40d27b132439485e6f2aa797d2e20-4"></a>    <span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="mi">0</span> <span class="k">to</span> <span class="mi">9</span> <span class="k">do</span>
-<a name="rest_code_dec40d27b132439485e6f2aa797d2e20-5"></a>    <span class="k">begin</span>
-<a name="rest_code_dec40d27b132439485e6f2aa797d2e20-6"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">;</span>
-<a name="rest_code_dec40d27b132439485e6f2aa797d2e20-7"></a>    <span class="k">end</span><span class="o">;</span>
-<a name="rest_code_dec40d27b132439485e6f2aa797d2e20-8"></a><span class="k">end</span><span class="o">.</span>
+<pre class="code pascal"><a name="rest_code_de493925a1d5444eb7bb0fe8d6db70bf-1"></a><span class="k">program</span> <span class="n">Ciklas</span><span class="o">;</span>
+<a name="rest_code_de493925a1d5444eb7bb0fe8d6db70bf-2"></a><span class="k">var</span> <span class="n">i</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+<a name="rest_code_de493925a1d5444eb7bb0fe8d6db70bf-3"></a><span class="k">begin</span>
+<a name="rest_code_de493925a1d5444eb7bb0fe8d6db70bf-4"></a>    <span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="mi">0</span> <span class="k">to</span> <span class="mi">9</span> <span class="k">do</span>
+<a name="rest_code_de493925a1d5444eb7bb0fe8d6db70bf-5"></a>    <span class="k">begin</span>
+<a name="rest_code_de493925a1d5444eb7bb0fe8d6db70bf-6"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">;</span>
+<a name="rest_code_de493925a1d5444eb7bb0fe8d6db70bf-7"></a>    <span class="k">end</span><span class="o">;</span>
+<a name="rest_code_de493925a1d5444eb7bb0fe8d6db70bf-8"></a><span class="k">end</span><span class="o">.</span>
 </pre>
 <p><em>Trūkumai:</em> Reikia atsiminti, kad kai kur reikia naudoti bigin end, o kai kur ne.</p>
 </div>
@@ -158,27 +160,27 @@ visur kitur.</p>
 <h2>Penktoji pamoka – Procedūrinio programavimo pagrindai<a href="#penktoji-pamoka-procedurinio-programavimo-pagrindai" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Pamokos tikslas – pažintis su procedūrinio programavimo principais.</p>
 <p><strong>python</strong></p>
-<pre class="code python"><a name="rest_code_b9a79f1c98cf4dcfba63467199ff2216-1"></a><span class="k">def</span> <span class="nf">ciklas</span><span class="p">():</span>
-<a name="rest_code_b9a79f1c98cf4dcfba63467199ff2216-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-<a name="rest_code_b9a79f1c98cf4dcfba63467199ff2216-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<a name="rest_code_b9a79f1c98cf4dcfba63467199ff2216-4"></a>
-<a name="rest_code_b9a79f1c98cf4dcfba63467199ff2216-5"></a><span class="n">ciklas</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_0f61de9048634a84858f290dddb02c56-1"></a><span class="k">def</span> <span class="nf">ciklas</span><span class="p">():</span>
+<a name="rest_code_0f61de9048634a84858f290dddb02c56-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<a name="rest_code_0f61de9048634a84858f290dddb02c56-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="rest_code_0f61de9048634a84858f290dddb02c56-4"></a>
+<a name="rest_code_0f61de9048634a84858f290dddb02c56-5"></a><span class="n">ciklas</span><span class="p">()</span>
 </pre>
 <p><strong>pascal</strong></p>
-<pre class="code pascal"><a name="rest_code_671be8b772444740b038825bf30d96cf-1"></a><span class="k">program</span> <span class="n">Proceduros</span><span class="o">;</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-2"></a><span class="k">var</span> <span class="n">i</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-3"></a>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-4"></a><span class="k">procedure</span> <span class="nf">ciklas</span><span class="o">;</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-5"></a><span class="k">begin</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-6"></a>    <span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="mi">0</span> <span class="k">to</span> <span class="mi">9</span> <span class="k">do</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-7"></a>    <span class="k">begin</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-8"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">;</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-9"></a>    <span class="k">end</span><span class="o">;</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-10"></a><span class="k">end</span><span class="o">;</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-11"></a>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-12"></a><span class="k">begin</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-13"></a>    <span class="n">ciklas</span><span class="o">;</span>
-<a name="rest_code_671be8b772444740b038825bf30d96cf-14"></a><span class="k">end</span><span class="o">.</span>
+<pre class="code pascal"><a name="rest_code_a936242b96b34365bca9ef434059dcb2-1"></a><span class="k">program</span> <span class="n">Proceduros</span><span class="o">;</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-2"></a><span class="k">var</span> <span class="n">i</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-3"></a>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-4"></a><span class="k">procedure</span> <span class="nf">ciklas</span><span class="o">;</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-5"></a><span class="k">begin</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-6"></a>    <span class="k">for</span> <span class="n">i</span> <span class="o">:=</span> <span class="mi">0</span> <span class="k">to</span> <span class="mi">9</span> <span class="k">do</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-7"></a>    <span class="k">begin</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-8"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">;</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-9"></a>    <span class="k">end</span><span class="o">;</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-10"></a><span class="k">end</span><span class="o">;</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-11"></a>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-12"></a><span class="k">begin</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-13"></a>    <span class="n">ciklas</span><span class="o">;</span>
+<a name="rest_code_a936242b96b34365bca9ef434059dcb2-14"></a><span class="k">end</span><span class="o">.</span>
 </pre>
 <p><em>Trūkumai:</em> Reikia atsiminti, kad procedūros ir funkcijos aprašomos skirtingai.</p>
 <p><em>Trūkumai:</em> Reikia žinoti kurioje tiksliai vietoje ir kokia tvarka reikia
@@ -189,39 +191,39 @@ surašyti procedūras.</p>
 <h2>Šeštoji pamoka – objektinio programavimo pagrindai<a href="#sestoji-pamoka-objektinio-programavimo-pagrindai" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Pamokos tikslas – pažintis su objektinio programavimo principais.</p>
 <p><strong>python</strong></p>
-<pre class="code python"><a name="rest_code_b8c0435a82dd49a7a92e932337f0f4fe-1"></a><span class="k">class</span> <span class="nc">ObjektoAprasas</span><span class="p">:</span>
-<a name="rest_code_b8c0435a82dd49a7a92e932337f0f4fe-2"></a>    <span class="n">parametras</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="rest_code_b8c0435a82dd49a7a92e932337f0f4fe-3"></a>
-<a name="rest_code_b8c0435a82dd49a7a92e932337f0f4fe-4"></a>    <span class="k">def</span> <span class="nf">metodas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a name="rest_code_b8c0435a82dd49a7a92e932337f0f4fe-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">parametras</span> <span class="o">=</span> <span class="mi">1</span>
-<a name="rest_code_b8c0435a82dd49a7a92e932337f0f4fe-6"></a>
-<a name="rest_code_b8c0435a82dd49a7a92e932337f0f4fe-7"></a><span class="n">objektas</span> <span class="o">=</span> <span class="n">ObjektoAprasas</span><span class="p">()</span>
-<a name="rest_code_b8c0435a82dd49a7a92e932337f0f4fe-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">objektas</span><span class="o">.</span><span class="n">parametras</span><span class="p">)</span>
-<a name="rest_code_b8c0435a82dd49a7a92e932337f0f4fe-9"></a><span class="n">objektas</span><span class="o">.</span><span class="n">metodas</span><span class="p">()</span>
-<a name="rest_code_b8c0435a82dd49a7a92e932337f0f4fe-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">objektas</span><span class="o">.</span><span class="n">parametras</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_3ef21ae60a6042eab89748820d6d258b-1"></a><span class="k">class</span> <span class="nc">ObjektoAprasas</span><span class="p">:</span>
+<a name="rest_code_3ef21ae60a6042eab89748820d6d258b-2"></a>    <span class="n">parametras</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="rest_code_3ef21ae60a6042eab89748820d6d258b-3"></a>
+<a name="rest_code_3ef21ae60a6042eab89748820d6d258b-4"></a>    <span class="k">def</span> <span class="nf">metodas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a name="rest_code_3ef21ae60a6042eab89748820d6d258b-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">parametras</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="rest_code_3ef21ae60a6042eab89748820d6d258b-6"></a>
+<a name="rest_code_3ef21ae60a6042eab89748820d6d258b-7"></a><span class="n">objektas</span> <span class="o">=</span> <span class="n">ObjektoAprasas</span><span class="p">()</span>
+<a name="rest_code_3ef21ae60a6042eab89748820d6d258b-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">objektas</span><span class="o">.</span><span class="n">parametras</span><span class="p">)</span>
+<a name="rest_code_3ef21ae60a6042eab89748820d6d258b-9"></a><span class="n">objektas</span><span class="o">.</span><span class="n">metodas</span><span class="p">()</span>
+<a name="rest_code_3ef21ae60a6042eab89748820d6d258b-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">objektas</span><span class="o">.</span><span class="n">parametras</span><span class="p">)</span>
 </pre>
 <p><strong>pascal</strong></p>
-<pre class="code pascal"><a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-1"></a><span class="k">program</span> <span class="n">Objektai</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-2"></a>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-3"></a><span class="cm">{$mode objfpc}</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-4"></a><span class="k">type</span> <span class="n">TObjektoAprasas</span> <span class="o">=</span> <span class="k">Class</span><span class="p">(</span><span class="kt">TObject</span><span class="p">)</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-5"></a>    <span class="kp">public</span> <span class="n">parametras</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-6"></a>    <span class="k">procedure</span> <span class="nf">metodas</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-7"></a><span class="k">end</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-8"></a>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-9"></a><span class="k">procedure</span> <span class="nc">TObjektoAprasas</span><span class="o">.</span><span class="nf">metodas</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-10"></a><span class="k">begin</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-11"></a>    <span class="n">parametras</span> <span class="o">:=</span> <span class="mi">1</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-12"></a><span class="k">end</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-13"></a>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-14"></a><span class="k">var</span> <span class="n">objektas</span><span class="o">:</span> <span class="n">TObjektoAprasas</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-15"></a>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-16"></a><span class="k">begin</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-17"></a>    <span class="n">objektas</span> <span class="o">:=</span> <span class="n">TObjektoAprasas</span><span class="o">.</span><span class="n">create</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-18"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="n">objektas</span><span class="o">.</span><span class="n">parametras</span><span class="p">)</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-19"></a>    <span class="n">objektas</span><span class="o">.</span><span class="n">metodas</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-20"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="n">objektas</span><span class="o">.</span><span class="n">parametras</span><span class="p">)</span><span class="o">;</span>
-<a name="rest_code_1661d4d3ac994acc8c0fb5df87d5980f-21"></a><span class="k">end</span><span class="o">.</span>
+<pre class="code pascal"><a name="rest_code_a33223c06cb448edac785456a95b4b37-1"></a><span class="k">program</span> <span class="n">Objektai</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-2"></a>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-3"></a><span class="cm">{$mode objfpc}</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-4"></a><span class="k">type</span> <span class="n">TObjektoAprasas</span> <span class="o">=</span> <span class="k">Class</span><span class="p">(</span><span class="kt">TObject</span><span class="p">)</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-5"></a>    <span class="kp">public</span> <span class="n">parametras</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-6"></a>    <span class="k">procedure</span> <span class="nf">metodas</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-7"></a><span class="k">end</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-8"></a>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-9"></a><span class="k">procedure</span> <span class="nc">TObjektoAprasas</span><span class="o">.</span><span class="nf">metodas</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-10"></a><span class="k">begin</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-11"></a>    <span class="n">parametras</span> <span class="o">:=</span> <span class="mi">1</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-12"></a><span class="k">end</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-13"></a>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-14"></a><span class="k">var</span> <span class="n">objektas</span><span class="o">:</span> <span class="n">TObjektoAprasas</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-15"></a>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-16"></a><span class="k">begin</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-17"></a>    <span class="n">objektas</span> <span class="o">:=</span> <span class="n">TObjektoAprasas</span><span class="o">.</span><span class="n">create</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-18"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="n">objektas</span><span class="o">.</span><span class="n">parametras</span><span class="p">)</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-19"></a>    <span class="n">objektas</span><span class="o">.</span><span class="n">metodas</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-20"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="n">objektas</span><span class="o">.</span><span class="n">parametras</span><span class="p">)</span><span class="o">;</span>
+<a name="rest_code_a33223c06cb448edac785456a95b4b37-21"></a><span class="k">end</span><span class="o">.</span>
 </pre>
 <p><em>Trūkumai:</em> Labai daug informacijos, kurią reikia žinoti, norint programuoti
 objektiškai su <em>pascal</em>.</p>

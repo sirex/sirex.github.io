@@ -20,6 +20,10 @@
     float: right;
 }
 
+.anchor-link {
+    display: none;
+}
+
 .previewimage {
     display: block;
     margin: 40px auto;
