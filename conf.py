@@ -949,7 +949,7 @@ IPYNB_CONFIG = {
     },
     'HTMLExporter': {
         'theme': CODE_COLOR_SCHEME,
-        'exclude_anchor_links': True,
+        'exclude_anchor_links': False,
         'exclude_input_prompt': True,
         'exclude_output_prompt': True,
     },

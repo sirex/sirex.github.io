@@ -11,3 +11,5 @@ jupyter
 pprintpp
 pp-ez
 lxml
+seaborn
+wordcloud

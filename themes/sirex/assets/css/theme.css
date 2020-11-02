@@ -304,11 +304,12 @@ img {
 	clip: auto;
 }
 
-code.literal {
+code.literal, .jp-MarkdownOutput code {
     margin: 0;
     padding: 2px 4px;
     border: 1px solid #373836;
     border-radius: 4px;
+	color: #d4d4d4;
 }
 
 pre.code, pre.literal-block, code,
@@ -332,6 +333,12 @@ pre.code, pre.literal-block, code,
 blockquote pre.code, blockquote pre.literal-block {
     margin: 0 -4px;
     padding: 10px 8px;
+}
+
+.jp-OutputArea-output img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*
