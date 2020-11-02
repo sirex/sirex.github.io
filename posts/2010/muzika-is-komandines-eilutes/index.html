@@ -62,46 +62,46 @@ CMUS, kuris yra paprastas, greitas ir turi panašumu su teksto redaktorių VIM.
 pagalba paspaudus „Play“ patikrinama ar yra paleistas CMUS ir jei jis veikia,
 tuomet paleidžiama groti daina per CMUS, o jei jis išjungtas, tuomet naudojamas
 nuolat budintis MPD. Skriptas atrodo taip:</p>
-<pre class="code bash"><a name="rest_code_55f381623b094266a9a485ee5d4ed507-1"></a><span class="ch">#!/bin/bash</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-2"></a>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-3"></a><span class="k">case</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> in
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-4"></a>    toggle<span class="o">)</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-5"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-6"></a>            cmus-remote --pause
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-7"></a>        <span class="k">else</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-8"></a>            mpc toggle
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-9"></a>        <span class="k">fi</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-10"></a>        <span class="p">;;</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-11"></a>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-12"></a>    stop<span class="o">)</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-13"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-14"></a>            cmus-remote --stop
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-15"></a>        <span class="k">else</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-16"></a>            mpc stop
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-17"></a>        <span class="k">fi</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-18"></a>        <span class="p">;;</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-19"></a>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-20"></a>    next<span class="o">)</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-21"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-22"></a>            cmus-remote --next
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-23"></a>        <span class="k">else</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-24"></a>            mpc next
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-25"></a>        <span class="k">fi</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-26"></a>        <span class="p">;;</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-27"></a>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-28"></a>    prev<span class="o">)</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-29"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-30"></a>            cmus-remote --prev
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-31"></a>        <span class="k">else</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-32"></a>            mpc prev
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-33"></a>        <span class="k">fi</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-34"></a>        <span class="p">;;</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-35"></a>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-36"></a>    *<span class="o">)</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-37"></a>        <span class="nb">echo</span> <span class="s2">"usage: </span><span class="nv">$0</span><span class="s2"> {toggle|stop|next|prev}"</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-38"></a><span class="k">esac</span>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-39"></a>
-<a name="rest_code_55f381623b094266a9a485ee5d4ed507-40"></a><span class="nb">exit</span> <span class="m">0</span>
+<pre class="code bash"><a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-1"></a><span class="ch">#!/bin/bash</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-2"></a>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-3"></a><span class="k">case</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> in
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-4"></a>    toggle<span class="o">)</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-5"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-6"></a>            cmus-remote --pause
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-7"></a>        <span class="k">else</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-8"></a>            mpc toggle
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-9"></a>        <span class="k">fi</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-10"></a>        <span class="p">;;</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-11"></a>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-12"></a>    stop<span class="o">)</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-13"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-14"></a>            cmus-remote --stop
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-15"></a>        <span class="k">else</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-16"></a>            mpc stop
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-17"></a>        <span class="k">fi</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-18"></a>        <span class="p">;;</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-19"></a>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-20"></a>    next<span class="o">)</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-21"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-22"></a>            cmus-remote --next
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-23"></a>        <span class="k">else</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-24"></a>            mpc next
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-25"></a>        <span class="k">fi</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-26"></a>        <span class="p">;;</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-27"></a>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-28"></a>    prev<span class="o">)</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-29"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-30"></a>            cmus-remote --prev
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-31"></a>        <span class="k">else</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-32"></a>            mpc prev
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-33"></a>        <span class="k">fi</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-34"></a>        <span class="p">;;</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-35"></a>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-36"></a>    *<span class="o">)</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-37"></a>        <span class="nb">echo</span> <span class="s2">"usage: </span><span class="nv">$0</span><span class="s2"> {toggle|stop|next|prev}"</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-38"></a><span class="k">esac</span>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-39"></a>
+<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-40"></a><span class="nb">exit</span> <span class="m">0</span>
 </pre>
 <div class="section" id="cmus">
 <h2>CMUS<a href="#cmus" class="headerlink" title="Permalink to this heading">¶</a></h2>

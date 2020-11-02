@@ -152,21 +152,21 @@ greičiau ir patogiau</p></li>
 <li><p>Konfigūracinių failų saugojimas Mercurial repozitoriume</p></li>
 <li>
 <p>Naudojamų programų sąrašo išsaugojimas ir atstatymas:</p>
-<pre class="code sh"><a name="rest_code_faba8d37791b461e94798ebceb4a14a9-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-2"></a>dpkg --get-selections &gt; old
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-3"></a>
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-4"></a><span class="c1"># Po įdiegimo</span>
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-5"></a>dpkg --get-selections &gt; new
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-6"></a>
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-8"></a>comm -23 old new &gt; sel
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-9"></a>
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-10"></a><span class="c1"># Peržiūrim ko reikia</span>
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-11"></a>vim sel
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-12"></a>
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
-<a name="rest_code_faba8d37791b461e94798ebceb4a14a9-15"></a>sudo apt-get dselect-upgrade
+<pre class="code sh"><a name="rest_code_636ba4094c954cf787de78eae5d15b7b-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-2"></a>dpkg --get-selections &gt; old
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-3"></a>
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-4"></a><span class="c1"># Po įdiegimo</span>
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-5"></a>dpkg --get-selections &gt; new
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-6"></a>
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-8"></a>comm -23 old new &gt; sel
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-9"></a>
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-10"></a><span class="c1"># Peržiūrim ko reikia</span>
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-11"></a>vim sel
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-12"></a>
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
+<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-15"></a>sudo apt-get dselect-upgrade
 </pre>
 <p>Idėja: <a class="reference external" href="http://brainstorm.ubuntu.com/idea/25839/">http://brainstorm.ubuntu.com/idea/25839/</a></p>
 </li>

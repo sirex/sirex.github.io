@@ -202,13 +202,13 @@ sukuriamas schema.php failas, kuris ir naudojamas atstatant duomenų bazės str
 <p>Django laikosi KISS principo, todėl tai, kas aprašyta modeliuose, naudojama
 duomenų bazės lentelėms kurti, generuoti formoms (CakePHP Scaffolding), duomenų
 tikrinimui atlikit ir t.t.</p>
-<pre class="code python"><a name="rest_code_605aafbdc90c42dface41c98ab726e09-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-<a name="rest_code_605aafbdc90c42dface41c98ab726e09-2"></a>
-<a name="rest_code_605aafbdc90c42dface41c98ab726e09-3"></a><span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-<a name="rest_code_605aafbdc90c42dface41c98ab726e09-4"></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<a name="rest_code_605aafbdc90c42dface41c98ab726e09-5"></a>    <span class="n">body</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
-<a name="rest_code_605aafbdc90c42dface41c98ab726e09-6"></a>    <span class="n">created</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
-<a name="rest_code_605aafbdc90c42dface41c98ab726e09-7"></a>    <span class="n">modified</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-2"></a>
+<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-3"></a><span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-4"></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-5"></a>    <span class="n">body</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-6"></a>    <span class="n">created</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
+<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-7"></a>    <span class="n">modified</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
 </pre>
 <p>Django neriboja ir leidžia rašyti tiesiogines SQL užklausas, tiek susietas su
 modeliu, tiek nepriklausomas INSERT/UPDATE ar kitoms užklausoms.</p>
@@ -216,13 +216,13 @@ modeliu, tiek nepriklausomas INSERT/UPDATE ar kitoms užklausoms.</p>
 <p>CakePHP duomenų struktūra aprašoma tiesiogiai duomenų bazėje kuriant lenteles.
 Modelis pagal pavadinimą arba <code class="docutils literal">useTable</code> parametrą, susiejamas su duomenų
 bazės lentele, iš kurios nuskaitomi visi laukai ir kiti duomenys.</p>
-<pre class="code php"><a name="rest_code_e3d37557c56e477d8229967750d2bf2b-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_e3d37557c56e477d8229967750d2bf2b-2"></a>
-<a name="rest_code_e3d37557c56e477d8229967750d2bf2b-3"></a><span class="k">class</span> <span class="nc">Post</span> <span class="k">extends</span> <span class="nx">AppModel</span> <span class="p">{</span>
-<a name="rest_code_e3d37557c56e477d8229967750d2bf2b-4"></a>    <span class="k">var</span> <span class="nv">$name</span> <span class="o">=</span> <span class="s1">'Post'</span><span class="p">;</span>
-<a name="rest_code_e3d37557c56e477d8229967750d2bf2b-5"></a><span class="p">}</span>
-<a name="rest_code_e3d37557c56e477d8229967750d2bf2b-6"></a>
-<a name="rest_code_e3d37557c56e477d8229967750d2bf2b-7"></a><span class="cp">?&gt;</span><span class="x"></span>
+<pre class="code php"><a name="rest_code_edffb0847f624fa3bd8e5240689d7714-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-2"></a>
+<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-3"></a><span class="k">class</span> <span class="nc">Post</span> <span class="k">extends</span> <span class="nx">AppModel</span> <span class="p">{</span>
+<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-4"></a>    <span class="k">var</span> <span class="nv">$name</span> <span class="o">=</span> <span class="s1">'Post'</span><span class="p">;</span>
+<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-5"></a><span class="p">}</span>
+<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-6"></a>
+<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-7"></a><span class="cp">?&gt;</span><span class="x"></span>
 </pre>
 <p>CakePHP suteikia ribotas galimybes vykdyti tiesiogines SQL užklausas.
 Pateikiamas tik vienas query metodas modelyje. Tiesioginės SQL užklausos
@@ -241,22 +241,22 @@ turinio kūrimo darbą.</p>
 perrašant tik reikiamus blokus. Būtent toks šablonų paveldėjimo principas yra
 pagrindinis arkliukas konstruojant sudėtingas svetaines, kurios turi bendrą
 šabloną ir besikeičiančias tam tikras dalis.  Štai kaip atrodo Django šablonas:</p>
-<pre class="code jinja"><a name="rest_code_88d28774065f4718b485d5a65cc63e66-1"></a><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"base_generic.html"</span> <span class="cp">%}</span><span class="x"></span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-2"></a>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-3"></a><span class="cp">{%</span> <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}{{</span> <span class="nv">section.title</span> <span class="cp">}}{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-4"></a>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-5"></a><span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-6"></a><span class="x">&lt;h1&gt;</span><span class="cp">{{</span> <span class="nv">section.title</span> <span class="cp">}}</span><span class="x">&lt;/h1&gt;</span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-7"></a>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-8"></a><span class="cp">{%</span> <span class="k">for</span> <span class="nv">story</span> <span class="k">in</span> <span class="nv">story_list</span> <span class="cp">%}</span><span class="x"></span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-9"></a><span class="x">&lt;h2&gt;</span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-10"></a><span class="x">    &lt;a href="</span><span class="cp">{{</span> <span class="nv">story.get_absolute_url</span> <span class="cp">}}</span><span class="x">"&gt;</span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-11"></a><span class="x">        </span><span class="cp">{{</span> <span class="nv">story.headline</span><span class="o">|</span><span class="nf">upper</span> <span class="cp">}}</span><span class="x"></span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-12"></a><span class="x">    &lt;/a&gt;</span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-13"></a><span class="x">&lt;/h2&gt;</span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-14"></a><span class="x">&lt;p&gt;</span><span class="cp">{{</span> <span class="nv">story.tease</span><span class="o">|</span><span class="nf">truncatewords</span><span class="s2">:"100"</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-15"></a><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
-<a name="rest_code_88d28774065f4718b485d5a65cc63e66-16"></a><span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+<pre class="code jinja"><a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-1"></a><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"base_generic.html"</span> <span class="cp">%}</span><span class="x"></span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-2"></a>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-3"></a><span class="cp">{%</span> <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}{{</span> <span class="nv">section.title</span> <span class="cp">}}{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-4"></a>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-5"></a><span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-6"></a><span class="x">&lt;h1&gt;</span><span class="cp">{{</span> <span class="nv">section.title</span> <span class="cp">}}</span><span class="x">&lt;/h1&gt;</span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-7"></a>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-8"></a><span class="cp">{%</span> <span class="k">for</span> <span class="nv">story</span> <span class="k">in</span> <span class="nv">story_list</span> <span class="cp">%}</span><span class="x"></span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-9"></a><span class="x">&lt;h2&gt;</span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-10"></a><span class="x">    &lt;a href="</span><span class="cp">{{</span> <span class="nv">story.get_absolute_url</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-11"></a><span class="x">        </span><span class="cp">{{</span> <span class="nv">story.headline</span><span class="o">|</span><span class="nf">upper</span> <span class="cp">}}</span><span class="x"></span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-12"></a><span class="x">    &lt;/a&gt;</span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-13"></a><span class="x">&lt;/h2&gt;</span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-14"></a><span class="x">&lt;p&gt;</span><span class="cp">{{</span> <span class="nv">story.tease</span><span class="o">|</span><span class="nf">truncatewords</span><span class="s2">:"100"</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-15"></a><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-16"></a><span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
 </pre>
 <p><strong>CakePHP</strong></p>
 <p>CakePHP Views dalis taip pat reiškia šablonus. Šablonai rašomi PHP kalba,
@@ -268,18 +268,18 @@ iš dalies galima sulyginti su Django Tags. CakePHP Elements atlieka
 pasikartojančių svetainės dalių išvedimą, tokiu pačiu tikslu naudojami ir
 Django Tags, tačiau jų panaudojimo spektras yra kur kas platesnis.</p>
 <p>CakePHP šablonas atrodo taip:</p>
-<pre class="code php"><a name="rest_code_1689383b85b646cd8bd4d40d368e3271-1"></a><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$section</span><span class="p">[</span><span class="s1">'title'</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x"></span>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-2"></a>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-3"></a><span class="x">&lt;h1&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$story</span><span class="o">-&gt;</span><span class="na">title</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-4"></a>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-5"></a><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="nv">$story_list</span> <span class="k">as</span> <span class="nv">$story</span> <span class="cp">?&gt;</span><span class="x"></span>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-6"></a><span class="x">&lt;h2&gt;</span>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-7"></a><span class="x">    &lt;a href="</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$story</span><span class="o">-&gt;</span><span class="na">get_absolute_url</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-8"></a><span class="x">        </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">strtoupper</span><span class="p">(</span><span class="nv">$story</span><span class="o">-&gt;</span><span class="na">headline</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-9"></a><span class="x">    &lt;/a&gt;</span>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-10"></a><span class="x">&lt;/h2&gt;</span>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-11"></a><span class="x">&lt;p&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$text</span><span class="o">-&gt;</span><span class="na">truncate</span><span class="p">(</span><span class="nv">$story</span><span class="o">-&gt;</span><span class="na">tease</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
-<a name="rest_code_1689383b85b646cd8bd4d40d368e3271-12"></a><span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<pre class="code php"><a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-1"></a><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$section</span><span class="p">[</span><span class="s1">'title'</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x"></span>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-2"></a>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-3"></a><span class="x">&lt;h1&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$story</span><span class="o">-&gt;</span><span class="na">title</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-4"></a>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-5"></a><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="nv">$story_list</span> <span class="k">as</span> <span class="nv">$story</span> <span class="cp">?&gt;</span><span class="x"></span>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-6"></a><span class="x">&lt;h2&gt;</span>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-7"></a><span class="x">    &lt;a href="</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$story</span><span class="o">-&gt;</span><span class="na">get_absolute_url</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-8"></a><span class="x">        </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">strtoupper</span><span class="p">(</span><span class="nv">$story</span><span class="o">-&gt;</span><span class="na">headline</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-9"></a><span class="x">    &lt;/a&gt;</span>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-10"></a><span class="x">&lt;/h2&gt;</span>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-11"></a><span class="x">&lt;p&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$text</span><span class="o">-&gt;</span><span class="na">truncate</span><span class="p">(</span><span class="nv">$story</span><span class="o">-&gt;</span><span class="na">tease</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
+<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-12"></a><span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
 </pre>
 </div>
 <div class="section" id="controllers">
@@ -288,24 +288,24 @@ Django Tags, tačiau jų panaudojimo spektras yra kur kas platesnis.</p>
 <p>Django kontroleriai vadinami Views kartu su adresacijos mechanizmu.  Django
 Views yra paprasčiausios funkcijos, kurios nurodą ką ir kaip grąžinti. Tos
 funkcijos surišamos su adresacijos mechanizmu.  Štai kaip kuriama adresacija:</p>
-<pre class="code python"><a name="rest_code_e18bd71e7ab74c699308e781a6fbc261-1"></a><span class="kn">from</span> <span class="nn">django.conf.urls.defaults</span> <span class="kn">import</span> <span class="o">*</span>
-<a name="rest_code_e18bd71e7ab74c699308e781a6fbc261-2"></a>
-<a name="rest_code_e18bd71e7ab74c699308e781a6fbc261-3"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span>
-<a name="rest_code_e18bd71e7ab74c699308e781a6fbc261-4"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/2003/$'</span><span class="p">,</span> <span class="s1">'news.views.special_case_2003'</span><span class="p">),</span>
-<a name="rest_code_e18bd71e7ab74c699308e781a6fbc261-5"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/$'</span><span class="p">,</span> <span class="s1">'news.views.year_archive'</span><span class="p">),</span>
-<a name="rest_code_e18bd71e7ab74c699308e781a6fbc261-6"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/(\d</span><span class="si">{2}</span><span class="s1">)/$'</span><span class="p">,</span> <span class="s1">'news.views.month_archive'</span><span class="p">),</span>
-<a name="rest_code_e18bd71e7ab74c699308e781a6fbc261-7"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/(\d</span><span class="si">{2}</span><span class="s1">)/(\d+)/$'</span><span class="p">,</span> <span class="s1">'news.views.article_detail'</span><span class="p">),</span>
-<a name="rest_code_e18bd71e7ab74c699308e781a6fbc261-8"></a><span class="p">)</span>
+<pre class="code python"><a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-1"></a><span class="kn">from</span> <span class="nn">django.conf.urls.defaults</span> <span class="kn">import</span> <span class="o">*</span>
+<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-2"></a>
+<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-3"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span>
+<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-4"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/2003/$'</span><span class="p">,</span> <span class="s1">'news.views.special_case_2003'</span><span class="p">),</span>
+<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-5"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/$'</span><span class="p">,</span> <span class="s1">'news.views.year_archive'</span><span class="p">),</span>
+<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-6"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/(\d</span><span class="si">{2}</span><span class="s1">)/$'</span><span class="p">,</span> <span class="s1">'news.views.month_archive'</span><span class="p">),</span>
+<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-7"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/(\d</span><span class="si">{2}</span><span class="s1">)/(\d+)/$'</span><span class="p">,</span> <span class="s1">'news.views.article_detail'</span><span class="p">),</span>
+<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-8"></a><span class="p">)</span>
 </pre>
 <p>Aprašant adresus naudojami Regexp, per kuriuos iš karto atliekamas perduodamų
 parametrų tikrinimas.</p>
 <p>O štai kaip atrodo Views funkcija:</p>
-<pre class="code python"><a name="rest_code_43061e7e5d3b4b9d9b8e64916148e71e-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render_to_response</span>
-<a name="rest_code_43061e7e5d3b4b9d9b8e64916148e71e-2"></a>
-<a name="rest_code_43061e7e5d3b4b9d9b8e64916148e71e-3"></a><span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-<a name="rest_code_43061e7e5d3b4b9d9b8e64916148e71e-4"></a>    <span class="n">template_vars</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"foo"</span><span class="p">:</span> <span class="s2">"bar"</span><span class="p">}</span>
-<a name="rest_code_43061e7e5d3b4b9d9b8e64916148e71e-5"></a>    <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s1">'myapp/index.html'</span><span class="p">,</span> <span class="n">template_vars</span><span class="p">,</span>
-<a name="rest_code_43061e7e5d3b4b9d9b8e64916148e71e-6"></a>                               <span class="n">mimetype</span><span class="o">=</span><span class="s2">"application/xhtml+xml"</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render_to_response</span>
+<a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-2"></a>
+<a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-3"></a><span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-4"></a>    <span class="n">template_vars</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"foo"</span><span class="p">:</span> <span class="s2">"bar"</span><span class="p">}</span>
+<a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-5"></a>    <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s1">'myapp/index.html'</span><span class="p">,</span> <span class="n">template_vars</span><span class="p">,</span>
+<a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-6"></a>                               <span class="n">mimetype</span><span class="o">=</span><span class="s2">"application/xhtml+xml"</span><span class="p">)</span>
 </pre>
 <p>Su Django Views galima išvesti ne tik HTML turinį, bet ir paveiksliukus,
 dokumentus, PDF failus ir ką tik nori. Nėra jokių ribojimų, nėra jokio
@@ -320,26 +320,26 @@ perduodant informaciją šablonų hierarchijai, o CakePHP per tarpusavyje
 susijusių klasių hierarchiją į atskirus šablonų gabaliukus.</p>
 <p>Nors CakePHP turi URL Routes, tačiau pagal nutylėjimą, adresai formuojami pagal
 konrolerio ir jo metodų pavadinimus.  Štai, kaip atrodo CakePHP adresacijos mechanizmas:</p>
-<pre class="code php"><a name="rest_code_054e47ebfcd244d5abc22eabce49b532-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_054e47ebfcd244d5abc22eabce49b532-2"></a>
-<a name="rest_code_054e47ebfcd244d5abc22eabce49b532-3"></a><span class="nx">Router</span><span class="o">::</span><span class="na">connect</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-<a name="rest_code_054e47ebfcd244d5abc22eabce49b532-4"></a>        <span class="s1">'controller'</span><span class="o">=&gt;</span><span class="s1">'posts'</span><span class="p">,</span>
-<a name="rest_code_054e47ebfcd244d5abc22eabce49b532-5"></a>        <span class="s1">'action'</span><span class="o">=&gt;</span><span class="s1">'index'</span><span class="p">,</span>
-<a name="rest_code_054e47ebfcd244d5abc22eabce49b532-6"></a>    <span class="p">));</span>
-<a name="rest_code_054e47ebfcd244d5abc22eabce49b532-7"></a>
-<a name="rest_code_054e47ebfcd244d5abc22eabce49b532-8"></a><span class="cp">?&gt;</span><span class="x"></span>
+<pre class="code php"><a name="rest_code_2163b738a3b94107993d5d4305bc279c-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_2163b738a3b94107993d5d4305bc279c-2"></a>
+<a name="rest_code_2163b738a3b94107993d5d4305bc279c-3"></a><span class="nx">Router</span><span class="o">::</span><span class="na">connect</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+<a name="rest_code_2163b738a3b94107993d5d4305bc279c-4"></a>        <span class="s1">'controller'</span><span class="o">=&gt;</span><span class="s1">'posts'</span><span class="p">,</span>
+<a name="rest_code_2163b738a3b94107993d5d4305bc279c-5"></a>        <span class="s1">'action'</span><span class="o">=&gt;</span><span class="s1">'index'</span><span class="p">,</span>
+<a name="rest_code_2163b738a3b94107993d5d4305bc279c-6"></a>    <span class="p">));</span>
+<a name="rest_code_2163b738a3b94107993d5d4305bc279c-7"></a>
+<a name="rest_code_2163b738a3b94107993d5d4305bc279c-8"></a><span class="cp">?&gt;</span><span class="x"></span>
 </pre>
 <p>Štai, kaip atrodo CakePHP kontroleris:</p>
-<pre class="code php"><a name="rest_code_71b6e3f091e94f5babeea83eccb8b3f3-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_71b6e3f091e94f5babeea83eccb8b3f3-2"></a>
-<a name="rest_code_71b6e3f091e94f5babeea83eccb8b3f3-3"></a><span class="k">class</span> <span class="nc">RecipesController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span>
-<a name="rest_code_71b6e3f091e94f5babeea83eccb8b3f3-4"></a>    <span class="k">function</span> <span class="nf">view</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_71b6e3f091e94f5babeea83eccb8b3f3-5"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">'foo'</span> <span class="o">=&gt;</span> <span class="s1">'bar'</span><span class="p">));</span>
-<a name="rest_code_71b6e3f091e94f5babeea83eccb8b3f3-6"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">'/myapp/index'</span><span class="p">);</span>
-<a name="rest_code_71b6e3f091e94f5babeea83eccb8b3f3-7"></a>    <span class="p">}</span>
-<a name="rest_code_71b6e3f091e94f5babeea83eccb8b3f3-8"></a><span class="p">}</span>
-<a name="rest_code_71b6e3f091e94f5babeea83eccb8b3f3-9"></a>
-<a name="rest_code_71b6e3f091e94f5babeea83eccb8b3f3-10"></a><span class="cp">?&gt;</span><span class="x"></span>
+<pre class="code php"><a name="rest_code_22999ad5cb064374985b323f6d44ce6b-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-2"></a>
+<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-3"></a><span class="k">class</span> <span class="nc">RecipesController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span>
+<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-4"></a>    <span class="k">function</span> <span class="nf">view</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-5"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">'foo'</span> <span class="o">=&gt;</span> <span class="s1">'bar'</span><span class="p">));</span>
+<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-6"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">'/myapp/index'</span><span class="p">);</span>
+<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-7"></a>    <span class="p">}</span>
+<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-8"></a><span class="p">}</span>
+<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-9"></a>
+<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-10"></a><span class="cp">?&gt;</span><span class="x"></span>
 </pre>
 </div>
 <div class="section" id="mvc-pagalbines-priemones">
