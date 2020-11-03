@@ -136,23 +136,26 @@ kuriuose dalykai tai atsiranda, tai pranyksta. Apsunkina duomenų interpretavim
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">start</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">rows</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="n">datasets</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s1">'https://data.gov.lt/public/api/1/action/package_search'</span>
-    <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
-        <span class="s1">'rows'</span><span class="p">:</span> <span class="n">rows</span><span class="p">,</span>
-        <span class="s1">'start'</span><span class="p">:</span> <span class="n">start</span><span class="p">,</span>
-        <span class="s1">'sort'</span><span class="p">:</span> <span class="s1">'metadata_created'</span><span class="p">,</span>
-    <span class="p">})</span>
-    <span class="k">assert</span> <span class="n">resp</span><span class="o">.</span><span class="n">ok</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">url</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'results'</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">results</span><span class="p">:</span>
-        <span class="n">datasets</span> <span class="o">+=</span> <span class="n">results</span>
-        <span class="n">start</span> <span class="o">+=</span> <span class="n">rows</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">break</span>
+<span class="k">def</span> <span class="nf">get_datasets</span><span class="p">(</span><span class="n">ckan</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">start</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">rows</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">datasets</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">ckan</span><span class="si">}</span><span class="s1">/action/package_search'</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">'rows'</span><span class="p">:</span> <span class="n">rows</span><span class="p">,</span>
+            <span class="s1">'start'</span><span class="p">:</span> <span class="n">start</span><span class="p">,</span>
+        <span class="p">})</span>
+        <span class="k">assert</span> <span class="n">resp</span><span class="o">.</span><span class="n">ok</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">url</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'results'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">results</span><span class="p">:</span>
+            <span class="n">datasets</span> <span class="o">+=</span> <span class="n">results</span>
+            <span class="n">start</span> <span class="o">+=</span> <span class="n">rows</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">datasets</span>
+
+<span class="n">datasets</span> <span class="o">=</span> <span class="n">get_datasets</span><span class="p">(</span><span class="s1">'https://data.gov.lt/public/api/1'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -225,10 +228,13 @@ visuose įrašuose:</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">yield</span> <span class="s1">'.'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
 
-<span class="n">schema</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
-    <span class="n">schema</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">inspect</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">get_schema</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+    <span class="n">schema</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="n">schema</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">inspect</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">schema</span>
 
+<span class="n">schema</span> <span class="o">=</span> <span class="n">get_schema</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="nb">sorted</span><span class="p">(</span><span class="n">schema</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 
@@ -243,47 +249,25 @@ visuose įrašuose:</p>
 
 <div class="jp-OutputArea-child">
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>author
-authorEmail
-creatorUserId
-extras[].key
-extras[].value
-id
-is_open
-metadata_created
-metadata_modified
-name
-notes
-numResources
-numTags
-open
-private
-resources[].cache_last_updated
-resources[].cache_url
-resources[].created
-resources[].datastore_active
-resources[].description
-resources[].format
-resources[].hash
-resources[].id
-resources[].last_modified
-resources[].mimetype
-resources[].mimetype_inner
-resources[].name
-resources[].package_id
-resources[].position
-resources[].resource_type
-resources[].revision_id
-resources[].size
-resources[].state
-resources[].url
-resources[].url_type
-state
-title
-type
-version
-</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-42-0d0fbb2e8c67&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     15</span>     <span class="ansi-green-fg">return</span> schema
+<span class="ansi-green-intense-fg ansi-bold">     16</span> 
+<span class="ansi-green-fg">---&gt; 17</span><span class="ansi-red-fg"> </span>schema <span class="ansi-blue-fg">=</span> get_schema<span class="ansi-blue-fg">(</span>datasets<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>sorted<span class="ansi-blue-fg">(</span>schema<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> sep<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'\n'</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> 
+
+<span class="ansi-green-fg">&lt;ipython-input-42-0d0fbb2e8c67&gt;</span> in <span class="ansi-cyan-fg">get_schema</span><span class="ansi-blue-fg">(rows)</span>
+<span class="ansi-green-intense-fg ansi-bold">     11</span> <span class="ansi-green-fg">def</span> get_schema<span class="ansi-blue-fg">(</span>rows<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     12</span>     schema <span class="ansi-blue-fg">=</span> set<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 13</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">for</span> row <span class="ansi-green-fg">in</span> rows<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     14</span>         schema<span class="ansi-blue-fg">.</span>update<span class="ansi-blue-fg">(</span>inspect<span class="ansi-blue-fg">(</span>row<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     15</span>     <span class="ansi-green-fg">return</span> schema
+
+<span class="ansi-red-fg">TypeError</span>: 'NoneType' object is not iterable</pre>
 </div>
 </div>
 
@@ -1136,14 +1120,161 @@ yra 0%.</p>
 <p>Čia buvo paskutinis klausimyno klausimas, deja į dalį klausimų nėra galimybės
 atsakyti, nes nėra pakankamai duomenų, bent jau prieinamų per viešąjį
 data.gov.lt API.</p>
+<h2 id="Trūkstami-duomenys">Trūkstami duomenys<a class="anchor-link" href="#Tr%C5%ABkstami-duomenys">¶</a>
+<a href="#Tr%C5%ABkstami-duomenys" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Išsiaiškinau, kad pasirodo data.gov.lt sukasi ne ant CKAN, o ant nuo nulio
+perdaryto CKAN analogo ir API yra ne CKAN API, o į CKAN panašus API.</p>
+<p>Ką gi, bandau aiškintis, kokių laukų trūksta. Tam reikalui panaudosiu
+demo.ckan.org ir palyginsiu jo schema su data.gov.lt.</p>
+
+</div>
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ckan_datasets</span> <span class="o">=</span> <span class="n">get_datasets</span><span class="p">(</span><span class="s1">'https://demo.ckan.org/api/3'</span><span class="p">)</span>
+<span class="n">ckan_schema</span> <span class="o">=</span> <span class="n">get_schema</span><span class="p">(</span><span class="n">ckan_datasets</span><span class="p">)</span>
+<span class="n">missing</span> <span class="o">=</span> <span class="n">ckan_schema</span> <span class="o">-</span> <span class="n">schema</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="nb">sorted</span><span class="p">(</span><span class="n">missing</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>author_email
+creator_user_id
+groups[].description
+groups[].display_name
+groups[].id
+groups[].image_display_url
+groups[].name
+groups[].title
+isopen
+license_id
+license_title
+license_url
+maintainer
+maintainer_email
+num_resources
+num_tags
+organization
+organization.approval_status
+organization.created
+organization.description
+organization.id
+organization.image_url
+organization.is_organization
+organization.name
+organization.revision_id
+organization.state
+organization.title
+organization.type
+owner_org
+resources[].BET
+resources[].alternates
+resources[].bq_table_id
+resources[].bq_table_name
+resources[].bytes
+resources[].calcination_protocol
+resources[].capability_node
+resources[].characterSet
+resources[].collection_date
+resources[].comments
+resources[].data_correctness
+resources[].data_source
+resources[].data_source_type
+resources[].datafile-date
+resources[].density
+resources[].distribution_format
+resources[].encoding
+resources[].extra_key
+resources[].file
+resources[].files
+resources[].form
+resources[].institution
+resources[].lab_environment
+resources[].language
+resources[].lot_number
+resources[].maintainer
+resources[].map_type
+resources[].mass_synthesized
+resources[].measurement_bias
+resources[].measurement_type
+resources[].mimetype-inner
+resources[].molecular_formula
+resources[].molecular_weight
+resources[].more
+resources[].my_extra
+resources[].notes
+resources[].null
+resources[].path
+resources[].periodicity
+resources[].profile
+resources[].resorce_id
+resources[].resource-type
+resources[].resource_id
+resources[].sample_barcode
+resources[].schema
+resources[].some
+resources[].species
+resources[].status
+resources[].synthesis_date
+resources[].synthesis_method
+resources[].tags
+resources[].technology_type
+resources[].title
+resources[].transformed
+resources[].validity
+resources[].webstore_url
+revision_id
+tags[].display_name
+tags[].id
+tags[].name
+tags[].state
+tags[].vocabulary_id
+url
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Išvada">Išvada<a class="anchor-link" href="#I%C5%A1vada">¶</a>
 <a href="#I%C5%A1vada" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Matyt reikės šnekėti su Atea, kurie kūrė atvirų duomenų katalogą. CKAN API
-turi pilną DCAT palaikymą, nežinau dėl kokių priežasčių, bet Atea, kaip
-suprantu nenaudoja CKAN ir padarė savo API variantą, kuris kažkiek
-suderinamas su CKAN API, bet jame trūksta didelės dalies DCAT metaduomenų,
-todėl į didžiąją dalį EDP klausimų atsakyti nėra galimybės.</p>
-<p>Tokie apkarpyti metaduomenys keliauja ir į EDP, kas nėra gerai.</p>
+<p>Pašnekėjus su Atea, kurie kūrė data.gov.lt sužinojau įdomių dalykų. Pasirodo
+data.gov.lt pastatytas ne ant CKAN, o perrašytas nuo nulio. Tai reiškia, kad
+data.gov.lt projektas iš esmės yra miręs. Nes po kažkiek laiko baigsis
+palaikymo sutartis, o technologijos judės į priekį, data.gov.lt nebus nei
+tobulinamas, nei atnaujinamas, tai reiškia, kad jis galiausiai bus išmestas.</p>
+<p>Dar išsiaiškinau, kad viso yra tokie data.gov.lt API šaltiniai:</p>
+<ul>
+<li>
+<a href="https://data.gov.lt/public/api/1">Viešasis API</a>.</li>
+<li>
+<a href="https://data.gov.lt/edp/dcat-ap.rdf">Duomenų dumpas</a> skirtas EDP, jis yra
+viešas, bet neviešinamas.</li>
+<li>
+<a href="https://data.gov.lt/sparql">SPARQL prieigos taškas</a>, kuriame prieinami tik
+ADK metaduomenys, bet ne patys duomenys.</li>
+<li>Ir dar yra vidinis tiekėjų API, kurio dar neteko matyti.</li>
+</ul>
 <p>Kas liečia atvirų duomenų brandos lygį, geriausiu atveju duomenys teikiami
 trečiuoju brandos lygiu ir toks reikalavimas buvo įrašytas į techninę
 specifikaciją, jei gerai atsimenu.</p>
