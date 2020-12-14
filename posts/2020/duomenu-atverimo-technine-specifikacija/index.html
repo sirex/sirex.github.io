@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Duomenų atvėrimo techninė specifikacija | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2020/duomenu-atverimo-technine-specifikacija/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../duomenu-atverimo-vyriausiasis-specialistas/" title="Duomenų atvėrimo vyriausiasis specialistas" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Duomenų atvėrimo techninė specifikacija">
+<meta property="og:url" content="https://sirex.lt/posts/2020/duomenu-atverimo-technine-specifikacija/">
+<meta property="og:description" content="Paskelbta II duomenų atvėrimo etapo viešojo pirkimo išankstinė techninė
+specifikacija aptarimui. Aptarinėti bus galima iki 2020 gruodžio 23 d.
+Oficialiai, pastabas reikėtų teikti per viešųjų pirkimų s">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-12-14T16:46:58+02:00">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Duomenų atvėrimo techninė specifikacija</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <time class="published dt-published" datetime="2020-12-14T16:46:58+02:00" itemprop="datePublished" title="2020-12-14 16:46">2020-12-14 16:46</time></p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Paskelbta II duomenų atvėrimo etapo <a class="reference external" href="https://cvpp.eviesiejipirkimai.lt/Notice/Details/2020-692551">viešojo pirkimo</a> išankstinė <a class="reference external" href="https://pirkimai.eviesiejipirkimai.lt/app/rfq/publicpurchase_docs.asp?PID=555045">techninė
+specifikacija</a> aptarimui. Aptarinėti bus galima iki 2020 gruodžio 23 d.</p>
+<p>Oficialiai, pastabas reikėtų teikti per viešųjų pirkimų sistemą. Neoficialiai,
+šiaip laisvam aptarimui (kam įdomu), pastabas galima teikti per <a class="reference external" href="https://docs.google.com/document/d/1mFOiOJQo1_dkZuRcIG6ODKfgdrdKP_M-sgYSYFHBVsY/edit?usp=sharing">Google Docs</a>.</p>
+<p>Viso II duomenų atvėrimo etape dalyvauja 50 įstaigų, tačiau konkrečiai šiame
+centralizuotame pirkime dalyvauja 29 įstaigos. Likusios 21 įstaiga duomenis
+atvers savo jėgomis arba su rangovų pagalba.</p>
+<p>Centralizuotas pirkimas išskaidytas į 29 dalis, tai reiškia, kad kiekvieną dalį
+gali laimėti skirtingi tiekėjai arba vienas tiekėjas gali laimėti visas dalis.
+Su viešaisiais pirkimais, kaip visada, nežinia ką gausi. Viešuosius pirkimus
+laiminčios įmonės yra suinteresuotos gauti kuo daugiau pelno ir padaryti kuo
+mažiau darbo. Tikiuosi, kad į techninę specifikaciją pavyko sudėti pakankamai
+saugiklių, kad išlaikyti gerą kainos ir darbo santyki.</p>
+<div class="section" id="technine-specifikacija">
+<h2>Techninė specifikacija<a href="#technine-specifikacija" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Pati techninė specifikacija yra gan glausta ir didžiąja dalimi remiasi <a class="reference external" href="https://data.gov.lt/page/vadovas">atvirų
+duomenų vadovu</a>. Atvirų duomenų vadove yra pateikta išsami <a class="reference external" href="https://data.gov.lt/page/aprasas">Duomenų
+struktūros aprašo specifikacija</a> (DSA).</p>
+<p>DSA yra kažkas panašaus į <a class="reference external" href="https://en.wikipedia.org/wiki/Domain-specific_language">DSL</a> vienos lentelės pavidalu. DSA lentelės pagalba
+galima atlikti duomenų inventorizacija, aprašant, kokie duomenys yra
+valstybinių įstaigų duomenų bazėse, atlikti tam tikras transformacijas
+gerinant duomenų brandos lygį ir generuoti DSA pagrindu veikiantį API, kuris
+leidžia duomenis konvertuoti į eilę formatų. DSA yra suderinamas su DCAT
+duomenų katalogo standartu ir su eile kitų duomenų formatų.</p>
+<p>Tai iš esmės, tiekėjas turės atlikti du esminius darbus:</p>
+<ol class="arabic simple">
+<li><p>Parengti įstaigos duomenų DSA lentelę (arba tiksliau ADSA).</p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>Atverti įstaigos duomenis ir juos publikuoti taip, kad jie atitiktų parengtą
+ADSA lentelę.</p></li>
+</ol>
+<p>Būtų tobula, tiesiog gauti komandą, su kuria galėtume dirbti prie duomenų
+atvėrimo, bet deja, tenka naviguoti visokiais viešųjų pirkimų aplinkeliais.</p>
+<p>Bet kokiu atveju, pagrindinis noras, kad duomenų atvėrimas vyktų sistemingai ir
+vieningai. Priešingu atveju, duomenų atvėrimas bus labai neefektyvus, jei
+kiekviena įstaiga bandytų duomenų atvėrimą darytis nuo nulio.</p>
+<p>Techninėje specifikacijoje rekomenduojama naudoti vieningus įrankius duomenų
+atvėrimui, o iš kitos pusės keliami pakankamai aukšti reikalavimai, kad
+bandant duomenis atverti kiekvienai įstaigai nuo nulio, tiesiog bus
+neišsitekta biudžete.</p>
+<p>Dėl vieningų įrankių, techninėje specifikacijoje rekomenduojama naudoti mano jau
+daugiau kaip metus laiko vystomą duomenų atvėrimo priemonę <a class="reference external" href="https://gitlab.com/atviriduomenys/spinta/">Spinta</a>. Tačiau,
+viešuosiuose pirkimuose negalima reikalauti naudoti konkrečių priemonių, todėl
+tiekėjas gali pasirinkti, bet kokias kitas priemones.</p>
+<p>Nepriklausomai nuo to, ar tiekėjas tęs mano pradėtą darbą ar nuspręs viską
+daryti nuo nulio, visoms įstaigoms turėtu būti pernaudojamos tos pačios
+priemonės ir kiekvieną kartą atveriant vis daugiau duomenų, priemonės vis tobulinamos.</p>
+<p>Atrodo, kad duomenų atvėrimas yra vienkartinis darbas, bet taip nėra, kadangi
+atveriami duomenys turi būti publikuojami nuolat. Todėl darant visą tai
+sistemingai, pataisius problemas vienoje vietoje, jos bus išspręstos visos
+įstaigose vienu kartu.</p>
+<p>Todėl tikiuosi, kad nepriklausomai nuo to, kas laimės viešąjį pirkim1, duomenų
+atvėrimas vyks vieningai, sistemingai ir efektyviai.</p>
+</div>
+<div class="section" id="dalyviu-sarasas">
+<h2>Dalyvių sąrašas<a href="#dalyviu-sarasas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Deja, šiame viešajame pirkime dalyvių sąrašas yra fiksuotas ir tikriausiai jo
+keisti nebegalima. Kadangi viešuosiuose pirkimuose, reikia tiksliai nurodyti
+perkamo dalyko kiekį, tai šiuo atveju perkamas kiekis yra duomenų rinkinių
+skaičius, kuris yra fiksuotas.</p>
+<p>Tačiau, tai liečia, tik konkrečiai šį viešąjį pirkimą. Įstaigoms niekas
+nedraudžia papildomai atverti daugiau duomenų nei buvo numatyta, tik tai
+reikėtu daryti ne šio pirkimo rėmuose. Yra daug pavyzdžių, kai įstaigos
+atveria duomenis savarankiškai be jokių pirkimų.</p>
+</div>
+<div class="section" id="poreikio-deklaravimas">
+<h2>Poreikio deklaravimas<a href="#poreikio-deklaravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Jei jums reikia kažkokių duomenų, kurių nėra II duomenų atvėrimo etape,
+oficiali vieta, kur galima išreikšti poreikį yra <a class="reference external" href="https://data.gov.lt/">atvirų duomenų katalogas</a> (ADK).</p>
+<p>Teoriškai visos Lietuvos įstaigos turėtu paskirti atvirų duomenų įgaliotinį,
+kuris būtų atsakingas už tos įstaigos atvirus duomenis. Įgaliotinis
+registruojamas ADK ir turėtu atsakyti į visus iškilusius klausimus dėl atvirų duomenų.</p>
+<p>Ieškant duomenų, pirmiausiai reikėtų pažiūrėti, gal būt jie jau yra atverti:</p>
+<p><a class="reference external" href="https://data.gov.lt/datasets">https://data.gov.lt/datasets</a></p>
+<p>Jei atverti duomenys netenkina, tada yra galimybė teikti pastabas. Pastabas
+galite teikti paprasto komentaro forma arba paspaudžiant mygtuką „Teikti
+poreikį duomenų rinkinio keitimui“, kuris nuves į „Registruoti poreikį
+duomenų rinkinio keitimui“. Minėtoje formoje, pažymėti „Papildyti duomenų
+rinkinį naujais duomenimis“, kur galėsite tiksliai nurodyti kokių duomenų
+laukų trūksta.</p>
+<p>Trūkstamus duomenų laukus galite pateikti ir prisegant DSA lentelę.</p>
+<p>Jei reikalingas duomenų rinkinys nėra registruotas ADK, tada galima
+deklaruoti poreikį trūkstamam duomenų rinkiniui, tai daroma šiuo adresu:</p>
+<p><a class="reference external" href="https://data.gov.lt/requests/new">https://data.gov.lt/requests/new</a></p>
+<p>Galiausiai, užklausimas bus priskirtas konkrečiai įstaigai, kuri paklausimą
+turės peržiūrėti ir atverti duomenis arba paaiškinti, kodėl duomenys negali
+būti atverti.</p>
+<p>Bent jau mano asmenine nuomone, ADK turi daug trūkumu ir nėra labai patogus ir
+aiškus, bet šiuo metu tai yra vienintelė oficiali priemonė, kurios pagalba
+galima deklaruoti duomenų poreikį. Todėl kviečiu šią priemonę naudoti, nes
+anksčiau ar vėliau į ADK pateiktą duomenų poreikį bus atsižvelgta arba bent
+jau pateikti priežastis, kodėl duomenys negali būti atverti.</p>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../duomenu-atverimo-vyriausiasis-specialistas/" rel="prev" title="Duomenų atvėrimo vyriausiasis specialistas">Previous post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml">RSS feed</a></li>
+
+    
+    
+    
+    </ul></nav></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+</body>
+</html>
