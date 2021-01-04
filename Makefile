@@ -37,6 +37,10 @@ push: env/done
 clean:
 	env/bin/nikola clean
 
+rebuild-env:
+	rm -rf env
+	make
+
 debug: env/done
 	NIKOLA_DEBUG=1 env/bin/nikola build --always-execute \
 		render_sources:output/posts/2020/atviru-duomenu-katalogo-metaduomenu-analize/index.ipynb \
