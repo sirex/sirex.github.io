@@ -48,8 +48,9 @@ blockquote {
     border-left: 3px solid #B5B5B5;
     padding: 2px;
     padding-left: 17px;
+    padding-right: 17px;
     margin-left: -20px;
-    margin-right: 0;
+    margin-right: -17px;
     font-style: italic;
 }
 
@@ -78,4 +79,10 @@ table.full-width {
 
 table.right-align-right-col td:last-child {
     text-align: right;
+}
+
+
+.postindex time.published {
+    font-family: monospace;
+    font-size: 1.1em;
 }

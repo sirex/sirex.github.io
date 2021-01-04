@@ -79,28 +79,28 @@ AutoCAD ir pan., kurios veikia tik Windows aplinkoje.</p></li>
 </ul>
 </li>
 <li>
-<p>LTS vs ne LTS</p>
+<p><span class="caps">LTS</span> vs ne <span class="caps">LTS</span></p>
 <ul class="simple">
-<li><p>Jei esate koncervatyvus ir bijote naujovių, tuomet rinkitės LTS</p></li>
+<li><p>Jei esate koncervatyvus ir bijote naujovių, tuomet rinkitės <span class="caps">LTS</span></p></li>
 </ul>
 </li>
 <li>
-<p>32bit VS 64bit</p>
+<p>32bit <span class="caps">VS</span> 64bit</p>
 <ul class="simple">
 <li><p>Jei jūsų kompiuteris yra 64bit architektūros, rinkitės 64bit</p></li>
 </ul>
 </li>
 <li>
-<p>desktop VS alternate</p>
+<p>desktop <span class="caps">VS</span> alternate</p>
 <ul class="simple">
 <li><p>Rinkitės desktop diegimo variantą</p></li>
 </ul>
 </li>
 <li>
-<p>ubuntu VS kubuntu VS xubuntu VS baltix VS UNE VS …</p>
+<p>ubuntu <span class="caps">VS</span> kubuntu <span class="caps">VS</span> xubuntu <span class="caps">VS</span> baltix <span class="caps">VS</span> <span class="caps">UNE</span> <span class="caps">VS</span> …</p>
 <ul class="simple">
 <li><p>Dažniausiai patartina rinktis Ubuntu</p></li>
-<li><p>kubuntu skirtas KDE naudotojams, tačiau ši aplinka kitose distribucijose,
+<li><p>kubuntu skirtas <span class="caps">KDE</span> naudotojams, tačiau ši aplinka kitose distribucijose,
 kokiose, kaip OpenSuse yra labiau išbaigta</p></li>
 <li><p>Xubuntu skirtas silpniems kompiuteriams</p></li>
 <li><p>Baltix, pritaikytas Lietuvai</p></li>
@@ -108,28 +108,28 @@ kokiose, kaip OpenSuse yra labiau išbaigta</p></li>
 </ul>
 </li>
 <li>
-<p>Atsisiuntus patikrinti MD5SUM:</p>
+<p>Atsisiuntus patikrinti <span class="caps">MD5SUM</span>:</p>
 <pre class="literal-block">md5sum -c MD5SUMS</pre>
 </li>
 <li>
-<p>CD VS USB</p>
+<p><span class="caps">CD</span> <span class="caps">VS</span> <span class="caps">USB</span></p>
 <ul class="simple">
-<li><p>Jei jūsų kompiuteris gali užsikrauti iš USB, diegimą atlikite iš USB,
+<li><p>Jei jūsų kompiuteris gali užsikrauti iš <span class="caps">USB</span>, diegimą atlikite iš <span class="caps">USB</span>,
 greičiau ir patogiau</p></li>
 </ul>
 </li>
 <li>
-<p>Kaip įsirašyti CD?</p>
+<p>Kaip įsirašyti <span class="caps">CD</span>?</p>
 <ul class="simple">
-<li><p>Reikia įrašinėt bootable CD</p></li>
+<li><p>Reikia įrašinėt bootable <span class="caps">CD</span></p></li>
 </ul>
 </li>
 <li>
-<p>Kaip įsirašyti USB?</p>
+<p>Kaip įsirašyti <span class="caps">USB</span>?</p>
 <ul class="simple">
 <li><p>Sistema - Administravimas - Paleidimo laikmenos kūrimas</p></li>
 <li>
-<p>Jei turite problemų su SYSLINUX:</p>
+<p>Jei turite problemų su <span class="caps">SYSLINUX</span>:</p>
 <ul>
 <li><p><a class="reference external" href="http://mirrors.kernel.org/ubuntu/pool/main/s/syslinux/">http://mirrors.kernel.org/ubuntu/pool/main/s/syslinux/</a></p></li>
 </ul>
@@ -152,21 +152,21 @@ greičiau ir patogiau</p></li>
 <li><p>Konfigūracinių failų saugojimas Mercurial repozitoriume</p></li>
 <li>
 <p>Naudojamų programų sąrašo išsaugojimas ir atstatymas:</p>
-<pre class="code sh"><a name="rest_code_636ba4094c954cf787de78eae5d15b7b-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-2"></a>dpkg --get-selections &gt; old
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-3"></a>
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-4"></a><span class="c1"># Po įdiegimo</span>
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-5"></a>dpkg --get-selections &gt; new
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-6"></a>
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-8"></a>comm -23 old new &gt; sel
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-9"></a>
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-10"></a><span class="c1"># Peržiūrim ko reikia</span>
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-11"></a>vim sel
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-12"></a>
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
-<a name="rest_code_636ba4094c954cf787de78eae5d15b7b-15"></a>sudo apt-get dselect-upgrade
+<pre class="code sh"><a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-2"></a>dpkg --get-selections &gt; old
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-3"></a>
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-4"></a><span class="c1"># Po įdiegimo</span>
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-5"></a>dpkg --get-selections &gt; new
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-6"></a>
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-8"></a>comm -23 old new &gt; sel
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-9"></a>
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-10"></a><span class="c1"># Peržiūrim ko reikia</span>
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-11"></a>vim sel
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-12"></a>
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
+<a name="rest_code_0ba736ec07224bf4ab164b45b27cde84-15"></a>sudo apt-get dselect-upgrade
 </pre>
 <p>Idėja: <a class="reference external" href="http://brainstorm.ubuntu.com/idea/25839/">http://brainstorm.ubuntu.com/idea/25839/</a></p>
 </li>
@@ -184,7 +184,7 @@ paskutinis dalykas ir tai reikia daryti išjungus visas programas.</p></li>
 <div class="section" id="diegimas">
 <h2>Diegimas<a href="#diegimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>BIOS nustatymai</p></li>
+<li><p><span class="caps">BIOS</span> nustatymai</p></li>
 <li>
 <p>Kalba: geriau rinktis lietuvių, nes:</p>
 <ul>
@@ -206,7 +206,7 @@ sukuriama tik root ir swap skirsniai)</p></li>
 <ul>
 <li><p>sistema, kur laikomi įkrovimo failai ( / )</p></li>
 <li><p>swap</p></li>
-<li><p>home (<code class="docutils literal">/home</code>)</p></li>
+<li><p>home (<code class="docutils literal">/home</code>)</p></li>
 </ul>
 </li>
 <li><p>Rekomenduojama Ext4 failų sistemą, veikia greičiausiai</p></li>
@@ -216,7 +216,7 @@ sukuriama tik root ir swap skirsniai)</p></li>
 <p>Kiek vietos išskirti Swap’ui?</p>
 <ul>
 <li><p>Jei naudojate hibernate funkciją, tada swap turi būti ne mažesnis, kaip
-RAM, jei nenaudojate hibernate ir turite daug RAM, tada swap gali būti
+<span class="caps">RAM</span>, jei nenaudojate hibernate ir turite daug <span class="caps">RAM</span>, tada swap gali būti
 ir 1G</p></li>
 </ul>
 </li>
@@ -277,7 +277,7 @@ bet keyring neklausinės kas kartą įvesti slaptažodžio</p></li>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

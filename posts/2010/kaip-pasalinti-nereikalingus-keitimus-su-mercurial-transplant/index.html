@@ -45,7 +45,7 @@ pakeitimus saugote Mercurial DVCS pagalba. Po kurio laiko pastebite">
     <div>
 <p>Išsiaiškinau įdomų dalyką, nusprendžiau pasidalinti atradimu.</p>
 <p>Tarkime turite visą eilę pakeitimu, failuose su kuriais dirbate. Visus
-pakeitimus saugote Mercurial DVCS pagalba. Po kurio laiko pastebite, kad dalis
+pakeitimus saugote Mercurial <span class="caps">DVCS</span> pagalba. Po kurio laiko pastebite, kad dalis
 darytų pakeitimų, gadina jūsų darbą ir norite juos pašalinti.</p>
 <p>Pateiksiu pavyzdį, su vienu failu, kad būtų aiškiau. Tarkime turiu tokių
 keitimų sąrašą:</p>
@@ -83,7 +83,7 @@ o changeset: 0:9c2929bb13fc
   user: sirex
   date: Tue Jan 12 22:19:11 2010 +0200
   summary: a</pre>
-<p>Visi šie keitimai keičia failą <code class="docutils literal">file.txt</code>, kiekviename pakeitime į failą
+<p>Visi šie keitimai keičia failą <code class="docutils literal">file.txt</code>, kiekviename pakeitime į failą
 įkelta nauja eilute su raide, kuri nurodytą keitimo aprašyme.  Galutinis failo
 turinys yra toks:</p>
 <pre class="literal-block">$ cat file.txt
@@ -94,12 +94,12 @@ b
 a
 b
 c</pre>
-<p>Mano užduotis – pašalinti visus <code class="docutils literal">b</code> keitimus. Norint tai atlinkti, reikia
+<p>Mano užduotis – pašalinti visus <code class="docutils literal">b</code> keitimus. Norint tai atlinkti, reikia
 visus gerus pakeitimus iškelti į kitą šaką.</p>
-<p>Prieš pradedant <code class="docutils literal">transplant</code> veiksmą, grąžiname savo darbinį katalogą į
+<p>Prieš pradedant <code class="docutils literal">transplant</code> veiksmą, grąžiname savo darbinį katalogą į
 paskutinį gerą keitimą:</p>
 <pre class="literal-block">$ hg up 0</pre>
-<p>Tada pradedam <code class="docutils literal">transplant</code> veiksmą:</p>
+<p>Tada pradedam <code class="docutils literal">transplant</code> veiksmą:</p>
 <pre class="literal-block">$ hg transplant -b 6
 changeset: 1:c9fa842d083d
 user: sirex &lt;sirexas@gmail.com&gt;
@@ -115,11 +115,11 @@ c: commit selected changesets
 q: cancel transplant
 ?: show this help
 apply changeset? [ynmpcq?]:</pre>
-<p>Toliau reikia tiesiog spaudyti <code class="docutils literal">y</code>, jei pakeitimas yra geras arba <code class="docutils literal">n</code>, jei blogas.</p>
+<p>Toliau reikia tiesiog spaudyti <code class="docutils literal">y</code>, jei pakeitimas yra geras arba <code class="docutils literal">n</code>, jei blogas.</p>
 <p>Jei geras keitimas yra susijęs su bloguoju, mercurial gali nesugebėti įkelti
 gero keitimo, nes paprasčiausiai failo turinys, kurio pagrindu buvo atliktas
 gerasis keitimas pasikeitė, pašalinus blogą keitimą.</p>
-<p>Gaila, bet <code class="docutils literal">m: merge at this changeset</code> nepavyko panaudoti, todėl jei
+<p>Gaila, bet <code class="docutils literal">m: merge at this changeset</code> nepavyko panaudoti, todėl jei
 nepavyksta sujungti keitimų, tenka tai spręsti rankiniu būdu, taip:</p>
 <pre class="literal-block">applying 9e6f5cccf15b
 patching file file.txt
@@ -127,9 +127,9 @@ Hunk #1 FAILED at 0
 1 out of 1 hunks FAILED -- saving rejects to file file.txt.rej
 patch failed to apply
 abort: Fix up the merge and run hg transplant --continue</pre>
-<p>Atsidarykite nurodytą failą <code class="docutils literal">file.txt</code> ir informacinį failą su informacija
-apie nesutampantį fragmentą <code class="docutils literal">file.txt.rej</code>. Peržiūrėkite kas nesutampa ir
-pataisykite originalų failą <code class="docutils literal">file.txt</code>.</p>
+<p>Atsidarykite nurodytą failą <code class="docutils literal">file.txt</code> ir informacinį failą su informacija
+apie nesutampantį fragmentą <code class="docutils literal">file.txt.rej</code>. Peržiūrėkite kas nesutampa ir
+pataisykite originalų failą <code class="docutils literal">file.txt</code>.</p>
 <p>Galiausiai turėsite naują šaką, tik su gerais pakeitimais:</p>
 <pre class="literal-block">@ changeset: 9:e17baf640494
 | user: sirex
@@ -261,7 +261,7 @@ o changeset: 0:9c2929bb13fc
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

@@ -35,7 +35,7 @@ Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.">
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
-         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">SSH pamokėlės</h1>
+         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><span class="caps">SSH</span> pamokėlės</h1>
         <div class="metadata">
             <p class="dateline">
             <time class="published dt-published" datetime="2010-02-04T19:41:00+02:00" itemprop="datePublished" title="2010-02-04 19:41">2010-02-04 19:41</time>
@@ -50,8 +50,8 @@ Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.">
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <div class="section" id="kas-yra-ssh">
-<h2>Kas yra SSH?<a href="#kas-yra-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>SSH yra Secure SHell.</p>
+<h2>Kas yra <span class="caps">SSH</span>?<a href="#kas-yra-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><span class="caps">SSH</span> yra Secure SHell.</p>
 </div>
 <div class="section" id="kas-yra-shell">
 <h2>Kas yra Shell?<a href="#kas-yra-shell" class="headerlink" title="Permalink to this heading">¶</a></h2>
@@ -59,21 +59,21 @@ Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.">
 Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.</p>
 </div>
 <div class="section" id="kuo-skiriasi-shell-nuo-ssh">
-<h2>Kuo skiriasi Shell nuo SSH?<a href="#kuo-skiriasi-shell-nuo-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<h2>Kuo skiriasi Shell nuo <span class="caps">SSH</span>?<a href="#kuo-skiriasi-shell-nuo-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Paprasta Shell programa suteikia galimybę valdyti kompiuterį, kuriame ji
-paleista, tuo tarpu SSH, suteikia galimybę valdyti kitą tinklo kompiuterį,
+paleista, tuo tarpu <span class="caps">SSH</span>, suteikia galimybę valdyti kitą tinklo kompiuterį,
 nuotoliniu būdu.</p>
-<p>Tarkime, norint iškviesti Shell programą <code class="docutils literal">bash</code>, reikia:</p>
+<p>Tarkime, norint iškviesti Shell programą <code class="docutils literal">bash</code>, reikia:</p>
 <pre class="literal-block">bash</pre>
 <p>Norint iškviesti Shell programą bash kitame kompiuteryje reikia:</p>
 <pre class="literal-block">ssh kitas-kompiuteris bash</pre>
-<p>Kaip matote, viskas, ką daro SSH, tai suteikia saugią prieigą prie nutolusio
+<p>Kaip matote, viskas, ką daro <span class="caps">SSH</span>, tai suteikia saugią prieigą prie nutolusio
 kompiuterio Shell programos.</p>
 </div>
 <div class="section" id="kas-yra-ssh-raktas">
-<h2>Kas yra SSH raktas?<a href="#kas-yra-ssh-raktas" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>SSH suteikia saugią prieigą prie kito kompiuterio, todėl jungiantis visą laiką
-prašomas kito kompiuterio naudotojo prieigos slaptažodis. SSH raktų dėka,
+<h2>Kas yra <span class="caps">SSH</span> raktas?<a href="#kas-yra-ssh-raktas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><span class="caps">SSH</span> suteikia saugią prieigą prie kito kompiuterio, todėl jungiantis visą laiką
+prašomas kito kompiuterio naudotojo prieigos slaptažodis. <span class="caps">SSH</span> raktų dėka,
 galima susikurti vieną raktį nuo visų durų. Tai daroma taip:</p>
 <pre class="literal-block">ssh-keygen -C jusu@elpastas.lt
 scp ~/.ssh/id_rsa.pub kitas-kompiuteris:.ssh/authorized_keys</pre>
@@ -84,8 +84,8 @@ slaptažodžio nuo raktinės.</p>
 </div>
 <div class="section" id="kas-yra-ssh-keygen">
 <h2>Kas yra ssh-keygen?<a href="#kas-yra-ssh-keygen" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>ssh-keygen yra programa, kuri sukuria viešąjį (<code class="docutils literal"><span class="pre">~/.ssh/id_rsa.pub</span></code>) ir
-privatųjį (<code class="docutils literal"><span class="pre">~/.ssh/id_rsa</span></code>) SSH raktus. Raktai išsaugomi failuose, kuriuos
+<p>ssh-keygen yra programa, kuri sukuria viešąjį (<code class="docutils literal"><span class="pre">~/.ssh/id_rsa.pub</span></code>) ir
+privatųjį (<code class="docutils literal"><span class="pre">~/.ssh/id_rsa</span></code>) <span class="caps">SSH</span> raktus. Raktai išsaugomi failuose, kuriuos
 nurodžiau skliausteliuose.</p>
 </div>
 <div class="section" id="kas-yra-ssh-authorized-keys">
@@ -103,24 +103,24 @@ scp failas-a.txt kitas-kompiuteris:failas-b.txt</pre>
 </div>
 <div class="section" id="kas-yra-sftp">
 <h2>Kas yra sftp?<a href="#kas-yra-sftp" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p><code class="docutils literal">sftp</code> yra SSH File Transfer Protocol, veikia panašiai, kaip FTP, tik naudoja
-tą patį SSH. Štai paprastas būdas prisijungti prie kito kompiuterio, per
+<p><code class="docutils literal">sftp</code> yra <span class="caps">SSH</span> File Transfer Protocol, veikia panašiai, kaip <span class="caps">FTP</span>, tik naudoja
+tą patį <span class="caps">SSH</span>. Štai paprastas būdas prisijungti prie kito kompiuterio, per
 <code class="docutils literal">sftp</code>, naudojantis failų naršymo programa nautilus:</p>
 <pre class="literal-block">nautilus sftp://kitas-kompiuteris</pre>
 </div>
 <div class="section" id="ar-galiu-apjungti-shell-ir-ssh-komandas">
-<h2>Ar galiu apjungti Shell ir SSH komandas?<a href="#ar-galiu-apjungti-shell-ir-ssh-komandas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<h2>Ar galiu apjungti Shell ir <span class="caps">SSH</span> komandas?<a href="#ar-galiu-apjungti-shell-ir-ssh-komandas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Taip. Tarkime norite iš kitas-kompiuteris eksportuoti MySQL duomenų bazę ir
 importuoti ją į savo kompiuterio MySQL duomenų bazę:</p>
 <pre class="literal-block">ssh kitas-kompiuteris 'mysqldump tavodb' | mysql manodb</pre>
-<p>Šiame pavyzdyje, nutolusiame kompiuteryje iškviečiate komandą <code class="docutils literal">mysqldump
-tavodb</code>, kuri į ekraną išveda visą duomenų bazės turinį.  Toliau simbolio
+<p>Šiame pavyzdyje, nutolusiame kompiuteryje iškviečiate komandą <code class="docutils literal">mysqldump
+tavodb</code>, kuri į ekraną išveda visą duomenų bazės turinį.  Toliau simbolio
 <code class="docutils literal">|</code> pagalba, tai kas išvedama į ekraną, nukreipiate į kitą komandą ‘mysql
 manodb’, kuri surenka visą duomenų bazės turinį ir importuoja jį į jūsų duomenų bazę.</p>
 <p>Pasitaiko, kad tarp kompiuterių yra mažas tarptinklinis pralaidumas, todėl kad
 pagreitinti duomenų perdavimą, galima perduodamus duomenis suspausti:</p>
 <pre class="literal-block">ssh kitas-kompiuteris 'mysqldump tavodb | gzip -c' | gunzip -c | mysql manodb</pre>
-<p>Tai tiek. Tikiuosi „pagavote kampą“ kas yra SSH, ir kaip paprastai galima juo
+<p>Tai tiek. Tikiuosi „pagavote kampą“ kas yra <span class="caps">SSH</span>, ir kaip paprastai galima juo
 naudotis sutaupant daug laiko.</p>
 </div>
 </div>
@@ -136,7 +136,7 @@ naudotis sutaupant daug laiko.</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

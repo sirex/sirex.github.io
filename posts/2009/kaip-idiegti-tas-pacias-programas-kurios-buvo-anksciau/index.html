@@ -46,7 +46,7 @@ Dažniausiai visi naudotojo duomenys laiko">
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>Tikriausiai žinote, kad labai patogu laikyti <code class="docutils literal">/</code> ir <code class="docutils literal">/home</code> katalogus
+<p>Tikriausiai žinote, kad labai patogu laikyti <code class="docutils literal">/</code> ir <code class="docutils literal">/home</code> katalogus
 atskiruose skirsniuose, kad vėliau iš naujo įdiegus Linux sistemą, viskas
 išliktų kaip buvę.</p>
 <p>Dažniausiai visi naudotojo duomenys laikomi namų (/home) kataloge.  Tačiau,
@@ -62,7 +62,7 @@ visas įdiegtas programas.</p>
 įveskite šias dvi komandas, kurių dėka, bus iš karto įdiegta tai, ką turėjote anksčiau.</p>
 <pre class="literal-block">$ dpkg -l | awk '/^ii/ { print $2 }' &gt; dpkg-list.new
 $ diff dpkg-list.old dpkg-list.new | awk '/^</pre>
-<p><em>Pastaba:</em> nepamirškite išsisaugoti ir <code class="docutils literal">/etc/apt/sources.list</code> failo, nes kai
+<p><em>Pastaba:</em> nepamirškite išsisaugoti ir <code class="docutils literal">/etc/apt/sources.list</code> failo, nes kai
 kurios programos gali būti įdiegtos iš saugyklų, kurių po įdiegimo, pagal
 nutylėjimą nebus šiame faile.</p>
 <div class="section" id="papildymas-galimos-problemos-ir-ju-sprendimai">
@@ -103,7 +103,7 @@ $ cat dpkg-missing | xargs sudo apt-get install -y</pre>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

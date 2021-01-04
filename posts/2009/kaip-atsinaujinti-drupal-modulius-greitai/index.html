@@ -50,19 +50,19 @@ Anksčiau ar vėliau atsiranda naujesnės tų modulių versijos.  Kadangi aš re
 atsinaujinu, tai kai prisiruošiu patikrinti, praktiškai visi moduliai
 reikalauja atnaujinimo…</p>
 <p>Koks tingus Windows naudotojas, ko gero siųstų visus atnaujinimus po vieną ir
-keltį per FTP. Tačiau vikrus Linux naudotojas, toks kaip aš, darytų taip:</p>
-<p>Iš atnaujinimų puslapio <code class="docutils literal">/admin/reports/updates</code> išsaugome turinį į
+keltį per <span class="caps">FTP</span>. Tačiau vikrus Linux naudotojas, toks kaip aš, darytų taip:</p>
+<p>Iš atnaujinimų puslapio <code class="docutils literal">/admin/reports/updates</code> išsaugome turinį į
 <code class="docutils literal">/tmp/updates.html</code> ir įvedame kelias komandas:</p>
-<pre class="code bash"><a name="rest_code_a66adce99cd545f68dab95a118af8e53-1"></a>mkdir /tmp/updates <span class="o">&amp;&amp;</span> <span class="nb">cd</span> /tmp/updates
-<a name="rest_code_a66adce99cd545f68dab95a118af8e53-2"></a>egrep -o <span class="s1">'http.*?\.tar\.gz'</span> /tmp/updates.html <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_a66adce99cd545f68dab95a118af8e53-3"></a>  grep -v <span class="s1">'dev\.tar\.gz'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_a66adce99cd545f68dab95a118af8e53-4"></a>  <span class="k">while</span> <span class="nb">read</span> f <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<a name="rest_code_a66adce99cd545f68dab95a118af8e53-5"></a>      wget <span class="nv">$f</span> -O- <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_a66adce99cd545f68dab95a118af8e53-6"></a>      tar -xzf - <span class="p">;</span> <span class="se">\</span>
-<a name="rest_code_a66adce99cd545f68dab95a118af8e53-7"></a>  <span class="k">done</span>
-<a name="rest_code_a66adce99cd545f68dab95a118af8e53-8"></a>lftp manosvetaine
-<a name="rest_code_a66adce99cd545f68dab95a118af8e53-9"></a>lftp me@manosvetaine:/www&gt; <span class="nb">cd</span> sites/all/modules
-<a name="rest_code_a66adce99cd545f68dab95a118af8e53-10"></a>lftp me@manosvetaine:/www/sites/all/modules&gt; mirror -R
+<pre class="code bash"><a name="rest_code_8003583801a44ef2a7609b54b9c72cc1-1"></a>mkdir /tmp/updates <span class="o">&amp;&amp;</span> <span class="nb">cd</span> /tmp/updates
+<a name="rest_code_8003583801a44ef2a7609b54b9c72cc1-2"></a>egrep -o <span class="s1">'http.*?\.tar\.gz'</span> /tmp/updates.html <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_8003583801a44ef2a7609b54b9c72cc1-3"></a>  grep -v <span class="s1">'dev\.tar\.gz'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_8003583801a44ef2a7609b54b9c72cc1-4"></a>  <span class="k">while</span> <span class="nb">read</span> f <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<a name="rest_code_8003583801a44ef2a7609b54b9c72cc1-5"></a>      wget <span class="nv">$f</span> -O- <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_8003583801a44ef2a7609b54b9c72cc1-6"></a>      tar -xzf - <span class="p">;</span> <span class="se">\</span>
+<a name="rest_code_8003583801a44ef2a7609b54b9c72cc1-7"></a>  <span class="k">done</span>
+<a name="rest_code_8003583801a44ef2a7609b54b9c72cc1-8"></a>lftp manosvetaine
+<a name="rest_code_8003583801a44ef2a7609b54b9c72cc1-9"></a>lftp me@manosvetaine:/www&gt; <span class="nb">cd</span> sites/all/modules
+<a name="rest_code_8003583801a44ef2a7609b54b9c72cc1-10"></a>lftp me@manosvetaine:/www/sites/all/modules&gt; mirror -R
 </pre>
 <p>Aplankome <code class="docutils literal">/update.php</code> ir įdiegiame visus atnaujinimus.  Žinoma, prieš
 darant tokius atnaujinimus, būtina pasidaryti atsargines kopijas.</p>
@@ -80,7 +80,7 @@ darant tokius atnaujinimus, būtina pasidaryti atsargines kopijas.</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

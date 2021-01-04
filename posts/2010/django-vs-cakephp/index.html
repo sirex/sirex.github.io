@@ -60,7 +60,7 @@ Taip, BSD Li">
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
-         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Django VS CakePHP</h1>
+         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Django <span class="caps">VS</span> CakePHP</h1>
         <div class="metadata">
             <p class="dateline">
             <time class="published dt-published" datetime="2010-01-18T15:55:00+02:00" itemprop="datePublished" title="2010-01-18 15:55">2010-01-18 15:55</time>
@@ -94,7 +94,7 @@ Taip, BSD Li">
 </tr>
 <tr>
 <td><p>Python</p></td>
-<td><p>PHP</p></td>
+<td><p><span class="caps">PHP</span></p></td>
 </tr>
 <tr>
 <td colspan="2"><p><strong>Pradžia</strong></p></td>
@@ -107,11 +107,11 @@ Taip, BSD Li">
 <td colspan="2"><p><strong>Atviras kodas</strong></p></td>
 </tr>
 <tr>
-<td><p>Taip, <a class="reference external" href="http://en.wikipedia.org/wiki/BSD_License">BSD Licencija</a></p></td>
-<td><p>Taip, <a class="reference external" href="http://en.wikipedia.org/wiki/MIT_License">MIT Licencija</a></p></td>
+<td><p>Taip, <a class="reference external" href="http://en.wikipedia.org/wiki/BSD_License"><span class="caps">BSD</span> Licencija</a></p></td>
+<td><p>Taip, <a class="reference external" href="http://en.wikipedia.org/wiki/MIT_License"><span class="caps">MIT</span> Licencija</a></p></td>
 </tr>
 <tr>
-<td colspan="2"><p><strong>Pagalba per IRC</strong></p></td>
+<td colspan="2"><p><strong>Pagalba per <span class="caps">IRC</span></strong></p></td>
 </tr>
 <tr>
 <td>
@@ -129,10 +129,10 @@ Taip, BSD Li">
 <h2>RoR klonas?<a href="#ror-klonas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><strong>Django</strong></p>
 <p>Django laikosi populiariausių ir pasiteisinusių dizaino šablonų, tokių, kaip
-MVC, ORM ir panašiai, kurie taip pat naudojami RoR karkase, tačiau daugiau
+<span class="caps">MVC</span>, <span class="caps">ORM</span> ir panašiai, kurie taip pat naudojami RoR karkase, tačiau daugiau
 didesnių panašumų nėra.</p>
 <p><strong>CakePHP</strong></p>
-<p>CakePHP yra Ruby on Rails klonas perrašytas PHP kalba. Nors rašoma, kad CakePHP
+<p>CakePHP yra Ruby on Rails klonas perrašytas <span class="caps">PHP</span> kalba. Nors rašoma, kad CakePHP
 nėra RoR klonas, bet daugelis dalykų realizuota lygiai taip pat, kaip tai yra
 padaryta RoR.</p>
 </div>
@@ -153,7 +153,7 @@ viename kataloge.</p>
 <p>Django turi integruotą web serverį, kuris būtent skirtas programavimui,
 nereikia rūpintis Apache ar pan. konfigūravimu.</p>
 <p>Django karkasas atskirtas nuo vystomo projekto. Naujas projektas sukuriamas
-automatizuotai, komandos <code class="docutils literal">startproject</code> pagalba.</p>
+automatizuotai, komandos <code class="docutils literal">startproject</code> pagalba.</p>
 <p>Pasiruošti darbui užtenkat šių trijų komandų:</p>
 <pre class="literal-block">$ virtualenv sandbox &amp;&amp; cd sandbox
 $ ./bin/pip django
@@ -164,8 +164,8 @@ Receptą“</a> su <a class="reference external" href="http://www.buildout.org/"
 <p>Web serveriu, duomenų baze ir kitais dalykais reikia pasirūpinti pačiam.</p>
 <p>CakePHP paketas turi iš karto paruoštą projekto katalogą, tačiau galima
 komandos bake project pagalba susikurti jį atskirai, panašiai, kaip tai daroma
-su Django <code class="docutils literal">startproject</code> komanda.</p>
-<p>Susikonfigūravus LAMP serverį, toliau darbo vietos paruošimas vyksta taip:</p>
+su Django <code class="docutils literal">startproject</code> komanda.</p>
+<p>Susikonfigūravus <span class="caps">LAMP</span> serverį, toliau darbo vietos paruošimas vyksta taip:</p>
 <pre class="literal-block">$ wget "http://cakeforge.org/frs/download.php/745/" \
        "cake_1.3.0-alpha.bz2/donation=complete" -O- \
        | tar -xjf -
@@ -199,40 +199,40 @@ sukuriamas schema.php failas, kuris ir naudojamas atstatant duomenų bazės str
 <div class="section" id="models">
 <h2>Models<a href="#models" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><strong>Django</strong></p>
-<p>Django laikosi KISS principo, todėl tai, kas aprašyta modeliuose, naudojama
+<p>Django laikosi <span class="caps">KISS</span> principo, todėl tai, kas aprašyta modeliuose, naudojama
 duomenų bazės lentelėms kurti, generuoti formoms (CakePHP Scaffolding), duomenų
 tikrinimui atlikit ir t.t.</p>
-<pre class="code python"><a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-2"></a>
-<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-3"></a><span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-4"></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
-<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-5"></a>    <span class="n">body</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
-<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-6"></a>    <span class="n">created</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
-<a name="rest_code_fa6e1178fb95407fac36f35f2ad223a6-7"></a>    <span class="n">modified</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_e7918231ce8846be9d4357ceaf8cafd9-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<a name="rest_code_e7918231ce8846be9d4357ceaf8cafd9-2"></a>
+<a name="rest_code_e7918231ce8846be9d4357ceaf8cafd9-3"></a><span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<a name="rest_code_e7918231ce8846be9d4357ceaf8cafd9-4"></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<a name="rest_code_e7918231ce8846be9d4357ceaf8cafd9-5"></a>    <span class="n">body</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+<a name="rest_code_e7918231ce8846be9d4357ceaf8cafd9-6"></a>    <span class="n">created</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
+<a name="rest_code_e7918231ce8846be9d4357ceaf8cafd9-7"></a>    <span class="n">modified</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
 </pre>
-<p>Django neriboja ir leidžia rašyti tiesiogines SQL užklausas, tiek susietas su
-modeliu, tiek nepriklausomas INSERT/UPDATE ar kitoms užklausoms.</p>
+<p>Django neriboja ir leidžia rašyti tiesiogines <span class="caps">SQL</span> užklausas, tiek susietas su
+modeliu, tiek nepriklausomas <span class="caps">INSERT</span>/<span class="caps">UPDATE</span> ar kitoms užklausoms.</p>
 <p><strong>CakePHP</strong></p>
 <p>CakePHP duomenų struktūra aprašoma tiesiogiai duomenų bazėje kuriant lenteles.
-Modelis pagal pavadinimą arba <code class="docutils literal">useTable</code> parametrą, susiejamas su duomenų
+Modelis pagal pavadinimą arba <code class="docutils literal">useTable</code> parametrą, susiejamas su duomenų
 bazės lentele, iš kurios nuskaitomi visi laukai ir kiti duomenys.</p>
-<pre class="code php"><a name="rest_code_edffb0847f624fa3bd8e5240689d7714-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-2"></a>
-<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-3"></a><span class="k">class</span> <span class="nc">Post</span> <span class="k">extends</span> <span class="nx">AppModel</span> <span class="p">{</span>
-<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-4"></a>    <span class="k">var</span> <span class="nv">$name</span> <span class="o">=</span> <span class="s1">'Post'</span><span class="p">;</span>
-<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-5"></a><span class="p">}</span>
-<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-6"></a>
-<a name="rest_code_edffb0847f624fa3bd8e5240689d7714-7"></a><span class="cp">?&gt;</span><span class="x"></span>
+<pre class="code php"><a name="rest_code_49bed5f4d97f47e49e3fa751d4fc1c7c-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_49bed5f4d97f47e49e3fa751d4fc1c7c-2"></a>
+<a name="rest_code_49bed5f4d97f47e49e3fa751d4fc1c7c-3"></a><span class="k">class</span> <span class="nc">Post</span> <span class="k">extends</span> <span class="nx">AppModel</span> <span class="p">{</span>
+<a name="rest_code_49bed5f4d97f47e49e3fa751d4fc1c7c-4"></a>    <span class="k">var</span> <span class="nv">$name</span> <span class="o">=</span> <span class="s1">'Post'</span><span class="p">;</span>
+<a name="rest_code_49bed5f4d97f47e49e3fa751d4fc1c7c-5"></a><span class="p">}</span>
+<a name="rest_code_49bed5f4d97f47e49e3fa751d4fc1c7c-6"></a>
+<a name="rest_code_49bed5f4d97f47e49e3fa751d4fc1c7c-7"></a><span class="cp">?&gt;</span><span class="x"></span>
 </pre>
-<p>CakePHP suteikia ribotas galimybes vykdyti tiesiogines SQL užklausas.
-Pateikiamas tik vienas query metodas modelyje. Tiesioginės SQL užklausos
+<p>CakePHP suteikia ribotas galimybes vykdyti tiesiogines <span class="caps">SQL</span> užklausas.
+Pateikiamas tik vienas query metodas modelyje. Tiesioginės <span class="caps">SQL</span> užklausos
 surišamos su modeliu ir vykdomas fetchAll metodas. Nepaisant to, veikia ir
-INSERT/UPDATE užklausos.</p>
+<span class="caps">INSERT</span>/<span class="caps">UPDATE</span> užklausos.</p>
 </div>
 <div class="section" id="views">
 <h2>Views<a href="#views" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><strong>Django</strong></p>
-<p>Django MVC trijulė <a class="reference external" href="http://docs.djangoproject.com/en/dev/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names">vadinama kiek kitais pavadinimais</a>,
+<p>Django <span class="caps">MVC</span> trijulė <a class="reference external" href="http://docs.djangoproject.com/en/dev/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names">vadinama kiek kitais pavadinimais</a>,
 todėl Views Django atveju yra tiesiog Templates.</p>
 <p>Django turi savo šablonų sistemą, turinčią paveldimumo galimybę, funkcionalius
 kintamuosius, filtrus ir taip vadinamas žymes, kurios atlieką visą dinaminio
@@ -241,45 +241,45 @@ turinio kūrimo darbą.</p>
 perrašant tik reikiamus blokus. Būtent toks šablonų paveldėjimo principas yra
 pagrindinis arkliukas konstruojant sudėtingas svetaines, kurios turi bendrą
 šabloną ir besikeičiančias tam tikras dalis.  Štai kaip atrodo Django šablonas:</p>
-<pre class="code jinja"><a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-1"></a><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"base_generic.html"</span> <span class="cp">%}</span><span class="x"></span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-2"></a>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-3"></a><span class="cp">{%</span> <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}{{</span> <span class="nv">section.title</span> <span class="cp">}}{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-4"></a>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-5"></a><span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-6"></a><span class="x">&lt;h1&gt;</span><span class="cp">{{</span> <span class="nv">section.title</span> <span class="cp">}}</span><span class="x">&lt;/h1&gt;</span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-7"></a>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-8"></a><span class="cp">{%</span> <span class="k">for</span> <span class="nv">story</span> <span class="k">in</span> <span class="nv">story_list</span> <span class="cp">%}</span><span class="x"></span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-9"></a><span class="x">&lt;h2&gt;</span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-10"></a><span class="x">    &lt;a href="</span><span class="cp">{{</span> <span class="nv">story.get_absolute_url</span> <span class="cp">}}</span><span class="x">"&gt;</span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-11"></a><span class="x">        </span><span class="cp">{{</span> <span class="nv">story.headline</span><span class="o">|</span><span class="nf">upper</span> <span class="cp">}}</span><span class="x"></span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-12"></a><span class="x">    &lt;/a&gt;</span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-13"></a><span class="x">&lt;/h2&gt;</span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-14"></a><span class="x">&lt;p&gt;</span><span class="cp">{{</span> <span class="nv">story.tease</span><span class="o">|</span><span class="nf">truncatewords</span><span class="s2">:"100"</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-15"></a><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
-<a name="rest_code_121f4ea5ae5441f19dd2dafe105def1e-16"></a><span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+<pre class="code jinja"><a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-1"></a><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">"base_generic.html"</span> <span class="cp">%}</span><span class="x"></span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-2"></a>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-3"></a><span class="cp">{%</span> <span class="k">block</span> <span class="nv">title</span> <span class="cp">%}{{</span> <span class="nv">section.title</span> <span class="cp">}}{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-4"></a>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-5"></a><span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-6"></a><span class="x">&lt;h1&gt;</span><span class="cp">{{</span> <span class="nv">section.title</span> <span class="cp">}}</span><span class="x">&lt;/h1&gt;</span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-7"></a>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-8"></a><span class="cp">{%</span> <span class="k">for</span> <span class="nv">story</span> <span class="k">in</span> <span class="nv">story_list</span> <span class="cp">%}</span><span class="x"></span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-9"></a><span class="x">&lt;h2&gt;</span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-10"></a><span class="x">    &lt;a href="</span><span class="cp">{{</span> <span class="nv">story.get_absolute_url</span> <span class="cp">}}</span><span class="x">"&gt;</span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-11"></a><span class="x">        </span><span class="cp">{{</span> <span class="nv">story.headline</span><span class="o">|</span><span class="nf">upper</span> <span class="cp">}}</span><span class="x"></span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-12"></a><span class="x">    &lt;/a&gt;</span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-13"></a><span class="x">&lt;/h2&gt;</span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-14"></a><span class="x">&lt;p&gt;</span><span class="cp">{{</span> <span class="nv">story.tease</span><span class="o">|</span><span class="nf">truncatewords</span><span class="s2">:"100"</span> <span class="cp">}}</span><span class="x">&lt;/p&gt;</span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-15"></a><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<a name="rest_code_9c60554aa7a9471b8e7c8a4b905616fb-16"></a><span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
 </pre>
 <p><strong>CakePHP</strong></p>
-<p>CakePHP Views dalis taip pat reiškia šablonus. Šablonai rašomi PHP kalba,
-kadangi PHP pati savaime turi visas šablonams būdingas funkcijas.  Šablonų
-failai, nors ir parašyti PHP kalba, turi .ctp galūnę, kas reiškia „CakePHP Template“.</p>
+<p>CakePHP Views dalis taip pat reiškia šablonus. Šablonai rašomi <span class="caps">PHP</span> kalba,
+kadangi <span class="caps">PHP</span> pati savaime turi visas šablonams būdingas funkcijas.  Šablonų
+failai, nors ir parašyti <span class="caps">PHP</span> kalba, turi .ctp galūnę, kas reiškia „CakePHP Template“.</p>
 <p>CakePHP šablonai turi pagalbines priemones, tokias, kaip Helpers ir Elements.
 Helpers yra paprasčiausios funkcijos, kurios padeda formuoti šabloną. Elements
 iš dalies galima sulyginti su Django Tags. CakePHP Elements atlieka
 pasikartojančių svetainės dalių išvedimą, tokiu pačiu tikslu naudojami ir
 Django Tags, tačiau jų panaudojimo spektras yra kur kas platesnis.</p>
 <p>CakePHP šablonas atrodo taip:</p>
-<pre class="code php"><a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-1"></a><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$section</span><span class="p">[</span><span class="s1">'title'</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x"></span>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-2"></a>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-3"></a><span class="x">&lt;h1&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$story</span><span class="o">-&gt;</span><span class="na">title</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-4"></a>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-5"></a><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="nv">$story_list</span> <span class="k">as</span> <span class="nv">$story</span> <span class="cp">?&gt;</span><span class="x"></span>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-6"></a><span class="x">&lt;h2&gt;</span>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-7"></a><span class="x">    &lt;a href="</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$story</span><span class="o">-&gt;</span><span class="na">get_absolute_url</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-8"></a><span class="x">        </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">strtoupper</span><span class="p">(</span><span class="nv">$story</span><span class="o">-&gt;</span><span class="na">headline</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-9"></a><span class="x">    &lt;/a&gt;</span>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-10"></a><span class="x">&lt;/h2&gt;</span>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-11"></a><span class="x">&lt;p&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$text</span><span class="o">-&gt;</span><span class="na">truncate</span><span class="p">(</span><span class="nv">$story</span><span class="o">-&gt;</span><span class="na">tease</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
-<a name="rest_code_0d2ab7ffe481431da7d4d67d6ae9147b-12"></a><span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<pre class="code php"><a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-1"></a><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$section</span><span class="p">[</span><span class="s1">'title'</span><span class="p">];</span> <span class="cp">?&gt;</span><span class="x"></span>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-2"></a>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-3"></a><span class="x">&lt;h1&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$story</span><span class="o">-&gt;</span><span class="na">title</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/h1&gt;</span>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-4"></a>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-5"></a><span class="cp">&lt;?php</span> <span class="k">foreach</span> <span class="nv">$story_list</span> <span class="k">as</span> <span class="nv">$story</span> <span class="cp">?&gt;</span><span class="x"></span>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-6"></a><span class="x">&lt;h2&gt;</span>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-7"></a><span class="x">    &lt;a href="</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$story</span><span class="o">-&gt;</span><span class="na">get_absolute_url</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">"&gt;</span>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-8"></a><span class="x">        </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">strtoupper</span><span class="p">(</span><span class="nv">$story</span><span class="o">-&gt;</span><span class="na">headline</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-9"></a><span class="x">    &lt;/a&gt;</span>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-10"></a><span class="x">&lt;/h2&gt;</span>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-11"></a><span class="x">&lt;p&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$text</span><span class="o">-&gt;</span><span class="na">truncate</span><span class="p">(</span><span class="nv">$story</span><span class="o">-&gt;</span><span class="na">tease</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x">&lt;/p&gt;</span>
+<a name="rest_code_80a3bc9a3e564ac2a427e582960b4822-12"></a><span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
 </pre>
 </div>
 <div class="section" id="controllers">
@@ -288,62 +288,62 @@ Django Tags, tačiau jų panaudojimo spektras yra kur kas platesnis.</p>
 <p>Django kontroleriai vadinami Views kartu su adresacijos mechanizmu.  Django
 Views yra paprasčiausios funkcijos, kurios nurodą ką ir kaip grąžinti. Tos
 funkcijos surišamos su adresacijos mechanizmu.  Štai kaip kuriama adresacija:</p>
-<pre class="code python"><a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-1"></a><span class="kn">from</span> <span class="nn">django.conf.urls.defaults</span> <span class="kn">import</span> <span class="o">*</span>
-<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-2"></a>
-<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-3"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span>
-<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-4"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/2003/$'</span><span class="p">,</span> <span class="s1">'news.views.special_case_2003'</span><span class="p">),</span>
-<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-5"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/$'</span><span class="p">,</span> <span class="s1">'news.views.year_archive'</span><span class="p">),</span>
-<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-6"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/(\d</span><span class="si">{2}</span><span class="s1">)/$'</span><span class="p">,</span> <span class="s1">'news.views.month_archive'</span><span class="p">),</span>
-<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-7"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/(\d</span><span class="si">{2}</span><span class="s1">)/(\d+)/$'</span><span class="p">,</span> <span class="s1">'news.views.article_detail'</span><span class="p">),</span>
-<a name="rest_code_8e9e385a84684da29ff27482fa4b1efb-8"></a><span class="p">)</span>
+<pre class="code python"><a name="rest_code_4e9545689d7841309434f4b6ba5bada4-1"></a><span class="kn">from</span> <span class="nn">django.conf.urls.defaults</span> <span class="kn">import</span> <span class="o">*</span>
+<a name="rest_code_4e9545689d7841309434f4b6ba5bada4-2"></a>
+<a name="rest_code_4e9545689d7841309434f4b6ba5bada4-3"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span>
+<a name="rest_code_4e9545689d7841309434f4b6ba5bada4-4"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/2003/$'</span><span class="p">,</span> <span class="s1">'news.views.special_case_2003'</span><span class="p">),</span>
+<a name="rest_code_4e9545689d7841309434f4b6ba5bada4-5"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/$'</span><span class="p">,</span> <span class="s1">'news.views.year_archive'</span><span class="p">),</span>
+<a name="rest_code_4e9545689d7841309434f4b6ba5bada4-6"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/(\d</span><span class="si">{2}</span><span class="s1">)/$'</span><span class="p">,</span> <span class="s1">'news.views.month_archive'</span><span class="p">),</span>
+<a name="rest_code_4e9545689d7841309434f4b6ba5bada4-7"></a>    <span class="p">(</span><span class="sa">r</span><span class="s1">'^articles/(\d</span><span class="si">{4}</span><span class="s1">)/(\d</span><span class="si">{2}</span><span class="s1">)/(\d+)/$'</span><span class="p">,</span> <span class="s1">'news.views.article_detail'</span><span class="p">),</span>
+<a name="rest_code_4e9545689d7841309434f4b6ba5bada4-8"></a><span class="p">)</span>
 </pre>
 <p>Aprašant adresus naudojami Regexp, per kuriuos iš karto atliekamas perduodamų
 parametrų tikrinimas.</p>
 <p>O štai kaip atrodo Views funkcija:</p>
-<pre class="code python"><a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render_to_response</span>
-<a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-2"></a>
-<a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-3"></a><span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-<a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-4"></a>    <span class="n">template_vars</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"foo"</span><span class="p">:</span> <span class="s2">"bar"</span><span class="p">}</span>
-<a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-5"></a>    <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s1">'myapp/index.html'</span><span class="p">,</span> <span class="n">template_vars</span><span class="p">,</span>
-<a name="rest_code_cc95100a3a7f4316a1554dd9ed5b4121-6"></a>                               <span class="n">mimetype</span><span class="o">=</span><span class="s2">"application/xhtml+xml"</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_8fce87424dce49ccb24ff07037178076-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render_to_response</span>
+<a name="rest_code_8fce87424dce49ccb24ff07037178076-2"></a>
+<a name="rest_code_8fce87424dce49ccb24ff07037178076-3"></a><span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a name="rest_code_8fce87424dce49ccb24ff07037178076-4"></a>    <span class="n">template_vars</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"foo"</span><span class="p">:</span> <span class="s2">"bar"</span><span class="p">}</span>
+<a name="rest_code_8fce87424dce49ccb24ff07037178076-5"></a>    <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s1">'myapp/index.html'</span><span class="p">,</span> <span class="n">template_vars</span><span class="p">,</span>
+<a name="rest_code_8fce87424dce49ccb24ff07037178076-6"></a>                               <span class="n">mimetype</span><span class="o">=</span><span class="s2">"application/xhtml+xml"</span><span class="p">)</span>
 </pre>
-<p>Su Django Views galima išvesti ne tik HTML turinį, bet ir paveiksliukus,
-dokumentus, PDF failus ir ką tik nori. Nėra jokių ribojimų, nėra jokio
+<p>Su Django Views galima išvesti ne tik <span class="caps">HTML</span> turinį, bet ir paveiksliukus,
+dokumentus, <span class="caps">PDF</span> failus ir ką tik nori. Nėra jokių ribojimų, nėra jokio
 tiesioginio privalomo ryšio su šablonais ar panašiais. Su Django Views viskas
 programuotojo rankose.</p>
 <p><strong>CakePHP</strong></p>
 <p>Django paveldimumas įgyvendintas šablonų lygmenyje (žinoma niekas nedraudžia
-naudotis Python OOP), tuo tarpu CakePHP visa svetainės hierarchija ir
+naudotis Python <span class="caps">OOP</span>), tuo tarpu CakePHP visa svetainės hierarchija ir
 tarpusavio ryšiai laikomi kontroleriuose. Manau ši vieta yra esminis skirtumas
 tarp Django ir CakePHP. Django užklausimai apdorojami atskiromis funkcijomis,
 perduodant informaciją šablonų hierarchijai, o CakePHP per tarpusavyje
 susijusių klasių hierarchiją į atskirus šablonų gabaliukus.</p>
-<p>Nors CakePHP turi URL Routes, tačiau pagal nutylėjimą, adresai formuojami pagal
+<p>Nors CakePHP turi <span class="caps">URL</span> Routes, tačiau pagal nutylėjimą, adresai formuojami pagal
 konrolerio ir jo metodų pavadinimus.  Štai, kaip atrodo CakePHP adresacijos mechanizmas:</p>
-<pre class="code php"><a name="rest_code_2163b738a3b94107993d5d4305bc279c-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_2163b738a3b94107993d5d4305bc279c-2"></a>
-<a name="rest_code_2163b738a3b94107993d5d4305bc279c-3"></a><span class="nx">Router</span><span class="o">::</span><span class="na">connect</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
-<a name="rest_code_2163b738a3b94107993d5d4305bc279c-4"></a>        <span class="s1">'controller'</span><span class="o">=&gt;</span><span class="s1">'posts'</span><span class="p">,</span>
-<a name="rest_code_2163b738a3b94107993d5d4305bc279c-5"></a>        <span class="s1">'action'</span><span class="o">=&gt;</span><span class="s1">'index'</span><span class="p">,</span>
-<a name="rest_code_2163b738a3b94107993d5d4305bc279c-6"></a>    <span class="p">));</span>
-<a name="rest_code_2163b738a3b94107993d5d4305bc279c-7"></a>
-<a name="rest_code_2163b738a3b94107993d5d4305bc279c-8"></a><span class="cp">?&gt;</span><span class="x"></span>
+<pre class="code php"><a name="rest_code_87838f87af144b36ba6e1282cc19fd4b-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_87838f87af144b36ba6e1282cc19fd4b-2"></a>
+<a name="rest_code_87838f87af144b36ba6e1282cc19fd4b-3"></a><span class="nx">Router</span><span class="o">::</span><span class="na">connect</span><span class="p">(</span><span class="s1">'/'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+<a name="rest_code_87838f87af144b36ba6e1282cc19fd4b-4"></a>        <span class="s1">'controller'</span><span class="o">=&gt;</span><span class="s1">'posts'</span><span class="p">,</span>
+<a name="rest_code_87838f87af144b36ba6e1282cc19fd4b-5"></a>        <span class="s1">'action'</span><span class="o">=&gt;</span><span class="s1">'index'</span><span class="p">,</span>
+<a name="rest_code_87838f87af144b36ba6e1282cc19fd4b-6"></a>    <span class="p">));</span>
+<a name="rest_code_87838f87af144b36ba6e1282cc19fd4b-7"></a>
+<a name="rest_code_87838f87af144b36ba6e1282cc19fd4b-8"></a><span class="cp">?&gt;</span><span class="x"></span>
 </pre>
 <p>Štai, kaip atrodo CakePHP kontroleris:</p>
-<pre class="code php"><a name="rest_code_22999ad5cb064374985b323f6d44ce6b-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-2"></a>
-<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-3"></a><span class="k">class</span> <span class="nc">RecipesController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span>
-<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-4"></a>    <span class="k">function</span> <span class="nf">view</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-5"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">'foo'</span> <span class="o">=&gt;</span> <span class="s1">'bar'</span><span class="p">));</span>
-<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-6"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">'/myapp/index'</span><span class="p">);</span>
-<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-7"></a>    <span class="p">}</span>
-<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-8"></a><span class="p">}</span>
-<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-9"></a>
-<a name="rest_code_22999ad5cb064374985b323f6d44ce6b-10"></a><span class="cp">?&gt;</span><span class="x"></span>
+<pre class="code php"><a name="rest_code_5a143db363a7484d8dafd55bfbcfadea-1"></a><span class="cp">&lt;?php</span>
+<a name="rest_code_5a143db363a7484d8dafd55bfbcfadea-2"></a>
+<a name="rest_code_5a143db363a7484d8dafd55bfbcfadea-3"></a><span class="k">class</span> <span class="nc">RecipesController</span> <span class="k">extends</span> <span class="nx">AppController</span> <span class="p">{</span>
+<a name="rest_code_5a143db363a7484d8dafd55bfbcfadea-4"></a>    <span class="k">function</span> <span class="nf">view</span><span class="p">(</span><span class="nv">$id</span><span class="p">)</span> <span class="p">{</span>
+<a name="rest_code_5a143db363a7484d8dafd55bfbcfadea-5"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">'foo'</span> <span class="o">=&gt;</span> <span class="s1">'bar'</span><span class="p">));</span>
+<a name="rest_code_5a143db363a7484d8dafd55bfbcfadea-6"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">(</span><span class="s1">'/myapp/index'</span><span class="p">);</span>
+<a name="rest_code_5a143db363a7484d8dafd55bfbcfadea-7"></a>    <span class="p">}</span>
+<a name="rest_code_5a143db363a7484d8dafd55bfbcfadea-8"></a><span class="p">}</span>
+<a name="rest_code_5a143db363a7484d8dafd55bfbcfadea-9"></a>
+<a name="rest_code_5a143db363a7484d8dafd55bfbcfadea-10"></a><span class="cp">?&gt;</span><span class="x"></span>
 </pre>
 </div>
 <div class="section" id="mvc-pagalbines-priemones">
-<h2>MVC pagalbinės priemonės<a href="#mvc-pagalbines-priemones" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<h2><span class="caps">MVC</span> pagalbinės priemonės<a href="#mvc-pagalbines-priemones" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><strong>Django</strong></p>
 <p>Django rodiniai (Views) globaliai gali būti kontroliuojami middleware pagalba.
 Middleware yra paprasčiausia klasė, kurios metodai iškviečiami nurodytu
@@ -357,7 +357,7 @@ ar kelių modelių galimybes.</p>
 biblioteką, visiems gyvenimo atvejams.</p>
 <p><strong>CakePHP</strong></p>
 <p>CakePHP Controllers, Models ir Views, atitinkamai naudoja Components, Behaviors
-ir Helpers, kurie išplečia MVC dalių funkcionalumą.</p>
+ir Helpers, kurie išplečia <span class="caps">MVC</span> dalių funkcionalumą.</p>
 <p>CakePHP taip pat turi gan nemažai vidinių pagalbinių priemonių dažnai
 pasitaikančioms situacijoms.</p>
 </div>
@@ -381,23 +381,23 @@ unikalių savybių, kurių dėka šablonų sistema labai gerai dera su visa sist
 Vienas iš unikalių dalykų yra šablonų</p>
 <p>paveldimumas, ko neturi daugelis egzistuojančių šablonų varikliukų.</p>
 <p><strong>CakePHP</strong></p>
-<p>Kaip ir daugelis kitų PHP kalba rašytų bibliotekų, CakePHP taip pat daugelyje
-vietų bando apeiti PHP kalbos trūkumus. Vienas iš tokių apėjimo pavyzdžių –
+<p>Kaip ir daugelis kitų <span class="caps">PHP</span> kalba rašytų bibliotekų, CakePHP taip pat daugelyje
+vietų bando apeiti <span class="caps">PHP</span> kalbos trūkumus. Vienas iš tokių apėjimo pavyzdžių –
 savitas modelių ar kontrolerių įtraukimas naudojant Model::Import() ir panašias
-funkcijas. Kita dalykas, kadangi PHP kalba, iki 5.3 versijos išleidimo neturėjo
+funkcijas. Kita dalykas, kadangi <span class="caps">PHP</span> kalba, iki 5.3 versijos išleidimo neturėjo
 vardų erdvių, tai CakePHP daugelis programavimo elementų aprašomi kaip klasės,
 bandant išvengti funkcijų pavadinimų konflikto.</p>
-<p>CakePHP nenaudoja standartinės PHP priemonės PDO, jungimuisi prie duomenų
+<p>CakePHP nenaudoja standartinės <span class="caps">PHP</span> priemonės <span class="caps">PDO</span>, jungimuisi prie duomenų
 bazės. Užklausų siuntimui galima naudoti tik vienintelę Query() funkciją, kuri
-visą laiką vykdoma lyg jai būtų perduota SELECT tipo užklausa. Jokių kitų
-priemonių, bendravimui su duomenų baze, išskyrus Query ir CakePHP ORM nėra.</p>
+visą laiką vykdoma lyg jai būtų perduota <span class="caps">SELECT</span> tipo užklausa. Jokių kitų
+priemonių, bendravimui su duomenų baze, išskyrus Query ir CakePHP <span class="caps">ORM</span> nėra.</p>
 <p>Daugelyje vietų, CakePHP siūlo <strong>tik</strong> savo priemones nesuteikiant galimybės
 realizuoti tam tikras vietas, kitaip, nei tai yra numatę CakePHP programuotojai.</p>
 </div>
 <div class="section" id="svetainiu-talpinimas-deployment">
 <h2>Svetainių talpinimas (deployment)<a href="#svetainiu-talpinimas-deployment" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><strong>Django</strong></p>
-<p>Django galima leisti per mod_wsgi, mod_python, FastCGI, SCGI arba AJP. Jei
+<p>Django galima leisti per mod_wsgi, mod_python, FastCGI, <span class="caps">SCGI</span> arba <span class="caps">AJP</span>. Jei
 web serveris palaiko bent vieną iš šių technologijų, sėkmingai galėsite naudoti
 Django, kartu su juo.</p>
 <p>Deja gan mažai svetainių talpinimo paslaugas teikiančių įmonių, siūlo Django
@@ -407,7 +407,7 @@ to, jei reikalausite Django palaikymo, tikėtina, kad jį gausite.</p>
 „<a class="reference external" href="https://appengine.google.com/">Google App Engine</a>, kur svetainių kūrimui,
 pagal nutylėjimą naudojamas būtent Django.</p>
 <p><strong>CakePHP</strong></p>
-<p>Kadangi CakePHP parašytas PHP kalba, kuri palaikoma daugelio svetainių
+<p>Kadangi CakePHP parašytas <span class="caps">PHP</span> kalba, kuri palaikoma daugelio svetainių
 talpinimo paslaugas teikiančių įmonių, tai tikėtina, kad problemų nebus.  Tai
 yra stiprioji CakePHP pusė.</p>
 </div>
@@ -417,7 +417,7 @@ yra stiprioji CakePHP pusė.</p>
 nes skatinamas vienodas ir tos pačios krypties programavimas, bet dažnai galima
 patekti į situaciją, negalima realizuoti vieno ar kito dalyko, ko nebuvo numatę
 CakePHP ir tenka galvoti visokius apėjimo variantus.</p>
-<p>Jei esate PHP kalbos mėgėjas ir jus tenkina CakePHP rėmai, tuomet ši priemonė
+<p>Jei esate <span class="caps">PHP</span> kalbos mėgėjas ir jus tenkina CakePHP rėmai, tuomet ši priemonė
 jums tiks kuo puikiausiai.</p>
 <p>Django yra labai lankstus ir turintis mažai architektūrinių ribojimų.  Darbą
 pradėti galite labai paprastai, vos apsirašę duomenų bazės struktūrą
@@ -437,7 +437,7 @@ modeliuose, iš karto gausite pilnai veikiančią administravimo sąsają.</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

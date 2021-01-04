@@ -69,7 +69,7 @@ praktikoje tikrai praverčia.</p>
 <p><strong>zsh</strong> – tiesiog gera komandinės eilutės sąsaja (shell). Naudoju jį todėl, kad
 jis tiesiog yra tobulas ir turi viską, ko gali prireikti.  Plačiau:
 <a class="reference external" href="http://grml.org/zsh/zsh-lovers.html">http://grml.org/zsh/zsh-lovers.html</a></p>
-<p>Ko gero daugiausia zsh man patinka todėl, kad paspaudus TAB, praktiškai visada
+<p>Ko gero daugiausia zsh man patinka todėl, kad paspaudus <span class="caps">TAB</span>, praktiškai visada
 gausi tai ko reikia… Taip, zsh taip pat supranta ir djanogo-admin.py sub-komandas.</p>
 <p><strong>vim</strong></p>
 <p>Tikriausiai visi ir taip žino, kas yra Vim. Jei nežinot, tai Vim yra vadinamas
@@ -149,7 +149,7 @@ išplėstas <a class="reference external" href="http://docutils.sf.net/rst.html"
 Pasinaudojus išplėtimais į dokumentacijos tekstą galima įtraukti ištisą modulio
 dokumentaciją specialių raktinių žodžių pagalba. Į nurodytas dokumentacijos
 vietas, iš pačio kodo docstringų senrenkama informacija ir suformuojama graži
-API dokumentacija. Sphinx puikiai integruojasi į buildout aplinką, dėl ko
+<span class="caps">API</span> dokumentacija. Sphinx puikiai integruojasi į buildout aplinką, dėl ko
 rašyti dokumentacijas dar paprasčiau.</p>
 <p><strong>pylint</strong></p>
 <p>Tai yra <a class="reference external" href="http://pychecker.sourceforge.net/">pyChecker</a> arba <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=2441">PyFlakes</a>
@@ -176,65 +176,65 @@ duomenų bazės būseną failų pavidalu, kuriuos galima įtraukti į versijų
 kontrolės sistemą ir turėti galimybę sklandžiai migruoti duomenų bazę,
 keičiantis jos struktūrai.</p>
 <p><strong>ipdb</strong></p>
-<p>BDD (Bug Driven Development) praktikoje kartais prireikia ir debugerio.  Tam
+<p><span class="caps">BDD</span> (Bug Driven Development) praktikoje kartais prireikia ir debugerio.  Tam
 reikalui python turi vidinį debugerį <a class="reference external" href="http://docs.python.org/library/pdb.html">pdb</a>, bet aš naudoju šiek tiek pagerintą
 variantą: ipdb. ipdb yra tas pats pdb tik išplėstas ipython funkcijomis.
 Naudojant šį debugerį galima naudoti visas standartinio debugerio funkcijas ir daugiau.</p>
 <p><strong>Reziumė</strong></p>
 <p>Didžiąją dalį čia aprašytų dalykų reziumuoja vienas paprastas, nedidelis
 buildout konfigūracinis failas:</p>
-<pre class="code ini"><a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-1"></a><span class="k">[buildout]</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-2"></a><span class="na">parts</span> <span class="o">=</span><span class="s"></span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-3"></a><span class="s">    django</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-4"></a><span class="s">    ctags</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-5"></a><span class="s">    omelette</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-6"></a><span class="s">    sphinx</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-7"></a><span class="s">    pylint</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-8"></a>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-9"></a><span class="na">eggs</span> <span class="o">=</span><span class="s"></span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-10"></a><span class="s">    ipdb</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-11"></a><span class="s">    ipython</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-12"></a><span class="s">    South</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-13"></a><span class="s">    django-debug-toolbar</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-14"></a>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-15"></a><span class="k">[django]</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-16"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">djangorecipe</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-17"></a><span class="na">version</span> <span class="o">=</span> <span class="s">1.2</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-18"></a><span class="na">project</span> <span class="o">=</span> <span class="s">myproject</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-19"></a><span class="na">settings</span> <span class="o">=</span> <span class="s">development</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-20"></a><span class="na">eggs</span> <span class="o">=</span> <span class="s">${buildout:eggs}</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-21"></a>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-22"></a><span class="k">[ctags]</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-23"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">z3c.recipe.tag:tags</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-24"></a><span class="na">eggs</span> <span class="o">=</span> <span class="s">${buildout:eggs}</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-25"></a>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-26"></a><span class="k">[omelette]</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-27"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">collective.recipe.omelette</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-28"></a><span class="na">eggs</span> <span class="o">=</span> <span class="s">${buildout:eggs}</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-29"></a>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-30"></a><span class="k">[sphinx]</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-31"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">zc.recipe.egg</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-32"></a><span class="na">eggs</span> <span class="o">=</span><span class="s"></span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-33"></a><span class="s">    ${buildout:eggs}</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-34"></a><span class="s">    Sphinx</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-35"></a><span class="na">scripts</span> <span class="o">=</span><span class="s"></span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-36"></a><span class="s">    sphinx-build</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-37"></a><span class="s">    sphinx-quickstart</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-38"></a><span class="na">extra-paths</span> <span class="o">=</span><span class="s"></span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-39"></a><span class="s">    ${django:location}</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-40"></a><span class="s">    ${buildout:directory}</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-41"></a>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-42"></a><span class="k">[pylint]</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-43"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">zc.recipe.egg</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-44"></a><span class="na">eggs</span> <span class="o">=</span><span class="s"></span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-45"></a><span class="s">    ${buildout:eggs}</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-46"></a><span class="s">    pylint</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-47"></a><span class="na">extra-paths</span> <span class="o">=</span><span class="s"></span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-48"></a><span class="s">    ${django:location}</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-49"></a><span class="s">    ${buildout:directory}</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-50"></a><span class="na">entry-points</span> <span class="o">=</span><span class="s"></span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-51"></a><span class="s">    pylint=pylint.lint:Run</span>
-<a name="rest_code_d34c000b90d34a3dbbcea2e3c48c8b2f-52"></a><span class="s">    arguments = sys.argv[1:]</span>
+<pre class="code ini"><a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-1"></a><span class="k">[buildout]</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-2"></a><span class="na">parts</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-3"></a><span class="s">    django</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-4"></a><span class="s">    ctags</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-5"></a><span class="s">    omelette</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-6"></a><span class="s">    sphinx</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-7"></a><span class="s">    pylint</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-8"></a>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-9"></a><span class="na">eggs</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-10"></a><span class="s">    ipdb</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-11"></a><span class="s">    ipython</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-12"></a><span class="s">    South</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-13"></a><span class="s">    django-debug-toolbar</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-14"></a>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-15"></a><span class="k">[django]</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-16"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">djangorecipe</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-17"></a><span class="na">version</span> <span class="o">=</span> <span class="s">1.2</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-18"></a><span class="na">project</span> <span class="o">=</span> <span class="s">myproject</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-19"></a><span class="na">settings</span> <span class="o">=</span> <span class="s">development</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-20"></a><span class="na">eggs</span> <span class="o">=</span> <span class="s">${buildout:eggs}</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-21"></a>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-22"></a><span class="k">[ctags]</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-23"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">z3c.recipe.tag:tags</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-24"></a><span class="na">eggs</span> <span class="o">=</span> <span class="s">${buildout:eggs}</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-25"></a>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-26"></a><span class="k">[omelette]</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-27"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">collective.recipe.omelette</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-28"></a><span class="na">eggs</span> <span class="o">=</span> <span class="s">${buildout:eggs}</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-29"></a>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-30"></a><span class="k">[sphinx]</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-31"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">zc.recipe.egg</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-32"></a><span class="na">eggs</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-33"></a><span class="s">    ${buildout:eggs}</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-34"></a><span class="s">    Sphinx</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-35"></a><span class="na">scripts</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-36"></a><span class="s">    sphinx-build</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-37"></a><span class="s">    sphinx-quickstart</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-38"></a><span class="na">extra-paths</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-39"></a><span class="s">    ${django:location}</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-40"></a><span class="s">    ${buildout:directory}</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-41"></a>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-42"></a><span class="k">[pylint]</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-43"></a><span class="na">recipe</span> <span class="o">=</span> <span class="s">zc.recipe.egg</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-44"></a><span class="na">eggs</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-45"></a><span class="s">    ${buildout:eggs}</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-46"></a><span class="s">    pylint</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-47"></a><span class="na">extra-paths</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-48"></a><span class="s">    ${django:location}</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-49"></a><span class="s">    ${buildout:directory}</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-50"></a><span class="na">entry-points</span> <span class="o">=</span><span class="s"></span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-51"></a><span class="s">    pylint=pylint.lint:Run</span>
+<a name="rest_code_546f70cbfd6b44d08bd14797d3e61de9-52"></a><span class="s">    arguments = sys.argv[1:]</span>
 </pre>
 </div>
     </div>
@@ -249,7 +249,7 @@ buildout konfigūracinis failas:</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

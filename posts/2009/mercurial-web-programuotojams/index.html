@@ -49,16 +49,16 @@ Bazaar gali siųsti p">
 <a class="reference external" href="https://code.launchpad.net/~sirex/ubuntu.lt/main">Launchpad.net stogu</a>, tai
 teko šiek tiek pasidomėti <a class="reference external" href="http://bazaar-vcs.org/">bazaar</a> versijų kontrolės
 sistema. Radau įdomų dalyką – <a class="reference external" href="http://doc.bazaar-vcs.org/latest/en/tutorials/tutorial.html#publishing-your-branch">Publishing your branch</a>!
-Bazaar gali siųsti pakeitimus tiesiai į SFTP serverį.</p>
+Bazaar gali siųsti pakeitimus tiesiai į <span class="caps">SFTP</span> serverį.</p>
 <p>Tikriausiai daugelis Web programuotojų keičia kodą savo kompiuteryje, o vėliau
-tai kas pakeista siunčia per FTP į Web serverį. Aš darau būtent taip ir darau
+tai kas pakeista siunčia per <span class="caps">FTP</span> į Web serverį. Aš darau būtent taip ir darau
 tai labai dažnai. Iki šiol pakeitimų į Web serverį siuntimui naudojau Makefile
 + lftp. Tačiau pasiskaitęs apie Bazaar nusprendžiau pasidomėti ar Mercurial
-turi kokias nors priemones „push’inti“ į FTP. Pasirodo turi! :)</p>
+turi kokias nors priemones „push’inti“ į <span class="caps">FTP</span>. Pasirodo turi! :)</p>
 <div class="section" id="atradimas">
 <h2>Atradimas<a href="#atradimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Radau Mercurial <a class="reference external" href="http://bitbucket.org/misery/hgftp/wiki/Home">FTPExtension</a>, kuris daro būtent tai, ko reikia!</p>
-<p>Trumpai aprašysiu kaip dirbu su kodu ir kaip jį siunčiu į Web serverį, per FTP.</p>
+<p>Trumpai aprašysiu kaip dirbu su kodu ir kaip jį siunčiu į Web serverį, per <span class="caps">FTP</span>.</p>
 <ol class="arabic">
 <li>
 <p>Keičiu kodą:</p>
@@ -69,7 +69,7 @@ turi kokias nors priemones „push’inti“ į FTP. Pasirodo turi! :)</p>
 <pre class="literal-block">$ hg ci -m "Aprašymas ką ir kodėl keičiau."</pre>
 </li>
 <li>
-<p>Magija prasideda :) Siunčiu pakeistus failus į Web serverį, per FTP:</p>
+<p>Magija prasideda :) Siunčiu pakeistus failus į Web serverį, per <span class="caps">FTP</span>:</p>
 <pre class="literal-block">$ hg ftp -u</pre>
 </li>
 </ol>
@@ -86,24 +86,24 @@ darbe tai yra labai naudingas dalykas.</p>
 <pre class="literal-block">$ mkdir -p ~/.hgext
 $ cd ~/.hgext
 $ hg clone http://bitbucket.org/misery/hgftp/</pre>
-<p>Po šių veiksmų, galite įjungti šį praplėtimą globaliai (<code class="docutils literal"><span class="pre">~/.hgrc</span></code>), arba tik
+<p>Po šių veiksmų, galite įjungti šį praplėtimą globaliai (<code class="docutils literal"><span class="pre">~/.hgrc</span></code>), arba tik
 konkrečiam repozitoriumui (<em>./.hg/hgrc</em>) į nurodytą failą įrašydami:</p>
-<pre class="code ini"><a name="rest_code_661ea245633e4bb392ab3dd7a3932d37-1"></a><span class="k">[extensions]</span>
-<a name="rest_code_661ea245633e4bb392ab3dd7a3932d37-2"></a><span class="na">hgext.ftp</span> <span class="o">=</span> <span class="s">~/.hgext/hgftp/ftp.py</span>
+<pre class="code ini"><a name="rest_code_25ba572de32d43b8a8f626b493147267-1"></a><span class="k">[extensions]</span>
+<a name="rest_code_25ba572de32d43b8a8f626b493147267-2"></a><span class="na">hgext.ftp</span> <span class="o">=</span> <span class="s">~/.hgext/hgftp/ftp.py</span>
 </pre>
 </div>
 <div class="section" id="ftpextension-konfiguravimas">
 <h2>FTPExtension konfigūravimas<a href="#ftpextension-konfiguravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Kai jau turite veikiantį praplėtimą, konkrečiam Web projekto repozitoriumui
-galite nurodyti FTP prisijungimą, kur bus siunčiami duomenys. Tai galite
-padaryti repozitormiumo konfigūraciniame faile <code class="docutils literal"><span class="pre">./.hg/hgrc</span></code>, nurodydami:</p>
-<pre class="code ini"><a name="rest_code_033826592ebc4027983870287ed70012-1"></a><span class="k">[paths]</span>
-<a name="rest_code_033826592ebc4027983870287ed70012-2"></a><span class="na">ftp</span>    <span class="o">=</span> <span class="s">ftp://[user[:pass]@]host[:port]/[path]</span>
-<a name="rest_code_033826592ebc4027983870287ed70012-3"></a><span class="na">myhost</span> <span class="o">=</span> <span class="s">ftp://andre@incubo.de/htdocs</span>
+galite nurodyti <span class="caps">FTP</span> prisijungimą, kur bus siunčiami duomenys. Tai galite
+padaryti repozitormiumo konfigūraciniame faile <code class="docutils literal"><span class="pre">./.hg/hgrc</span></code>, nurodydami:</p>
+<pre class="code ini"><a name="rest_code_4b7fdd58804a4efbab6b4ae39d3bd9ce-1"></a><span class="k">[paths]</span>
+<a name="rest_code_4b7fdd58804a4efbab6b4ae39d3bd9ce-2"></a><span class="na">ftp</span>    <span class="o">=</span> <span class="s">ftp://[user[:pass]@]host[:port]/[path]</span>
+<a name="rest_code_4b7fdd58804a4efbab6b4ae39d3bd9ce-3"></a><span class="na">myhost</span> <span class="o">=</span> <span class="s">ftp://andre@incubo.de/htdocs</span>
 </pre>
 <p>Jei prisijungimo eilutę priskirsite specialią paskirtį turinčiam žodeliui
-‘ftp’, tuomet šis FTP serveris bus naudojamas pagal nutylėjimą ir galėsite
-tiesiog naudoti <code class="docutils literal">hg ftp <span class="pre">-u</span></code>. Kitais atvejais, reikia nurodyti serverį taip:
+‘ftp’, tuomet šis <span class="caps">FTP</span> serveris bus naudojamas pagal nutylėjimą ir galėsite
+tiesiog naudoti <code class="docutils literal">hg ftp <span class="pre">-u</span></code>. Kitais atvejais, reikia nurodyti serverį taip:
 <code class="docutils literal">hg ftp <span class="pre">-u</span> myhost</code>.</p>
 <p>Toliau reikia nurodyti reviziją, nuo kurios bus siunčiami atnaujinimai.
 FTPExtension pakeitimus siunčia nuo revizijos, kuri pažymėta žyme
@@ -135,7 +135,7 @@ atnaujinta ir pan.</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

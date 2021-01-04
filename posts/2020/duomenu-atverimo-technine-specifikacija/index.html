@@ -15,6 +15,7 @@
 <link rel="canonical" href="https://sirex.lt/posts/2020/duomenu-atverimo-technine-specifikacija/">
 <!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
 <link rel="prev" href="../duomenu-atverimo-vyriausiasis-specialistas/" title="Duomenų atvėrimo vyriausiasis specialistas" type="text/html">
+<link rel="next" href="../../2021/atviru-duomenu-rekomendacijos/" title="Atvirų duomenų rekomendacijos" type="text/html">
 <meta property="og:site_name" content="Sirex web log">
 <meta property="og:title" content="Duomenų atvėrimo techninė specifikacija">
 <meta property="og:url" content="https://sirex.lt/posts/2020/duomenu-atverimo-technine-specifikacija/">
@@ -35,11 +36,11 @@ Oficialiai, pastabas reikėtų teikti per viešųjų pirkimų s">
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>Paskelbta II duomenų atvėrimo etapo <a class="reference external" href="https://cvpp.eviesiejipirkimai.lt/Notice/Details/2020-692551">viešojo pirkimo</a> išankstinė <a class="reference external" href="https://pirkimai.eviesiejipirkimai.lt/app/rfq/publicpurchase_docs.asp?PID=555045">techninė
+<p>Paskelbta <span class="caps">II</span> duomenų atvėrimo etapo <a class="reference external" href="https://cvpp.eviesiejipirkimai.lt/Notice/Details/2020-692551">viešojo pirkimo</a> išankstinė <a class="reference external" href="https://pirkimai.eviesiejipirkimai.lt/app/rfq/publicpurchase_docs.asp?PID=555045">techninė
 specifikacija</a> aptarimui. Aptarinėti bus galima iki 2020 gruodžio 23 d.</p>
 <p>Oficialiai, pastabas reikėtų teikti per viešųjų pirkimų sistemą. Neoficialiai,
 šiaip laisvam aptarimui (kam įdomu), pastabas galima teikti per <a class="reference external" href="https://docs.google.com/document/d/1mFOiOJQo1_dkZuRcIG6ODKfgdrdKP_M-sgYSYFHBVsY/edit?usp=sharing">Google Docs</a>.</p>
-<p>Viso II duomenų atvėrimo etape dalyvauja 50 įstaigų, tačiau konkrečiai šiame
+<p>Viso <span class="caps">II</span> duomenų atvėrimo etape dalyvauja 50 įstaigų, tačiau konkrečiai šiame
 centralizuotame pirkime dalyvauja 29 įstaigos. Likusios 21 įstaiga duomenis
 atvers savo jėgomis arba su rangovų pagalba.</p>
 <p>Centralizuotas pirkimas išskaidytas į 29 dalis, tai reiškia, kad kiekvieną dalį
@@ -52,20 +53,20 @@ saugiklių, kad išlaikyti gerą kainos ir darbo santyki.</p>
 <h2>Techninė specifikacija<a href="#technine-specifikacija" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Pati techninė specifikacija yra gan glausta ir didžiąja dalimi remiasi <a class="reference external" href="https://data.gov.lt/page/vadovas">atvirų
 duomenų vadovu</a>. Atvirų duomenų vadove yra pateikta išsami <a class="reference external" href="https://data.gov.lt/page/aprasas">Duomenų
-struktūros aprašo specifikacija</a> (DSA).</p>
-<p>DSA yra kažkas panašaus į <a class="reference external" href="https://en.wikipedia.org/wiki/Domain-specific_language">DSL</a> vienos lentelės pavidalu. DSA lentelės pagalba
+struktūros aprašo specifikacija</a> (<span class="caps">DSA</span>).</p>
+<p><span class="caps">DSA</span> yra kažkas panašaus į <a class="reference external" href="https://en.wikipedia.org/wiki/Domain-specific_language"><span class="caps">DSL</span></a> vienos lentelės pavidalu. <span class="caps">DSA</span> lentelės pagalba
 galima atlikti duomenų inventorizacija, aprašant, kokie duomenys yra
 valstybinių įstaigų duomenų bazėse, atlikti tam tikras transformacijas
-gerinant duomenų brandos lygį ir generuoti DSA pagrindu veikiantį API, kuris
-leidžia duomenis konvertuoti į eilę formatų. DSA yra suderinamas su DCAT
+gerinant duomenų brandos lygį ir generuoti <span class="caps">DSA</span> pagrindu veikiantį <span class="caps">API</span>, kuris
+leidžia duomenis konvertuoti į eilę formatų. <span class="caps">DSA</span> yra suderinamas su <span class="caps">DCAT</span>
 duomenų katalogo standartu ir su eile kitų duomenų formatų.</p>
 <p>Tai iš esmės, tiekėjas turės atlikti du esminius darbus:</p>
 <ol class="arabic simple">
-<li><p>Parengti įstaigos duomenų DSA lentelę (arba tiksliau ADSA).</p></li>
+<li><p>Parengti įstaigos duomenų <span class="caps">DSA</span> lentelę (arba tiksliau <span class="caps">ADSA</span>).</p></li>
 </ol>
 <ol class="arabic simple" start="2">
 <li><p>Atverti įstaigos duomenis ir juos publikuoti taip, kad jie atitiktų parengtą
-ADSA lentelę.</p></li>
+<span class="caps">ADSA</span> lentelę.</p></li>
 </ol>
 <p>Būtų tobula, tiesiog gauti komandą, su kuria galėtume dirbti prie duomenų
 atvėrimo, bet deja, tenka naviguoti visokiais viešųjų pirkimų aplinkeliais.</p>
@@ -85,9 +86,9 @@ daryti nuo nulio, visoms įstaigoms turėtu būti pernaudojamos tos pačios
 priemonės ir kiekvieną kartą atveriant vis daugiau duomenų, priemonės vis tobulinamos.</p>
 <p>Atrodo, kad duomenų atvėrimas yra vienkartinis darbas, bet taip nėra, kadangi
 atveriami duomenys turi būti publikuojami nuolat. Todėl darant visą tai
-sistemingai, pataisius problemas vienoje vietoje, jos bus išspręstos visos
+sistemingai, pataisius problemas vienoje vietoje, jos bus išspręstos visose
 įstaigose vienu kartu.</p>
-<p>Todėl tikiuosi, kad nepriklausomai nuo to, kas laimės viešąjį pirkim1, duomenų
+<p>Todėl tikiuosi, kad nepriklausomai nuo to, kas laimės viešąjį pirkimą, duomenų
 atvėrimas vyks vieningai, sistemingai ir efektyviai.</p>
 </div>
 <div class="section" id="dalyviu-sarasas">
@@ -103,31 +104,32 @@ atveria duomenis savarankiškai be jokių pirkimų.</p>
 </div>
 <div class="section" id="poreikio-deklaravimas">
 <h2>Poreikio deklaravimas<a href="#poreikio-deklaravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Jei jums reikia kažkokių duomenų, kurių nėra II duomenų atvėrimo etape,
-oficiali vieta, kur galima išreikšti poreikį yra <a class="reference external" href="https://data.gov.lt/">atvirų duomenų katalogas</a> (ADK).</p>
+<p>Jei jums reikia kažkokių duomenų, kurių nėra <span class="caps">II</span> duomenų atvėrimo etape,
+oficiali vieta, kur galima išreikšti poreikį yra <a class="reference external" href="https://data.gov.lt/">atvirų duomenų katalogas</a> (<span class="caps">ADK</span>).</p>
 <p>Teoriškai visos Lietuvos įstaigos turėtu paskirti atvirų duomenų įgaliotinį,
 kuris būtų atsakingas už tos įstaigos atvirus duomenis. Įgaliotinis
-registruojamas ADK ir turėtu atsakyti į visus iškilusius klausimus dėl atvirų duomenų.</p>
-<p>Ieškant duomenų, pirmiausiai reikėtų pažiūrėti, gal būt jie jau yra atverti:</p>
+registruojamas <span class="caps">ADK</span> ir turėtu atsakyti į visus iškilusius klausimus dėl atvirų duomenų.</p>
+<p>Ieškant duomenų, pirmiausiai reikėtų pažiūrėti, gal būt jie jau yra atverti
+ar bent jau inventorizuoti:</p>
 <p><a class="reference external" href="https://data.gov.lt/datasets">https://data.gov.lt/datasets</a></p>
-<p>Jei atverti duomenys netenkina, tada yra galimybė teikti pastabas. Pastabas
-galite teikti paprasto komentaro forma arba paspaudžiant mygtuką „Teikti
-poreikį duomenų rinkinio keitimui“, kuris nuves į „Registruoti poreikį
-duomenų rinkinio keitimui“. Minėtoje formoje, pažymėti „Papildyti duomenų
-rinkinį naujais duomenimis“, kur galėsite tiksliai nurodyti kokių duomenų
-laukų trūksta.</p>
-<p>Trūkstamus duomenų laukus galite pateikti ir prisegant DSA lentelę.</p>
-<p>Jei reikalingas duomenų rinkinys nėra registruotas ADK, tada galima
+<p>Jei <span class="caps">ADK</span> publikuojami duomenų rinkiniai netenkina, tada yra galimybė teikti
+pastabas. Pastabas galite teikti paprasto komentaro forma arba paspaudžiant
+mygtuką „Teikti poreikį duomenų rinkinio keitimui“, kuris nuves į „Registruoti
+poreikį duomenų rinkinio keitimui“. Minėtoje formoje pažymėjus „Papildyti
+duomenų rinkinį naujais duomenimis“ galėsite tiksliai nurodyti kokių duomenų
+laukų trūksta ar gal būt reikalinga kelti tam tikrų duomenų laukų brandos lygį.</p>
+<p>Trūkstamus duomenų laukus galite pateikti ir prisegant <span class="caps">DSA</span> lentelę.</p>
+<p>Jei reikalingas duomenų rinkinys nėra registruotas <span class="caps">ADK</span>, tada galima
 deklaruoti poreikį trūkstamam duomenų rinkiniui, tai daroma šiuo adresu:</p>
 <p><a class="reference external" href="https://data.gov.lt/requests/new">https://data.gov.lt/requests/new</a></p>
 <p>Galiausiai, užklausimas bus priskirtas konkrečiai įstaigai, kuri paklausimą
 turės peržiūrėti ir atverti duomenis arba paaiškinti, kodėl duomenys negali
 būti atverti.</p>
-<p>Bent jau mano asmenine nuomone, ADK turi daug trūkumu ir nėra labai patogus ir
+<p>Bent jau mano asmenine nuomone, <span class="caps">ADK</span> turi daug trūkumu ir nėra labai patogus ir
 aiškus, bet šiuo metu tai yra vienintelė oficiali priemonė, kurios pagalba
 galima deklaruoti duomenų poreikį. Todėl kviečiu šią priemonę naudoti, nes
-anksčiau ar vėliau į ADK pateiktą duomenų poreikį bus atsižvelgta arba bent
-jau pateikti priežastis, kodėl duomenys negali būti atverti.</p>
+anksčiau ar vėliau į <span class="caps">ADK</span> pateiktą duomenų poreikį bus atsižvelgta arba bent
+jau pateiktos priežastis, kodėl duomenys negali būti atverti.</p>
 </div>
 </div>
     </div>
@@ -135,11 +137,14 @@ jau pateikti priežastis, kodėl duomenys negali būti atverti.</p>
 <li class="previous">
                 <a href="../duomenu-atverimo-vyriausiasis-specialistas/" rel="prev" title="Duomenų atvėrimo vyriausiasis specialistas">Previous post</a>
             </li>
+            <li class="next">
+                <a href="../../2021/atviru-duomenu-rekomendacijos/" rel="next" title="Atvirų duomenų rekomendacijos">Next post</a>
+            </li>
         </ul></nav></aside><nav id="menu"><ul>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

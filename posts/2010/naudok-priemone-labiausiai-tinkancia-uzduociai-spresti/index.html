@@ -69,9 +69,9 @@ visa gausybė shell skriptų visiems gyvenimo atvejams. Šiuo metu ten yra:</p>
 65</pre>
 <p>65 skriptai.</p>
 <p>Štai paprastas shell skripto pavyzdys, kuris gali praversti kas dieną:</p>
-<pre class="code bash"><a name="rest_code_e6a118dd6b424847a03a44b7cffa5b79-1"></a><span class="ch">#!/bin/bash</span>
-<a name="rest_code_e6a118dd6b424847a03a44b7cffa5b79-2"></a><span class="nv">URL</span><span class="o">=</span><span class="s1">'http://translate.google.lt/translate_t?q='</span><span class="nv">$1</span><span class="s1">'#auto|lt'</span>
-<a name="rest_code_e6a118dd6b424847a03a44b7cffa5b79-3"></a>w3m -dump <span class="nv">$URL</span> <span class="m">2</span>&gt;/dev/null <span class="p">|</span> egrep <span class="s1">'^Žodynas'</span> -A10
+<pre class="code bash"><a name="rest_code_b6873cb309e249dc8ffb41d9a4e5ca24-1"></a><span class="ch">#!/bin/bash</span>
+<a name="rest_code_b6873cb309e249dc8ffb41d9a4e5ca24-2"></a><span class="nv">URL</span><span class="o">=</span><span class="s1">'http://translate.google.lt/translate_t?q='</span><span class="nv">$1</span><span class="s1">'#auto|lt'</span>
+<a name="rest_code_b6873cb309e249dc8ffb41d9a4e5ca24-3"></a>w3m -dump <span class="nv">$URL</span> <span class="m">2</span>&gt;/dev/null <span class="p">|</span> egrep <span class="s1">'^Žodynas'</span> -A10
 </pre>
 <p>Rezultatas gaunasi toks:</p>
 <pre class="literal-block">test.sh shell
@@ -113,15 +113,15 @@ awk, ne gana to, perl dirba labai greitai:</p>
 turėti kiek daugiau žinių, nei su sed.</p>
 <p>Perl gali puikiausiai apdoroti tekstinius duomenis, o rezultatą įrašyti į
 duomenų bazę ar panašiai, kaip tai padaryta šiame pavyzdyje:</p>
-<pre class="code perl"><a name="rest_code_4e6092155aa04ba6ae7f9286a8e81861-1"></a><span class="ch">#!/usr/bin/perl -nl</span>
-<a name="rest_code_4e6092155aa04ba6ae7f9286a8e81861-2"></a>
-<a name="rest_code_4e6092155aa04ba6ae7f9286a8e81861-3"></a><span class="k">BEGIN</span> <span class="p">{</span>
-<a name="rest_code_4e6092155aa04ba6ae7f9286a8e81861-4"></a>    <span class="k">use</span> <span class="nn">DBI</span><span class="p">;</span>
-<a name="rest_code_4e6092155aa04ba6ae7f9286a8e81861-5"></a>    <span class="k">our</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="nn">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span><span class="s">"dbi:SQLite:dbname=/tmp/lines.db"</span><span class="p">);</span>
-<a name="rest_code_4e6092155aa04ba6ae7f9286a8e81861-6"></a>    <span class="k">our</span> <span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$dbh</span><span class="o">-&gt;</span><span class="n">prepare</span><span class="p">(</span><span class="s">"INSERT INTO lines VALUES (?)"</span><span class="p">);</span>
-<a name="rest_code_4e6092155aa04ba6ae7f9286a8e81861-7"></a><span class="p">}</span>
-<a name="rest_code_4e6092155aa04ba6ae7f9286a8e81861-8"></a>
-<a name="rest_code_4e6092155aa04ba6ae7f9286a8e81861-9"></a><span class="nv">$sth</span><span class="o">-&gt;</span><span class="n">execute</span><span class="p">(</span><span class="nv">$_</span><span class="p">);</span>
+<pre class="code perl"><a name="rest_code_d76ffdf7fe404b4e886d86e3e94e13ca-1"></a><span class="ch">#!/usr/bin/perl -nl</span>
+<a name="rest_code_d76ffdf7fe404b4e886d86e3e94e13ca-2"></a>
+<a name="rest_code_d76ffdf7fe404b4e886d86e3e94e13ca-3"></a><span class="k">BEGIN</span> <span class="p">{</span>
+<a name="rest_code_d76ffdf7fe404b4e886d86e3e94e13ca-4"></a>    <span class="k">use</span> <span class="nn">DBI</span><span class="p">;</span>
+<a name="rest_code_d76ffdf7fe404b4e886d86e3e94e13ca-5"></a>    <span class="k">our</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="nn">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span><span class="s">"dbi:SQLite:dbname=/tmp/lines.db"</span><span class="p">);</span>
+<a name="rest_code_d76ffdf7fe404b4e886d86e3e94e13ca-6"></a>    <span class="k">our</span> <span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$dbh</span><span class="o">-&gt;</span><span class="n">prepare</span><span class="p">(</span><span class="s">"INSERT INTO lines VALUES (?)"</span><span class="p">);</span>
+<a name="rest_code_d76ffdf7fe404b4e886d86e3e94e13ca-7"></a><span class="p">}</span>
+<a name="rest_code_d76ffdf7fe404b4e886d86e3e94e13ca-8"></a>
+<a name="rest_code_d76ffdf7fe404b4e886d86e3e94e13ca-9"></a><span class="nv">$sth</span><span class="o">-&gt;</span><span class="n">execute</span><span class="p">(</span><span class="nv">$_</span><span class="p">);</span>
 </pre>
 </div>
 </div>
@@ -137,7 +137,7 @@ duomenų bazę ar panašiai, kaip tai padaryta šiame pavyzdyje:</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

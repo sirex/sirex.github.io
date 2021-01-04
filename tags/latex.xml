@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about latex)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/latex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Mon, 02 Nov 2020 09:31:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip pateiktis kuria tikri vyrai!</title><link>https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Paskutiniu metu teko paruošti kelias &lt;a class="reference external" href="http://www.likit.lt/term/p/pateiktis.html"&gt;pateiktis&lt;/a&gt;, vieną darbe, kitą &lt;a class="reference external" href="http://www.ubuntu.lt/node/522"&gt;OpenCamp
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about latex)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/latex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Mon, 04 Jan 2021 19:26:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip pateiktis kuria tikri vyrai!</title><link>https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Paskutiniu metu teko paruošti kelias &lt;a class="reference external" href="http://www.likit.lt/term/p/pateiktis.html"&gt;pateiktis&lt;/a&gt;, vieną darbe, kitą &lt;a class="reference external" href="http://www.ubuntu.lt/node/522"&gt;OpenCamp
 renginiui&lt;/a&gt;. Nusprendžiau pasidalinti
 patirtimi, kaip paprastai sukurti pateiktis naudojant :math:LaTeX beamer
 klasę.&lt;/p&gt;
@@ -35,39 +35,39 @@ pasirinkite: File - New. Tada Wizard - Quick Start. Atsiradusiame lange
 nurodykite tokius duomenis:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image1" src="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/files/texmaker-quickstart.png"&gt;&lt;/p&gt;
 &lt;p&gt;Kai paspausite OK, Texmaker sugeneruos dokumento griaučius:&lt;/p&gt;
-&lt;pre class="code latex"&gt;&lt;a name="rest_code_8de94bf9b7814ec480b5a8ec2231631b-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="na"&gt;[12pt,a4paper]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;beamer&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_8de94bf9b7814ec480b5a8ec2231631b-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[utf8x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;inputenc&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_8de94bf9b7814ec480b5a8ec2231631b-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;ucs&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_8de94bf9b7814ec480b5a8ec2231631b-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mantas Zimnickas&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_8de94bf9b7814ec480b5a8ec2231631b-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_8de94bf9b7814ec480b5a8ec2231631b-6"&gt;&lt;/a&gt;•
-&lt;a name="rest_code_8de94bf9b7814ec480b5a8ec2231631b-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;pre class="code latex"&gt;&lt;a name="rest_code_a33ca33a25e543f3a79a7c3ad42c12f2-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="na"&gt;[12pt,a4paper]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;beamer&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_a33ca33a25e543f3a79a7c3ad42c12f2-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[utf8x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;inputenc&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_a33ca33a25e543f3a79a7c3ad42c12f2-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;ucs&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_a33ca33a25e543f3a79a7c3ad42c12f2-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mantas Zimnickas&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_a33ca33a25e543f3a79a7c3ad42c12f2-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_a33ca33a25e543f3a79a7c3ad42c12f2-6"&gt;&lt;/a&gt;•
+&lt;a name="rest_code_a33ca33a25e543f3a79a7c3ad42c12f2-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Nepamirškite įrašyti dvi eilutes, kurių pagalba galėsite rašyti lietuviškai:&lt;/p&gt;
-&lt;pre class="code latex"&gt;&lt;a name="rest_code_3ca5ba9d99894f0fbdbea991d7c9615c-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[L7x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontenc&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_3ca5ba9d99894f0fbdbea991d7c9615c-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[lithuanian]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;babel&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;pre class="code latex"&gt;&lt;a name="rest_code_4340372bba3d4c779a49b741a2823112-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[L7x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontenc&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_4340372bba3d4c779a49b741a2823112-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[lithuanian]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;babel&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;div class="section" id="pirmoji-pateiktis"&gt;
 &lt;h2&gt;Pirmoji pateiktis&lt;/h2&gt;
 &lt;p&gt;Štai pilnas pateikties pavyzdys su dviem skaidrėmis:&lt;/p&gt;
-&lt;pre class="code latex"&gt;&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="na"&gt;[12pt,a4paper]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;beamer&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[utf8x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;inputenc&lt;span class="nb"&gt;}&lt;/span&gt; &lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;ucs&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[L7x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontenc&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[lithuanian]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;babel&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mantas Zimnickas&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;\title&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mano pirmoji pateiktis&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-9"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-10"&gt;&lt;/a&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-11"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;\frame&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\titlepage&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-13"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-14"&gt;&lt;/a&gt;&lt;span class="k"&gt;\frame&lt;/span&gt; &lt;span class="nb"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;\frametitle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Sveikas pasauli!&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-16"&gt;&lt;/a&gt;    Mano pirmoji pateiktis.
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-17"&gt;&lt;/a&gt;&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-18"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7ea13e09f4724c4088bdc1cefc19d8c7-19"&gt;&lt;/a&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;pre class="code latex"&gt;&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="na"&gt;[12pt,a4paper]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;beamer&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[utf8x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;inputenc&lt;span class="nb"&gt;}&lt;/span&gt; &lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;ucs&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[L7x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontenc&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[lithuanian]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;babel&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mantas Zimnickas&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;\title&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mano pirmoji pateiktis&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-9"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-10"&gt;&lt;/a&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-11"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;\frame&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\titlepage&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-13"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-14"&gt;&lt;/a&gt;&lt;span class="k"&gt;\frame&lt;/span&gt; &lt;span class="nb"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;\frametitle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Sveikas pasauli!&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-16"&gt;&lt;/a&gt;    Mano pirmoji pateiktis.
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-17"&gt;&lt;/a&gt;&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-18"&gt;&lt;/a&gt;
+&lt;a name="rest_code_1ce763b436fb4969b4e3ecffa907b8f7-19"&gt;&lt;/a&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Išsaugokite šį dokumentą į atskirą katalogą ir naudokitės aukščiau aprašytomis
 rodyklėmis.&lt;/p&gt;
 &lt;/div&gt;
@@ -78,7 +78,7 @@ rodyklėmis.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.pletscher.org/writings/latex/beamerthemes.php"&gt;http://www.pletscher.org/writings/latex/beamerthemes.php&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Temą nurodyti galima taip:&lt;/p&gt;
-&lt;pre class="code latex"&gt;&lt;a name="rest_code_1e632978472049c58f9ad4bd598f4322-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usetheme&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Malmoe&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;pre class="code latex"&gt;&lt;a name="rest_code_8781c857a5d742878aeac49f9f444632-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usetheme&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Malmoe&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;div class="section" id="mano-pateiktis"&gt;
 &lt;h2&gt;Mano pateiktis&lt;/h2&gt;

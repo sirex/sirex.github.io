@@ -32,7 +32,7 @@ Zsh failų sąrašo išskleidimui galima naudoti modifikatorius, kuriuos r">
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
-         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">ZSH Tips</h1>
+         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><span class="caps">ZSH</span> Tips</h1>
         <div class="metadata">
             <p class="dateline">
             <time class="published dt-published" datetime="2011-10-06T00:00:00+03:00" itemprop="datePublished" title="2011-10-06 00:00">2011-10-06 00:00</time>
@@ -55,10 +55,10 @@ Zsh failų sąrašo išskleidimui galima naudoti modifikatorius, kuriuos r">
 nurodyti skliausteliuose. Pavyzdys:</p>
 <pre class="literal-block">ls -lt **/*.rst(.om[0,8])</pre>
 <p>Pavyzdyje <code class="docutils literal">**/</code> rekursyviai išskleis visus failus ir katalogus su
-pakatalogiais ir failais juose. <code class="docutils literal">*.rst</code> išskleidžia bet kokius failus ar
-katalogus, su galūne <code class="docutils literal">.rst</code>. Toliau skliausteliuose nurodomi modifikatoriai,
-iš kurių <code class="docutils literal">.</code> išskleidžia tik paprastus failus, <code class="docutils literal">om</code> rezultatą rūšiuoja
-pagal failo keitimo datą, <code class="docutils literal">[0,8]</code> išskleidžia tik pirmus aštuonis failus.</p>
+pakatalogiais ir failais juose. <code class="docutils literal">*.rst</code> išskleidžia bet kokius failus ar
+katalogus, su galūne <code class="docutils literal">.rst</code>. Toliau skliausteliuose nurodomi modifikatoriai,
+iš kurių <code class="docutils literal">.</code> išskleidžia tik paprastus failus, <code class="docutils literal">om</code> rezultatą rūšiuoja
+pagal failo keitimo datą, <code class="docutils literal">[0,8]</code> išskleidžia tik pirmus aštuonis failus.</p>
 <div class="section" id="failo-tipo-modifikatoriai">
 <h3>Failo tipo modifikatoriai<a href="#failo-tipo-modifikatoriai" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <table>
@@ -85,7 +85,7 @@ pagal failo keitimo datą, <code class="docutils literal">[0,8]</code> išskleid
 </tr>
 <tr>
 <td><p><code class="docutils literal">*(p)</code></p></td>
-<td><p>tik named pipe (FIFO)</p></td>
+<td><p>tik named pipe (<span class="caps">FIFO</span>)</p></td>
 </tr>
 <tr>
 <td><p><code class="docutils literal"><span class="pre">*(*)</span></code></p></td>
@@ -151,8 +151,8 @@ pagal failo keitimo datą, <code class="docutils literal">[0,8]</code> išskleid
 </table>
 <p>Pagal tiksliai nurodytas failų teises:</p>
 <pre class="literal-block">*(fCHMOD)</pre>
-<p>Išskleisti tik tuos failus, kurių teisės tiksliai atitinka nurodytą CHMOD
-teisių aprašą. CHMOD turi būti septintainis skaičius, pavyzdžiui: <em>0755</em>.</p>
+<p>Išskleisti tik tuos failus, kurių teisės tiksliai atitinka nurodytą <span class="caps">CHMOD</span>
+teisių aprašą. <span class="caps">CHMOD</span> turi būti septintainis skaičius, pavyzdžiui: <em>0755</em>.</p>
 <p>Pagal specialiąsias failų teises:</p>
 <table>
 <colgroup>
@@ -191,11 +191,11 @@ teisių aprašą. CHMOD turi būti septintainis skaičius, pavyzdžiui: <em>0755
 </tr>
 <tr>
 <td><p><code class="docutils literal">*(uUID)</code></p></td>
-<td><p>savininkas yra UID</p></td>
+<td><p>savininkas yra <span class="caps">UID</span></p></td>
 </tr>
 <tr>
 <td><p><code class="docutils literal">*(gGID)</code></p></td>
-<td><p>savininkas yra GID</p></td>
+<td><p>savininkas yra <span class="caps">GID</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -268,7 +268,7 @@ laiko parametrą.</p>
 </div>
 <div class="section" id="naudotu-komandu-pernaudojimas">
 <h2>Naudotų komandų pernaudojimas<a href="#naudotu-komandu-pernaudojimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Pernaudoti anksčiau panaudotas komandas, galima šauktuko (<code class="docutils literal">!</code>) simbolio
+<p>Pernaudoti anksčiau panaudotas komandas, galima šauktuko (<code class="docutils literal">!</code>) simbolio
 pagalba. Pavyzdžiai:</p>
 <table>
 <colgroup>
@@ -294,7 +294,7 @@ pagalba. Pavyzdžiai:</p>
 </tr>
 <tr>
 <td><p><code class="docutils literal"><span class="pre">!?ls</span></code></p></td>
-<td><p>paskutinė komanda iš komandų istorijos, prasidedanti <code class="docutils literal">ls</code></p></td>
+<td><p>paskutinė komanda iš komandų istorijos, prasidedanti <code class="docutils literal">ls</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -422,15 +422,15 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:</p>
 <tbody>
 <tr>
 <td><p><code class="docutils literal">:s</code></p></td>
-<td><p>randa ir keičia žodžius, pvz.: <code class="docutils literal">:s/abc/xyz/</code></p></td>
+<td><p>randa ir keičia žodžius, pvz.: <code class="docutils literal">:s/abc/xyz/</code></p></td>
 </tr>
 <tr>
 <td><p><code class="docutils literal">:&amp;</code></p></td>
-<td><p>kartoti paskutinį <code class="docutils literal">:s</code> keitinį dar kartą</p></td>
+<td><p>kartoti paskutinį <code class="docutils literal">:s</code> keitinį dar kartą</p></td>
 </tr>
 <tr>
 <td><p><code class="docutils literal">:g</code></p></td>
-<td><p>globaliai taikyti <code class="docutils literal">:s</code> arba <code class="docutils literal">&amp;</code></p></td>
+<td><p>globaliai taikyti <code class="docutils literal">:s</code> arba <code class="docutils literal">&amp;</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -459,7 +459,7 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

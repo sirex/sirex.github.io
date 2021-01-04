@@ -44,7 +44,7 @@ problemų. Šį kartą vėl susidūriau su panašia problem">
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>Kartas nuo karto, vis tenka susidurti su SAMBA serveriais, tiksliau su M$
+<p>Kartas nuo karto, vis tenka susidurti su <span class="caps">SAMBA</span> serveriais, tiksliau su M$
 Windows naudotojų šarinamais failais. Dažniausiai su tuo būna įvairiausių
 problemų. Šį kartą vėl susidūriau su panašia problema.</p>
 <p>Papasakosiu viską nuosekliai, kaip naudojantis komandine eilute, pilnavertiškai
@@ -52,14 +52,14 @@ prieiti prie pašarintų failų.</p>
 <p>Pirmas dalykas - reikia įsidiegti reikalingus paketus:</p>
 <pre class="literal-block">$ sudo apt-get install smbclient smbfs</pre>
 <p>Toliau - tikrinam tinkle esančius kompiuterius, kurie teikia vienokas ar
-kitokias SAMBA paslaugas:</p>
+kitokias <span class="caps">SAMBA</span> paslaugas:</p>
 <pre class="literal-block">$ smbtree -U%</pre>
 <p>Šios komandos pagalba paprasčiausiai bus grąžintas sąrašas visų kompiuterių
 tinkle, kurie turi kokių nors pašarintų failų, spausdintuvų ir pan. Parametras
 <strong>-U%</strong> nurodo, kad jungiamasis be jokio naudotojo, kaip svečias. Jei norite
 jungtis tam tikru naudotojų, tada šis parametras turėtu atrodyti taip:
 <strong>-Unaudotojovardas%slaptazodis</strong>.</p>
-<p>Kartais prireikia sužinoti tinklo naudotojo IP adresą, pagal jo sambos vardą,
+<p>Kartais prireikia sužinoti tinklo naudotojo <span class="caps">IP</span> adresą, pagal jo sambos vardą,
 tai galima sužinoti tokios komandos pagalba:</p>
 <pre class="literal-block">$ nmblookup KOMPIUITERIO_PAVADINIMAS</pre>
 <p>Kai jau žinomas kompiuterio pavadinimas, prie kurio galima jungtis, tada reikia
@@ -95,7 +95,7 @@ būtų lokalus jūsų kompiuterio katalogas. Toliau galite spausit F2 ir atsidar
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

@@ -85,12 +85,12 @@ kompiuteryje, laiškų šifravimas tikrai rekomenduojamas.</p>
 encfs -f ~/.secure/mail ~/.mail</pre>
 <p>Sukūrus užšifruotą katalogą, slaptažodį, kurį nurodėte, įveskite į raktinę, taip:</p>
 <pre class="literal-block">keyring encfs mail --set</pre>
-<p>Visi failai esantys <code class="docutils literal"><span class="pre">~/.mail</span></code> kataloge bus užšifruoti, kad laiškus būtų
+<p>Visi failai esantys <code class="docutils literal"><span class="pre">~/.mail</span></code> kataloge bus užšifruoti, kad laiškus būtų
 galima atsiūsti ir skaityti, paleiskite šią komandą:</p>
 <pre class="literal-block">encfs --ondemand --idle=5 --extpass='keyring encfs mail' ~/.secure/mail ~/.mail</pre>
 <p>Ši komanda gali veikti kaip demonas, galite ją paleisti užsikrovus
 kompiuteriui. Laiškų katalogas visą laiką bus užrakintas, nebent kas nors
-bandys kreiptis į tą katalogą, kai tai atsitiks, <code class="docutils literal">encfs</code> kreipsis į
+bandys kreiptis į tą katalogą, kai tai atsitiks, <code class="docutils literal">encfs</code> kreipsis į
 raktinę slaptažodžio, gavus slaptažodį, automatiškai, penkioms minutėms
 atrakins laiškų katalogą, o po penkių minučių vėl užrakins.</p>
 </div>
@@ -107,10 +107,10 @@ reikia dviejų konfigūracijos failų:</p>
 <p>O taip pat įdiegti <a class="reference external" href="http://offlineimap.org/">offlineimap</a>:</p>
 <pre class="literal-block">sudo apt-get install offlineimap</pre>
 <p>Tokia <a class="reference external" href="http://offlineimap.org/">offlineimap</a> konfigūracija, atsiūs laiškus, kas penkias minutes,
-išsaugos juos užšifruotame <code class="docutils literal">~/mail</code> kataloge, <a class="reference external" href="http://cr.yp.to/proto/maildir.html">Maildir</a> formatu.
+išsaugos juos užšifruotame <code class="docutils literal">~/mail</code> kataloge, <a class="reference external" href="http://cr.yp.to/proto/maildir.html">Maildir</a> formatu.
 Kreipiantis į Gmail serverį, slaptažodį ims iš raktinės.</p>
 <p><a class="reference external" href="http://offlineimap.org/">offlineimap</a> leidžia filtruoti ir pervadinti atsiunčiamus katalogus, jūsų
-atveju, katalogai gali būti pavadinti kitaip, todėl gal tekti pasitaisyti
+atveju, katalogai gali būti pavadinti kitaip, todėl gal tekti pasitaisyti
 <code class="docutils literal">nametrans</code> ir <code class="docutils literal">folderfilter</code> funkcijas <code class="docutils literal"><span class="pre">~/.offlineimap.py</span></code> faile.</p>
 <p>Patikrinti, ar katalogų filtravimas ir pervadinimas gerai veikia, galite
 naudoti tokią komandą:</p>
@@ -134,7 +134,7 @@ git checkout v6.5.4
 <p>Greitai laiškų paieškai pasirinkau <a class="reference external" href="http://notmuchmail.org/">notmuch</a> laiškų indeksavimo variklį.
 Kito pasirinkimo ir nebuvo, kadangi nuo šio variklio tiesiogiai yra
 priklausomas <a class="reference external" href="https://github.com/pazz/alot">alot</a> el. pašto klientas.</p>
-<p>Mano konfigūracijos failas atrodo taip <code class="docutils literal"><span class="pre">~/.notmuch-config</span></code>:</p>
+<p>Mano konfigūracijos failas atrodo taip <code class="docutils literal"><span class="pre">~/.notmuch-config</span></code>:</p>
 <blockquote>
 <p><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/.notmuch-config">https://bitbucket.org/sirex/home/src/default/.notmuch-config</a></p>
 </blockquote>
@@ -158,7 +158,7 @@ pasirašiau savo laiškų išsiuntimo skriptą:</p>
 </blockquote>
 <p>Šis skriptas slaptažodį ima iš raktinės, taip pat, kaip ir raktinės skriptas:</p>
 <pre class="literal-block">keyring gmail vardenis.pavardenis@gmail.com</pre>
-<p>Beje, rekomenduoju išbandyti ir <a class="reference external" href="http://msmtp.sourceforge.net/">msmtp</a> MUA, kuris atrodo daro lygiai tą patį ir
+<p>Beje, rekomenduoju išbandyti ir <a class="reference external" href="http://msmtp.sourceforge.net/">msmtp</a> <span class="caps">MUA</span>, kuris atrodo daro lygiai tą patį ir
 tikriausiai geriau.</p>
 </div>
 <div class="section" id="el-pasto-klientas">
@@ -215,7 +215,7 @@ galite jį išjungti taip:</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

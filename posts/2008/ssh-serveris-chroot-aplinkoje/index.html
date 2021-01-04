@@ -32,7 +32,7 @@ konfigūruodamas vieną kompą su Ubuntu Server Hardy Herron O">
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
-         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">SSH serveris chroot aplinkoje</h1>
+         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><span class="caps">SSH</span> serveris chroot aplinkoje</h1>
         <div class="metadata">
             <p class="dateline">
             <time class="published dt-published" datetime="2008-12-23T09:06:00+02:00" itemprop="datePublished" title="2008-12-23 09:06">2008-12-23 09:06</time>
@@ -48,7 +48,7 @@ konfigūruodamas vieną kompą su Ubuntu Server Hardy Herron O">
     <div>
 <p>Jau seniai esu girdėjęs ir daugiau mažiau žinojau chroot aplinkos veikimo
 principus, tačiau pačiam to dar neteko daryti. Prieš kelias dienas
-konfigūruodamas vieną kompą su Ubuntu Server Hardy Herron OS, pagaliau teko ir
+konfigūruodamas vieną kompą su Ubuntu Server Hardy Herron <span class="caps">OS</span>, pagaliau teko ir
 man patirti šį malonumą, chroot aplinkos pakūrimą… :) Pasirodo tai kur kas
 paprasčiau nei maniau! Tai gi pasidalinsiu patirtimi ir su kitais.</p>
 <p>Viską pavyko padaryti sekant vieno <a class="reference external" href="http://ubuntuforums.org/showthread.php?t=408019">ubuntuforums.org įrašo nuorodomis</a>. Labai neišsiplėsdamas
@@ -61,7 +61,7 @@ sudo echo "hoary /chroot" &gt;&gt; /etc/dchroot.conf
 sudo debootstrap --arch i386 hardy /chroot/ http://lt.litnet.lt/pub/ubuntu
 sudo chroot /chroot/ dpkg-reconfigure locales</pre>
 <p>Su šiuo žingsniu manu viskas labai aišku ir paprasta. Puikiojo įrankio
-debootstrap dėka, savo OS viduje sukuriama nauja sistema, o tiksliau
+debootstrap dėka, savo <span class="caps">OS</span> viduje sukuriama nauja sistema, o tiksliau
 paprasčiausiai parsiunčiami jos failai. Taip pat nurodžiau Lietuvišką Ubuntu
 repozitoriumo serverį, ko dėka, su gera interneto linija į Lietuva, šis
 procesas vyks labai greitai.</p>
@@ -107,9 +107,9 @@ echo "/sbin/chrootshell" &gt;&gt; /etc/shells</pre>
 </div>
 <div class="section" id="id5">
 <h2>6. Žingsnis<a href="#id5" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Galiausiai chroot išorėje, faile <code class="docutils literal">/etc/passwd</code>, visiems naudotojams, kurie
+<p>Galiausiai chroot išorėje, faile <code class="docutils literal">/etc/passwd</code>, visiems naudotojams, kurie
 prisijungimo metu turės būti nukreipiami į chroot aplinką, reikia pakeisti namų
-katalogą į <code class="docutils literal">/chroot</code>, o shellą į <code class="docutils literal">/sbin/chrootshell</code>.</p>
+katalogą į <code class="docutils literal">/chroot</code>, o shellą į <code class="docutils literal">/sbin/chrootshell</code>.</p>
 <p>Pavyzdys:</p>
 <pre class="literal-block">petras:1000:1000:Petras Petraitis:/chroot:/sbin/chrootshell</pre>
 </div>
@@ -119,27 +119,27 @@ katalogą į <code class="docutils literal">/chroot</code>, o shellą į <code c
 tikrais duomenimis, su tikru, chroot viduje egzistuojančiu namų katalogu ir shellu.</p>
 <p>Pavyzdys:</p>
 <pre class="literal-block">vardas:1000:1000:Vardas Pavardenis:/home/vardas:/bin/bash</pre>
-<p>Jei naudotojus kūrėte, tiesiog sukurdami įrašą <code class="docutils literal">/etc/passwd</code> failo viduje,
+<p>Jei naudotojus kūrėte, tiesiog sukurdami įrašą <code class="docutils literal">/etc/passwd</code> failo viduje,
 tada kiekvienam sukurtam naudotojui reikia sukurti ir po namų katalogą, tam
 puikiai tinka toks paprastas shell skriptas, kuris turėti būti paleistas chroot išorėje:</p>
-<pre class="code bash"><a name="rest_code_22851a39a18b4dfdb6680c7ea0b62662-1"></a>awk -F <span class="s2">":"</span> <span class="s1">'/chrootshell/ { print $1 }'</span> /etc/passwd <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> chrootusr <span class="p">;</span> <span class="k">do</span>
-<a name="rest_code_22851a39a18b4dfdb6680c7ea0b62662-2"></a>    <span class="k">if</span> <span class="o">[</span> ! -d /chroot/home/<span class="nv">$chrootusr</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<a name="rest_code_22851a39a18b4dfdb6680c7ea0b62662-3"></a>        <span class="nb">echo</span> <span class="s2">"Creating home dir for: </span><span class="nv">$chrootusr</span><span class="s2">"</span>
-<a name="rest_code_22851a39a18b4dfdb6680c7ea0b62662-4"></a>        sudo mkdir -p /chroot/home/<span class="nv">$chrootusr</span>
-<a name="rest_code_22851a39a18b4dfdb6680c7ea0b62662-5"></a>        sudo chown <span class="nv">$chrootusr</span>:<span class="nv">$chrootusr</span> /chroot/home/<span class="nv">$chrootusr</span>
-<a name="rest_code_22851a39a18b4dfdb6680c7ea0b62662-6"></a>        sudo chmod <span class="m">700</span> /chroot/home/<span class="nv">$chrootusr</span>
-<a name="rest_code_22851a39a18b4dfdb6680c7ea0b62662-7"></a>    <span class="k">fi</span>
-<a name="rest_code_22851a39a18b4dfdb6680c7ea0b62662-8"></a><span class="k">done</span>
+<pre class="code bash"><a name="rest_code_ca209e9ffc1e44f7a94ff474fd4a07b9-1"></a>awk -F <span class="s2">":"</span> <span class="s1">'/chrootshell/ { print $1 }'</span> /etc/passwd <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> chrootusr <span class="p">;</span> <span class="k">do</span>
+<a name="rest_code_ca209e9ffc1e44f7a94ff474fd4a07b9-2"></a>    <span class="k">if</span> <span class="o">[</span> ! -d /chroot/home/<span class="nv">$chrootusr</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_ca209e9ffc1e44f7a94ff474fd4a07b9-3"></a>        <span class="nb">echo</span> <span class="s2">"Creating home dir for: </span><span class="nv">$chrootusr</span><span class="s2">"</span>
+<a name="rest_code_ca209e9ffc1e44f7a94ff474fd4a07b9-4"></a>        sudo mkdir -p /chroot/home/<span class="nv">$chrootusr</span>
+<a name="rest_code_ca209e9ffc1e44f7a94ff474fd4a07b9-5"></a>        sudo chown <span class="nv">$chrootusr</span>:<span class="nv">$chrootusr</span> /chroot/home/<span class="nv">$chrootusr</span>
+<a name="rest_code_ca209e9ffc1e44f7a94ff474fd4a07b9-6"></a>        sudo chmod <span class="m">700</span> /chroot/home/<span class="nv">$chrootusr</span>
+<a name="rest_code_ca209e9ffc1e44f7a94ff474fd4a07b9-7"></a>    <span class="k">fi</span>
+<a name="rest_code_ca209e9ffc1e44f7a94ff474fd4a07b9-8"></a><span class="k">done</span>
 </pre>
 </div>
 <div class="section" id="id7">
 <h2>7. Žingsnis<a href="#id7" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Galiausiai bandykite jungtis, kaip chroot įkalintas naudotojas:</p>
 <pre class="literal-block">ssh petras@localhost</pre>
-<p>Tai tiek informacijos. Viskas labai paprastai pasidaro. Pasinaudojant
+<p>Tai tiek informacijos. Viskas labai paprastai pasidaro. Pasinaudojant
 <code class="docutils literal">debootstrap</code> ir <code class="docutils literal">chroot</code> įrankiais, labai nesunkiai, galima susikurti
 testinę aplinką, kuri nedarys jokios įtakos jūsų darbinei aplinkai ir ten
-testuotis kokias nors serverio konfigūracijas ar panašiai. <code class="docutils literal">debootstrap</code>
+testuotis kokias nors serverio konfigūracijas ar panašiai. <code class="docutils literal">debootstrap</code>
 įrankio sukurta aplinka užima vos 300 Mb disko vietos, su minimalia Ubuntu
 serverio instaliacija. Na, tikrai puikus dalykas… :)</p>
 </div>
@@ -162,7 +162,7 @@ serverio instaliacija. Na, tikrai puikus dalykas… :)</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

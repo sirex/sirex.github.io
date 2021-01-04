@@ -50,7 +50,7 @@ kaip visą tai būtų galima įgyvendinti atsižvelgiant į turimą biudžetą i
 techninę specifikaciją.</p>
 <div class="section" id="apie-viesaji-pirkima">
 <h2>Apie viešąjį pirkimą<a href="#apie-viesaji-pirkima" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Terminai ir sumos (<em>visos sumos be PVM</em>):</p>
+<p>Terminai ir sumos (<em>visos sumos be <span class="caps">PVM</span></em>):</p>
 <ul class="simple">
 <li><p><strong>2019–02–12</strong> paskelbtas viešasis pirkimas</p></li>
 <li><p><strong>2019–03–19</strong> pasiūlymų teikimo pabaiga</p></li>
@@ -80,20 +80,20 @@ numatytas lėšas reikės dalintis kartu atveriant ir penkių partnerių duomeni
 Tai pačiam portalui lieka gan nedidelė biudžeto dalis.</p>
 <p>Papildomai bus reikalinga integracija su <a class="reference external" href="https://www.europeandataportal.eu/lt/homepage">Europos duomenų portalu</a>, reikės
 perkelti <a class="reference external" href="http://opendata.gov.lt/">opendata.gov.lt</a> duomenis į naują portalą, reikės integruoti
-<a class="reference external" href="https://www.geoportal.lt/">geoportal.lt</a> duomenų aprašus, reikės integruotis su <a class="reference external" href="https://ivpk.lrv.lt/lt/veiklos-sritys-1/viisp">VIISP</a> diegiant SSO
-(<em>Single Sign-On</em>). Dar yra paminėta integracija su <a class="reference external" href="https://ivpk.lrv.lt/lt/veiklos-sritys-1/tarpzinybine-mokestiniu-duomenu-saugykla">TDS</a>, bet abejoju ar ji
+<a class="reference external" href="https://www.geoportal.lt/">geoportal.lt</a> duomenų aprašus, reikės integruotis su <a class="reference external" href="https://ivpk.lrv.lt/lt/veiklos-sritys-1/viisp"><span class="caps">VIISP</span></a> diegiant <span class="caps">SSO</span>
+(<em>Single Sign-On</em>). Dar yra paminėta integracija su <a class="reference external" href="https://ivpk.lrv.lt/lt/veiklos-sritys-1/tarpzinybine-mokestiniu-duomenu-saugykla"><span class="caps">TDS</span></a>, bet abejoju ar ji
 įmanoma, nes bent jau man neteko girdėti, kad su jais būtų bendradarbiaujama,
-aš pats bandžiau užmegzti kontaktą su TDS specifikacijos rengėjais, bet jie
+aš pats bandžiau užmegzti kontaktą su <span class="caps">TDS</span> specifikacijos rengėjais, bet jie
 buvo labai užimti ir nenoriai bendravo, atsakymus gaudavau po mėnesio.</p>
 </div>
 <div class="section" id="apie-technine-specifikacija">
 <h2>Apie techninę specifikaciją<a href="#apie-technine-specifikacija" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Pirmiausia noriu pasidalinti tuo, kas mane nudžiugino, o po to pereisiu prie mažiau džiuginančių dalykų. Buvau nustebęs, kad techninės specifikacijos regėjai atsižvelgė į nemažą dalį mano pastabų. Valio!</p>
-<p>Integracija su TDS nėra būtina:</p>
+<p>Integracija su <span class="caps">TDS</span> nėra būtina:</p>
 <blockquote>
-<p>Nors tiesioginės duomenų mainų sąveikos tarp Portalo ir TDS nenumatoma (dėl
+<p>Nors tiesioginės duomenų mainų sąveikos tarp Portalo ir <span class="caps">TDS</span> nenumatoma (dėl
 skirtingų duomenų saugos ir konfidencialumo reikalavimų), tačiau
-numatytinas sukurtų TDS funkcinių sprendimų atkartojimas įgyvendinant
+numatytinas sukurtų <span class="caps">TDS</span> funkcinių sprendimų atkartojimas įgyvendinant
 Portalo funkcionalumus pagal pasirinktos informacinių technologijų
 platformos ir infrastruktūros galimybes.</p>
 </blockquote>
@@ -102,26 +102,26 @@ platformos ir infrastruktūros galimybes.</p>
 <p>Numatyta, kad tiekėjas turėtų pateikti visą kodo keitimų istoriją (jei
 teisingai supratau):</p>
 <blockquote>
-<p>ADP kūrimui turi būti naudojama atviro kodo platforma, visi pakeitimai
+<p><span class="caps">ADP</span> kūrimui turi būti naudojama atviro kodo platforma, visi pakeitimai
 perduodami, aprašomi ir publikuojami Git arba analogiškoje platformoje.</p>
 </blockquote>
-<p>Agile yra privalomas ir tai taikoma ne tik ADP kūrimui, bet ir partnerių
+<p>Agile yra privalomas ir tai taikoma ne tik <span class="caps">ADP</span> kūrimui, bet ir partnerių
 duomenų atvėrimui:</p>
 <blockquote>
-<p>ADP turi būti kuriama iteraciniu (angl. agile) būdu.</p>
+<p><span class="caps">ADP</span> turi būti kuriama iteraciniu (angl. agile) būdu.</p>
 </blockquote>
-<p>Dar vienas džiaugsmą keliantis reikalavimas, CI/CD yra privalomas:</p>
+<p>Dar vienas džiaugsmą keliantis reikalavimas, <span class="caps">CI</span>/<span class="caps">CD</span> yra privalomas:</p>
 <blockquote>
-<p>ADP turi būti kuriamas remiantis tęstinio integravimo/tęstinio diegimo
+<p><span class="caps">ADP</span> turi būti kuriamas remiantis tęstinio integravimo/tęstinio diegimo
 principais (angl. Continuous Integration/Continuous Deployment), t. y.
-aktuali ADP versija turi būti visada prieinama testavimui Projekto
+aktuali <span class="caps">ADP</span> versija turi būti visada prieinama testavimui Projekto
 vykdytojo, Projekto partnerių atstovams ir kitoms naudotojų grupėms.</p>
 </blockquote>
 <p>Įtarimą kelia nurodyta išimtis dėl serverio ir duomenų bazių licencijų:</p>
 <blockquote>
-<p>ADP diegėjas turi pateikti ADP ir transformavimo, bei integracinių
+<p><span class="caps">ADP</span> diegėjas turi pateikti <span class="caps">ADP</span> ir transformavimo, bei integracinių
 komponentų programinės įrangos išeities kodų tekstus bei jų diegimo paketus
-ir/arba naudojimo licencijas, kurios suteikia teisę Projekto vykdytojui ADP
+ir/arba naudojimo licencijas, kurios suteikia teisę Projekto vykdytojui <span class="caps">ADP</span>
 naudoti neribotam naudotojų skaičiui — <strong>ši licencija neturi apimti techninės
 įrangos veikimui būtinų licencijų (serverio licencijos, duomenų bazių
 licencijų)</strong>.</p>
@@ -139,7 +139,7 @@ turėtų būti palikta ir laisvė priimti kitą sprendimą.</p>
 gali daryti. Tai sukelia nereikalingų apribojimų.</p>
 <p>Bet kokiu atveju, techninė specifikacija nėra labai bloga, todėl išlieka
 didžiausias klausimas, kas laimės viešąjį konkursą, ar nebus dempinguojamos
-kainos ar galiausiai ADP projektas netaps tiekėjo įkaitu. Jei tiekėjas bus
+kainos ar galiausiai <span class="caps">ADP</span> projektas netaps tiekėjo įkaitu. Jei tiekėjas bus
 sukalbamas ir nepiktybinis, tada manau tikrai galime turėti aukščiausio lygio
 atvirų duomenų portalą!</p>
 </div>
@@ -151,7 +151,7 @@ atvirų duomenų portalą!</p>
 netobula diagrama, nei jokios diagramos. Mano diagrama atrodo taip: Atvirų
 duomenų portalo komponentų architektūra</p>
 <a class="reference external image-reference" href="../../../images/2019/adp-schema.png"><img alt="/images/2019/adp-schema.thumbnail.png" class="whitebg" src="../../../images/2019/adp-schema.thumbnail.png"></a>
-<p>Visą atvirų duomenų portalą galima pastatyti ant CKAN ir GitLab. GitLab gal būt
+<p>Visą atvirų duomenų portalą galima pastatyti ant <span class="caps">CKAN</span> ir GitLab. GitLab gal būt
 atrodytų kiek neįprastas sprendimas, bet manau tai tikrai veiktų. Vienintelė
 dalis, kuriai neradau jokio gero egzistuojančio sprendimo yra duomenų atvėrimo
 sistema. Į pačią duomenų atvėrimo dalį įeina labai daug specifinio
@@ -165,30 +165,30 @@ ko gero tokio sprendimo nėra. Todėl šiuo atveju manau geriausia pasidaryti sa
 in-house sprendimą, kas diagramose yra pažymėta žalia spalva.</p>
 <p>Veikimo principas būtų toks:</p>
 <ul class="simple">
-<li><p>Gan abstrakčiame <a class="reference external" href="https://www.w3.org/TR/vocab-dcat/">DCAT</a> lygmenyje su duomenų rinkiniais būtų dirbama CKAN aplinkoje.</p></li>
+<li><p>Gan abstrakčiame <a class="reference external" href="https://www.w3.org/TR/vocab-dcat/"><span class="caps">DCAT</span></a> lygmenyje su duomenų rinkiniais būtų dirbama <span class="caps">CKAN</span> aplinkoje.</p></li>
 <li><p>Visas darbų organizavimas ir komunikacija vyktų GitLab užduotyse ir užduočių
 komentaruose. Ten būtų teikiami prašymai, pranešama apie klaidas, balsuojama
 dėl prioritetų ir pan.</p></li>
 <li><p>Darbas objektų ir jų savybių struktūrų lygmenyje vyktų GitLab aplinkoje,
-dirbant su YAML failais, nenaudojant jokių specializuotų naudotojo sąsajų.</p></li>
+dirbant su <span class="caps">YAML</span> failais, nenaudojant jokių specializuotų naudotojo sąsajų.</p></li>
 <li><p>Duomenų kokybės gerinimo ir transformavimo dalykai iš dalies būtų padengti
-deklaratyviais aprašais YAML failuose, tačiau kur deklaratyvaus išraiškingumo
+deklaratyviais aprašais <span class="caps">YAML</span> failuose, tačiau kur deklaratyvaus išraiškingumo
 nepakankama, būtų rašomi Python skriptai.</p></li>
-<li><p>Galiausiai visus tuos YAML ir Python skriptus valgytų tarpinė duomenų
+<li><p>Galiausiai visus tuos <span class="caps">YAML</span> ir Python skriptus valgytų tarpinė duomenų
 saugyklą Spinta ir išvalytus duomenis išsaugotų vienoje ar keliose duomenų
 bazėse, priklausomai nuo duomenų pobūdžio.</p></li>
 <li><p>Website dalyje būtų atvaizduojamos įvairios ataskaitos apie duomenų atvėrimo
 esminius rodiklius. Taip pat būtų minimalistinė naudotojo sąsaja duomenims atsisiųsti.</p></li>
 </ul>
-<p>Pasitelkus CKAN ir GitLab, nukristu labai didelė dalis darbų, be to, reikėtų
-žymiai didesnio biudžeto ir daug daugiau laiko, norint pasiekti CKAN ir GitLab lygį.</p>
+<p>Pasitelkus <span class="caps">CKAN</span> ir GitLab, nukristu labai didelė dalis darbų, be to, reikėtų
+žymiai didesnio biudžeto ir daug daugiau laiko, norint pasiekti <span class="caps">CKAN</span> ir GitLab lygį.</p>
 <p>Atsisakius naudotojų sąsajų ir perkeliant sudėtingesnę techninę dalį tiesiai į
-YAML failus, vėl nukrenta didelė dalis gan sudėtingų naudotojo sąsajų kūrimui.
-Žinoma, dalį YAML failuose pateikiamų duomenų galima būtų pateikti ir per
+<span class="caps">YAML</span> failus, vėl nukrenta didelė dalis gan sudėtingų naudotojo sąsajų kūrimui.
+Žinoma, dalį <span class="caps">YAML</span> failuose pateikiamų duomenų galima būtų pateikti ir per
 formas, tačiau manau tai turėtų būti pridėtinis funkcionalumas, jei užtektų laiko.</p>
 <p>Atsisakius visų minėtų dalykų būtų galima koncentruotis į pačių duomenų
 atvėrimą ir jų kokybės gerinimą.</p>
-<p>Be to, dalį darbų jau esu padaręs, CKAN yra <a class="reference external" href="https://github.com/ivpk/opendata.gov.lt">paleistas</a> ir veikia
+<p>Be to, dalį darbų jau esu padaręs, <span class="caps">CKAN</span> yra <a class="reference external" href="https://github.com/ivpk/opendata.gov.lt">paleistas</a> ir veikia
 <a class="reference external" href="https://github.com/ivpk/opendata.gov.lt">ckan.opendata.gov.lt</a> adresu. Duomenys iš senos <a class="reference external" href="http://opendata.gov.lt/">opendata.gov.lt</a> sistemos taip
 pat yra <a class="reference external" href="https://github.com/ivpk/opendata.gov.lt-mysql-import">perkelti</a>. Integracija su <a class="reference external" href="https://www.geoportal.lt/">geoportal.lt</a> jau padaryta, nors reikėtų
 prie to dar šiek tiek padirbėti, kad atitikti Europos duomenų portalo
@@ -196,7 +196,7 @@ standartus.  <a class="reference external" href="https://gitlab.com/atviriduomen
 esamos versijos dirbu nuo 2018 metų rudens. Tarpinę saugyklą, kurią esu
 pavadinęs <a class="reference external" href="https://gitlab.com/atviriduomenys/spinta">Spinta</a>, taip pat jau esu pradėjęs įgyvendinti ir prie to dirbu nuo
 2019 metų pradžios.</p>
-<p>Iš esmės, didelė dalis komponentų jau siekia bent jau <a class="reference external" href="https://en.wikipedia.org/wiki/Minimum_viable_product">MVP</a> stadiją ir yra
+<p>Iš esmės, didelė dalis komponentų jau siekia bent jau <a class="reference external" href="https://en.wikipedia.org/wiki/Minimum_viable_product"><span class="caps">MVP</span></a> stadiją ir yra
 paruošti naudojimui, todėl lieka imtis duomenų atvėrimo darbais ir esamų
 komponentų tobulinimu iteraciniu-inkrementiniu būdu.</p>
 </div>
@@ -213,7 +213,7 @@ komponentų tobulinimu iteraciniu-inkrementiniu būdu.</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

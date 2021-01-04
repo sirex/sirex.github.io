@@ -84,10 +84,10 @@ tobulinamos.
 
 Atrodo, kad duomenų atvėrimas yra vienkartinis darbas, bet taip nėra, kadangi
 atveriami duomenys turi būti publikuojami nuolat. Todėl darant visą tai
-sistemingai, pataisius problemas vienoje vietoje, jos bus išspręstos visos
+sistemingai, pataisius problemas vienoje vietoje, jos bus išspręstos visose
 įstaigose vienu kartu.
 
-Todėl tikiuosi, kad nepriklausomai nuo to, kas laimės viešąjį pirkim1, duomenų
+Todėl tikiuosi, kad nepriklausomai nuo to, kas laimės viešąjį pirkimą, duomenų
 atvėrimas vyks vieningai, sistemingai ir efektyviai.
 
 
@@ -120,16 +120,17 @@ kuris būtų atsakingas už tos įstaigos atvirus duomenis. Įgaliotinis
 registruojamas ADK ir turėtu atsakyti į visus iškilusius klausimus dėl atvirų
 duomenų.
 
-Ieškant duomenų, pirmiausiai reikėtų pažiūrėti, gal būt jie jau yra atverti:
+Ieškant duomenų, pirmiausiai reikėtų pažiūrėti, gal būt jie jau yra atverti
+ar bent jau inventorizuoti:
 
 https://data.gov.lt/datasets
 
-Jei atverti duomenys netenkina, tada yra galimybė teikti pastabas. Pastabas
-galite teikti paprasto komentaro forma arba paspaudžiant mygtuką „Teikti
-poreikį duomenų rinkinio keitimui“, kuris nuves į „Registruoti poreikį
-duomenų rinkinio keitimui“. Minėtoje formoje, pažymėti „Papildyti duomenų
-rinkinį naujais duomenimis“, kur galėsite tiksliai nurodyti kokių duomenų
-laukų trūksta.
+Jei ADK publikuojami duomenų rinkiniai netenkina, tada yra galimybė teikti
+pastabas. Pastabas galite teikti paprasto komentaro forma arba paspaudžiant
+mygtuką „Teikti poreikį duomenų rinkinio keitimui“, kuris nuves į „Registruoti
+poreikį duomenų rinkinio keitimui“. Minėtoje formoje pažymėjus „Papildyti
+duomenų rinkinį naujais duomenimis“ galėsite tiksliai nurodyti kokių duomenų
+laukų trūksta ar gal būt reikalinga kelti tam tikrų duomenų laukų brandos lygį.
 
 Trūkstamus duomenų laukus galite pateikti ir prisegant DSA lentelę.
 
@@ -146,5 +147,5 @@ Bent jau mano asmenine nuomone, ADK turi daug trūkumu ir nėra labai patogus ir
 aiškus, bet šiuo metu tai yra vienintelė oficiali priemonė, kurios pagalba
 galima deklaruoti duomenų poreikį. Todėl kviečiu šią priemonę naudoti, nes
 anksčiau ar vėliau į ADK pateiktą duomenų poreikį bus atsižvelgta arba bent
-jau pateikti priežastis, kodėl duomenys negali būti atverti.
+jau pateiktos priežastis, kodėl duomenys negali būti atverti.
 

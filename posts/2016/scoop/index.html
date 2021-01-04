@@ -38,7 +38,7 @@ impor">
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
-         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">SCOOP</h1>
+         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><span class="caps">SCOOP</span></h1>
         <div class="metadata">
             <p class="dateline">
             <time class="published dt-published" datetime="2016-05-29T00:00:00+03:00" itemprop="datePublished" title="2016-05-29 00:00">2016-05-29 00:00</time>
@@ -53,63 +53,63 @@ impor">
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>I found an <a class="reference external" href="https://medium.com/@paulrim/mining-common-crawl-with-php-39e14082c55c?source=post_page-----6cc4108e97eb----------------------">article</a> about processing <a class="reference external" href="http://commoncrawl.org/">Common Crawl</a> data in parallel.</p>
-<p>Decided to try same thing using <a class="reference external" href="https://github.com/soravux/scoop">SCOOP</a>.</p>
-<pre class="code python"><a name="rest_code_cff040547a2f4851891f9eacab04e6c0-1"></a><span class="kn">import</span> <span class="nn">io</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-2"></a><span class="kn">import</span> <span class="nn">csv</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-3"></a><span class="kn">import</span> <span class="nn">gzip</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-4"></a><span class="kn">import</span> <span class="nn">urllib.parse</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-5"></a><span class="kn">import</span> <span class="nn">urllib.request</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-6"></a>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-7"></a><span class="kn">import</span> <span class="nn">scoop</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-8"></a><span class="kn">import</span> <span class="nn">scoop.futures</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-9"></a>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-10"></a>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-11"></a><span class="k">def</span> <span class="nf">read_gzip</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-12"></a>    <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-13"></a>        <span class="k">yield from</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">response</span><span class="p">))</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-14"></a>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-15"></a>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-16"></a><span class="k">def</span> <span class="nf">get_themes</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-17"></a>    <span class="n">themes</span> <span class="o">=</span> <span class="p">[]</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-18"></a>    <span class="n">domain</span> <span class="o">=</span> <span class="kc">None</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-19"></a>    <span class="n">theme_path</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">'wp-content/themes/'</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-20"></a>    <span class="n">scoop</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">'parsing: </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="n">url</span><span class="p">)</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-21"></a>    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">read_gzip</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-22"></a>        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">b</span><span class="s1">'WARC-Target-URI:'</span><span class="p">):</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-23"></a>            <span class="n">domain</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">17</span><span class="p">:]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-24"></a>            <span class="n">domain</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlparse</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span><span class="o">.</span><span class="n">netloc</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-25"></a>        <span class="k">elif</span> <span class="n">theme_path</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-26"></a>            <span class="n">start</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">theme_path</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">theme_path</span><span class="p">)</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-27"></a>            <span class="n">end</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa">b</span><span class="s1">'/'</span><span class="p">,</span> <span class="n">start</span><span class="p">)</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-28"></a>            <span class="k">if</span> <span class="n">end</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-29"></a>                <span class="n">themes</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">domain</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)))</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-30"></a>    <span class="k">return</span> <span class="n">themes</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-31"></a>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-32"></a>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-33"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-34"></a>    <span class="n">lines</span> <span class="o">=</span> <span class="n">read_gzip</span><span class="p">(</span><span class="s1">'https://commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2016-07/warc.paths.gz'</span><span class="p">)</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-35"></a>    <span class="n">paths</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'https://commoncrawl.s3.amazonaws.com/'</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-36"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'results.csv'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-37"></a>        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-38"></a>        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">'domain'</span><span class="p">,</span> <span class="s1">'theme'</span><span class="p">])</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-39"></a>        <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">scoop</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">get_themes</span><span class="p">,</span> <span class="n">paths</span><span class="p">):</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-40"></a>            <span class="k">for</span> <span class="n">domain</span><span class="p">,</span> <span class="n">theme</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-41"></a>                <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">domain</span><span class="p">,</span> <span class="n">theme</span><span class="p">])</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-42"></a>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-43"></a>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-44"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
-<a name="rest_code_cff040547a2f4851891f9eacab04e6c0-45"></a>    <span class="n">main</span><span class="p">()</span>
+<p>Decided to try same thing using <a class="reference external" href="https://github.com/soravux/scoop"><span class="caps">SCOOP</span></a>.</p>
+<pre class="code python"><a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-1"></a><span class="kn">import</span> <span class="nn">io</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-2"></a><span class="kn">import</span> <span class="nn">csv</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-3"></a><span class="kn">import</span> <span class="nn">gzip</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-4"></a><span class="kn">import</span> <span class="nn">urllib.parse</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-5"></a><span class="kn">import</span> <span class="nn">urllib.request</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-6"></a>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-7"></a><span class="kn">import</span> <span class="nn">scoop</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-8"></a><span class="kn">import</span> <span class="nn">scoop.futures</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-9"></a>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-10"></a>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-11"></a><span class="k">def</span> <span class="nf">read_gzip</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-12"></a>    <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-13"></a>        <span class="k">yield from</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">response</span><span class="p">))</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-14"></a>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-15"></a>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-16"></a><span class="k">def</span> <span class="nf">get_themes</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-17"></a>    <span class="n">themes</span> <span class="o">=</span> <span class="p">[]</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-18"></a>    <span class="n">domain</span> <span class="o">=</span> <span class="kc">None</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-19"></a>    <span class="n">theme_path</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">'wp-content/themes/'</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-20"></a>    <span class="n">scoop</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">'parsing: </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="n">url</span><span class="p">)</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-21"></a>    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">read_gzip</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-22"></a>        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">b</span><span class="s1">'WARC-Target-URI:'</span><span class="p">):</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-23"></a>            <span class="n">domain</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="mi">17</span><span class="p">:]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-24"></a>            <span class="n">domain</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlparse</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span><span class="o">.</span><span class="n">netloc</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-25"></a>        <span class="k">elif</span> <span class="n">theme_path</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-26"></a>            <span class="n">start</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">theme_path</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">theme_path</span><span class="p">)</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-27"></a>            <span class="n">end</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="sa">b</span><span class="s1">'/'</span><span class="p">,</span> <span class="n">start</span><span class="p">)</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-28"></a>            <span class="k">if</span> <span class="n">end</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-29"></a>                <span class="n">themes</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">domain</span><span class="p">,</span> <span class="n">line</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)))</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-30"></a>    <span class="k">return</span> <span class="n">themes</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-31"></a>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-32"></a>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-33"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-34"></a>    <span class="n">lines</span> <span class="o">=</span> <span class="n">read_gzip</span><span class="p">(</span><span class="s1">'https://commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2016-07/warc.paths.gz'</span><span class="p">)</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-35"></a>    <span class="n">paths</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'https://commoncrawl.s3.amazonaws.com/'</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-36"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'results.csv'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-37"></a>        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-38"></a>        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">'domain'</span><span class="p">,</span> <span class="s1">'theme'</span><span class="p">])</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-39"></a>        <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">scoop</span><span class="o">.</span><span class="n">futures</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">get_themes</span><span class="p">,</span> <span class="n">paths</span><span class="p">):</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-40"></a>            <span class="k">for</span> <span class="n">domain</span><span class="p">,</span> <span class="n">theme</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-41"></a>                <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">domain</span><span class="p">,</span> <span class="n">theme</span><span class="p">])</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-42"></a>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-43"></a>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-44"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+<a name="rest_code_b77e4269f71d4d9e9e79b6e45f8ef80c-45"></a>    <span class="n">main</span><span class="p">()</span>
 </pre>
-<p><a class="reference external" href="https://github.com/soravux/scoop">SCOOP</a> allows to run scripts on multiple cores locally or on multiple remote
-machines via ssh. In order to do that, you need to install SCOOP and this
+<p><a class="reference external" href="https://github.com/soravux/scoop"><span class="caps">SCOOP</span></a> allows to run scripts on multiple cores locally or on multiple remote
+machines via ssh. In order to do that, you need to install <span class="caps">SCOOP</span> and this
 script on each machine and list those machines in a hosts file, that will be
-read by SCOOP. Server setup part probably can be done with Ansible.</p>
+read by <span class="caps">SCOOP</span>. Server setup part probably can be done with Ansible.</p>
 <p>I tried to run this scripts on two servers, each server takes about 15 minutes
 to download one ~800 Mb warc file and 2.5 minutes to process it.</p>
 <p>All processing is done by reading streams, so there is no need for extra
 storage on server nodes.</p>
 <p>Here is how I run it:</p>
-<pre class="code sh"><a name="rest_code_b303368f365a4fb5b16f0abaf85a1816-1"></a>python -m scoop --hostfile hosts --tunnel --python-interpreter /tmp/scoops/bin/python -p /tmp/scoops run.py
+<pre class="code sh"><a name="rest_code_b870433a527c41bbb12bf69ad67a97f9-1"></a>python -m scoop --hostfile hosts --tunnel --python-interpreter /tmp/scoops/bin/python -p /tmp/scoops run.py
 </pre>
 </div>
     </div>
@@ -124,7 +124,7 @@ storage on server nodes.</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

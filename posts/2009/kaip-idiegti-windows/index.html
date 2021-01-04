@@ -47,33 +47,33 @@ Darbe naudoju ">
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>Istorija tokia, darbe teko testuoti svetainę su IE naršyklėmis. Kadangi prie
+<p>Istorija tokia, darbe teko testuoti svetainę su <span class="caps">IE</span> naršyklėmis. Kadangi prie
 projekto dirbau vienas ir nebuvo porininko naudojančio Windows, tai tas bjaurus
 darbas teko man pačiam… :/</p>
-<p>Darbe naudoju Ubuntu, tai jokio IE neturėjau. Ačiū <a class="reference external" href="http://www.tatanka.com.br/ies4linux/">IEs4Linux projektui</a>, kurio dėka IE6 daugiau/mažiau veikia
-per <a class="reference external" href="http://www.winehq.org/">Wine (**W**ine **I**s **N**ot an **E**mulator!)</a>. Deja to pačio padaryti su IE7 nepavyko. Sprendimas
+<p>Darbe naudoju Ubuntu, tai jokio <span class="caps">IE</span> neturėjau. Ačiū <a class="reference external" href="http://www.tatanka.com.br/ies4linux/">IEs4Linux projektui</a>, kurio dėka <span class="caps">IE6</span> daugiau/mažiau veikia
+per <a class="reference external" href="http://www.winehq.org/">Wine (**W**ine **I**s **N**ot an **E**mulator!)</a>. Deja to pačio padaryti su <span class="caps">IE7</span> nepavyko. Sprendimas
 – greitai įsidiegti Windows į virtualią mašiną ir ten testuoti.</p>
-<p>Įdiegti Ubuntu galima iš CD, USB, per tinklą ar internetą ir net gi <a class="reference external" href="http://wubi-installer.org/">tiesiai į
+<p>Įdiegti Ubuntu galima iš <span class="caps">CD</span>, <span class="caps">USB</span>, per tinklą ar internetą ir net gi <a class="reference external" href="http://wubi-installer.org/">tiesiai į
 Windows, nekeičiant disko skirsnių</a>. Kiek žinau,
-Windows galima įdiegti tik per CD…</p>
+Windows galima įdiegti tik per <span class="caps">CD</span>…</p>
 <div class="section" id="kaip-idiegti-windows">
 <h2>Kaip įdiegti Windows?<a href="#kaip-idiegti-windows" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Virtualizacijos dėka ribotos Windows įdiegimo galimybės nesudaro jokių
-problemų. Šiam reikalui pasirinkau <a class="reference external" href="http://www.qemu.org/">QEMU</a>.  Kodėl?
+problemų. Šiam reikalui pasirinkau <a class="reference external" href="http://www.qemu.org/"><span class="caps">QEMU</span></a>.  Kodėl?
 Todėl, kad tai yra lengvas. paprastas virtualios mašinos emuliatorius.</p>
-<p><strong>1. Įdiegiame QEMU:</strong></p>
+<p><strong>1. Įdiegiame <span class="caps">QEMU</span>:</strong></p>
 <pre class="literal-block">$ sudo apt-get install qemu kqemu-source</pre>
-<p><em>kqemu-source</em> yra Linux branduolio modulis, kuris paspartina QEMU virtualios
+<p><em>kqemu-source</em> yra Linux branduolio modulis, kuris paspartina <span class="caps">QEMU</span> virtualios
 mašinos darbą. Viskas veiks ir be šio paketo, tačiau lėčiau.</p>
 <p><strong>2. Susikuriame virtualų diską:</strong></p>
 <pre class="literal-block">$ qemu-img create -f qcow2 windows.img 8G</pre>
 <p>Nors nurodyta 8G diskas, tačiau pats virtualaus disko failas užims vos kelis
 kilobaitus. Failo dydis proporcingas naudojamai virtualaus disko vietai.</p>
-<p><strong>3. Windows diegimas iš ISO arba CD</strong></p>
+<p><strong>3. Windows diegimas iš <span class="caps">ISO</span> arba <span class="caps">CD</span></strong></p>
 <pre class="literal-block">$ qemu -cdrom windows.iso -hda windows.img -m 256 -boot d</pre>
-<p>Jei turite nelegaliai pasidarę legalių Windows CD kopiją į ISO failą, tuomet
-galite nurodyti virtualiai mašinai, kad tiesiog užsikrauto iš to ISO failo.
-Tačiau galite į CD-ROM įrenginį įdėti ir legalių Windows CD, tuomet vietoje
+<p>Jei turite nelegaliai pasidarę legalių Windows <span class="caps">CD</span> kopiją į <span class="caps">ISO</span> failą, tuomet
+galite nurodyti virtualiai mašinai, kad tiesiog užsikrauto iš to <span class="caps">ISO</span> failo.
+Tačiau galite į <span class="caps">CD</span>-<span class="caps">ROM</span> įrenginį įdėti ir legalių Windows <span class="caps">CD</span>, tuomet vietoje
 <em>windows.iso</em> reikės nurodyti <em>/dev/cdrom</em>.</p>
 <p>Beje, viskas veiks ir su nelegalia Windows kopija :)</p>
 <p>Po šios komandos paleidimo pasileist Windows diegimo vedlys. Įdiekite Windows
@@ -87,12 +87,12 @@ kartoti diegimo, norint vėl juos paliesti. Jau įdiegtus Windows iškviesite t
 <pre class="literal-block">$ qemu -hda windows.img -m 256</pre>
 <p>Kadangi Windows mėgsta virusai ir kitokios nelaimės, tai siūlau pasidaryti
 virtualaus disko kopiją su šviežiai įdiegtais Windows. Galite viską įsirašyti į
-kokį DVD ar šiaip kur nors pasidėti. Jei kas nors nutiks, bet kada vėl galėsite
+kokį <span class="caps">DVD</span> ar šiaip kur nors pasidėti. Jei kas nors nutiks, bet kada vėl galėsite
 paleisti šviežiai įdiegtus Windows iš atsarginės virtualaus disko kopijos.</p>
-<p>Pats tai išbandžiau, pavyko sėkmingai ištestuoti svetainę su IE naršykle ir
+<p>Pats tai išbandžiau, pavyko sėkmingai ištestuoti svetainę su <span class="caps">IE</span> naršykle ir
 pataisyti klaidas.</p>
-<p>Naudojantis QEMU galima testuoti ir kitas operacines sistemas, pavyzdžiui
-Ubuntu Alpha ar Beta versijas. Daugiau apie QEMU galite pasiskaityti <a class="reference external" href="http://www.qemu.org/">qemu.org</a> svetainėje.</p>
+<p>Naudojantis <span class="caps">QEMU</span> galima testuoti ir kitas operacines sistemas, pavyzdžiui
+Ubuntu Alpha ar Beta versijas. Daugiau apie <span class="caps">QEMU</span> galite pasiskaityti <a class="reference external" href="http://www.qemu.org/">qemu.org</a> svetainėje.</p>
 <p><img alt="image0" src="files/qemu-windows.png"></p>
 </div>
 </div>
@@ -108,7 +108,7 @@ Ubuntu Alpha ar Beta versijas. Daugiau apie QEMU galite pasiskaityti <a class="r
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

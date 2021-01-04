@@ -37,25 +37,25 @@ atvirų duomenų katalogo (ADK) duomenis ir ats">
     <div>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Europos atvirų duomenų portalas (EDP) atsiuntė klausimyną, kurio pagalba vertins
+<p>Europos atvirų duomenų portalas (<span class="caps">EDP</span>) atsiuntė klausimyną, kurio pagalba vertins
 atvirų duomenų progresą Lietuvoje. Aš gavau užduotį paanalizuoti <a href="https://data.gov.lt/">Lietuvos
-atvirų duomenų katalogo</a> (ADK) duomenis ir atsakyti į kai
+atvirų duomenų katalogo</a> (<span class="caps">ADK</span>) duomenis ir atsakyti į kai
 kuriuos klausimyno klausimus.</p>
-<p>Įdomu, kodėl EDP pats nepasianalizuoja duomenų, kadangi data.gov.lt esantys
+<p>Įdomu, kodėl <span class="caps">EDP</span> pats nepasianalizuoja duomenų, kadangi data.gov.lt esantys
 duomenų rinkiniai yra atviri ir
 <a href="https://www.europeandataportal.eu/data/datasets?catalog=data-gov-lt">suimportuoti</a>
-į EDP?</p>
-<p>ADK viešojo API <a href="https://data.gov.lt/public/api/1">dokumentacija</a> rašo, kad API
-įgyvendina tik vieną API prieigos tašką
+į <span class="caps">EDP</span>?</p>
+<p><span class="caps">ADK</span> viešojo <span class="caps">API</span> <a href="https://data.gov.lt/public/api/1">dokumentacija</a> rašo, kad <span class="caps">API</span>
+įgyvendina tik vieną <span class="caps">API</span> prieigos tašką
 <a href="https://data.gov.lt/public/api/1/action/package_search">package_search</a>. Kuris
-kaip suprantu atitinka CKAN
+kaip suprantu atitinka <span class="caps">CKAN</span>
 <a href="https://docs.ckan.org/en/2.9/api/#ckan.logic.action.get.package_search">package_search</a>,
-o pats <a href="https://ckan.org/">CKAN</a> po dangčiu naudoja
-<a href="https://lucene.apache.org/solr/guide/6_6/common-query-parameters.html">SOLR</a>.
-Kad suprasti kaip naudoti API reikėtų peržiūrėti visų trijų projektų dokumentacijas.</p>
+o pats <a href="https://ckan.org/"><span class="caps">CKAN</span></a> po dangčiu naudoja
+<a href="https://lucene.apache.org/solr/guide/6_6/common-query-parameters.html"><span class="caps">SOLR</span></a>.
+Kad suprasti kaip naudoti <span class="caps">API</span> reikėtų peržiūrėti visų trijų projektų dokumentacijas.</p>
 <h2 id="Duomenų-surinkimas">Duomenų surinkimas<a class="anchor-link" href="#Duomen%C5%B3-surinkimas">¶</a>
 <a href="#Duomen%C5%B3-surinkimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Bandau žiūrėti ką grąžina API prieigos taškas:</p>
+<p>Bandau žiūrėti ką grąžina <span class="caps">API</span> prieigos taškas:</p>
 
 </div>
 </div>
@@ -121,7 +121,7 @@ Kad suprasti kaip naudoti API reikėtų peržiūrėti visų trijų projektų do
 <div class="jp-Cell-inputWrapper">
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Duomenų mažoka ir matosi, kad jei tam tikrų duomenų nėra, tai jie nėra
-įtraukti į atsakymą. Man nepatinka, kai API prieigos taškas grąžina duomenis,
+įtraukti į atsakymą. Man nepatinka, kai <span class="caps">API</span> prieigos taškas grąžina duomenis,
 kuriuose dalykai tai atsiranda, tai pranyksta. Apsunkina duomenų interpretavimą.</p>
 <p>Dokumentacijoje paminėta, kad palaikomas puslapiavimas. Bandysiu pasinaudoti
 šia galimybe ir susirinkti visus duomenis nedideliais gabalais.</p>
@@ -279,7 +279,7 @@ visuose įrašuose:</p>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Schema pakankamai aiški, yra dvi lentelės, duomenų rinkinių ir resursų. Tik
-neaišku, kas slepiasi po <code>extras</code>. Žiūrim:</p>
+neaišku, kas slepiasi po <code>extras</code>. Žiūrim:</p>
 
 </div>
 </div>
@@ -318,10 +318,10 @@ neaišku, kas slepiasi po <code>extras</code>. Žiūrim:</p>
 </div>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Supratau, <code>extras</code> yra papildomi duomenys ir konkrečiai <code>structure</code> yra
+<p>Supratau, <code>extras</code> yra papildomi duomenys ir konkrečiai <code>structure</code> yra
 duomenų struktūros lentelės, kurių panašu gali būti daugiau nei viena, nors
 turėtu būti tik viena.</p>
-<p>Matyt reikės <code>extras</code> interpretuoti kaip dar vieną lentelę.</p>
+<p>Matyt reikės <code>extras</code> interpretuoti kaip dar vieną lentelę.</p>
 <p>Kad būdų patogiau dirbti su duomenimis konvertuoju viską į
 <a href="https://pandas.pydata.org/">pandas</a> duomenų struktūras:</p>
 
@@ -563,7 +563,7 @@ memory usage: 5.9+ KB
 </div>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Viskas atrodo neblogai, dabar galima pereiti prie EDP klausimyno klausimų.</p>
+<p>Viskas atrodo neblogai, dabar galima pereiti prie <span class="caps">EDP</span> klausimyno klausimų.</p>
 <p>Bet prieš tai, noriu atkreipti dėmesį, kodėl reikalingas atvertų duomenų
 struktūros aprašas, tam, kad nereikėtų daryti to, ką aš ką tik padariau. T. y.
 kad nereikėtų klaidžioti po duomenis, bandant suprasti kas juose yra, tai turėtų
@@ -575,9 +575,9 @@ klausimus (Dimension 4: Open Data Quality).</p>
 <blockquote>
 <p>4.1 Currency and completeness</p>
 </blockquote>
-<p>EDP klausimyne yra keletas klausimų apie duomenų metaduomenų atnaujinimo
+<p><span class="caps">EDP</span> klausimyne yra keletas klausimų apie duomenų metaduomenų atnaujinimo
 dažnumą. Manau iš turimų duomenų nelabai galima atsakyti į tuos klausimus, todėl
-tiesiog pabandysiu pažiūrėti į <code>datasets.metadata_created</code> ir
+tiesiog pabandysiu pažiūrėti į <code>datasets.metadata_created</code> ir
 <code>datasets.metadata_modified</code> duomenis, kurie turėtų rodyti kada duomenų
 rinkiniai buvo paskutinį kartą atnaujinti.</p>
 
@@ -692,17 +692,17 @@ accompanied by licensing information?</p>
 <p>Peržiūrėjau struktūrą, bet nematau jokių duomenų laukų apie licenciją. Taip pat
 negaliu atsakyti ir į kitus klausimus susijusius su licencijos naudojimu.</p>
 <blockquote>
-<p>18. What is the percentage of metadata on your portal that is DCAT-AP
+<p>18. What is the percentage of metadata on your portal that is <span class="caps">DCAT</span>-<span class="caps">AP</span>
 compliant, in terms of mandatory classes? (agent, catalogue, data set,
 literal, resource)</p>
 </blockquote>
 <p>Kiek žinau pačiame atvirų duomenų kataloge yra galimybė pateikti visas šias
-klases, bet per katalogo viešąjį API yra prieinami duomenys tik apie <strong>data
+klases, bet per katalogo viešąjį <span class="caps">API</span> yra prieinami duomenys tik apie <strong>data
 set</strong> ir <strong>resource</strong>. Todėl nėra galimybė atsakyti į šį ir kitus panašius klausimus.</p>
 <blockquote>
 <p>23. What is the percentage of data sets whose metadata provides a reference
-to where the data can be downloaded, or its API accessed (“download-URL” in
-the DCAT-AP specification)?</p>
+to where the data can be downloaded, or its <span class="caps">API</span> accessed (“download-<span class="caps">URL</span>” in
+the <span class="caps">DCAT</span>-<span class="caps">AP</span> specification)?</p>
 </blockquote>
 
 </div>
@@ -852,7 +852,7 @@ the DCAT-AP specification)?</p>
 </div>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Panašų, kad apie 155 nuorodos neveikia arba nesugebėjo duoti atsakymo į HEAD
+<p>Panašų, kad apie 155 nuorodos neveikia arba nesugebėjo duoti atsakymo į <span class="caps">HEAD</span>
 užklausą per 30 sekundžių.</p>
 <blockquote>
 <p>28. What percentage of datasets is made available under a standard open
@@ -1015,9 +1015,9 @@ Name: format, dtype: int64</pre>
 </div>
 <div class="jp-Cell-inputWrapper">
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Nežinau kokia <code>mimetype</code>, <code>resource_type</code> ir <code>url_type</code> laukų paskirtis, bet
+<p>Nežinau kokia <code>mimetype</code>, <code>resource_type</code> ir <code>url_type</code> laukų paskirtis, bet
 panašu, kad jie nenaudojami, todėl norint nustatyti kiek duomenų rinkinių
-teikiami atvirais formatais remsiuosi <code>format</code> stulpelio duomenimis.</p>
+teikiami atvirais formatais remsiuosi <code>format</code> stulpelio duomenimis.</p>
 
 </div>
 </div>
@@ -1115,15 +1115,15 @@ additional context for the users, e.g. in a linked data fashion?</p>
 <p>Tokių duomenų taip pat nėra. Kiek žinau, pirmas duomenų atvėrimo etapas
 apsiribojo tik trečiuoju brandos lygiu, todėl atsakymas į 32 ir 33 klausimus
 yra 0%.</p>
-<p>Mano planuose, II duomenų atvėrimo etape taisyti šią situaciją ir kiek
+<p>Mano planuose, <span class="caps">II</span> duomenų atvėrimo etape taisyti šią situaciją ir kiek
 įmanoma duomenis atverti 5 brandos lygiu ir tai nėra taip jau sudėtinga.</p>
 <p>Čia buvo paskutinis klausimyno klausimas, deja į dalį klausimų nėra galimybės
 atsakyti, nes nėra pakankamai duomenų, bent jau prieinamų per viešąjį
-data.gov.lt API.</p>
+data.gov.lt <span class="caps">API</span>.</p>
 <h2 id="Trūkstami-duomenys">Trūkstami duomenys<a class="anchor-link" href="#Tr%C5%ABkstami-duomenys">¶</a>
 <a href="#Tr%C5%ABkstami-duomenys" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Išsiaiškinau, kad pasirodo data.gov.lt sukasi ne ant CKAN, o ant nuo nulio
-perdaryto CKAN analogo ir API yra ne CKAN API, o į CKAN panašus API.</p>
+<p>Išsiaiškinau, kad pasirodo data.gov.lt sukasi ne ant <span class="caps">CKAN</span>, o ant nuo nulio
+perdaryto <span class="caps">CKAN</span> analogo ir <span class="caps">API</span> yra ne <span class="caps">CKAN</span> <span class="caps">API</span>, o į <span class="caps">CKAN</span> panašus <span class="caps">API</span>.</p>
 <p>Ką gi, bandau aiškintis, kokių laukų trūksta. Tam reikalui panaudosiu
 demo.ckan.org ir palyginsiu jo schema su data.gov.lt.</p>
 
@@ -1259,22 +1259,22 @@ url
 <h2 id="Išvada">Išvada<a class="anchor-link" href="#I%C5%A1vada">¶</a>
 <a href="#I%C5%A1vada" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Pašnekėjus su Atea, kurie kūrė data.gov.lt sužinojau įdomių dalykų. Pasirodo
-data.gov.lt pastatytas ne ant CKAN, o perrašytas nuo nulio. CKAN aktyviai
+data.gov.lt pastatytas ne ant <span class="caps">CKAN</span>, o perrašytas nuo nulio. <span class="caps">CKAN</span> aktyviai
 vystomas ir prižiūrimas projektas, kuris su laikau mažiau sensta. Įdomu, kas
 bus su data.gov.lt, kai baigsis palaikymo terminas?</p>
-<p>Dar išsiaiškinau, kad viso yra tokie data.gov.lt API šaltiniai:</p>
+<p>Dar išsiaiškinau, kad viso yra tokie data.gov.lt <span class="caps">API</span> šaltiniai:</p>
 <ul>
 <li>
-<a href="https://data.gov.lt/public/api/1">Viešasis API</a>.</li>
+<a href="https://data.gov.lt/public/api/1">Viešasis <span class="caps">API</span></a>.</li>
 <li>
-<a href="https://data.gov.lt/edp/dcat-ap.rdf">Duomenų dumpas</a> skirtas EDP, jis yra
+<a href="https://data.gov.lt/edp/dcat-ap.rdf">Duomenų dumpas</a> skirtas <span class="caps">EDP</span>, jis yra
 viešas, bet neviešinamas.</li>
 <li>
-<a href="https://data.gov.lt/sparql">SPARQL prieigos taškas</a>, kuriame prieinami tik
-ADK metaduomenys, bet ne patys duomenys.</li>
-<li>Ir dar yra vidinis tiekėjų API, kurio dar neteko matyti.</li>
+<a href="https://data.gov.lt/sparql"><span class="caps">SPARQL</span> prieigos taškas</a>, kuriame prieinami tik
+<span class="caps">ADK</span> metaduomenys, bet ne patys duomenys.</li>
+<li>Ir dar yra vidinis tiekėjų <span class="caps">API</span>, kurio dar neteko matyti.</li>
 </ul>
-<p>Atea sutinka papildyti API trūkstamais duomenimis, tai reikės laukti, kada
+<p>Atea sutinka papildyti <span class="caps">API</span> trūkstamais duomenimis, tai reikės laukti, kada
 tai atsitiks ir dar kartą peržiūrėti duomenis.</p>
 
 </div>
@@ -1285,7 +1285,7 @@ tai atsitiks ir dar kartą peržiūrėti duomenis.</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

@@ -33,7 +33,7 @@ vaikiš">
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
-         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Ubuntu Eee ant Eee PC 900</h1>
+         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Ubuntu Eee ant Eee <span class="caps">PC</span> 900</h1>
         <div class="metadata">
             <p class="dateline">
             <time class="published dt-published" datetime="2008-11-19T11:43:00+02:00" itemprop="datePublished" title="2008-11-19 11:43">2008-11-19 11:43</time>
@@ -47,21 +47,20 @@ vaikiš">
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>Kaip žinia nesenai BMS pardavinėjo Asus Eee PC 900 po 599 Lt. Tai aš irgi vieną
+<p>Kaip žinia nesenai <span class="caps">BMS</span> pardavinėjo Asus Eee <span class="caps">PC</span> 900 po 599 Lt. Tai aš irgi vieną
 įsigijau, ne sau, bes savo sesei.</p>
 <a class="reference external image-reference" href="../../../images/small_eee.png"><img alt="/images/small_eee.thumbnail.png" src="../../../images/small_eee.thumbnail.png"></a>
 <p>Kadangi pagal nutylėjimą įdiegta Xandros operacinė sistema yra tokia ganėtinai
 vaikiška, tai nusprendžiau į jį įdiegti <a class="reference external" href="http://www.ubuntu-eee.com/">Ubuntu eee</a>. Nors tikėjausi, kad įdiegus viskas pradės
 veikti iš karto, bet deja taip nebuvo, teko sekti nurodymus ir derinti, bet
 galiausiai turiu pilnai veikiančią sistemą.  Nors yra ne vienas įrankis LiveUSB
-kūrimui iš ISO atvaizdų, tačiau Ubuntu Eee atveju, reikia naudotis kankrečiai
+kūrimui iš <span class="caps">ISO</span> atvaizdų, tačiau Ubuntu Eee atveju, reikia naudotis kankrečiai
 jų pagamintu įrankiu UNetbootin, nes kiti neveiks. Standartiniai LiveUSB kūrimo
-įrankiai paprasčiausiai užrašo ISO failo turiny ant USB failų sistemos. O
+įrankiai paprasčiausiai užrašo <span class="caps">ISO</span> failo turiny ant <span class="caps">USB</span> failų sistemos. O
 UNetbootin paprasčiausiai kopijuoja failus, o po to padaro reikiamus boot
-įrašus.  Diegimo metu reikėtu atsižvelgti į <a class="reference external" href="https://help.ubuntu.com/community/EeePC/Installation">vienintelę rekomendaciją</a>, disko skirstymo metu
-naudoti <code class="docutils literal">Ext2</code> failų sistemą. Taip pat diskų tvarkymo dalyje, aš pasirinkau
+įrašus.  Diegimo metu reikėtu atsižvelgti į <a class="reference external" href="https://help.ubuntu.com/community/EeePC/Installation">vienintelę rekomendaciją</a>, disko skirstymo metu naudoti <code class="docutils literal">Ext2</code> failų sistemą. Taip pat diskų tvarkymo dalyje, aš pasirinkau
 rankinį diskų tvarkymo režimą, ten ištryniau visus Eee 900 diskus, kurių buvo 4
-ir sukūriau vieną <code class="docutils literal">Ext2</code> skirsnį, kuriam priskyriau <code class="docutils literal">/</code> montavimo tašką.
+ir sukūriau vieną <code class="docutils literal">Ext2</code> skirsnį, kuriam priskyriau <code class="docutils literal">/</code> montavimo tašką.
 <strong>Kas neveikė po įdiegimo ir kaip tai sutvarkyti</strong> Kadangi iš esmės daugelis
 dalykų veikė, tai aprašysiu, kas neveikė:</p>
 <ul class="simple">
@@ -70,12 +69,12 @@ dalykų veikė, tai aprašysiu, kas neveikė:</p>
 kortelę (<a class="reference external" href="https://help.ubuntu.com/community/EeePC/Using#Reducing%20Drive%20Writes">instrukcijos kaip taisyti</a>),
 šioje vietoje būkite atsargūs, jei netyčia klaidingai ką nors nurodysite,
 gali nebe užsikrauti grafinė aplinka, kaip kad man ir atsitiko. Jei taip
-atsitiks ir jums, tai užkraukite Eee PC iš LiveUSB, primontuokite sugadintą
+atsitiks ir jums, tai užkraukite Eee <span class="caps">PC</span> iš LiveUSB, primontuokite sugadintą
 skirsnį sudo mount -t ext2 -o rw /dev/sda1 /mnt ir pataisykite ką sugadinote
 faile sudo gedit /mnt/etc/fstab.</p></li>
 <li><p>Ne visada suveikia shut down (<a class="reference external" href="https://help.ubuntu.com/community/EeePC/Fixes#Shutdown">instrukcijos kaip taisyti</a>)</p></li>
 <li><p>Neveikė webcam (internetinė kamera), nors tiesą sąkant ji veikė, tik tiek,
-kad buvo išjungta BIOS nustatymuose, bet kokiu atveju, galite žiūrėti
+kad buvo išjungta <span class="caps">BIOS</span> nustatymuose, bet kokiu atveju, galite žiūrėti
 <a class="reference external" href="https://help.ubuntu.com/community/EeePC/Fixes#Webcam">instrukcijas kaip taisyti</a></p></li>
 <li><p>Problemos su atnaujinimais, siūlo atlikti „Partial Update“, dėl kažkokių tai
 blogų paketų. Tai aš paprasčiausiai užėjau į Home - Administravimas -
@@ -83,8 +82,8 @@ Software Sources - Third-Party Software ir atžymėjau paskutinį repozitoriumą
 (<a class="reference external" href="http://www.array.org/ubuntu">http://www.array.org/ubuntu</a> hardy eeepc), tada visi atnaujinimai įsidiegė
 sėkmingai. Po atnaujinimo, jei paprašys perkrauti kompiuterį, taip ir padarykite.</p></li>
 <li><p>Home mygtuko funkcija – grįžimas į pradinį desktopą <a class="reference external" href="http://www.ubuntu-eee.com/wiki/index.php5?title=How_to:_Set_Super_button_to_show_desktop">instrukcijos kaip nustatyti</a></p></li>
-<li><p>CPU Frequency Scaling, šiaip tai tas dalykas veikia normaliai, tik tiek, kad
-į panelę įkėlus CPU Frequency Scaling apletą, neleidžia pasirinkti
+<li><p><span class="caps">CPU</span> Frequency Scaling, šiaip tai tas dalykas veikia normaliai, tik tiek, kad
+į panelę įkėlus <span class="caps">CPU</span> Frequency Scaling apletą, neleidžia pasirinkti
 procesoriau dažnio, tam reikia įvesti tokią komandą ir pradės veikti: sudo
 chmod +s /usr/bin/cpufreq-selector</p></li>
 <li><p>Baterijos įkrovos indikatorius neįspėja apie tai, kad baterija jau išsikrovė,
@@ -110,7 +109,7 @@ Support, sąraše suraskite ‘Lithuanian’ ir uždėkite paukščiuką ir spau
 </div>
 <div class="section" id="standartiniu-xandros-programu-idiegimas">
 <h2>Standartinių Xandros programų įdiegimas<a href="#standartiniu-xandros-programu-idiegimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Jei žiūrinėjote standartines Eee PC programas, tai radote daug visokių programų
+<p>Jei žiūrinėjote standartines Eee <span class="caps">PC</span> programas, tai radote daug visokių programų
 mokymuisi, visokių žaidimų ir t.t. Ubuntu Eee galite turėti viską ir dar
 daugiau. Nežinau kodėl, bet programų paleidimo panelėje nėra įrankio
 „Įdiegti/pašalinti…“. Jį galima įkelti labai paprastai.  Spauskite Alt+F2 ir
@@ -161,7 +160,7 @@ spauskite ant .deb failų.</p></li>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

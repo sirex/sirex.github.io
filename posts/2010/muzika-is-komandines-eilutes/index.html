@@ -46,75 +46,75 @@ MPD yra geras tuo, kad jį g">
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>Mėgstu klausytis muzikos ir patinka, kai muzika tiesiog groja. Ilgą laiką
-naudojuosi MPD muzikos demonu, kuris nuolat sukasi kompiuteryje ir klauso kas
+naudojuosi <span class="caps">MPD</span> muzikos demonu, kuris nuolat sukasi kompiuteryje ir klauso kas
 jam liepiama daryti.</p>
-<p>MPD yra geras tuo, kad jį galima paleisti kompiuteriu kraunantis nebijant, kad
-tai apsunkins kompiuterio darbą, nes MPD demonas yra labai lengvas. Tada, bet
-kuriuo metu pakanka nuspausti mygtuką klaviatūroje „Play“ ir MPD gavęs signalą,
+<p><span class="caps">MPD</span> yra geras tuo, kad jį galima paleisti kompiuteriu kraunantis nebijant, kad
+tai apsunkins kompiuterio darbą, nes <span class="caps">MPD</span> demonas yra labai lengvas. Tada, bet
+kuriuo metu pakanka nuspausti mygtuką klaviatūroje „Play“ ir <span class="caps">MPD</span> gavęs signalą,
 pradeda groti muziką. Panašiai grojamą muziką galima pristabdyti, sustabdyti,
 paleisti sekančią dainą ar grąžinti prieš tai buvusią.</p>
 <p>Tačiau, jei reikia paklausyti atsitiktinę dainą arba užkrauti vieną katalogą,
-MPD nėra labai patogus, nes tenka žaisti su muzikos biblioteka, įvedinėti
+<span class="caps">MPD</span> nėra labai patogus, nes tenka žaisti su muzikos biblioteka, įvedinėti
 visokias komandas ir pan.</p>
 <p>Greitam muzikos klausymui ir atrankai, kur kas labiau tinka muzikos grotuvas
-CMUS, kuris yra paprastas, greitas ir turi panašumu su teksto redaktorių VIM.</p>
-<p>Kad MPD ir CMUS derėtų tarpusavyje, esu pasirašęs paprastą SHELL skriptą, kurio
-pagalba paspaudus „Play“ patikrinama ar yra paleistas CMUS ir jei jis veikia,
-tuomet paleidžiama groti daina per CMUS, o jei jis išjungtas, tuomet naudojamas
-nuolat budintis MPD. Skriptas atrodo taip:</p>
-<pre class="code bash"><a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-1"></a><span class="ch">#!/bin/bash</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-2"></a>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-3"></a><span class="k">case</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> in
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-4"></a>    toggle<span class="o">)</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-5"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-6"></a>            cmus-remote --pause
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-7"></a>        <span class="k">else</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-8"></a>            mpc toggle
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-9"></a>        <span class="k">fi</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-10"></a>        <span class="p">;;</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-11"></a>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-12"></a>    stop<span class="o">)</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-13"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-14"></a>            cmus-remote --stop
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-15"></a>        <span class="k">else</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-16"></a>            mpc stop
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-17"></a>        <span class="k">fi</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-18"></a>        <span class="p">;;</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-19"></a>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-20"></a>    next<span class="o">)</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-21"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-22"></a>            cmus-remote --next
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-23"></a>        <span class="k">else</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-24"></a>            mpc next
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-25"></a>        <span class="k">fi</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-26"></a>        <span class="p">;;</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-27"></a>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-28"></a>    prev<span class="o">)</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-29"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-30"></a>            cmus-remote --prev
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-31"></a>        <span class="k">else</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-32"></a>            mpc prev
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-33"></a>        <span class="k">fi</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-34"></a>        <span class="p">;;</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-35"></a>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-36"></a>    *<span class="o">)</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-37"></a>        <span class="nb">echo</span> <span class="s2">"usage: </span><span class="nv">$0</span><span class="s2"> {toggle|stop|next|prev}"</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-38"></a><span class="k">esac</span>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-39"></a>
-<a name="rest_code_1097f5179df2451eae0bd3035be7cfe6-40"></a><span class="nb">exit</span> <span class="m">0</span>
+<span class="caps">CMUS</span>, kuris yra paprastas, greitas ir turi panašumu su teksto redaktorių <span class="caps">VIM</span>.</p>
+<p>Kad <span class="caps">MPD</span> ir <span class="caps">CMUS</span> derėtų tarpusavyje, esu pasirašęs paprastą <span class="caps">SHELL</span> skriptą, kurio
+pagalba paspaudus „Play“ patikrinama ar yra paleistas <span class="caps">CMUS</span> ir jei jis veikia,
+tuomet paleidžiama groti daina per <span class="caps">CMUS</span>, o jei jis išjungtas, tuomet naudojamas
+nuolat budintis <span class="caps">MPD</span>. Skriptas atrodo taip:</p>
+<pre class="code bash"><a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-1"></a><span class="ch">#!/bin/bash</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-2"></a>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-3"></a><span class="k">case</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> in
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-4"></a>    toggle<span class="o">)</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-5"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-6"></a>            cmus-remote --pause
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-7"></a>        <span class="k">else</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-8"></a>            mpc toggle
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-9"></a>        <span class="k">fi</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-10"></a>        <span class="p">;;</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-11"></a>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-12"></a>    stop<span class="o">)</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-13"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-14"></a>            cmus-remote --stop
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-15"></a>        <span class="k">else</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-16"></a>            mpc stop
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-17"></a>        <span class="k">fi</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-18"></a>        <span class="p">;;</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-19"></a>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-20"></a>    next<span class="o">)</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-21"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-22"></a>            cmus-remote --next
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-23"></a>        <span class="k">else</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-24"></a>            mpc next
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-25"></a>        <span class="k">fi</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-26"></a>        <span class="p">;;</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-27"></a>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-28"></a>    prev<span class="o">)</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-29"></a>        <span class="k">if</span> <span class="o">[</span> -S ~/.cmus/socket <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-30"></a>            cmus-remote --prev
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-31"></a>        <span class="k">else</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-32"></a>            mpc prev
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-33"></a>        <span class="k">fi</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-34"></a>        <span class="p">;;</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-35"></a>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-36"></a>    *<span class="o">)</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-37"></a>        <span class="nb">echo</span> <span class="s2">"usage: </span><span class="nv">$0</span><span class="s2"> {toggle|stop|next|prev}"</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-38"></a><span class="k">esac</span>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-39"></a>
+<a name="rest_code_0c4ce9d6832848a09a40e69790d0c836-40"></a><span class="nb">exit</span> <span class="m">0</span>
 </pre>
 <div class="section" id="cmus">
-<h2>CMUS<a href="#cmus" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Kadangi CMUS yra labai paprastas, tai užtenka jį įdiegti, paleisti iš
+<h2><span class="caps">CMUS</span><a href="#cmus" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Kadangi <span class="caps">CMUS</span> yra labai paprastas, tai užtenka jį įdiegti, paleisti iš
 komandinės eilutės:</p>
 <pre class="literal-block">cmus</pre>
 <p>ir įkelti norima katalogą ar failą grojimui:</p>
 <pre class="literal-block">:add ~/music</pre>
 </div>
 <div class="section" id="mpd">
-<h2>MPD<a href="#mpd" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>MPD yra sudėtingesnis, nes veikia, kaip serveris. Pirmiausia, prieš pradedant
-jį naudot, reikia aprašyti konfigūracinį failą <code class="docutils literal"><span class="pre">~/.mpdconf</span></code>:</p>
+<h2><span class="caps">MPD</span><a href="#mpd" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><span class="caps">MPD</span> yra sudėtingesnis, nes veikia, kaip serveris. Pirmiausia, prieš pradedant
+jį naudot, reikia aprašyti konfigūracinį failą <code class="docutils literal"><span class="pre">~/.mpdconf</span></code>:</p>
 <pre class="literal-block">music_directory "~/music/"
 playlist_directory "~/.mpd/playlists"
 db_file "~/.mpd/mpd.db"
@@ -128,9 +128,9 @@ Norėdami patestuoti iš karto, komandinėje eilutėje įveskite <em>mpd</em> ir
 mpc clear
 mpc mpc listall | mpc add
 mpc play</pre>
-<p>Viskas, MPD paruoštas, pasileis kartu su kompiuteriu ir bet kuriuo metu bus
+<p>Viskas, <span class="caps">MPD</span> paruoštas, pasileis kartu su kompiuteriu ir bet kuriuo metu bus
 pasiruošęs skleisti muzikos garsus.</p>
-<p>Norėdami kontroliuoti MPD, galite naudoti komandinės eilutės klientą mpc arba
+<p>Norėdami kontroliuoti <span class="caps">MPD</span>, galite naudoti komandinės eilutės klientą mpc arba
 ncurses klientą <em>ncmpcpp</em>.</p>
 </div>
 <div class="section" id="media-klavisai">
@@ -150,7 +150,7 @@ klausytą muziką siunčiu last.fm portalui, kur vėliau galiu parodyti draugams
 kokią muziką mėgstu ir pats pasižiūrėti klausomos muzikos statistiką. Mano
 last.fm profilis:</p>
 <p><a class="reference external" href="http://www.last.fm/user/sirexas">http://www.last.fm/user/sirexas</a></p>
-<p>MPD demonui naudoju <a class="reference external" href="http://mpd.wikia.com/wiki/Client:Mpdscribble">mpdscribble</a>. CMUS – <a class="reference external" href="http://github.com/freshprince/cmuscrobbler">cmuscrobbler</a>.  Turint taip
+<p><span class="caps">MPD</span> demonui naudoju <a class="reference external" href="http://mpd.wikia.com/wiki/Client:Mpdscribble">mpdscribble</a>. <span class="caps">CMUS</span> – <a class="reference external" href="http://github.com/freshprince/cmuscrobbler">cmuscrobbler</a>.  Turint taip
 sukonfigūruotą sistemą, galima pamiršti apie muzikos programas ir tiesiog
 dirbant savo darbus klausytis muzikos!</p>
 </div>
@@ -167,7 +167,7 @@ dirbant savo darbus klausytis muzikos!</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

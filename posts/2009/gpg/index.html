@@ -29,7 +29,7 @@
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
-         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">GPG</h1>
+         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><span class="caps">GPG</span></h1>
         <div class="metadata">
             <p class="dateline">
             <time class="published dt-published" datetime="2009-06-10T22:14:00+02:00" itemprop="datePublished" title="2009-06-10 22:14">2009-06-10 22:14</time>
@@ -43,7 +43,7 @@
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>Jau senai planavau susikurti GPG raktą ir susikonfigūruoti savo pašto klientą, kad šis automatiškai uždėtu GPG parašą ant mano siunčiamų laiškų. Šiandien pagaliau nusprendžiau tai padaryti. Pamaniau gal būt dar kam nors bus įdomu sužinoti kaip tai daroma.</p>
+<p>Jau senai planavau susikurti <span class="caps">GPG</span> raktą ir susikonfigūruoti savo pašto klientą, kad šis automatiškai uždėtu <span class="caps">GPG</span> parašą ant mano siunčiamų laiškų. Šiandien pagaliau nusprendžiau tai padaryti. Pamaniau gal būt dar kam nors bus įdomu sužinoti kaip tai daroma.</p>
 <div class="section" id="kam-reikalingas-elektroninis-parasas">
 <h2>Kam reikalingas elektroninis parašas?<a href="#kam-reikalingas-elektroninis-parasas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Elektroninis parašas užtikrina, kad pasirašytasis tekstas po pasirašymo nebuvo pakeistas ir išliko lygiai toks pats, koks buvo prieš pasirašant.  Taip pat yra galimybė patikrinti ar parašo savininkas tikrai pasirašė naudodamasis savo parašu.</p>
@@ -63,24 +63,24 @@
 draugams, patalpinti savo asmeninėje svetainėje arba bendruose raktų
 serveriuose. Raktas išeksportuojamas taip:</p>
 <pre class="literal-block">$ gpg -a --export tavo-el-pasto@adresas.lt &gt; tavoviesasisraktas.asc</pre>
-<p># Kaip sužinoti savo rakto ID ir fingerprint?</p>
+<p># Kaip sužinoti savo rakto <span class="caps">ID</span> ir fingerprint?</p>
 <p>Įvedus tokią komandą:</p>
 <pre class="literal-block">$ gpg --list-public-keys el.pastas@example.com
 pub   11111/AAAAAAAA 2001-01-01
       Key fingerprint = AAAA AAAA AAAA AAAA AAAA  AAAA AAAA AAAA AAAA AAAA
 uid                  Name Surname &lt;el.pastas@example.com&gt;
 sub   22222/BBBBBBBB 2001-01-01</pre>
-<p>Į ekraną bus išvestas rakto ID ir fingerpring. Šiuo atveju rakto ID yra
-<cite>AAAAAAAA</cite>, o fingerpring yra tai kas parašyta po „Key fingerpring = “ eilute.</p>
+<p>Į ekraną bus išvestas rakto <span class="caps">ID</span> ir fingerpring. Šiuo atveju rakto <span class="caps">ID</span> yra
+<cite><span class="caps">AAAAAAAA</span></cite>, o fingerpring yra tai kas parašyta po „Key fingerpring = “ eilute.</p>
 <p># Kaip išsiųsti savo raktą į raktų serverį?</p>
 <p>Savo raktą į raktų serverį išsiųsite taip:</p>
 <pre class="literal-block">$ gpg --send-keys AAAAAAAA</pre>
 <p># Kaip importuoti kito žmogaus raktą į savo raktinę?</p>
-<p>Jei žinote rakto ID:</p>
+<p>Jei žinote rakto <span class="caps">ID</span>:</p>
 <pre class="literal-block">$ gpg --recv-keys AAAAAAAA</pre>
 <p>Jei žinote tik el. pašto adresą arba rakto savininko vardą:</p>
 <pre class="literal-block">$ gpg --search-keys vardas@example.com</pre>
-<p>Suradus ieškomą raktą, galima jį importuoti pagal ID, taip kaip aprašyta aukščiau.</p>
+<p>Suradus ieškomą raktą, galima jį importuoti pagal <span class="caps">ID</span>, taip kaip aprašyta aukščiau.</p>
 <p>Jei turite viešojo rakto failą, jį importuoti galima taip:</p>
 <pre class="literal-block">$ gpg --import &lt;failo/vardas.asc&gt;</pre>
 <p># Kaip pasirašyti kitą viešąjį raktą?</p>
@@ -95,7 +95,7 @@ raktą galima taip:</p>
 <pre class="literal-block">$ gpg --send-keys AAAAAAAA</pre>
 </div>
 <div class="section" id="gpg-ir-mutt">
-<h2>GPG ir mutt<a href="#gpg-ir-mutt" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<h2><span class="caps">GPG</span> ir mutt<a href="#gpg-ir-mutt" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Kai visi reikiami raktai sukurti, galima sukonfigūruoti programas, kurios su tuo dirbs. Pašto programa <em>mutt</em> konfigūruojama labai paprastai, tiesiog faile <cite>~/.mutt/muttrc</cite> reikia įrašyti tokias eilutes:</p>
 <pre class="literal-block">set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
 set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
@@ -114,15 +114,15 @@ set pgp_sign_as=0xABCABCAB
 set pgp_replyencrypt=yes
 set pgp_timeout=1800
 set pgp_good_sign="^gpg: Good signature from"</pre>
-<p><strong>Pastaba:</strong> pakeiskite viešojo rakto kodą <em>ABCABCAB</em> savuoju. Jį galima sužinoti iš <cite>gpg —list-keys</cite> komandos išvesties (kodas yra paryškintas):</p>
+<p><strong>Pastaba:</strong> pakeiskite viešojo rakto kodą <em><span class="caps">ABCABCAB</span></em> savuoju. Jį galima sužinoti iš <cite>gpg —list-keys</cite> komandos išvesties (kodas yra paryškintas):</p>
 <pre class="literal-block">pub   1024D/ABCABCAB 2007-10-13
 uid                  Vardas Pavardaitis
 sub   2048g/A3BA3BA 2007-10-13</pre>
 <p>Po to, kai išsaugosite <em>mutt</em> konfigūracinį failą ir bandysite siųsti laišką, prie jo bus prisegamas parašas.</p>
 </div>
 <div class="section" id="gpg-ir-gajim">
-<h2>GPG ir Gajim<a href="#gpg-ir-gajim" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Pokalbiams naudoju Jabber klientą Gajim. Kai kurie Jabber serveriai naudoja apsaugotą SSL protokolą žinučių perdavimui. Tačiau Jabber protokolas veikia decentralizuotai, tai reiškia, kad žinutės gali keliauti ir į kitus serverius, kurie nebūtinai yra apsaugoti SSL. Jei žinutės keliauja neapsaugotais kanalais, tada bet kas gali tas žinutes perskaityti. Naudojant GPG galima žinutes užkoduoti, tada jos iš siuntėjo, iki pat gavėjo keliaus užkoduotos ir jas perskaityti galės tik tas, kam jos skirtos.</p>
+<h2><span class="caps">GPG</span> ir Gajim<a href="#gpg-ir-gajim" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Pokalbiams naudoju Jabber klientą Gajim. Kai kurie Jabber serveriai naudoja apsaugotą <span class="caps">SSL</span> protokolą žinučių perdavimui. Tačiau Jabber protokolas veikia decentralizuotai, tai reiškia, kad žinutės gali keliauti ir į kitus serverius, kurie nebūtinai yra apsaugoti <span class="caps">SSL</span>. Jei žinutės keliauja neapsaugotais kanalais, tada bet kas gali tas žinutes perskaityti. Naudojant <span class="caps">GPG</span> galima žinutes užkoduoti, tada jos iš siuntėjo, iki pat gavėjo keliaus užkoduotos ir jas perskaityti galės tik tas, kam jos skirtos.</p>
 <p>Kad žinutės keliautu užkoduotos, Gajim kontaktų sąraše reikia pasirinkti „Edit – Accounts“, atsidariusiame lange reikia pasirinkti redaguoti prieigą. Prieigos lange, „Personal Information“ žymelėje reikia nurodyti savo viešąjį raktą.  Kitas žmogus, su kuriuo bendraujama Jabber protokolu, turėtu atlikti panašius veiksmus. Taip pat reikia turėti kito pašnekovo viešąjį raktą ir jį importuoti:</p>
 <pre class="literal-block">$ gpg --import kitas_pasnekovas.asc</pre>
 <p>Importavus kito pašnekovo viešąjį raktą, Gajim kontaktų sąraše, dešiniuoju pelės klavišu paspaudus ant kito pašnekovo ir pasirinkus „Assign OpenPGP Key“ nurodomas to pašnekovo raktas. Po šių veiksmų visos žinutės bus koduojamos.</p>
@@ -140,7 +140,7 @@ sub   2048g/A3BA3BA 2007-10-13</pre>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

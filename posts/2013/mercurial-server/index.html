@@ -51,19 +51,19 @@ versijų kontrolės sistemą.</p>
 <div class="section" id="kas-yra-mercurial-server">
 <h2>Kas yra mercurial-server?<a href="#kas-yra-mercurial-server" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference external" href="http://www.lshift.net/mercurial-server.html">mercurial-server</a> yra nedidelis skriptų rinkinys, padedantis organizuoti darbą
-su <a class="reference external" href="http://mercurial.selenic.com/">mercurial</a> repozitorijomis viename serveryje, per vieną <code class="docutils literal">hg</code> naudotoją.
-Naudojamas SSH protokolas, o repozitorijų naudotojai identifikuojami SSH raktų pagalba.</p>
+su <a class="reference external" href="http://mercurial.selenic.com/">mercurial</a> repozitorijomis viename serveryje, per vieną <code class="docutils literal">hg</code> naudotoją.
+Naudojamas <span class="caps">SSH</span> protokolas, o repozitorijų naudotojai identifikuojami <span class="caps">SSH</span> raktų pagalba.</p>
 <p>Įdiegus <a class="reference external" href="http://www.lshift.net/mercurial-server.html">mercurial-server</a>, serveryje nepaleidžiami jokie nauji demonai, kadangi
-visa komunikacija vyksta per <code class="docutils literal">sshd</code> demoną.</p>
+visa komunikacija vyksta per <code class="docutils literal">sshd</code> demoną.</p>
 <p><a class="reference external" href="http://www.lshift.net/mercurial-server.html">mercurial-server</a> suteikia galimybę paprastai kurti naujus naudotojus, tiesiog
-pridedant jų SSH raktą, yra galimybė valdyti naudotojų teises. Labai paprasta
+pridedant jų <span class="caps">SSH</span> raktą, yra galimybė valdyti naudotojų teises. Labai paprasta
 kurti naujas repozitorijas.</p>
 </div>
 <div class="section" id="pries-pradedant">
 <h2>Prieš pradedant<a href="#pries-pradedant" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Čia pateikta informacija praktiškai išbandyta su <a class="reference external" href="http://www.ubuntu.com/">Ubuntu</a> 12.04 distribucija.
 Instrukcija ko gero galios ir visoms kitoms <a class="reference external" href="http://www.debian.org/">Debian</a> pagrindu sukurtoms
-<a class="reference external" href="http://www.gnu.org/gnu/linux-and-gnu.html">GNU/Linux</a> distribucijoms.</p>
+<a class="reference external" href="http://www.gnu.org/gnu/linux-and-gnu.html"><span class="caps">GNU</span>/Linux</a> distribucijoms.</p>
 <p>Visos instrukcijos žemiau, bus naudojami tokie vardai:</p>
 <dl class="simple">
 <dt><code class="docutils literal">vardenis</code></dt>
@@ -86,9 +86,9 @@ Instrukcija ko gero galios ir visoms kitoms <a class="reference external" href="
 <pre class="literal-block">sudo apt-get install mercurial-server</pre>
 </div>
 <div class="section" id="ssh-raktai">
-<h2>SSH raktai<a href="#ssh-raktai" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p><a class="reference external" href="http://www.lshift.net/mercurial-server.html">mercurial-server</a> veikia saugaus SSH protokolo ir SSH raktų pagalba. Todėl
-būtina susikurti SSH raktą, jei jo dar neturite:</p>
+<h2><span class="caps">SSH</span> raktai<a href="#ssh-raktai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="http://www.lshift.net/mercurial-server.html">mercurial-server</a> veikia saugaus <span class="caps">SSH</span> protokolo ir <span class="caps">SSH</span> raktų pagalba. Todėl
+būtina susikurti <span class="caps">SSH</span> raktą, jei jo dar neturite:</p>
 <pre class="literal-block">ssh-keygen -C vardenis@skreitinukas</pre>
 </div>
 <div class="section" id="mercurial-server-pirmojo-naudotojo-kurimas">
@@ -96,7 +96,7 @@ būtina susikurti SSH raktą, jei jo dar neturite:</p>
 <p>Prieš pradedant bet kokį <a class="reference external" href="http://www.lshift.net/mercurial-server.html">mercurial-server</a> konfigūravimą, būtina susikurti
 pirmąjį administratoriaus naudotoją, kuris galės keisti <a class="reference external" href="http://www.lshift.net/mercurial-server.html">mercurial-server</a>
 konfigūraciją ir suteikti prieigą prie repozitorijų, kitiems naudotojams.</p>
-<p>Tam jums reikės įkelti savo viešąjį SSH raktą, į serverį ir paleisti
+<p>Tam jums reikės įkelti savo viešąjį <span class="caps">SSH</span> raktą, į serverį ir paleisti
 <code class="docutils literal"><span class="pre">refresh-auth</span></code> komandą:</p>
 <pre class="literal-block">scp ~/.ssh/id_rsa.pub vardenis@serveris:
 ssh vardenis@serveris
@@ -111,7 +111,7 @@ naudotis visomis funkcijomis.</p>
 <h2>Naudotojų kūrimas ir valdymas<a href="#naudotoju-kurimas-ir-valdymas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Jei norite, kad prie repozitorijų priėjimą turėtų daugiau nei vienas
 naudotojas, tuomet, galite susikurti daugiau naudotojų, įkeldami kiekvieno iš
-jų SSH viešąjį raktą, tokiu būdu:</p>
+jų <span class="caps">SSH</span> viešąjį raktą, tokiu būdu:</p>
 <pre class="literal-block">hg clone ssh://hg@serveris/hgadmin
 cd hgadmin
 mkdir -p keys/users/jonas
@@ -119,37 +119,35 @@ cp ~/jono-raktas.pub keys/users/jonas/jonoskreitinukas
 hg add
 hg commit -m "Įkeltas Jono raktas."
 hg push</pre>
-<p>Komandos aukščiau turi būti vykdomos <code class="docutils literal">vardenis</code> naudotojo kompiuteryje, o ne
-serveryje. <code class="docutils literal"><span class="pre">~/jono-raktas.pub</span></code> yra kito naudotojo raktas. Jei naudotojai
+<p>Komandos aukščiau turi būti vykdomos <code class="docutils literal">vardenis</code> naudotojo kompiuteryje, o ne serveryje. <code class="docutils literal"><span class="pre">~/jono-raktas.pub</span></code> yra kito naudotojo raktas. Jei naudotojai
 raktą siunčia el. paštu, įsitikinkite, kad raktas nesulaužytas į kelias
-eilutes, visas SSH raktas, turi būti viena eilutė.</p>
-<p>Įvykdžius paskutinę komandą <code class="docutils literal">hg push</code>, serveryje, <a class="reference external" href="http://www.lshift.net/mercurial-server.html">mercurial-server</a>
-automatiškai paleist <code class="docutils literal"><span class="pre">/usr/share/mercurial-server/refresh-auth</span></code> skriptą ir
+eilutes, visas <span class="caps">SSH</span> raktas, turi būti viena eilutė.</p>
+<p>Įvykdžius paskutinę komandą <code class="docutils literal">hg push</code>, serveryje, <a class="reference external" href="http://www.lshift.net/mercurial-server.html">mercurial-server</a>
+automatiškai paleist <code class="docutils literal"><span class="pre">/usr/share/mercurial-server/refresh-auth</span></code> skriptą ir
 atnaujins konfigūraciją.</p>
-<p>Atkreipkite dėmesio, kad administratoriaus raktas buvo įkeltas į <code class="docutils literal">keys/root</code>
-katalogą, o paprasto naudotojo į <code class="docutils literal">keys/users</code>. Priklausomai nuo to, į kokį
+<p>Atkreipkite dėmesio, kad administratoriaus raktas buvo įkeltas į <code class="docutils literal">keys/root</code>
+katalogą, o paprasto naudotojo į <code class="docutils literal">keys/users</code>. Priklausomai nuo to, į kokį
 katalogą įkeltas naudotojo raktas, tokios teisės jam ir bus suteiktos. Pagal
-nutylėjimą, yra sukurtos dvi naudotojų grupės, <code class="docutils literal">root</code> ir <code class="docutils literal">users</code>. <code class="docutils literal">users</code>
-naudotojai, neturi priėjimo prie <code class="docutils literal">hgadmin</code> repozitorijos, todėl neturi
+nutylėjimą, yra sukurtos dvi naudotojų grupės, <code class="docutils literal">root</code> ir <code class="docutils literal">users</code>. <code class="docutils literal">users</code>
+naudotojai, neturi priėjimo prie <code class="docutils literal">hgadmin</code> repozitorijos, todėl neturi
 galimybės kurti naujus naudotojus, ar keisti konfigūraciją.</p>
 </div>
 <div class="section" id="mercurial-server-konfiguravimas">
 <h2>mercurial-server konfigūravimas<a href="#mercurial-server-konfiguravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Kaip jau pastebėjote, <a class="reference external" href="http://www.lshift.net/mercurial-server.html">mercurial-server</a> konfigūraciniai failai laikomi dviejose
-vietose, serveryje, <code class="docutils literal"><span class="pre">/etc/mercurial-server</span></code> kataloge ir <code class="docutils literal">hgadmin</code>
-repozitorijoje. Rekomenduoju visą konfigūraciją laikyti versijuojamoje
+vietose, serveryje, <code class="docutils literal"><span class="pre">/etc/mercurial-server</span></code> kataloge ir <code class="docutils literal">hgadmin</code>
+repozitorijoje. Rekomenduoju visą konfigūraciją laikyti versijuojamoje
 <code class="docutils literal">hgadmin</code> repozitorijoje.</p>
 </div>
 <div class="section" id="naudotoju-teisiu-valdymas">
 <h2>Naudotojų teisių valdymas<a href="#naudotoju-teisiu-valdymas" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Naudotojų teisės valdomos per <code class="docutils literal">access.conf</code> konfigūracijos failą, esantį
-<code class="docutils literal">hgadmin</code> repozitorijoje. Pagal nutylėjimą, šis failas, serveryje
-(<code class="docutils literal"><span class="pre">/etc/mercurial-server/access.conf</span></code>) atrodo taip:</p>
+<p>Naudotojų teisės valdomos per <code class="docutils literal">access.conf</code> konfigūracijos failą, esantį
+<code class="docutils literal">hgadmin</code> repozitorijoje. Pagal nutylėjimą, šis failas, serveryje (<code class="docutils literal"><span class="pre">/etc/mercurial-server/access.conf</span></code>) atrodo taip:</p>
 <pre class="literal-block">init user=root/**
 deny repo=hgadmin
 write user=users/**</pre>
-<p>Galite susikurti naują <code class="docutils literal">access.conf</code> failą <code class="docutils literal">hgadmin</code> repozitorijoje ir
-apsirašyti naujus nustatymus, kurie įsigalios po <code class="docutils literal">hg push</code> (įkėlimo į
+<p>Galite susikurti naują <code class="docutils literal">access.conf</code> failą <code class="docutils literal">hgadmin</code> repozitorijoje ir
+apsirašyti naujus nustatymus, kurie įsigalios po <code class="docutils literal">hg push</code> (įkėlimo į
 serverį) komandos.</p>
 <p>Viena konfigūracijos failo eilutė susideda iš tokių dalių:</p>
 <pre class="literal-block">&lt;leidimas&gt; &lt;taisyklė 1&gt; &lt;taisyklė 2&gt; &lt;taisyklė N&gt; ...</pre>
@@ -177,11 +175,11 @@ nurodytiems naudotojams.</p>
 </div>
 <div class="section" id="repozitoriju-kurimas">
 <h2>Repozitorijų kūrimas<a href="#repozitoriju-kurimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
-<p>Repozitorijos serveryje kuriamos labai paprastai, jei turite <code class="docutils literal">init</code> teisę,
+<p>Repozitorijos serveryje kuriamos labai paprastai, jei turite <code class="docutils literal">init</code> teisę,
 tada naują repozitoriją serveryje sukursite taip:</p>
 <pre class="literal-block">hg clone lokali/repozitorija ssh://hg@serveris/nauja-repozitorija</pre>
-<p>Po šios komandos, serveryje bus sukurta nauja repozitorija pavadinimu
-<code class="docutils literal"><span class="pre">nauja-repozitorija</span></code> ir į ją bus perkeltas visas <code class="docutils literal">lokali/repozitorija</code>
+<p>Po šios komandos, serveryje bus sukurta nauja repozitorija pavadinimu
+<code class="docutils literal"><span class="pre">nauja-repozitorija</span></code> ir į ją bus perkeltas visas <code class="docutils literal">lokali/repozitorija</code>
 turinys. Lokalią repozitoriją galite susikurti taip:</p>
 <pre class="literal-block">hg init lokali/repozitorija</pre>
 <p>Iš serverio, į savo kompiuterį bet kurią repozitoriją, prie kurios turite
@@ -219,40 +217,40 @@ ssh://hg@serveris/projektas/funkcija-y
 ssh://hg@serveris/projektas/vardenis
 ssh://hg@serveris/projektas/vardenis/funkcija-x
 ssh://hg@serveris/projektas/jonas</pre>
-<p>Šiame pavyzdyje, pagrindinė repozitorija yra <code class="docutils literal"><span class="pre">ssh://hg@serveris/projektas</span></code>,
+<p>Šiame pavyzdyje, pagrindinė repozitorija yra <code class="docutils literal"><span class="pre">ssh://hg@serveris/projektas</span></code>,
 šioje klonuotoje šakoje turėtų būti saugoma naujausią veikianti versija,
-<a class="reference external" href="http://subversion.apache.org/">Subversion</a> terminais kalbant, tai vadinama <code class="docutils literal">trunk</code>, <a class="reference external" href="http://git-scm.com/">git</a> terminais
+<a class="reference external" href="http://subversion.apache.org/">Subversion</a> terminais kalbant, tai vadinama <code class="docutils literal">trunk</code>, <a class="reference external" href="http://git-scm.com/">git</a> terminais
 <code class="docutils literal">master</code>.</p>
-<p>Taip pat yra produkto šaka <code class="docutils literal">projektas/production</code>, kurioje turėtų būti
+<p>Taip pat yra produkto šaka <code class="docutils literal">projektas/production</code>, kurioje turėtų būti
 laikomi tokie patys pakeitimai, kurie yra produkcinėje versijoje.</p>
-<p>Kitos šakos <code class="docutils literal"><span class="pre">projektas/funkcija-x</span></code>, <code class="docutils literal"><span class="pre">projektas/funkcija-y</span></code> yra skirtos
+<p>Kitos šakos <code class="docutils literal"><span class="pre">projektas/funkcija-x</span></code>, <code class="docutils literal"><span class="pre">projektas/funkcija-y</span></code> yra skirtos
 ilgiau vystomoms funkcijoms. Taip pat, kiekvienas naudotojas gali turėti po
 savo klonuotą šaką, kuri gali saugoti nebaigtus pakeitimus.</p>
 <p>Klonuotą šaką sukursite taip:</p>
 <pre class="literal-block">hg clone . ssh://hg@serveris/projektas/funkcija-x</pre>
 <p>Kad būtų paprasčiau dirbti su klonuotomis šakomis siūlau naudoti kelio
-trumpinius, kuriuos galite apsirašyti repozitorijos <code class="docutils literal">.hg/hgrc</code> faile:</p>
-<pre class="code cfg"><a name="rest_code_f306f79bb0c04e49b76dcf4208154d94-1"></a><span class="k">[paths]</span>
-<a name="rest_code_f306f79bb0c04e49b76dcf4208154d94-2"></a><span class="na">default</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas</span>
-<a name="rest_code_f306f79bb0c04e49b76dcf4208154d94-3"></a><span class="na">production</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/production</span>
-<a name="rest_code_f306f79bb0c04e49b76dcf4208154d94-4"></a><span class="na">funkcija-x</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/funkcija-x</span>
-<a name="rest_code_f306f79bb0c04e49b76dcf4208154d94-5"></a><span class="na">funkcija-y</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/funkcija-y</span>
-<a name="rest_code_f306f79bb0c04e49b76dcf4208154d94-6"></a><span class="na">vardenis</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/vardenis</span>
-<a name="rest_code_f306f79bb0c04e49b76dcf4208154d94-7"></a><span class="na">jonas</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/jonas</span>
+trumpinius, kuriuos galite apsirašyti repozitorijos <code class="docutils literal">.hg/hgrc</code> faile:</p>
+<pre class="code cfg"><a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-1"></a><span class="k">[paths]</span>
+<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-2"></a><span class="na">default</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas</span>
+<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-3"></a><span class="na">production</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/production</span>
+<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-4"></a><span class="na">funkcija-x</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/funkcija-x</span>
+<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-5"></a><span class="na">funkcija-y</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/funkcija-y</span>
+<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-6"></a><span class="na">vardenis</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/vardenis</span>
+<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-7"></a><span class="na">jonas</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/jonas</span>
 </pre>
-<p>Turin tokius aprašus, galite naudoti trumpuosius vardus (<code class="docutils literal">default</code> turi
+<p>Turin tokius aprašus, galite naudoti trumpuosius vardus (<code class="docutils literal">default</code> turi
 ypatingą prasmę ir šis kelias naudojamas tada, kai nenurodote nieko):</p>
 <pre class="literal-block">hg push
 hg push production
 hg push funkcija-x
 hg pull jonas</pre>
-<p>Taip pat galite naudoti <a class="reference external" href="http://mercurial.selenic.com/wiki/SchemesExtension">Schemes</a> išplėtimą, kurį įjungsite savo <code class="docutils literal"><span class="pre">~/.hgrc</span></code>
+<p>Taip pat galite naudoti <a class="reference external" href="http://mercurial.selenic.com/wiki/SchemesExtension">Schemes</a> išplėtimą, kurį įjungsite savo <code class="docutils literal"><span class="pre">~/.hgrc</span></code>
 faile taip:</p>
-<pre class="code cfg"><a name="rest_code_6c20ec8f87d240f2b76343dbe22f93e0-1"></a><span class="k">[extensions]</span>
-<a name="rest_code_6c20ec8f87d240f2b76343dbe22f93e0-2"></a><span class="na">hgext.schemes</span><span class="o">=</span>
-<a name="rest_code_6c20ec8f87d240f2b76343dbe22f93e0-3"></a>
-<a name="rest_code_6c20ec8f87d240f2b76343dbe22f93e0-4"></a><span class="k">[schemes]</span>
-<a name="rest_code_6c20ec8f87d240f2b76343dbe22f93e0-5"></a><span class="na">p</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas</span>
+<pre class="code cfg"><a name="rest_code_29f870354aa3450192b36b4395d2a5e3-1"></a><span class="k">[extensions]</span>
+<a name="rest_code_29f870354aa3450192b36b4395d2a5e3-2"></a><span class="na">hgext.schemes</span><span class="o">=</span>
+<a name="rest_code_29f870354aa3450192b36b4395d2a5e3-3"></a>
+<a name="rest_code_29f870354aa3450192b36b4395d2a5e3-4"></a><span class="k">[schemes]</span>
+<a name="rest_code_29f870354aa3450192b36b4395d2a5e3-5"></a><span class="na">p</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas</span>
 </pre>
 <p>Tada dirbti galite taip:</p>
 <pre class="literal-block">hg push p://production
@@ -262,13 +260,12 @@ hg pull p://jonas</pre>
 kompiuteryje, taip pat turėti panašią katalogų struktūrą, su keliomis to pačio
 projekto kopijomis, skirtinguose kataloguose. Pavyzdžiui:</p>
 <blockquote>
-<p>Dirbate prie <code class="docutils literal">default</code> šakos ir staiga atsiranda poreikis, pataisyti
-klaidą <code class="docutils literal">production</code> šakoje. Tada tiesiog keičiate aktyvų katalogą
-<code class="docutils literal"><span class="pre">../production</span></code>, ten pataisote klaidą, išsaugote pakeitimus <code class="docutils literal">hg commit</code>
-ir įkeliate pakeitimus į serveryje esančią repozitoriją <code class="docutils literal">hg push
-production</code>. Galiausiai, grįžtate atgal prie savo darbo <code class="docutils literal"><span class="pre">../projektas</span></code>,
-ten baigiate pakeitimus, juos išsaugote <code class="docutils literal">hg commit</code> ir pasiimate klaidos
-pataisymą iš kitos šakos <code class="docutils literal">hg pull production</code>.</p>
+<p>Dirbate prie <code class="docutils literal">default</code> šakos ir staiga atsiranda poreikis, pataisyti klaidą <code class="docutils literal">production</code> šakoje. Tada tiesiog keičiate aktyvų katalogą
+<code class="docutils literal"><span class="pre">../production</span></code>, ten pataisote klaidą, išsaugote pakeitimus <code class="docutils literal">hg commit</code>
+ir įkeliate pakeitimus į serveryje esančią repozitoriją <code class="docutils literal">hg push
+production</code>. Galiausiai, grįžtate atgal prie savo darbo <code class="docutils literal"><span class="pre">../projektas</span></code>,
+ten baigiate pakeitimus, juos išsaugote <code class="docutils literal">hg commit</code> ir pasiimate klaidos
+pataisymą iš kitos šakos <code class="docutils literal">hg pull production</code>.</p>
 </blockquote>
 </div>
 <div class="section" id="pavadintos-sakos">
@@ -277,7 +274,7 @@ pataisymą iš kitos šakos <code class="docutils literal">hg pull production</c
 tipo šakos įeina į repozitorijos istoriją ir jų negalima ištrinti (t.y.
 negalima ištrinti paprastai).</p>
 <p>Siūlau šio tipo šakas naudoti pagrindinėms versijoms žymėti. Pavyzdžiu,
-tarkime, kad jūsų projektas, turi dvi pagrindines ir palaikomas versijas,
+tarkime, kad jūsų projektas, turi dvi pagrindines ir palaikomas versijas,
 <code class="docutils literal">1.1</code> ir <code class="docutils literal">1.2</code>, tuomet, galite susikurti dvi pavadintas šakas:</p>
 <pre class="literal-block">hg branch 1.1
 hg ci -m "Nauja šaka versijai 1.1."
@@ -291,7 +288,7 @@ hg ci -m "Nauja šaka versijai 1.2."</pre>
 <p>Pavadintos šakos turi tokią savybę, kad joje galite atlikti naujus pakeitimus
 ir ji visą laiką rodys į naujausią pakeitimą. Versijuojant, stambioms versijoms
 tokia savybė labai tinka. Išleidžiant naujas galutines versijas, kuriose jau
-nebegali būti daromi jokie pakeitimai, galima naudoti žymes, o pavadinta šaka,
+nebegali būti daromi jokie pakeitimai, galima naudoti žymes, o pavadinta šaka,
 <code class="docutils literal">1.2</code> visą laiką rodys į naujausią galutinę versiją.</p>
 </div>
 <div class="section" id="paprastos-sakos">
@@ -322,7 +319,7 @@ kita naudotojo B. Galiausiai naudotojas B turi tas šakas sulieti (angl.
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     

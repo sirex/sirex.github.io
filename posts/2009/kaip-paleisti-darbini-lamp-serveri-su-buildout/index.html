@@ -33,7 +33,7 @@ P">
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
     <div id="container">
-         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Kaip paleisti darbinį LAMP serverį su buildout?</h1>
+         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Kaip paleisti darbinį <span class="caps">LAMP</span> serverį su buildout?</h1>
         <div class="metadata">
             <p class="dateline">
             <time class="published dt-published" datetime="2009-10-16T18:38:00+02:00" itemprop="datePublished" title="2009-10-16 18:38">2009-10-16 18:38</time>
@@ -47,34 +47,34 @@ P">
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>Jei kada bandėte programuoti su PHP, tikriausiai susidūrėte su LAMP serverio
+<p>Jei kada bandėte programuoti su <span class="caps">PHP</span>, tikriausiai susidūrėte su <span class="caps">LAMP</span> serverio
 diegimu ir konfigūravimu. Žinoma Ubuntu aplinkoje tai padaroma vienos komandos
 pagalba, tačiau turi šiokių tokių minusų:</p>
 <ul class="simple">
-<li><p>PHP, Apache ir MySQL versijos yra tokios, kokias pateikia distribucija</p></li>
+<li><p><span class="caps">PHP</span>, Apache ir MySQL versijos yra tokios, kokias pateikia distribucija</p></li>
 <li><p>Pagal nutylėjimą, web-root katalogas yra /var/www ir turi ne itin draugiškas
 failų ir katalogų teises.</p></li>
-<li><p>Įdiegus LAMP, kiekvieną kartą paleidus kompiuterį, automatiškai startuoja
+<li><p>Įdiegus <span class="caps">LAMP</span>, kiekvieną kartą paleidus kompiuterį, automatiškai startuoja
 Apache ir MySQL.</p></li>
 </ul>
-<p>Yra kur kas paprastesnis ir švaresnis būdas programuoti su PHP, panaudojant
+<p>Yra kur kas paprastesnis ir švaresnis būdas programuoti su <span class="caps">PHP</span>, panaudojant
 puikųjį buildout’ą. Nesiplečiant, štai komandos, kurių dėka turėsite pilnai
-paruoštą darbui LAMP serverį:</p>
+paruoštą darbui <span class="caps">LAMP</span> serverį:</p>
 <pre class="literal-block">$ sudo apt-get install mercurial python-setuptools
 $ hg clone http://bitbucket.org/sirex/lamp-buildout/ web
 $ cd web
 $ python bootstrap.py
 $ bin/buildout</pre>
-<p>Paskutinė komanda parsisiųs naujausius Apache, PHP, MySQL, PhpMyAdmin,
+<p>Paskutinė komanda parsisiųs naujausius Apache, <span class="caps">PHP</span>, MySQL, PhpMyAdmin,
 Supervisor ir kitų paketų išeities tekstus, juos sukompiliuos, įdiegs į uždarą
-buildout aplinką, sukonfigūruos ir paruoš pilnai veikiantį LAMP serverį.</p>
+buildout aplinką, sukonfigūruos ir paruoš pilnai veikiantį <span class="caps">LAMP</span> serverį.</p>
 <p>Apache ir MySQL paleisti galėsite taip:</p>
 <pre class="literal-block">$ bin/supervisord</pre>
 <p>Tai, kas paleista, galėsite kontroliuoti Web aplinkoje, adresu <a class="reference external" href="http://localhost:9001/">localhost:9001</a>. Pats Web’as bus pasiekiamas adresu: <a class="reference external" href="http://localhost:9002/">localhost:9002</a>. Portus galėsite keisti buildout.cfg faile.</p>
-<p>PHP skriptus galėsite rašyti savo naudotojo teisėmis, web/htdocs kataloge.
+<p><span class="caps">PHP</span> skriptus galėsite rašyti savo naudotojo teisėmis, web/htdocs kataloge.
 Viskas, kas bus įdiegta visiškai nesipjaus su jūsų sistema.  Redaguodami
 buildout.cfg failą, galėsite nusistatyti ką tik norite.  Galėsite nurodyti
-kitas paketų versijas, įtraukti papildomus paketus, nurodyti PHP ar MySQL
+kitas paketų versijas, įtraukti papildomus paketus, nurodyti <span class="caps">PHP</span> ar MySQL
 kompiliavimo parametrus ir pan. Vėliau,</p>
 <p>išsisaugoję šį failą, labai nesunkiai galėsite vėl atkurti viską, ką turėjote.</p>
 <p>Mintį radau šioje svetainėje:</p>
@@ -94,7 +94,7 @@ kompiliavimo parametrus ir pan. Vėliau,</p>
 <li><a href="../../../">Index</a></li>
                 <li><a href="../../">Archive</a></li>
                 <li><a href="../../../tags/">Tags</a></li>
-                <li><a href="../../../rss.xml">RSS feed</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
 
     
     
