@@ -29,26 +29,37 @@
     margin: 40px auto;
 }
 
-table {
+table, table.dataframe {
+    margin-top: 16px;
+    margin-bottom: 16px;
     border-collapse: collapse;
+    border: none;
 }
-th, td {
+th, td,  {
+    border: none;
     border-bottom: 1px solid #555753;
-} 
-td > p {
-    margin: 2px;
-    margin-top: 6px;
 }
-tr:hover {
+table.dataframe thead th {
+    text-align: left;
+    border-bottom: 3px solid #555753;
+}
+table.dataframe th, table.dataframe td {
+    border: none;
+    padding: 6px 12px;
+    margin: 6px 2px 2px;
+    border-bottom: 1px solid #555753;
+}
+td > p {
+    margin: 6px 2px 2px;
+}
+tr:hover, table.dataframe tr:hover {
     background-color: #2E3436;
 } 
 
 blockquote {
     background-color: #2F3638;
     border-left: 3px solid #B5B5B5;
-    padding: 2px;
-    padding-left: 17px;
-    padding-right: 17px;
+    padding: 2px 17px;
     margin-left: -20px;
     margin-right: -17px;
     font-style: italic;

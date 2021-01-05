@@ -63,7 +63,7 @@ sudo checkinstall --pkgname=py3k make altinstall</pre>
 <p>Jei bus kokių problemų su checkinstall, panašių į šias:</p>
 <pre class="literal-block">ranlib: could not create temporary file whilst writing archive: No more archived files</pre>
 <p>Tai man padėjo tokia komanda:</p>
-<pre class="code bash"><a name="rest_code_2e44d3354e2e4cb6b16a20e96e963f85-1"></a>sudo mkdir -p /usr/local/lib/python3.0/config
+<pre class="code bash"><a name="rest_code_b76863cbb84f4dec84105c45b3d4790a-1"></a>sudo mkdir -p /usr/local/lib/python3.0/config
 </pre>
 <p>O visas kitas kompiliavimas vyko ganėtinai sklandžiai.</p>
 <p>Galiausiai paleidau python3.0 ir išbandžiau kaip viskas veikia:</p>
@@ -121,6 +121,11 @@ puikiai ir print, nuo šiol ne kalbos dalis, o paprasčiausia funkcija.</p>
         captions: function(element) {
             return element.getElementsByTagName('img')[0].alt;
     }});
-    </script>
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N9F34JEJNF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N9F34JEJNF');
+</script>
 </body>
 </html>

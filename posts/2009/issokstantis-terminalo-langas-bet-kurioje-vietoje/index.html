@@ -56,67 +56,67 @@ Python ir padariau tokią labai primityvią programikę, kurios pagrindinė
 paskirtis – parodyti terminalo langą paspaudus tam tikrą klavišų kombinaciją.
 Patalpinau programikę į <a class="reference external" href="https://edge.launchpad.net/quaketerm/">launchpad.net</a>. Taip pat žemiau pateikiu kodą,
 kadangi jo nėra labai daug:</p>
-<pre class="code python"><a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-1"></a><span class="ch">#!/usr/bin/env python</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-2"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-3"></a><span class="kn">import</span> <span class="nn">os</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-4"></a><span class="kn">import</span> <span class="nn">gtk</span><span class="o">,</span> <span class="nn">wnck</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-5"></a><span class="kn">import</span> <span class="nn">time</span><span class="p">;</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-6"></a><span class="kn">from</span> <span class="nn">deskbar.core.keybinder._keybinder</span> \
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-7"></a>    <span class="kn">import</span> <span class="nn">tomboy_keybinder_bind</span> <span class="k">as</span> <span class="nn">bindkey</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-8"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-9"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-10"></a><span class="k">class</span> <span class="nc">QTerm</span><span class="p">:</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-11"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-12"></a>    <span class="n">window</span> <span class="o">=</span> <span class="kc">None</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-13"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-14"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pid</span><span class="p">):</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">pid</span> <span class="o">=</span> <span class="n">pid</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">screen</span> <span class="o">=</span> <span class="n">wnck</span><span class="o">.</span><span class="n">screen_get_default</span><span class="p">()</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-17"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">watch_handler</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'window-opened'</span><span class="p">,</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">watchWindow</span><span class="p">)</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-19"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-20"></a>    <span class="k">def</span> <span class="nf">watchWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-21"></a>        <span class="k">if</span> <span class="n">window</span><span class="o">.</span><span class="n">get_pid</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">pid</span><span class="p">:</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-22"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">window</span> <span class="o">=</span> <span class="n">window</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-23"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-24"></a>            <span class="n">swidth</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-25"></a>            <span class="n">width</span> <span class="o">=</span> <span class="n">swidth</span> <span class="o">-</span> <span class="p">(</span><span class="n">swidth</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-26"></a>            <span class="n">height</span> <span class="o">=</span> <span class="mi">400</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-27"></a>            <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">swidth</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-28"></a>            <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-29"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">set_geometry</span><span class="p">(</span><span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_GRAVITY_CURRENT</span><span class="p">,</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-30"></a>                                     <span class="p">(</span><span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_X</span> <span class="o">|</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-31"></a>                                      <span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_Y</span> <span class="o">|</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-32"></a>                                      <span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_WIDTH</span> <span class="o">|</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-33"></a>                                      <span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_HEIGHT</span><span class="p">),</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-34"></a>                                     <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-35"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-36"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">watch_handler</span><span class="p">)</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-37"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-38"></a>    <span class="k">def</span> <span class="nf">getTimestamp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-39"></a>        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">mktime</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">timetuple</span><span class="p">()))</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-40"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-41"></a>    <span class="k">def</span> <span class="nf">onHotKeyPress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-42"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">:</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-43"></a>            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">is_active</span><span class="p">()):</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-44"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">minimize</span><span class="p">()</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-45"></a>            <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-46"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getTimestamp</span><span class="p">())</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-47"></a>        <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-48"></a>            <span class="nb">print</span> <span class="s2">"Terminal window not found."</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-49"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-50"></a>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-51"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-52"></a>    <span class="n">pid</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">fork</span><span class="p">()</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-53"></a>    <span class="k">if</span> <span class="n">pid</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-54"></a>        <span class="n">os</span><span class="o">.</span><span class="n">execlp</span><span class="p">(</span><span class="s1">'xterm'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-55"></a>    <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-56"></a>        <span class="n">qterm</span> <span class="o">=</span> <span class="n">QTerm</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-57"></a>        <span class="n">bindkey</span><span class="p">(</span><span class="s2">"&lt;Alt&gt;grave"</span><span class="p">,</span> <span class="n">qterm</span><span class="o">.</span><span class="n">onHotKeyPress</span><span class="p">)</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-58"></a>        <span class="k">try</span><span class="p">:</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-59"></a>            <span class="n">gtk</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-60"></a>        <span class="k">except</span> <span class="p">(</span><span class="ne">KeyboardInterrupt</span><span class="p">,</span> <span class="ne">SystemExit</span><span class="p">):</span>
-<a name="rest_code_5e7adb9dccef48a792d04595858d0fa3-61"></a>            <span class="k">pass</span>
+<pre class="code python"><a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-1"></a><span class="ch">#!/usr/bin/env python</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-2"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-3"></a><span class="kn">import</span> <span class="nn">os</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-4"></a><span class="kn">import</span> <span class="nn">gtk</span><span class="o">,</span> <span class="nn">wnck</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-5"></a><span class="kn">import</span> <span class="nn">time</span><span class="p">;</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-6"></a><span class="kn">from</span> <span class="nn">deskbar.core.keybinder._keybinder</span> \
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-7"></a>    <span class="kn">import</span> <span class="nn">tomboy_keybinder_bind</span> <span class="k">as</span> <span class="nn">bindkey</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-8"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-9"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-10"></a><span class="k">class</span> <span class="nc">QTerm</span><span class="p">:</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-11"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-12"></a>    <span class="n">window</span> <span class="o">=</span> <span class="kc">None</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-13"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-14"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pid</span><span class="p">):</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">pid</span> <span class="o">=</span> <span class="n">pid</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">screen</span> <span class="o">=</span> <span class="n">wnck</span><span class="o">.</span><span class="n">screen_get_default</span><span class="p">()</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-17"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">watch_handler</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'window-opened'</span><span class="p">,</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">watchWindow</span><span class="p">)</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-19"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-20"></a>    <span class="k">def</span> <span class="nf">watchWindow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">screen</span><span class="p">,</span> <span class="n">window</span><span class="p">):</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-21"></a>        <span class="k">if</span> <span class="n">window</span><span class="o">.</span><span class="n">get_pid</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">pid</span><span class="p">:</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-22"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">window</span> <span class="o">=</span> <span class="n">window</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-23"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-24"></a>            <span class="n">swidth</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-25"></a>            <span class="n">width</span> <span class="o">=</span> <span class="n">swidth</span> <span class="o">-</span> <span class="p">(</span><span class="n">swidth</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-26"></a>            <span class="n">height</span> <span class="o">=</span> <span class="mi">400</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-27"></a>            <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">swidth</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-28"></a>            <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-29"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">set_geometry</span><span class="p">(</span><span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_GRAVITY_CURRENT</span><span class="p">,</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-30"></a>                                     <span class="p">(</span><span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_X</span> <span class="o">|</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-31"></a>                                      <span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_Y</span> <span class="o">|</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-32"></a>                                      <span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_WIDTH</span> <span class="o">|</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-33"></a>                                      <span class="n">wnck</span><span class="o">.</span><span class="n">WINDOW_CHANGE_HEIGHT</span><span class="p">),</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-34"></a>                                     <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-35"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-36"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">watch_handler</span><span class="p">)</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-37"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-38"></a>    <span class="k">def</span> <span class="nf">getTimestamp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-39"></a>        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">mktime</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">timetuple</span><span class="p">()))</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-40"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-41"></a>    <span class="k">def</span> <span class="nf">onHotKeyPress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-42"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">:</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-43"></a>            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">is_active</span><span class="p">()):</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-44"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">minimize</span><span class="p">()</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-45"></a>            <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-46"></a>                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getTimestamp</span><span class="p">())</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-47"></a>        <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-48"></a>            <span class="nb">print</span> <span class="s2">"Terminal window not found."</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-49"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-50"></a>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-51"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-52"></a>    <span class="n">pid</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">fork</span><span class="p">()</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-53"></a>    <span class="k">if</span> <span class="n">pid</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-54"></a>        <span class="n">os</span><span class="o">.</span><span class="n">execlp</span><span class="p">(</span><span class="s1">'xterm'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-55"></a>    <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-56"></a>        <span class="n">qterm</span> <span class="o">=</span> <span class="n">QTerm</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-57"></a>        <span class="n">bindkey</span><span class="p">(</span><span class="s2">"&lt;Alt&gt;grave"</span><span class="p">,</span> <span class="n">qterm</span><span class="o">.</span><span class="n">onHotKeyPress</span><span class="p">)</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-58"></a>        <span class="k">try</span><span class="p">:</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-59"></a>            <span class="n">gtk</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-60"></a>        <span class="k">except</span> <span class="p">(</span><span class="ne">KeyboardInterrupt</span><span class="p">,</span> <span class="ne">SystemExit</span><span class="p">):</span>
+<a name="rest_code_72414c0f45c442db8a7ea126f264fcd1-61"></a>            <span class="k">pass</span>
 </pre>
 <p>Kad paleisti galima išsaugoti kodą į kokį nors failą ir jį paleisti su python.
 Kaip programa bus paleista, turėtu iššokti XTerm langas. Jį paslėpti galima su
@@ -177,6 +177,11 @@ pabaigą įdėti tokias eilutes:</p>
         captions: function(element) {
             return element.getElementsByTagName('img')[0].alt;
     }});
-    </script>
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N9F34JEJNF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N9F34JEJNF');
+</script>
 </body>
 </html>

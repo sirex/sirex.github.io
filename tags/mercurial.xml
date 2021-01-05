@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about mercurial)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/mercurial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Mon, 04 Jan 2021 19:26:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Mercurial server konfigūravimas</title><link>https://sirex.lt/posts/2013/mercurial-server/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Instrukcija apie tai kaip įsidiegti &lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt; į savo serverį. Kartu
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about mercurial)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/mercurial.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Mercurial server konfigūravimas</title><link>https://sirex.lt/posts/2013/mercurial-server/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Instrukcija apie tai kaip įsidiegti &lt;a class="reference external" href="http://www.lshift.net/mercurial-server.html"&gt;mercurial-server&lt;/a&gt; į savo serverį. Kartu
 pateikiu ir keletą patarimų, kaip organizuoti darbą naudojant &lt;a class="reference external" href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt;
 versijų kontrolės sistemą.&lt;/p&gt;
 &lt;div class="section" id="kas-yra-mercurial-server"&gt;
@@ -180,13 +180,13 @@ savo klonuotą šaką, kuri gali saugoti nebaigtus pakeitimus.&lt;/p&gt;
 &lt;pre class="literal-block"&gt;hg clone . ssh://hg@serveris/projektas/funkcija-x&lt;/pre&gt;
 &lt;p&gt;Kad būtų paprasčiau dirbti su klonuotomis šakomis siūlau naudoti kelio
 trumpinius, kuriuos galite apsirašyti repozitorijos &lt;code class="docutils literal"&gt;.hg/hgrc&lt;/code&gt; faile:&lt;/p&gt;
-&lt;pre class="code cfg"&gt;&lt;a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[paths]&lt;/span&gt;
-&lt;a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;default&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas&lt;/span&gt;
-&lt;a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-3"&gt;&lt;/a&gt;&lt;span class="na"&gt;production&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/production&lt;/span&gt;
-&lt;a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-4"&gt;&lt;/a&gt;&lt;span class="na"&gt;funkcija-x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/funkcija-x&lt;/span&gt;
-&lt;a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-5"&gt;&lt;/a&gt;&lt;span class="na"&gt;funkcija-y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/funkcija-y&lt;/span&gt;
-&lt;a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-6"&gt;&lt;/a&gt;&lt;span class="na"&gt;vardenis&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/vardenis&lt;/span&gt;
-&lt;a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-7"&gt;&lt;/a&gt;&lt;span class="na"&gt;jonas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/jonas&lt;/span&gt;
+&lt;pre class="code cfg"&gt;&lt;a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[paths]&lt;/span&gt;
+&lt;a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;default&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas&lt;/span&gt;
+&lt;a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-3"&gt;&lt;/a&gt;&lt;span class="na"&gt;production&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/production&lt;/span&gt;
+&lt;a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-4"&gt;&lt;/a&gt;&lt;span class="na"&gt;funkcija-x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/funkcija-x&lt;/span&gt;
+&lt;a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-5"&gt;&lt;/a&gt;&lt;span class="na"&gt;funkcija-y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/funkcija-y&lt;/span&gt;
+&lt;a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-6"&gt;&lt;/a&gt;&lt;span class="na"&gt;vardenis&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/vardenis&lt;/span&gt;
+&lt;a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-7"&gt;&lt;/a&gt;&lt;span class="na"&gt;jonas&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas/jonas&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Turin tokius aprašus, galite naudoti trumpuosius vardus (&lt;code class="docutils literal"&gt;default&lt;/code&gt; turi
 ypatingą prasmę ir šis kelias naudojamas tada, kai nenurodote nieko):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;hg push
@@ -195,11 +195,11 @@ hg push funkcija-x
 hg pull jonas&lt;/pre&gt;
 &lt;p&gt;Taip pat galite naudoti &lt;a class="reference external" href="http://mercurial.selenic.com/wiki/SchemesExtension"&gt;Schemes&lt;/a&gt; išplėtimą, kurį įjungsite savo &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.hgrc&lt;/span&gt;&lt;/code&gt;
 faile taip:&lt;/p&gt;
-&lt;pre class="code cfg"&gt;&lt;a name="rest_code_29f870354aa3450192b36b4395d2a5e3-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[extensions]&lt;/span&gt;
-&lt;a name="rest_code_29f870354aa3450192b36b4395d2a5e3-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;hgext.schemes&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
-&lt;a name="rest_code_29f870354aa3450192b36b4395d2a5e3-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_29f870354aa3450192b36b4395d2a5e3-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;[schemes]&lt;/span&gt;
-&lt;a name="rest_code_29f870354aa3450192b36b4395d2a5e3-5"&gt;&lt;/a&gt;&lt;span class="na"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas&lt;/span&gt;
+&lt;pre class="code cfg"&gt;&lt;a name="rest_code_b407badea5424f3287d733a8c58fda48-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[extensions]&lt;/span&gt;
+&lt;a name="rest_code_b407badea5424f3287d733a8c58fda48-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;hgext.schemes&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;a name="rest_code_b407badea5424f3287d733a8c58fda48-3"&gt;&lt;/a&gt;
+&lt;a name="rest_code_b407badea5424f3287d733a8c58fda48-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;[schemes]&lt;/span&gt;
+&lt;a name="rest_code_b407badea5424f3287d733a8c58fda48-5"&gt;&lt;/a&gt;&lt;span class="na"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ssh://hg@serveris/projektas&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Tada dirbti galite taip:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;hg push p://production
 hg push p://funkcija-x
@@ -499,17 +499,17 @@ $ cd ~/.hgext
 $ hg clone http://bitbucket.org/misery/hgftp/&lt;/pre&gt;
 &lt;p&gt;Po šių veiksmų, galite įjungti šį praplėtimą globaliai (&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.hgrc&lt;/span&gt;&lt;/code&gt;), arba tik
 konkrečiam repozitoriumui (&lt;em&gt;./.hg/hgrc&lt;/em&gt;) į nurodytą failą įrašydami:&lt;/p&gt;
-&lt;pre class="code ini"&gt;&lt;a name="rest_code_25ba572de32d43b8a8f626b493147267-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[extensions]&lt;/span&gt;
-&lt;a name="rest_code_25ba572de32d43b8a8f626b493147267-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;hgext.ftp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;~/.hgext/hgftp/ftp.py&lt;/span&gt;
+&lt;pre class="code ini"&gt;&lt;a name="rest_code_37446778682745258267d94b832bd3e5-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[extensions]&lt;/span&gt;
+&lt;a name="rest_code_37446778682745258267d94b832bd3e5-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;hgext.ftp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;~/.hgext/hgftp/ftp.py&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;div class="section" id="ftpextension-konfiguravimas"&gt;
 &lt;h2&gt;FTPExtension konfigūravimas&lt;/h2&gt;
 &lt;p&gt;Kai jau turite veikiantį praplėtimą, konkrečiam Web projekto repozitoriumui
 galite nurodyti FTP prisijungimą, kur bus siunčiami duomenys. Tai galite
 padaryti repozitormiumo konfigūraciniame faile &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;./.hg/hgrc&lt;/span&gt;&lt;/code&gt;, nurodydami:&lt;/p&gt;
-&lt;pre class="code ini"&gt;&lt;a name="rest_code_4b7fdd58804a4efbab6b4ae39d3bd9ce-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[paths]&lt;/span&gt;
-&lt;a name="rest_code_4b7fdd58804a4efbab6b4ae39d3bd9ce-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;ftp&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ftp://[user[:pass]@]host[:port]/[path]&lt;/span&gt;
-&lt;a name="rest_code_4b7fdd58804a4efbab6b4ae39d3bd9ce-3"&gt;&lt;/a&gt;&lt;span class="na"&gt;myhost&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ftp://andre@incubo.de/htdocs&lt;/span&gt;
+&lt;pre class="code ini"&gt;&lt;a name="rest_code_caa6eedf8c294f828d637ed1b1378a1d-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;[paths]&lt;/span&gt;
+&lt;a name="rest_code_caa6eedf8c294f828d637ed1b1378a1d-2"&gt;&lt;/a&gt;&lt;span class="na"&gt;ftp&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ftp://[user[:pass]@]host[:port]/[path]&lt;/span&gt;
+&lt;a name="rest_code_caa6eedf8c294f828d637ed1b1378a1d-3"&gt;&lt;/a&gt;&lt;span class="na"&gt;myhost&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ftp://andre@incubo.de/htdocs&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Jei prisijungimo eilutę priskirsite specialią paskirtį turinčiam žodeliui
 'ftp', tuomet šis FTP serveris bus naudojamas pagal nutylėjimą ir galėsite
 tiesiog naudoti &lt;code class="docutils literal"&gt;hg ftp &lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/code&gt;. Kitais atvejais, reikia nurodyti serverį taip:

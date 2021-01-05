@@ -88,8 +88,8 @@ $ cd ~/.hgext
 $ hg clone http://bitbucket.org/misery/hgftp/</pre>
 <p>Po šių veiksmų, galite įjungti šį praplėtimą globaliai (<code class="docutils literal"><span class="pre">~/.hgrc</span></code>), arba tik
 konkrečiam repozitoriumui (<em>./.hg/hgrc</em>) į nurodytą failą įrašydami:</p>
-<pre class="code ini"><a name="rest_code_25ba572de32d43b8a8f626b493147267-1"></a><span class="k">[extensions]</span>
-<a name="rest_code_25ba572de32d43b8a8f626b493147267-2"></a><span class="na">hgext.ftp</span> <span class="o">=</span> <span class="s">~/.hgext/hgftp/ftp.py</span>
+<pre class="code ini"><a name="rest_code_37446778682745258267d94b832bd3e5-1"></a><span class="k">[extensions]</span>
+<a name="rest_code_37446778682745258267d94b832bd3e5-2"></a><span class="na">hgext.ftp</span> <span class="o">=</span> <span class="s">~/.hgext/hgftp/ftp.py</span>
 </pre>
 </div>
 <div class="section" id="ftpextension-konfiguravimas">
@@ -97,9 +97,9 @@ konkrečiam repozitoriumui (<em>./.hg/hgrc</em>) į nurodytą failą įrašydam
 <p>Kai jau turite veikiantį praplėtimą, konkrečiam Web projekto repozitoriumui
 galite nurodyti <span class="caps">FTP</span> prisijungimą, kur bus siunčiami duomenys. Tai galite
 padaryti repozitormiumo konfigūraciniame faile <code class="docutils literal"><span class="pre">./.hg/hgrc</span></code>, nurodydami:</p>
-<pre class="code ini"><a name="rest_code_4b7fdd58804a4efbab6b4ae39d3bd9ce-1"></a><span class="k">[paths]</span>
-<a name="rest_code_4b7fdd58804a4efbab6b4ae39d3bd9ce-2"></a><span class="na">ftp</span>    <span class="o">=</span> <span class="s">ftp://[user[:pass]@]host[:port]/[path]</span>
-<a name="rest_code_4b7fdd58804a4efbab6b4ae39d3bd9ce-3"></a><span class="na">myhost</span> <span class="o">=</span> <span class="s">ftp://andre@incubo.de/htdocs</span>
+<pre class="code ini"><a name="rest_code_caa6eedf8c294f828d637ed1b1378a1d-1"></a><span class="k">[paths]</span>
+<a name="rest_code_caa6eedf8c294f828d637ed1b1378a1d-2"></a><span class="na">ftp</span>    <span class="o">=</span> <span class="s">ftp://[user[:pass]@]host[:port]/[path]</span>
+<a name="rest_code_caa6eedf8c294f828d637ed1b1378a1d-3"></a><span class="na">myhost</span> <span class="o">=</span> <span class="s">ftp://andre@incubo.de/htdocs</span>
 </pre>
 <p>Jei prisijungimo eilutę priskirsite specialią paskirtį turinčiam žodeliui
 ‘ftp’, tuomet šis <span class="caps">FTP</span> serveris bus naudojamas pagal nutylėjimą ir galėsite
@@ -148,6 +148,11 @@ atnaujinta ir pan.</p>
         captions: function(element) {
             return element.getElementsByTagName('img')[0].alt;
     }});
-    </script>
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N9F34JEJNF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N9F34JEJNF');
+</script>
 </body>
 </html>

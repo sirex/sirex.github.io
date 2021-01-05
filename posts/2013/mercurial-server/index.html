@@ -230,13 +230,13 @@ savo klonuotą šaką, kuri gali saugoti nebaigtus pakeitimus.</p>
 <pre class="literal-block">hg clone . ssh://hg@serveris/projektas/funkcija-x</pre>
 <p>Kad būtų paprasčiau dirbti su klonuotomis šakomis siūlau naudoti kelio
 trumpinius, kuriuos galite apsirašyti repozitorijos <code class="docutils literal">.hg/hgrc</code> faile:</p>
-<pre class="code cfg"><a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-1"></a><span class="k">[paths]</span>
-<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-2"></a><span class="na">default</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas</span>
-<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-3"></a><span class="na">production</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/production</span>
-<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-4"></a><span class="na">funkcija-x</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/funkcija-x</span>
-<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-5"></a><span class="na">funkcija-y</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/funkcija-y</span>
-<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-6"></a><span class="na">vardenis</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/vardenis</span>
-<a name="rest_code_978c47c9e2494cfe86157c5f24d5e595-7"></a><span class="na">jonas</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/jonas</span>
+<pre class="code cfg"><a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-1"></a><span class="k">[paths]</span>
+<a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-2"></a><span class="na">default</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas</span>
+<a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-3"></a><span class="na">production</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/production</span>
+<a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-4"></a><span class="na">funkcija-x</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/funkcija-x</span>
+<a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-5"></a><span class="na">funkcija-y</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/funkcija-y</span>
+<a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-6"></a><span class="na">vardenis</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/vardenis</span>
+<a name="rest_code_7e991050c2824cd28aadd1102b9d5b34-7"></a><span class="na">jonas</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas/jonas</span>
 </pre>
 <p>Turin tokius aprašus, galite naudoti trumpuosius vardus (<code class="docutils literal">default</code> turi
 ypatingą prasmę ir šis kelias naudojamas tada, kai nenurodote nieko):</p>
@@ -246,11 +246,11 @@ hg push funkcija-x
 hg pull jonas</pre>
 <p>Taip pat galite naudoti <a class="reference external" href="http://mercurial.selenic.com/wiki/SchemesExtension">Schemes</a> išplėtimą, kurį įjungsite savo <code class="docutils literal"><span class="pre">~/.hgrc</span></code>
 faile taip:</p>
-<pre class="code cfg"><a name="rest_code_29f870354aa3450192b36b4395d2a5e3-1"></a><span class="k">[extensions]</span>
-<a name="rest_code_29f870354aa3450192b36b4395d2a5e3-2"></a><span class="na">hgext.schemes</span><span class="o">=</span>
-<a name="rest_code_29f870354aa3450192b36b4395d2a5e3-3"></a>
-<a name="rest_code_29f870354aa3450192b36b4395d2a5e3-4"></a><span class="k">[schemes]</span>
-<a name="rest_code_29f870354aa3450192b36b4395d2a5e3-5"></a><span class="na">p</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas</span>
+<pre class="code cfg"><a name="rest_code_b407badea5424f3287d733a8c58fda48-1"></a><span class="k">[extensions]</span>
+<a name="rest_code_b407badea5424f3287d733a8c58fda48-2"></a><span class="na">hgext.schemes</span><span class="o">=</span>
+<a name="rest_code_b407badea5424f3287d733a8c58fda48-3"></a>
+<a name="rest_code_b407badea5424f3287d733a8c58fda48-4"></a><span class="k">[schemes]</span>
+<a name="rest_code_b407badea5424f3287d733a8c58fda48-5"></a><span class="na">p</span> <span class="o">=</span> <span class="s">ssh://hg@serveris/projektas</span>
 </pre>
 <p>Tada dirbti galite taip:</p>
 <pre class="literal-block">hg push p://production
@@ -332,6 +332,11 @@ kita naudotojo B. Galiausiai naudotojas B turi tas šakas sulieti (angl.
         captions: function(element) {
             return element.getElementsByTagName('img')[0].alt;
     }});
-    </script>
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N9F34JEJNF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N9F34JEJNF');
+</script>
 </body>
 </html>

@@ -55,12 +55,12 @@ lentelių duomenis. Tuos duomenis perkelti į savo kompiutery, sukeisti
 išeksportuotų lentelių prefiksus ir galiausiai visą tai importuoti į savo
 lokalią MySQL duomenų bazę.</p>
 <p>Šiai užduočiai realizuojama man prireikė tik vienos komandos:</p>
-<pre class="code sh"><a name="rest_code_50bc8653452c4d379803e88d777ecebc-1"></a>mysql -u -p -h  <span class="se">\</span>
-<a name="rest_code_50bc8653452c4d379803e88d777ecebc-2"></a>      -e <span class="s1">'show tables like "some_table_fragment_%"'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_50bc8653452c4d379803e88d777ecebc-3"></a>  awk <span class="s1">'{ if (NR &gt; 1) print $1 }'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_50bc8653452c4d379803e88d777ecebc-4"></a>  xargs mysqldump -u -p -h  <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_50bc8653452c4d379803e88d777ecebc-5"></a>  sed <span class="s1">'s/prefix1/prefix2/g'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_50bc8653452c4d379803e88d777ecebc-6"></a>  mysql -u -p -hlocalhost
+<pre class="code sh"><a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-1"></a>mysql -u -p -h  <span class="se">\</span>
+<a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-2"></a>      -e <span class="s1">'show tables like "some_table_fragment_%"'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-3"></a>  awk <span class="s1">'{ if (NR &gt; 1) print $1 }'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-4"></a>  xargs mysqldump -u -p -h  <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-5"></a>  sed <span class="s1">'s/prefix1/prefix2/g'</span> <span class="p">|</span> <span class="se">\</span>
+<a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-6"></a>  mysql -u -p -hlocalhost
 </pre>
 <p>Nors komanda iš pirmo žvilgsnio gal būt atrodo sudėtinga, tačiau įsigilinus į
 atskiras jos dalis matyti, kad nieko sudėtingo nėra. Kad parašyti šią komandą
@@ -100,6 +100,11 @@ darbas. Naudojantis komandine eilute visą tai galima padaryti žymiai greičia
         captions: function(element) {
             return element.getElementsByTagName('img')[0].alt;
     }});
-    </script>
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N9F34JEJNF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N9F34JEJNF');
+</script>
 </body>
 </html>

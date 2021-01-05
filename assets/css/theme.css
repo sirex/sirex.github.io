@@ -327,15 +327,17 @@ pre.code, pre.literal-block, code,
 	white-space: pre;
 	word-wrap: normal;
 	overflow: auto;
-	background-color: #171d1f;
+	background-color: #2b2b2b;
 	margin: 0 -20px;
 	padding: 10px 20px;
 	font-size: 15px;
 }
 
 .jp-OutputArea-output > pre {
-	background-color: #2F3638;
+	border-top: 2px solid #555753;
+	background-color: #232323;
     color: #d4d4d4;
+	margin-bottom: 24px;
 }
 
 blockquote pre.code, blockquote pre.literal-block {
@@ -345,8 +347,7 @@ blockquote pre.code, blockquote pre.literal-block {
 
 .jp-OutputArea-output img {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 24px auto;
 }
 
 /*
