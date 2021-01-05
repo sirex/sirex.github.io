@@ -15,6 +15,7 @@ async-timeout==3.0.1
 attrs==20.3.0
     # via
     #   aiohttp
+    #   fiona
     #   jsonschema
     #   pytest
 babel==2.9.0
@@ -28,13 +29,25 @@ bleach==3.2.1
 blinker==1.4
     # via nikola
 certifi==2020.12.5
-    # via requests
+    # via
+    #   fiona
+    #   pyproj
+    #   requests
 cffi==1.14.4
     # via argon2-cffi
 chardet==3.0.4
     # via
     #   aiohttp
     #   requests
+click-plugins==1.1.1
+    # via fiona
+click==7.1.2
+    # via
+    #   click-plugins
+    #   cligj
+    #   fiona
+cligj==0.7.1
+    # via fiona
 cloudpickle==1.6.0
     # via doit
 cycler==0.10.0
@@ -43,12 +56,18 @@ decorator==4.4.2
     # via ipython
 defusedxml==0.6.0
     # via nbconvert
+descartes==1.1.0
+    # via -r requirements.in
 docutils==0.16
     # via nikola
 doit==0.33.1
     # via nikola
 entrypoints==0.3
     # via nbconvert
+fiona==1.8.18
+    # via geopandas
+geopandas==0.8.1
+    # via -r requirements.in
 ghp-import2==1.0.1
     # via
     #   -r requirements.in
@@ -81,6 +100,7 @@ ipython==7.19.0
     #   ipykernel
     #   ipywidgets
     #   jupyter-console
+    #   jupyterthemes
 ipywidgets==7.6.2
     # via jupyter
 jedi==0.18.0
@@ -104,6 +124,7 @@ jupyter-console==6.2.0
 jupyter-core==4.7.0
     # via
     #   jupyter-client
+    #   jupyterthemes
     #   nbconvert
     #   nbformat
     #   notebook
@@ -114,8 +135,12 @@ jupyterlab-pygments==0.1.2
     # via nbconvert
 jupyterlab-widgets==1.0.0
     # via ipywidgets
+jupyterthemes==0.20.0
+    # via -r requirements.in
 kiwisolver==1.3.1
     # via matplotlib
+lesscpy==0.14.0
+    # via jupyterthemes
 lxml==4.6.2
     # via
     #   -r requirements.in
@@ -131,6 +156,8 @@ markupsafe==1.1.1
 matplotlib==3.3.3
     # via
     #   -r requirements.in
+    #   descartes
+    #   jupyterthemes
     #   seaborn
     #   wordcloud
 micawber==0.5.2
@@ -141,6 +168,8 @@ multidict==5.1.0
     # via
     #   aiohttp
     #   yarl
+munch==2.5.0
+    # via fiona
 natsort==7.1.0
     # via nikola
 nbclient==0.5.1
@@ -162,6 +191,7 @@ nikola[extras]==8.1.2
 notebook==6.1.6
     # via
     #   jupyter
+    #   jupyterthemes
     #   nikola
     #   widgetsnbextension
 numpy==1.19.4
@@ -179,6 +209,7 @@ packaging==20.8
 pandas==1.2.0
     # via
     #   -r requirements.in
+    #   geopandas
     #   seaborn
 pandocfilters==1.4.3
     # via nbconvert
@@ -199,6 +230,8 @@ pillow==8.1.0
     #   wordcloud
 pluggy==0.13.1
     # via pytest
+ply==3.11
+    # via lesscpy
 pp-ez==0.2.0
     # via -r requirements.in
 pprintpp==0.4.0
@@ -235,6 +268,8 @@ pyparsing==2.4.7
     #   packaging
 pyphen==0.10.0
     # via nikola
+pyproj==3.0.0.post1
+    # via geopandas
 pyrsistent==0.17.3
     # via jsonschema
 pyrss2gen==1.1
@@ -272,12 +307,17 @@ seaborn==0.11.1
     # via -r requirements.in
 send2trash==1.5.0
     # via notebook
+shapely==1.7.1
+    # via geopandas
 six==1.15.0
     # via
     #   argon2-cffi
     #   bleach
     #   cycler
+    #   fiona
     #   jsonschema
+    #   lesscpy
+    #   munch
     #   python-dateutil
 smartypants==2.0.1
     # via typogrify

@@ -751,7 +751,7 @@ IMAGE_THUMBNAIL_SIZE = 770
 # This list MAY be incomplete since pygments adds styles every now and then.
 # Check with list(pygments.styles.get_all_styles()) in an interpreter.
 #
-CODE_COLOR_SCHEME = 'paraiso-dark'
+CODE_COLOR_SCHEME = 'stata-dark'
 
 # FAVICONS contains (name, file, size) tuples.
 # Used to create favicon link like this:
@@ -1101,7 +1101,16 @@ INDEX_DISPLAY_POST_COUNT = 1000
 # Google Analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
 # (translatable)
-# BODY_END = ""
+BODY_END = """
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9F34JEJNF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N9F34JEJNF');
+</script>
+"""
 
 # The possibility to extract metadata from the filename by using a
 # regular expression.
