@@ -98,12 +98,12 @@ with per person code specs.</p>
     <span class="k">if</span> <span class="n">gender</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">gender</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">century</span> <span class="o">=</span> <span class="n">dob</span><span class="o">.</span><span class="n">year</span> <span class="o">//</span> <span class="mi">100</span> <span class="o">-</span> <span class="mi">18</span>
-    <span class="n">cex</span> <span class="o">=</span> <span class="n">century</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">gender</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">cender</span> <span class="o">=</span> <span class="n">century</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">gender</span> <span class="o">+</span> <span class="mi">1</span>
 
     <span class="k">if</span> <span class="n">num</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">num</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">999</span><span class="p">)</span>
 
-    <span class="n">code</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">cex</span><span class="si">}{</span><span class="n">dob</span><span class="si">:</span><span class="s1">%y%m%d</span><span class="si">}{</span><span class="n">num</span><span class="si">:</span><span class="s1">03</span><span class="si">}</span><span class="s1">'</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">cender</span><span class="si">}{</span><span class="n">dob</span><span class="si">:</span><span class="s1">%y%m%d</span><span class="si">}{</span><span class="n">num</span><span class="si">:</span><span class="s1">03</span><span class="si">}</span><span class="s1">'</span>
     <span class="n">checksum</span> <span class="o">=</span> <span class="n">get_person_code_checksum</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">code</span><span class="si">}{</span><span class="n">checksum</span><span class="si">}</span><span class="s1">'</span>
