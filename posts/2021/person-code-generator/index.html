@@ -167,7 +167,7 @@ with per person code specs.</p>
         <span class="c1"># year, month ant day can be 0 if person does not remember they birth</span>
         <span class="c1"># date.</span>
         <span class="n">century</span><span class="p">,</span> <span class="n">gender</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">code</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">year</span> <span class="o">=</span> <span class="p">(</span><span class="mi">18</span> <span class="o">+</span> <span class="n">century</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">year</span>
+        <span class="n">year</span> <span class="o">=</span> <span class="p">(</span><span class="mi">17</span> <span class="o">+</span> <span class="n">century</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">year</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
