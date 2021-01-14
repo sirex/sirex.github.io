@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html prefix="
+        og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+    " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Person code generator | Sirex web log</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../../rss.xml">
+<link rel="canonical" href="https://sirex.lt/posts/2021/person-code-generator/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><meta name="author" content="Sirex">
+<link rel="prev" href="../name-detector/" title="Name detector" type="text/html">
+<meta property="og:site_name" content="Sirex web log">
+<meta property="og:title" content="Person code generator">
+<meta property="og:url" content="https://sirex.lt/posts/2021/person-code-generator/">
+<meta property="og:description" content="I had a task, where I needed to generate a bunch of fake person codes (to be
+more precise, Lithuanian national identification numbers) in tests. Also, I
+wanted to validate person code, so I need both,">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-01-14T14:57:08+02:00">
+<meta property="article:tag" content="python">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="container">
+         <main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name">Person code generator</h1>
+        <div class="metadata">
+            <p class="dateline">
+            <time class="published dt-published" datetime="2021-01-14T14:57:08+02:00" itemprop="datePublished" title="2021-01-14 14:57">2021-01-14 14:57</time>
+
+                |
+                <span itemprop="keywords" class="tags">
+                    <a class="tag p-category" href="../../../tags/python/" rel="tag">python</a>                </span>
+
+            </p>
+        </div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>I had a task, where I needed to generate a bunch of fake person codes (to be
+more precise, Lithuanian national identification numbers) in tests. Also, I
+wanted to validate person code, so I need both, validator and generator.
+Generator should generate fake, but valid person code.</p>
+<p>First idea is to check, maybe <a href="https://pypi.org/project/Faker/">Faker</a> library
+has person code generator already? I <a href="https://faker.readthedocs.io/en/master/locales/lt_LT.html#faker-providers-person">looked it
+up</a>,
+and it looks, that Faker does not have this feature.</p>
+<p>Then, I found a <a href="https://lt.wikipedia.org/wiki/Asmens_kodas">Wikipedia page</a>,
+with per person code specs.</p>
+<p>So according to Wikipedia, person code generator should look something like this:</p>
+
+</div>
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+
+<span class="k">def</span> <span class="nf">get_person_code_checksum</span><span class="p">(</span><span class="n">code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">code</span><span class="p">))</span>
+    <span class="n">factors</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">checksum</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">i</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">factors</span><span class="p">))</span> <span class="o">%</span> <span class="mi">11</span>
+    <span class="k">if</span> <span class="n">checksum</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">factors</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+        <span class="n">checksum</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">i</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">factors</span><span class="p">))</span> <span class="o">%</span> <span class="mi">10</span>
+    <span class="k">return</span> <span class="n">checksum</span>
+
+
+<span class="k">def</span> <span class="nf">generate_person_code</span><span class="p">(</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">dob</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">gender</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># 0 - male, 1 - female</span>
+    <span class="n">num</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>  <span class="c1"># between 1 and 999, including both ends</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">dob</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="n">dob</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span>
+            <span class="nb">int</span><span class="p">((</span><span class="n">now</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">365</span><span class="p">)</span> <span class="o">*</span> <span class="mi">105</span><span class="p">)</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()),</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()),</span>
+        <span class="p">)</span>
+        <span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">dob</span><span class="o">.</span><span class="n">year</span> <span class="o">&lt;</span> <span class="mi">1801</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"dob year must be at least 1801"</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">gender</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">gender</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">century</span> <span class="o">=</span> <span class="n">dob</span><span class="o">.</span><span class="n">year</span> <span class="o">//</span> <span class="mi">100</span> <span class="o">-</span> <span class="mi">18</span>
+    <span class="n">cex</span> <span class="o">=</span> <span class="n">century</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">gender</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">num</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">999</span><span class="p">)</span>
+
+    <span class="n">code</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">cex</span><span class="si">}{</span><span class="n">dob</span><span class="si">:</span><span class="s1">%y%m%d</span><span class="si">}{</span><span class="n">num</span><span class="si">:</span><span class="s1">03</span><span class="si">}</span><span class="s1">'</span>
+    <span class="n">checksum</span> <span class="o">=</span> <span class="n">get_person_code_checksum</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">code</span><span class="si">}{</span><span class="n">checksum</span><span class="si">}</span><span class="s1">'</span>
+
+<span class="n">generate_person_code</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>'61111244004'</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Now the validator part, should look like this:</p>
+
+</div>
+</div>
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">validate_person_code</span><span class="p">(</span><span class="n">code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">code</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">11</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">code</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="n">code</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'9'</span><span class="p">:</span>
+        <span class="c1"># This is an exceptional case and might be a valid person code.</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">code</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">code</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">code</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">year</span> <span class="ow">and</span> <span class="n">month</span> <span class="ow">and</span> <span class="n">day</span><span class="p">:</span>
+        <span class="c1"># year, month ant day can be 0 if person does not remember they birth</span>
+        <span class="c1"># date.</span>
+        <span class="n">century</span><span class="p">,</span> <span class="n">gender</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">code</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">year</span> <span class="o">=</span> <span class="p">(</span><span class="mi">18</span> <span class="o">+</span> <span class="n">century</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">+</span> <span class="n">year</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">born</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="c1"># Invalid birth date.</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="n">born</span> <span class="o">&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">():</span>
+            <span class="c1"># Person can not be born in future.</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">code</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">!=</span> <span class="n">get_person_code_checksum</span><span class="p">(</span><span class="n">code</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="c1"># Invalid checksum.</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="n">validate_person_code</span><span class="p">(</span><span class="n">generate_person_code</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>I learned interesting facts about Lithuanian national identification number.
+Only people who born at least on 1801 or later can have an identification
+number. That’s quite recent, I wonder if people were assigned an id before that?</p>
+<p>Also, from person code you can learn persons full date of birth, gender and
+number, which child it was on that date. That is quite a lot of personal
+information. I think personal code should not have all that information.
+Person id should be just a random number, maybe with a checksum for validity.</p>
+
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../name-detector/" rel="prev" title="Name detector">Previous post</a>
+            </li>
+        </ul></nav></aside><nav id="menu"><ul>
+<li><a href="../../../">Index</a></li>
+                <li><a href="../../">Archive</a></li>
+                <li><a href="../../../tags/">Tags</a></li>
+                <li><a href="../../../rss.xml"><span class="caps">RSS</span> feed</a></li>
+
+    
+    
+    
+    </ul></nav><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script></article></main>
+</div>
+                <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-N9F34JEJNF"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N9F34JEJNF');
+</script>
+</body>
+</html>
