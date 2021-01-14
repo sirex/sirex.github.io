@@ -16,3 +16,5 @@ lxml
 seaborn
 wordcloud
 jupyterthemes
+msgpack
+spacy
