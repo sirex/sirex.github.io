@@ -957,6 +957,10 @@ img {
 	line-height: 1;
 }
 
+.figure .caption {
+	text-align: center;
+}
+
 .postpage img,
 .postpage object,
 .postindex article img,

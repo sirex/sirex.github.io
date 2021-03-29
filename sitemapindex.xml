@@ -7,11 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://sirex.lt/rss.xml</loc>
-  <lastmod>2021-01-14T20:42:00Z</lastmod>
+  <lastmod>2021-03-29T07:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://sirex.lt/sitemap.xml</loc>
-  <lastmod>2021-01-14T20:42:00Z</lastmod>
+  <lastmod>2021-03-29T07:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://sirex.lt/tags/alot.xml</loc>
@@ -183,7 +183,7 @@
  </sitemap>
  <sitemap>
   <loc>https://sirex.lt/tags/python.xml</loc>
-  <lastmod>2021-01-14T20:23:00Z</lastmod>
+  <lastmod>2021-01-22T14:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://sirex.lt/tags/qemu.xml</loc>
