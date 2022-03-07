@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about atviriduomenys)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/atviriduomenys.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Duomenų atvėrimas įgauna pagreitį</title><link>https://sirex.lt/posts/2019/duomenu-atverimas-igauna-pagreiti/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;a class="reference external image-reference" href="https://sirex.lt/images/2019/pasisakyk.png"&gt;&lt;img alt="Balsuok už atvirus duomenis" class="previewimage" src="https://sirex.lt/images/2019/pasisakyk.thumbnail.png"&gt;&lt;/a&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about atviriduomenys)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/atviriduomenys.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Duomenų atvėrimas įgauna pagreitį</title><link>https://sirex.lt/posts/2019/duomenu-atverimas-igauna-pagreiti/</link><dc:creator>Sirex</dc:creator><description>&lt;a class="reference external image-reference" href="https://sirex.lt/images/2019/pasisakyk.png"&gt;&lt;img alt="Balsuok už atvirus duomenis" class="previewimage" src="https://sirex.lt/images/2019/pasisakyk.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;&lt;strong&gt;Neturintiems laiko, trumpai.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Atvirų duomenų portalo įgyvendinimo ir duomenų atvėrimo darbai prasidėjo! Pirmo
 etapo metu (2019 birželis — 2020 kovas) bus atverti šie &lt;a class="reference external" href="https://gitlab.com/atviriduomenys/manifest/issues?milestone_title=Pirmasis+duomen%C5%B3+atv%C4%97rimo+etapas"&gt;300 duomenų
@@ -12,7 +12,7 @@ prisijungimas prie Gitlab per Google, Twitter ar kitas socialines paskyras.
 Straipsnio pabaigoje pateikiamos detalios instrukcijos kaip balsuoti arba kaip
 įtraukti duomenis kurių dar nėra sąraše.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Turintiems laiko, plačiau.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="section" id="lietuvos-atviru-duomenu-portalas"&gt;
+&lt;section id="lietuvos-atviru-duomenu-portalas"&gt;
 &lt;h2&gt;Lietuvos atvirų duomenų portalas&lt;/h2&gt;
 &lt;p&gt;Lietuvoje duomenų atvėrimas įgauna pagreitį. Jau yra žinomi atvirų duomenų
 portalo įgyvendinimo konkurso laimėtojai — patį portalą kurs &lt;a class="reference external" href="https://www.atea.lt/"&gt;Atea&lt;/a&gt;, su kuria
@@ -42,8 +42,8 @@ rinkinių. Todėl duomenų rinkinių skaičius 300 nelabai nusako, kiek tų duom
 bus atverta ir kokį poveikį tai turės. Bet toks skaičius jau patvirtintas,
 būtent tokiam sąrašui yra skirti pinigai ir pasak atvirų duomenų projektų
 vadovo, šio sąrašo keisti galimybės nėra.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="antrasis-duomenu-atverimo-etapas"&gt;
+&lt;/section&gt;
+&lt;section id="antrasis-duomenu-atverimo-etapas"&gt;
 &lt;h2&gt;Antrasis duomenų atvėrimo etapas&lt;/h2&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/2019/antrasis-duomenu-atverimo-etapas.png"&gt;&lt;img alt="Antrasis duomenų atvėrimo etapas" src="https://sirex.lt/images/2019/antrasis-duomenu-atverimo-etapas.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://gitlab.com/atviriduomenys/manifest/issues/30"&gt;Pirmasis duomenų atvėrimo etapas&lt;/a&gt; yra įšaldytas ir nieko keisti nebegalima,
@@ -88,10 +88,10 @@ koordinuoti jo įgyvendinimą ir stebėti įgyvendinimo eigą — su ADP sukūri
 paslaugų teikėjais bus galima aptarti jo integravimą į ADP infrastruktūrą.&lt;/p&gt;
 &lt;p&gt;Gitlab užduotis rasite čia:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://gitlab.com/atviriduomenys/manifest/issues"&gt;https://gitlab.com/atviriduomenys/manifest/issues&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kaip-prasyti-duomenu"&gt;
+&lt;/section&gt;
+&lt;section id="kaip-prasyti-duomenu"&gt;
 &lt;h2&gt;Kaip prašyti duomenų?&lt;/h2&gt;
-&lt;div class="section" id="kaip-prisijungti-prie-gitlab"&gt;
+&lt;section id="kaip-prisijungti-prie-gitlab"&gt;
 &lt;h3&gt;Kaip prisijungti prie Gitlab&lt;/h3&gt;
 &lt;p&gt;Siekiant užtikrinti balsavimų patikimumą, reikia prisijungti prie Gitlab per
 Google, Twitter ar kitas socialines paskyras. Tai padaryti labai paprasta.
@@ -103,16 +103,16 @@ in / Register&lt;/em&gt;:&lt;/p&gt;
 &lt;p&gt;Tokiu būdu greitai prisijungsite prie Gitlab, be registracijos. Žinoma, jei
 pageidaujate galite jungtis ne per socialinius tinklus, o užsiregistruoti
 atskirai Gitlab svetainėje.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kaip-balsuoti"&gt;
+&lt;/section&gt;
+&lt;section id="kaip-balsuoti"&gt;
 &lt;h3&gt;Kaip balsuoti&lt;/h3&gt;
 &lt;p&gt;Einame į &lt;a class="reference external" href="https://gitlab.com/atviriduomenys/manifest/issues?label_name%5B%5D=Duomenys"&gt;duomenų sąrašo puslapį Gitlab&lt;/a&gt;. Prisijungiame į Gitlab. Peržiūrime
 duomenų, kuriuos planuojama atverti sąrašą, kuris atrodo taip.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/2019/gitlab-uzduociu-sarasas.png"&gt;&lt;img alt="GitLab užduočių sąrašas." src="https://sirex.lt/images/2019/gitlab-uzduociu-sarasas.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Tada reikia atsidaryti patikusią užduotį ir spausti mygtuką patinka.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/2019/like-button.png"&gt;&lt;img alt="Kaip mėgti duomenų rinkinį." src="https://sirex.lt/images/2019/like-button.thumbnail.png"&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kaip-itraukti-duomenis-kuriu-dar-nera-sarase"&gt;
+&lt;/section&gt;
+&lt;section id="kaip-itraukti-duomenis-kuriu-dar-nera-sarase"&gt;
 &lt;h3&gt;Kaip įtraukti duomenis, kurių dar nėra sąraše&lt;/h3&gt;
 &lt;p&gt;Jei &lt;a class="reference external" href="https://gitlab.com/atviriduomenys/manifest/issues?label_name%5B%5D=Duomenys"&gt;sąraše&lt;/a&gt; nėra duomenų rinkinio, kurio jums reikia, tada tiesiog sukurkite
 naują užduotį. Kuriant naują užduotį svarbiau nurodyti ne konkrečiai kokių
@@ -128,8 +128,8 @@ užduoties pildymą.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/2019/panasios-uzduotys.png"&gt;&lt;img alt="Panašių užduočių aptikimas." src="https://sirex.lt/images/2019/panasios-uzduotys.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Ir jei viskas gerai, pateikite užduotį.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/2019/uzduoties-pateikimas.png"&gt;&lt;img alt="GitLab užduoties pateikimas." src="https://sirex.lt/images/2019/uzduoties-pateikimas.thumbnail.png"&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kaip-bus-atsizvelgiama-i-balsavimo-rezultatus"&gt;
+&lt;/section&gt;
+&lt;section id="kaip-bus-atsizvelgiama-i-balsavimo-rezultatus"&gt;
 &lt;h3&gt;Kaip bus atsižvelgiama į balsavimo rezultatus&lt;/h3&gt;
 &lt;p&gt;Pateiktas užduotis peržiūrės vienas iš &lt;a class="reference external" href="https://gitlab.com/atviriduomenys/manifest/-/project_members"&gt;atvirų duomenų administratorių&lt;/a&gt;, jei
 reikia sutvarkys, priskirs reikiamus duomenų rinkinius, svorius, žymes ir pan.
@@ -150,13 +150,13 @@ laikyti užduočių sąrašą tuščią.&lt;/p&gt;
 &lt;p&gt;Tikimės, kad šis variantas įtrauks tiek duomenų naudotojus, tiek duomenis
 valdančias įstaigas, tiek duomenis atveriančius tiekėjus, visi dirbdami kartu
 pasieksime žymiai geresnių rezultatų.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>atviriduomenys</category><guid>https://sirex.lt/posts/2019/duomenu-atverimas-igauna-pagreiti/</guid><pubDate>Mon, 22 Jul 2019 21:00:00 GMT</pubDate></item><item><title>Paskelbtas atvirų duomenų portalo viešasis pirkimas</title><link>https://sirex.lt/posts/2019/paskelbtas-atviru-duomenu-portalo-viesasis-pirkimas/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jau paskelbtas atvirų duomenų portalo įgyvendinimo &lt;a class="reference external" href="https://cvpp.eviesiejipirkimai.lt/Notice/Details/2019-648207"&gt;viešasis pirkimas&lt;/a&gt;.
+&lt;/section&gt;
+&lt;/section&gt;</description><category>atviriduomenys</category><guid>https://sirex.lt/posts/2019/duomenu-atverimas-igauna-pagreiti/</guid><pubDate>Mon, 22 Jul 2019 21:00:00 GMT</pubDate></item><item><title>Paskelbtas atvirų duomenų portalo viešasis pirkimas</title><link>https://sirex.lt/posts/2019/paskelbtas-atviru-duomenu-portalo-viesasis-pirkimas/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Jau paskelbtas atvirų duomenų portalo įgyvendinimo &lt;a class="reference external" href="https://cvpp.eviesiejipirkimai.lt/Notice/Details/2019-648207"&gt;viešasis pirkimas&lt;/a&gt;.
 Nusprendžiau skirti vieną dieną ir įdėmiau panagrinėti viešojo pirkimo
 dokumentus, o taip pat noriu pasidalinti konkretaus techninio sprendimo idėja,
 kaip visą tai būtų galima įgyvendinti atsižvelgiant į turimą biudžetą ir
 techninę specifikaciją.&lt;/p&gt;
-&lt;div class="section" id="apie-viesaji-pirkima"&gt;
+&lt;section id="apie-viesaji-pirkima"&gt;
 &lt;h2&gt;Apie viešąjį pirkimą&lt;/h2&gt;
 &lt;p&gt;Terminai ir sumos (&lt;em&gt;visos sumos be PVM&lt;/em&gt;):&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -193,8 +193,8 @@ perkelti &lt;a class="reference external" href="http://opendata.gov.lt/"&gt;open
 įmanoma, nes bent jau man neteko girdėti, kad su jais būtų bendradarbiaujama,
 aš pats bandžiau užmegzti kontaktą su TDS specifikacijos rengėjais, bet jie
 buvo labai užimti ir nenoriai bendravo, atsakymus gaudavau po mėnesio.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="apie-technine-specifikacija"&gt;
+&lt;/section&gt;
+&lt;section id="apie-technine-specifikacija"&gt;
 &lt;h2&gt;Apie techninę specifikaciją&lt;/h2&gt;
 &lt;p&gt;Pirmiausia noriu pasidalinti tuo, kas mane nudžiugino, o po to pereisiu prie mažiau džiuginančių dalykų. Buvau nustebęs, kad techninės specifikacijos regėjai atsižvelgė į nemažą dalį mano pastabų. Valio!&lt;/p&gt;
 &lt;p&gt;Integracija su TDS nėra būtina:&lt;/p&gt;
@@ -250,8 +250,8 @@ didžiausias klausimas, kas laimės viešąjį konkursą, ar nebus dempinguojamo
 kainos ar galiausiai ADP projektas netaps tiekėjo įkaitu. Jei tiekėjas bus
 sukalbamas ir nepiktybinis, tada manau tikrai galime turėti aukščiausio lygio
 atvirų duomenų portalą!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="mano-pasiulymas"&gt;
+&lt;/section&gt;
+&lt;section id="mano-pasiulymas"&gt;
 &lt;h2&gt;Mano pasiūlymas&lt;/h2&gt;
 &lt;p&gt;Noriu pasidalinti mintimis, kaip įgyvendinčiau atvirų duomenų portalą,
 įvertinant turimą biudžetą ir reikalavimus specifikacijoje.&lt;/p&gt;
@@ -311,4 +311,4 @@ pavadinęs &lt;a class="reference external" href="https://gitlab.com/atviriduome
 &lt;p&gt;Iš esmės, didelė dalis komponentų jau siekia bent jau &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Minimum_viable_product"&gt;MVP&lt;/a&gt; stadiją ir yra
 paruošti naudojimui, todėl lieka imtis duomenų atvėrimo darbais ir esamų
 komponentų tobulinimu iteraciniu-inkrementiniu būdu.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>atviriduomenys</category><guid>https://sirex.lt/posts/2019/paskelbtas-atviru-duomenu-portalo-viesasis-pirkimas/</guid><pubDate>Tue, 19 Feb 2019 22:00:00 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>atviriduomenys</category><guid>https://sirex.lt/posts/2019/paskelbtas-atviru-duomenu-portalo-viesasis-pirkimas/</guid><pubDate>Tue, 19 Feb 2019 22:00:00 GMT</pubDate></item></channel></rss>

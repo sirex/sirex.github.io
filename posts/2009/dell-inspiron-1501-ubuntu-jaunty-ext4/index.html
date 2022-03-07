@@ -44,12 +44,10 @@ Aprašysiu visas problemas, jei kas susidurs, gal ši info">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Nesenai pakeičiau darbo kompiuterį, gavau Dell Inspiron 1501. Deja diegimo ir
+    <p>Nesenai pakeičiau darbo kompiuterį, gavau Dell Inspiron 1501. Deja diegimo ir
 kompiuterio paruošimo darbui procedūra vyko ne itin sklandžiai…</p>
 <p>Aprašysiu visas problemas, jei kas susidurs, gal ši informacija padės.</p>
-<div class="section" id="wifi">
-<h2>WiFi<a href="#wifi" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="wifi"><h2>WiFi<a href="#wifi" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Jei naudojate Linux, venkite Broadcom <span class="caps">BCM4311</span> <span class="caps">WLAN</span> plokščių… Nes jos neveikia
 „out of the box“.</p>
 <p>Tačiau, jei turite galimybę prisijungti prie interneto laidų, tai didesnių
@@ -69,10 +67,7 @@ wireless driver“ ir spauskite mygtuką „Activate“.</p>
 <pre class="literal-block">$ sudo rmmod pcspkr
 $ sudo sh -c 'echo blacklist pcspkr &gt;&gt; /etc/modprobe.d/blacklist'</pre>
 </dd>
-</dl>
-</div>
-<div class="section" id="ext4-kol-kas-nerekomenduociau">
-<h2>Ext4 – kol kas nerekomenduočiau<a href="#ext4-kol-kas-nerekomenduociau" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</dl></section><section id="ext4-kol-kas-nerekomenduociau"><h2>Ext4 – kol kas nerekomenduočiau<a href="#ext4-kol-kas-nerekomenduociau" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Kadangi kartu su Jaunty versija atsirado galimybė naudoti Ext4 failų sistemą,
 kuri buvo gausiai afišuota. Tai žinoma net nedvejodamas pasirinkau Ext4 visuose skirsniuose.</p>
 <p>Tačiau toks pasirinkimas buvo didelė klaida! Problemos pasireiškė jau diegimo
@@ -97,9 +92,8 @@ pakankamai stabili, kad būtų galima ją naudoti darbo ar namų kompiuteryje,
 nekalbant apie serverius…</p>
 <p>Kadangi Ext4 vis dar nėra tinkamas kasdieniam naudojimui, nusprendžiau
 paeksperimentuoti su <span class="caps">JFS</span>. Kol kas veikia gerai… :)</p>
+</section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../enlightenment-beauty-at-your-fingertips/" rel="prev" title="Enlightenment - Beauty at your fingertips">Previous post</a>

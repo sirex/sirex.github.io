@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about latex)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/latex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip pateiktis kuria tikri vyrai!</title><link>https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Paskutiniu metu teko paruošti kelias &lt;a class="reference external" href="http://www.likit.lt/term/p/pateiktis.html"&gt;pateiktis&lt;/a&gt;, vieną darbe, kitą &lt;a class="reference external" href="http://www.ubuntu.lt/node/522"&gt;OpenCamp
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about latex)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/latex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip pateiktis kuria tikri vyrai!</title><link>https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Paskutiniu metu teko paruošti kelias &lt;a class="reference external" href="http://www.likit.lt/term/p/pateiktis.html"&gt;pateiktis&lt;/a&gt;, vieną darbe, kitą &lt;a class="reference external" href="http://www.ubuntu.lt/node/522"&gt;OpenCamp
 renginiui&lt;/a&gt;. Nusprendžiau pasidalinti
 patirtimi, kaip paprastai sukurti pateiktis naudojant :math:LaTeX beamer
 klasę.&lt;/p&gt;
@@ -11,12 +11,12 @@ panašiai. Tenka dažnai matyti, kai žmonės su efektais persistengia ir pateik
 gaunasi gan neskoningai efektais perkrautos.&lt;/p&gt;
 &lt;p&gt;LaTeX yra &lt;a class="reference external" href="http://www.likit.lt/term/z2/z2enklinimo_kalba.html"&gt;ženklinimo kalba&lt;/a&gt; skirta dokumentų
 ruošimui. Daugelis mokslinių darbų yra parašyti būtent naudojantis LaTeX.&lt;/p&gt;
-&lt;div class="section" id="kaip-idiegti"&gt;
+&lt;section id="kaip-idiegti"&gt;
 &lt;h2&gt;Kaip įdiegti?&lt;/h2&gt;
 &lt;p&gt;Įdiegti į Ubuntu LaTeX yra labai paprasta, užtenka įdiegti du paketus iš
 programų centro (Programos - Ubuntu programų centras): &lt;em&gt;texlive&lt;/em&gt; ir &lt;em&gt;littex&lt;/em&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kaip-naudoti"&gt;
+&lt;/section&gt;
+&lt;section id="kaip-naudoti"&gt;
 &lt;h2&gt;Kaip naudoti?&lt;/h2&gt;
 &lt;p&gt;LaTeX galima rašyti su bet kokiu teksto redaktoriumi, tačiau yra specialiai tam
 skirtų programų, kurios palengvina darbą. Aš pats naudoju &lt;a class="reference external" href="http://www.xm1math.net/texmaker/"&gt;Texmaker&lt;/a&gt; programą. Viskas ką reikia žinoti apie šią
@@ -27,64 +27,64 @@ sugeneruoti PDF dokumentą, vėliau rodyklę prie „View PDF“, kad peržiūr�
 dokumentą.&lt;/p&gt;
 &lt;p&gt;Visos kitos funkcijos &lt;a class="reference external" href="http://www.xm1math.net/texmaker/"&gt;Texmaker&lt;/a&gt; programoje
 yra intuityvios.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kaip-sukurti-pateikti-su-texmaker"&gt;
+&lt;/section&gt;
+&lt;section id="kaip-sukurti-pateikti-su-texmaker"&gt;
 &lt;h2&gt;Kaip sukurti pateiktį su Texmaker?&lt;/h2&gt;
 &lt;p&gt;Naują pateiktį sukursite labai paprastai. Pirmiausia iš Texmaker meniu
 pasirinkite: File - New. Tada Wizard - Quick Start. Atsiradusiame lange
 nurodykite tokius duomenis:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image1" src="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/files/texmaker-quickstart.png"&gt;&lt;/p&gt;
 &lt;p&gt;Kai paspausite OK, Texmaker sugeneruos dokumento griaučius:&lt;/p&gt;
-&lt;pre class="code latex"&gt;&lt;a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="na"&gt;[12pt,a4paper]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;beamer&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[utf8x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;inputenc&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;ucs&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mantas Zimnickas&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-6"&gt;&lt;/a&gt;•
-&lt;a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;pre class="code latex"&gt;&lt;a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-1" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-1" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_eeaeed275d3e493ab56f28ad1307ba69-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="na"&gt;[12pt,a4paper]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;beamer&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-2" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-2" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_eeaeed275d3e493ab56f28ad1307ba69-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[utf8x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;inputenc&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-3" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-3" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_eeaeed275d3e493ab56f28ad1307ba69-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;ucs&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-4" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-4" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_eeaeed275d3e493ab56f28ad1307ba69-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mantas Zimnickas&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-5" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-5" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_eeaeed275d3e493ab56f28ad1307ba69-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-6" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-6" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_eeaeed275d3e493ab56f28ad1307ba69-6"&gt;&lt;/a&gt;•
+&lt;a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-7" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-7" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_eeaeed275d3e493ab56f28ad1307ba69-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Nepamirškite įrašyti dvi eilutes, kurių pagalba galėsite rašyti lietuviškai:&lt;/p&gt;
-&lt;pre class="code latex"&gt;&lt;a name="rest_code_9e93caae3c2149bbb12725ad75c7c7ab-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[L7x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontenc&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_9e93caae3c2149bbb12725ad75c7c7ab-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[lithuanian]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;babel&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="section" id="pirmoji-pateiktis"&gt;
+&lt;pre class="code latex"&gt;&lt;a id="rest_code_79549930980643238ac59c92fe609d2e-1" name="rest_code_79549930980643238ac59c92fe609d2e-1" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_79549930980643238ac59c92fe609d2e-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[L7x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontenc&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_79549930980643238ac59c92fe609d2e-2" name="rest_code_79549930980643238ac59c92fe609d2e-2" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_79549930980643238ac59c92fe609d2e-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[lithuanian]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;babel&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/section&gt;
+&lt;section id="pirmoji-pateiktis"&gt;
 &lt;h2&gt;Pirmoji pateiktis&lt;/h2&gt;
 &lt;p&gt;Štai pilnas pateikties pavyzdys su dviem skaidrėmis:&lt;/p&gt;
-&lt;pre class="code latex"&gt;&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="na"&gt;[12pt,a4paper]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;beamer&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[utf8x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;inputenc&lt;span class="nb"&gt;}&lt;/span&gt; &lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;ucs&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[L7x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontenc&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[lithuanian]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;babel&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mantas Zimnickas&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;\title&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mano pirmoji pateiktis&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-9"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-10"&gt;&lt;/a&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-11"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;\frame&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\titlepage&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-13"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-14"&gt;&lt;/a&gt;&lt;span class="k"&gt;\frame&lt;/span&gt; &lt;span class="nb"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;\frametitle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Sveikas pasauli!&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-16"&gt;&lt;/a&gt;    Mano pirmoji pateiktis.
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-17"&gt;&lt;/a&gt;&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-18"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b7d38dab905949abba87753e1b4cd402-19"&gt;&lt;/a&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;pre class="code latex"&gt;&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-1" name="rest_code_09185b5e1a00490094f7d631e1e812d4-1" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="na"&gt;[12pt,a4paper]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;beamer&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-2" name="rest_code_09185b5e1a00490094f7d631e1e812d4-2" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-3" name="rest_code_09185b5e1a00490094f7d631e1e812d4-3" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[utf8x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;inputenc&lt;span class="nb"&gt;}&lt;/span&gt; &lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;ucs&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-4" name="rest_code_09185b5e1a00490094f7d631e1e812d4-4" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[L7x]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;fontenc&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-5" name="rest_code_09185b5e1a00490094f7d631e1e812d4-5" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-5"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[lithuanian]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;babel&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-6" name="rest_code_09185b5e1a00490094f7d631e1e812d4-6" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-6"&gt;&lt;/a&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-7" name="rest_code_09185b5e1a00490094f7d631e1e812d4-7" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-7"&gt;&lt;/a&gt;&lt;span class="k"&gt;\author&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mantas Zimnickas&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-8" name="rest_code_09185b5e1a00490094f7d631e1e812d4-8" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;\title&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Mano pirmoji pateiktis&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-9" name="rest_code_09185b5e1a00490094f7d631e1e812d4-9" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-9"&gt;&lt;/a&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-10" name="rest_code_09185b5e1a00490094f7d631e1e812d4-10" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-10"&gt;&lt;/a&gt;&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-11" name="rest_code_09185b5e1a00490094f7d631e1e812d4-11" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-11"&gt;&lt;/a&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-12" name="rest_code_09185b5e1a00490094f7d631e1e812d4-12" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-12"&gt;&lt;/a&gt;&lt;span class="k"&gt;\frame&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="k"&gt;\titlepage&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-13" name="rest_code_09185b5e1a00490094f7d631e1e812d4-13" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-13"&gt;&lt;/a&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-14" name="rest_code_09185b5e1a00490094f7d631e1e812d4-14" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-14"&gt;&lt;/a&gt;&lt;span class="k"&gt;\frame&lt;/span&gt; &lt;span class="nb"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-15" name="rest_code_09185b5e1a00490094f7d631e1e812d4-15" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;\frametitle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Sveikas pasauli!&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-16" name="rest_code_09185b5e1a00490094f7d631e1e812d4-16" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-16"&gt;&lt;/a&gt;    Mano pirmoji pateiktis.
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-17" name="rest_code_09185b5e1a00490094f7d631e1e812d4-17" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-17"&gt;&lt;/a&gt;&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-18" name="rest_code_09185b5e1a00490094f7d631e1e812d4-18" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-18"&gt;&lt;/a&gt;
+&lt;a id="rest_code_09185b5e1a00490094f7d631e1e812d4-19" name="rest_code_09185b5e1a00490094f7d631e1e812d4-19" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_09185b5e1a00490094f7d631e1e812d4-19"&gt;&lt;/a&gt;&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Išsaugokite šį dokumentą į atskirą katalogą ir naudokitės aukščiau aprašytomis
 rodyklėmis.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="isvaizda"&gt;
+&lt;/section&gt;
+&lt;section id="isvaizda"&gt;
 &lt;h2&gt;Išvaizda&lt;/h2&gt;
 &lt;p&gt;Beamer turi rinkinį temų, kaip jos atrodo galite apžiūrėti čia:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.pletscher.org/writings/latex/beamerthemes.php"&gt;http://www.pletscher.org/writings/latex/beamerthemes.php&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Temą nurodyti galima taip:&lt;/p&gt;
-&lt;pre class="code latex"&gt;&lt;a name="rest_code_20ce9978d2a34c79b46b450b0d178068-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usetheme&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Malmoe&lt;span class="nb"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="section" id="mano-pateiktis"&gt;
+&lt;pre class="code latex"&gt;&lt;a id="rest_code_6cbb9401272f4dff9c4afd5f01989ab0-1" name="rest_code_6cbb9401272f4dff9c4afd5f01989ab0-1" href="https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/#rest_code_6cbb9401272f4dff9c4afd5f01989ab0-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;\usetheme&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;Malmoe&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/section&gt;
+&lt;section id="mano-pateiktis"&gt;
 &lt;h2&gt;Mano pateiktis&lt;/h2&gt;
 &lt;p&gt;Mano pateiktį, kurią paruošiau OpenCamp renginiu galite peržiūrėti čia:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/sirexas/django-akllt-naujas-veidas"&gt;http://www.slideshare.net/sirexas/django-akllt-naujas-veidas&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;TeX failą prisegu žemiau.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>latex</category><guid>https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/</guid><pubDate>Sun, 23 May 2010 14:22:00 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>latex</category><guid>https://sirex.lt/posts/2010/kaip-pateiktis-kuria-tikri-vyrai/</guid><pubDate>Sun, 23 May 2010 14:22:00 GMT</pubDate></item></channel></rss>

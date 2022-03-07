@@ -48,18 +48,12 @@ Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<div class="section" id="kas-yra-ssh">
-<h2>Kas yra <span class="caps">SSH</span>?<a href="#kas-yra-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
+    <section id="kas-yra-ssh"><h2>Kas yra <span class="caps">SSH</span>?<a href="#kas-yra-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><span class="caps">SSH</span> yra Secure SHell.</p>
-</div>
-<div class="section" id="kas-yra-shell">
-<h2>Kas yra Shell?<a href="#kas-yra-shell" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kas-yra-shell"><h2>Kas yra Shell?<a href="#kas-yra-shell" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Shell yra programa suteikianti naudotojui tam tikrą sąsają. Linux pasaulyje,
 Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.</p>
-</div>
-<div class="section" id="kuo-skiriasi-shell-nuo-ssh">
-<h2>Kuo skiriasi Shell nuo <span class="caps">SSH</span>?<a href="#kuo-skiriasi-shell-nuo-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kuo-skiriasi-shell-nuo-ssh"><h2>Kuo skiriasi Shell nuo <span class="caps">SSH</span>?<a href="#kuo-skiriasi-shell-nuo-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Paprasta Shell programa suteikia galimybę valdyti kompiuterį, kuriame ji
 paleista, tuo tarpu <span class="caps">SSH</span>, suteikia galimybę valdyti kitą tinklo kompiuterį,
 nuotoliniu būdu.</p>
@@ -69,9 +63,7 @@ nuotoliniu būdu.</p>
 <pre class="literal-block">ssh kitas-kompiuteris bash</pre>
 <p>Kaip matote, viskas, ką daro <span class="caps">SSH</span>, tai suteikia saugią prieigą prie nutolusio
 kompiuterio Shell programos.</p>
-</div>
-<div class="section" id="kas-yra-ssh-raktas">
-<h2>Kas yra <span class="caps">SSH</span> raktas?<a href="#kas-yra-ssh-raktas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kas-yra-ssh-raktas"><h2>Kas yra <span class="caps">SSH</span> raktas?<a href="#kas-yra-ssh-raktas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><span class="caps">SSH</span> suteikia saugią prieigą prie kito kompiuterio, todėl jungiantis visą laiką
 prašomas kito kompiuterio naudotojo prieigos slaptažodis. <span class="caps">SSH</span> raktų dėka,
 galima susikurti vieną raktį nuo visų durų. Tai daroma taip:</p>
@@ -81,35 +73,25 @@ scp ~/.ssh/id_rsa.pub kitas-kompiuteris:.ssh/authorized_keys</pre>
 veikiantį taip vadinamą, raktų agentą. Ubuntu sistemoje raktų agentas veikia,
 todėl jungiantis prie kito kompiuterio, jūsų tik vieną kartą paklaus
 slaptažodžio nuo raktinės.</p>
-</div>
-<div class="section" id="kas-yra-ssh-keygen">
-<h2>Kas yra ssh-keygen?<a href="#kas-yra-ssh-keygen" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kas-yra-ssh-keygen"><h2>Kas yra ssh-keygen?<a href="#kas-yra-ssh-keygen" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>ssh-keygen yra programa, kuri sukuria viešąjį (<code class="docutils literal"><span class="pre">~/.ssh/id_rsa.pub</span></code>) ir
 privatųjį (<code class="docutils literal"><span class="pre">~/.ssh/id_rsa</span></code>) <span class="caps">SSH</span> raktus. Raktai išsaugomi failuose, kuriuos
 nurodžiau skliausteliuose.</p>
-</div>
-<div class="section" id="kas-yra-ssh-authorized-keys">
-<h2>Kas yra ~/.ssh/authorized_keys<a href="#kas-yra-ssh-authorized-keys" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kas-yra-ssh-authorized-keys"><h2>Kas yra ~/.ssh/authorized_keys<a href="#kas-yra-ssh-authorized-keys" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Tai yra paprasčiausias tekstinis failas, kuriame gali būti surašyti viešieji
 naudotojų raktai, kurie gali prisijungti naudodamiesi savo privažiuoju raktu.</p>
 <p>Faile, vienas viešasis raktas saugomas vienoje eilutėje.</p>
-</div>
-<div class="section" id="kas-yra-scp">
-<h2>Kas yra scp?<a href="#kas-yra-scp" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kas-yra-scp"><h2>Kas yra scp?<a href="#kas-yra-scp" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><code class="docutils literal">scp</code> yra Secure CoPy. Veikiai labai panašiai, kaip komanda cp, tik kopijuoja
 iš vieno kompiuterio, į kitą:</p>
 <pre class="literal-block">cp failas-a.txt failas-b.txt
 scp failas-a.txt kitas-kompiuteris:failas-b.txt</pre>
-</div>
-<div class="section" id="kas-yra-sftp">
-<h2>Kas yra sftp?<a href="#kas-yra-sftp" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kas-yra-sftp"><h2>Kas yra sftp?<a href="#kas-yra-sftp" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><code class="docutils literal">sftp</code> yra <span class="caps">SSH</span> File Transfer Protocol, veikia panašiai, kaip <span class="caps">FTP</span>, tik naudoja
 tą patį <span class="caps">SSH</span>. Štai paprastas būdas prisijungti prie kito kompiuterio, per
 <code class="docutils literal">sftp</code>, naudojantis failų naršymo programa nautilus:</p>
 <pre class="literal-block">nautilus sftp://kitas-kompiuteris</pre>
-</div>
-<div class="section" id="ar-galiu-apjungti-shell-ir-ssh-komandas">
-<h2>Ar galiu apjungti Shell ir <span class="caps">SSH</span> komandas?<a href="#ar-galiu-apjungti-shell-ir-ssh-komandas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="ar-galiu-apjungti-shell-ir-ssh-komandas"><h2>Ar galiu apjungti Shell ir <span class="caps">SSH</span> komandas?<a href="#ar-galiu-apjungti-shell-ir-ssh-komandas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Taip. Tarkime norite iš kitas-kompiuteris eksportuoti MySQL duomenų bazę ir
 importuoti ją į savo kompiuterio MySQL duomenų bazę:</p>
 <pre class="literal-block">ssh kitas-kompiuteris 'mysqldump tavodb' | mysql manodb</pre>
@@ -122,9 +104,8 @@ pagreitinti duomenų perdavimą, galima perduodamus duomenis suspausti:</p>
 <pre class="literal-block">ssh kitas-kompiuteris 'mysqldump tavodb | gzip -c' | gunzip -c | mysql manodb</pre>
 <p>Tai tiek. Tikiuosi „pagavote kampą“ kas yra <span class="caps">SSH</span>, ir kaip paprastai galima juo
 naudotis sutaupant daug laiko.</p>
+</section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../gpl-ar-lgpl/" rel="prev" title="GPL ar LGPL?">Previous post</a>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about sirex)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/sirex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Svetainės istorija</title><link>https://sirex.lt/posts/2011/svetaines-istorija/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;div class="section" id="id1"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about sirex)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/sirex.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Svetainės istorija</title><link>https://sirex.lt/posts/2011/svetaines-istorija/</link><dc:creator>Sirex</dc:creator><description>&lt;section id="section-1"&gt;
 &lt;h2&gt;2007-05-05&lt;/h2&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/drupal_logo.png"&gt;&lt;img alt="Drupal" class="align-right" src="https://sirex.lt/images/u1/drupal_logo.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Deja nėra daug laiko tobulinti savo svetainę, todėl pasiskaitinėjęs pagalvojau,
 kad reikia išbandyti &lt;a class="reference external" href="http://drupal.org/"&gt;Drupal&lt;/a&gt; ir tuo pačiu ant jo perkelti savo svetainę/blogą.&lt;/p&gt;
 &lt;p&gt;Na pasibandysim ir žiūrėsim ar Drupal iš ties geras daigtas :)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="id2"&gt;
+&lt;/section&gt;
+&lt;section id="section-2"&gt;
 &lt;h2&gt;2009-02-09&lt;/h2&gt;
 &lt;p&gt;Jau 100 metų ruošiausi ir šį savaitgalį, netikėtai prisiruošiau atsinaujinti
 savo blogo vidurius. Dar penktadienį sukosi Drupal 5.1, o jau dabar, šviežiai
@@ -67,17 +67,17 @@ išvalytas serveris, išvalyta duomenų bazė, numigruota prie Drupal 6.9,
 perrašytas Drupal tema ir įdiegta daug visokių modulių...&lt;/p&gt;
 &lt;p&gt;Jei, kas pastebėsite kokių nors netikslumų, kurių tikėtina gali atsirasti, tai
 rašykit. Kol dar neišblėso entuziazmas, sutvarkysiu :)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
+&lt;/section&gt;
+&lt;section id="section-3"&gt;
 &lt;h2&gt;2011-07-15&lt;/h2&gt;
 &lt;p&gt;Visas svetainės turinys perkeltas iš &lt;a class="reference external" href="http://drupal.org/"&gt;Drupal&lt;/a&gt; į &lt;a class="reference external" href="https://sirex.lt/posts/2008/pelican/"&gt;Pelican&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
+&lt;/section&gt;
+&lt;section id="section-4"&gt;
 &lt;h2&gt;2019-12-31&lt;/h2&gt;
 &lt;p&gt;Visas svetainės turinys perkeltas iš &lt;a class="reference external" href="https://sirex.lt/posts/2008/pelican/"&gt;Pelican&lt;/a&gt; į &lt;a class="reference external" href="https://www.getnikola.com/"&gt;Nikola&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>sirex</category><guid>https://sirex.lt/posts/2011/svetaines-istorija/</guid><pubDate>Thu, 14 Jul 2011 21:00:00 GMT</pubDate></item><item><title>Mano darbastalis</title><link>https://sirex.lt/posts/2007/mano-darbastalis/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Štai taip atrodo mano paskutinis darbo laukas:&lt;/p&gt;
+&lt;/section&gt;</description><category>sirex</category><guid>https://sirex.lt/posts/2011/svetaines-istorija/</guid><pubDate>Thu, 14 Jul 2011 21:00:00 GMT</pubDate></item><item><title>Mano darbastalis</title><link>https://sirex.lt/posts/2007/mano-darbastalis/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Štai taip atrodo mano paskutinis darbo laukas:&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/Screenshot.png"&gt;&lt;img alt="/images/u1/Screenshot.thumbnail.png" src="https://sirex.lt/images/u1/Screenshot.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Šiame darbastalyje naudojama Gnome grafinė aplinka, tik vietoje stadartinės
 langų tvarkyklės Metacitį, naudojama Sawfish. Priekyje paleista FireFox
 naršyklė su VIMperator exstesionu. Fone matyti GVim teksto redaktorius, su
-dbext pluginu, skirtu valdyti duomenų bazei.&lt;/p&gt;&lt;/div&gt;</description><category>sirex</category><guid>https://sirex.lt/posts/2007/mano-darbastalis/</guid><pubDate>Thu, 02 Aug 2007 10:19:00 GMT</pubDate></item></channel></rss>
+dbext pluginu, skirtu valdyti duomenų bazei.&lt;/p&gt;</description><category>sirex</category><guid>https://sirex.lt/posts/2007/mano-darbastalis/</guid><pubDate>Thu, 02 Aug 2007 10:19:00 GMT</pubDate></item></channel></rss>

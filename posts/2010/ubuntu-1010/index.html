@@ -42,15 +42,13 @@ buvau pasiruošęs visą sąrašą dalykų, kuriuos reiki">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Nesenai vykusioje Ubuntu 10.10 Release Party mini konferencijoje vedžiau
+    <p>Nesenai vykusioje Ubuntu 10.10 Release Party mini konferencijoje vedžiau
 install fest, net 2 valandas! Kad išsamiai ir nuosekliai viską nupasakočiau,
 buvau pasiruošęs visą sąrašą dalykų, kuriuos reikia paminėti. Nusprendžiau
 paskelbti šį sąrašą ir čia.</p>
 <p>Tik noriu iš kart įspėti, kad sąrašas netvarkytas ir kai kuriose vietose gali
 būti neaiškus.</p>
-<div class="section" id="ar-verta-diegti-ubuntu">
-<h2>Ar verta diegti Ubuntu?<a href="#ar-verta-diegti-ubuntu" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="ar-verta-diegti-ubuntu"><h2>Ar verta diegti Ubuntu?<a href="#ar-verta-diegti-ubuntu" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li>
 <p>Taip, nebent:</p>
@@ -61,10 +59,7 @@ AutoCAD ir pan., kurios veikia tik Windows aplinkoje.</p></li>
 <li><p>Turite kompiuterį, kuris yra nesuderinamas su Linux</p></li>
 </ul>
 </li>
-</ul>
-</div>
-<div class="section" id="pasiruosimas-diegimui">
-<h2>Pasiruošimas diegimui<a href="#pasiruosimas-diegimui" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</ul></section><section id="pasiruosimas-diegimui"><h2>Pasiruošimas diegimui<a href="#pasiruosimas-diegimui" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <ul>
 <li>
 <p>Upgrade versus fresh install</p>
@@ -152,21 +147,21 @@ greičiau ir patogiau</p></li>
 <li><p>Konfigūracinių failų saugojimas Mercurial repozitoriume</p></li>
 <li>
 <p>Naudojamų programų sąrašo išsaugojimas ir atstatymas:</p>
-<pre class="code sh"><a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-2"></a>dpkg --get-selections &gt; old
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-3"></a>
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-4"></a><span class="c1"># Po įdiegimo</span>
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-5"></a>dpkg --get-selections &gt; new
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-6"></a>
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-8"></a>comm -23 old new &gt; sel
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-9"></a>
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-10"></a><span class="c1"># Peržiūrim ko reikia</span>
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-11"></a>vim sel
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-12"></a>
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
-<a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-15"></a>sudo apt-get dselect-upgrade
+<pre class="code sh"><a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-1" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-1" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-2" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-2" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-2"></a>dpkg --get-selections &gt; old
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-3" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-3" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-3"></a>
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-4" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-4" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-4"></a><span class="c1"># Po įdiegimo</span>
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-5" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-5" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-5"></a>dpkg --get-selections &gt; new
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-6" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-6" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-6"></a>
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-7" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-7" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-8" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-8" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-8"></a>comm -23 old new &gt; sel
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-9" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-9" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-9"></a>
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-10" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-10" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-10"></a><span class="c1"># Peržiūrim ko reikia</span>
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-11" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-11" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-11"></a>vim sel
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-12" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-12" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-12"></a>
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-13" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-13" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-14" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-14" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
+<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-15" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-15" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-15"></a>sudo apt-get dselect-upgrade
 </pre>
 <p>Idėja: <a class="reference external" href="http://brainstorm.ubuntu.com/idea/25839/">http://brainstorm.ubuntu.com/idea/25839/</a></p>
 </li>
@@ -179,10 +174,7 @@ paskutinis dalykas ir tai reikia daryti išjungus visas programas.</p></li>
 </ul>
 </li>
 <li><p>Namų katalogo išvalymas, prieš darant fresh install</p></li>
-</ul>
-</div>
-<div class="section" id="diegimas">
-<h2>Diegimas<a href="#diegimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</ul></section><section id="diegimas"><h2>Diegimas<a href="#diegimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><span class="caps">BIOS</span> nustatymai</p></li>
 <li>
@@ -223,10 +215,7 @@ ir 1G</p></li>
 <li><p>Rekomenduojamu išskirti 10G sistemai, Swap, ir kas liko home</p></li>
 </ul>
 </li>
-</ul>
-</div>
-<div class="section" id="po-idiegimo">
-<h2>Po įdiegimo<a href="#po-idiegimo" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</ul></section><section id="po-idiegimo"><h2>Po įdiegimo<a href="#po-idiegimo" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li>
 <p>Keyring slaptažodis</p>
@@ -262,10 +251,8 @@ bet keyring neklausinės kas kartą įvesti slaptažodžio</p></li>
 </ul>
 </li>
 <li><p>Gnome-do - must have</p></li>
-</ul>
+</ul></section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../priemones-darbui-su-python-ir-django/" rel="prev" title="Priemonės darbui su Python ir Django">Previous post</a>

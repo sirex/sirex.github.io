@@ -45,8 +45,7 @@ Dažniausiai visi naudotojo duomenys laiko">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Tikriausiai žinote, kad labai patogu laikyti <code class="docutils literal">/</code> ir <code class="docutils literal">/home</code> katalogus
+    <p>Tikriausiai žinote, kad labai patogu laikyti <code class="docutils literal">/</code> ir <code class="docutils literal">/home</code> katalogus
 atskiruose skirsniuose, kad vėliau iš naujo įdiegus Linux sistemą, viskas
 išliktų kaip buvę.</p>
 <p>Dažniausiai visi naudotojo duomenys laikomi namų (/home) kataloge.  Tačiau,
@@ -65,8 +64,7 @@ $ diff dpkg-list.old dpkg-list.new | awk '/^</pre>
 <p><em>Pastaba:</em> nepamirškite išsisaugoti ir <code class="docutils literal">/etc/apt/sources.list</code> failo, nes kai
 kurios programos gali būti įdiegtos iš saugyklų, kurių po įdiegimo, pagal
 nutylėjimą nebus šiame faile.</p>
-<div class="section" id="papildymas-galimos-problemos-ir-ju-sprendimai">
-<h2>Papildymas: Galimos problemos ir jų sprendimai<a href="#papildymas-galimos-problemos-ir-ju-sprendimai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="papildymas-galimos-problemos-ir-ju-sprendimai"><h2>Papildymas: Galimos problemos ir jų sprendimai<a href="#papildymas-galimos-problemos-ir-ju-sprendimai" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Praktiškai išbandžius aukščiau aprašytas komandas susidūriau su šiokiais
 tokiais sunkumais.</p>
 <p><em>Kadangi pas mane buvo labai didelis paketų skaičius įdiegimui, tai neaišku dėl
@@ -89,9 +87,8 @@ ir tęsti toliau tokiomis komandomis:</p>
 <pre class="literal-block">$ sudo apt-get install -f
 $ sudo dpkg --configure -a
 $ cat dpkg-missing | xargs sudo apt-get install -y</pre>
+</section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../dell-inspiron-1501-ubuntu-jaunty-ext4/" rel="prev" title="Dell Inspiron 1501 + Ubuntu Jaunty + Ext4">Previous post</a>

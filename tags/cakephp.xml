@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about cakephp)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/cakephp.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Django VS CakePHP</title><link>https://sirex.lt/posts/2010/django-vs-cakephp/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Stengsiuosi pateikti tik faktus. Kuris iš jų geresnis, spręsti kiekvienam
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about cakephp)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/cakephp.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Django VS CakePHP</title><link>https://sirex.lt/posts/2010/django-vs-cakephp/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Stengsiuosi pateikti tik faktus. Kuris iš jų geresnis, spręsti kiekvienam
 asmeniškai.&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 49%"&gt;
-&lt;col style="width: 51%"&gt;
-&lt;/colgroup&gt;
 &lt;thead&gt;
 &lt;tr&gt;&lt;th class="head"&gt;&lt;p&gt;Django&lt;/p&gt;&lt;/th&gt;
 &lt;th class="head"&gt;&lt;p&gt;CakePHP&lt;/p&gt;&lt;/th&gt;
@@ -43,7 +39,7 @@ asmeniškai.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div class="section" id="ror-klonas"&gt;
+&lt;section id="ror-klonas"&gt;
 &lt;h2&gt;RoR klonas?&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Django laikosi populiariausių ir pasiteisinusių dizaino šablonų, tokių, kaip
@@ -53,8 +49,8 @@ didesnių panašumų nėra.&lt;/p&gt;
 &lt;p&gt;CakePHP yra Ruby on Rails klonas perrašytas PHP kalba. Nors rašoma, kad CakePHP
 nėra RoR klonas, bet daugelis dalykų realizuota lygiai taip pat, kaip tai yra
 padaryta RoR.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="dokumentacija"&gt;
+&lt;/section&gt;
+&lt;section id="dokumentacija"&gt;
 &lt;h2&gt;Dokumentacija&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Puiki ir &lt;a class="reference external" href="http://docs.djangoproject.com/en/1.1/"&gt;išsami dokumentacija&lt;/a&gt;, yra
@@ -62,8 +58,8 @@ padaryta RoR.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Dokumentacija nėra išsami ir išbaigta, daugelyje vietų apie funkcijas
 užsimenama tik bendrais bruožais. Yra išleista &lt;a class="reference external" href="http://www.amazon.com/gp/product/1847193897?ie=UTF8&amp;amp;tag=dotcombarga&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1847193897"&gt;knyga apie CakePHP&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="darbo-vietos-paruosimas"&gt;
+&lt;/section&gt;
+&lt;section id="darbo-vietos-paruosimas"&gt;
 &lt;h2&gt;Darbo vietos paruošimas&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Python dėka Django galima įkelti į izoliuotą aplinką, kur visas veiksmas vyks
@@ -89,8 +85,8 @@ su Django &lt;code class="docutils literal"&gt;startproject&lt;/code&gt; komanda
        | tar -xjf -
 $ mv 1.3.0-alpha cakephp &amp;amp;&amp;amp; cd cakephp
 $ chown -R www-data app/tmp&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="duomenu-bazes-kurimas-ir-migravimas"&gt;
+&lt;/section&gt;
+&lt;section id="duomenu-bazes-kurimas-ir-migravimas"&gt;
 &lt;h2&gt;Duomenų bazės kūrimas ir migravimas&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Dirbant su Django duomenų bazės kūrimo ir migravimo problemas galima pamiršti,
@@ -114,39 +110,39 @@ struktūrą.&lt;/p&gt;
 &lt;pre class="literal-block"&gt;$ ./cake/console/cake schema run create&lt;/pre&gt;
 &lt;p&gt;Atnaujinama egzistuojanti duomenų bazė, pagal schemos failą:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;$ ./cake/console/cake schema run update&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="models"&gt;
+&lt;/section&gt;
+&lt;section id="models"&gt;
 &lt;h2&gt;Models&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Django laikosi KISS principo, todėl tai, kas aprašyta modeliuose, naudojama
 duomenų bazės lentelėms kurti, generuoti formoms (CakePHP Scaffolding), duomenų
 tikrinimui atlikit ir t.t.&lt;/p&gt;
-&lt;pre class="code python"&gt;&lt;a name="rest_code_19c3ece0580d44708d2494142c1272bb-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.db&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;
-&lt;a name="rest_code_19c3ece0580d44708d2494142c1272bb-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_19c3ece0580d44708d2494142c1272bb-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-&lt;a name="rest_code_19c3ece0580d44708d2494142c1272bb-4"&gt;&lt;/a&gt;    &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CharField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_19c3ece0580d44708d2494142c1272bb-5"&gt;&lt;/a&gt;    &lt;span class="n"&gt;body&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TextField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;a name="rest_code_19c3ece0580d44708d2494142c1272bb-6"&gt;&lt;/a&gt;    &lt;span class="n"&gt;created&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTimeField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;a name="rest_code_19c3ece0580d44708d2494142c1272bb-7"&gt;&lt;/a&gt;    &lt;span class="n"&gt;modified&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTimeField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;pre class="code python"&gt;&lt;a id="rest_code_9e56cb0ab0444222b5250cec02e31585-1" name="rest_code_9e56cb0ab0444222b5250cec02e31585-1" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_9e56cb0ab0444222b5250cec02e31585-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.db&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;
+&lt;a id="rest_code_9e56cb0ab0444222b5250cec02e31585-2" name="rest_code_9e56cb0ab0444222b5250cec02e31585-2" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_9e56cb0ab0444222b5250cec02e31585-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_9e56cb0ab0444222b5250cec02e31585-3" name="rest_code_9e56cb0ab0444222b5250cec02e31585-3" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_9e56cb0ab0444222b5250cec02e31585-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a id="rest_code_9e56cb0ab0444222b5250cec02e31585-4" name="rest_code_9e56cb0ab0444222b5250cec02e31585-4" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_9e56cb0ab0444222b5250cec02e31585-4"&gt;&lt;/a&gt;    &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CharField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;max_length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a id="rest_code_9e56cb0ab0444222b5250cec02e31585-5" name="rest_code_9e56cb0ab0444222b5250cec02e31585-5" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_9e56cb0ab0444222b5250cec02e31585-5"&gt;&lt;/a&gt;    &lt;span class="n"&gt;body&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TextField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a id="rest_code_9e56cb0ab0444222b5250cec02e31585-6" name="rest_code_9e56cb0ab0444222b5250cec02e31585-6" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_9e56cb0ab0444222b5250cec02e31585-6"&gt;&lt;/a&gt;    &lt;span class="n"&gt;created&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTimeField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;a id="rest_code_9e56cb0ab0444222b5250cec02e31585-7" name="rest_code_9e56cb0ab0444222b5250cec02e31585-7" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_9e56cb0ab0444222b5250cec02e31585-7"&gt;&lt;/a&gt;    &lt;span class="n"&gt;modified&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTimeField&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Django neriboja ir leidžia rašyti tiesiogines SQL užklausas, tiek susietas su
 modeliu, tiek nepriklausomas INSERT/UPDATE ar kitoms užklausoms.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;CakePHP duomenų struktūra aprašoma tiesiogiai duomenų bazėje kuriant lenteles.
 Modelis pagal pavadinimą arba &lt;code class="docutils literal"&gt;useTable&lt;/code&gt; parametrą, susiejamas su duomenų
 bazės lentele, iš kurios nuskaitomi visi laukai ir kiti duomenys.&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_c81db0b510f64104af25f3c1d82024e2-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_c81db0b510f64104af25f3c1d82024e2-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_c81db0b510f64104af25f3c1d82024e2-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Post&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;AppModel&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_c81db0b510f64104af25f3c1d82024e2-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;$name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'Post'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_c81db0b510f64104af25f3c1d82024e2-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_c81db0b510f64104af25f3c1d82024e2-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_c81db0b510f64104af25f3c1d82024e2-7"&gt;&lt;/a&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a id="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-1" name="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-1" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_cda35ac1bb464512a59c4a0386c4d8c7-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a id="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-2" name="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-2" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_cda35ac1bb464512a59c4a0386c4d8c7-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-3" name="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-3" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_cda35ac1bb464512a59c4a0386c4d8c7-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Post&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;AppModel&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-4" name="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-4" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_cda35ac1bb464512a59c4a0386c4d8c7-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;$name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'Post'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-5" name="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-5" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_cda35ac1bb464512a59c4a0386c4d8c7-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-6" name="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-6" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_cda35ac1bb464512a59c4a0386c4d8c7-6"&gt;&lt;/a&gt;
+&lt;a id="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-7" name="rest_code_cda35ac1bb464512a59c4a0386c4d8c7-7" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_cda35ac1bb464512a59c4a0386c4d8c7-7"&gt;&lt;/a&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;CakePHP suteikia ribotas galimybes vykdyti tiesiogines SQL užklausas.
 Pateikiamas tik vienas query metodas modelyje. Tiesioginės SQL užklausos
 surišamos su modeliu ir vykdomas fetchAll metodas. Nepaisant to, veikia ir
 INSERT/UPDATE užklausos.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="views"&gt;
+&lt;/section&gt;
+&lt;section id="views"&gt;
 &lt;h2&gt;Views&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Django MVC trijulė &lt;a class="reference external" href="http://docs.djangoproject.com/en/dev/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names"&gt;vadinama kiek kitais pavadinimais&lt;/a&gt;,
@@ -158,22 +154,22 @@ turinio kūrimo darbą.&lt;/p&gt;
 perrašant tik reikiamus blokus. Būtent toks šablonų paveldėjimo principas yra
 pagrindinis arkliukas konstruojant sudėtingas svetaines, kurios turi bendrą
 šabloną ir besikeičiančias tam tikras dalis.  Štai kaip atrodo Django šablonas:&lt;/p&gt;
-&lt;pre class="code jinja"&gt;&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="s2"&gt;"base_generic.html"&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-3"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt; &lt;span class="cp"&gt;%}{{&lt;/span&gt; &lt;span class="nv"&gt;section.title&lt;/span&gt; &lt;span class="cp"&gt;}}{%&lt;/span&gt; &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-4"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-5"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt; &lt;span class="nv"&gt;content&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-6"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;section.title&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-8"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;story&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;story_list&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-9"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-10"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;a href="&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;story.get_absolute_url&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;"&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-11"&gt;&lt;/a&gt;&lt;span class="x"&gt;        &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;story.headline&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;upper&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-12"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-13"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-14"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;story.tease&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;truncatewords&lt;/span&gt;&lt;span class="s2"&gt;:"100"&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-15"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;a name="rest_code_5742ec0ec3d84fd88402cff38f52474a-16"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;pre class="code jinja"&gt;&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-1" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-1" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="s2"&gt;"base_generic.html"&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-2" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-2" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-3" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-3" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-3"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt; &lt;span class="nv"&gt;title&lt;/span&gt; &lt;span class="cp"&gt;%}{{&lt;/span&gt; &lt;span class="nv"&gt;section.title&lt;/span&gt; &lt;span class="cp"&gt;}}{%&lt;/span&gt; &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-4" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-4" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-4"&gt;&lt;/a&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-5" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-5" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-5"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;block&lt;/span&gt; &lt;span class="nv"&gt;content&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-6" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-6" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-6"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;section.title&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-7" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-7" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-7"&gt;&lt;/a&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-8" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-8" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-8"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;story&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;story_list&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-9" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-9" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-9"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-10" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-10" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-10"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;a href="&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;story.get_absolute_url&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;"&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-11" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-11" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-11"&gt;&lt;/a&gt;&lt;span class="x"&gt;        &lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;story.headline&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;upper&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-12" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-12" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-12"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-13" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-13" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-13"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-14" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-14" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-14"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;story.tease&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;truncatewords&lt;/span&gt;&lt;span class="s2"&gt;:"100"&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-15" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-15" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-15"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endfor&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a id="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-16" name="rest_code_b8c52acda42b4ef79afc5cb98e1022b9-16" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_b8c52acda42b4ef79afc5cb98e1022b9-16"&gt;&lt;/a&gt;&lt;span class="cp"&gt;{%&lt;/span&gt; &lt;span class="k"&gt;endblock&lt;/span&gt; &lt;span class="cp"&gt;%}&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;CakePHP Views dalis taip pat reiškia šablonus. Šablonai rašomi PHP kalba,
 kadangi PHP pati savaime turi visas šablonams būdingas funkcijas.  Šablonų
@@ -185,42 +181,42 @@ iš dalies galima sulyginti su Django Tags. CakePHP Elements atlieka
 pasikartojančių svetainės dalių išvedimą, tokiu pačiu tikslu naudojami ir
 Django Tags, tačiau jų panaudojimo spektras yra kur kas platesnis.&lt;/p&gt;
 &lt;p&gt;CakePHP šablonas atrodo taip:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$section&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'title'&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-3"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;title&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-4"&gt;&lt;/a&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-5"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="nv"&gt;$story_list&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nv"&gt;$story&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-6"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-7"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;a href="&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;get_absolute_url&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;"&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-8"&gt;&lt;/a&gt;&lt;span class="x"&gt;        &lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nb"&gt;strtoupper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;headline&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-9"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-10"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-11"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$text&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;truncate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;tease&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;a name="rest_code_64f894fdd69d4bb8910cec1dc6c8e515-12"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;endforeach&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="section" id="controllers"&gt;
+&lt;pre class="code php"&gt;&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-1" name="rest_code_75c748c3fe0544038e9d4b62444d9545-1" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$section&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'title'&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-2" name="rest_code_75c748c3fe0544038e9d4b62444d9545-2" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-3" name="rest_code_75c748c3fe0544038e9d4b62444d9545-3" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-3"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;title&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-4" name="rest_code_75c748c3fe0544038e9d4b62444d9545-4" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-4"&gt;&lt;/a&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-5" name="rest_code_75c748c3fe0544038e9d4b62444d9545-5" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-5"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="nv"&gt;$story_list&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nv"&gt;$story&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-6" name="rest_code_75c748c3fe0544038e9d4b62444d9545-6" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-6"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-7" name="rest_code_75c748c3fe0544038e9d4b62444d9545-7" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-7"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;a href="&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;get_absolute_url&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;"&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-8" name="rest_code_75c748c3fe0544038e9d4b62444d9545-8" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-8"&gt;&lt;/a&gt;&lt;span class="x"&gt;        &lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nb"&gt;strtoupper&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;headline&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-9" name="rest_code_75c748c3fe0544038e9d4b62444d9545-9" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-9"&gt;&lt;/a&gt;&lt;span class="x"&gt;    &amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-10" name="rest_code_75c748c3fe0544038e9d4b62444d9545-10" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-10"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-11" name="rest_code_75c748c3fe0544038e9d4b62444d9545-11" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-11"&gt;&lt;/a&gt;&lt;span class="x"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$text&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;truncate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$story&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;tease&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;a id="rest_code_75c748c3fe0544038e9d4b62444d9545-12" name="rest_code_75c748c3fe0544038e9d4b62444d9545-12" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_75c748c3fe0544038e9d4b62444d9545-12"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;endforeach&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/section&gt;
+&lt;section id="controllers"&gt;
 &lt;h2&gt;Controllers&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Django kontroleriai vadinami Views kartu su adresacijos mechanizmu.  Django
 Views yra paprasčiausios funkcijos, kurios nurodą ką ir kaip grąžinti. Tos
 funkcijos surišamos su adresacijos mechanizmu.  Štai kaip kuriama adresacija:&lt;/p&gt;
-&lt;pre class="code python"&gt;&lt;a name="rest_code_a5c2f240a9ee4c28ba672f6343ea4e47-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.conf.urls.defaults&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
-&lt;a name="rest_code_a5c2f240a9ee4c28ba672f6343ea4e47-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_a5c2f240a9ee4c28ba672f6343ea4e47-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;urlpatterns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;patterns&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;a name="rest_code_a5c2f240a9ee4c28ba672f6343ea4e47-4"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/2003/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.special_case_2003'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-&lt;a name="rest_code_a5c2f240a9ee4c28ba672f6343ea4e47-5"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/(\d&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s1"&gt;)/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.year_archive'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-&lt;a name="rest_code_a5c2f240a9ee4c28ba672f6343ea4e47-6"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/(\d&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s1"&gt;)/(\d&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s1"&gt;)/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.month_archive'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-&lt;a name="rest_code_a5c2f240a9ee4c28ba672f6343ea4e47-7"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/(\d&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s1"&gt;)/(\d&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s1"&gt;)/(\d+)/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.article_detail'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-&lt;a name="rest_code_a5c2f240a9ee4c28ba672f6343ea4e47-8"&gt;&lt;/a&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="code python"&gt;&lt;a id="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-1" name="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-1" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.conf.urls.defaults&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;a id="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-2" name="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-2" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-3" name="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-3" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;urlpatterns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;patterns&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a id="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-4" name="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-4" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-4"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/2003/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.special_case_2003'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;a id="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-5" name="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-5" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-5"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/(\d&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s1"&gt;)/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.year_archive'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;a id="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-6" name="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-6" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-6"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/(\d&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s1"&gt;)/(\d&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s1"&gt;)/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.month_archive'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;a id="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-7" name="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-7" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-7"&gt;&lt;/a&gt;    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'^articles/(\d&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s1"&gt;)/(\d&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s1"&gt;)/(\d+)/$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'news.views.article_detail'&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;a id="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-8" name="rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-8" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_6fbcfbd8c2d140a288c5c1c918b1087b-8"&gt;&lt;/a&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Aprašant adresus naudojami Regexp, per kuriuos iš karto atliekamas perduodamų
 parametrų tikrinimas.&lt;/p&gt;
 &lt;p&gt;O štai kaip atrodo Views funkcija:&lt;/p&gt;
-&lt;pre class="code python"&gt;&lt;a name="rest_code_48cd2ac43d6543c2a93779f731c84d22-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.shortcuts&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;render_to_response&lt;/span&gt;
-&lt;a name="rest_code_48cd2ac43d6543c2a93779f731c84d22-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_48cd2ac43d6543c2a93779f731c84d22-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_view&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-&lt;a name="rest_code_48cd2ac43d6543c2a93779f731c84d22-4"&gt;&lt;/a&gt;    &lt;span class="n"&gt;template_vars&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"foo"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"bar"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_48cd2ac43d6543c2a93779f731c84d22-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;render_to_response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'myapp/index.html'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;template_vars&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;a name="rest_code_48cd2ac43d6543c2a93779f731c84d22-6"&gt;&lt;/a&gt;                               &lt;span class="n"&gt;mimetype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"application/xhtml+xml"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="code python"&gt;&lt;a id="rest_code_bd6fe99152eb495e9a843d77c87a6504-1" name="rest_code_bd6fe99152eb495e9a843d77c87a6504-1" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_bd6fe99152eb495e9a843d77c87a6504-1"&gt;&lt;/a&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.shortcuts&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;render_to_response&lt;/span&gt;
+&lt;a id="rest_code_bd6fe99152eb495e9a843d77c87a6504-2" name="rest_code_bd6fe99152eb495e9a843d77c87a6504-2" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_bd6fe99152eb495e9a843d77c87a6504-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_bd6fe99152eb495e9a843d77c87a6504-3" name="rest_code_bd6fe99152eb495e9a843d77c87a6504-3" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_bd6fe99152eb495e9a843d77c87a6504-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_view&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a id="rest_code_bd6fe99152eb495e9a843d77c87a6504-4" name="rest_code_bd6fe99152eb495e9a843d77c87a6504-4" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_bd6fe99152eb495e9a843d77c87a6504-4"&gt;&lt;/a&gt;    &lt;span class="n"&gt;template_vars&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"foo"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"bar"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_bd6fe99152eb495e9a843d77c87a6504-5" name="rest_code_bd6fe99152eb495e9a843d77c87a6504-5" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_bd6fe99152eb495e9a843d77c87a6504-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;render_to_response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'myapp/index.html'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;template_vars&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a id="rest_code_bd6fe99152eb495e9a843d77c87a6504-6" name="rest_code_bd6fe99152eb495e9a843d77c87a6504-6" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_bd6fe99152eb495e9a843d77c87a6504-6"&gt;&lt;/a&gt;                               &lt;span class="n"&gt;mimetype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"application/xhtml+xml"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Su Django Views galima išvesti ne tik HTML turinį, bet ir paveiksliukus,
 dokumentus, PDF failus ir ką tik nori. Nėra jokių ribojimų, nėra jokio
 tiesioginio privalomo ryšio su šablonais ar panašiais. Su Django Views viskas
@@ -235,27 +231,27 @@ susijusių klasių hierarchiją į atskirus šablonų gabaliukus.&lt;/p&gt;
 &lt;p&gt;Nors CakePHP turi URL Routes, tačiau pagal nutylėjimą, adresai formuojami pagal
 konrolerio ir jo metodų pavadinimus.  Štai, kaip atrodo CakePHP adresacijos
 mechanizmas:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_c36bfcc4205c4146b12ece8592c82410-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_c36bfcc4205c4146b12ece8592c82410-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_c36bfcc4205c4146b12ece8592c82410-3"&gt;&lt;/a&gt;&lt;span class="nx"&gt;Router&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-&lt;a name="rest_code_c36bfcc4205c4146b12ece8592c82410-4"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'controller'&lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="s1"&gt;'posts'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;a name="rest_code_c36bfcc4205c4146b12ece8592c82410-5"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'action'&lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;a name="rest_code_c36bfcc4205c4146b12ece8592c82410-6"&gt;&lt;/a&gt;    &lt;span class="p"&gt;));&lt;/span&gt;
-&lt;a name="rest_code_c36bfcc4205c4146b12ece8592c82410-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_c36bfcc4205c4146b12ece8592c82410-8"&gt;&lt;/a&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a id="rest_code_0ec87cb4076e413db8ae724ce8db62ce-1" name="rest_code_0ec87cb4076e413db8ae724ce8db62ce-1" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_0ec87cb4076e413db8ae724ce8db62ce-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a id="rest_code_0ec87cb4076e413db8ae724ce8db62ce-2" name="rest_code_0ec87cb4076e413db8ae724ce8db62ce-2" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_0ec87cb4076e413db8ae724ce8db62ce-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_0ec87cb4076e413db8ae724ce8db62ce-3" name="rest_code_0ec87cb4076e413db8ae724ce8db62ce-3" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_0ec87cb4076e413db8ae724ce8db62ce-3"&gt;&lt;/a&gt;&lt;span class="nx"&gt;Router&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="na"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;a id="rest_code_0ec87cb4076e413db8ae724ce8db62ce-4" name="rest_code_0ec87cb4076e413db8ae724ce8db62ce-4" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_0ec87cb4076e413db8ae724ce8db62ce-4"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'controller'&lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="s1"&gt;'posts'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a id="rest_code_0ec87cb4076e413db8ae724ce8db62ce-5" name="rest_code_0ec87cb4076e413db8ae724ce8db62ce-5" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_0ec87cb4076e413db8ae724ce8db62ce-5"&gt;&lt;/a&gt;        &lt;span class="s1"&gt;'action'&lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a id="rest_code_0ec87cb4076e413db8ae724ce8db62ce-6" name="rest_code_0ec87cb4076e413db8ae724ce8db62ce-6" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_0ec87cb4076e413db8ae724ce8db62ce-6"&gt;&lt;/a&gt;    &lt;span class="p"&gt;));&lt;/span&gt;
+&lt;a id="rest_code_0ec87cb4076e413db8ae724ce8db62ce-7" name="rest_code_0ec87cb4076e413db8ae724ce8db62ce-7" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_0ec87cb4076e413db8ae724ce8db62ce-7"&gt;&lt;/a&gt;
+&lt;a id="rest_code_0ec87cb4076e413db8ae724ce8db62ce-8" name="rest_code_0ec87cb4076e413db8ae724ce8db62ce-8" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_0ec87cb4076e413db8ae724ce8db62ce-8"&gt;&lt;/a&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Štai, kaip atrodo CakePHP kontroleris:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_bc3753f8b6c54ce4803677c4cdc73ac9-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_bc3753f8b6c54ce4803677c4cdc73ac9-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_bc3753f8b6c54ce4803677c4cdc73ac9-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;RecipesController&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;AppController&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_bc3753f8b6c54ce4803677c4cdc73ac9-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;view&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_bc3753f8b6c54ce4803677c4cdc73ac9-5"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'foo'&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
-&lt;a name="rest_code_bc3753f8b6c54ce4803677c4cdc73ac9-6"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;render&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/myapp/index'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_bc3753f8b6c54ce4803677c4cdc73ac9-7"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_bc3753f8b6c54ce4803677c4cdc73ac9-8"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_bc3753f8b6c54ce4803677c4cdc73ac9-9"&gt;&lt;/a&gt;
-&lt;a name="rest_code_bc3753f8b6c54ce4803677c4cdc73ac9-10"&gt;&lt;/a&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="section" id="mvc-pagalbines-priemones"&gt;
+&lt;pre class="code php"&gt;&lt;a id="rest_code_fa204837089c44498d8707a81459d83a-1" name="rest_code_fa204837089c44498d8707a81459d83a-1" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_fa204837089c44498d8707a81459d83a-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a id="rest_code_fa204837089c44498d8707a81459d83a-2" name="rest_code_fa204837089c44498d8707a81459d83a-2" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_fa204837089c44498d8707a81459d83a-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_fa204837089c44498d8707a81459d83a-3" name="rest_code_fa204837089c44498d8707a81459d83a-3" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_fa204837089c44498d8707a81459d83a-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;RecipesController&lt;/span&gt; &lt;span class="k"&gt;extends&lt;/span&gt; &lt;span class="nx"&gt;AppController&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_fa204837089c44498d8707a81459d83a-4" name="rest_code_fa204837089c44498d8707a81459d83a-4" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_fa204837089c44498d8707a81459d83a-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="nf"&gt;view&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_fa204837089c44498d8707a81459d83a-5" name="rest_code_fa204837089c44498d8707a81459d83a-5" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_fa204837089c44498d8707a81459d83a-5"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;array&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'foo'&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;a id="rest_code_fa204837089c44498d8707a81459d83a-6" name="rest_code_fa204837089c44498d8707a81459d83a-6" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_fa204837089c44498d8707a81459d83a-6"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;render&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/myapp/index'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a id="rest_code_fa204837089c44498d8707a81459d83a-7" name="rest_code_fa204837089c44498d8707a81459d83a-7" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_fa204837089c44498d8707a81459d83a-7"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_fa204837089c44498d8707a81459d83a-8" name="rest_code_fa204837089c44498d8707a81459d83a-8" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_fa204837089c44498d8707a81459d83a-8"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_fa204837089c44498d8707a81459d83a-9" name="rest_code_fa204837089c44498d8707a81459d83a-9" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_fa204837089c44498d8707a81459d83a-9"&gt;&lt;/a&gt;
+&lt;a id="rest_code_fa204837089c44498d8707a81459d83a-10" name="rest_code_fa204837089c44498d8707a81459d83a-10" href="https://sirex.lt/posts/2010/django-vs-cakephp/#rest_code_fa204837089c44498d8707a81459d83a-10"&gt;&lt;/a&gt;&lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/section&gt;
+&lt;section id="mvc-pagalbines-priemones"&gt;
 &lt;h2&gt;MVC pagalbinės priemonės&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Django rodiniai (Views) globaliai gali būti kontroliuojami middleware pagalba.
@@ -273,8 +269,8 @@ biblioteką, visiems gyvenimo atvejams.&lt;/p&gt;
 ir Helpers, kurie išplečia MVC dalių funkcionalumą.&lt;/p&gt;
 &lt;p&gt;CakePHP taip pat turi gan nemažai vidinių pagalbinių priemonių dažnai
 pasitaikančioms situacijoms.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="moduliskumas"&gt;
+&lt;/section&gt;
+&lt;section id="moduliskumas"&gt;
 &lt;h2&gt;Moduliškumas&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Standartiškai, kiekvieną Django projektą sudaro eilė Django Apps, tai yra
@@ -282,8 +278,8 @@ standartinė praktika ir būtent tai išreiškiamas moduliškumas.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;CakePHP&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;CakePHP moduliškumas realizuotas Plugins pagalba ir jie veikia panašiai, kaip
 Django Apps tik dokumentacijoje.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="dviracio-isradinejimas"&gt;
+&lt;/section&gt;
+&lt;section id="dviracio-isradinejimas"&gt;
 &lt;h2&gt;Dviračio išradinėjimas&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Daugelis funkcijų realizuota standartinėmis Python priemonėmis, daugelis jų yra
@@ -307,8 +303,8 @@ priemonių, bendravimui su duomenų baze, išskyrus Query ir CakePHP ORM nėra.&
 &lt;p&gt;Daugelyje vietų, CakePHP siūlo &lt;strong&gt;tik&lt;/strong&gt; savo priemones nesuteikiant galimybės
 realizuoti tam tikras vietas, kitaip, nei tai yra numatę CakePHP
 programuotojai.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="svetainiu-talpinimas-deployment"&gt;
+&lt;/section&gt;
+&lt;section id="svetainiu-talpinimas-deployment"&gt;
 &lt;h2&gt;Svetainių talpinimas (deployment)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Django galima leisti per mod_wsgi, mod_python, FastCGI, SCGI arba AJP. Jei
@@ -324,8 +320,8 @@ pagal nutylėjimą naudojamas būtent Django.&lt;/p&gt;
 &lt;p&gt;Kadangi CakePHP parašytas PHP kalba, kuri palaikoma daugelio svetainių
 talpinimo paslaugas teikiančių įmonių, tai tikėtina, kad problemų nebus.  Tai
 yra stiprioji CakePHP pusė.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="isvados"&gt;
+&lt;/section&gt;
+&lt;section id="isvados"&gt;
 &lt;h2&gt;Išvados&lt;/h2&gt;
 &lt;p&gt;CakePHP turi griežtą struktūrą į kurią privalai įtilpti, iš dalies tai gerai,
 nes skatinamas vienodas ir tos pačios krypties programavimas, bet dažnai galima
@@ -337,4 +333,4 @@ jums tiks kuo puikiausiai.&lt;/p&gt;
 pradėti galite labai paprastai, vos apsirašę duomenų bazės struktūrą
 modeliuose, iš karto gausite pilnai veikiančią administravimo sąsają.&lt;/p&gt;
 &lt;p&gt;Jei esate programuotojas idealistas, Django jums puikiai tiks ir patiks.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>cakephp</category><category>django</category><category>floss</category><category>python</category><guid>https://sirex.lt/posts/2010/django-vs-cakephp/</guid><pubDate>Mon, 18 Jan 2010 13:55:00 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>cakephp</category><category>django</category><category>floss</category><category>python</category><guid>https://sirex.lt/posts/2010/django-vs-cakephp/</guid><pubDate>Mon, 18 Jan 2010 13:55:00 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about shell)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/shell.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ZSH Tips</title><link>https://sirex.lt/posts/2011/zsh-tips/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;div class="section" id="failu-saraso-isskleidimas"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about shell)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/shell.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ZSH Tips</title><link>https://sirex.lt/posts/2011/zsh-tips/</link><dc:creator>Sirex</dc:creator><description>&lt;section id="failu-saraso-isskleidimas"&gt;
 &lt;h2&gt;Failų sąrašo išskleidimas&lt;/h2&gt;
 &lt;p&gt;Elementariausias pavyzdys:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;ls *&lt;/pre&gt;
@@ -12,13 +12,9 @@ pakatalogiais ir failais juose. &lt;code class="docutils literal"&gt;*.rst&lt;/c
 katalogus, su galūne &lt;code class="docutils literal"&gt;.rst&lt;/code&gt;. Toliau skliausteliuose nurodomi modifikatoriai,
 iš kurių &lt;code class="docutils literal"&gt;.&lt;/code&gt; išskleidžia tik paprastus failus, &lt;code class="docutils literal"&gt;om&lt;/code&gt; rezultatą rūšiuoja
 pagal failo keitimo datą, &lt;code class="docutils literal"&gt;[0,8]&lt;/code&gt; išskleidžia tik pirmus aštuonis failus.&lt;/p&gt;
-&lt;div class="section" id="failo-tipo-modifikatoriai"&gt;
+&lt;section id="failo-tipo-modifikatoriai"&gt;
 &lt;h3&gt;Failo tipo modifikatoriai&lt;/h3&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 16%"&gt;
-&lt;col style="width: 84%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;*(/)&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;tik katalogus&lt;/p&gt;&lt;/td&gt;
@@ -54,17 +50,11 @@ pagal failo keitimo datą, &lt;code class="docutils literal"&gt;[0,8]&lt;/code&g
 &lt;p&gt;Parodyti aktyviame kataloge esančius pakatalogius.&lt;/p&gt;
 &lt;pre class="literal-block"&gt;ls *(*)&lt;/pre&gt;
 &lt;p&gt;Parodyti aktyviame kataloge esančius vykdomuosius failus.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="failu-teisiu-modifikatoriai"&gt;
+&lt;/section&gt;
+&lt;section id="failu-teisiu-modifikatoriai"&gt;
 &lt;h3&gt;Failų teisių modifikatoriai&lt;/h3&gt;
 &lt;p&gt;Pagal failų skaitymo, rašymo ir vykdymo teises:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 22%"&gt;
-&lt;col style="width: 28%"&gt;
-&lt;col style="width: 24%"&gt;
-&lt;col style="width: 26%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;ul class="simple"&gt;
 &lt;li&gt;
@@ -97,10 +87,6 @@ pagal failo keitimo datą, &lt;code class="docutils literal"&gt;[0,8]&lt;/code&g
 teisių aprašą. CHMOD turi būti septintainis skaičius, pavyzdžiui: &lt;em&gt;0755&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Pagal specialiąsias failų teises:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 19%"&gt;
-&lt;col style="width: 81%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;*(s)&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;tik setuid failus (04000)&lt;/p&gt;&lt;/td&gt;
@@ -115,10 +101,6 @@ teisių aprašą. CHMOD turi būti septintainis skaičius, pavyzdžiui: &lt;em&g
 &lt;/table&gt;
 &lt;p&gt;Pagal failų savininkus ir grupes:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 20%"&gt;
-&lt;col style="width: 80%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;*(U)&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;savininkas yra einamasis naudotojas&lt;/p&gt;&lt;/td&gt;
@@ -134,8 +116,8 @@ teisių aprašą. CHMOD turi būti septintainis skaičius, pavyzdžiui: &lt;em&g
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;
-&lt;div class="section" id="failu-atidarymo-ir-keitimo-modifikatoriai"&gt;
+&lt;/section&gt;
+&lt;section id="failu-atidarymo-ir-keitimo-modifikatoriai"&gt;
 &lt;h3&gt;Failų atidarymo ir keitimo modifikatoriai&lt;/h3&gt;
 &lt;p&gt;Gali būti tokie modifikatoriai:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;*(a[Mwhm][-|+]n)
@@ -143,10 +125,6 @@ teisių aprašą. CHMOD turi būti septintainis skaičius, pavyzdžiui: &lt;em&g
 *(c[Mwhm][-|+]n)&lt;/pre&gt;
 &lt;p&gt;Pirmoji raidė reiškia:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 3%"&gt;
-&lt;col style="width: 97%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;a&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;failo atidarymo laikas&lt;/p&gt;&lt;/td&gt;
@@ -161,10 +139,6 @@ teisių aprašą. CHMOD turi būti septintainis skaičius, pavyzdžiui: &lt;em&g
 &lt;/table&gt;
 &lt;p&gt;Antroji raidė reiškia:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 9%"&gt;
-&lt;col style="width: 91%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;M&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;mėnuo&lt;/p&gt;&lt;/td&gt;
@@ -192,17 +166,13 @@ laiko parametrą.&lt;/p&gt;
 &lt;p&gt;Bus išskleisti failai, kurių turinys buvo keistas trijų dienų bėgyje.&lt;/p&gt;
 &lt;pre class="literal-block"&gt;ls *(ch+5)&lt;/pre&gt;
 &lt;p&gt;Bus išskleisti failai, kurių turinys buvo keistas daugiau nei prieš 5 valandas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="naudotu-komandu-pernaudojimas"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="naudotu-komandu-pernaudojimas"&gt;
 &lt;h2&gt;Naudotų komandų pernaudojimas&lt;/h2&gt;
 &lt;p&gt;Pernaudoti anksčiau panaudotas komandas, galima šauktuko (&lt;code class="docutils literal"&gt;!&lt;/code&gt;) simbolio
 pagalba. Pavyzdžiai:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 18%"&gt;
-&lt;col style="width: 82%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;!!&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;prieš tai įvesta komandos eilutė&lt;/p&gt;&lt;/td&gt;
@@ -221,15 +191,11 @@ pagalba. Pavyzdžiai:&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div class="section" id="komandu-argumentu-pernaudojimas"&gt;
+&lt;section id="komandu-argumentu-pernaudojimas"&gt;
 &lt;h3&gt;Komandų argumentų pernaudojimas&lt;/h3&gt;
 &lt;p&gt;Galima pernaudoti ne tik visą komandų eilutę, bet tik tam tikrus jos
 argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 18%"&gt;
-&lt;col style="width: 82%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;!^&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;pirmas argumentas&lt;/p&gt;&lt;/td&gt;
@@ -254,16 +220,12 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:&lt;/p&gt
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="keitiniai"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="keitiniai"&gt;
 &lt;h2&gt;Keitiniai&lt;/h2&gt;
 &lt;p&gt;Kelio keitiniai:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 16%"&gt;
-&lt;col style="width: 84%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;:h&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;pašalina vieną kelio elementą, nuo kelio pabaigos&lt;/p&gt;&lt;/td&gt;
@@ -287,10 +249,6 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:&lt;/p&gt
 &lt;/table&gt;
 &lt;p&gt;Raidžių keitimas didžiosiomis/mažosiomis:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 16%"&gt;
-&lt;col style="width: 84%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;:l&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;keičia raides mažosiomis&lt;/p&gt;&lt;/td&gt;
@@ -302,10 +260,6 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:&lt;/p&gt
 &lt;/table&gt;
 &lt;p&gt;Kabučių valdymas:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 16%"&gt;
-&lt;col style="width: 84%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;:q&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;uždeda kabutes, kad keitinį būtų galima naudoti kitiems keitiniams&lt;/p&gt;&lt;/td&gt;
@@ -320,10 +274,6 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:&lt;/p&gt
 &lt;/table&gt;
 &lt;p&gt;Žodžių paieška ir keitimas:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 16%"&gt;
-&lt;col style="width: 84%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;:s&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;randa ir keičia žodžius, pvz.: &lt;code class="docutils literal"&gt;:s/abc/xyz/&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
@@ -338,47 +288,43 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:&lt;/p&gt
 &lt;/table&gt;
 &lt;p&gt;Kita:&lt;/p&gt;
 &lt;table&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 16%"&gt;
-&lt;col style="width: 84%"&gt;
-&lt;/colgroup&gt;
 &lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;code class="docutils literal"&gt;:p&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;išveda keitinį, jo nevykdydamas&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>shell</category><category>zsh</category><guid>https://sirex.lt/posts/2011/zsh-tips/</guid><pubDate>Wed, 05 Oct 2011 21:00:00 GMT</pubDate></item><item><title>Radio stočių surinkimas į audacious</title><link>https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Internete galima rasti daug nuorodų į internetines radio stotis. Štai vienas iš
+&lt;/section&gt;</description><category>shell</category><category>zsh</category><guid>https://sirex.lt/posts/2011/zsh-tips/</guid><pubDate>Wed, 05 Oct 2011 21:00:00 GMT</pubDate></item><item><title>Radio stočių surinkimas į audacious</title><link>https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Internete galima rasti daug nuorodų į internetines radio stotis. Štai vienas iš
 pavyzdžių:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://rock-radio.50webs.com/"&gt;http://rock-radio.50webs.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ten pateikta gan nemažai nuorodų į internetines radio stotis. Šiuo metu kai
 rašau, yra 42 nuorodos. Peržiūrėti ir paklausyti visas šias radio stotis yra
 gan sudėtinga, jei kiekvieną nuorodą reikėtų įkelti į grojaraštį rankiniu būdu.&lt;/p&gt;
 &lt;p&gt;Štai būdas, kaip visas nuorodas galima surinkti ir įkelti į audacious:&lt;/p&gt;
-&lt;pre class="code sh"&gt;&lt;a name="rest_code_66f6ec191c704bd7ae0b2a4466fe4ad7-1"&gt;&lt;/a&gt;wget http://rock-radio.50webs.com/ -O- &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_66f6ec191c704bd7ae0b2a4466fe4ad7-2"&gt;&lt;/a&gt;    egrep -o &lt;span class="s1"&gt;'http://[^"]+'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_66f6ec191c704bd7ae0b2a4466fe4ad7-3"&gt;&lt;/a&gt;    egrep &lt;span class="s1"&gt;'(pls|m3u)$'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_66f6ec191c704bd7ae0b2a4466fe4ad7-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; url &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_66f6ec191c704bd7ae0b2a4466fe4ad7-5"&gt;&lt;/a&gt;        audacious2 -e &lt;span class="nv"&gt;$url&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_66f6ec191c704bd7ae0b2a4466fe4ad7-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;pre class="code sh"&gt;&lt;a id="rest_code_20a7d9853de14151a6043e964a324bca-1" name="rest_code_20a7d9853de14151a6043e964a324bca-1" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_20a7d9853de14151a6043e964a324bca-1"&gt;&lt;/a&gt;wget http://rock-radio.50webs.com/ -O- &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_20a7d9853de14151a6043e964a324bca-2" name="rest_code_20a7d9853de14151a6043e964a324bca-2" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_20a7d9853de14151a6043e964a324bca-2"&gt;&lt;/a&gt;    egrep -o &lt;span class="s1"&gt;'http://[^"]+'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_20a7d9853de14151a6043e964a324bca-3" name="rest_code_20a7d9853de14151a6043e964a324bca-3" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_20a7d9853de14151a6043e964a324bca-3"&gt;&lt;/a&gt;    egrep &lt;span class="s1"&gt;'(pls|m3u)$'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_20a7d9853de14151a6043e964a324bca-4" name="rest_code_20a7d9853de14151a6043e964a324bca-4" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_20a7d9853de14151a6043e964a324bca-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; url &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_20a7d9853de14151a6043e964a324bca-5" name="rest_code_20a7d9853de14151a6043e964a324bca-5" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_20a7d9853de14151a6043e964a324bca-5"&gt;&lt;/a&gt;        audacious2 -e &lt;span class="nv"&gt;$url&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_20a7d9853de14151a6043e964a324bca-6" name="rest_code_20a7d9853de14151a6043e964a324bca-6" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_20a7d9853de14151a6043e964a324bca-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Įvykdžius šią komandą, visos nuorodos į radio stotis, pateiktos toje svetainėje
 atsidurs audacious grojaraštyje, vienu sartu.&lt;/p&gt;
 &lt;p&gt;Tą patį galima padaryti ir su &lt;a class="reference external" href="http://www.klausyk.lt/lt/visos_radijo_stotys/"&gt;lietuviškomis radio stotimis&lt;/a&gt;:&lt;/p&gt;
-&lt;pre class="code sh"&gt;&lt;a name="rest_code_b624c7bcd106498a9545420f45eb1bee-1"&gt;&lt;/a&gt;wget http://www.klausyk.lt/lt/visos_radijo_stotys/ -O- &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_b624c7bcd106498a9545420f45eb1bee-2"&gt;&lt;/a&gt;    egrep -o &lt;span class="s1"&gt;'http://[^"]+'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_b624c7bcd106498a9545420f45eb1bee-3"&gt;&lt;/a&gt;    egrep &lt;span class="s1"&gt;'(pls|m3u)$'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_b624c7bcd106498a9545420f45eb1bee-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; url &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_b624c7bcd106498a9545420f45eb1bee-5"&gt;&lt;/a&gt;        audacious2 -e &lt;span class="nv"&gt;$url&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_b624c7bcd106498a9545420f45eb1bee-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;pre class="code sh"&gt;&lt;a id="rest_code_39bfff81fedd46718c2fbc048feead3f-1" name="rest_code_39bfff81fedd46718c2fbc048feead3f-1" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_39bfff81fedd46718c2fbc048feead3f-1"&gt;&lt;/a&gt;wget http://www.klausyk.lt/lt/visos_radijo_stotys/ -O- &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_39bfff81fedd46718c2fbc048feead3f-2" name="rest_code_39bfff81fedd46718c2fbc048feead3f-2" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_39bfff81fedd46718c2fbc048feead3f-2"&gt;&lt;/a&gt;    egrep -o &lt;span class="s1"&gt;'http://[^"]+'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_39bfff81fedd46718c2fbc048feead3f-3" name="rest_code_39bfff81fedd46718c2fbc048feead3f-3" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_39bfff81fedd46718c2fbc048feead3f-3"&gt;&lt;/a&gt;    egrep &lt;span class="s1"&gt;'(pls|m3u)$'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_39bfff81fedd46718c2fbc048feead3f-4" name="rest_code_39bfff81fedd46718c2fbc048feead3f-4" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_39bfff81fedd46718c2fbc048feead3f-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; url &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_39bfff81fedd46718c2fbc048feead3f-5" name="rest_code_39bfff81fedd46718c2fbc048feead3f-5" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_39bfff81fedd46718c2fbc048feead3f-5"&gt;&lt;/a&gt;        audacious2 -e &lt;span class="nv"&gt;$url&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_39bfff81fedd46718c2fbc048feead3f-6" name="rest_code_39bfff81fedd46718c2fbc048feead3f-6" href="https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/#rest_code_39bfff81fedd46718c2fbc048feead3f-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Gero klausymosi.&lt;/p&gt;
-&lt;div class="admonition note"&gt;
+&lt;aside class="admonition note"&gt;
 &lt;p class="admonition-title"&gt;Note&lt;/p&gt;
 &lt;p&gt;Pateikta informacija tinka visoms unix-like operacinėms sistemoms.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>audacious</category><category>floss</category><category>shell</category><guid>https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/</guid><pubDate>Wed, 20 Jul 2011 21:00:00 GMT</pubDate></item><item><title>Naudok priemonę labiausiai tinkančią užduočiai spręsti</title><link>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Kadangi esu programuotojas, mėgstu įvairias užduotis automatizuoti.  Kartais
+&lt;/aside&gt;</description><category>audacious</category><category>floss</category><category>shell</category><guid>https://sirex.lt/posts/2011/radio-stociu-surinkimas-i-audacious/</guid><pubDate>Wed, 20 Jul 2011 21:00:00 GMT</pubDate></item><item><title>Naudok priemonę labiausiai tinkančią užduočiai spręsti</title><link>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Kadangi esu programuotojas, mėgstu įvairias užduotis automatizuoti.  Kartais
 automatizavimas sutaupo labai daug laiko, kartais galima sugaišti labai daug
 laiko automatizuojant, bet šį kartą ne apie tai...&lt;/p&gt;
 &lt;p&gt;Trumpai apžvelgsiu priemones, kurias naudoju užduočių automatizavimui.&lt;/p&gt;
-&lt;div class="section" id="makefile"&gt;
+&lt;section id="makefile"&gt;
 &lt;h2&gt;Makefile&lt;/h2&gt;
 &lt;p&gt;Labai naudinga priemonė ypač programuotojams, tačiau aš tai naudoju ne tik
 programavime. Pavyzdžiui esu pasidaręs Neo Freerunner sinchronizavimą su
@@ -387,8 +333,8 @@ kam jis skirtas, bet jei matau, kad kataloge yra Makefile, tai nesigilindamas
 rašau make ir darbas atliktas.&lt;/p&gt;
 &lt;p&gt;Tikriausiai 90% visų atviro kodo paketų naudoja Makefile, todėl įrankis tikrai
 laiko ir naudotojų gausos išbandytas ir atidirbtas. Gėris.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="shell-skriptai"&gt;
+&lt;/section&gt;
+&lt;section id="shell-skriptai"&gt;
 &lt;h2&gt;Shell skriptai&lt;/h2&gt;
 &lt;p&gt;Jei kažką sunkiai sekasi aprašyti Makefile'uose, į pagalbą galima
 pasitelkti shell skriptus. Jei dar nežinote, tai nustebsite kiek daug
@@ -398,9 +344,9 @@ visa gausybė shell skriptų visiems gyvenimo atvejams. Šiuo metu ten yra:&lt;/
 65&lt;/pre&gt;
 &lt;p&gt;65 skriptai.&lt;/p&gt;
 &lt;p&gt;Štai paprastas shell skripto pavyzdys, kuris gali praversti kas dieną:&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_996130df6b2d4529b1a5f3eec1b0fe05-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-&lt;a name="rest_code_996130df6b2d4529b1a5f3eec1b0fe05-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;URL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'http://translate.google.lt/translate_t?q='&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s1"&gt;'#auto|lt'&lt;/span&gt;
-&lt;a name="rest_code_996130df6b2d4529b1a5f3eec1b0fe05-3"&gt;&lt;/a&gt;w3m -dump &lt;span class="nv"&gt;$URL&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt; egrep &lt;span class="s1"&gt;'^Žodynas'&lt;/span&gt; -A10
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_2637d8f777524ef487f387cdeebc39ec-1" name="rest_code_2637d8f777524ef487f387cdeebc39ec-1" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_2637d8f777524ef487f387cdeebc39ec-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;a id="rest_code_2637d8f777524ef487f387cdeebc39ec-2" name="rest_code_2637d8f777524ef487f387cdeebc39ec-2" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_2637d8f777524ef487f387cdeebc39ec-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;URL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'http://translate.google.lt/translate_t?q='&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s1"&gt;'#auto|lt'&lt;/span&gt;
+&lt;a id="rest_code_2637d8f777524ef487f387cdeebc39ec-3" name="rest_code_2637d8f777524ef487f387cdeebc39ec-3" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_2637d8f777524ef487f387cdeebc39ec-3"&gt;&lt;/a&gt;w3m -dump &lt;span class="nv"&gt;$URL&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt; egrep &lt;span class="s1"&gt;'^Žodynas'&lt;/span&gt; -A10
 &lt;/pre&gt;&lt;p&gt;Rezultatas gaunasi toks:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;test.sh shell
 Žodynas
@@ -414,8 +360,8 @@ daiktavardis
 5. įdėklas
 6. šarvas veiksmažodis
 7. sluoksnis&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="sed-awk-ir-draugai"&gt;
+&lt;/section&gt;
+&lt;section id="sed-awk-ir-draugai"&gt;
 &lt;h2&gt;sed, awk ir draugai&lt;/h2&gt;
 &lt;p&gt;Rašant shell skriptus šių komandų gan dažnai prireikia, norint apdoroti
 kažkokią tekstinę informaciją. Čia daug ką kalbėti ir nebūtina, tiesiog
@@ -428,8 +374,8 @@ $ time sed -i 's/site1_prefix_/site2_prefix_/g' data.sql
 35,27s user 51,79s system 59% cpu 2:26,58 total&lt;/pre&gt;
 &lt;p&gt;Visas failas pakeistas per 2,5 minutes! Įdomu per kiek laiko šį failą atidarytų
 jūsų teksto redaktorius? :D&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="perl"&gt;
+&lt;/section&gt;
+&lt;section id="perl"&gt;
 &lt;h2&gt;perl&lt;/h2&gt;
 &lt;p&gt;Visi aukščiau išvardinti įrankiai yra puikūs, tačiau kai reikia atlikti šį tą
 sudėtingesnio, visada verta prisiminti perl.&lt;/p&gt;
@@ -441,16 +387,16 @@ awk, ne gana to, perl dirba labai greitai:&lt;/p&gt;
 turėti kiek daugiau žinių, nei su sed.&lt;/p&gt;
 &lt;p&gt;Perl gali puikiausiai apdoroti tekstinius duomenis, o rezultatą įrašyti į
 duomenų bazę ar panašiai, kaip tai padaryta šiame pavyzdyje:&lt;/p&gt;
-&lt;pre class="code perl"&gt;&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/usr/bin/perl -nl&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nn"&gt;DBI&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;our&lt;/span&gt; &lt;span class="nv"&gt;$dbh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nn"&gt;DBI&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"dbi:SQLite:dbname=/tmp/lines.db"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;our&lt;/span&gt; &lt;span class="nv"&gt;$sth&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$dbh&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;prepare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"INSERT INTO lines VALUES (?)"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-8"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-9"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$sth&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$_&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>perl</category><category>shell</category><guid>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</guid><pubDate>Thu, 17 Jun 2010 05:40:00 GMT</pubDate></item><item><title>Muzika iš komandinės eilutės</title><link>https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Mėgstu klausytis muzikos ir patinka, kai muzika tiesiog groja. Ilgą laiką
+&lt;pre class="code perl"&gt;&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/usr/bin/perl -nl&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nn"&gt;DBI&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;our&lt;/span&gt; &lt;span class="nv"&gt;$dbh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nn"&gt;DBI&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"dbi:SQLite:dbname=/tmp/lines.db"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;our&lt;/span&gt; &lt;span class="nv"&gt;$sth&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$dbh&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;prepare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"INSERT INTO lines VALUES (?)"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8"&gt;&lt;/a&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$sth&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$_&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/section&gt;</description><category>floss</category><category>perl</category><category>shell</category><guid>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</guid><pubDate>Thu, 17 Jun 2010 05:40:00 GMT</pubDate></item><item><title>Muzika iš komandinės eilutės</title><link>https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Mėgstu klausytis muzikos ir patinka, kai muzika tiesiog groja. Ilgą laiką
 naudojuosi MPD muzikos demonu, kuris nuolat sukasi kompiuteryje ir klauso kas
 jam liepiama daryti.&lt;/p&gt;
 &lt;p&gt;MPD yra geras tuo, kad jį galima paleisti kompiuteriu kraunantis nebijant, kad
@@ -467,55 +413,55 @@ CMUS, kuris yra paprastas, greitas ir turi panašumu su teksto redaktorių VIM.&
 pagalba paspaudus „Play“ patikrinama ar yra paleistas CMUS ir jei jis veikia,
 tuomet paleidžiama groti daina per CMUS, o jei jis išjungtas, tuomet naudojamas
 nuolat budintis MPD. Skriptas atrodo taip:&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; in
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-4"&gt;&lt;/a&gt;    toggle&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-5"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-6"&gt;&lt;/a&gt;            cmus-remote --pause
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-7"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-8"&gt;&lt;/a&gt;            mpc toggle
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-9"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-10"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-11"&gt;&lt;/a&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-12"&gt;&lt;/a&gt;    stop&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-13"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-14"&gt;&lt;/a&gt;            cmus-remote --stop
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-15"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-16"&gt;&lt;/a&gt;            mpc stop
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-17"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-18"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-19"&gt;&lt;/a&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-20"&gt;&lt;/a&gt;    next&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-21"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-22"&gt;&lt;/a&gt;            cmus-remote --next
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-23"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-24"&gt;&lt;/a&gt;            mpc next
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-25"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-26"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-27"&gt;&lt;/a&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-28"&gt;&lt;/a&gt;    prev&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-29"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-30"&gt;&lt;/a&gt;            cmus-remote --prev
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-31"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-32"&gt;&lt;/a&gt;            mpc prev
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-33"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-34"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-35"&gt;&lt;/a&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-36"&gt;&lt;/a&gt;    *&lt;span class="o"&gt;)&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-37"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"usage: &lt;/span&gt;&lt;span class="nv"&gt;$0&lt;/span&gt;&lt;span class="s2"&gt; {toggle|stop|next|prev}"&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-38"&gt;&lt;/a&gt;&lt;span class="k"&gt;esac&lt;/span&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-39"&gt;&lt;/a&gt;
-&lt;a name="rest_code_18728146643e46d6af0a051a4e2f383a-40"&gt;&lt;/a&gt;&lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
-&lt;/pre&gt;&lt;div class="section" id="cmus"&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-1" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-1" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-2" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-2" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-3" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-3" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-4" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-4" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-4"&gt;&lt;/a&gt;    toggle&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-5" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-5" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-5"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-6" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-6" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-6"&gt;&lt;/a&gt;            cmus-remote --pause
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-7" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-7" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-7"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-8" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-8" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-8"&gt;&lt;/a&gt;            mpc toggle
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-9" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-9" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-9"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-10" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-10" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-10"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-11" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-11" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-11"&gt;&lt;/a&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-12" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-12" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-12"&gt;&lt;/a&gt;    stop&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-13" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-13" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-13"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-14" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-14" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-14"&gt;&lt;/a&gt;            cmus-remote --stop
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-15" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-15" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-15"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-16" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-16" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-16"&gt;&lt;/a&gt;            mpc stop
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-17" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-17" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-17"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-18" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-18" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-18"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-19" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-19" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-19"&gt;&lt;/a&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-20" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-20" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-20"&gt;&lt;/a&gt;    next&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-21" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-21" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-21"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-22" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-22" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-22"&gt;&lt;/a&gt;            cmus-remote --next
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-23" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-23" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-23"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-24" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-24" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-24"&gt;&lt;/a&gt;            mpc next
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-25" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-25" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-25"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-26" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-26" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-26"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-27" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-27" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-27"&gt;&lt;/a&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-28" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-28" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-28"&gt;&lt;/a&gt;    prev&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-29" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-29" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-29"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -S ~/.cmus/socket &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-30" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-30" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-30"&gt;&lt;/a&gt;            cmus-remote --prev
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-31" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-31" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-31"&gt;&lt;/a&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-32" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-32" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-32"&gt;&lt;/a&gt;            mpc prev
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-33" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-33" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-33"&gt;&lt;/a&gt;        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-34" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-34" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-34"&gt;&lt;/a&gt;        &lt;span class="p"&gt;;;&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-35" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-35" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-35"&gt;&lt;/a&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-36" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-36" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-36"&gt;&lt;/a&gt;    *&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-37" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-37" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-37"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"usage: &lt;/span&gt;&lt;span class="nv"&gt;$0&lt;/span&gt;&lt;span class="s2"&gt; {toggle|stop|next|prev}"&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-38" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-38" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-38"&gt;&lt;/a&gt;&lt;span class="k"&gt;esac&lt;/span&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-39" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-39" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-39"&gt;&lt;/a&gt;
+&lt;a id="rest_code_5a04db80b59443f685a4e756ac3e87a2-40" name="rest_code_5a04db80b59443f685a4e756ac3e87a2-40" href="https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/#rest_code_5a04db80b59443f685a4e756ac3e87a2-40"&gt;&lt;/a&gt;&lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;section id="cmus"&gt;
 &lt;h2&gt;CMUS&lt;/h2&gt;
 &lt;p&gt;Kadangi CMUS yra labai paprastas, tai užtenka jį įdiegti, paleisti iš
 komandinės eilutės:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;cmus&lt;/pre&gt;
 &lt;p&gt;ir įkelti norima katalogą ar failą grojimui:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;:add ~/music&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="mpd"&gt;
+&lt;/section&gt;
+&lt;section id="mpd"&gt;
 &lt;h2&gt;MPD&lt;/h2&gt;
 &lt;p&gt;MPD yra sudėtingesnis, nes veikia, kaip serveris. Pirmiausia, prieš pradedant
 jį naudot, reikia aprašyti konfigūracinį failą &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.mpdconf&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
@@ -537,8 +483,8 @@ mpc play&lt;/pre&gt;
 pasiruošęs skleisti muzikos garsus.&lt;/p&gt;
 &lt;p&gt;Norėdami kontroliuoti MPD, galite naudoti komandinės eilutės klientą mpc arba
 ncurses klientą &lt;em&gt;ncmpcpp&lt;/em&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="media-klavisai"&gt;
+&lt;/section&gt;
+&lt;section id="media-klavisai"&gt;
 &lt;h2&gt;Media klavišai&lt;/h2&gt;
 &lt;p&gt;Paskutinis dalykas – media klavišų susiejimas, su aukščiau pateiktu &lt;em&gt;music.sh&lt;/em&gt;
 skritpu. Tai padarysite, nurodydami tokias komandas, atitinkamiems klavišams:&lt;/p&gt;
@@ -546,8 +492,8 @@ skritpu. Tai padarysite, nurodydami tokias komandas, atitinkamiems klavišams:&l
 /home/naudotojovardas/bin/music.sh stop
 /home/naudotojovardas/bin/music.sh next
 /home/naudotojovardas/bin/music.sh prev&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="audio-scrobbler"&gt;
+&lt;/section&gt;
+&lt;section id="audio-scrobbler"&gt;
 &lt;h2&gt;Audio scrobbler&lt;/h2&gt;
 &lt;p&gt;Ar jums įdomu ką klausote? Man, taip, todėl naudojuosi audio scrobbling
 technologija klausomos muzikos statistikai vestis. Visą informaciją apie
@@ -558,16 +504,16 @@ last.fm profilis:&lt;/p&gt;
 &lt;p&gt;MPD demonui naudoju &lt;a class="reference external" href="http://mpd.wikia.com/wiki/Client:Mpdscribble"&gt;mpdscribble&lt;/a&gt;. CMUS – &lt;a class="reference external" href="http://github.com/freshprince/cmuscrobbler"&gt;cmuscrobbler&lt;/a&gt;.  Turint taip
 sukonfigūruotą sistemą, galima pamiršti apie muzikos programas ir tiesiog
 dirbant savo darbus klausytis muzikos!&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>shell</category><guid>https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/</guid><pubDate>Mon, 05 Apr 2010 19:43:00 GMT</pubDate></item><item><title>SSH pamokėlės</title><link>https://sirex.lt/posts/2010/ssh-pamokeles/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;div class="section" id="kas-yra-ssh"&gt;
+&lt;/section&gt;</description><category>floss</category><category>shell</category><guid>https://sirex.lt/posts/2010/muzika-is-komandines-eilutes/</guid><pubDate>Mon, 05 Apr 2010 19:43:00 GMT</pubDate></item><item><title>SSH pamokėlės</title><link>https://sirex.lt/posts/2010/ssh-pamokeles/</link><dc:creator>Sirex</dc:creator><description>&lt;section id="kas-yra-ssh"&gt;
 &lt;h2&gt;Kas yra SSH?&lt;/h2&gt;
 &lt;p&gt;SSH yra Secure SHell.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kas-yra-shell"&gt;
+&lt;/section&gt;
+&lt;section id="kas-yra-shell"&gt;
 &lt;h2&gt;Kas yra Shell?&lt;/h2&gt;
 &lt;p&gt;Shell yra programa suteikianti naudotojui tam tikrą sąsają. Linux pasaulyje,
 Shell vadinama programa, kurios sąsajos dėka galite valdyti kompiuterį.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kuo-skiriasi-shell-nuo-ssh"&gt;
+&lt;/section&gt;
+&lt;section id="kuo-skiriasi-shell-nuo-ssh"&gt;
 &lt;h2&gt;Kuo skiriasi Shell nuo SSH?&lt;/h2&gt;
 &lt;p&gt;Paprasta Shell programa suteikia galimybę valdyti kompiuterį, kuriame ji
 paleista, tuo tarpu SSH, suteikia galimybę valdyti kitą tinklo kompiuterį,
@@ -578,8 +524,8 @@ nuotoliniu būdu.&lt;/p&gt;
 &lt;pre class="literal-block"&gt;ssh kitas-kompiuteris bash&lt;/pre&gt;
 &lt;p&gt;Kaip matote, viskas, ką daro SSH, tai suteikia saugią prieigą prie nutolusio
 kompiuterio Shell programos.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kas-yra-ssh-raktas"&gt;
+&lt;/section&gt;
+&lt;section id="kas-yra-ssh-raktas"&gt;
 &lt;h2&gt;Kas yra SSH raktas?&lt;/h2&gt;
 &lt;p&gt;SSH suteikia saugią prieigą prie kito kompiuterio, todėl jungiantis visą laiką
 prašomas kito kompiuterio naudotojo prieigos slaptažodis. SSH raktų dėka,
@@ -590,34 +536,34 @@ scp ~/.ssh/id_rsa.pub kitas-kompiuteris:.ssh/authorized_keys&lt;/pre&gt;
 veikiantį taip vadinamą, raktų agentą. Ubuntu sistemoje raktų agentas veikia,
 todėl jungiantis prie kito kompiuterio, jūsų tik vieną kartą paklaus
 slaptažodžio nuo raktinės.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kas-yra-ssh-keygen"&gt;
+&lt;/section&gt;
+&lt;section id="kas-yra-ssh-keygen"&gt;
 &lt;h2&gt;Kas yra ssh-keygen?&lt;/h2&gt;
 &lt;p&gt;ssh-keygen yra programa, kuri sukuria viešąjį (&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.ssh/id_rsa.pub&lt;/span&gt;&lt;/code&gt;) ir
 privatųjį (&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;~/.ssh/id_rsa&lt;/span&gt;&lt;/code&gt;) SSH raktus. Raktai išsaugomi failuose, kuriuos
 nurodžiau skliausteliuose.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kas-yra-ssh-authorized-keys"&gt;
+&lt;/section&gt;
+&lt;section id="kas-yra-ssh-authorized-keys"&gt;
 &lt;h2&gt;Kas yra ~/.ssh/authorized_keys&lt;/h2&gt;
 &lt;p&gt;Tai yra paprasčiausias tekstinis failas, kuriame gali būti surašyti viešieji
 naudotojų raktai, kurie gali prisijungti naudodamiesi savo privažiuoju raktu.&lt;/p&gt;
 &lt;p&gt;Faile, vienas viešasis raktas saugomas vienoje eilutėje.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kas-yra-scp"&gt;
+&lt;/section&gt;
+&lt;section id="kas-yra-scp"&gt;
 &lt;h2&gt;Kas yra scp?&lt;/h2&gt;
 &lt;p&gt;&lt;code class="docutils literal"&gt;scp&lt;/code&gt; yra Secure CoPy. Veikiai labai panašiai, kaip komanda cp, tik kopijuoja
 iš vieno kompiuterio, į kitą:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;cp failas-a.txt failas-b.txt
 scp failas-a.txt kitas-kompiuteris:failas-b.txt&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kas-yra-sftp"&gt;
+&lt;/section&gt;
+&lt;section id="kas-yra-sftp"&gt;
 &lt;h2&gt;Kas yra sftp?&lt;/h2&gt;
 &lt;p&gt;&lt;code class="docutils literal"&gt;sftp&lt;/code&gt; yra SSH File Transfer Protocol, veikia panašiai, kaip FTP, tik naudoja
 tą patį SSH. Štai paprastas būdas prisijungti prie kito kompiuterio, per
 &lt;code class="docutils literal"&gt;sftp&lt;/code&gt;, naudojantis failų naršymo programa nautilus:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;nautilus sftp://kitas-kompiuteris&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ar-galiu-apjungti-shell-ir-ssh-komandas"&gt;
+&lt;/section&gt;
+&lt;section id="ar-galiu-apjungti-shell-ir-ssh-komandas"&gt;
 &lt;h2&gt;Ar galiu apjungti Shell ir SSH komandas?&lt;/h2&gt;
 &lt;p&gt;Taip. Tarkime norite iš kitas-kompiuteris eksportuoti MySQL duomenų bazę ir
 importuoti ją į savo kompiuterio MySQL duomenų bazę:&lt;/p&gt;
@@ -632,7 +578,7 @@ pagreitinti duomenų perdavimą, galima perduodamus duomenis suspausti:&lt;/p&gt
 &lt;pre class="literal-block"&gt;ssh kitas-kompiuteris 'mysqldump tavodb | gzip -c' | gunzip -c | mysql manodb&lt;/pre&gt;
 &lt;p&gt;Tai tiek. Tikiuosi „pagavote kampą“ kas yra SSH, ir kaip paprastai galima juo
 naudotis sutaupant daug laiko.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>shell</category><category>ssh</category><guid>https://sirex.lt/posts/2010/ssh-pamokeles/</guid><pubDate>Thu, 04 Feb 2010 17:41:00 GMT</pubDate></item><item><title>Kaip atsinaujinti Drupal modulius greitai?</title><link>https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Kaip žinia, mano blogas sukasi ant Drupal. Naudoju 25 papildomus modulius.
+&lt;/section&gt;</description><category>floss</category><category>shell</category><category>ssh</category><guid>https://sirex.lt/posts/2010/ssh-pamokeles/</guid><pubDate>Thu, 04 Feb 2010 17:41:00 GMT</pubDate></item><item><title>Kaip atsinaujinti Drupal modulius greitai?</title><link>https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Kaip žinia, mano blogas sukasi ant Drupal. Naudoju 25 papildomus modulius.
 Anksčiau ar vėliau atsiranda naujesnės tų modulių versijos.  Kadangi aš retai
 atsinaujinu, tai kai prisiruošiu patikrinti, praktiškai visi moduliai
 reikalauja atnaujinimo...&lt;/p&gt;
@@ -640,20 +586,20 @@ reikalauja atnaujinimo...&lt;/p&gt;
 keltį per FTP. Tačiau vikrus Linux naudotojas, toks kaip aš, darytų taip:&lt;/p&gt;
 &lt;p&gt;Iš atnaujinimų puslapio &lt;code class="docutils literal"&gt;/admin/reports/updates&lt;/code&gt; išsaugome turinį į
 &lt;code class="docutils literal"&gt;/tmp/updates.html&lt;/code&gt; ir įvedame kelias komandas:&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_2d6e5f179fc044ec9eb0e85d19535dae-1"&gt;&lt;/a&gt;mkdir /tmp/updates &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; /tmp/updates
-&lt;a name="rest_code_2d6e5f179fc044ec9eb0e85d19535dae-2"&gt;&lt;/a&gt;egrep -o &lt;span class="s1"&gt;'http.*?\.tar\.gz'&lt;/span&gt; /tmp/updates.html &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_2d6e5f179fc044ec9eb0e85d19535dae-3"&gt;&lt;/a&gt;  grep -v &lt;span class="s1"&gt;'dev\.tar\.gz'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_2d6e5f179fc044ec9eb0e85d19535dae-4"&gt;&lt;/a&gt;  &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; f &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_2d6e5f179fc044ec9eb0e85d19535dae-5"&gt;&lt;/a&gt;      wget &lt;span class="nv"&gt;$f&lt;/span&gt; -O- &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_2d6e5f179fc044ec9eb0e85d19535dae-6"&gt;&lt;/a&gt;      tar -xzf - &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_2d6e5f179fc044ec9eb0e85d19535dae-7"&gt;&lt;/a&gt;  &lt;span class="k"&gt;done&lt;/span&gt;
-&lt;a name="rest_code_2d6e5f179fc044ec9eb0e85d19535dae-8"&gt;&lt;/a&gt;lftp manosvetaine
-&lt;a name="rest_code_2d6e5f179fc044ec9eb0e85d19535dae-9"&gt;&lt;/a&gt;lftp me@manosvetaine:/www&amp;gt; &lt;span class="nb"&gt;cd&lt;/span&gt; sites/all/modules
-&lt;a name="rest_code_2d6e5f179fc044ec9eb0e85d19535dae-10"&gt;&lt;/a&gt;lftp me@manosvetaine:/www/sites/all/modules&amp;gt; mirror -R
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_c58ae92140b74b09bf98c4a841932412-1" name="rest_code_c58ae92140b74b09bf98c4a841932412-1" href="https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/#rest_code_c58ae92140b74b09bf98c4a841932412-1"&gt;&lt;/a&gt;mkdir /tmp/updates &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; /tmp/updates
+&lt;a id="rest_code_c58ae92140b74b09bf98c4a841932412-2" name="rest_code_c58ae92140b74b09bf98c4a841932412-2" href="https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/#rest_code_c58ae92140b74b09bf98c4a841932412-2"&gt;&lt;/a&gt;egrep -o &lt;span class="s1"&gt;'http.*?\.tar\.gz'&lt;/span&gt; /tmp/updates.html &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_c58ae92140b74b09bf98c4a841932412-3" name="rest_code_c58ae92140b74b09bf98c4a841932412-3" href="https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/#rest_code_c58ae92140b74b09bf98c4a841932412-3"&gt;&lt;/a&gt;  grep -v &lt;span class="s1"&gt;'dev\.tar\.gz'&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_c58ae92140b74b09bf98c4a841932412-4" name="rest_code_c58ae92140b74b09bf98c4a841932412-4" href="https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/#rest_code_c58ae92140b74b09bf98c4a841932412-4"&gt;&lt;/a&gt;  &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; f &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_c58ae92140b74b09bf98c4a841932412-5" name="rest_code_c58ae92140b74b09bf98c4a841932412-5" href="https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/#rest_code_c58ae92140b74b09bf98c4a841932412-5"&gt;&lt;/a&gt;      wget &lt;span class="nv"&gt;$f&lt;/span&gt; -O- &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_c58ae92140b74b09bf98c4a841932412-6" name="rest_code_c58ae92140b74b09bf98c4a841932412-6" href="https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/#rest_code_c58ae92140b74b09bf98c4a841932412-6"&gt;&lt;/a&gt;      tar -xzf - &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_c58ae92140b74b09bf98c4a841932412-7" name="rest_code_c58ae92140b74b09bf98c4a841932412-7" href="https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/#rest_code_c58ae92140b74b09bf98c4a841932412-7"&gt;&lt;/a&gt;  &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;a id="rest_code_c58ae92140b74b09bf98c4a841932412-8" name="rest_code_c58ae92140b74b09bf98c4a841932412-8" href="https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/#rest_code_c58ae92140b74b09bf98c4a841932412-8"&gt;&lt;/a&gt;lftp manosvetaine
+&lt;a id="rest_code_c58ae92140b74b09bf98c4a841932412-9" name="rest_code_c58ae92140b74b09bf98c4a841932412-9" href="https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/#rest_code_c58ae92140b74b09bf98c4a841932412-9"&gt;&lt;/a&gt;lftp me@manosvetaine:/www&amp;gt; &lt;span class="nb"&gt;cd&lt;/span&gt; sites/all/modules
+&lt;a id="rest_code_c58ae92140b74b09bf98c4a841932412-10" name="rest_code_c58ae92140b74b09bf98c4a841932412-10" href="https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/#rest_code_c58ae92140b74b09bf98c4a841932412-10"&gt;&lt;/a&gt;lftp me@manosvetaine:/www/sites/all/modules&amp;gt; mirror -R
 &lt;/pre&gt;&lt;p&gt;Aplankome &lt;code class="docutils literal"&gt;/update.php&lt;/code&gt; ir įdiegiame visus atnaujinimus.  Žinoma, prieš
 darant tokius atnaujinimus, būtina pasidaryti atsargines kopijas.&lt;/p&gt;
 &lt;p&gt;Ką tik, kaip tik taip atsinaujinau 18 modulių. Viskas suveikė sėkmingai ir be
-priekaištų.&lt;/p&gt;&lt;/div&gt;</description><category>drupal</category><category>floss</category><category>shell</category><guid>https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/</guid><pubDate>Mon, 19 Oct 2009 21:09:00 GMT</pubDate></item><item><title>Kaip paleisti Web serverį, per 5 sekundes su Python</title><link>https://sirex.lt/posts/2009/kaip-paleisti-web-serveri-per-5-sekundes-su-python/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jei kada nors prireiks greitai paleisti Web serverį ir nenorėsite gaišti laiko
+priekaištų.&lt;/p&gt;</description><category>drupal</category><category>floss</category><category>shell</category><guid>https://sirex.lt/posts/2009/kaip-atsinaujinti-drupal-modulius-greitai/</guid><pubDate>Mon, 19 Oct 2009 21:09:00 GMT</pubDate></item><item><title>Kaip paleisti Web serverį, per 5 sekundes su Python</title><link>https://sirex.lt/posts/2009/kaip-paleisti-web-serveri-per-5-sekundes-su-python/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Jei kada nors prireiks greitai paleisti Web serverį ir nenorėsite gaišti laiko
 konfigūruodami Apache ar panašiai, tuomet Python jums padės!&lt;/p&gt;
 &lt;p&gt;Python savo didžiulėje standartinėje bibliotekoje turi HTTP serverio modulį.
 Panaudoję šį labai paprastą HTTP serverio modulį, labai greitai galite paversti
@@ -670,7 +616,7 @@ adresą:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://localhost:8000/"&gt;localhost:8000&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Plačiau apie tai galite pasiskaityti &lt;a class="reference external" href="http://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python"&gt;linuxjournal.com&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>floss</category><category>python</category><category>shell</category><guid>https://sirex.lt/posts/2009/kaip-paleisti-web-serveri-per-5-sekundes-su-python/</guid><pubDate>Wed, 23 Sep 2009 19:39:00 GMT</pubDate></item><item><title>w3m</title><link>https://sirex.lt/posts/2009/w3m/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Visų pirma noriu visus apšviesti, kad pirmoje vietoje internetą naršau su
+&lt;p&gt;Plačiau apie tai galite pasiskaityti &lt;a class="reference external" href="http://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python"&gt;linuxjournal.com&lt;/a&gt;.&lt;/p&gt;</description><category>floss</category><category>python</category><category>shell</category><guid>https://sirex.lt/posts/2009/kaip-paleisti-web-serveri-per-5-sekundes-su-python/</guid><pubDate>Wed, 23 Sep 2009 19:39:00 GMT</pubDate></item><item><title>w3m</title><link>https://sirex.lt/posts/2009/w3m/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Visų pirma noriu visus apšviesti, kad pirmoje vietoje internetą naršau su
 Firefox, Chromium arba Opera. Tačiau kartais atverti svetainę tekstiniame
 režime yra kur kas patogiau, išvengiant visokių mirguliuojančių spalvų, keistų
 dizainerio ketinimų ir panašiai.&lt;/p&gt;
@@ -681,7 +627,7 @@ variantas, daugeliu atvejų atrodo geriau, aiškiau ir tiksliau.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/w3m.png"&gt;&lt;img alt="/images/w3m.thumbnail.png" src="https://sirex.lt/images/w3m.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Nors w3m naudoju jau gan seniai, tačiau tik visai neseniai nusprendžiau
 nuodugniau patyrinėti šį įrankį ir radau visai įdomių dalykų...&lt;/p&gt;
-&lt;div class="section" id="w3m-valdymas-klaviatura"&gt;
+&lt;section id="w3m-valdymas-klaviatura"&gt;
 &lt;h2&gt;W3M valdymas klaviatūra&lt;/h2&gt;
 &lt;p&gt;Naudoju nestandartinį LEKPa klaviatūros išdėstymą, todėl labai svarbu, kad
 naudojamas įrankis lengvai pasiduotų konfigūruojamas šioje srityje.  Įtariu,
@@ -706,8 +652,8 @@ keymap  E   NEXT_LEFT_UP
 keymap  N   NEXT_RIGHT_DOWN
 keymap  m   BEGIN
 keymap  M   END&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="mailcap-ir-mime-types"&gt;
+&lt;/section&gt;
+&lt;section id="mailcap-ir-mime-types"&gt;
 &lt;h2&gt;mailcap ir mime-types&lt;/h2&gt;
 &lt;p&gt;w3m atpažįsta failo tipą ir sugeba atidaryti failą su tam skirta programa. Jei
 svetainėje nuoroda veda į PDF failą, tai atvėrus tą nuorodą, failas bus
@@ -723,8 +669,8 @@ application/msword; antiword %s; copiousoutput;
 application/octet-stream; antiword %s; copiousoutput;
 application/pdf; muttbgrun xpdf '%s';
 application/pdf; pdftotext %s -; copiousoutput;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="nuorodos"&gt;
+&lt;/section&gt;
+&lt;section id="nuorodos"&gt;
 &lt;h2&gt;Nuorodos&lt;/h2&gt;
 &lt;p&gt;Forumuose dažnai pasitaiko nuorodų, kurios užrašytos kaip paprastas tekstas,
 todėl norint tokias nuorodas atverti, reikia jas pažymėti, nukopijuoti ir tada
@@ -733,8 +679,8 @@ todėl norint tokias nuorodas atverti, reikia jas pažymėti, nukopijuoti ir tad
 nuorodas, užtenka paspausti dvitaškį „:“ ir visos nuorodas pavirsta tikromis,
 aktyviomis nuorodomis, todėl galima tęsti įprastą naršymą, pamirštant apie
 žymėjimą ir kopijavimą į adreso juostą.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="man-w3mman"&gt;
+&lt;/section&gt;
+&lt;section id="man-w3mman"&gt;
 &lt;h2&gt;man → w3mman&lt;/h2&gt;
 &lt;p&gt;Pasirodo, w3m galima naudoti &lt;strong&gt;man&lt;/strong&gt; puslapių naršymui! Iki šiol kankinausi dėl
 LEKPa klaviatūros išdėstymo, nes man įrankio klaviatūros sąsaja nesutapdavo su
@@ -744,8 +690,8 @@ programos svetainę ir panašiai, su w3m galiu tas nuorodas atidaryti vienu
 klavišo paspaudimu...&lt;/p&gt;
 &lt;p&gt;w3mman man taip patiko, kad savo &lt;em&gt;~/.zshrc&lt;/em&gt; faile įrašiau tokią eilutę:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;alias man='w3mman'&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="less-w3m"&gt;
+&lt;/section&gt;
+&lt;section id="less-w3m"&gt;
 &lt;h2&gt;less → w3m&lt;/h2&gt;
 &lt;p&gt;Iš w3m svetainės: „w3m is a text-based web browser as well as a pager like
 `more' or `less'“. Ką gi, pabandžiau, patiko, tuo labiau, kad 'less' turi tų
@@ -757,8 +703,8 @@ greitai, nes atidarymas nuskaito visą failo turinį.&lt;/p&gt;
 &lt;p&gt;Išvada: mažiems failams - w3m, dideliems arba kintančio turinio – less.  Tam
 reikalui, keli įrašai į &lt;em&gt;~/.zshrc&lt;/em&gt;:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;alias less='w3m' alias more='/bin/less -S'&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="newsbeuter-w3m"&gt;
+&lt;/section&gt;
+&lt;section id="newsbeuter-w3m"&gt;
 &lt;h2&gt;newsbeuter + w3m&lt;/h2&gt;
 &lt;p&gt;RSS srautus skaitau tekstiniame režime naudodamas &lt;strong&gt;newsbeuter&lt;/strong&gt;. Kai noriu
 atverti visą straipsnį iš RSS'o, naudoju w3m, kuris yra susietas su
@@ -766,23 +712,23 @@ atverti visą straipsnį iš RSS'o, naudoju w3m, kuris yra susietas su
 jei tekste yra paveiksliukas, tai jį nesunkiai galima atverti paveiksliukų
 peržiūros programoje, gebančioje paveiksliuką padidinti, sumažinti, pasukti ir
 pan.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="mutt-w3m"&gt;
+&lt;/section&gt;
+&lt;section id="mutt-w3m"&gt;
 &lt;h2&gt;mutt + w3m&lt;/h2&gt;
 &lt;p&gt;w3m puikiausiai atlieka html konvertavimą į paprastą tekstą. Dažnai laiškus
 gaunu tik html formatu, todėl w3m pagalba, mutt programoje html laiškus,
 skaitau, kaip paprastus tekstinius laiškus.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>shell</category><category>w3m</category><guid>https://sirex.lt/posts/2009/w3m/</guid><pubDate>Mon, 31 Aug 2009 06:31:00 GMT</pubDate></item><item><title>GPG</title><link>https://sirex.lt/posts/2009/gpg/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jau senai planavau susikurti GPG raktą ir susikonfigūruoti savo pašto klientą, kad šis automatiškai uždėtu GPG parašą ant mano siunčiamų laiškų. Šiandien pagaliau nusprendžiau tai padaryti. Pamaniau gal būt dar kam nors bus įdomu sužinoti kaip tai daroma.&lt;/p&gt;
-&lt;div class="section" id="kam-reikalingas-elektroninis-parasas"&gt;
+&lt;/section&gt;</description><category>floss</category><category>shell</category><category>w3m</category><guid>https://sirex.lt/posts/2009/w3m/</guid><pubDate>Mon, 31 Aug 2009 06:31:00 GMT</pubDate></item><item><title>GPG</title><link>https://sirex.lt/posts/2009/gpg/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Jau senai planavau susikurti GPG raktą ir susikonfigūruoti savo pašto klientą, kad šis automatiškai uždėtu GPG parašą ant mano siunčiamų laiškų. Šiandien pagaliau nusprendžiau tai padaryti. Pamaniau gal būt dar kam nors bus įdomu sužinoti kaip tai daroma.&lt;/p&gt;
+&lt;section id="kam-reikalingas-elektroninis-parasas"&gt;
 &lt;h2&gt;Kam reikalingas elektroninis parašas?&lt;/h2&gt;
 &lt;p&gt;Elektroninis parašas užtikrina, kad pasirašytasis tekstas po pasirašymo nebuvo pakeistas ir išliko lygiai toks pats, koks buvo prieš pasirašant.  Taip pat yra galimybė patikrinti ar parašo savininkas tikrai pasirašė naudodamasis savo parašu.&lt;/p&gt;
 &lt;p&gt;Trumpai tariant parašo dėka galima identifikuoti parašo savininką ir įsitikinti, kad pasirašytieji duomenys nebuvo pakeisi trečiųjų šalių.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="elektroninio-paraso-veikimo-principas"&gt;
+&lt;/section&gt;
+&lt;section id="elektroninio-paraso-veikimo-principas"&gt;
 &lt;h2&gt;Elektroninio parašo veikimo principas&lt;/h2&gt;
 &lt;p&gt;El. paraše esminis dalykas yra privatusis ir viešasis raktai. Privatųjį rakta žino tik to rakto savininkas, o viešasis raktas žinomas visiems.  Vienu iš šių raktų galima duomenis užkoduoti, o kitu iškoduoti. Norint pasirašyti po kokiais nors duomenimis iš pradžių sukuriamas tų duomenų vienkryptis atvaizdas (&lt;em&gt;angl.  hash&lt;/em&gt;), tai reiškia kad duomenys paverčiami į nedidelę įvairių simbolių eilutę.  Vėliau panaudojant privatų raktą gautoji duomenų eilutė užkoduojama ir gaunamas parašas.  Kaip ir minėjau, kas yra užkoduota naudojant vieną raktą, kito pagalba gali būti atkoduojama. Šiuo atveju parašas gali būti atkoduotas naudojant viešąjį raktą. Atkodavus parašą gaunamas duomenų atvaizdas.  Pasirašytuosius duomenis pavertus į duomenų atvaizdą ir palyginus jį su iškoduotu raktu galima įsitikinti ar duomenys buvo keisti ar ne.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kaip-susikurti-savo-privatu-ir-viesaji-raktus"&gt;
+&lt;/section&gt;
+&lt;section id="kaip-susikurti-savo-privatu-ir-viesaji-raktus"&gt;
 &lt;h2&gt;Kaip susikurti savo privatų ir viešąjį raktus?&lt;/h2&gt;
 &lt;p&gt;Susikurti savo privatų ir viešąjį raktus nesudėtinga. Paleiskite komandą ir sekite instrukcijas:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;$ gpg --gen-key&lt;/pre&gt;
@@ -822,8 +768,8 @@ raktą galima taip:&lt;/p&gt;
 &lt;p&gt;Paleidus šią komandą reikia įvesti subkomandą &lt;cite&gt;trust&lt;/cite&gt; ir sekti instrukcijas. Atlikus pakeitimus reikia įvesti &lt;cite&gt;save&lt;/cite&gt; subkomandą.&lt;/p&gt;
 &lt;p&gt;Galiausiai raktą reikia išsiųsti į raktų serverį tokiu būdu:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;$ gpg --send-keys AAAAAAAA&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="gpg-ir-mutt"&gt;
+&lt;/section&gt;
+&lt;section id="gpg-ir-mutt"&gt;
 &lt;h2&gt;GPG ir mutt&lt;/h2&gt;
 &lt;p&gt;Kai visi reikiami raktai sukurti, galima sukonfigūruoti programas, kurios su tuo dirbs. Pašto programa &lt;em&gt;mutt&lt;/em&gt; konfigūruojama labai paprastai, tiesiog faile &lt;cite&gt;~/.mutt/muttrc&lt;/cite&gt; reikia įrašyti tokias eilutes:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;set pgp_decode_command="gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
@@ -848,14 +794,14 @@ set pgp_good_sign="^gpg: Good signature from"&lt;/pre&gt;
 uid                  Vardas Pavardaitis
 sub   2048g/A3BA3BA 2007-10-13&lt;/pre&gt;
 &lt;p&gt;Po to, kai išsaugosite &lt;em&gt;mutt&lt;/em&gt; konfigūracinį failą ir bandysite siųsti laišką, prie jo bus prisegamas parašas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="gpg-ir-gajim"&gt;
+&lt;/section&gt;
+&lt;section id="gpg-ir-gajim"&gt;
 &lt;h2&gt;GPG ir Gajim&lt;/h2&gt;
 &lt;p&gt;Pokalbiams naudoju Jabber klientą Gajim. Kai kurie Jabber serveriai naudoja apsaugotą SSL protokolą žinučių perdavimui. Tačiau Jabber protokolas veikia decentralizuotai, tai reiškia, kad žinutės gali keliauti ir į kitus serverius, kurie nebūtinai yra apsaugoti SSL. Jei žinutės keliauja neapsaugotais kanalais, tada bet kas gali tas žinutes perskaityti. Naudojant GPG galima žinutes užkoduoti, tada jos iš siuntėjo, iki pat gavėjo keliaus užkoduotos ir jas perskaityti galės tik tas, kam jos skirtos.&lt;/p&gt;
 &lt;p&gt;Kad žinutės keliautu užkoduotos, Gajim kontaktų sąraše reikia pasirinkti „Edit – Accounts“, atsidariusiame lange reikia pasirinkti redaguoti prieigą. Prieigos lange, „Personal Information“ žymelėje reikia nurodyti savo viešąjį raktą.  Kitas žmogus, su kuriuo bendraujama Jabber protokolu, turėtu atlikti panašius veiksmus. Taip pat reikia turėti kito pašnekovo viešąjį raktą ir jį importuoti:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;$ gpg --import kitas_pasnekovas.asc&lt;/pre&gt;
 &lt;p&gt;Importavus kito pašnekovo viešąjį raktą, Gajim kontaktų sąraše, dešiniuoju pelės klavišu paspaudus ant kito pašnekovo ir pasirinkus „Assign OpenPGP Key“ nurodomas to pašnekovo raktas. Po šių veiksmų visos žinutės bus koduojamos.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>gpg</category><category>shell</category><guid>https://sirex.lt/posts/2009/gpg/</guid><pubDate>Wed, 10 Jun 2009 20:14:00 GMT</pubDate></item><item><title>Youtube video iš komandinės eilutės</title><link>https://sirex.lt/posts/2009/youtube-video-is-komandines-eilutes/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Ar bandėte kada nors žiūrėti Youtube video, HD formatu? Nežinau, kaip pas jus,
+&lt;/section&gt;</description><category>floss</category><category>gpg</category><category>shell</category><guid>https://sirex.lt/posts/2009/gpg/</guid><pubDate>Wed, 10 Jun 2009 20:14:00 GMT</pubDate></item><item><title>Youtube video iš komandinės eilutės</title><link>https://sirex.lt/posts/2009/youtube-video-is-komandines-eilutes/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Ar bandėte kada nors žiūrėti Youtube video, HD formatu? Nežinau, kaip pas jus,
 bet pas mane tuos HD rodo labai sunkiai. CPU dirba pilnu pajėgumu, o video
 rodymas labai stabdo...&lt;/p&gt;
 &lt;p&gt;Kas iš tos HD kokybės, jei vis tiek ja negali pasidžiaugti.. :) Visiškai
@@ -879,4 +825,4 @@ komandos pagalba, iš karto galėsite viską parsisiųsti:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;$ youtube-dl -bta failas-su-nuorodomis.txt&lt;/pre&gt;
 &lt;p&gt;Čia tik keli pavyzdžiai, kaip galima panaudoti šį skriptą.&lt;/p&gt;
 &lt;p&gt;Atsiminkite, kad yra toks skriptas, pasitelkite išradingumą, fantaziją ir
-ateityje tikrai rasite kur jį pritaikyti.&lt;/p&gt;&lt;/div&gt;</description><category>shell</category><category>youtube</category><guid>https://sirex.lt/posts/2009/youtube-video-is-komandines-eilutes/</guid><pubDate>Thu, 04 Jun 2009 20:41:00 GMT</pubDate></item></channel></rss>
+ateityje tikrai rasite kur jį pritaikyti.&lt;/p&gt;</description><category>shell</category><category>youtube</category><guid>https://sirex.lt/posts/2009/youtube-video-is-komandines-eilutes/</guid><pubDate>Thu, 04 Jun 2009 20:41:00 GMT</pubDate></item></channel></rss>

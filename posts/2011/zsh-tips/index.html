@@ -45,9 +45,7 @@ Zsh failų sąrašo išskleidimui galima naudoti modifikatorius, kuriuos r">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<div class="section" id="failu-saraso-isskleidimas">
-<h2>Failų sąrašo išskleidimas<a href="#failu-saraso-isskleidimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+    <section id="failu-saraso-isskleidimas"><h2>Failų sąrašo išskleidimas<a href="#failu-saraso-isskleidimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Elementariausias pavyzdys:</p>
 <pre class="literal-block">ls *</pre>
 <p>Šiuo atveju, bus išskleidžiami visi failai, esantis aktyviame kataloge.</p>
@@ -59,14 +57,8 @@ pakatalogiais ir failais juose. <code class="docutils literal">*.rst</code> iš
 katalogus, su galūne <code class="docutils literal">.rst</code>. Toliau skliausteliuose nurodomi modifikatoriai,
 iš kurių <code class="docutils literal">.</code> išskleidžia tik paprastus failus, <code class="docutils literal">om</code> rezultatą rūšiuoja
 pagal failo keitimo datą, <code class="docutils literal">[0,8]</code> išskleidžia tik pirmus aštuonis failus.</p>
-<div class="section" id="failo-tipo-modifikatoriai">
-<h3>Failo tipo modifikatoriai<a href="#failo-tipo-modifikatoriai" class="headerlink" title="Permalink to this heading">¶</a></h3>
-<table>
-<colgroup>
-<col style="width: 16%">
-<col style="width: 84%">
-</colgroup>
-<tbody>
+<section id="failo-tipo-modifikatoriai"><h3>Failo tipo modifikatoriai<a href="#failo-tipo-modifikatoriai" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<table><tbody>
 <tr>
 <td><p><code class="docutils literal"><span class="pre">*(/)</span></code></p></td>
 <td><p>tik katalogus</p></td>
@@ -103,25 +95,15 @@ pagal failo keitimo datą, <code class="docutils literal">[0,8]</code> išsklei
 <td><p><code class="docutils literal"><span class="pre">*(%c)</span></code></p></td>
 <td><p>tik simbolių tipo specialiuosius failus</p></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Pavyzdžiai:</p>
 <pre class="literal-block">ls *(/)</pre>
 <p>Parodyti aktyviame kataloge esančius pakatalogius.</p>
 <pre class="literal-block">ls *(*)</pre>
 <p>Parodyti aktyviame kataloge esančius vykdomuosius failus.</p>
-</div>
-<div class="section" id="failu-teisiu-modifikatoriai">
-<h3>Failų teisių modifikatoriai<a href="#failu-teisiu-modifikatoriai" class="headerlink" title="Permalink to this heading">¶</a></h3>
+</section><section id="failu-teisiu-modifikatoriai"><h3>Failų teisių modifikatoriai<a href="#failu-teisiu-modifikatoriai" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p>Pagal failų skaitymo, rašymo ir vykdymo teises:</p>
-<table>
-<colgroup>
-<col style="width: 22%">
-<col style="width: 28%">
-<col style="width: 24%">
-<col style="width: 26%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><ul class="simple"><li>
 </li></ul></td>
@@ -147,19 +129,13 @@ pagal failo keitimo datą, <code class="docutils literal">[0,8]</code> išsklei
 <td><p><code class="docutils literal">*(W)</code></p></td>
 <td><p><code class="docutils literal">*(X)</code></p></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Pagal tiksliai nurodytas failų teises:</p>
 <pre class="literal-block">*(fCHMOD)</pre>
 <p>Išskleisti tik tuos failus, kurių teisės tiksliai atitinka nurodytą <span class="caps">CHMOD</span>
 teisių aprašą. <span class="caps">CHMOD</span> turi būti septintainis skaičius, pavyzdžiui: <em>0755</em>.</p>
 <p>Pagal specialiąsias failų teises:</p>
-<table>
-<colgroup>
-<col style="width: 19%">
-<col style="width: 81%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><p><code class="docutils literal">*(s)</code></p></td>
 <td><p>tik setuid failus (04000)</p></td>
@@ -172,15 +148,9 @@ teisių aprašą. <span class="caps">CHMOD</span> turi būti septintainis skaič
 <td><p><code class="docutils literal">*(t)</code></p></td>
 <td><p>tik failus su sticky bitu (01000)</p></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Pagal failų savininkus ir grupes:</p>
-<table>
-<colgroup>
-<col style="width: 20%">
-<col style="width: 80%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><p><code class="docutils literal">*(U)</code></p></td>
 <td><p>savininkas yra einamasis naudotojas</p></td>
@@ -197,22 +167,13 @@ teisių aprašą. <span class="caps">CHMOD</span> turi būti septintainis skaič
 <td><p><code class="docutils literal">*(gGID)</code></p></td>
 <td><p>savininkas yra <span class="caps">GID</span></p></td>
 </tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="failu-atidarymo-ir-keitimo-modifikatoriai">
-<h3>Failų atidarymo ir keitimo modifikatoriai<a href="#failu-atidarymo-ir-keitimo-modifikatoriai" class="headerlink" title="Permalink to this heading">¶</a></h3>
+</tbody></table></section><section id="failu-atidarymo-ir-keitimo-modifikatoriai"><h3>Failų atidarymo ir keitimo modifikatoriai<a href="#failu-atidarymo-ir-keitimo-modifikatoriai" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p>Gali būti tokie modifikatoriai:</p>
 <pre class="literal-block">*(a[Mwhm][-|+]n)
 *(m[Mwhm][-|+]n)
 *(c[Mwhm][-|+]n)</pre>
 <p>Pirmoji raidė reiškia:</p>
-<table>
-<colgroup>
-<col style="width: 3%">
-<col style="width: 97%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><p>a</p></td>
 <td><p>failo atidarymo laikas</p></td>
@@ -225,15 +186,9 @@ teisių aprašą. <span class="caps">CHMOD</span> turi būti septintainis skaič
 <td><p>c</p></td>
 <td><p>failo turinio keitimo laikas</p></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Antroji raidė reiškia:</p>
-<table>
-<colgroup>
-<col style="width: 9%">
-<col style="width: 91%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><p>M</p></td>
 <td><p>mėnuo</p></td>
@@ -250,8 +205,7 @@ teisių aprašą. <span class="caps">CHMOD</span> turi būti septintainis skaič
 <td><p>m</p></td>
 <td><p>minutė</p></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Jei antroji raidė nenurodyta, laikas bus skaičiuojamas dienomis.</p>
 <p>Trečiasis simbolis gali būti (-) - nurodo išskleisti failus, kurių nurodytas
 laiko parametras yra mažesnis už <em>n</em>, (+) - nurodo išskleisti failus, kurių
@@ -264,18 +218,10 @@ laiko parametrą.</p>
 <p>Bus išskleisti failai, kurių turinys buvo keistas trijų dienų bėgyje.</p>
 <pre class="literal-block">ls *(ch+5)</pre>
 <p>Bus išskleisti failai, kurių turinys buvo keistas daugiau nei prieš 5 valandas.</p>
-</div>
-</div>
-<div class="section" id="naudotu-komandu-pernaudojimas">
-<h2>Naudotų komandų pernaudojimas<a href="#naudotu-komandu-pernaudojimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section></section><section id="naudotu-komandu-pernaudojimas"><h2>Naudotų komandų pernaudojimas<a href="#naudotu-komandu-pernaudojimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Pernaudoti anksčiau panaudotas komandas, galima šauktuko (<code class="docutils literal">!</code>) simbolio
 pagalba. Pavyzdžiai:</p>
-<table>
-<colgroup>
-<col style="width: 18%">
-<col style="width: 82%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><p><code class="docutils literal">!!</code></p></td>
 <td><p>prieš tai įvesta komandos eilutė</p></td>
@@ -296,18 +242,11 @@ pagalba. Pavyzdžiai:</p>
 <td><p><code class="docutils literal"><span class="pre">!?ls</span></code></p></td>
 <td><p>paskutinė komanda iš komandų istorijos, prasidedanti <code class="docutils literal">ls</code></p></td>
 </tr>
-</tbody>
-</table>
-<div class="section" id="komandu-argumentu-pernaudojimas">
-<h3>Komandų argumentų pernaudojimas<a href="#komandu-argumentu-pernaudojimas" class="headerlink" title="Permalink to this heading">¶</a></h3>
+</tbody></table>
+<section id="komandu-argumentu-pernaudojimas"><h3>Komandų argumentų pernaudojimas<a href="#komandu-argumentu-pernaudojimas" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p>Galima pernaudoti ne tik visą komandų eilutę, bet tik tam tikrus jos
 argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:</p>
-<table>
-<colgroup>
-<col style="width: 18%">
-<col style="width: 82%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><p><code class="docutils literal">!^</code></p></td>
 <td><p>pirmas argumentas</p></td>
@@ -336,19 +275,9 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:</p>
 <td><p><code class="docutils literal"><span class="pre">!:1-3</span></code></p></td>
 <td><p>argumentai, nuo antro iki trečio</p></td>
 </tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="section" id="keitiniai">
-<h2>Keitiniai<a href="#keitiniai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</tbody></table></section></section><section id="keitiniai"><h2>Keitiniai<a href="#keitiniai" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Kelio keitiniai:</p>
-<table>
-<colgroup>
-<col style="width: 16%">
-<col style="width: 84%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><p><code class="docutils literal">:h</code></p></td>
 <td><p>pašalina vieną kelio elementą, nuo kelio pabaigos</p></td>
@@ -373,15 +302,9 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:</p>
 <td><p><code class="docutils literal">:A</code></p></td>
 <td><p>absoliutus kelias, išskleidžiant simbolines nuorodas</p></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Raidžių keitimas didžiosiomis/mažosiomis:</p>
-<table>
-<colgroup>
-<col style="width: 16%">
-<col style="width: 84%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><p><code class="docutils literal">:l</code></p></td>
 <td><p>keičia raides mažosiomis</p></td>
@@ -390,15 +313,9 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:</p>
 <td><p><code class="docutils literal">:u</code></p></td>
 <td><p>keičia raides didžiosiomis</p></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Kabučių valdymas:</p>
-<table>
-<colgroup>
-<col style="width: 16%">
-<col style="width: 84%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><p><code class="docutils literal">:q</code></p></td>
 <td><p>uždeda kabutes, kad keitinį būtų galima naudoti kitiems keitiniams</p></td>
@@ -411,15 +328,9 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:</p>
 <td><p><code class="docutils literal">:Q</code></p></td>
 <td><p>pašalina kabutes</p></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Žodžių paieška ir keitimas:</p>
-<table>
-<colgroup>
-<col style="width: 16%">
-<col style="width: 84%">
-</colgroup>
-<tbody>
+<table><tbody>
 <tr>
 <td><p><code class="docutils literal">:s</code></p></td>
 <td><p>randa ir keičia žodžius, pvz.: <code class="docutils literal">:s/abc/xyz/</code></p></td>
@@ -432,22 +343,13 @@ argumentus. Žemiau pateikti pavyzdžiai su prieš tai įvesta komanda:</p>
 <td><p><code class="docutils literal">:g</code></p></td>
 <td><p>globaliai taikyti <code class="docutils literal">:s</code> arba <code class="docutils literal">&amp;</code></p></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Kita:</p>
-<table>
-<colgroup>
-<col style="width: 16%">
-<col style="width: 84%">
-</colgroup>
-<tbody><tr>
+<table><tbody><tr>
 <td><p><code class="docutils literal">:p</code></p></td>
 <td><p>išveda keitinį, jo nevykdydamas</p></td>
-</tr></tbody>
-</table>
+</tr></tbody></table></section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../pypi/" rel="prev" title="Python paketai">Previous post</a>

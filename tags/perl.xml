@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about perl)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/perl.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Naudok priemonę labiausiai tinkančią užduočiai spręsti</title><link>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Kadangi esu programuotojas, mėgstu įvairias užduotis automatizuoti.  Kartais
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about perl)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/perl.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Naudok priemonę labiausiai tinkančią užduočiai spręsti</title><link>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Kadangi esu programuotojas, mėgstu įvairias užduotis automatizuoti.  Kartais
 automatizavimas sutaupo labai daug laiko, kartais galima sugaišti labai daug
 laiko automatizuojant, bet šį kartą ne apie tai...&lt;/p&gt;
 &lt;p&gt;Trumpai apžvelgsiu priemones, kurias naudoju užduočių automatizavimui.&lt;/p&gt;
-&lt;div class="section" id="makefile"&gt;
+&lt;section id="makefile"&gt;
 &lt;h2&gt;Makefile&lt;/h2&gt;
 &lt;p&gt;Labai naudinga priemonė ypač programuotojams, tačiau aš tai naudoju ne tik
 programavime. Pavyzdžiui esu pasidaręs Neo Freerunner sinchronizavimą su
@@ -12,8 +12,8 @@ kam jis skirtas, bet jei matau, kad kataloge yra Makefile, tai nesigilindamas
 rašau make ir darbas atliktas.&lt;/p&gt;
 &lt;p&gt;Tikriausiai 90% visų atviro kodo paketų naudoja Makefile, todėl įrankis tikrai
 laiko ir naudotojų gausos išbandytas ir atidirbtas. Gėris.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="shell-skriptai"&gt;
+&lt;/section&gt;
+&lt;section id="shell-skriptai"&gt;
 &lt;h2&gt;Shell skriptai&lt;/h2&gt;
 &lt;p&gt;Jei kažką sunkiai sekasi aprašyti Makefile'uose, į pagalbą galima
 pasitelkti shell skriptus. Jei dar nežinote, tai nustebsite kiek daug
@@ -23,9 +23,9 @@ visa gausybė shell skriptų visiems gyvenimo atvejams. Šiuo metu ten yra:&lt;/
 65&lt;/pre&gt;
 &lt;p&gt;65 skriptai.&lt;/p&gt;
 &lt;p&gt;Štai paprastas shell skripto pavyzdys, kuris gali praversti kas dieną:&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_996130df6b2d4529b1a5f3eec1b0fe05-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-&lt;a name="rest_code_996130df6b2d4529b1a5f3eec1b0fe05-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;URL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'http://translate.google.lt/translate_t?q='&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s1"&gt;'#auto|lt'&lt;/span&gt;
-&lt;a name="rest_code_996130df6b2d4529b1a5f3eec1b0fe05-3"&gt;&lt;/a&gt;w3m -dump &lt;span class="nv"&gt;$URL&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt; egrep &lt;span class="s1"&gt;'^Žodynas'&lt;/span&gt; -A10
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_2637d8f777524ef487f387cdeebc39ec-1" name="rest_code_2637d8f777524ef487f387cdeebc39ec-1" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_2637d8f777524ef487f387cdeebc39ec-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;a id="rest_code_2637d8f777524ef487f387cdeebc39ec-2" name="rest_code_2637d8f777524ef487f387cdeebc39ec-2" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_2637d8f777524ef487f387cdeebc39ec-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;URL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'http://translate.google.lt/translate_t?q='&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s1"&gt;'#auto|lt'&lt;/span&gt;
+&lt;a id="rest_code_2637d8f777524ef487f387cdeebc39ec-3" name="rest_code_2637d8f777524ef487f387cdeebc39ec-3" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_2637d8f777524ef487f387cdeebc39ec-3"&gt;&lt;/a&gt;w3m -dump &lt;span class="nv"&gt;$URL&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt; egrep &lt;span class="s1"&gt;'^Žodynas'&lt;/span&gt; -A10
 &lt;/pre&gt;&lt;p&gt;Rezultatas gaunasi toks:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;test.sh shell
 Žodynas
@@ -39,8 +39,8 @@ daiktavardis
 5. įdėklas
 6. šarvas veiksmažodis
 7. sluoksnis&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="sed-awk-ir-draugai"&gt;
+&lt;/section&gt;
+&lt;section id="sed-awk-ir-draugai"&gt;
 &lt;h2&gt;sed, awk ir draugai&lt;/h2&gt;
 &lt;p&gt;Rašant shell skriptus šių komandų gan dažnai prireikia, norint apdoroti
 kažkokią tekstinę informaciją. Čia daug ką kalbėti ir nebūtina, tiesiog
@@ -53,8 +53,8 @@ $ time sed -i 's/site1_prefix_/site2_prefix_/g' data.sql
 35,27s user 51,79s system 59% cpu 2:26,58 total&lt;/pre&gt;
 &lt;p&gt;Visas failas pakeistas per 2,5 minutes! Įdomu per kiek laiko šį failą atidarytų
 jūsų teksto redaktorius? :D&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="perl"&gt;
+&lt;/section&gt;
+&lt;section id="perl"&gt;
 &lt;h2&gt;perl&lt;/h2&gt;
 &lt;p&gt;Visi aukščiau išvardinti įrankiai yra puikūs, tačiau kai reikia atlikti šį tą
 sudėtingesnio, visada verta prisiminti perl.&lt;/p&gt;
@@ -66,34 +66,34 @@ awk, ne gana to, perl dirba labai greitai:&lt;/p&gt;
 turėti kiek daugiau žinių, nei su sed.&lt;/p&gt;
 &lt;p&gt;Perl gali puikiausiai apdoroti tekstinius duomenis, o rezultatą įrašyti į
 duomenų bazę ar panašiai, kaip tai padaryta šiame pavyzdyje:&lt;/p&gt;
-&lt;pre class="code perl"&gt;&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/usr/bin/perl -nl&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nn"&gt;DBI&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;our&lt;/span&gt; &lt;span class="nv"&gt;$dbh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nn"&gt;DBI&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"dbi:SQLite:dbname=/tmp/lines.db"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;our&lt;/span&gt; &lt;span class="nv"&gt;$sth&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$dbh&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;prepare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"INSERT INTO lines VALUES (?)"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-8"&gt;&lt;/a&gt;
-&lt;a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-9"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$sth&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$_&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>perl</category><category>shell</category><guid>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</guid><pubDate>Thu, 17 Jun 2010 05:40:00 GMT</pubDate></item><item><title>Kaip pakeisti daug failų komandinės eilutės ir perl pagalba</title><link>https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Programuodamas patekau į tokią situaciją, kurioje reikėjo surasti tam tikrus
+&lt;pre class="code perl"&gt;&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1"&gt;&lt;/a&gt;&lt;span class="ch"&gt;#!/usr/bin/perl -nl&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;BEGIN&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nn"&gt;DBI&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;our&lt;/span&gt; &lt;span class="nv"&gt;$dbh&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nn"&gt;DBI&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="nb"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"dbi:SQLite:dbname=/tmp/lines.db"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;our&lt;/span&gt; &lt;span class="nv"&gt;$sth&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$dbh&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;prepare&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"INSERT INTO lines VALUES (?)"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8"&gt;&lt;/a&gt;
+&lt;a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9" href="https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$sth&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;execute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$_&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/section&gt;</description><category>floss</category><category>perl</category><category>shell</category><guid>https://sirex.lt/posts/2010/naudok-priemone-labiausiai-tinkancia-uzduociai-spresti/</guid><pubDate>Thu, 17 Jun 2010 05:40:00 GMT</pubDate></item><item><title>Kaip pakeisti daug failų komandinės eilutės ir perl pagalba</title><link>https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Programuodamas patekau į tokią situaciją, kurioje reikėjo surasti tam tikrus
 failus, kuriuose nėra aprašytas klasės parametras ir įrašytą tą trūkstamą
 parametrą į klasės vidų.&lt;/p&gt;
 &lt;p&gt;Pasinaudodamas komandine eilute ir nedideliu perl skriptu tai nesunkiai
 padariau.&lt;/p&gt;
 &lt;p&gt;Perl skriptas atrodo taip:&lt;/p&gt;
-&lt;pre class="code perl"&gt;&lt;a name="rest_code_3d5d0874a62543eabb1e9b92918dc44f-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_3d5d0874a62543eabb1e9b92918dc44f-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_3d5d0874a62543eabb1e9b92918dc44f-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/^class/&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_3d5d0874a62543eabb1e9b92918dc44f-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nn"&gt;File::Basename&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_3d5d0874a62543eabb1e9b92918dc44f-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;my&lt;/span&gt; &lt;span class="nv"&gt;$layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$ARGV&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
-&lt;a name="rest_code_3d5d0874a62543eabb1e9b92918dc44f-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;"\n   public \$layout = '$layout';\n"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_3d5d0874a62543eabb1e9b92918dc44f-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;pre class="code perl"&gt;&lt;a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-1" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-1" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_15409c81d5c24f1c909d082f6f7a0474-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-2" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-2" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_15409c81d5c24f1c909d082f6f7a0474-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-3" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-3" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_15409c81d5c24f1c909d082f6f7a0474-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sr"&gt;/^class/&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-4" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-4" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_15409c81d5c24f1c909d082f6f7a0474-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;use&lt;/span&gt; &lt;span class="nn"&gt;File::Basename&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-5" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-5" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_15409c81d5c24f1c909d082f6f7a0474-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;my&lt;/span&gt; &lt;span class="nv"&gt;$layout&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;basename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$ARGV&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-6" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-6" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_15409c81d5c24f1c909d082f6f7a0474-6"&gt;&lt;/a&gt;    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;"\n   public \$layout = '$layout';\n"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-7" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-7" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_15409c81d5c24f1c909d082f6f7a0474-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;O komanda atrodo taip:&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_a49bc49141684efca58bce79e7933a54-1"&gt;&lt;/a&gt;find -wholename &lt;span class="s2"&gt;"*/themes/*/layouts/*/config.php"&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_a49bc49141684efca58bce79e7933a54-2"&gt;&lt;/a&gt;    &lt;span class="p"&gt;|&lt;/span&gt; xargs grep -L &lt;span class="s2"&gt;"public \$layout"&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_a49bc49141684efca58bce79e7933a54-3"&gt;&lt;/a&gt;    &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; f &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_a49bc49141684efca58bce79e7933a54-4"&gt;&lt;/a&gt;        perl -ni /tmp/replace.pl &lt;span class="nv"&gt;$f&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
-&lt;a name="rest_code_a49bc49141684efca58bce79e7933a54-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_0bb3a58f8cb4454cbd1a534380674737-1" name="rest_code_0bb3a58f8cb4454cbd1a534380674737-1" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_0bb3a58f8cb4454cbd1a534380674737-1"&gt;&lt;/a&gt;find -wholename &lt;span class="s2"&gt;"*/themes/*/layouts/*/config.php"&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_0bb3a58f8cb4454cbd1a534380674737-2" name="rest_code_0bb3a58f8cb4454cbd1a534380674737-2" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_0bb3a58f8cb4454cbd1a534380674737-2"&gt;&lt;/a&gt;    &lt;span class="p"&gt;|&lt;/span&gt; xargs grep -L &lt;span class="s2"&gt;"public \$layout"&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_0bb3a58f8cb4454cbd1a534380674737-3" name="rest_code_0bb3a58f8cb4454cbd1a534380674737-3" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_0bb3a58f8cb4454cbd1a534380674737-3"&gt;&lt;/a&gt;    &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; f &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_0bb3a58f8cb4454cbd1a534380674737-4" name="rest_code_0bb3a58f8cb4454cbd1a534380674737-4" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_0bb3a58f8cb4454cbd1a534380674737-4"&gt;&lt;/a&gt;        perl -ni /tmp/replace.pl &lt;span class="nv"&gt;$f&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;a id="rest_code_0bb3a58f8cb4454cbd1a534380674737-5" name="rest_code_0bb3a58f8cb4454cbd1a534380674737-5" href="https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/#rest_code_0bb3a58f8cb4454cbd1a534380674737-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Naudojantis komandine eilute, labai nesunkiai galima automatizuoti įvairiausias
 užduotis. Šiame pavyzdyje, vietoje to, kad keliaučiau per visus failus ir
-rankomis viską keisčiau, tiesiog pasinaudojau nedidele komanda :)&lt;/p&gt;&lt;/div&gt;</description><category>perl</category><category>shell</category><guid>https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/</guid><pubDate>Fri, 07 Nov 2008 09:54:00 GMT</pubDate></item></channel></rss>
+rankomis viską keisčiau, tiesiog pasinaudojau nedidele komanda :)&lt;/p&gt;</description><category>perl</category><category>shell</category><guid>https://sirex.lt/posts/2008/kaip-pakeisti-daug-failu-komandines-eilutes-ir-perl-pagalba/</guid><pubDate>Fri, 07 Nov 2008 09:54:00 GMT</pubDate></item></channel></rss>

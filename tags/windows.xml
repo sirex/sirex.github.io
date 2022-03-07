@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about windows)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/windows.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip įdiegti Windows?</title><link>https://sirex.lt/posts/2009/kaip-idiegti-windows/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Istorija tokia, darbe teko testuoti svetainę su IE naršyklėmis. Kadangi prie
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about windows)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/windows.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip įdiegti Windows?</title><link>https://sirex.lt/posts/2009/kaip-idiegti-windows/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Istorija tokia, darbe teko testuoti svetainę su IE naršyklėmis. Kadangi prie
 projekto dirbau vienas ir nebuvo porininko naudojančio Windows, tai tas bjaurus
 darbas teko man pačiam... :/&lt;/p&gt;
 &lt;p&gt;Darbe naudoju Ubuntu, tai jokio IE neturėjau. Ačiū &lt;a class="reference external" href="http://www.tatanka.com.br/ies4linux/"&gt;IEs4Linux projektui&lt;/a&gt;, kurio dėka IE6 daugiau/mažiau veikia
@@ -8,7 +8,7 @@ per &lt;a class="reference external" href="http://www.winehq.org/"&gt;Wine (**W*
 &lt;p&gt;Įdiegti Ubuntu galima iš CD, USB, per tinklą ar internetą ir net gi &lt;a class="reference external" href="http://wubi-installer.org/"&gt;tiesiai į
 Windows, nekeičiant disko skirsnių&lt;/a&gt;. Kiek žinau,
 Windows galima įdiegti tik per CD...&lt;/p&gt;
-&lt;div class="section" id="kaip-idiegti-windows"&gt;
+&lt;section id="kaip-idiegti-windows"&gt;
 &lt;h2&gt;Kaip įdiegti Windows?&lt;/h2&gt;
 &lt;p&gt;Virtualizacijos dėka ribotos Windows įdiegimo galimybės nesudaro jokių
 problemų. Šiam reikalui pasirinkau &lt;a class="reference external" href="http://www.qemu.org/"&gt;QEMU&lt;/a&gt;.  Kodėl?
@@ -31,8 +31,8 @@ Tačiau galite į CD-ROM įrenginį įdėti ir legalių Windows CD, tuomet vieto
 &lt;p&gt;Po šios komandos paleidimo pasileist Windows diegimo vedlys. Įdiekite Windows
 kaip visada. Jei nei karto neteko diegti Windows, paprašykite draugo pagalbos.&lt;/p&gt;
 &lt;p&gt;Priklausomai nuo jūsų kompiuterio spartos, diegimas truks apie valandą.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="po-idiegimo"&gt;
+&lt;/section&gt;
+&lt;section id="po-idiegimo"&gt;
 &lt;h2&gt;Po įdiegimo&lt;/h2&gt;
 &lt;p&gt;Kai jau turėsite veikiančius Windows, išsaugotus virtualiame diske, nebereikės
 kartoti diegimo, norint vėl juos paliesti. Jau įdiegtus Windows iškviesite
@@ -47,7 +47,7 @@ pataisyti klaidas.&lt;/p&gt;
 &lt;p&gt;Naudojantis QEMU galima testuoti ir kitas operacines sistemas, pavyzdžiui
 Ubuntu Alpha ar Beta versijas. Daugiau apie QEMU galite pasiskaityti &lt;a class="reference external" href="http://www.qemu.org/"&gt;qemu.org&lt;/a&gt; svetainėje.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image0" src="https://sirex.lt/posts/2009/kaip-idiegti-windows/files/qemu-windows.png"&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>qemu</category><category>ubuntu</category><category>windows</category><guid>https://sirex.lt/posts/2009/kaip-idiegti-windows/</guid><pubDate>Mon, 19 Oct 2009 20:52:00 GMT</pubDate></item><item><title>Windows 7 nuodėmės</title><link>https://sirex.lt/posts/2009/windows-7-nuodemes/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="http://windows7news.com/tag/windows-7-release-date/"&gt;Windows 7 pasirodys spalio 22 dieną&lt;/a&gt; (&lt;a class="reference external" href="https://wiki.ubuntu.com/KarmicReleaseSchedule"&gt;Ubuntu Karmic Koala
+&lt;/section&gt;</description><category>floss</category><category>qemu</category><category>ubuntu</category><category>windows</category><guid>https://sirex.lt/posts/2009/kaip-idiegti-windows/</guid><pubDate>Mon, 19 Oct 2009 20:52:00 GMT</pubDate></item><item><title>Windows 7 nuodėmės</title><link>https://sirex.lt/posts/2009/windows-7-nuodemes/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;&lt;a class="reference external" href="http://windows7news.com/tag/windows-7-release-date/"&gt;Windows 7 pasirodys spalio 22 dieną&lt;/a&gt; (&lt;a class="reference external" href="https://wiki.ubuntu.com/KarmicReleaseSchedule"&gt;Ubuntu Karmic Koala
 spalio 29 dieną&lt;/a&gt;). Ta proga
 &lt;a class="reference external" href="http://www.fsf.org/"&gt;FSF&lt;/a&gt; paleido kampaniją prieš Windows 7:
 &lt;a class="reference external" href="http://windows7sins.org/"&gt;windows7sins.org&lt;/a&gt;.&lt;/p&gt;
@@ -121,7 +121,7 @@ programinės įrangos išeities tekstai yra įslaptinti, visi priklausomi tik nu
 Microsoft malonės ir tikisi, kad visos saugumo skylės bus ištaisytos. Tačiau
 Microsoft turi savų tikslų kalbant apie saugumą, kurie ne visada sutampa su
 naudotojų pageidavimais.&lt;/p&gt;
-&lt;div class="section" id="tu-gali-rinktis"&gt;
+&lt;section id="tu-gali-rinktis"&gt;
 &lt;h2&gt;Tu gali rinktis!&lt;/h2&gt;
 &lt;p&gt;Su laisvomis operacinėmis sistemomis, tokios kaip GNU/Linux, galite daugiau ar
 mažiau daryti tą patį ką ir su Windows. Skirtumas tik tas, kad su laisvomis
@@ -131,8 +131,8 @@ naudojimas – geriausias būdas pabėgti nuo Microsoft ir išvengiant galimybė
 tapti šių septinių nuodėmių aukomis. Programos ir kompiuteriai visą laiką turi
 vienokių ar kitokių trūkumų, tačiau naudojant laisvas programas yra galimybė
 visas atsiradusias problemas pasitaisyti patiems ir visiems kitiems.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="pabaigai"&gt;
+&lt;/section&gt;
+&lt;section id="pabaigai"&gt;
 &lt;h2&gt;Pabaigai&lt;/h2&gt;
 &lt;p&gt;Nežinau, kaip jūs, bet aš niekada nepritariau labai stipriai išaugusių
 korporacijų viešpatavimui. Nors ir gyvenu demokratinėje šalyje, kurioje turiu
@@ -145,4 +145,4 @@ aukštai ir tolesnis kilimas tikrai neleistinas. Jau nekartą atsimušiau į
 Microsoft sieną, tikrai nenoriu, kad ateityje tokių sienų būtų dar daugiau...&lt;/p&gt;
 &lt;p&gt;Siūlau visiems susimastyti, priešingu atveju visai netrukus galima skaudžiai
 nukentėti sugrįžtant į vergovės laikus.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>windows</category><guid>https://sirex.lt/posts/2009/windows-7-nuodemes/</guid><pubDate>Sat, 05 Sep 2009 09:31:00 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>floss</category><category>windows</category><guid>https://sirex.lt/posts/2009/windows-7-nuodemes/</guid><pubDate>Sat, 05 Sep 2009 09:31:00 GMT</pubDate></item></channel></rss>

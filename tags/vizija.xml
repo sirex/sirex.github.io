@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about vizija)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/vizija.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>IT evoliucija</title><link>https://sirex.lt/posts/2008/it-evoliucija/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Forume radau tokį įdomų klausimą apie tai, &lt;a class="reference external" href="http://www.ubuntu.lt/render/Forum;thread,3060"&gt;kokia ateitis laukia Windows OS&lt;/a&gt;. Pradėjęs rašyti savo nuomonę
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about vizija)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/vizija.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>IT evoliucija</title><link>https://sirex.lt/posts/2008/it-evoliucija/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Forume radau tokį įdomų klausimą apie tai, &lt;a class="reference external" href="http://www.ubuntu.lt/render/Forum;thread,3060"&gt;kokia ateitis laukia Windows OS&lt;/a&gt;. Pradėjęs rašyti savo nuomonę
 tiek išsiplėčiau, kad net nusprendžiau atsakymą perkelti į naują blogo įrašą.&lt;/p&gt;
 &lt;p&gt;Taigi, nesu koks tai aiškiaregys, todėl dėl Windows OS ateities sunku ką ir
 išprognozuoti. Tačiau stebint visą operacinių sistemų vystymosi istoriją matyti
 keli etapai:&lt;/p&gt;
-&lt;div class="section" id="praeitis"&gt;
+&lt;section id="praeitis"&gt;
 &lt;h2&gt;Praeitis&lt;/h2&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;p&gt;Tamsieji amžiai, kompiuterių nėra, nėra ir operacinių sistemų.&lt;/p&gt;&lt;/li&gt;
@@ -20,8 +20,8 @@ gerokai atsilieka nuo MS kompanijos.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;GNU suranda Linux ir atsiranda GNU/Linux, vėl gi, kapitalo iš to
 nesusikrausi, bet progresas vyksta, nors ir lėtai, bet užtikrintai.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class="section" id="dabartis"&gt;
+&lt;/section&gt;
+&lt;section id="dabartis"&gt;
 &lt;h2&gt;Dabartis&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;MS klestėjimo pabaiga. Nors MS vis dar klestėjimo viršūnėje, tačiau tai tęsis
@@ -37,8 +37,8 @@ gero marketingo nesusimastydami apie pasekmes.&lt;/p&gt;&lt;/li&gt;
 daugiau žmonių, kurie ieško naujovių ir palaiko atvirojo kodo filosofiją,
 žvelgdami toli į ateitį.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ateitis"&gt;
+&lt;/section&gt;
+&lt;section id="ateitis"&gt;
 &lt;h2&gt;Ateitis&lt;/h2&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;&lt;p&gt;Pagaliau programinės įrangos standartai įgaus realią prasmę ir jų bus
@@ -70,4 +70,4 @@ ieškoti pelno, reikės ieškoti to, kas dar neatrasta...&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;Čia mano akimis tokia IT istorijos apžvalga ir ateities vizija... kuri parodo,
 kad būtent atvirojo kodo ir GNU/Linux vystoma kryptis sulauks didžiausio
 klestėjimo.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>vizija</category><guid>https://sirex.lt/posts/2008/it-evoliucija/</guid><pubDate>Wed, 19 Nov 2008 06:13:00 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>floss</category><category>vizija</category><guid>https://sirex.lt/posts/2008/it-evoliucija/</guid><pubDate>Wed, 19 Nov 2008 06:13:00 GMT</pubDate></item></channel></rss>

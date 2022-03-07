@@ -44,13 +44,11 @@ laiko automatizuojant, bet šį kartą ne apie ta">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Kadangi esu programuotojas, mėgstu įvairias užduotis automatizuoti.  Kartais
+    <p>Kadangi esu programuotojas, mėgstu įvairias užduotis automatizuoti.  Kartais
 automatizavimas sutaupo labai daug laiko, kartais galima sugaišti labai daug
 laiko automatizuojant, bet šį kartą ne apie tai…</p>
 <p>Trumpai apžvelgsiu priemones, kurias naudoju užduočių automatizavimui.</p>
-<div class="section" id="makefile">
-<h2>Makefile<a href="#makefile" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="makefile"><h2>Makefile<a href="#makefile" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Labai naudinga priemonė ypač programuotojams, tačiau aš tai naudoju ne tik
 programavime. Pavyzdžiui esu pasidaręs Neo Freerunner sinchronizavimą su
 kompiuterių. Dažnai kataloge tiesiog aprašau Makefile, pamirštu ką jis daro ir
@@ -58,9 +56,7 @@ kam jis skirtas, bet jei matau, kad kataloge yra Makefile, tai nesigilindamas
 rašau make ir darbas atliktas.</p>
 <p>Tikriausiai 90% visų atviro kodo paketų naudoja Makefile, todėl įrankis tikrai
 laiko ir naudotojų gausos išbandytas ir atidirbtas. Gėris.</p>
-</div>
-<div class="section" id="shell-skriptai">
-<h2>Shell skriptai<a href="#shell-skriptai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="shell-skriptai"><h2>Shell skriptai<a href="#shell-skriptai" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Jei kažką sunkiai sekasi aprašyti Makefile’uose, į pagalbą galima
 pasitelkti shell skriptus. Jei dar nežinote, tai nustebsite kiek daug
 galima pasiekti naudojant shell skriptus. Mano namų bin kataloge yra
@@ -69,9 +65,9 @@ visa gausybė shell skriptų visiems gyvenimo atvejams. Šiuo metu ten yra:</p>
 65</pre>
 <p>65 skriptai.</p>
 <p>Štai paprastas shell skripto pavyzdys, kuris gali praversti kas dieną:</p>
-<pre class="code bash"><a name="rest_code_996130df6b2d4529b1a5f3eec1b0fe05-1"></a><span class="ch">#!/bin/bash</span>
-<a name="rest_code_996130df6b2d4529b1a5f3eec1b0fe05-2"></a><span class="nv">URL</span><span class="o">=</span><span class="s1">'http://translate.google.lt/translate_t?q='</span><span class="nv">$1</span><span class="s1">'#auto|lt'</span>
-<a name="rest_code_996130df6b2d4529b1a5f3eec1b0fe05-3"></a>w3m -dump <span class="nv">$URL</span> <span class="m">2</span>&gt;/dev/null <span class="p">|</span> egrep <span class="s1">'^Žodynas'</span> -A10
+<pre class="code bash"><a id="rest_code_2637d8f777524ef487f387cdeebc39ec-1" name="rest_code_2637d8f777524ef487f387cdeebc39ec-1" href="#rest_code_2637d8f777524ef487f387cdeebc39ec-1"></a><span class="ch">#!/bin/bash</span>
+<a id="rest_code_2637d8f777524ef487f387cdeebc39ec-2" name="rest_code_2637d8f777524ef487f387cdeebc39ec-2" href="#rest_code_2637d8f777524ef487f387cdeebc39ec-2"></a><span class="nv">URL</span><span class="o">=</span><span class="s1">'http://translate.google.lt/translate_t?q='</span><span class="nv">$1</span><span class="s1">'#auto|lt'</span>
+<a id="rest_code_2637d8f777524ef487f387cdeebc39ec-3" name="rest_code_2637d8f777524ef487f387cdeebc39ec-3" href="#rest_code_2637d8f777524ef487f387cdeebc39ec-3"></a>w3m -dump <span class="nv">$URL</span> <span class="m">2</span>&gt;/dev/null <span class="p">|</span> egrep <span class="s1">'^Žodynas'</span> -A10
 </pre>
 <p>Rezultatas gaunasi toks:</p>
 <pre class="literal-block">test.sh shell
@@ -86,9 +82,7 @@ daiktavardis
 5. įdėklas
 6. šarvas veiksmažodis
 7. sluoksnis</pre>
-</div>
-<div class="section" id="sed-awk-ir-draugai">
-<h2>sed, awk ir draugai<a href="#sed-awk-ir-draugai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="sed-awk-ir-draugai"><h2>sed, awk ir draugai<a href="#sed-awk-ir-draugai" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Rašant shell skriptus šių komandų gan dažnai prireikia, norint apdoroti
 kažkokią tekstinę informaciją. Čia daug ką kalbėti ir nebūtina, tiesiog
 pateiksiu paprasčiausią pavyzdį komandos, kuri pakeičia visų lentelių
@@ -100,9 +94,7 @@ $ time sed -i 's/site1_prefix_/site2_prefix_/g' data.sql
 35,27s user 51,79s system 59% cpu 2:26,58 total</pre>
 <p>Visas failas pakeistas per 2,5 minutes! Įdomu per kiek laiko šį failą atidarytų
 jūsų teksto redaktorius? :D</p>
-</div>
-<div class="section" id="perl">
-<h2>perl<a href="#perl" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="perl"><h2>perl<a href="#perl" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Visi aukščiau išvardinti įrankiai yra puikūs, tačiau kai reikia atlikti šį tą
 sudėtingesnio, visada verta prisiminti perl.</p>
 <p>Perl yra pilnavertė programavimo kalba, tačiau turi funkcijų panšių į sed ir
@@ -113,19 +105,17 @@ awk, ne gana to, perl dirba labai greitai:</p>
 turėti kiek daugiau žinių, nei su sed.</p>
 <p>Perl gali puikiausiai apdoroti tekstinius duomenis, o rezultatą įrašyti į
 duomenų bazę ar panašiai, kaip tai padaryta šiame pavyzdyje:</p>
-<pre class="code perl"><a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-1"></a><span class="ch">#!/usr/bin/perl -nl</span>
-<a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-2"></a>
-<a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-3"></a><span class="k">BEGIN</span> <span class="p">{</span>
-<a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-4"></a>    <span class="k">use</span> <span class="nn">DBI</span><span class="p">;</span>
-<a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-5"></a>    <span class="k">our</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="nn">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span><span class="s">"dbi:SQLite:dbname=/tmp/lines.db"</span><span class="p">);</span>
-<a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-6"></a>    <span class="k">our</span> <span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$dbh</span><span class="o">-&gt;</span><span class="n">prepare</span><span class="p">(</span><span class="s">"INSERT INTO lines VALUES (?)"</span><span class="p">);</span>
-<a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-7"></a><span class="p">}</span>
-<a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-8"></a>
-<a name="rest_code_b69d92038b574465b43fdb2f26af2c2d-9"></a><span class="nv">$sth</span><span class="o">-&gt;</span><span class="n">execute</span><span class="p">(</span><span class="nv">$_</span><span class="p">);</span>
-</pre>
+<pre class="code perl"><a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1"></a><span class="ch">#!/usr/bin/perl -nl</span>
+<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2"></a>
+<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3"></a><span class="k">BEGIN</span> <span class="p">{</span>
+<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4"></a>    <span class="k">use</span> <span class="nn">DBI</span><span class="p">;</span>
+<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5"></a>    <span class="k">our</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="nn">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span><span class="s">"dbi:SQLite:dbname=/tmp/lines.db"</span><span class="p">);</span>
+<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6"></a>    <span class="k">our</span> <span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$dbh</span><span class="o">-&gt;</span><span class="n">prepare</span><span class="p">(</span><span class="s">"INSERT INTO lines VALUES (?)"</span><span class="p">);</span>
+<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7"></a><span class="p">}</span>
+<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8"></a>
+<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9"></a><span class="nv">$sth</span><span class="o">-&gt;</span><span class="n">execute</span><span class="p">(</span><span class="nv">$_</span><span class="p">);</span>
+</pre></section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../kaip-pateiktis-kuria-tikri-vyrai/" rel="prev" title="Kaip pateiktis kuria tikri vyrai!">Previous post</a>

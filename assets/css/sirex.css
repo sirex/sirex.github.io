@@ -97,3 +97,7 @@ table.right-align-right-col td:last-child {
     font-family: monospace;
     font-size: 1.1em;
 }
+
+li {
+    padding-bottom: 16px;
+}

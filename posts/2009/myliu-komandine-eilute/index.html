@@ -43,8 +43,7 @@ Kadangi esu Web programuotojas, tai kartais testavimams reikia iš ">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<!-- TODO: update command to use tail instead awk, and ``bar`` for progress bar. -->
+    <!-- TODO: update command to use tail instead awk, and ``bar`` for progress bar. -->
 <p>Tiesiog norėjau pasidalinti neįtikėtinai geru jausmu, kuris aplanko, kai
 rezultatai naudojantis komandine eilute pranoksta lūkesčius!</p>
 <p>Kadangi esu Web programuotojas, tai kartais testavimams reikia iš vienos
@@ -55,12 +54,12 @@ lentelių duomenis. Tuos duomenis perkelti į savo kompiutery, sukeisti
 išeksportuotų lentelių prefiksus ir galiausiai visą tai importuoti į savo
 lokalią MySQL duomenų bazę.</p>
 <p>Šiai užduočiai realizuojama man prireikė tik vienos komandos:</p>
-<pre class="code sh"><a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-1"></a>mysql -u -p -h  <span class="se">\</span>
-<a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-2"></a>      -e <span class="s1">'show tables like "some_table_fragment_%"'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-3"></a>  awk <span class="s1">'{ if (NR &gt; 1) print $1 }'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-4"></a>  xargs mysqldump -u -p -h  <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-5"></a>  sed <span class="s1">'s/prefix1/prefix2/g'</span> <span class="p">|</span> <span class="se">\</span>
-<a name="rest_code_d7e6dbc13e4b4ab6b8fa1fff80bde90c-6"></a>  mysql -u -p -hlocalhost
+<pre class="code sh"><a id="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-1" name="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-1" href="#rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-1"></a>mysql -u -p -h  <span class="se">\</span>
+<a id="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-2" name="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-2" href="#rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-2"></a>      -e <span class="s1">'show tables like "some_table_fragment_%"'</span> <span class="p">|</span> <span class="se">\</span>
+<a id="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-3" name="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-3" href="#rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-3"></a>  awk <span class="s1">'{ if (NR &gt; 1) print $1 }'</span> <span class="p">|</span> <span class="se">\</span>
+<a id="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-4" name="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-4" href="#rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-4"></a>  xargs mysqldump -u -p -h  <span class="p">|</span> <span class="se">\</span>
+<a id="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-5" name="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-5" href="#rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-5"></a>  sed <span class="s1">'s/prefix1/prefix2/g'</span> <span class="p">|</span> <span class="se">\</span>
+<a id="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-6" name="rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-6" href="#rest_code_dbc7c96ca2cd43fda67374fa1e7f45d8-6"></a>  mysql -u -p -hlocalhost
 </pre>
 <p>Nors komanda iš pirmo žvilgsnio gal būt atrodo sudėtinga, tačiau įsigilinus į
 atskiras jos dalis matyti, kad nieko sudėtingo nėra. Kad parašyti šią komandą
@@ -74,7 +73,6 @@ nors teksto redaktoriumi, kuris nenulūžta nuo didelių duomenų kiekių ir jam
 sukeisti visus lentelių prefiksus. Vėliau sukeistus duomenis reikėtų išsaugoti
 ir atsidarius lokalų phpMyAdmin juos importuoti. Tai didžiulis ir bereikalingas
 darbas. Naudojantis komandine eilute visą tai galima padaryti žymiai greičiau.</p>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">

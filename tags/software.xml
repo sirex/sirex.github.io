@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about software)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>El. pašto klientas alot</title><link>https://sirex.lt/posts/2013/alot/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Po to, kai Gmail privalomai įjungė &lt;a class="reference external" href="http://gmailblog.blogspot.com/2012/10/introducing-new-compose-in-gmail.html"&gt;naują laiškų rašymo funkciją&lt;/a&gt;,
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about software)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/software.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>El. pašto klientas alot</title><link>https://sirex.lt/posts/2013/alot/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Po to, kai Gmail privalomai įjungė &lt;a class="reference external" href="http://gmailblog.blogspot.com/2012/10/introducing-new-compose-in-gmail.html"&gt;naują laiškų rašymo funkciją&lt;/a&gt;,
 nebeapsikenčiau ir nusprendžiau susirasti normalų pašto klientą.&lt;/p&gt;
 &lt;p&gt;Anksčiau ilgą laiką naudojau &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt;, bet deja, su dideliais laiškų kiekiais
 viename kataloge, &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt; veikia gan lėtai, neturi greito ir patogaus laiškų
@@ -12,7 +12,7 @@ apsiskaičius, radau, kad &lt;a class="reference external" href="https://github.
 sukonfigūravau, gal būt, kam nors pravers.&lt;/p&gt;
 &lt;p&gt;O konfigūravimas nėra paprastas, todėl iš karto įspėju, kad &lt;a class="reference external" href="https://github.com/pazz/alot"&gt;alot&lt;/a&gt; pašto
 klientas skirtas daugiau patyrusiems kompiuterių naudotojams.&lt;/p&gt;
-&lt;div class="section" id="slaptazodziai"&gt;
+&lt;section id="slaptazodziai"&gt;
 &lt;h2&gt;Slaptažodžiai&lt;/h2&gt;
 &lt;p&gt;Pirmiausia saugumas, rekomenduoju įsidiegti &lt;a class="reference external" href="http://www.keepassx.org/"&gt;KeepPassX&lt;/a&gt; programą ir jos
 pagalba susigeneruoti ilgą ir sudėtingą Gmail ar kito pašto serverio
@@ -24,8 +24,8 @@ iš slaptažodžių raktinės. Skripto kodas:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://bitbucket.org/sirex/home/src/default/bin/keyring"&gt;https://bitbucket.org/sirex/home/src/default/bin/keyring&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;div class="section" id="laisku-katalogo-sifravimas"&gt;
+&lt;/section&gt;
+&lt;section id="laisku-katalogo-sifravimas"&gt;
 &lt;h2&gt;Laiškų katalogo šifravimas&lt;/h2&gt;
 &lt;p&gt;Kadangi laiškai bus atsiųsti ir išsaugoti jūsų kompiuteryje, reikėtų juos
 saugoti užšifruotame kataloge, kad niekas be jūsų negalėtų jų perskaityti.
@@ -49,8 +49,8 @@ kompiuteriui. Laiškų katalogas visą laiką bus užrakintas, nebent kas nors
 bandys kreiptis į tą katalogą, kai tai atsitiks, &lt;code class="docutils literal"&gt;encfs&lt;/code&gt; kreipsis į
 raktinę slaptažodžio, gavus slaptažodį, automatiškai, penkioms minutėms
 atrakins laiškų katalogą, o po penkių minučių vėl užrakins.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="laisku-sinchronizavimas"&gt;
+&lt;/section&gt;
+&lt;section id="laisku-sinchronizavimas"&gt;
 &lt;h2&gt;Laiškų sinchronizavimas&lt;/h2&gt;
 &lt;p&gt;Laiškų sinchronizavimui pasirinkau &lt;a class="reference external" href="http://offlineimap.org/"&gt;offlineimap&lt;/a&gt; programą. Jai sukonfigūruoti
 reikia dviejų konfigūracijos failų:&lt;/p&gt;
@@ -85,8 +85,8 @@ režimu:&lt;/p&gt;
 30 000 laiškų užtruko apie dvi valandas.&lt;/p&gt;
 &lt;p&gt;O nuolatiniam laiškų atsiuntimui, foniniu režimu:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;offlineimap -u quiet&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="laisku-indeksavimo-variklis"&gt;
+&lt;/section&gt;
+&lt;section id="laisku-indeksavimo-variklis"&gt;
 &lt;h2&gt;Laiškų indeksavimo variklis&lt;/h2&gt;
 &lt;p&gt;Greitai laiškų paieškai pasirinkau &lt;a class="reference external" href="http://notmuchmail.org/"&gt;notmuch&lt;/a&gt; laiškų indeksavimo variklį.
 Kito pasirinkimo ir nebuvo, kadangi nuo šio variklio tiesiogiai yra
@@ -100,13 +100,13 @@ pagalba:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;notmuch setup&lt;/pre&gt;
 &lt;p&gt;Laiškų indeksas atnaujinamas tokios komandos pagalba:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;notmuch new&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="adresu-knygute"&gt;
+&lt;/section&gt;
+&lt;section id="adresu-knygute"&gt;
 &lt;h2&gt;Adresų knygutė&lt;/h2&gt;
 &lt;p&gt;Dar vienas reikalingas dalykas, adresų knygutė, tam pasirinkau &lt;a class="reference external" href="http://abook.sourceforge.net/"&gt;abook&lt;/a&gt;,
 kadangi su šia adresų knygute puikiai suderinamas &lt;a class="reference external" href="https://github.com/pazz/alot"&gt;alot&lt;/a&gt; el. pašto klientas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="laisku-issiuntimas"&gt;
+&lt;/section&gt;
+&lt;section id="laisku-issiuntimas"&gt;
 &lt;h2&gt;Laiškų išsiuntimas&lt;/h2&gt;
 &lt;p&gt;Kadangi &lt;a class="reference external" href="http://www.postfix.org/"&gt;postfix&lt;/a&gt; yra labai sudėtingas, o &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/SSMTP"&gt;ssmtp&lt;/a&gt; reikalauja saugoti
 slaptažodžius atviru tekstu konfigūraciniame faile, tai &lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt; pagalba
@@ -118,8 +118,8 @@ pasirašiau savo laiškų išsiuntimo skriptą:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;keyring gmail vardenis.pavardenis@gmail.com&lt;/pre&gt;
 &lt;p&gt;Beje, rekomenduoju išbandyti ir &lt;a class="reference external" href="http://msmtp.sourceforge.net/"&gt;msmtp&lt;/a&gt; MUA, kuris atrodo daro lygiai tą patį ir
 tikriausiai geriau.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="el-pasto-klientas"&gt;
+&lt;/section&gt;
+&lt;section id="el-pasto-klientas"&gt;
 &lt;h2&gt;El. pašto klientas&lt;/h2&gt;
 &lt;p&gt;Galiausiai viskas susijungia į vieną vietą &lt;a class="reference external" href="https://github.com/pazz/alot"&gt;alot&lt;/a&gt; programos pagalba.&lt;/p&gt;
 &lt;p&gt;Mano konfigūracijos failas atrodo taip:&lt;/p&gt;
@@ -135,8 +135,8 @@ greitai, nepriklausomai nuo laiškų kiekio.&lt;/p&gt;
 &lt;pre class="literal-block"&gt;f5 = shellescape --refocus=true 'notmuch new' ; refresh&lt;/pre&gt;
 &lt;p&gt;Tai, reiškia, kad paspaudus f5, bus atnaujintas laiškų indeksas ir atnaujintas
 laiškų sąrašas &lt;a class="reference external" href="https://github.com/pazz/alot"&gt;alot&lt;/a&gt; el. pašto kliente.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="demonai"&gt;
+&lt;/section&gt;
+&lt;section id="demonai"&gt;
 &lt;h2&gt;Demonai&lt;/h2&gt;
 &lt;p&gt;Viskam, kas čia aprašyta, reikalingi du demonai, vienas laiškų katalogo
 dešifravimui, kitas laiškų sinchronizavimui.&lt;/p&gt;
@@ -159,11 +159,11 @@ galite jį išjungti taip:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://supervisord.org/"&gt;Supervisord&lt;/a&gt; būklę galite stebėti taip:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;supervisorctl -c ~/.supervisor/supervisord.conf&lt;/pre&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>alot</category><category>mail</category><category>software</category><guid>https://sirex.lt/posts/2013/alot/</guid><pubDate>Sun, 14 Apr 2013 12:36:00 GMT</pubDate></item><item><title>Enlightenment - Beauty at your fingertips</title><link>https://sirex.lt/posts/2009/enlightenment-beauty-at-your-fingertips/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Šis blogo įrašas bus apie Linux langų valdytojus.&lt;/p&gt;
+&lt;/section&gt;</description><category>alot</category><category>mail</category><category>software</category><guid>https://sirex.lt/posts/2013/alot/</guid><pubDate>Sun, 14 Apr 2013 12:36:00 GMT</pubDate></item><item><title>Enlightenment - Beauty at your fingertips</title><link>https://sirex.lt/posts/2009/enlightenment-beauty-at-your-fingertips/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Šis blogo įrašas bus apie Linux langų valdytojus.&lt;/p&gt;
 &lt;p&gt;Ilgą laiką naudojau Fluxbox langų valdytoją. Tačiau prieš kelias dienas
 nusprendžiau dar kartą išmėginti mistiškąjį E17. Prieš pradedant apie jį,
 trumpai apie tai, kuo man neįtiko Fluxbox.&lt;/p&gt;
-&lt;div class="section" id="fluxbox-trukumai"&gt;
+&lt;section id="fluxbox-trukumai"&gt;
 &lt;h2&gt;Fluxbox trūkumai&lt;/h2&gt;
 &lt;p&gt;Man patinka Fluxbox minimalistinis stilius, tačiau mažiau, nereiškia greičiau.
 Nors pats Fluxbox yra labai nedidelis, tačiau lygiai taip pat jis neturi ir
@@ -182,8 +182,8 @@ naujų piktogramų, viena iš tokių – pranešimas apie naują laišką, kur v
 uždengia garso reguliavimo piktogramą. Tai reiškia, kad norėdamas pareguliuoti
 garsą, jei yra naujų laiškų, tai pirmiausiai turiu peržiūrėti naujus laiškus, o
 po to reguliuoti garsą...  :)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="e17-ispudziai"&gt;
+&lt;/section&gt;
+&lt;section id="e17-ispudziai"&gt;
 &lt;h2&gt;E17 įspūdžiai&lt;/h2&gt;
 &lt;p&gt;Tai ko gero yra pagrindiniai trūkumai, kurie pastūmėjo mane dar kartą išbandyti
 E17, kurį jau esu bandęs anksčiau ne vieną kartą. E17 mane sužavėjo nuo pačio
@@ -209,15 +209,15 @@ užduočių juosta, jei joje yra labai daug užduočių ir jos visos netelpa, ta
 tiesiog vedžiojant pele palei juostos kraštus, pati juosta bėgioja ir pagal
 pelės poziciją pasislenka taip kaip reikia. Labai patogu.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/e17taskbar.png"&gt;&lt;img alt="E17 taskbar" src="https://sirex.lt/images/e17taskbar.thumbnail.png"&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="section" id="programu-paleidiklis"&gt;
+&lt;/section&gt;
+&lt;section id="programu-paleidiklis"&gt;
 &lt;h2&gt;Programų paleidiklis&lt;/h2&gt;
 &lt;p&gt;Fluxbox aplinkoje trūksta gero ir patogaus programų paleidiklio. E17 turi
 integruotą paleidiklį, kuris veikia labai greitai ir vizualiai atrodo labai
 gerai. Štai kaip jis atrodo iš arčiau:&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/e17launcher.png"&gt;&lt;img alt="E17 launcher" src="https://sirex.lt/images/e17launcher.thumbnail.png"&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="section" id="sisteminis-trejus"&gt;
+&lt;/section&gt;
+&lt;section id="sisteminis-trejus"&gt;
 &lt;h2&gt;Sisteminis trėjus&lt;/h2&gt;
 &lt;p&gt;E17 neturi jokio sisteminio trėjaus. Radau net gi paaiškinimą, kodėl jo nėra ir
 ko gero nebus:&lt;/p&gt;
@@ -233,28 +233,28 @@ sisteminis trėjus.&lt;/p&gt;
 &lt;p&gt;Kad ir kaip ten bebūtų, kaip ir daugelis kitų E17 naudotojų aš taip pat
 panaudojau &lt;a class="reference external" href="http://stalonetray.sourceforge.net/"&gt;stalonetray&lt;/a&gt;, kuri puikiai
 atlieka savo darbą.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="e17-lentynos-ir-conky"&gt;
+&lt;/section&gt;
+&lt;section id="e17-lentynos-ir-conky"&gt;
 &lt;h2&gt;E17 lentynos ir conky&lt;/h2&gt;
 &lt;p&gt;Jau anksčiau norėjau kur nors ekrano apačioje įmontuoti conky lango juostą,
 kurioje būtų rodomi sistemos parametrai. Su E17 lentynomis „shelves“, tai
 padaryti pavyko kuo puikiausiai! Pasižiūrėkite pagrindinėje ekrano nuotraukoje
 apačioje ir pamatysite kaip tai atrodo.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="langai-ir-ju-remeliai"&gt;
+&lt;/section&gt;
+&lt;section id="langai-ir-ju-remeliai"&gt;
 &lt;h2&gt;Langai ir jų rėmeliai&lt;/h2&gt;
 &lt;p&gt;Jau minėjau užduočių juostą. Tai ji man pasirodė tokia patogi ir lanksti, kad
 nusprendžiau visai atsisakyti langų rėmelių, nes užduočių juosta rėmelių
 funkciją kuo puikiausiai pakeičia. Dabar darbo lauke yra daugiau vietos ir
 ypatingai terminalo langai atrodo labai stilingai...  :)&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/beremu.png"&gt;&lt;img alt="E17 terminalo langas be rėmelių" src="https://sirex.lt/images/beremu.thumbnail.png"&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="section" id="isvados"&gt;
+&lt;/section&gt;
+&lt;section id="isvados"&gt;
 &lt;h2&gt;Išvados&lt;/h2&gt;
 &lt;p&gt;Bent jau pirmas įspūdis yra labai teigiamas. E17 sukasi labai greitai ir
 sklandžiai. Tačiau jį naudoju dar labai trumpai, todėl žiūrėsiu kaip seksis ir
 su kokiomis problemomis susidursiu ateityje.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>e17</category><category>floss</category><category>software</category><guid>https://sirex.lt/posts/2009/enlightenment-beauty-at-your-fingertips/</guid><pubDate>Sat, 14 Feb 2009 00:35:00 GMT</pubDate></item><item><title>Kokias programas naudoju Ubuntu OS?</title><link>https://sirex.lt/posts/2008/programos/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Ubuntu naudoju jau beveik 4 metus, per tą laiką esu išbandęs visą galybę
+&lt;/section&gt;</description><category>e17</category><category>floss</category><category>software</category><guid>https://sirex.lt/posts/2009/enlightenment-beauty-at-your-fingertips/</guid><pubDate>Sat, 14 Feb 2009 00:35:00 GMT</pubDate></item><item><title>Kokias programas naudoju Ubuntu OS?</title><link>https://sirex.lt/posts/2008/programos/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Ubuntu naudoju jau beveik 4 metus, per tą laiką esu išbandęs visą galybę
 įvairių programų. Po įvairių bandymų ir testavimų liko tik tos programos,
 kurios mano nuomone savo darbą atlieka geriausiai. Šiomis programomis
 naudojuosi jau gana ilgai ir per tą laiką neradau jokių geresnių variantų.&lt;/p&gt;
@@ -268,7 +268,7 @@ teksto redaktorius puikiausiai gali veikti tekstiniame rėžime, nes dirbama su
 tekstu, o ne su kokiais nors grafiniais elementais. Teksto redaktorius turėtu
 būti orientuotas į teksto redagavimą, o ne į IDE, perkrautą visokiais
 įrankiais, mygtukais ir meniu.&lt;/p&gt;
-&lt;div class="section" id="klaviaturos-isdestymas-lekpa"&gt;
+&lt;section id="klaviaturos-isdestymas-lekpa"&gt;
 &lt;h2&gt;Klaviatūros išdėstymas (LEKPa)&lt;/h2&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/lekpa.png"&gt;&lt;img alt="Ergonomiškas klaviatūros išdėstymas LEKPa" src="https://sirex.lt/images/u1/lekpa.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Pagrindinis kompiuterio įvesties įrenginys yra klaviatūra. Labai svarbu
@@ -290,8 +290,8 @@ išsidėsčiusias skaičių eilėje, tikrai sudėtinga. Renkant tekstą su LEKPa
 lietuviškos raidės išsidėsčiusios patogiose vietose, todėl tekstas su
 lietuviškomis raidėmis renkamas lygiai taip pat patogiai kaip ir tekstas tik su
 lotyniškomis raidėmis.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="interneto-narsykle-firefox"&gt;
+&lt;/section&gt;
+&lt;section id="interneto-narsykle-firefox"&gt;
 &lt;h2&gt;Interneto naršyklė (FireFox)&lt;/h2&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/ff.png"&gt;&lt;img alt="FireFox" src="https://sirex.lt/images/u1/ff.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Kadangi mano darbas interneto svetainių kūrimas, o ir laisvalaikį dažnai
@@ -304,8 +304,8 @@ extensionų, vėl grįžau prie FireFox. Itin patogūs extensionai yra:&lt;/p&gt
 &lt;li&gt;&lt;p&gt;del.icio.us&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Drag and Drop&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="komandine-eilute-zsh-python-gnome-terminal-xterm"&gt;
+&lt;/section&gt;
+&lt;section id="komandine-eilute-zsh-python-gnome-terminal-xterm"&gt;
 &lt;h2&gt;Komandinė eilutė (zsh, python, gnome-terminal, xterm)&lt;/h2&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/shell.png"&gt;&lt;img alt="Komandinės eilutės įrankiai" src="https://sirex.lt/images/u1/shell.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Jei dažnai naudojiesi kompiuteriu, tai kur kas patogiu įsiminti komandų
@@ -355,8 +355,8 @@ paspaudimai. Žinoma labai patogu ir žymės (&lt;em&gt;angl. tabs&lt;/em&gt;). 
 xterm, kadangi jis yra labai lengvas ir labai greitai pasikrauna. Jį
 dažniausiai naudoju kai noriu ką nors patestuoti ar stebėti outputą su tail -f
 ar panašiai.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="teksto-redaktorius-vim"&gt;
+&lt;/section&gt;
+&lt;section id="teksto-redaktorius-vim"&gt;
 &lt;h2&gt;Teksto redaktorius (vim)&lt;/h2&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/gvimshot.png"&gt;&lt;img alt="Teksto redaktorius - GVim" src="https://sirex.lt/images/u1/gvimshot.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;vim pradėjau naudoti dar nuo Windows laikų, tai yra paprasčiausiai tobulas
@@ -368,8 +368,8 @@ teksto redaktoriai nė iš tolo jam neprilygsta. Naudojuosi vim programuodamas,
 tvarkydamas konfigūracinius failus, rašydamas laiškus ar šiaip tekstus jau
 daugiau nei 5 metus, šis postas taip pat sukurtas vim pagalba.&lt;/p&gt;
 &lt;p&gt;Vim turi galybę pluginų, todėl jį naudoju ir kaip DB klientą ir kaip Outlinerį.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="el-pasto-klientas-mutt"&gt;
+&lt;/section&gt;
+&lt;section id="el-pasto-klientas-mutt"&gt;
 &lt;h2&gt;El. pašto klientas (mutt)&lt;/h2&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/muttshot.png"&gt;&lt;img alt="El. pašto klientas - mutt" src="https://sirex.lt/images/u1/muttshot.thumbnail.png"&gt;&lt;/a&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/mailnotifier.png"&gt;&lt;img alt="/images/u1/mailnotifier.thumbnail.png" src="https://sirex.lt/images/u1/mailnotifier.thumbnail.png"&gt;&lt;/a&gt;
@@ -406,20 +406,22 @@ thunderbird :) ). Suradau labai paprastą sprendimą, leidžiu mutt per screen,
 todėl jis kiek lėčiau užsikrauna tik pirmą kartą, o visus kitus kartus
 užsikrauna akimirksniu, nes screen dėka jis niekada neišjungiamas, nors pats
 terminalo langas ir išjungiamas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="pokalbiu-programa-gajim"&gt;
+&lt;/section&gt;
+&lt;section id="pokalbiu-programa-gajim"&gt;
 &lt;h2&gt;Pokalbių programa (gajim)&lt;/h2&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/gajimshot.png"&gt;&lt;img alt="Pokalbių realiu laiku programa, Jabber klientas - Gajim" src="https://sirex.lt/images/u1/gajimshot.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Gajim - Jabber klientas, kuris tiesiog veikia taip kaip reikia. Kadangi taip
 pat naudojuosi ir ICQ, o pats Jabber protokolas palaiko ir kitus protokolus,
 tai su Galim galiu naudotis ir ICQ, nors pats Gajim dirba tik su Jabber.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="outliner-is-vimoutliner"&gt;
+&lt;/section&gt;
+&lt;section id="outliner-is-vimoutliner"&gt;
 &lt;h2&gt;Outliner'is (VimOutliner)&lt;/h2&gt;
-&lt;div class="figure"&gt;
+&lt;figure&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/vimoutlinershot.png"&gt;&lt;img alt="/images/u1/vimoutlinershot.thumbnail.png" src="https://sirex.lt/images/u1/vimoutlinershot.thumbnail.png"&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;VimOutliner&lt;/p&gt;
-&lt;/div&gt;
+&lt;figcaption&gt;
+&lt;p&gt;VimOutliner&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;Kadangi mano galva dažnai tiesiog plyšta nuo visokių idėjų, kurios gal būt
 niekada ir nebus realizuotos, tačiau naudinga jas kur nors išsaugoti. Taip pat
 rašau straipsnius, TODO, FIXME, specifikacijas ir t.t. Visam tam išsaugoti
@@ -431,8 +433,8 @@ surastum tai ko reikia.&lt;/p&gt;
 tiesiog suteikia papildomų galimybių kategorizuoti tekstą. Tai gi vim
 puikiausiai atlieka savo darbą su tekstais, VimOutliner puikiausiai atlieką
 savo darbą – tekstų kategorizavimą.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="irc-klientas-irssi"&gt;
+&lt;/section&gt;
+&lt;section id="irc-klientas-irssi"&gt;
 &lt;h2&gt;IRC klientas (irssi)&lt;/h2&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/irssishot.png"&gt;&lt;img alt="IRC pokalbių klientas - irssi" src="https://sirex.lt/images/u1/irssishot.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Šiaip jau pakankamai retai naudojuosi IRC, tačiau mano IRC klientas visada
@@ -454,7 +456,7 @@ atidaryta 10 ir daugiau pokalbių langų. Pas manu dažniausiai atidarytų lang�
 būna apie 15.&lt;/p&gt;
 &lt;p&gt;Su irssi galima susikurti savo aliasus ir klavišų kombinacijas, taip pritaikant
 programą savo poreikiams.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>software</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/programos/</guid><pubDate>Sun, 06 Jan 2008 19:48:00 GMT</pubDate></item><item><title>lftp</title><link>https://sirex.lt/posts/2007/lftp/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Pakankamai dažnai tenka dirbti su internetinėmis svetainėmis, todėl dažnai
+&lt;/section&gt;</description><category>floss</category><category>software</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/programos/</guid><pubDate>Sun, 06 Jan 2008 19:48:00 GMT</pubDate></item><item><title>lftp</title><link>https://sirex.lt/posts/2007/lftp/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Pakankamai dažnai tenka dirbti su internetinėmis svetainėmis, todėl dažnai
 tenka perkelti failus į FTP serverį. Tam reikalui ieškojau gero FTP kliento,
 kuris būtų patogus ir greitas.&lt;/p&gt;
 &lt;p&gt;Ko gero vienas iš dažniausiai pasitaikančių veiksmų, kuriuos atlieku
@@ -484,7 +486,7 @@ užduotis:&lt;/p&gt;
 &lt;p&gt;Labai paprasta ir greita.&lt;/p&gt;
 &lt;p&gt;Taip pat nesunkai galima pakeisti katalogų ir failų teises:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;% glob -d chmod 0777 */*
-% glob -f chmod 0666 */*&lt;/pre&gt;&lt;/div&gt;</description><category>floss</category><category>software</category><guid>https://sirex.lt/posts/2007/lftp/</guid><pubDate>Tue, 04 Sep 2007 21:02:00 GMT</pubDate></item><item><title>Sawfish</title><link>https://sirex.lt/posts/2007/sawfish/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Ne kartą teko matyti kaip gražiai valdomi langai Mac OS X aplinkoje.  Viena iš
+% glob -f chmod 0666 */*&lt;/pre&gt;</description><category>floss</category><category>software</category><guid>https://sirex.lt/posts/2007/lftp/</guid><pubDate>Tue, 04 Sep 2007 21:02:00 GMT</pubDate></item><item><title>Sawfish</title><link>https://sirex.lt/posts/2007/sawfish/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Ne kartą teko matyti kaip gražiai valdomi langai Mac OS X aplinkoje.  Viena iš
 įdomiausių funkcijų langų valdyme yra ta, kad paspaudus mygtuką „Maximize“,
 langas išdidinamas ne per visą ekraną, o išdidinamas iki optimalaus dydžio.
 Žinoma tai smulkmena, bet labai naudinga, nes Gnome aplinkoje, nors lange yra
@@ -527,4 +529,4 @@ klavišu ir panašiai.&lt;/p&gt;&lt;/li&gt;
 gali būti bet kokių formų, mygtukai gali būti išdėstyti įvairiausiose vietose
 ir pan. Taip pat kiekvienam langui gali būti priskirtas skirtinga lango
 rėmelio tema.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>floss</category><category>linux</category><category>software</category><guid>https://sirex.lt/posts/2007/sawfish/</guid><pubDate>Sun, 29 Jul 2007 15:00:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><category>floss</category><category>linux</category><category>software</category><guid>https://sirex.lt/posts/2007/sawfish/</guid><pubDate>Sun, 29 Jul 2007 15:00:00 GMT</pubDate></item></channel></rss>

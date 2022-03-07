@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about django-cms)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/django-cms.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python, Django, Django CMS!</title><link>https://sirex.lt/posts/2010/python-django-django-cms/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jau senai svajojau išsilaisvinti iš PHP priklausomybės ir susirasti normalų
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about django-cms)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/django-cms.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python, Django, Django CMS!</title><link>https://sirex.lt/posts/2010/python-django-django-cms/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Jau senai svajojau išsilaisvinti iš PHP priklausomybės ir susirasti normalų
 Python programuotojo darbą. Galiausiai apsisprendžiau ir tai padariau – išėjau
 iš darbo, kuriame dirbau su PHP ir visą laiką skyriau Python programuotojo
 darbo paieškoms. Susitikus su visais penkiais Vilniuje, Python darbą
 siūlančiais įmonių vadovais, įsidarbinti pavyko tik penktojo susitikimo metu.&lt;/p&gt;
 &lt;p&gt;Tiek istorijos. Dabar apie tai, ką nuveikiau gero per pirmą darbo savaitę.&lt;/p&gt;
-&lt;div class="section" id="django-cms"&gt;
+&lt;section id="django-cms"&gt;
 &lt;h2&gt;Django CMS&lt;/h2&gt;
 &lt;p&gt;Naujame darbe daugiausiai programuojame naudojant &lt;a class="reference external" href="http://www.djangoproject.com/"&gt;Django karkasą&lt;/a&gt;. Pats Django yra gan plikas, todėl jei
 svetainė nėra labai išskirtinė, geriau darbą pradėti su &lt;a class="reference external" href="http://www.django-cms.org/"&gt;Django CMS&lt;/a&gt;.&lt;/p&gt;
@@ -34,8 +34,8 @@ dalykų nėra out of the box, tačiau jie pateikiami įskiepių ar modulių pavi
 Viskas, būtų kaip ir gerai, bet kadangi Django CMS yra gan naujas dalykas, tai
 viso to trečiųjų šalių gėrio nėra labai gausu, o tai kas yra, integruojama ne
 visada sklandžiai.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="django-cms-diegimas"&gt;
+&lt;/section&gt;
+&lt;section id="django-cms-diegimas"&gt;
 &lt;h2&gt;Django CMS diegimas&lt;/h2&gt;
 &lt;p&gt;Django CMS diegimas nuo nulio nėra labai paprastas uždavinys. Reikia atlikti
 gan nemažai rankinio darbo, yra nemažai vietų kur galima suklysti ir vėliau
@@ -61,4 +61,4 @@ make run&lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Django CMS turi vidinį serverį, naudoja vidinę Sqlite3 duomenų bazę, todėl
 absoliučiai nieko papildomo įdieginėti nereikės.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>django</category><category>django-cms</category><category>python</category><guid>https://sirex.lt/posts/2010/python-django-django-cms/</guid><pubDate>Thu, 16 Sep 2010 19:12:00 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>django</category><category>django-cms</category><category>python</category><guid>https://sirex.lt/posts/2010/python-django-django-cms/</guid><pubDate>Thu, 16 Sep 2010 19:12:00 GMT</pubDate></item></channel></rss>

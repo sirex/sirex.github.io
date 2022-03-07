@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about openddata)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/openddata.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip galėtų atrodyti Lietuvos atvirų duomenų portalas</title><link>https://sirex.lt/posts/2018/kaip-galetu-atrodyti-lietuvos-atviru-duomenu-portalas/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Lietuvoje įsibėgėja atvirų duomenų portalo (ADP) projektas, kuriam yra skirta
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about openddata)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/openddata.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip galėtų atrodyti Lietuvos atvirų duomenų portalas</title><link>https://sirex.lt/posts/2018/kaip-galetu-atrodyti-lietuvos-atviru-duomenu-portalas/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Lietuvoje įsibėgėja atvirų duomenų portalo (ADP) projektas, kuriam yra skirta
 &lt;a class="reference external" href="https://ivpk.lrv.lt/lt/apie-ivpk/vykdomi-projektai/atviru-duomenu-platformos-igalinancios-efektyvu-viesojo-sektoriaus-informacijos-pakartotini-panaudojima-verslui-ir-jos-valdymo-irankiu-sukurimas"&gt;2,6 mln. €&lt;/a&gt;. Šiuo metu rengiama ADP techninė specifikacija. Šio projekto
 eigą atidžiai stebiu nuo pat pradžių. Jei tiksliau, atvirų duomenų sritį
 pradėjau stebėti nuo 2012 metų, o ADP projektas prasidėjo 2017 metais.&lt;/p&gt;
@@ -41,7 +41,7 @@ užtekti didžiajai daliai projektų įgyvendinti. Jei duomenys bus atveriami
 neatsižvelgiant į poreikį, tada pinigai bus išleisti, dalis duomenų bus
 atverta, tačiau projektai negalės judėti į priekį, jei jiems trūks duomenų,
 kurie nebuvo atverti.&lt;/p&gt;
-&lt;div class="section" id="duomenu-brandos-lygiai"&gt;
+&lt;section id="duomenu-brandos-lygiai"&gt;
 &lt;h2&gt;Duomenų brandos lygiai&lt;/h2&gt;
 &lt;p&gt;Valstybinės įstaigos pateikia gan daug duomenų ir informacijos savo svetainėse. Todėl atsiranda klausimas, kam reikia šio atvirų duomenų projekto, jei ir taip viskas jau yra pateikta. Atsakymas yra toks, kad šio atvirų duomenų projekto esmė yra pakelti duomenų brandos lygį.&lt;/p&gt;
 &lt;p&gt;Remiantis &lt;a class="reference external" href="https://5stardata.info/"&gt;5 ★ Open Data&lt;/a&gt; skale yra tokie brandos lygiai:&lt;/p&gt;
@@ -58,8 +58,8 @@ rinkiniai gali būti susieti tarpusavyje globalių identifikatorių dėka.&lt;/p
 &lt;/ol&gt;
 &lt;p&gt;Viso atvirų duomenų projekto tikslas, kelti duomenų brandos lygį, kad duomenis
 būtų lengviau panaudoti įvairiuose projektuose.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="nuo-ko-pradeti"&gt;
+&lt;/section&gt;
+&lt;section id="nuo-ko-pradeti"&gt;
 &lt;h2&gt;Nuo ko pradėti?&lt;/h2&gt;
 &lt;p&gt;Labai svarbu darbus pradėti nuo teisingo galo. Mano manymu, pradėti reikėtų nuo
 duomenų atvėrimo. Pradžiai reikėtų pasirinkti nesudėtingą ir nedidelės apimties
@@ -100,8 +100,8 @@ atvirų duomenų vitriną. Atvirų duomenų vitrinoje būtų galima greitai susi
 atvertus duomenų rinkinius, juos filtruoti pagal kategorijas, raktinius žodžius
 ir pan. Vitrinoje galima demonstruoti, kokie projektai kokius duomenis naudoja.
 Nėra prasmės paleidinėti vitrinos projekto pradžioje, neturint duomenų.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kiek-etapu-reikia-siam-projektui"&gt;
+&lt;/section&gt;
+&lt;section id="kiek-etapu-reikia-siam-projektui"&gt;
 &lt;h2&gt;Kiek etapų reikia šiam projektui?&lt;/h2&gt;
 &lt;p&gt;Šiuo metu ADP projektas yra suskirstytas į bent penkis skirtingus etapus.
 Projekto pradžioje man kilo tam tikrų klausimų į kuriuos buvo atsakyta, kad
@@ -115,8 +115,8 @@ viskas, be atidėliojimų ateities etapams. Vienam etapui užtektų vieno viešo
 pirkimo, nedidelės komandos paslaugoms, kuri toliau galėtų žongliruoti
 įvairiais tiekėjais, žinoma skaidriai ir kompiuteriui įskaitomu formatu
 atsiskaitydama už panaudotas lėšas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kas-turetu-buti-atsakingas-uz-duomenu-atverima"&gt;
+&lt;/section&gt;
+&lt;section id="kas-turetu-buti-atsakingas-uz-duomenu-atverima"&gt;
 &lt;h2&gt;Kas turėtų būti atsakingas už duomenų atvėrimą?&lt;/h2&gt;
 &lt;p&gt;Duomenų atvėrimo darbų jokiu būdu nereikėtų permesti įstaigų atsakomybei.
 Skirtingos įstaigos turi skirtingus IT pajėgumus, kai kurios iš vis neturi IT
@@ -138,8 +138,8 @@ laiko reikalaujantis darbas, kurį gali atlikti tik kompetentingi specialistai.&
 darbas. Visus tiekėjus dirbančius prie duomenų atvėrimo turėtų kontroliuoti
 viena komanda, kurios tikslas užtikrinti, kad būtų laikomasi vieningų
 standartų.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="duomenu-atverimo-organizavimas"&gt;
+&lt;/section&gt;
+&lt;section id="duomenu-atverimo-organizavimas"&gt;
 &lt;h2&gt;Duomenų atvėrimo organizavimas&lt;/h2&gt;
 &lt;p&gt;Visą duomenų atvėrimo procesą turėtų koordinuoti viena dedikuota komanda. Tokia
 dedikuota komanda vertintu skirtingų tiekėjų atliktą darbą, grąžintų tiekėjui
@@ -169,8 +169,8 @@ reikalauti, kad būtų pateiktos tikslios ataskaitos (atvirų duomenų pavidalu
 atverti galėtų matytis atvirų duomenų stebėsenos sistemoje, kurioje būtų galima
 rodyti koks tiekėjas, kiek pinigų sunaudojo atverdamas konkretų duomenų
 rinkinį. Tai būtų visiškai skaidru.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="duomenu-inventorizavimas"&gt;
+&lt;/section&gt;
+&lt;section id="duomenu-inventorizavimas"&gt;
 &lt;h2&gt;Duomenų inventorizavimas&lt;/h2&gt;
 &lt;p&gt;Duomenų inventorizavimas yra toks procesas, kurio metu valstybinės įstaigos
 surašo, kokius duomenis turi. Duomenis galima inventorizuoti įvairiais detalumo
@@ -209,8 +209,8 @@ prioritetus didinti detalumą arba didinti duomenų brandos lygį.&lt;/p&gt;
 lenteles&lt;/a&gt; arba &lt;a class="reference external" href="https://github.com/sirex/atviru-duomenu-poreikio-tyrimas"&gt;duomenų aprašymo kalbas&lt;/a&gt;, tokias kaip JSON ar YAML. Vėliau,
 turint pakankamai daug pavyzdžių, kaip turėtų būti inventorizuojami duomenys,
 galima pradėti kurti patogesnę naudotoją sąsają duomenų inventorizavimui.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="prasymai-duomenims-gauti"&gt;
+&lt;/section&gt;
+&lt;section id="prasymai-duomenims-gauti"&gt;
 &lt;h2&gt;Prašymai duomenims gauti&lt;/h2&gt;
 &lt;p&gt;Projektų kūrėjai, norėdami gauti jiems reikalingus duomenis turėtų teikti
 prašymus duomenims gauti. Prašymai būtų pateikiami ne A4 lapo dokumentais su
@@ -265,8 +265,8 @@ projektams. Tokiu būdu, net ir neturint prašymų duomenims gauti, būtų galim
 vadovautis strateginiais prioritetais.&lt;/p&gt;
 &lt;p&gt;Atveriant duomenis prioritetą reikėtų teikti didesnį detalumą turintiems
 prašymams.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bendrasis-zodynas"&gt;
+&lt;/section&gt;
+&lt;section id="bendrasis-zodynas"&gt;
 &lt;h2&gt;Bendrasis žodynas&lt;/h2&gt;
 &lt;p&gt;Kadangi skirtingos įstaigos ir skirtingų projektų autoriai naudoja skirtingus
 pavadinimus tam pačiam dalykui pavadinti reikia turėti bendrąjį žodyną, kad
@@ -289,8 +289,8 @@ būtų kuriamas ir pildomas bendromis pastangomis. Vėliau siekiant didesnės
 integracijos, bendrasis žodynas gali būti susietas ir su viešaisiais žodynas.&lt;/p&gt;
 &lt;p&gt;Atliekant inventorizaciją ir teikiant prašymus, reikėtų vadovautis bendruoju
 žodynu.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="duomenu-nuasmeninimas"&gt;
+&lt;/section&gt;
+&lt;section id="duomenu-nuasmeninimas"&gt;
 &lt;h2&gt;Duomenų nuasmeninimas&lt;/h2&gt;
 &lt;p&gt;Duomenų nuasmeninimą galima iš dalies automatizuoti turinti pakankamai detalią
 inventorizaciją. Jei inventorizacijos metu yra nurodyta kurie laukai siejasi su
@@ -306,8 +306,8 @@ viešinami. Pavyzdžiui, viešieji asmenys, tokie kaip Seimo nariai privalo
 viešinti tam tikrą informaciją apie save. Todėl tam tikrais atvejais,
 pavyzdžiui dalyvaujant rinkimuose, asmenys sutinka viešinti tam tikrus
 asmeninius duomenis, kurie gali būti atverti.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="duomenu-surinkimas"&gt;
+&lt;/section&gt;
+&lt;section id="duomenu-surinkimas"&gt;
 &lt;h2&gt;Duomenų surinkimas&lt;/h2&gt;
 &lt;p&gt;Naudojantis inventorizacijos duomenimis, jei inventorizacija yra pakankamai
 detali, tada dalis duomenų atvėrimo darbo jau padaryta. Jei inventorizacijos
@@ -329,8 +329,8 @@ nekopijuoti į tarpinę saugyklą, o pateikti tiesioginę prieigą prie pirminė
 duomenų saugyklos, jei įmanoma. Tokiu būdu bus užtikrinta realaus laiko prieiga
 prie duomenų. Jei duomenys būtų kopijuojami į tarpinę saugyklą, tada būtų
 uždelsimas teikiant duomenis.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="duomenu-transformavimas"&gt;
+&lt;/section&gt;
+&lt;section id="duomenu-transformavimas"&gt;
 &lt;h2&gt;Duomenų transformavimas&lt;/h2&gt;
 &lt;p&gt;Pirminiai duomenys dažnai būna pritaikyti tam tikrai siaurai taikymo sričiai.
 Pavyzdžiui, adreso laukas gali būti paprastos tekstinės formos, be koordinačių
@@ -356,8 +356,8 @@ procesas ir gali trukti, gan ligai. Jei vėliau iš to teksto daromos dar kelios
 transformacijos, labai naudinga turėti pirminį šaltinį, kai pastebima klaida
 paskutiniame transformacijos žingsnyje, kad nereikėtų visko kartoti nuo
 pradžių.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="duomenu-susiejimas"&gt;
+&lt;/section&gt;
+&lt;section id="duomenu-susiejimas"&gt;
 &lt;h2&gt;Duomenų susiejimas&lt;/h2&gt;
 &lt;p&gt;Duomenys surinkti iš įvairių nepriklausomų šaltinių neturi aiškių globalių
 identifikatorių. Todėl, norint turėti galimybę jungti nesusijusių šaltinių
@@ -369,8 +369,8 @@ automatizuotu būdu, kartais duomenys neturi unikalių bendrai naudojamų
 reikšmių, pavyzdžiui įmonių pavadinimai gali kartotis, gali būti užrašomi
 skirtingomis formomis ir pan. Tokiu atveju padeda turėti kanoninį pavadinimų
 sąrašą, kuriuo vadovaujantis atliekamas susiejimas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="duomenu-tikrinimas"&gt;
+&lt;/section&gt;
+&lt;section id="duomenu-tikrinimas"&gt;
 &lt;h2&gt;Duomenų tikrinimas&lt;/h2&gt;
 &lt;p&gt;Yra daugybė vietų, kuriose duomenys galim būti iškraipyti. Duomenis gali būti
 klaidingai suvesti, klaidingai transformuoti, klaidingai susieti ir t.t.&lt;/p&gt;
@@ -380,8 +380,8 @@ skaičius ir mažesnis už vyriausią gyvenantį žmogų. Datos formatas, turi
 atitikti vieningai naudojamą datos formatą. Koordinatės turi būti apibrėžto
 regiono ribose. Tokio pobūdžio patikrinimai padeda rasti įvairias klaidas ir
 užtikrina duomenų kokybę.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="duomenu-sinchronizavimas"&gt;
+&lt;/section&gt;
+&lt;section id="duomenu-sinchronizavimas"&gt;
 &lt;h2&gt;Duomenų sinchronizavimas&lt;/h2&gt;
 &lt;p&gt;Dažnai duomenų naudotojai daro atvirų duomenų kopijas savo vidinėse duomenų
 bazėse. Darant tokias kopijas, tam tikrais laiko intervalais tikrinama ar nėra
@@ -392,8 +392,8 @@ paskutinio sinchronizavimo pakeitimo numerį ir toliau atvirų duomenų platform
 užklausti tik naujų duomenų, nuo nurodyto paskutinio pakeitimo numerio.&lt;/p&gt;
 &lt;p&gt;Toks srautinis duomenų pateikimas išsprendžia gan didelę nuolatinio duomenų
 sinchronizavimo problemą, ypač tais atvejais, kai duomenų kiekis yra didelis.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="rankinis-duomenu-suvedimas-ir-taisymas"&gt;
+&lt;/section&gt;
+&lt;section id="rankinis-duomenu-suvedimas-ir-taisymas"&gt;
 &lt;h2&gt;Rankinis duomenų suvedimas ir taisymas&lt;/h2&gt;
 &lt;p&gt;Deja ne visais atvejais įmanoma arba racionalu daryti automatinį duomenų
 transformavimą arba valymą. Kai kuriais duomenys nėra kaupiami, todėl reikia
@@ -415,8 +415,8 @@ kaip paveiksliukai. Tokiems paveiksliukams, galima būtų suteikti galimybę
 perrašyti tekstą. Metrikų knygų paveiksliukus galima būtų perrašyti
 struktūruotu pavidalu, nurodant gimimo, santuokos, mirties datas, vardus,
 pavardes ir giminystės ryšius.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="esminiu-veiklos-rodikliu-stebesena"&gt;
+&lt;/section&gt;
+&lt;section id="esminiu-veiklos-rodikliu-stebesena"&gt;
 &lt;h2&gt;Esminių veiklos rodiklių stebėsena&lt;/h2&gt;
 &lt;p&gt;Remiantis inventorizacijos ir prašymų duomenimis galėtų būti pateiktas visų
 laukų sąrašas. Tame sąraše galėtų būti rodoma, pateiktų prašymų skaičius,
@@ -438,8 +438,8 @@ Galima įvertinti ar išleisti pinigai duomenims atverti jau atsipirko ar dar ne
 &lt;p&gt;Duomenų naudotojai, naudojantis duomenų portalo API galėtų teikti atsiliepimus
 apie naudojamus duomenis. Galėtų informuoti, kiek projektas turi naudotojų,
 kiek pelno generuoja, galėtų informuoti apie klaidas ir pan.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="atviru-duomenu-metodika"&gt;
+&lt;/section&gt;
+&lt;section id="atviru-duomenu-metodika"&gt;
 &lt;h2&gt;Atvirų duomenų metodika&lt;/h2&gt;
 &lt;p&gt;Įgaunant vis daugiau patirties atveriant duomenis, galima pradėti rašyti ir
 nuolat atnaujinti atvirų duomenų metodiką. Galima dokumentuoti naudojamus
@@ -449,8 +449,8 @@ metaduomenys turi būti pateikiami inventorizacijos metu.&lt;/p&gt;
 dokumentas, o aiški ir patogi naudoti, nuolat atnaujinama dokumentacija, su
 nuorodomis ir versijomis. Dokumentacija galėtų turėti mokomąją medžiagą, kur
 būtų pateikti konkretūs atvėrimo pavyzdžiai su visomis detalėmis.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="atviru-duomenu-vitrina"&gt;
+&lt;/section&gt;
+&lt;section id="atviru-duomenu-vitrina"&gt;
 &lt;h2&gt;Atvirų duomenų vitrina&lt;/h2&gt;
 &lt;p&gt;Viską, kas iki šiol yra paminėta yra techniniai dalykai, sunkiai suprantami
 plačiajai visuomenės daliai. Tikriausiai nedaugeliui yra aišku, kas yra duomenų
@@ -462,8 +462,8 @@ Turėtų veikti duomenų rinkinių paieška.&lt;/p&gt;
 &lt;p&gt;Duomenų vitrina turėtų būti suderinama su DCAT žodynų, kad būtų galimybė
 keistis duomenimis su kitais duomenų portalais, tokiais kaip Europos atvirų
 duomenų portalas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="finansu-paskirstymas"&gt;
+&lt;/section&gt;
+&lt;section id="finansu-paskirstymas"&gt;
 &lt;h2&gt;Finansų paskirstymas&lt;/h2&gt;
 &lt;p&gt;Jau &lt;a class="reference external" href="http://opendata.lt/"&gt;ne kartą&lt;/a&gt; yra &lt;a class="reference external" href="http://ckan.opendata.gov.lt/"&gt;pademonstruota&lt;/a&gt;, kad paleisti duomenų vitriną &lt;a class="reference external" href="https://ckan.org/"&gt;CKAN&lt;/a&gt; pagrindu
 trunka vidutiniškai vieną savaitgalį. Mano vertinimu, norint padaryti duomenų
@@ -506,8 +506,8 @@ arba 2,3% viso finansavimo 10-čiai metų.&lt;/p&gt;
 įstaigų valdančių didelius duomenų registrus nenusiteikusios dalintis
 duomenimis, kadangi iš duomenų gerai uždirba. Tokiais atvejais, bet teisininkų
 pagalbos matyt išsiversti nepavyks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="isvados-arba-tl-dr"&gt;
+&lt;/section&gt;
+&lt;section id="isvados-arba-tl-dr"&gt;
 &lt;h2&gt;Išvados arba TL;DR&lt;/h2&gt;
 &lt;p&gt;Stengiausi viską surašyti glaustai, bet gavosi daug temų ir daug teksto, todėl
 išvadose rasite labai apibendrintą variantą.&lt;/p&gt;
@@ -549,4 +549,4 @@ pinigus tik ten, kur jų tikrai reikia.&lt;/p&gt;
 &lt;p&gt;Nesilaikant geros projekto disciplinos, galima labai greitai išleisti visus
 pinigus dalykams kurie yra mažos vertės ir nelabai kam reikalingi. Reikia
 tikėtis, kad taip nenutiks.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>openddata</category><guid>https://sirex.lt/posts/2018/kaip-galetu-atrodyti-lietuvos-atviru-duomenu-portalas/</guid><pubDate>Tue, 04 Sep 2018 21:00:00 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>openddata</category><guid>https://sirex.lt/posts/2018/kaip-galetu-atrodyti-lietuvos-atviru-duomenu-portalas/</guid><pubDate>Tue, 04 Sep 2018 21:00:00 GMT</pubDate></item></channel></rss>

@@ -45,8 +45,7 @@ sudo apt">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Šiandien pasirodė <a class="reference external" href="http://python.org/download/releases/3.0/">Python 3.0</a>.</p>
+    <p>Šiandien pasirodė <a class="reference external" href="http://python.org/download/releases/3.0/">Python 3.0</a>.</p>
 <p>Nieko nelaukdamas susikompiliavau ir išbandžiau.</p>
 <p>Štai instrukcijos kaip susikompiliuoti į Ubuntu 8.10:</p>
 <pre class="literal-block">sudo apt-get install build-essential checkinstall libgdbm3
@@ -63,7 +62,7 @@ sudo checkinstall --pkgname=py3k make altinstall</pre>
 <p>Jei bus kokių problemų su checkinstall, panašių į šias:</p>
 <pre class="literal-block">ranlib: could not create temporary file whilst writing archive: No more archived files</pre>
 <p>Tai man padėjo tokia komanda:</p>
-<pre class="code bash"><a name="rest_code_b76863cbb84f4dec84105c45b3d4790a-1"></a>sudo mkdir -p /usr/local/lib/python3.0/config
+<pre class="code bash"><a id="rest_code_1e509c02df8542ecaa10b60ca50a2993-1" name="rest_code_1e509c02df8542ecaa10b60ca50a2993-1" href="#rest_code_1e509c02df8542ecaa10b60ca50a2993-1"></a>sudo mkdir -p /usr/local/lib/python3.0/config
 </pre>
 <p>O visas kitas kompiliavimas vyko ganėtinai sklandžiai.</p>
 <p>Galiausiai paleidau python3.0 ir išbandžiau kaip viskas veikia:</p>
@@ -95,7 +94,6 @@ end: string appended after the last value, default a newline.
 Ето работает тоже...</pre>
 <p>Tai gi, kaip matyti iš pavyzdžio, dabar python su unikodu tvarkosi tiesiog
 puikiai ir print, nuo šiol ne kalbos dalis, o paprasčiausia funkcija.</p>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">

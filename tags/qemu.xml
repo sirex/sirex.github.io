@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about qemu)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/qemu.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip įdiegti Windows?</title><link>https://sirex.lt/posts/2009/kaip-idiegti-windows/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Istorija tokia, darbe teko testuoti svetainę su IE naršyklėmis. Kadangi prie
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about qemu)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/qemu.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kaip įdiegti Windows?</title><link>https://sirex.lt/posts/2009/kaip-idiegti-windows/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Istorija tokia, darbe teko testuoti svetainę su IE naršyklėmis. Kadangi prie
 projekto dirbau vienas ir nebuvo porininko naudojančio Windows, tai tas bjaurus
 darbas teko man pačiam... :/&lt;/p&gt;
 &lt;p&gt;Darbe naudoju Ubuntu, tai jokio IE neturėjau. Ačiū &lt;a class="reference external" href="http://www.tatanka.com.br/ies4linux/"&gt;IEs4Linux projektui&lt;/a&gt;, kurio dėka IE6 daugiau/mažiau veikia
@@ -8,7 +8,7 @@ per &lt;a class="reference external" href="http://www.winehq.org/"&gt;Wine (**W*
 &lt;p&gt;Įdiegti Ubuntu galima iš CD, USB, per tinklą ar internetą ir net gi &lt;a class="reference external" href="http://wubi-installer.org/"&gt;tiesiai į
 Windows, nekeičiant disko skirsnių&lt;/a&gt;. Kiek žinau,
 Windows galima įdiegti tik per CD...&lt;/p&gt;
-&lt;div class="section" id="kaip-idiegti-windows"&gt;
+&lt;section id="kaip-idiegti-windows"&gt;
 &lt;h2&gt;Kaip įdiegti Windows?&lt;/h2&gt;
 &lt;p&gt;Virtualizacijos dėka ribotos Windows įdiegimo galimybės nesudaro jokių
 problemų. Šiam reikalui pasirinkau &lt;a class="reference external" href="http://www.qemu.org/"&gt;QEMU&lt;/a&gt;.  Kodėl?
@@ -31,8 +31,8 @@ Tačiau galite į CD-ROM įrenginį įdėti ir legalių Windows CD, tuomet vieto
 &lt;p&gt;Po šios komandos paleidimo pasileist Windows diegimo vedlys. Įdiekite Windows
 kaip visada. Jei nei karto neteko diegti Windows, paprašykite draugo pagalbos.&lt;/p&gt;
 &lt;p&gt;Priklausomai nuo jūsų kompiuterio spartos, diegimas truks apie valandą.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="po-idiegimo"&gt;
+&lt;/section&gt;
+&lt;section id="po-idiegimo"&gt;
 &lt;h2&gt;Po įdiegimo&lt;/h2&gt;
 &lt;p&gt;Kai jau turėsite veikiančius Windows, išsaugotus virtualiame diske, nebereikės
 kartoti diegimo, norint vėl juos paliesti. Jau įdiegtus Windows iškviesite
@@ -47,7 +47,7 @@ pataisyti klaidas.&lt;/p&gt;
 &lt;p&gt;Naudojantis QEMU galima testuoti ir kitas operacines sistemas, pavyzdžiui
 Ubuntu Alpha ar Beta versijas. Daugiau apie QEMU galite pasiskaityti &lt;a class="reference external" href="http://www.qemu.org/"&gt;qemu.org&lt;/a&gt; svetainėje.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image0" src="https://sirex.lt/posts/2009/kaip-idiegti-windows/files/qemu-windows.png"&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>qemu</category><category>ubuntu</category><category>windows</category><guid>https://sirex.lt/posts/2009/kaip-idiegti-windows/</guid><pubDate>Mon, 19 Oct 2009 20:52:00 GMT</pubDate></item><item><title>Neo FreeRunner belaukiant...</title><link>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Pagaliau pasirodė ilgai lauktas Openmoko telefonas: &lt;strong&gt;Neo FreeRunner&lt;/strong&gt;.
+&lt;/section&gt;</description><category>floss</category><category>qemu</category><category>ubuntu</category><category>windows</category><guid>https://sirex.lt/posts/2009/kaip-idiegti-windows/</guid><pubDate>Mon, 19 Oct 2009 20:52:00 GMT</pubDate></item><item><title>Neo FreeRunner belaukiant...</title><link>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Pagaliau pasirodė ilgai lauktas Openmoko telefonas: &lt;strong&gt;Neo FreeRunner&lt;/strong&gt;.
 Šį įrenginį jau užsakiau ir 2-3 savaičių bėgyje turėtu atkeliauti į
 mano rankas :)&lt;/p&gt;
 &lt;p&gt;O belaukiant, galima viska išsibandyti emuliatoriuje. Štai kaip tai
@@ -123,4 +123,4 @@ savo kompiuterio XTerm lange!&lt;/p&gt;
 &lt;p&gt;Štai daugiau vaizdų, kaip viskas atrodo:&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_menu.jpg"&gt;&lt;img alt="Pagrindinis meniu" src="https://sirex.lt/images/u1/neofr_menu.thumbnail.jpg"&gt;&lt;/a&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr-terminal.jpg"&gt;&lt;img alt="Terminalo emuliatorius" src="https://sirex.lt/images/u1/neofr-terminal.thumbnail.jpg"&gt;&lt;/a&gt;
-&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_vi.jpg"&gt;&lt;img alt="vim - teksto redaktorius" src="https://sirex.lt/images/u1/neofr_vi.thumbnail.jpg"&gt;&lt;/a&gt;&lt;/div&gt;</description><category>floss</category><category>openmoko</category><category>qemu</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</guid><pubDate>Fri, 18 Jul 2008 22:51:00 GMT</pubDate></item></channel></rss>
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_vi.jpg"&gt;&lt;img alt="vim - teksto redaktorius" src="https://sirex.lt/images/u1/neofr_vi.thumbnail.jpg"&gt;&lt;/a&gt;</description><category>floss</category><category>openmoko</category><category>qemu</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</guid><pubDate>Fri, 18 Jul 2008 22:51:00 GMT</pubDate></item></channel></rss>

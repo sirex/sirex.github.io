@@ -44,8 +44,7 @@ Daugelis ">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Paskutiniu metu teko paruošti kelias <a class="reference external" href="http://www.likit.lt/term/p/pateiktis.html">pateiktis</a>, vieną darbe, kitą <a class="reference external" href="http://www.ubuntu.lt/node/522">OpenCamp
+    <p>Paskutiniu metu teko paruošti kelias <a class="reference external" href="http://www.likit.lt/term/p/pateiktis.html">pateiktis</a>, vieną darbe, kitą <a class="reference external" href="http://www.ubuntu.lt/node/522">OpenCamp
 renginiui</a>. Nusprendžiau pasidalinti
 patirtimi, kaip paprastai sukurti pateiktis naudojant :math:LaTeX beamer klasę.</p>
 <p>Daugelis tikriausiai yra įpratę rašyti pateiktis naudodamiesi M$ PowerPoint
@@ -56,13 +55,10 @@ panašiai. Tenka dažnai matyti, kai žmonės su efektais persistengia ir pateik
 gaunasi gan neskoningai efektais perkrautos.</p>
 <p>LaTeX yra <a class="reference external" href="http://www.likit.lt/term/z2/z2enklinimo_kalba.html">ženklinimo kalba</a> skirta dokumentų
 ruošimui. Daugelis mokslinių darbų yra parašyti būtent naudojantis LaTeX.</p>
-<div class="section" id="kaip-idiegti">
-<h2>Kaip įdiegti?<a href="#kaip-idiegti" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="kaip-idiegti"><h2>Kaip įdiegti?<a href="#kaip-idiegti" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Įdiegti į Ubuntu LaTeX yra labai paprasta, užtenka įdiegti du paketus iš
 programų centro (Programos - Ubuntu programų centras): <em>texlive</em> ir <em>littex</em>.</p>
-</div>
-<div class="section" id="kaip-naudoti">
-<h2>Kaip naudoti?<a href="#kaip-naudoti" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kaip-naudoti"><h2>Kaip naudoti?<a href="#kaip-naudoti" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>LaTeX galima rašyti su bet kokiu teksto redaktoriumi, tačiau yra specialiai tam
 skirtų programų, kurios palengvina darbą. Aš pats naudoju <a class="reference external" href="http://www.xm1math.net/texmaker/">Texmaker</a> programą. Viskas ką reikia žinoti apie šią
 programa tai ši vieta:</p>
@@ -71,72 +67,61 @@ programa tai ši vieta:</p>
 sugeneruoti <span class="caps">PDF</span> dokumentą, vėliau rodyklę prie „View <span class="caps">PDF</span>“, kad peržiūrėti <span class="caps">PDF</span> dokumentą.</p>
 <p>Visos kitos funkcijos <a class="reference external" href="http://www.xm1math.net/texmaker/">Texmaker</a> programoje
 yra intuityvios.</p>
-</div>
-<div class="section" id="kaip-sukurti-pateikti-su-texmaker">
-<h2>Kaip sukurti pateiktį su Texmaker?<a href="#kaip-sukurti-pateikti-su-texmaker" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kaip-sukurti-pateikti-su-texmaker"><h2>Kaip sukurti pateiktį su Texmaker?<a href="#kaip-sukurti-pateikti-su-texmaker" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Naują pateiktį sukursite labai paprastai. Pirmiausia iš Texmaker meniu
 pasirinkite: File - New. Tada Wizard - Quick Start. Atsiradusiame lange
 nurodykite tokius duomenis:</p>
 <p><img alt="image1" src="files/texmaker-quickstart.png"></p>
 <p>Kai paspausite <span class="caps">OK</span>, Texmaker sugeneruos dokumento griaučius:</p>
-<pre class="code latex"><a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-1"></a><span class="k">\documentclass</span><span class="na">[12pt,a4paper]</span><span class="nb">{</span>beamer<span class="nb">}</span>
-<a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-2"></a><span class="k">\usepackage</span><span class="na">[utf8x]</span><span class="nb">{</span>inputenc<span class="nb">}</span>
-<a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-3"></a><span class="k">\usepackage</span><span class="nb">{</span>ucs<span class="nb">}</span>
-<a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-4"></a><span class="k">\author</span><span class="nb">{</span>Mantas Zimnickas<span class="nb">}</span>
-<a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-5"></a><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
-<a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-6"></a>•
-<a name="rest_code_ea56844bf34b4558a4507c1dd99e5a13-7"></a><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+<pre class="code latex"><a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-1" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-1" href="#rest_code_eeaeed275d3e493ab56f28ad1307ba69-1"></a><span class="k">\documentclass</span><span class="na">[12pt,a4paper]</span><span class="nb">{</span>beamer<span class="nb">}</span>
+<a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-2" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-2" href="#rest_code_eeaeed275d3e493ab56f28ad1307ba69-2"></a><span class="k">\usepackage</span><span class="na">[utf8x]</span><span class="nb">{</span>inputenc<span class="nb">}</span>
+<a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-3" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-3" href="#rest_code_eeaeed275d3e493ab56f28ad1307ba69-3"></a><span class="k">\usepackage</span><span class="nb">{</span>ucs<span class="nb">}</span>
+<a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-4" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-4" href="#rest_code_eeaeed275d3e493ab56f28ad1307ba69-4"></a><span class="k">\author</span><span class="nb">{</span>Mantas Zimnickas<span class="nb">}</span>
+<a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-5" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-5" href="#rest_code_eeaeed275d3e493ab56f28ad1307ba69-5"></a><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-6" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-6" href="#rest_code_eeaeed275d3e493ab56f28ad1307ba69-6"></a>•
+<a id="rest_code_eeaeed275d3e493ab56f28ad1307ba69-7" name="rest_code_eeaeed275d3e493ab56f28ad1307ba69-7" href="#rest_code_eeaeed275d3e493ab56f28ad1307ba69-7"></a><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre>
 <p>Nepamirškite įrašyti dvi eilutes, kurių pagalba galėsite rašyti lietuviškai:</p>
-<pre class="code latex"><a name="rest_code_9e93caae3c2149bbb12725ad75c7c7ab-1"></a><span class="k">\usepackage</span><span class="na">[L7x]</span><span class="nb">{</span>fontenc<span class="nb">}</span>
-<a name="rest_code_9e93caae3c2149bbb12725ad75c7c7ab-2"></a><span class="k">\usepackage</span><span class="na">[lithuanian]</span><span class="nb">{</span>babel<span class="nb">}</span>
-</pre>
-</div>
-<div class="section" id="pirmoji-pateiktis">
-<h2>Pirmoji pateiktis<a href="#pirmoji-pateiktis" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<pre class="code latex"><a id="rest_code_79549930980643238ac59c92fe609d2e-1" name="rest_code_79549930980643238ac59c92fe609d2e-1" href="#rest_code_79549930980643238ac59c92fe609d2e-1"></a><span class="k">\usepackage</span><span class="na">[L7x]</span><span class="nb">{</span>fontenc<span class="nb">}</span>
+<a id="rest_code_79549930980643238ac59c92fe609d2e-2" name="rest_code_79549930980643238ac59c92fe609d2e-2" href="#rest_code_79549930980643238ac59c92fe609d2e-2"></a><span class="k">\usepackage</span><span class="na">[lithuanian]</span><span class="nb">{</span>babel<span class="nb">}</span>
+</pre></section><section id="pirmoji-pateiktis"><h2>Pirmoji pateiktis<a href="#pirmoji-pateiktis" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Štai pilnas pateikties pavyzdys su dviem skaidrėmis:</p>
-<pre class="code latex"><a name="rest_code_b7d38dab905949abba87753e1b4cd402-1"></a><span class="k">\documentclass</span><span class="na">[12pt,a4paper]</span><span class="nb">{</span>beamer<span class="nb">}</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-2"></a>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-3"></a><span class="k">\usepackage</span><span class="na">[utf8x]</span><span class="nb">{</span>inputenc<span class="nb">}</span> <span class="k">\usepackage</span><span class="nb">{</span>ucs<span class="nb">}</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-4"></a><span class="k">\usepackage</span><span class="na">[L7x]</span><span class="nb">{</span>fontenc<span class="nb">}</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-5"></a><span class="k">\usepackage</span><span class="na">[lithuanian]</span><span class="nb">{</span>babel<span class="nb">}</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-6"></a>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-7"></a><span class="k">\author</span><span class="nb">{</span>Mantas Zimnickas<span class="nb">}</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-8"></a><span class="k">\title</span><span class="nb">{</span>Mano pirmoji pateiktis<span class="nb">}</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-9"></a>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-10"></a><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-11"></a>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-12"></a><span class="k">\frame</span><span class="nb">{</span><span class="k">\titlepage</span><span class="nb">}</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-13"></a>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-14"></a><span class="k">\frame</span> <span class="nb">{</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-15"></a>    <span class="k">\frametitle</span><span class="nb">{</span>Sveikas pasauli!<span class="nb">}</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-16"></a>    Mano pirmoji pateiktis.
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-17"></a><span class="nb">}</span>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-18"></a>
-<a name="rest_code_b7d38dab905949abba87753e1b4cd402-19"></a><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+<pre class="code latex"><a id="rest_code_09185b5e1a00490094f7d631e1e812d4-1" name="rest_code_09185b5e1a00490094f7d631e1e812d4-1" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-1"></a><span class="k">\documentclass</span><span class="na">[12pt,a4paper]</span><span class="nb">{</span>beamer<span class="nb">}</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-2" name="rest_code_09185b5e1a00490094f7d631e1e812d4-2" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-2"></a>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-3" name="rest_code_09185b5e1a00490094f7d631e1e812d4-3" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-3"></a><span class="k">\usepackage</span><span class="na">[utf8x]</span><span class="nb">{</span>inputenc<span class="nb">}</span> <span class="k">\usepackage</span><span class="nb">{</span>ucs<span class="nb">}</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-4" name="rest_code_09185b5e1a00490094f7d631e1e812d4-4" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-4"></a><span class="k">\usepackage</span><span class="na">[L7x]</span><span class="nb">{</span>fontenc<span class="nb">}</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-5" name="rest_code_09185b5e1a00490094f7d631e1e812d4-5" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-5"></a><span class="k">\usepackage</span><span class="na">[lithuanian]</span><span class="nb">{</span>babel<span class="nb">}</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-6" name="rest_code_09185b5e1a00490094f7d631e1e812d4-6" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-6"></a>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-7" name="rest_code_09185b5e1a00490094f7d631e1e812d4-7" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-7"></a><span class="k">\author</span><span class="nb">{</span>Mantas Zimnickas<span class="nb">}</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-8" name="rest_code_09185b5e1a00490094f7d631e1e812d4-8" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-8"></a><span class="k">\title</span><span class="nb">{</span>Mano pirmoji pateiktis<span class="nb">}</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-9" name="rest_code_09185b5e1a00490094f7d631e1e812d4-9" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-9"></a>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-10" name="rest_code_09185b5e1a00490094f7d631e1e812d4-10" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-10"></a><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-11" name="rest_code_09185b5e1a00490094f7d631e1e812d4-11" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-11"></a>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-12" name="rest_code_09185b5e1a00490094f7d631e1e812d4-12" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-12"></a><span class="k">\frame</span><span class="nb">{</span><span class="k">\titlepage</span><span class="nb">}</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-13" name="rest_code_09185b5e1a00490094f7d631e1e812d4-13" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-13"></a>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-14" name="rest_code_09185b5e1a00490094f7d631e1e812d4-14" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-14"></a><span class="k">\frame</span> <span class="nb">{</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-15" name="rest_code_09185b5e1a00490094f7d631e1e812d4-15" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-15"></a>    <span class="k">\frametitle</span><span class="nb">{</span>Sveikas pasauli!<span class="nb">}</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-16" name="rest_code_09185b5e1a00490094f7d631e1e812d4-16" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-16"></a>    Mano pirmoji pateiktis.
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-17" name="rest_code_09185b5e1a00490094f7d631e1e812d4-17" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-17"></a><span class="nb">}</span>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-18" name="rest_code_09185b5e1a00490094f7d631e1e812d4-18" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-18"></a>
+<a id="rest_code_09185b5e1a00490094f7d631e1e812d4-19" name="rest_code_09185b5e1a00490094f7d631e1e812d4-19" href="#rest_code_09185b5e1a00490094f7d631e1e812d4-19"></a><span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre>
 <p>Išsaugokite šį dokumentą į atskirą katalogą ir naudokitės aukščiau aprašytomis rodyklėmis.</p>
-</div>
-<div class="section" id="isvaizda">
-<h2>Išvaizda<a href="#isvaizda" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="isvaizda"><h2>Išvaizda<a href="#isvaizda" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Beamer turi rinkinį temų, kaip jos atrodo galite apžiūrėti čia:</p>
 <blockquote>
 <p><a class="reference external" href="http://www.pletscher.org/writings/latex/beamerthemes.php">http://www.pletscher.org/writings/latex/beamerthemes.php</a></p>
 </blockquote>
 <p>Temą nurodyti galima taip:</p>
-<pre class="code latex"><a name="rest_code_20ce9978d2a34c79b46b450b0d178068-1"></a><span class="k">\usetheme</span><span class="nb">{</span>Malmoe<span class="nb">}</span>
-</pre>
-</div>
-<div class="section" id="mano-pateiktis">
-<h2>Mano pateiktis<a href="#mano-pateiktis" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<pre class="code latex"><a id="rest_code_6cbb9401272f4dff9c4afd5f01989ab0-1" name="rest_code_6cbb9401272f4dff9c4afd5f01989ab0-1" href="#rest_code_6cbb9401272f4dff9c4afd5f01989ab0-1"></a><span class="k">\usetheme</span><span class="nb">{</span>Malmoe<span class="nb">}</span>
+</pre></section><section id="mano-pateiktis"><h2>Mano pateiktis<a href="#mano-pateiktis" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Mano pateiktį, kurią paruošiau OpenCamp renginiu galite peržiūrėti čia:</p>
 <blockquote>
 <p><a class="reference external" href="http://www.slideshare.net/sirexas/django-akllt-naujas-veidas">http://www.slideshare.net/sirexas/django-akllt-naujas-veidas</a></p>
 </blockquote>
 <p>TeX failą prisegu žemiau.</p>
+</section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../pyjunior/" rel="prev" title="PyJunior">Previous post</a>

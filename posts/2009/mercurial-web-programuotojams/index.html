@@ -44,8 +44,7 @@ Bazaar gali siųsti p">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Kadangi <a class="reference external" href="http://www.ubuntu.lt/">ubuntu.lt</a> kodą buvo nuspręsta perkelti po
+    <p>Kadangi <a class="reference external" href="http://www.ubuntu.lt/">ubuntu.lt</a> kodą buvo nuspręsta perkelti po
 <a class="reference external" href="https://code.launchpad.net/~sirex/ubuntu.lt/main">Launchpad.net stogu</a>, tai
 teko šiek tiek pasidomėti <a class="reference external" href="http://bazaar-vcs.org/">bazaar</a> versijų kontrolės
 sistema. Radau įdomų dalyką – <a class="reference external" href="http://doc.bazaar-vcs.org/latest/en/tutorials/tutorial.html#publishing-your-branch">Publishing your branch</a>!
@@ -55,8 +54,7 @@ tai kas pakeista siunčia per <span class="caps">FTP</span> į Web serverį. Aš
 tai labai dažnai. Iki šiol pakeitimų į Web serverį siuntimui naudojau Makefile
 + lftp. Tačiau pasiskaitęs apie Bazaar nusprendžiau pasidomėti ar Mercurial
 turi kokias nors priemones „push’inti“ į <span class="caps">FTP</span>. Pasirodo turi! :)</p>
-<div class="section" id="atradimas">
-<h2>Atradimas<a href="#atradimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="atradimas"><h2>Atradimas<a href="#atradimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Radau Mercurial <a class="reference external" href="http://bitbucket.org/misery/hgftp/wiki/Home">FTPExtension</a>, kuris daro būtent tai, ko reikia!</p>
 <p>Trumpai aprašysiu kaip dirbu su kodu ir kaip jį siunčiu į Web serverį, per <span class="caps">FTP</span>.</p>
 <ol class="arabic">
@@ -79,27 +77,22 @@ ištrinta. Tačiau neliečia nei vieno failo Web serveryje, kurio nėra Mercuria
 repozitoriume. Tai reiškia, kad serveryje gali būti kokių tik nori failų,
 tačiau atnaujinama bus tik tai, kas konkrečiai keičiasi kode. Bent jau mano
 darbe tai yra labai naudingas dalykas.</p>
-</div>
-<div class="section" id="kaip-idiegti-ftpextension">
-<h2>Kaip įdiegti FTPExtension?<a href="#kaip-idiegti-ftpextension" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kaip-idiegti-ftpextension"><h2>Kaip įdiegti FTPExtension?<a href="#kaip-idiegti-ftpextension" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Labai paprastai:</p>
 <pre class="literal-block">$ mkdir -p ~/.hgext
 $ cd ~/.hgext
 $ hg clone http://bitbucket.org/misery/hgftp/</pre>
 <p>Po šių veiksmų, galite įjungti šį praplėtimą globaliai (<code class="docutils literal"><span class="pre">~/.hgrc</span></code>), arba tik
 konkrečiam repozitoriumui (<em>./.hg/hgrc</em>) į nurodytą failą įrašydami:</p>
-<pre class="code ini"><a name="rest_code_37446778682745258267d94b832bd3e5-1"></a><span class="k">[extensions]</span>
-<a name="rest_code_37446778682745258267d94b832bd3e5-2"></a><span class="na">hgext.ftp</span> <span class="o">=</span> <span class="s">~/.hgext/hgftp/ftp.py</span>
-</pre>
-</div>
-<div class="section" id="ftpextension-konfiguravimas">
-<h2>FTPExtension konfigūravimas<a href="#ftpextension-konfiguravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<pre class="code ini"><a id="rest_code_7ba1f9ba50304eb3b560971b8ad3566e-1" name="rest_code_7ba1f9ba50304eb3b560971b8ad3566e-1" href="#rest_code_7ba1f9ba50304eb3b560971b8ad3566e-1"></a><span class="k">[extensions]</span><span class="w"></span>
+<a id="rest_code_7ba1f9ba50304eb3b560971b8ad3566e-2" name="rest_code_7ba1f9ba50304eb3b560971b8ad3566e-2" href="#rest_code_7ba1f9ba50304eb3b560971b8ad3566e-2"></a><span class="na">hgext.ftp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">~/.hgext/hgftp/ftp.py</span><span class="w"></span>
+</pre></section><section id="ftpextension-konfiguravimas"><h2>FTPExtension konfigūravimas<a href="#ftpextension-konfiguravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Kai jau turite veikiantį praplėtimą, konkrečiam Web projekto repozitoriumui
 galite nurodyti <span class="caps">FTP</span> prisijungimą, kur bus siunčiami duomenys. Tai galite
 padaryti repozitormiumo konfigūraciniame faile <code class="docutils literal"><span class="pre">./.hg/hgrc</span></code>, nurodydami:</p>
-<pre class="code ini"><a name="rest_code_caa6eedf8c294f828d637ed1b1378a1d-1"></a><span class="k">[paths]</span>
-<a name="rest_code_caa6eedf8c294f828d637ed1b1378a1d-2"></a><span class="na">ftp</span>    <span class="o">=</span> <span class="s">ftp://[user[:pass]@]host[:port]/[path]</span>
-<a name="rest_code_caa6eedf8c294f828d637ed1b1378a1d-3"></a><span class="na">myhost</span> <span class="o">=</span> <span class="s">ftp://andre@incubo.de/htdocs</span>
+<pre class="code ini"><a id="rest_code_fd0b019a88ab472db113049abe298b70-1" name="rest_code_fd0b019a88ab472db113049abe298b70-1" href="#rest_code_fd0b019a88ab472db113049abe298b70-1"></a><span class="k">[paths]</span><span class="w"></span>
+<a id="rest_code_fd0b019a88ab472db113049abe298b70-2" name="rest_code_fd0b019a88ab472db113049abe298b70-2" href="#rest_code_fd0b019a88ab472db113049abe298b70-2"></a><span class="na">ftp</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">ftp://[user[:pass]@]host[:port]/[path]</span><span class="w"></span>
+<a id="rest_code_fd0b019a88ab472db113049abe298b70-3" name="rest_code_fd0b019a88ab472db113049abe298b70-3" href="#rest_code_fd0b019a88ab472db113049abe298b70-3"></a><span class="na">myhost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ftp://andre@incubo.de/htdocs</span><span class="w"></span>
 </pre>
 <p>Jei prisijungimo eilutę priskirsite specialią paskirtį turinčiam žodeliui
 ‘ftp’, tuomet šis <span class="caps">FTP</span> serveris bus naudojamas pagal nutylėjimą ir galėsite
@@ -120,10 +113,8 @@ atnaujinta ir pan.</p>
 <p>Daugiau informacijos praplėtimo svetainėje:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://bitbucket.org/misery/hgftp/wiki/Home">FTPExtension</a></p></li>
-</ul>
+</ul></section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../kaip-paleisti-web-serveri-per-5-sekundes-su-python/" rel="prev" title="Kaip paleisti Web serverį, per 5 sekundes su Python">Previous post</a>

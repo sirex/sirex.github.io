@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about php)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/php.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kodėl PHP nėra programavimo kalba?</title><link>https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Nesupraskite šio įrašo antraštės tiesiogiai, taip mes juokaujam darbe
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about php)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/php.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Kodėl PHP nėra programavimo kalba?</title><link>https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Nesupraskite šio įrašo antraštės tiesiogiai, taip mes juokaujam darbe
 programuotojų tarpe, kai susiduriam su eiliniu PHP trūkumu...&lt;/p&gt;
 &lt;p&gt;Nors iš tikrųjų, PHP nėra pilnavertė programavimo kalba, ji yra scenarijų
 kūrimo kalba, o jei tiksliau – web scenarijų kūrimo kalba.  Nepaisant didelių
 PHP trūkumų, ji yra labai populiari ir dėl didelio populiarumo naudojama
 daugelyje vietų, dažnai kur reikia ir kur nereikia.&lt;/p&gt;
-&lt;div class="section" id="kur-tinka-naudoti-php-scenariju-kalba"&gt;
+&lt;section id="kur-tinka-naudoti-php-scenariju-kalba"&gt;
 &lt;h2&gt;Kur tinka naudoti PHP scenarijų kalbą?&lt;/h2&gt;
 &lt;p&gt;Jei planuojate paleisti nedidelės apimties interneto svetainę, pavyzdžiui savo
 asmeninę svetainę ar įmonės pristatomąją svetainę, tuomet PHP puikiai tam
 reikalui tiks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kada-geriau-nenaudoti-php"&gt;
+&lt;/section&gt;
+&lt;section id="kada-geriau-nenaudoti-php"&gt;
 &lt;h2&gt;Kada geriau nenaudoti PHP?&lt;/h2&gt;
 &lt;p&gt;PHP iš esmės sukurta interneto svetainių kūrimui, todėl niekam kitam, išskyrus
 interneto svetainių kūrimui, ji nėra tinkama. Žinoma, PHP galimybės leidžia
@@ -22,8 +22,8 @@ leidžia... Tas pats ir su PHP.&lt;/p&gt;
 apimties interneto svetainėms! Tikrai nerekomenduočiau naudoti PHP didelių
 įmonės intraneto sistemų kūrimui, dideliems interneto portalams ar kitoms
 sudėtingesnėms sistemoms.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="sakote-blogam-sokejui-ir-batai-trukdo"&gt;
+&lt;/section&gt;
+&lt;section id="sakote-blogam-sokejui-ir-batai-trukdo"&gt;
 &lt;h2&gt;Sakote blogam šokėjui ir batai trukdo?&lt;/h2&gt;
 &lt;p&gt;Tas tiesa, geras programuotojas ir asemblerio instrukcijomis gali programuoti,
 bet kam taip kankintis, jei yra kur kas pažangesnių programavimo technologijų.&lt;/p&gt;
@@ -35,33 +35,33 @@ galiu jas lyginti.&lt;/p&gt;
 trūkumus. Būtent tokių klausimų pastūmėtas ir nusprendžiau surašyti visus
 pastebėtu PHP trūkumus vienoje vietoje. Jei taip pat, kaip ir aš, nuolat
 susiduriate su PHP trūkumais, tai laukiu papildymo komentaruose.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tai-kodel-gi-php-nera-programavimo-kalba"&gt;
+&lt;/section&gt;
+&lt;section id="tai-kodel-gi-php-nera-programavimo-kalba"&gt;
 &lt;h2&gt;Tai kodėl gi PHP nėra programavimo kalba?&lt;/h2&gt;
 &lt;p&gt;Arba kitaip sakant, kokie trūkumai apsunkina programavimo darbus su PHP?&lt;/p&gt;
-&lt;div class="section" id="weak-typing"&gt;
+&lt;section id="weak-typing"&gt;
 &lt;h3&gt;weak typing&lt;/h3&gt;
 &lt;p&gt;PHP leidžia priskirti bet ką, bet kam ir bet kaip. Iš pirmo žvilgsnio atrodo,
 kad tai yra labai lankstu, bet kai reikia ieškoti skriptuose paliktų klaidų,
 tai pradedi galvoti kas per žmonės sugalvojo tokią nesamonę...&lt;/p&gt;
 &lt;p&gt;Štai keli pavyzdžiai:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-6"&gt;&lt;/a&gt;    &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-7"&gt;&lt;/a&gt;
-&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-8"&gt;&lt;/a&gt;    &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-9"&gt;&lt;/a&gt;    &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-10"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;a name="rest_code_7a93871866e14c40af8c34707767c278-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-1" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-1" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-2" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-2" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-3" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-3" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-4" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-4" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-4"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-5" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-5" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-6" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-6" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-6"&gt;&lt;/a&gt;    &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-7" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-7" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-7"&gt;&lt;/a&gt;
+&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-8" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-8" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-8"&gt;&lt;/a&gt;    &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-9" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-9" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-9"&gt;&lt;/a&gt;    &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-10" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-10" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-10"&gt;&lt;/a&gt;    &lt;span class="k"&gt;false&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-11" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-11" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Spėkit, kam bus lygus kintamasis &lt;code class="docutils literal"&gt;$a&lt;/code&gt;? Jis bus lygus True, jei netikit,
 išbandykite patys. Kiekvienas atidesnis programuotojas turėtų pastebėti, kad
 PHP palyginimo operacijos dažnai prasilenkia su logika. Praktikoje tokie
 dalykai labai apsunkina klaidų paiešką...&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="klaidu-apdorojimas"&gt;
+&lt;/section&gt;
+&lt;section id="klaidu-apdorojimas"&gt;
 &lt;h3&gt;Klaidų apdorojimas&lt;/h3&gt;
 &lt;p&gt;PHP kalboje egzistuoja tokie klaidų tipai:&lt;/p&gt;
 &lt;dl class="simple"&gt;
@@ -85,17 +85,17 @@ apdorojimo mechanizmo. Visokie parse error, notice warning ir panašiai
 susiklostė istoriškai, vėliau atsirado exception palaikymas, bet visi seni
 dalykai, taip pat liko.&lt;/p&gt;
 &lt;p&gt;Štai elementariausias pavyzdys, kuriame išlenda klaidų apdorojimo trūkumai:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="nb"&gt;fopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/etc/passwd'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-5"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;fwrite&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"boo&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-6"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;fclose&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-9"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;trigger_error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Error'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;E_USER_WARNING&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-10"&gt;&lt;/a&gt;    &lt;span class="c1"&gt;// or... throw new Exception('Error');&lt;/span&gt;
-&lt;a name="rest_code_01aa959545244c7cb296961440391c3c-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-1" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-1" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-2" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-2" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-3" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-3" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="nb"&gt;fopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/etc/passwd'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-4" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-4" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-4"&gt;&lt;/a&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-5" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-5" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-5"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;fwrite&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"boo&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-6" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-6" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-6"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;fclose&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$fp&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-7" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-7" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-7"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-8" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-8" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-9" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-9" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-9"&gt;&lt;/a&gt;    &lt;span class="nb"&gt;trigger_error&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Error'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;E_USER_WARNING&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-10" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-10" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-10"&gt;&lt;/a&gt;    &lt;span class="c1"&gt;// or... throw new Exception('Error');&lt;/span&gt;
+&lt;a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-11" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-11" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b1f1bf444a5b4bc49a75cf5184119094-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Šiame pavyzdyje bandoma tvarkingai atidaryti failą ir apdoroti atvejį, kai to
 failo atidaryti negalima. Deja PHP atveju, jei failo negalima atidaryti,
 paprasčiausiai išspjauna warning tipo klaidą ir vienintelis būdas tokią klaidą
@@ -106,8 +106,8 @@ fatal tipo), bet nepaisant to, klaidos vis tiek keliauja į klaidų apdorojimo
 funkciją, jei tokia aprašyta.&lt;/p&gt;
 &lt;p&gt;Trumpai tariant, visiška painiava. Vienintelis mano akimis žiūrint, teisingas
 sprendimas – į klaidas apdorojančią funkciją įrašytas exception iškvietimas.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="klaidu-pranesimai"&gt;
+&lt;/section&gt;
+&lt;section id="klaidu-pranesimai"&gt;
 &lt;h3&gt;Klaidų pranešimai&lt;/h3&gt;
 &lt;p&gt;Kadangi interneto svetainėje išvedami klaidų pranešimai yra potenciali saugumo
 spraga, tai dažniausiai tie pranešimai būna išjungti ir... ir toliau kiekvienas
@@ -119,8 +119,8 @@ serveriuose jo tikrai niekas nenaudoja, o ir nederėtų.&lt;/p&gt;
 &lt;p&gt;Didesnė blogybė yra ta, kad dažniausiai, pagal nutylėjimą apie klaidas
 pranešama tyliai, tai reiškia, kad daugelis mažiau patyrusių programuotojų iš
 vis nesirūpina klaidų pranešimais, ko pasekoje susilaukia daug problemų.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="namespace"&gt;
+&lt;/section&gt;
+&lt;section id="namespace"&gt;
 &lt;h3&gt;Namespace&lt;/h3&gt;
 &lt;p&gt;Kuriant didelės apimties sistemas, anksčiau ar vėliau susidursite su vardų
 erdvės problema, priešingu atveju teks naudoti tokius funkcijų pavadinimus:
@@ -128,8 +128,8 @@ erdvės problema, priešingu atveju teks naudoti tokius funkcijų pavadinimus:
 kažką keisti.&lt;/p&gt;
 &lt;p&gt;PHP daugelį metų neturėjo vardų erdvių, tik visiškai nesenai, nuo 5.3 versijos
 atsirado vardų erdvių galimybė, bet pati realizacija taip pat neguodžia...&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="references"&gt;
+&lt;/section&gt;
+&lt;section id="references"&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;Prieš PHP 5.0, referencas buvo kuriamas tik tada, kai nurodomas &amp;amp; simbolis, po
 PHP 5.0 prasidėjo linksmybės, nes visi objektai automatiškai perduodami kaip
@@ -139,40 +139,40 @@ atminties ir apsunkina skriptą. Sunku suprasti, bet liūdna tiesa yra ta, kad
 geriau nenaudoti PHP referencų, nors teoriškai referencų perduodant
 kintamuosius yra efektyvesnis. Plačiau apie tai galite pasiskaityti čia:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://schlueters.de/blog/archives/125-Do-not-use-PHP-references.html"&gt;http://schlueters.de/blog/archives/125-Do-not-use-PHP-references.html&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="objektai-ir-referencai"&gt;
+&lt;/section&gt;
+&lt;section id="objektai-ir-referencai"&gt;
 &lt;h3&gt;Objektai ir referencai&lt;/h3&gt;
 &lt;p&gt;Nuo PHP 5.0, visi objektai, automatiškai perduodami kaip referencai, o tai
 reiškia, kad atmintyje objekto kintamieji susiejami ryšiais. PHP turi tokią
 ydą, kad jei objektas atmintyje yra susietas su kitu objektu, tuomet tas
 objektas pasidaro nesunaikinamas ir nuolat sėdi atmintyje.  Tai puikiausiai
 iliustruoja žemiau pateiktas pavyzdys:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyParent&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-4"&gt;&lt;/a&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nv"&gt;$child&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-7"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="fm"&gt;__construct&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-8"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;child&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;MyChild&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-9"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-10"&gt;&lt;/a&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-13"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyChild&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-14"&gt;&lt;/a&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-16"&gt;&lt;/a&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-17"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="fm"&gt;__construct&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-18"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;parent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-19"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-20"&gt;&lt;/a&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-21"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-22"&gt;&lt;/a&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-23"&gt;&lt;/a&gt;&lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-24"&gt;&lt;/a&gt;    &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nb"&gt;memory_get_usage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-25"&gt;&lt;/a&gt;    &lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;MyParent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-26"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-1" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-1" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-2" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-2" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-3" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-3" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyParent&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-4" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-4" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-4"&gt;&lt;/a&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-5" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-5" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-5"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nv"&gt;$child&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-6" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-6" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-6"&gt;&lt;/a&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-7" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-7" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-7"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="fm"&gt;__construct&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-8" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-8" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-8"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;child&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;MyChild&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-9" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-9" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-9"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-10" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-10" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-10"&gt;&lt;/a&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-11" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-11" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-11"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-12" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-12" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-12"&gt;&lt;/a&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-13" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-13" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-13"&gt;&lt;/a&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;MyChild&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-14" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-14" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-14"&gt;&lt;/a&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-15" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-15" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-16" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-16" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-16"&gt;&lt;/a&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-17" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-17" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-17"&gt;&lt;/a&gt;    &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="fm"&gt;__construct&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-18" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-18" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-18"&gt;&lt;/a&gt;        &lt;span class="nv"&gt;$this&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="na"&gt;parent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$parent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-19" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-19" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-19"&gt;&lt;/a&gt;    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-20" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-20" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-20"&gt;&lt;/a&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-21" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-21" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-21"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-22" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-22" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-22"&gt;&lt;/a&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-23" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-23" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-23"&gt;&lt;/a&gt;&lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-24" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-24" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-24"&gt;&lt;/a&gt;    &lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="nb"&gt;memory_get_usage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-25" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-25" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-25"&gt;&lt;/a&gt;    &lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;MyParent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-26" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-26" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-26"&gt;&lt;/a&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Gausime tokį rezultatą:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;335508
 336160
@@ -188,30 +188,30 @@ iliustruoja žemiau pateiktas pavyzdys:&lt;/p&gt;
 &lt;p&gt;Kaip matote, atminties naudojimas vis auga, nors cikle objektas turėtų būti
 sunaikintas, o jo naudota atmintis atlaisvinta. Bet deja taip nėra.  Išvada –
 programuojant PHP, geriau nenaudoti objektų.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="round-funkcijos-klaida-ar-funkcionalumas"&gt;
+&lt;/section&gt;
+&lt;section id="round-funkcijos-klaida-ar-funkcionalumas"&gt;
 &lt;h3&gt;Round funkcijos klaida ar funkcionalumas?&lt;/h3&gt;
 &lt;p&gt;Spėkit, kam bus lygus kintamasis &lt;code class="docutils literal"&gt;$a&lt;/code&gt;?&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_6ee115189d434f04b8e2e31195e3349e-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_6ee115189d434f04b8e2e31195e3349e-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_6ee115189d434f04b8e2e31195e3349e-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nb"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a id="rest_code_b39dc6515a6e4488aa61945b0050bede-1" name="rest_code_b39dc6515a6e4488aa61945b0050bede-1" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b39dc6515a6e4488aa61945b0050bede-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a id="rest_code_b39dc6515a6e4488aa61945b0050bede-2" name="rest_code_b39dc6515a6e4488aa61945b0050bede-2" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b39dc6515a6e4488aa61945b0050bede-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_b39dc6515a6e4488aa61945b0050bede-3" name="rest_code_b39dc6515a6e4488aa61945b0050bede-3" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_b39dc6515a6e4488aa61945b0050bede-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nb"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Neatspėjote, &lt;code class="docutils literal"&gt;$a&lt;/code&gt; bus lygus &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;"-0"&lt;/span&gt;&lt;/code&gt; :)&lt;/p&gt;
 &lt;p&gt;Jei manote, kad šioje vietoje PHP yra teisus ir kaltos kreivos rankos, štai dar
 vienas pavyzdys:&lt;/p&gt;
-&lt;pre class="code php"&gt;&lt;a name="rest_code_34af41f8a36e40f885cfea66b9141c91-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;a name="rest_code_34af41f8a36e40f885cfea66b9141c91-2"&gt;&lt;/a&gt;
-&lt;a name="rest_code_34af41f8a36e40f885cfea66b9141c91-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;pre class="code php"&gt;&lt;a id="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-1" name="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-1" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_1a7a1b37e32d4cf29de73fba09f9b330-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
+&lt;a id="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-2" name="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-2" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_1a7a1b37e32d4cf29de73fba09f9b330-2"&gt;&lt;/a&gt;
+&lt;a id="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-3" name="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-3" href="https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/#rest_code_1a7a1b37e32d4cf29de73fba09f9b330-3"&gt;&lt;/a&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;===&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;Kintamasis &lt;code class="docutils literal"&gt;$a&lt;/code&gt; bus lygus &lt;code class="docutils literal"&gt;false&lt;/code&gt;...&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="isvados"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="isvados"&gt;
 &lt;h2&gt;Išvados&lt;/h2&gt;
 &lt;p&gt;Programuojant PHP geriau nenaudoti objektų, geriau nenaudoti referencų, geriau
 išvis nenaudoti PHP :)&lt;/p&gt;
 &lt;p&gt;Kol kas pateikiau tik kelis pavyzdžius, bet jų yra kur kas daugiau. Kai tik
 turėsi laiko, papildysiu įrašą pateikdamas daugiau pavyzdžių.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="nuorodos"&gt;
+&lt;/section&gt;
+&lt;section id="nuorodos"&gt;
 &lt;h2&gt;Nuorodos&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.bitstorm.org/edwin/en/php/"&gt;What I don't like about PHP&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -220,4 +220,4 @@ turėsi laiko, papildysiu įrašą pateikdamas daugiau pavyzdžių.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://tnx.nl/php.html"&gt;PHP IN CONTRAST TO PERL&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://keithdevens.com/weblog/archive/2003/Aug/13/HATE-PHP"&gt;I hate PHP&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>php</category><guid>https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/</guid><pubDate>Wed, 24 Mar 2010 20:07:00 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>php</category><guid>https://sirex.lt/posts/2010/kodel-php-nera-programavimo-kalba/</guid><pubDate>Wed, 24 Mar 2010 20:07:00 GMT</pubDate></item></channel></rss>

@@ -42,21 +42,17 @@ Nors iš tikrųjų, PHP nėra pilnavertė programavimo kalba, ji yra scen">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Nesupraskite šio įrašo antraštės tiesiogiai, taip mes juokaujam darbe
+    <p>Nesupraskite šio įrašo antraštės tiesiogiai, taip mes juokaujam darbe
 programuotojų tarpe, kai susiduriam su eiliniu <span class="caps">PHP</span> trūkumu…</p>
 <p>Nors iš tikrųjų, <span class="caps">PHP</span> nėra pilnavertė programavimo kalba, ji yra scenarijų
 kūrimo kalba, o jei tiksliau – web scenarijų kūrimo kalba.  Nepaisant didelių
 <span class="caps">PHP</span> trūkumų, ji yra labai populiari ir dėl didelio populiarumo naudojama
 daugelyje vietų, dažnai kur reikia ir kur nereikia.</p>
-<div class="section" id="kur-tinka-naudoti-php-scenariju-kalba">
-<h2>Kur tinka naudoti <span class="caps">PHP</span> scenarijų kalbą?<a href="#kur-tinka-naudoti-php-scenariju-kalba" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="kur-tinka-naudoti-php-scenariju-kalba"><h2>Kur tinka naudoti <span class="caps">PHP</span> scenarijų kalbą?<a href="#kur-tinka-naudoti-php-scenariju-kalba" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Jei planuojate paleisti nedidelės apimties interneto svetainę, pavyzdžiui savo
 asmeninę svetainę ar įmonės pristatomąją svetainę, tuomet <span class="caps">PHP</span> puikiai tam
 reikalui tiks.</p>
-</div>
-<div class="section" id="kada-geriau-nenaudoti-php">
-<h2>Kada geriau nenaudoti <span class="caps">PHP</span>?<a href="#kada-geriau-nenaudoti-php" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="kada-geriau-nenaudoti-php"><h2>Kada geriau nenaudoti <span class="caps">PHP</span>?<a href="#kada-geriau-nenaudoti-php" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p><span class="caps">PHP</span> iš esmės sukurta interneto svetainių kūrimui, todėl niekam kitam, išskyrus
 interneto svetainių kūrimui, ji nėra tinkama. Žinoma, <span class="caps">PHP</span> galimybės leidžia
 kurti tiek programas veikiančias tekstiniame režime, tiek grafinėje aplinkoje.
@@ -66,9 +62,7 @@ leidžia… Tas pats ir su <span class="caps">PHP</span>.</p>
 apimties interneto svetainėms! Tikrai nerekomenduočiau naudoti <span class="caps">PHP</span> didelių
 įmonės intraneto sistemų kūrimui, dideliems interneto portalams ar kitoms
 sudėtingesnėms sistemoms.</p>
-</div>
-<div class="section" id="sakote-blogam-sokejui-ir-batai-trukdo">
-<h2>Sakote blogam šokėjui ir batai trukdo?<a href="#sakote-blogam-sokejui-ir-batai-trukdo" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="sakote-blogam-sokejui-ir-batai-trukdo"><h2>Sakote blogam šokėjui ir batai trukdo?<a href="#sakote-blogam-sokejui-ir-batai-trukdo" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Tas tiesa, geras programuotojas ir asemblerio instrukcijomis gali programuoti,
 bet kam taip kankintis, jei yra kur kas pažangesnių programavimo technologijų.</p>
 <p><span class="caps">PHP</span> programuoju jau beveik visą dešimtmetį, tačiau esu susipažinęs ir su
@@ -79,35 +73,30 @@ galiu jas lyginti.</p>
 trūkumus. Būtent tokių klausimų pastūmėtas ir nusprendžiau surašyti visus
 pastebėtu <span class="caps">PHP</span> trūkumus vienoje vietoje. Jei taip pat, kaip ir aš, nuolat
 susiduriate su <span class="caps">PHP</span> trūkumais, tai laukiu papildymo komentaruose.</p>
-</div>
-<div class="section" id="tai-kodel-gi-php-nera-programavimo-kalba">
-<h2>Tai kodėl gi <span class="caps">PHP</span> nėra programavimo kalba?<a href="#tai-kodel-gi-php-nera-programavimo-kalba" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="tai-kodel-gi-php-nera-programavimo-kalba"><h2>Tai kodėl gi <span class="caps">PHP</span> nėra programavimo kalba?<a href="#tai-kodel-gi-php-nera-programavimo-kalba" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Arba kitaip sakant, kokie trūkumai apsunkina programavimo darbus su <span class="caps">PHP</span>?</p>
-<div class="section" id="weak-typing">
-<h3>weak typing<a href="#weak-typing" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<section id="weak-typing"><h3>weak typing<a href="#weak-typing" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p><span class="caps">PHP</span> leidžia priskirti bet ką, bet kam ir bet kaip. Iš pirmo žvilgsnio atrodo,
 kad tai yra labai lankstu, bet kai reikia ieškoti skriptuose paliktų klaidų,
 tai pradedi galvoti kas per žmonės sugalvojo tokią nesamonę…</p>
 <p>Štai keli pavyzdžiai:</p>
-<pre class="code php"><a name="rest_code_7a93871866e14c40af8c34707767c278-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_7a93871866e14c40af8c34707767c278-2"></a>
-<a name="rest_code_7a93871866e14c40af8c34707767c278-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="p">(</span>
-<a name="rest_code_7a93871866e14c40af8c34707767c278-4"></a>    <span class="k">false</span> <span class="o">==</span> <span class="s1">''</span> <span class="o">&amp;&amp;</span>
-<a name="rest_code_7a93871866e14c40af8c34707767c278-5"></a>    <span class="k">false</span> <span class="o">==</span> <span class="s1">'0'</span> <span class="o">&amp;&amp;</span>
-<a name="rest_code_7a93871866e14c40af8c34707767c278-6"></a>    <span class="s1">''</span> <span class="o">!=</span> <span class="s1">'0'</span> <span class="o">&amp;&amp;</span>
-<a name="rest_code_7a93871866e14c40af8c34707767c278-7"></a>
-<a name="rest_code_7a93871866e14c40af8c34707767c278-8"></a>    <span class="mi">0</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span>
-<a name="rest_code_7a93871866e14c40af8c34707767c278-9"></a>    <span class="mi">0</span> <span class="o">==</span> <span class="k">false</span> <span class="o">&amp;&amp;</span>
-<a name="rest_code_7a93871866e14c40af8c34707767c278-10"></a>    <span class="k">false</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span>
-<a name="rest_code_7a93871866e14c40af8c34707767c278-11"></a><span class="p">);</span>
+<pre class="code php"><a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-1" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-1" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-1"></a><span class="cp">&lt;?php</span>
+<a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-2" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-2" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-2"></a>
+<a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-3" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-3" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="p">(</span>
+<a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-4" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-4" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-4"></a>    <span class="k">false</span> <span class="o">==</span> <span class="s1">''</span> <span class="o">&amp;&amp;</span>
+<a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-5" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-5" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-5"></a>    <span class="k">false</span> <span class="o">==</span> <span class="s1">'0'</span> <span class="o">&amp;&amp;</span>
+<a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-6" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-6" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-6"></a>    <span class="s1">''</span> <span class="o">!=</span> <span class="s1">'0'</span> <span class="o">&amp;&amp;</span>
+<a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-7" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-7" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-7"></a>
+<a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-8" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-8" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-8"></a>    <span class="mi">0</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span>
+<a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-9" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-9" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-9"></a>    <span class="mi">0</span> <span class="o">==</span> <span class="k">false</span> <span class="o">&amp;&amp;</span>
+<a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-10" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-10" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-10"></a>    <span class="k">false</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span>
+<a id="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-11" name="rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-11" href="#rest_code_b0d3ac93b0b34012b2644cf1e205f0b0-11"></a><span class="p">);</span>
 </pre>
 <p>Spėkit, kam bus lygus kintamasis <code class="docutils literal">$a</code>? Jis bus lygus True, jei netikit,
 išbandykite patys. Kiekvienas atidesnis programuotojas turėtų pastebėti, kad
 <span class="caps">PHP</span> palyginimo operacijos dažnai prasilenkia su logika. Praktikoje tokie
 dalykai labai apsunkina klaidų paiešką…</p>
-</div>
-<div class="section" id="klaidu-apdorojimas">
-<h3>Klaidų apdorojimas<a href="#klaidu-apdorojimas" class="headerlink" title="Permalink to this heading">¶</a></h3>
+</section><section id="klaidu-apdorojimas"><h3>Klaidų apdorojimas<a href="#klaidu-apdorojimas" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p><span class="caps">PHP</span> kalboje egzistuoja tokie klaidų tipai:</p>
 <dl class="simple">
 <dt>crash</dt>
@@ -134,17 +123,17 @@ apdorojimo mechanizmo. Visokie parse error, notice warning ir panašiai
 susiklostė istoriškai, vėliau atsirado exception palaikymas, bet visi seni
 dalykai, taip pat liko.</p>
 <p>Štai elementariausias pavyzdys, kuriame išlenda klaidų apdorojimo trūkumai:</p>
-<pre class="code php"><a name="rest_code_01aa959545244c7cb296961440391c3c-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_01aa959545244c7cb296961440391c3c-2"></a>
-<a name="rest_code_01aa959545244c7cb296961440391c3c-3"></a><span class="nv">$fp</span> <span class="o">=</span> <span class="o">@</span><span class="nb">fopen</span><span class="p">(</span><span class="s1">'/etc/passwd'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">);</span>
-<a name="rest_code_01aa959545244c7cb296961440391c3c-4"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$fp</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_01aa959545244c7cb296961440391c3c-5"></a>    <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="s2">"boo</span><span class="se">\n</span><span class="s2">"</span><span class="p">);</span>
-<a name="rest_code_01aa959545244c7cb296961440391c3c-6"></a>    <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
-<a name="rest_code_01aa959545244c7cb296961440391c3c-7"></a><span class="p">}</span>
-<a name="rest_code_01aa959545244c7cb296961440391c3c-8"></a><span class="k">else</span> <span class="p">{</span>
-<a name="rest_code_01aa959545244c7cb296961440391c3c-9"></a>    <span class="nb">trigger_error</span><span class="p">(</span><span class="s1">'Error'</span><span class="p">,</span> <span class="nx">E_USER_WARNING</span><span class="p">);</span>
-<a name="rest_code_01aa959545244c7cb296961440391c3c-10"></a>    <span class="c1">// or... throw new Exception('Error');</span>
-<a name="rest_code_01aa959545244c7cb296961440391c3c-11"></a><span class="p">}</span>
+<pre class="code php"><a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-1" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-1" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-1"></a><span class="cp">&lt;?php</span>
+<a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-2" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-2" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-2"></a>
+<a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-3" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-3" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-3"></a><span class="nv">$fp</span> <span class="o">=</span> <span class="o">@</span><span class="nb">fopen</span><span class="p">(</span><span class="s1">'/etc/passwd'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">);</span>
+<a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-4" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-4" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-4"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$fp</span><span class="p">)</span> <span class="p">{</span>
+<a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-5" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-5" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-5"></a>    <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="s2">"boo</span><span class="se">\n</span><span class="s2">"</span><span class="p">);</span>
+<a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-6" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-6" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-6"></a>    <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
+<a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-7" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-7" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-7"></a><span class="p">}</span>
+<a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-8" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-8" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-8"></a><span class="k">else</span> <span class="p">{</span>
+<a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-9" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-9" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-9"></a>    <span class="nb">trigger_error</span><span class="p">(</span><span class="s1">'Error'</span><span class="p">,</span> <span class="nx">E_USER_WARNING</span><span class="p">);</span>
+<a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-10" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-10" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-10"></a>    <span class="c1">// or... throw new Exception('Error');</span>
+<a id="rest_code_b1f1bf444a5b4bc49a75cf5184119094-11" name="rest_code_b1f1bf444a5b4bc49a75cf5184119094-11" href="#rest_code_b1f1bf444a5b4bc49a75cf5184119094-11"></a><span class="p">}</span>
 </pre>
 <p>Šiame pavyzdyje bandoma tvarkingai atidaryti failą ir apdoroti atvejį, kai to
 failo atidaryti negalima. Deja <span class="caps">PHP</span> atveju, jei failo negalima atidaryti,
@@ -156,9 +145,7 @@ fatal tipo), bet nepaisant to, klaidos vis tiek keliauja į klaidų apdorojimo
 funkciją, jei tokia aprašyta.</p>
 <p>Trumpai tariant, visiška painiava. Vienintelis mano akimis žiūrint, teisingas
 sprendimas – į klaidas apdorojančią funkciją įrašytas exception iškvietimas.</p>
-</div>
-<div class="section" id="klaidu-pranesimai">
-<h3>Klaidų pranešimai<a href="#klaidu-pranesimai" class="headerlink" title="Permalink to this heading">¶</a></h3>
+</section><section id="klaidu-pranesimai"><h3>Klaidų pranešimai<a href="#klaidu-pranesimai" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p>Kadangi interneto svetainėje išvedami klaidų pranešimai yra potenciali saugumo
 spraga, tai dažniausiai tie pranešimai būna išjungti ir… ir toliau kiekvienas
 daro kaip išmano, kad tas klaidas sugaudytų.  Standartiškai <span class="caps">PHP</span> turi galimybę
@@ -169,18 +156,14 @@ serveriuose jo tikrai niekas nenaudoja, o ir nederėtų.</p>
 <p>Didesnė blogybė yra ta, kad dažniausiai, pagal nutylėjimą apie klaidas
 pranešama tyliai, tai reiškia, kad daugelis mažiau patyrusių programuotojų iš
 vis nesirūpina klaidų pranešimais, ko pasekoje susilaukia daug problemų.</p>
-</div>
-<div class="section" id="namespace">
-<h3>Namespace<a href="#namespace" class="headerlink" title="Permalink to this heading">¶</a></h3>
+</section><section id="namespace"><h3>Namespace<a href="#namespace" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p>Kuriant didelės apimties sistemas, anksčiau ar vėliau susidursite su vardų
 erdvės problema, priešingu atveju teks naudoti tokius funkcijų pavadinimus:
 <code class="docutils literal">ManoPaketas_ManoModulis_ManoStrukturosElementas_ManoFunkcija</code>, be galimybės
 kažką keisti.</p>
 <p><span class="caps">PHP</span> daugelį metų neturėjo vardų erdvių, tik visiškai nesenai, nuo 5.3 versijos
 atsirado vardų erdvių galimybė, bet pati realizacija taip pat neguodžia…</p>
-</div>
-<div class="section" id="references">
-<h3>References<a href="#references" class="headerlink" title="Permalink to this heading">¶</a></h3>
+</section><section id="references"><h3>References<a href="#references" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p>Prieš <span class="caps">PHP</span> 5.0, referencas buvo kuriamas tik tada, kai nurodomas <span class="amp">&amp;</span> simbolis, po
 <span class="caps">PHP</span> 5.0 prasidėjo linksmybės, nes visi objektai automatiškai perduodami kaip
 referencai, o visi ne objektai, kaip kopijos. Tačiau techniškai, pati perdavimo
@@ -189,40 +172,38 @@ atminties ir apsunkina skriptą. Sunku suprasti, bet liūdna tiesa yra ta, kad
 geriau nenaudoti <span class="caps">PHP</span> referencų, nors teoriškai referencų perduodant
 kintamuosius yra efektyvesnis. Plačiau apie tai galite pasiskaityti čia:</p>
 <p><a class="reference external" href="http://schlueters.de/blog/archives/125-Do-not-use-PHP-references.html">http://schlueters.de/blog/archives/125-Do-not-use-<span class="caps">PHP</span>-references.html</a></p>
-</div>
-<div class="section" id="objektai-ir-referencai">
-<h3>Objektai ir referencai<a href="#objektai-ir-referencai" class="headerlink" title="Permalink to this heading">¶</a></h3>
+</section><section id="objektai-ir-referencai"><h3>Objektai ir referencai<a href="#objektai-ir-referencai" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p>Nuo <span class="caps">PHP</span> 5.0, visi objektai, automatiškai perduodami kaip referencai, o tai
 reiškia, kad atmintyje objekto kintamieji susiejami ryšiais. <span class="caps">PHP</span> turi tokią
 ydą, kad jei objektas atmintyje yra susietas su kitu objektu, tuomet tas
 objektas pasidaro nesunaikinamas ir nuolat sėdi atmintyje.  Tai puikiausiai
 iliustruoja žemiau pateiktas pavyzdys:</p>
-<pre class="code php"><a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-2"></a>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-3"></a><span class="k">class</span> <span class="nc">MyParent</span> <span class="p">{</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-4"></a>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-5"></a>    <span class="k">public</span> <span class="nv">$child</span><span class="p">;</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-6"></a>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-7"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span> <span class="p">{</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-8"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">child</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyChild</span><span class="p">(</span><span class="nv">$this</span><span class="p">);</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-9"></a>    <span class="p">}</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-10"></a>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-11"></a><span class="p">}</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-12"></a>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-13"></a><span class="k">class</span> <span class="nc">MyChild</span> <span class="p">{</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-14"></a>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-15"></a>    <span class="k">public</span> <span class="nv">$parent</span><span class="p">;</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-16"></a>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-17"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$parent</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-18"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">parent</span> <span class="o">=</span> <span class="nv">$parent</span><span class="p">;</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-19"></a>    <span class="p">}</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-20"></a>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-21"></a><span class="p">}</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-22"></a>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-23"></a><span class="k">foreach</span> <span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$i</span><span class="p">)</span> <span class="p">{</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-24"></a>    <span class="k">echo</span> <span class="nb">memory_get_usage</span><span class="p">()</span><span class="o">.</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-25"></a>    <span class="nv">$a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyParent</span><span class="p">;</span>
-<a name="rest_code_33b11bb7496a4b53be8b9cab9b0aa91b-26"></a><span class="p">}</span>
+<pre class="code php"><a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-1" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-1" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-1"></a><span class="cp">&lt;?php</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-2" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-2" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-2"></a>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-3" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-3" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-3"></a><span class="k">class</span> <span class="nc">MyParent</span> <span class="p">{</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-4" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-4" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-4"></a>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-5" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-5" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-5"></a>    <span class="k">public</span> <span class="nv">$child</span><span class="p">;</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-6" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-6" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-6"></a>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-7" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-7" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-7"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span> <span class="p">{</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-8" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-8" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-8"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">child</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyChild</span><span class="p">(</span><span class="nv">$this</span><span class="p">);</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-9" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-9" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-9"></a>    <span class="p">}</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-10" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-10" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-10"></a>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-11" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-11" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-11"></a><span class="p">}</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-12" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-12" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-12"></a>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-13" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-13" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-13"></a><span class="k">class</span> <span class="nc">MyChild</span> <span class="p">{</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-14" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-14" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-14"></a>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-15" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-15" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-15"></a>    <span class="k">public</span> <span class="nv">$parent</span><span class="p">;</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-16" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-16" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-16"></a>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-17" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-17" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-17"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nv">$parent</span><span class="p">)</span> <span class="p">{</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-18" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-18" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-18"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">parent</span> <span class="o">=</span> <span class="nv">$parent</span><span class="p">;</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-19" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-19" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-19"></a>    <span class="p">}</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-20" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-20" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-20"></a>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-21" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-21" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-21"></a><span class="p">}</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-22" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-22" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-22"></a>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-23" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-23" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-23"></a><span class="k">foreach</span> <span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$i</span><span class="p">)</span> <span class="p">{</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-24" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-24" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-24"></a>    <span class="k">echo</span> <span class="nb">memory_get_usage</span><span class="p">()</span><span class="o">.</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">;</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-25" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-25" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-25"></a>    <span class="nv">$a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyParent</span><span class="p">;</span>
+<a id="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-26" name="rest_code_d0773b0ddb11440c86d47b52f92c3fc5-26" href="#rest_code_d0773b0ddb11440c86d47b52f92c3fc5-26"></a><span class="p">}</span>
 </pre>
 <p>Gausime tokį rezultatą:</p>
 <pre class="literal-block">335508
@@ -239,43 +220,34 @@ iliustruoja žemiau pateiktas pavyzdys:</p>
 <p>Kaip matote, atminties naudojimas vis auga, nors cikle objektas turėtų būti
 sunaikintas, o jo naudota atmintis atlaisvinta. Bet deja taip nėra.  Išvada –
 programuojant <span class="caps">PHP</span>, geriau nenaudoti objektų.</p>
-</div>
-<div class="section" id="round-funkcijos-klaida-ar-funkcionalumas">
-<h3>Round funkcijos klaida ar funkcionalumas?<a href="#round-funkcijos-klaida-ar-funkcionalumas" class="headerlink" title="Permalink to this heading">¶</a></h3>
+</section><section id="round-funkcijos-klaida-ar-funkcionalumas"><h3>Round funkcijos klaida ar funkcionalumas?<a href="#round-funkcijos-klaida-ar-funkcionalumas" class="headerlink" title="Permalink to this heading">¶</a></h3>
 <p>Spėkit, kam bus lygus kintamasis <code class="docutils literal">$a</code>?</p>
-<pre class="code php"><a name="rest_code_6ee115189d434f04b8e2e31195e3349e-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_6ee115189d434f04b8e2e31195e3349e-2"></a>
-<a name="rest_code_6ee115189d434f04b8e2e31195e3349e-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">);</span>
+<pre class="code php"><a id="rest_code_b39dc6515a6e4488aa61945b0050bede-1" name="rest_code_b39dc6515a6e4488aa61945b0050bede-1" href="#rest_code_b39dc6515a6e4488aa61945b0050bede-1"></a><span class="cp">&lt;?php</span>
+<a id="rest_code_b39dc6515a6e4488aa61945b0050bede-2" name="rest_code_b39dc6515a6e4488aa61945b0050bede-2" href="#rest_code_b39dc6515a6e4488aa61945b0050bede-2"></a>
+<a id="rest_code_b39dc6515a6e4488aa61945b0050bede-3" name="rest_code_b39dc6515a6e4488aa61945b0050bede-3" href="#rest_code_b39dc6515a6e4488aa61945b0050bede-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">);</span>
 </pre>
 <p>Neatspėjote, <code class="docutils literal">$a</code> bus lygus <code class="docutils literal"><span class="pre">"-0"</span></code> :)</p>
 <p>Jei manote, kad šioje vietoje <span class="caps">PHP</span> yra teisus ir kaltos kreivos rankos, štai dar
 vienas pavyzdys:</p>
-<pre class="code php"><a name="rest_code_34af41f8a36e40f885cfea66b9141c91-1"></a><span class="cp">&lt;?php</span>
-<a name="rest_code_34af41f8a36e40f885cfea66b9141c91-2"></a>
-<a name="rest_code_34af41f8a36e40f885cfea66b9141c91-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">;</span>
+<pre class="code php"><a id="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-1" name="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-1" href="#rest_code_1a7a1b37e32d4cf29de73fba09f9b330-1"></a><span class="cp">&lt;?php</span>
+<a id="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-2" name="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-2" href="#rest_code_1a7a1b37e32d4cf29de73fba09f9b330-2"></a>
+<a id="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-3" name="rest_code_1a7a1b37e32d4cf29de73fba09f9b330-3" href="#rest_code_1a7a1b37e32d4cf29de73fba09f9b330-3"></a><span class="nv">$a</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">;</span>
 </pre>
 <p>Kintamasis <code class="docutils literal">$a</code> bus lygus <code class="docutils literal">false</code>…</p>
-</div>
-</div>
-<div class="section" id="isvados">
-<h2>Išvados<a href="#isvados" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section></section><section id="isvados"><h2>Išvados<a href="#isvados" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Programuojant <span class="caps">PHP</span> geriau nenaudoti objektų, geriau nenaudoti referencų, geriau
 išvis nenaudoti <span class="caps">PHP</span> :)</p>
 <p>Kol kas pateikiau tik kelis pavyzdžius, bet jų yra kur kas daugiau. Kai tik
 turėsi laiko, papildysiu įrašą pateikdamas daugiau pavyzdžių.</p>
-</div>
-<div class="section" id="nuorodos">
-<h2>Nuorodos<a href="#nuorodos" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="nuorodos"><h2>Nuorodos<a href="#nuorodos" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.bitstorm.org/edwin/en/php/">What I don’t like about <span class="caps">PHP</span></a></p></li>
 <li><p><a class="reference external" href="http://www.ukuug.org/events/linux2002/papers/html/php/index.html">Experiences of Using <span class="caps">PHP</span> in Large Websites</a></p></li>
 <li><p><a class="reference external" href="http://maurus.net/resources/programming-languages/php/">I’m sorry, but <span class="caps">PHP</span> sucks</a></p></li>
 <li><p><a class="reference external" href="http://tnx.nl/php.html"><span class="caps">PHP</span> <span class="caps">IN</span> <span class="caps">CONTRAST</span> <span class="caps">TO</span> <span class="caps">PERL</span></a></p></li>
 <li><p><a class="reference external" href="http://keithdevens.com/weblog/archive/2003/Aug/13/HATE-PHP">I hate <span class="caps">PHP</span></a></p></li>
-</ul>
+</ul></section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../windows-tinklas/" rel="prev" title="Windows tinklas">Previous post</a>

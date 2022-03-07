@@ -46,33 +46,31 @@ from distutils.core im">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<div class="section" id="paketo-kurimas">
-<h2>Paketo kūrimas<a href="#paketo-kurimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+    <section id="paketo-kurimas"><h2>Paketo kūrimas<a href="#paketo-kurimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Mano Python paketus dažniausiai sudaro tokie failai:</p>
 <dl>
 <dt><code class="docutils literal">setup.py</code></dt>
 <dd>
 <p>Pagrindinis paketo failas, kuriame aprašoma paketo meta informacija. Šio
 failo turinys atrodo taip:</p>
-<pre class="code python"><a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-1"></a><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-2"></a>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-3"></a><span class="n">setup</span><span class="p">(</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-4"></a>    <span class="n">name</span><span class="o">=</span><span class="s1">'mypkgname'</span><span class="p">,</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-5"></a>    <span class="n">version</span><span class="o">=</span><span class="s1">'0.1'</span><span class="p">,</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-6"></a>    <span class="n">author</span><span class="o">=</span><span class="s1">'My Name'</span><span class="p">,</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-7"></a>    <span class="n">author_email</span><span class="o">=</span><span class="s1">'my at mail.com'</span><span class="p">,</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-8"></a>    <span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">'pkgmodule'</span><span class="p">],</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-9"></a>    <span class="n">url</span><span class="o">=</span><span class="s1">'pkgurl'</span><span class="p">,</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-10"></a>    <span class="n">license</span><span class="o">=</span><span class="s1">'gpl.txt'</span><span class="p">,</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-11"></a>    <span class="n">description</span><span class="o">=</span><span class="s1">'pkg description'</span><span class="p">,</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-12"></a>    <span class="n">long_description</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">'README.rst'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-13"></a>    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-14"></a>        <span class="s1">'Development Status :: 5 - Production/Stable'</span><span class="p">,</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-15"></a>        <span class="s1">'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)'</span><span class="p">,</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-16"></a>        <span class="s1">'Programming Language :: Python :: 3'</span><span class="p">,</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-17"></a>    <span class="p">]</span>
-<a name="rest_code_c91d26e615f840bf83b3c995c7e76b0e-18"></a><span class="p">)</span>
+<pre class="code python"><a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-1" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-1" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-1"></a><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-2" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-2" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-2"></a>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-3" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-3" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-3"></a><span class="n">setup</span><span class="p">(</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-4" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-4" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-4"></a>    <span class="n">name</span><span class="o">=</span><span class="s1">'mypkgname'</span><span class="p">,</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-5" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-5" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-5"></a>    <span class="n">version</span><span class="o">=</span><span class="s1">'0.1'</span><span class="p">,</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-6" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-6" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-6"></a>    <span class="n">author</span><span class="o">=</span><span class="s1">'My Name'</span><span class="p">,</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-7" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-7" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-7"></a>    <span class="n">author_email</span><span class="o">=</span><span class="s1">'my at mail.com'</span><span class="p">,</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-8" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-8" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-8"></a>    <span class="n">py_modules</span><span class="o">=</span><span class="p">[</span><span class="s1">'pkgmodule'</span><span class="p">],</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-9" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-9" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-9"></a>    <span class="n">url</span><span class="o">=</span><span class="s1">'pkgurl'</span><span class="p">,</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-10" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-10" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-10"></a>    <span class="n">license</span><span class="o">=</span><span class="s1">'gpl.txt'</span><span class="p">,</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-11" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-11" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-11"></a>    <span class="n">description</span><span class="o">=</span><span class="s1">'pkg description'</span><span class="p">,</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-12" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-12" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-12"></a>    <span class="n">long_description</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">'README.rst'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-13" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-13" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-13"></a>    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-14" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-14" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-14"></a>        <span class="s1">'Development Status :: 5 - Production/Stable'</span><span class="p">,</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-15" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-15" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-15"></a>        <span class="s1">'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)'</span><span class="p">,</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-16" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-16" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-16"></a>        <span class="s1">'Programming Language :: Python :: 3'</span><span class="p">,</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-17" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-17" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-17"></a>    <span class="p">]</span>
+<a id="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-18" name="rest_code_d81c36fc3d0f4ebea36426b6c0a02731-18" href="#rest_code_d81c36fc3d0f4ebea36426b6c0a02731-18"></a><span class="p">)</span>
 </pre>
 </dd>
 <dt><code class="docutils literal">MANIFEST.in</code></dt>
@@ -101,10 +99,7 @@ turite nurodyti jo naudojimo sąlygas.</p>
 <p>Teisiškai galiojančias naudojimo sąlygas aprašyti yra gan sudėtinga, todėl
 saugiausias pasirinkimas <a class="reference external" href="http://www.gnu.org/licenses/gpl.html"><span class="caps">GPL</span></a> licencija.</p>
 </dd>
-</dl>
-</div>
-<div class="section" id="paketo-kelimas-i-pypi">
-<h2>Paketo kėlimas į PyPI<a href="#paketo-kelimas-i-pypi" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</dl></section><section id="paketo-kelimas-i-pypi"><h2>Paketo kėlimas į PyPI<a href="#paketo-kelimas-i-pypi" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Kad užregistruotumėte savo Python paketą į <a class="reference external" href="http://pypi.python.org/pypi">PyPI</a> paketų repozitoriją, atlikite
 šiuose veiksmus:</p>
 <ol class="arabic">
@@ -124,10 +119,7 @@ tame faile (<code class="docutils literal">[pypi]</code>).</p>
 <p>Jei jūsų paketas turi dokumentaciją, įkelkite atnaujintą dokumentacijos versiją:</p>
 <pre class="literal-block">python setup.py build_sphinx upload_sphinx</pre>
 </li>
-</ol>
-</div>
-<div class="section" id="pypi-per-ssh">
-<h2>PyPI per <span class="caps">SSH</span><a href="#pypi-per-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</ol></section><section id="pypi-per-ssh"><h2>PyPI per <span class="caps">SSH</span><a href="#pypi-per-ssh" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Rekomenduoju naudoti <a class="reference external" href="http://pypi.python.org/pypi/pypissh">pypissh</a> paketą, kuris leidžia susisiekti su <a class="reference external" href="http://pypi.python.org/pypi">PyPI</a>
 serveriu per ssh, naudojant <a class="reference external" href="../../../ssh-pamokeles.html">ssh raktus</a>. Tokiu būdu nereikia atviru tekstu,
 konfigūraciniuose failuose saugoti <a class="reference external" href="http://pypi.python.org/pypi">PyPI</a> slaptažodžio ir nereikia kiekvieną
@@ -144,23 +136,21 @@ source /tmp/pypissh-env/bin/activate</pre>
 <li>
 <p>Toliau reikia susikurti <a class="reference external" href="http://pypi.python.org/pypi">PyPI</a> konfigūracinė falą <code class="docutils literal"><span class="pre">~/.pypirc</span></code>, kurio
 turinys atrodo taip:</p>
-<pre class="code ini"><a name="rest_code_8e4d7a12001c47b589e930477ed17215-1"></a><span class="k">[distutils]</span>
-<a name="rest_code_8e4d7a12001c47b589e930477ed17215-2"></a><span class="na">index-servers</span> <span class="o">=</span><span class="s"></span>
-<a name="rest_code_8e4d7a12001c47b589e930477ed17215-3"></a><span class="s">    pypi</span>
-<a name="rest_code_8e4d7a12001c47b589e930477ed17215-4"></a>
-<a name="rest_code_8e4d7a12001c47b589e930477ed17215-5"></a><span class="k">[pypi]</span>
-<a name="rest_code_8e4d7a12001c47b589e930477ed17215-6"></a><span class="na">repository: httpssh://submit@ssh.pypi.python.org/pypi</span>
-<a name="rest_code_8e4d7a12001c47b589e930477ed17215-7"></a><span class="na">username: yourusername</span>
-<a name="rest_code_8e4d7a12001c47b589e930477ed17215-8"></a><span class="na">password: pypissh</span>
+<pre class="code ini"><a id="rest_code_2f1c07279d4842cd948dd582077ba809-1" name="rest_code_2f1c07279d4842cd948dd582077ba809-1" href="#rest_code_2f1c07279d4842cd948dd582077ba809-1"></a><span class="k">[distutils]</span><span class="w"></span>
+<a id="rest_code_2f1c07279d4842cd948dd582077ba809-2" name="rest_code_2f1c07279d4842cd948dd582077ba809-2" href="#rest_code_2f1c07279d4842cd948dd582077ba809-2"></a><span class="na">index-servers</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<a id="rest_code_2f1c07279d4842cd948dd582077ba809-3" name="rest_code_2f1c07279d4842cd948dd582077ba809-3" href="#rest_code_2f1c07279d4842cd948dd582077ba809-3"></a><span class="w">    </span><span class="na">pypi</span><span class="w"></span>
+<a id="rest_code_2f1c07279d4842cd948dd582077ba809-4" name="rest_code_2f1c07279d4842cd948dd582077ba809-4" href="#rest_code_2f1c07279d4842cd948dd582077ba809-4"></a>
+<a id="rest_code_2f1c07279d4842cd948dd582077ba809-5" name="rest_code_2f1c07279d4842cd948dd582077ba809-5" href="#rest_code_2f1c07279d4842cd948dd582077ba809-5"></a><span class="k">[pypi]</span><span class="w"></span>
+<a id="rest_code_2f1c07279d4842cd948dd582077ba809-6" name="rest_code_2f1c07279d4842cd948dd582077ba809-6" href="#rest_code_2f1c07279d4842cd948dd582077ba809-6"></a><span class="na">repository: httpssh://submit@ssh.pypi.python.org/pypi</span><span class="w"></span>
+<a id="rest_code_2f1c07279d4842cd948dd582077ba809-7" name="rest_code_2f1c07279d4842cd948dd582077ba809-7" href="#rest_code_2f1c07279d4842cd948dd582077ba809-7"></a><span class="na">username: yourusername</span><span class="w"></span>
+<a id="rest_code_2f1c07279d4842cd948dd582077ba809-8" name="rest_code_2f1c07279d4842cd948dd582077ba809-8" href="#rest_code_2f1c07279d4842cd948dd582077ba809-8"></a><span class="na">password: pypissh</span><span class="w"></span>
 </pre>
 <p>Nepamirškite <code class="docutils literal">yourusername</code> pakeisti į savo <a class="reference external" href="http://pypi.python.org/pypi">PyPI</a> naudotojo vardą,
 slaptažodis gali būti bet, koks (svarbu, ne tuščias). Jei slaptažodis nebus
 nurodytas, tada prašys jį įvesti.</p>
 </li>
-</ol>
+</ol></section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../radio-stociu-surinkimas-i-audacious/" rel="prev" title="Radio stočių surinkimas į audacious">Previous post</a>

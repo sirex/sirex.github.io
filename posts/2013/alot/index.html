@@ -44,8 +44,7 @@ Anksčiau ilgą laiką naudojau mutt, bet deja, su dideliais laiškų kieki">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Po to, kai Gmail privalomai įjungė <a class="reference external" href="http://gmailblog.blogspot.com/2012/10/introducing-new-compose-in-gmail.html">naują laiškų rašymo funkciją</a>,
+    <p>Po to, kai Gmail privalomai įjungė <a class="reference external" href="http://gmailblog.blogspot.com/2012/10/introducing-new-compose-in-gmail.html">naują laiškų rašymo funkciją</a>,
 nebeapsikenčiau ir nusprendžiau susirasti normalų pašto klientą.</p>
 <p>Anksčiau ilgą laiką naudojau <a class="reference external" href="http://www.mutt.org/">mutt</a>, bet deja, su dideliais laiškų kiekiais
 viename kataloge, <a class="reference external" href="http://www.mutt.org/">mutt</a> veikia gan lėtai, neturi greito ir patogaus laiškų
@@ -58,8 +57,7 @@ apsiskaičius, radau, kad <a class="reference external" href="https://github.com
 sukonfigūravau, gal būt, kam nors pravers.</p>
 <p>O konfigūravimas nėra paprastas, todėl iš karto įspėju, kad <a class="reference external" href="https://github.com/pazz/alot">alot</a> pašto
 klientas skirtas daugiau patyrusiems kompiuterių naudotojams.</p>
-<div class="section" id="slaptazodziai">
-<h2>Slaptažodžiai<a href="#slaptazodziai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="slaptazodziai"><h2>Slaptažodžiai<a href="#slaptazodziai" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Pirmiausia saugumas, rekomenduoju įsidiegti <a class="reference external" href="http://www.keepassx.org/">KeepPassX</a> programą ir jos
 pagalba susigeneruoti ilgą ir sudėtingą Gmail ar kito pašto serverio
 slaptažodį, kadangi jis bus naudojamas konfigūraciniuose failuose.</p>
@@ -70,9 +68,7 @@ iš slaptažodžių raktinės. Skripto kodas:</p>
 <blockquote>
 <p><a class="reference external" href="https://bitbucket.org/sirex/home/src/default/bin/keyring">https://bitbucket.org/sirex/home/src/default/bin/keyring</a></p>
 </blockquote>
-</div>
-<div class="section" id="laisku-katalogo-sifravimas">
-<h2>Laiškų katalogo šifravimas<a href="#laisku-katalogo-sifravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="laisku-katalogo-sifravimas"><h2>Laiškų katalogo šifravimas<a href="#laisku-katalogo-sifravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Kadangi laiškai bus atsiųsti ir išsaugoti jūsų kompiuteryje, reikėtų juos
 saugoti užšifruotame kataloge, kad niekas be jūsų negalėtų jų perskaityti.
 Žinoma tai nėra privaloma, tačiau dažnai el.  paštu atsiunčiami
@@ -93,9 +89,7 @@ kompiuteriui. Laiškų katalogas visą laiką bus užrakintas, nebent kas nors
 bandys kreiptis į tą katalogą, kai tai atsitiks, <code class="docutils literal">encfs</code> kreipsis į
 raktinę slaptažodžio, gavus slaptažodį, automatiškai, penkioms minutėms
 atrakins laiškų katalogą, o po penkių minučių vėl užrakins.</p>
-</div>
-<div class="section" id="laisku-sinchronizavimas">
-<h2>Laiškų sinchronizavimas<a href="#laisku-sinchronizavimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="laisku-sinchronizavimas"><h2>Laiškų sinchronizavimas<a href="#laisku-sinchronizavimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Laiškų sinchronizavimui pasirinkau <a class="reference external" href="http://offlineimap.org/">offlineimap</a> programą. Jai sukonfigūruoti
 reikia dviejų konfigūracijos failų:</p>
 <blockquote>
@@ -128,9 +122,7 @@ git checkout v6.5.4
 30 000 laiškų užtruko apie dvi valandas.</p>
 <p>O nuolatiniam laiškų atsiuntimui, foniniu režimu:</p>
 <pre class="literal-block">offlineimap -u quiet</pre>
-</div>
-<div class="section" id="laisku-indeksavimo-variklis">
-<h2>Laiškų indeksavimo variklis<a href="#laisku-indeksavimo-variklis" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="laisku-indeksavimo-variklis"><h2>Laiškų indeksavimo variklis<a href="#laisku-indeksavimo-variklis" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Greitai laiškų paieškai pasirinkau <a class="reference external" href="http://notmuchmail.org/">notmuch</a> laiškų indeksavimo variklį.
 Kito pasirinkimo ir nebuvo, kadangi nuo šio variklio tiesiogiai yra
 priklausomas <a class="reference external" href="https://github.com/pazz/alot">alot</a> el. pašto klientas.</p>
@@ -142,14 +134,10 @@ priklausomas <a class="reference external" href="https://github.com/pazz/alot">a
 <pre class="literal-block">notmuch setup</pre>
 <p>Laiškų indeksas atnaujinamas tokios komandos pagalba:</p>
 <pre class="literal-block">notmuch new</pre>
-</div>
-<div class="section" id="adresu-knygute">
-<h2>Adresų knygutė<a href="#adresu-knygute" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="adresu-knygute"><h2>Adresų knygutė<a href="#adresu-knygute" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Dar vienas reikalingas dalykas, adresų knygutė, tam pasirinkau <a class="reference external" href="http://abook.sourceforge.net/">abook</a>,
 kadangi su šia adresų knygute puikiai suderinamas <a class="reference external" href="https://github.com/pazz/alot">alot</a> el. pašto klientas.</p>
-</div>
-<div class="section" id="laisku-issiuntimas">
-<h2>Laiškų išsiuntimas<a href="#laisku-issiuntimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="laisku-issiuntimas"><h2>Laiškų išsiuntimas<a href="#laisku-issiuntimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Kadangi <a class="reference external" href="http://www.postfix.org/">postfix</a> yra labai sudėtingas, o <a class="reference external" href="https://wiki.archlinux.org/index.php/SSMTP">ssmtp</a> reikalauja saugoti
 slaptažodžius atviru tekstu konfigūraciniame faile, tai <a class="reference external" href="http://www.python.org/">Python</a> pagalba
 pasirašiau savo laiškų išsiuntimo skriptą:</p>
@@ -160,9 +148,7 @@ pasirašiau savo laiškų išsiuntimo skriptą:</p>
 <pre class="literal-block">keyring gmail vardenis.pavardenis@gmail.com</pre>
 <p>Beje, rekomenduoju išbandyti ir <a class="reference external" href="http://msmtp.sourceforge.net/">msmtp</a> <span class="caps">MUA</span>, kuris atrodo daro lygiai tą patį ir
 tikriausiai geriau.</p>
-</div>
-<div class="section" id="el-pasto-klientas">
-<h2>El. pašto klientas<a href="#el-pasto-klientas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="el-pasto-klientas"><h2>El. pašto klientas<a href="#el-pasto-klientas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Galiausiai viskas susijungia į vieną vietą <a class="reference external" href="https://github.com/pazz/alot">alot</a> programos pagalba.</p>
 <p>Mano konfigūracijos failas atrodo taip:</p>
 <blockquote>
@@ -177,9 +163,7 @@ greitai, nepriklausomai nuo laiškų kiekio.</p>
 <pre class="literal-block">f5 = shellescape --refocus=true 'notmuch new' ; refresh</pre>
 <p>Tai, reiškia, kad paspaudus f5, bus atnaujintas laiškų indeksas ir atnaujintas
 laiškų sąrašas <a class="reference external" href="https://github.com/pazz/alot">alot</a> el. pašto kliente.</p>
-</div>
-<div class="section" id="demonai">
-<h2>Demonai<a href="#demonai" class="headerlink" title="Permalink to this heading">¶</a></h2>
+</section><section id="demonai"><h2>Demonai<a href="#demonai" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Viskam, kas čia aprašyta, reikalingi du demonai, vienas laiškų katalogo
 dešifravimui, kitas laiškų sinchronizavimui.</p>
 <p>Rekomenduoju naudoti <a class="reference external" href="http://supervisord.org/">supervisord</a> demonų valdytoją, kuris puikiai moka
@@ -201,9 +185,8 @@ galite jį išjungti taip:</p>
 </div>
 <p><a class="reference external" href="http://supervisord.org/">Supervisord</a> būklę galite stebėti taip:</p>
 <pre class="literal-block">supervisorctl -c ~/.supervisor/supervisord.conf</pre>
+</section>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../../2012/barsavimas-internetu/" rel="prev" title="Balsavimas internetu">Previous post</a>

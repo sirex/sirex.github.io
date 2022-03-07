@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about ubuntu)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/ubuntu.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Linux viešosiose vietose</title><link>https://sirex.lt/posts/2011/linux-viesosiose-vietose/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Ar jums teko matyti Linux, naudojamus viešosiose vietose? Jei taip, prašau
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about ubuntu)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/ubuntu.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Linux viešosiose vietose</title><link>https://sirex.lt/posts/2011/linux-viesosiose-vietose/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Ar jums teko matyti Linux, naudojamus viešosiose vietose? Jei taip, prašau
 nepasididžiuoti ir pasidalinkite informacija ar vaizdine medžiaga, jei tokią
 turite.&lt;/p&gt;
 &lt;p&gt;Žemiau pateikiu visų Linux panaudojimo viešose vietose atvejų rinkinį.&lt;/p&gt;
-&lt;div class="section" id="mint-vinetu"&gt;
+&lt;section id="mint-vinetu"&gt;
 &lt;h2&gt;Mint Vinetu&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.mintvinetu.com/"&gt;Mint Vinetu&lt;/a&gt; yra neįprastas knygynas arba jauki vieta, kur galima pigiau
 įsigyti rekomenduojamas knygas, skaityti gurkšnojant mėtų arbatą ar priduoti
@@ -12,8 +12,8 @@ perskaitytas knygas, nes dalintis yra džiaugsmas.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/mint-vinetu-ubuntu.jpg"&gt;&lt;img alt="Ubuntu darbo vieta, `Mint Vinetu`_ knygyne" src="https://sirex.lt/images/mint-vinetu-ubuntu.thumbnail.jpg"&gt;&lt;/a&gt;
 &lt;p&gt;Ubuntu šioje vietoje naudojamas kompiuteryje, kuriuo gali naudotis knygyno
 lankytojai.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="fotoservisas"&gt;
+&lt;/section&gt;
+&lt;section id="fotoservisas"&gt;
 &lt;h2&gt;Fotoservisas&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://fotoservisas.lt/"&gt;Fotoservisas&lt;/a&gt; yra internetinė foto laboratorija, kurioje internetu galite
 užsisakyti nuotraukų gaminimą ir atsiimti artimiausiame salone pagamintas
@@ -23,13 +23,13 @@ prieš spausdinant, kad būtų galimybė atsirinkti kurias nuotraukas norite
 spausdinti. Kadangi yra nemaža tikimybė, kad kai kurie lankytojai prie to
 kompiuterio prijungs laikmenas užkrėstas virusais, tai Ubuntu, būdamas atsparus
 kompiuteriniams virusams puikiai gelbsti.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>linux</category><category>ubuntu</category><guid>https://sirex.lt/posts/2011/linux-viesosiose-vietose/</guid><pubDate>Mon, 18 Jul 2011 21:00:00 GMT</pubDate></item><item><title>Ubuntu 10.10</title><link>https://sirex.lt/posts/2010/ubuntu-1010/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Nesenai vykusioje Ubuntu 10.10 Release Party mini konferencijoje vedžiau
+&lt;/section&gt;</description><category>floss</category><category>linux</category><category>ubuntu</category><guid>https://sirex.lt/posts/2011/linux-viesosiose-vietose/</guid><pubDate>Mon, 18 Jul 2011 21:00:00 GMT</pubDate></item><item><title>Ubuntu 10.10</title><link>https://sirex.lt/posts/2010/ubuntu-1010/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Nesenai vykusioje Ubuntu 10.10 Release Party mini konferencijoje vedžiau
 install fest, net 2 valandas! Kad išsamiai ir nuosekliai viską nupasakočiau,
 buvau pasiruošęs visą sąrašą dalykų, kuriuos reikia paminėti. Nusprendžiau
 paskelbti šį sąrašą ir čia.&lt;/p&gt;
 &lt;p&gt;Tik noriu iš kart įspėti, kad sąrašas netvarkytas ir kai kuriose vietose gali
 būti neaiškus.&lt;/p&gt;
-&lt;div class="section" id="ar-verta-diegti-ubuntu"&gt;
+&lt;section id="ar-verta-diegti-ubuntu"&gt;
 &lt;h2&gt;Ar verta diegti Ubuntu?&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Taip, nebent:&lt;/p&gt;
@@ -41,8 +41,8 @@ AutoCAD ir pan., kurios veikia tik Windows aplinkoje.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="pasiruosimas-diegimui"&gt;
+&lt;/section&gt;
+&lt;section id="pasiruosimas-diegimui"&gt;
 &lt;h2&gt;Pasiruošimas diegimui&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Upgrade versus fresh install&lt;/p&gt;
@@ -118,21 +118,21 @@ greičiau ir patogiau&lt;/p&gt;&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Konfigūracinių failų saugojimas Mercurial repozitoriume&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Naudojamų programų sąrašo išsaugojimas ir atstatymas:&lt;/p&gt;
-&lt;pre class="code sh"&gt;&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Prieš naujai įdiegiant Ubuntu:&lt;/span&gt;
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-2"&gt;&lt;/a&gt;dpkg --get-selections &amp;gt; old
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-3"&gt;&lt;/a&gt;
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-4"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Po įdiegimo&lt;/span&gt;
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-5"&gt;&lt;/a&gt;dpkg --get-selections &amp;gt; new
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-7"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Išrenkam paketus, kurių nėra&lt;/span&gt;
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-8"&gt;&lt;/a&gt;comm -23 old new &amp;gt; sel
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-9"&gt;&lt;/a&gt;
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-10"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Peržiūrim ko reikia&lt;/span&gt;
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-11"&gt;&lt;/a&gt;vim sel
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-13"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Įdiegima tai, kas atrinkta&lt;/span&gt;
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-14"&gt;&lt;/a&gt;sudo dpkg –set-selections &amp;lt; mypackages.txt
-&lt;a name="rest_code_bf3f9c6caa634a1487819a48b8721b0f-15"&gt;&lt;/a&gt;sudo apt-get dselect-upgrade
+&lt;pre class="code sh"&gt;&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-1" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-1" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Prieš naujai įdiegiant Ubuntu:&lt;/span&gt;
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-2" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-2" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-2"&gt;&lt;/a&gt;dpkg --get-selections &amp;gt; old
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-3" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-3" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-3"&gt;&lt;/a&gt;
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-4" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-4" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-4"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Po įdiegimo&lt;/span&gt;
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-5" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-5" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-5"&gt;&lt;/a&gt;dpkg --get-selections &amp;gt; new
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-6" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-6" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-6"&gt;&lt;/a&gt;
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-7" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-7" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-7"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Išrenkam paketus, kurių nėra&lt;/span&gt;
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-8" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-8" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-8"&gt;&lt;/a&gt;comm -23 old new &amp;gt; sel
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-9" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-9" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-9"&gt;&lt;/a&gt;
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-10" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-10" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-10"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Peržiūrim ko reikia&lt;/span&gt;
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-11" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-11" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-11"&gt;&lt;/a&gt;vim sel
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-12" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-12" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-12"&gt;&lt;/a&gt;
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-13" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-13" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-13"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Įdiegima tai, kas atrinkta&lt;/span&gt;
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-14" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-14" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-14"&gt;&lt;/a&gt;sudo dpkg –set-selections &amp;lt; mypackages.txt
+&lt;a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-15" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-15" href="https://sirex.lt/posts/2010/ubuntu-1010/#rest_code_2722f0e2208f4606a9aeb5a853691b2a-15"&gt;&lt;/a&gt;sudo apt-get dselect-upgrade
 &lt;/pre&gt;&lt;p&gt;Idėja: &lt;a class="reference external" href="http://brainstorm.ubuntu.com/idea/25839/"&gt;http://brainstorm.ubuntu.com/idea/25839/&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Atsarginių kopijų darymas, rekomenduoju Back In Time, taip pat: sbackup
@@ -144,8 +144,8 @@ paskutinis dalykas ir tai reikia daryti išjungus visas programas.&lt;/p&gt;&lt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Namų katalogo išvalymas, prieš darant fresh install&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="diegimas"&gt;
+&lt;/section&gt;
+&lt;section id="diegimas"&gt;
 &lt;h2&gt;Diegimas&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;BIOS nustatymai&lt;/p&gt;&lt;/li&gt;
@@ -185,8 +185,8 @@ ir 1G&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="po-idiegimo"&gt;
+&lt;/section&gt;
+&lt;section id="po-idiegimo"&gt;
 &lt;h2&gt;Po įdiegimo&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Keyring slaptažodis&lt;/p&gt;
@@ -221,7 +221,7 @@ bet keyring neklausinės kas kartą įvesti slaptažodžio&lt;/p&gt;&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Gnome-do - must have&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>ubuntu</category><guid>https://sirex.lt/posts/2010/ubuntu-1010/</guid><pubDate>Sun, 17 Oct 2010 20:50:00 GMT</pubDate></item><item><title>PyJunior</title><link>https://sirex.lt/posts/2010/pyjunior/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Užtikau Jono Bacon, žmogaus atsakingo už Ubuntu bendruomenės reikalus, &lt;a class="reference external" href="http://www.jonobacon.org/2010/04/08/pyjunior-call-for-documentation-help/"&gt;įrašą
+&lt;/section&gt;</description><category>ubuntu</category><guid>https://sirex.lt/posts/2010/ubuntu-1010/</guid><pubDate>Sun, 17 Oct 2010 20:50:00 GMT</pubDate></item><item><title>PyJunior</title><link>https://sirex.lt/posts/2010/pyjunior/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Užtikau Jono Bacon, žmogaus atsakingo už Ubuntu bendruomenės reikalus, &lt;a class="reference external" href="http://www.jonobacon.org/2010/04/08/pyjunior-call-for-documentation-help/"&gt;įrašą
 apie PyJunior&lt;/a&gt;.
 Sudomino, įsidiegiau, išbandžiau, išverčiau į Lietuvių kalbą ir nusprendžiau
 pasidalinti šiuo atradimu.&lt;/p&gt;
@@ -264,7 +264,7 @@ $ ../../bin/python setup.py install
 $ ../..
 $ ./bin/pyjunior``&lt;/pre&gt;
 &lt;p&gt;Prieš tai, naudojantis savo distribucijos paketų sistema reikia įsidiegti
-couchdb paketą.&lt;/p&gt;&lt;/div&gt;</description><category>couchdb</category><category>floss</category><category>python</category><category>ubuntu</category><guid>https://sirex.lt/posts/2010/pyjunior/</guid><pubDate>Sat, 10 Apr 2010 16:34:00 GMT</pubDate></item><item><title>Kaip įdiegti Windows?</title><link>https://sirex.lt/posts/2009/kaip-idiegti-windows/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Istorija tokia, darbe teko testuoti svetainę su IE naršyklėmis. Kadangi prie
+couchdb paketą.&lt;/p&gt;</description><category>couchdb</category><category>floss</category><category>python</category><category>ubuntu</category><guid>https://sirex.lt/posts/2010/pyjunior/</guid><pubDate>Sat, 10 Apr 2010 16:34:00 GMT</pubDate></item><item><title>Kaip įdiegti Windows?</title><link>https://sirex.lt/posts/2009/kaip-idiegti-windows/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Istorija tokia, darbe teko testuoti svetainę su IE naršyklėmis. Kadangi prie
 projekto dirbau vienas ir nebuvo porininko naudojančio Windows, tai tas bjaurus
 darbas teko man pačiam... :/&lt;/p&gt;
 &lt;p&gt;Darbe naudoju Ubuntu, tai jokio IE neturėjau. Ačiū &lt;a class="reference external" href="http://www.tatanka.com.br/ies4linux/"&gt;IEs4Linux projektui&lt;/a&gt;, kurio dėka IE6 daugiau/mažiau veikia
@@ -273,7 +273,7 @@ per &lt;a class="reference external" href="http://www.winehq.org/"&gt;Wine (**W*
 &lt;p&gt;Įdiegti Ubuntu galima iš CD, USB, per tinklą ar internetą ir net gi &lt;a class="reference external" href="http://wubi-installer.org/"&gt;tiesiai į
 Windows, nekeičiant disko skirsnių&lt;/a&gt;. Kiek žinau,
 Windows galima įdiegti tik per CD...&lt;/p&gt;
-&lt;div class="section" id="kaip-idiegti-windows"&gt;
+&lt;section id="kaip-idiegti-windows"&gt;
 &lt;h2&gt;Kaip įdiegti Windows?&lt;/h2&gt;
 &lt;p&gt;Virtualizacijos dėka ribotos Windows įdiegimo galimybės nesudaro jokių
 problemų. Šiam reikalui pasirinkau &lt;a class="reference external" href="http://www.qemu.org/"&gt;QEMU&lt;/a&gt;.  Kodėl?
@@ -296,8 +296,8 @@ Tačiau galite į CD-ROM įrenginį įdėti ir legalių Windows CD, tuomet vieto
 &lt;p&gt;Po šios komandos paleidimo pasileist Windows diegimo vedlys. Įdiekite Windows
 kaip visada. Jei nei karto neteko diegti Windows, paprašykite draugo pagalbos.&lt;/p&gt;
 &lt;p&gt;Priklausomai nuo jūsų kompiuterio spartos, diegimas truks apie valandą.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="po-idiegimo"&gt;
+&lt;/section&gt;
+&lt;section id="po-idiegimo"&gt;
 &lt;h2&gt;Po įdiegimo&lt;/h2&gt;
 &lt;p&gt;Kai jau turėsite veikiančius Windows, išsaugotus virtualiame diske, nebereikės
 kartoti diegimo, norint vėl juos paliesti. Jau įdiegtus Windows iškviesite
@@ -312,10 +312,10 @@ pataisyti klaidas.&lt;/p&gt;
 &lt;p&gt;Naudojantis QEMU galima testuoti ir kitas operacines sistemas, pavyzdžiui
 Ubuntu Alpha ar Beta versijas. Daugiau apie QEMU galite pasiskaityti &lt;a class="reference external" href="http://www.qemu.org/"&gt;qemu.org&lt;/a&gt; svetainėje.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="image0" src="https://sirex.lt/posts/2009/kaip-idiegti-windows/files/qemu-windows.png"&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>qemu</category><category>ubuntu</category><category>windows</category><guid>https://sirex.lt/posts/2009/kaip-idiegti-windows/</guid><pubDate>Mon, 19 Oct 2009 20:52:00 GMT</pubDate></item><item><title>Dell Inspiron 1501 + Ubuntu Jaunty + Ext4</title><link>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Nesenai pakeičiau darbo kompiuterį, gavau Dell Inspiron 1501. Deja diegimo ir
+&lt;/section&gt;</description><category>floss</category><category>qemu</category><category>ubuntu</category><category>windows</category><guid>https://sirex.lt/posts/2009/kaip-idiegti-windows/</guid><pubDate>Mon, 19 Oct 2009 20:52:00 GMT</pubDate></item><item><title>Dell Inspiron 1501 + Ubuntu Jaunty + Ext4</title><link>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Nesenai pakeičiau darbo kompiuterį, gavau Dell Inspiron 1501. Deja diegimo ir
 kompiuterio paruošimo darbui procedūra vyko ne itin sklandžiai...&lt;/p&gt;
 &lt;p&gt;Aprašysiu visas problemas, jei kas susidurs, gal ši informacija padės.&lt;/p&gt;
-&lt;div class="section" id="wifi"&gt;
+&lt;section id="wifi"&gt;
 &lt;h2&gt;WiFi&lt;/h2&gt;
 &lt;p&gt;Jei naudojate Linux, venkite Broadcom BCM4311 WLAN plokščių... Nes jos neveikia
 „out of the box“.&lt;/p&gt;
@@ -337,8 +337,8 @@ sudėtingas.&lt;/p&gt;
 $ sudo sh -c 'echo blacklist pcspkr &amp;gt;&amp;gt; /etc/modprobe.d/blacklist'&lt;/pre&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ext4-kol-kas-nerekomenduociau"&gt;
+&lt;/section&gt;
+&lt;section id="ext4-kol-kas-nerekomenduociau"&gt;
 &lt;h2&gt;Ext4 – kol kas nerekomenduočiau&lt;/h2&gt;
 &lt;p&gt;Kadangi kartu su Jaunty versija atsirado galimybė naudoti Ext4 failų sistemą,
 kuri buvo gausiai afišuota. Tai žinoma net nedvejodamas pasirinkau Ext4 visuose
@@ -367,14 +367,14 @@ pakankamai stabili, kad būtų galima ją naudoti darbo ar namų kompiuteryje,
 nekalbant apie serverius...&lt;/p&gt;
 &lt;p&gt;Kadangi Ext4 vis dar nėra tinkamas kasdieniam naudojimui, nusprendžiau
 paeksperimentuoti su JFS. Kol kas veikia gerai... :)&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>ext4</category><category>floss</category><category>ubuntu</category><guid>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</guid><pubDate>Tue, 02 Jun 2009 20:32:00 GMT</pubDate></item><item><title>SSH serveris chroot aplinkoje</title><link>https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Jau seniai esu girdėjęs ir daugiau mažiau žinojau chroot aplinkos veikimo
+&lt;/section&gt;</description><category>ext4</category><category>floss</category><category>ubuntu</category><guid>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</guid><pubDate>Tue, 02 Jun 2009 20:32:00 GMT</pubDate></item><item><title>SSH serveris chroot aplinkoje</title><link>https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Jau seniai esu girdėjęs ir daugiau mažiau žinojau chroot aplinkos veikimo
 principus, tačiau pačiam to dar neteko daryti. Prieš kelias dienas
 konfigūruodamas vieną kompą su Ubuntu Server Hardy Herron OS, pagaliau teko ir
 man patirti šį malonumą, chroot aplinkos pakūrimą... :) Pasirodo tai kur kas
 paprasčiau nei maniau! Tai gi pasidalinsiu patirtimi ir su kitais.&lt;/p&gt;
 &lt;p&gt;Viską pavyko padaryti sekant vieno &lt;a class="reference external" href="http://ubuntuforums.org/showthread.php?t=408019"&gt;ubuntuforums.org įrašo nuorodomis&lt;/a&gt;. Labai neišsiplėsdamas
 paprasčiausiai pakartosiu kas ten rašoma ir kai kur pakomentuosiu.&lt;/p&gt;
-&lt;div class="section" id="zingsnis"&gt;
+&lt;section id="zingsnis"&gt;
 &lt;h2&gt;1. Žingsnis&lt;/h2&gt;
 &lt;pre class="literal-block"&gt;sudo apt-get install dchroot debootstrap
 sudo mkdir /chroot/
@@ -386,20 +386,20 @@ debootstrap dėka, savo OS viduje sukuriama nauja sistema, o tiksliau
 paprasčiausiai parsiunčiami jos failai. Taip pat nurodžiau Lietuvišką Ubuntu
 repozitoriumo serverį, ko dėka, su gera interneto linija į Lietuva, šis
 procesas vyks labai greitai.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="id1"&gt;
+&lt;/section&gt;
+&lt;section id="zingsnis-1"&gt;
 &lt;h2&gt;2. Žingsnis&lt;/h2&gt;
 &lt;p&gt;Šiame žingsnyje pasileiskite kitą terminalo langą, nes pirmame žingsnyje jūs
 esate chroot viduje, o naujame terminale turėtumėte būti išorėje.&lt;/p&gt;
 &lt;pre class="literal-block"&gt;echo "http://ftp.litnet.lt/pub/ubuntu hardy main restricted universe multiverse" &amp;gt;&amp;gt; /chroot/etc/apt/sources.list
 echo "http://security.ubuntu.com/ubuntu hardy-security main restricted universe multiverse" &amp;gt;&amp;gt; /chroot/etc/apt/sources.list&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="id2"&gt;
+&lt;/section&gt;
+&lt;section id="zingsnis-2"&gt;
 &lt;h2&gt;3. Žingsnis&lt;/h2&gt;
 &lt;p&gt;Vėl grįžkite į chroot vidų ir tęskite:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;apt-get update ; apt-get upgrade&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
+&lt;/section&gt;
+&lt;section id="zingsnis-3"&gt;
 &lt;h2&gt;4. Žingsnis&lt;/h2&gt;
 &lt;p&gt;Vėl grįžkite į kitą terminalą, kuri būtų išorėje (ne chroot aplinkos viduje):&lt;/p&gt;
 &lt;pre class="literal-block"&gt;sudo cp /etc/passwd /chroot/etc/
@@ -412,8 +412,8 @@ echo "/dev /chroot/dev none bind 0 0" &amp;gt;&amp;gt; /etc/fstab
 echo "/proc /chroot/proc proc defaults 0 0" &amp;gt;&amp;gt; /etc/fstab
 sudo mkdir -p /chroot/usr/share/fonts
 echo "/usr/share/fonts /chroot/usr/share/fonts none bind 0 0" &amp;gt;&amp;gt; /etc/fstab&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="id4"&gt;
+&lt;/section&gt;
+&lt;section id="zingsnis-4"&gt;
 &lt;h2&gt;5. Žingsnis&lt;/h2&gt;
 &lt;p&gt;Dabar ko gero sudėtingiausia dalis, kurią bandžiau visaip apeiti, nenorėdamas
 kompiluoti kažkokio nežinomo kodo dėl saugom... Tačiau nieko nepavyko ir teko
@@ -425,16 +425,16 @@ tęsti chroot išorėje:&lt;/p&gt;
 wget http://kegel.com/crosstool/current/chrootshell.c cc chrootshell.c -o chrootshell
 sudo install -o root -m 4755 chrootshell /sbin/chrootshell
 echo "/sbin/chrootshell" &amp;gt;&amp;gt; /etc/shells&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="id5"&gt;
+&lt;/section&gt;
+&lt;section id="zingsnis-5"&gt;
 &lt;h2&gt;6. Žingsnis&lt;/h2&gt;
 &lt;p&gt;Galiausiai chroot išorėje, faile &lt;code class="docutils literal"&gt;/etc/passwd&lt;/code&gt;, visiems naudotojams, kurie
 prisijungimo metu turės būti nukreipiami į chroot aplinką, reikia pakeisti namų
 katalogą į &lt;code class="docutils literal"&gt;/chroot&lt;/code&gt;, o shellą į &lt;code class="docutils literal"&gt;/sbin/chrootshell&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Pavyzdys:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;petras:1000:1000:Petras Petraitis:/chroot:/sbin/chrootshell&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="id6"&gt;
+&lt;/section&gt;
+&lt;section id="zingsnis-6"&gt;
 &lt;h2&gt;6. Žingsnis&lt;/h2&gt;
 &lt;p&gt;Vidiniame &lt;code class="docutils literal"&gt;/etc/passwd&lt;/code&gt; faile turi būti tokie patys naudotojai, tik su
 tikrais duomenimis, su tikru, chroot viduje egzistuojančiu namų katalogu ir
@@ -445,16 +445,16 @@ shellu.&lt;/p&gt;
 tada kiekvienam sukurtam naudotojui reikia sukurti ir po namų katalogą, tam
 puikiai tinka toks paprastas shell skriptas, kuris turėti būti paleistas chroot
 išorėje:&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_f620d2724fbb4fd29dbca7017e14fbf4-1"&gt;&lt;/a&gt;awk -F &lt;span class="s2"&gt;":"&lt;/span&gt; &lt;span class="s1"&gt;'/chrootshell/ { print $1 }'&lt;/span&gt; /etc/passwd &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; chrootusr &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-&lt;a name="rest_code_f620d2724fbb4fd29dbca7017e14fbf4-2"&gt;&lt;/a&gt;    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; ! -d /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
-&lt;a name="rest_code_f620d2724fbb4fd29dbca7017e14fbf4-3"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"Creating home dir for: &lt;/span&gt;&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
-&lt;a name="rest_code_f620d2724fbb4fd29dbca7017e14fbf4-4"&gt;&lt;/a&gt;        sudo mkdir -p /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;
-&lt;a name="rest_code_f620d2724fbb4fd29dbca7017e14fbf4-5"&gt;&lt;/a&gt;        sudo chown &lt;span class="nv"&gt;$chrootusr&lt;/span&gt;:&lt;span class="nv"&gt;$chrootusr&lt;/span&gt; /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;
-&lt;a name="rest_code_f620d2724fbb4fd29dbca7017e14fbf4-6"&gt;&lt;/a&gt;        sudo chmod &lt;span class="m"&gt;700&lt;/span&gt; /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;
-&lt;a name="rest_code_f620d2724fbb4fd29dbca7017e14fbf4-7"&gt;&lt;/a&gt;    &lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;a name="rest_code_f620d2724fbb4fd29dbca7017e14fbf4-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;done&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="section" id="id7"&gt;
+&lt;pre class="code bash"&gt;&lt;a id="rest_code_e570409370244300b29b451d2e1d3ca2-1" name="rest_code_e570409370244300b29b451d2e1d3ca2-1" href="https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/#rest_code_e570409370244300b29b451d2e1d3ca2-1"&gt;&lt;/a&gt;awk -F &lt;span class="s2"&gt;":"&lt;/span&gt; &lt;span class="s1"&gt;'/chrootshell/ { print $1 }'&lt;/span&gt; /etc/passwd &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; chrootusr &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;a id="rest_code_e570409370244300b29b451d2e1d3ca2-2" name="rest_code_e570409370244300b29b451d2e1d3ca2-2" href="https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/#rest_code_e570409370244300b29b451d2e1d3ca2-2"&gt;&lt;/a&gt;    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; ! -d /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;a id="rest_code_e570409370244300b29b451d2e1d3ca2-3" name="rest_code_e570409370244300b29b451d2e1d3ca2-3" href="https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/#rest_code_e570409370244300b29b451d2e1d3ca2-3"&gt;&lt;/a&gt;        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"Creating home dir for: &lt;/span&gt;&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;a id="rest_code_e570409370244300b29b451d2e1d3ca2-4" name="rest_code_e570409370244300b29b451d2e1d3ca2-4" href="https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/#rest_code_e570409370244300b29b451d2e1d3ca2-4"&gt;&lt;/a&gt;        sudo mkdir -p /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;
+&lt;a id="rest_code_e570409370244300b29b451d2e1d3ca2-5" name="rest_code_e570409370244300b29b451d2e1d3ca2-5" href="https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/#rest_code_e570409370244300b29b451d2e1d3ca2-5"&gt;&lt;/a&gt;        sudo chown &lt;span class="nv"&gt;$chrootusr&lt;/span&gt;:&lt;span class="nv"&gt;$chrootusr&lt;/span&gt; /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;
+&lt;a id="rest_code_e570409370244300b29b451d2e1d3ca2-6" name="rest_code_e570409370244300b29b451d2e1d3ca2-6" href="https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/#rest_code_e570409370244300b29b451d2e1d3ca2-6"&gt;&lt;/a&gt;        sudo chmod &lt;span class="m"&gt;700&lt;/span&gt; /chroot/home/&lt;span class="nv"&gt;$chrootusr&lt;/span&gt;
+&lt;a id="rest_code_e570409370244300b29b451d2e1d3ca2-7" name="rest_code_e570409370244300b29b451d2e1d3ca2-7" href="https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/#rest_code_e570409370244300b29b451d2e1d3ca2-7"&gt;&lt;/a&gt;    &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;a id="rest_code_e570409370244300b29b451d2e1d3ca2-8" name="rest_code_e570409370244300b29b451d2e1d3ca2-8" href="https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/#rest_code_e570409370244300b29b451d2e1d3ca2-8"&gt;&lt;/a&gt;&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/section&gt;
+&lt;section id="zingsnis-7"&gt;
 &lt;h2&gt;7. Žingsnis&lt;/h2&gt;
 &lt;p&gt;Galiausiai bandykite jungtis, kaip chroot įkalintas naudotojas:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;ssh petras@localhost&lt;/pre&gt;
@@ -464,13 +464,13 @@ testinę aplinką, kuri nedarys jokios įtakos jūsų darbinei aplinkai ir ten
 testuotis kokias nors serverio konfigūracijas ar panašiai. &lt;code class="docutils literal"&gt;debootstrap&lt;/code&gt;
 įrankio sukurta aplinka užima vos 300 Mb disko vietos, su minimalia Ubuntu
 serverio instaliacija. Na, tikrai puikus dalykas... :)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="informacijos-saltiniai"&gt;
+&lt;/section&gt;
+&lt;section id="informacijos-saltiniai"&gt;
 &lt;h2&gt;Informacijos šaltiniai&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://ubuntuforums.org/showthread.php?t=408019"&gt;ubuntuforums.org&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>floss</category><category>shell</category><category>ssh</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/</guid><pubDate>Tue, 23 Dec 2008 07:06:00 GMT</pubDate></item><item><title>Ubuntu Supported Hardware Database?</title><link>https://sirex.lt/posts/2008/ubuntu-supported-hardware-database/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Ieškojau tokio dalyko, kaip duomenų bazė, kurioje būtų gražiai surašyti
+&lt;/section&gt;</description><category>floss</category><category>shell</category><category>ssh</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/ssh-serveris-chroot-aplinkoje/</guid><pubDate>Tue, 23 Dec 2008 07:06:00 GMT</pubDate></item><item><title>Ubuntu Supported Hardware Database?</title><link>https://sirex.lt/posts/2008/ubuntu-supported-hardware-database/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Ieškojau tokio dalyko, kaip duomenų bazė, kurioje būtų gražiai surašyti
 įrenginiai ir statusas, kaip tie įrenginiai veikia su Ubuntu.&lt;/p&gt;
 &lt;p&gt;Pats Ubuntu turi tokį dalyką, kaip &lt;a class="reference external" href="https://edge.launchpad.net/ubuntu/jaunty/+package/hwtest"&gt;hwtest&lt;/a&gt;, kaip suprantu,
 jis nusiunčia informaciją į &lt;a class="reference external" href="http://hwdb.ubuntu.com/"&gt;hwdb.ubuntu.com&lt;/a&gt;, bet
@@ -496,7 +496,7 @@ kaip supratau žmonės prie to dirba ir kažkadaise turėtu pasirodyti tai ko
 reikia. Todėl belieka laukti ir balsuoti:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="http://brainstorm.ubuntu.com/idea/40/"&gt;Idea #40: Create a better hardware database&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>floss</category><category>hardware</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/ubuntu-supported-hardware-database/</guid><pubDate>Tue, 25 Nov 2008 19:55:00 GMT</pubDate></item><item><title>Ubuntu Eee ant Eee PC 900</title><link>https://sirex.lt/posts/2008/ubuntu-eee-ant-eee-pc-900/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Kaip žinia nesenai BMS pardavinėjo Asus Eee PC 900 po 599 Lt. Tai aš irgi vieną
+&lt;/ul&gt;</description><category>floss</category><category>hardware</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/ubuntu-supported-hardware-database/</guid><pubDate>Tue, 25 Nov 2008 19:55:00 GMT</pubDate></item><item><title>Ubuntu Eee ant Eee PC 900</title><link>https://sirex.lt/posts/2008/ubuntu-eee-ant-eee-pc-900/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Kaip žinia nesenai BMS pardavinėjo Asus Eee PC 900 po 599 Lt. Tai aš irgi vieną
 įsigijau, ne sau, bes savo sesei.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/small_eee.png"&gt;&lt;img alt="/images/small_eee.thumbnail.png" src="https://sirex.lt/images/small_eee.thumbnail.png"&gt;&lt;/a&gt;
 &lt;p&gt;Kadangi pagal nutylėjimą įdiegta Xandros operacinė sistema yra tokia ganėtinai
@@ -551,7 +551,7 @@ krauti.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Atrodo apturėjau visas įmanomas problemas, todėl tikiuosi jums bus lengviau jas
 spręsti.. :)&lt;/p&gt;
-&lt;div class="section" id="lietuviu-kalbos-pilnas-idiegimas"&gt;
+&lt;section id="lietuviu-kalbos-pilnas-idiegimas"&gt;
 &lt;h2&gt;Lietuvių kalbos pilnas įdiegimas&lt;/h2&gt;
 &lt;p&gt;Čia tiems, kurie nori turėti Lietuvišką naudotojo sąsają. Tikriausiai diegimo
 metu jau pasirinkote Lietuvių kalbą, tačiau to nepakanka, nes į vieną LiveUSB
@@ -559,8 +559,8 @@ visų kalbų pilno palaikymo nesutalpinsi. Tai gi, kad turėtumėte pilnai
 lietuvišką naudotojo sąsają eikite į: Home - Administravimas - Language
 Support, sąraše suraskite 'Lithuanian' ir uždėkite paukščiuką ir spauskite
 'Apply'. Po šių veiksmų bus įdiegti visi reikalingi dalykai Lietuvių kalbai.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="standartiniu-xandros-programu-idiegimas"&gt;
+&lt;/section&gt;
+&lt;section id="standartiniu-xandros-programu-idiegimas"&gt;
 &lt;h2&gt;Standartinių Xandros programų įdiegimas&lt;/h2&gt;
 &lt;p&gt;Jei žiūrinėjote standartines Eee PC programas, tai radote daug visokių programų
 mokymuisi, visokių žaidimų ir t.t. Ubuntu Eee galite turėti viską ir dar
@@ -571,8 +571,8 @@ dešinėje, tempkite „Įdiegti/Pašalinti..“ ant „Favorites“. Po šių v
 pagrindinėje panelėje turėtu atsirasti „Programos“, kur ir rasite
 „Įdiegti/Pašalinti“.  Paleidus „Įdiegti/Pašalinti“ galėsite sužymėti visas
 programas kurių reikia ir iš karto visas įdiegti.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="lietuviu-anlgu-kalbu-zodymas-opendict"&gt;
+&lt;/section&gt;
+&lt;section id="lietuviu-anlgu-kalbu-zodymas-opendict"&gt;
 &lt;h2&gt;Lietuvių - Anlgų kalbų žodymas Opendict&lt;/h2&gt;
 &lt;p&gt;Tikriausiai prisireiks šio dalyko, kuris pagal nutylėjimą nėra įdiegtas.
 Žodynas vadinasi „Opendict“, todėl galite jį susirasti aukščiau aprašytame
@@ -586,8 +586,8 @@ spauskite ant .deb failų.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="ftp://debian.home.lt/debian/pool/contrib/o/opendict-dictionaric/"&gt;Pracūzų - Lietuvių&lt;/a&gt;
 spauskite ant .deb failų.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="daugiau-vaizdu"&gt;
+&lt;/section&gt;
+&lt;section id="daugiau-vaizdu"&gt;
 &lt;h2&gt;Daugiau vaizdų&lt;/h2&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/small_eee2.png"&gt;&lt;img alt="/images/small_eee2.thumbnail.png" src="https://sirex.lt/images/small_eee2.thumbnail.png" style="height: 200px;"&gt;&lt;/a&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/small_eee3.png"&gt;&lt;img alt="/images/small_eee3.thumbnail.png" src="https://sirex.lt/images/small_eee3.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
@@ -599,7 +599,7 @@ spauskite ant .deb failų.&lt;/p&gt;&lt;/li&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka-6.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka-6.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka-6.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka-7.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka-7.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka-7.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/eee/small_Nuotrauka-8.png"&gt;&lt;img alt="/images/eee/small_Nuotrauka-8.thumbnail.png" src="https://sirex.lt/images/eee/small_Nuotrauka-8.thumbnail.png" style="width: 200px;"&gt;&lt;/a&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>eee</category><category>floss</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/ubuntu-eee-ant-eee-pc-900/</guid><pubDate>Wed, 19 Nov 2008 09:43:00 GMT</pubDate></item><item><title>Po Intrepid Ibex išleidimo atsinaujinau į Linux Mint</title><link>https://sirex.lt/posts/2008/po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Belaukiant Intrepid Ibex išleidimo buvau numatęs kelis dalykus kurių laukiau ir
+&lt;/section&gt;</description><category>eee</category><category>floss</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/ubuntu-eee-ant-eee-pc-900/</guid><pubDate>Wed, 19 Nov 2008 09:43:00 GMT</pubDate></item><item><title>Po Intrepid Ibex išleidimo atsinaujinau į Linux Mint</title><link>https://sirex.lt/posts/2008/po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Belaukiant Intrepid Ibex išleidimo buvau numatęs kelis dalykus kurių laukiau ir
 norėjau išbandyti: Kubuntu su KDE 4.1, Private katalogas, GNU Tar 1.20. Tačiau
 po Inrepid išleidimo viskas apsivertė aukštyn kojom, na išskyrus GNU Tar.&lt;/p&gt;
 &lt;p&gt;Pirmiausia, darbe, naudodamasis atnaujinimo priemone išbandžiau &lt;a class="reference external" href="https://wiki.ubuntu.com/EncryptedPrivateDirectory"&gt;Private
@@ -686,7 +686,7 @@ konfigūracijų langų. Paprasta ir patogu naudoti.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/shot-1225902916.png"&gt;&lt;img alt="/images/shot-1225902916.thumbnail.png" src="https://sirex.lt/images/shot-1225902916.thumbnail.png"&gt;&lt;/a&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/shot-1225903090.png"&gt;&lt;img alt="/images/shot-1225903090.thumbnail.png" src="https://sirex.lt/images/shot-1225903090.thumbnail.png"&gt;&lt;/a&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/shot-1225903230.png"&gt;&lt;img alt="/images/shot-1225903230.thumbnail.png" src="https://sirex.lt/images/shot-1225903230.thumbnail.png"&gt;&lt;/a&gt;
-&lt;a class="reference external image-reference" href="https://sirex.lt/images/shot-1225903268.png"&gt;&lt;img alt="/images/shot-1225903268.thumbnail.png" src="https://sirex.lt/images/shot-1225903268.thumbnail.png"&gt;&lt;/a&gt;&lt;/div&gt;</description><category>floss</category><category>kde</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/</guid><pubDate>Thu, 06 Nov 2008 14:49:00 GMT</pubDate></item><item><title>Neo FreeRunner belaukiant...</title><link>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Pagaliau pasirodė ilgai lauktas Openmoko telefonas: &lt;strong&gt;Neo FreeRunner&lt;/strong&gt;.
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/shot-1225903268.png"&gt;&lt;img alt="/images/shot-1225903268.thumbnail.png" src="https://sirex.lt/images/shot-1225903268.thumbnail.png"&gt;&lt;/a&gt;</description><category>floss</category><category>kde</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/po-intrepid-ibex-isleidimo-atsinaujinau-i-linux-mint/</guid><pubDate>Thu, 06 Nov 2008 14:49:00 GMT</pubDate></item><item><title>Neo FreeRunner belaukiant...</title><link>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Pagaliau pasirodė ilgai lauktas Openmoko telefonas: &lt;strong&gt;Neo FreeRunner&lt;/strong&gt;.
 Šį įrenginį jau užsakiau ir 2-3 savaičių bėgyje turėtu atkeliauti į
 mano rankas :)&lt;/p&gt;
 &lt;p&gt;O belaukiant, galima viska išsibandyti emuliatoriuje. Štai kaip tai
@@ -762,4 +762,4 @@ savo kompiuterio XTerm lange!&lt;/p&gt;
 &lt;p&gt;Štai daugiau vaizdų, kaip viskas atrodo:&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_menu.jpg"&gt;&lt;img alt="Pagrindinis meniu" src="https://sirex.lt/images/u1/neofr_menu.thumbnail.jpg"&gt;&lt;/a&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr-terminal.jpg"&gt;&lt;img alt="Terminalo emuliatorius" src="https://sirex.lt/images/u1/neofr-terminal.thumbnail.jpg"&gt;&lt;/a&gt;
-&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_vi.jpg"&gt;&lt;img alt="vim - teksto redaktorius" src="https://sirex.lt/images/u1/neofr_vi.thumbnail.jpg"&gt;&lt;/a&gt;&lt;/div&gt;</description><category>floss</category><category>openmoko</category><category>qemu</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</guid><pubDate>Fri, 18 Jul 2008 22:51:00 GMT</pubDate></item></channel></rss>
+&lt;a class="reference external image-reference" href="https://sirex.lt/images/u1/neofr_vi.jpg"&gt;&lt;img alt="vim - teksto redaktorius" src="https://sirex.lt/images/u1/neofr_vi.thumbnail.jpg"&gt;&lt;/a&gt;</description><category>floss</category><category>openmoko</category><category>qemu</category><category>ubuntu</category><guid>https://sirex.lt/posts/2008/neo-freerunner-belaukiant/</guid><pubDate>Fri, 18 Jul 2008 22:51:00 GMT</pubDate></item></channel></rss>

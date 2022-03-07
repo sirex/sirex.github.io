@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about facebook)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/facebook.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Facebook jau palaiko Jabber/XMPP pokalbių protokolą!</title><link>https://sirex.lt/posts/2010/facebook-jau-palaiko-jabberxmpp-pokalbiu-protokola/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Puiki žinia, &lt;a class="reference external" href="http://developers.facebook.com/news.php?blog=1&amp;amp;story=361"&gt;Facebook pokalbiai jau veikia per Jabber/XMPP protokolą!&lt;/a&gt;.  Visiems, kas
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about facebook)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/facebook.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Facebook jau palaiko Jabber/XMPP pokalbių protokolą!</title><link>https://sirex.lt/posts/2010/facebook-jau-palaiko-jabberxmpp-pokalbiu-protokola/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Puiki žinia, &lt;a class="reference external" href="http://developers.facebook.com/news.php?blog=1&amp;amp;story=361"&gt;Facebook pokalbiai jau veikia per Jabber/XMPP protokolą!&lt;/a&gt;.  Visiems, kas
 nekantrauja tai išbandyti, reikalingus prisijungimo duomenis rasite čia (reikia
 būti prisijungus prie Facebook):&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.facebook.com/sitetour/chat.php"&gt;http://www.facebook.com/sitetour/chat.php&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="section" id="kas-yra-tas-jabber-xmpp"&gt;
+&lt;section id="kas-yra-tas-jabber-xmpp"&gt;
 &lt;h2&gt;Kas yra tas Jabber/XMPP?&lt;/h2&gt;
 &lt;p&gt;Jabber/XMPP yra pokalbių protokolo atviras standartas. Šiuo metu tai yra
 de-facto pokalbių protokolo standartas, labiausiai prigijęs ir daugiausiai
@@ -23,8 +23,8 @@ todėl Skype nėra suderinamas su jokiomis kitomis programomis ar protokolais.
 Skype naudotojai gali bendrauti, tik su Skype naudotojais. Padėti pasikeistų,
 jei Skype pagaliau pradėtų paisyti standartų ir taip pat naudotų Jabber/XMPP
 protokolą.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="prisijungimo-instrukcijos-gajim-programai"&gt;
+&lt;/section&gt;
+&lt;section id="prisijungimo-instrukcijos-gajim-programai"&gt;
 &lt;h2&gt;Prisijungimo instrukcijos Gajim programai&lt;/h2&gt;
 &lt;p&gt;Žemiau pateikiu instrukcijas, kaip prisijungti prie Facebook per &lt;a class="reference external" href="http://www.gajim.org/"&gt;Gajim
 programą&lt;/a&gt;.&lt;/p&gt;
@@ -50,7 +50,7 @@ spauskite „Gerai“:&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://sirex.lt/images/gajim-nesaugus-rysys.png"&gt;&lt;img alt="/images/gajim-nesaugus-rysys.thumbnail.png" src="https://sirex.lt/images/gajim-nesaugus-rysys.thumbnail.png"&gt;&lt;/a&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>facebook</category><category>floss</category><category>jabber</category><guid>https://sirex.lt/posts/2010/facebook-jau-palaiko-jabberxmpp-pokalbiu-protokola/</guid><pubDate>Sun, 14 Feb 2010 10:43:00 GMT</pubDate></item><item><title>Jabber/XMPP po truputį tampa de-facto standartu?</title><link>https://sirex.lt/posts/2010/jabberxmpp-po-truputi-tampa-de-facto-standartu/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Šiais laikais daugelis Lietuvos internautų įsivaizduoja, kad vienintelis būdas
+&lt;/section&gt;</description><category>facebook</category><category>floss</category><category>jabber</category><guid>https://sirex.lt/posts/2010/facebook-jau-palaiko-jabberxmpp-pokalbiu-protokola/</guid><pubDate>Sun, 14 Feb 2010 10:43:00 GMT</pubDate></item><item><title>Jabber/XMPP po truputį tampa de-facto standartu?</title><link>https://sirex.lt/posts/2010/jabberxmpp-po-truputi-tampa-de-facto-standartu/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Šiais laikais daugelis Lietuvos internautų įsivaizduoja, kad vienintelis būdas
 bendrauti internetu, realiu laiku, yra Skype. Tokia istorija man kažkuo panaši
 į WinRAR. Kaip žinia WinRAR jau senai pasitraukė iš geriausiai suspaudžiančių
 archyvatorių pozicijos, jį aplenkė &lt;a class="reference external" href="http://www.7-zip.org/"&gt;7-Zip&lt;/a&gt;, o de-facto
@@ -104,4 +104,4 @@ padarys ir MySpace ar bet kuris kitas didesnis portalas, Jabber/XMPP
 neabejotinai taps de-facto pokalbių protokolu.&lt;/p&gt;
 &lt;p&gt;Nesakau, kad Skype programa yra bloga, tiesiog manau, kad Skype pasirinktas
 kelias toli nenuves, todėl visus skatinu žvelgti plačiau ir neriboti savo ir
-kitų laisvės.&lt;/p&gt;&lt;/div&gt;</description><category>facebook</category><category>floss</category><category>jabber</category><guid>https://sirex.lt/posts/2010/jabberxmpp-po-truputi-tampa-de-facto-standartu/</guid><pubDate>Sun, 10 Jan 2010 20:41:00 GMT</pubDate></item></channel></rss>
+kitų laisvės.&lt;/p&gt;</description><category>facebook</category><category>floss</category><category>jabber</category><guid>https://sirex.lt/posts/2010/jabberxmpp-po-truputi-tampa-de-facto-standartu/</guid><pubDate>Sun, 10 Jan 2010 20:41:00 GMT</pubDate></item></channel></rss>

@@ -43,8 +43,7 @@ ištrinti. Backupus darau į DVD, prisijungęs prie ">
         </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Mano laptopas jau senas ir turi tik 40 <span class="caps">GB</span> <span class="caps">HDD</span>, iš kuriu 10 <span class="caps">GB</span> atidaviau Ubuntu
+    <p>Mano laptopas jau senas ir turi tik 40 <span class="caps">GB</span> <span class="caps">HDD</span>, iš kuriu 10 <span class="caps">GB</span> atidaviau Ubuntu
 ir 30 <span class="caps">GB</span> pasilikau sau. Norėdamas kažką įsirašyti, nuolat turiu ką nors
 ištrinti. Backupus darau į <span class="caps">DVD</span>, prisijungęs prie kito laptopo, nes pas mane
 nėra <span class="caps">DVD</span> <span class="caps">RW</span>… :)</p>
@@ -66,10 +65,8 @@ Windowsiškai… :)</p>
 <p>Ten pasirinkau savo naująjį diską ir suformatavau jį naudodamas Ext3 failų
 sistemą. Tačiau rezultatais buvau nepatenkintas. Pirmiausiai nepatiko vaizdas,
 kurį išvydau:</p>
-<div class="figure">
-<img alt="files/u1/ext3-gparted.jpeg" src="files/u1/ext3-gparted.jpeg"><p class="caption">Gparted - Ext3</p>
-</div>
-<p>Naudojama 7.50 GiB! Kaip tai gali būti naudojama, kai ką tik suformatavau visą
+<figure><img alt="files/u1/ext3-gparted.jpeg" src="files/u1/ext3-gparted.jpeg"><figcaption><p>Gparted - Ext3</p>
+</figcaption></figure><p>Naudojama 7.50 GiB! Kaip tai gali būti naudojama, kai ką tik suformatavau visą
 diską! Vėliau išsiaiškinau, kad Ext3 failų sistema rezervuoja 5% disko vietos
 root naudotojui. Taip daroma tuo tikslu, jei diskas bus perpildytas ir
 programos nebeturės vietos kurti laikinus failus, taip galėsi bent jau bandyti
@@ -84,10 +81,8 @@ perkeliami į būtent šį lost+found katalogą.</p>
 katalogas, todėl nusprendžiau išbandyti kitą failų sistemą, kiek
 pasiskaitinėjęs ir peržiūrėjęs įvairius palyginimus pasirinkau ReiserFS.  Po
 formatavimo rezultatais buvau patenkintas:</p>
-<div class="figure">
-<img alt="files/u1/reiserfs-gparted.jpeg" src="files/u1/reiserfs-gparted.jpeg"><p class="caption">Gparted - ReiserFS</p>
-</div>
-<p>Jokio lost+found katalogo taip pat nebuvo, buvo tik tuštutėlis diskas, kurio
+<figure><img alt="files/u1/reiserfs-gparted.jpeg" src="files/u1/reiserfs-gparted.jpeg"><figcaption><p>Gparted - ReiserFS</p>
+</figcaption></figure><p>Jokio lost+found katalogo taip pat nebuvo, buvo tik tuštutėlis diskas, kurio
 kiekvienas bitas skirtas mano poreikiams :)</p>
 <p>Tačiau problemos tuo nesibaigė, užmontavus naujai suformatuotą diską, neturėjau
 teisių į jį įrašyti, nes diską užmontavo root teisėmis. Pirmas dalykas, kuris
@@ -111,11 +106,9 @@ sudo echo "/dev/sdb1 /media/mybook reiserfs rw,user,nodev,nosuid,noauto 0 0" &gt
 /dev/sdb1 į savo disko kelią, kurį galite sužinoti mount komandos pagalba, kai
 diskas yra užmontuotas.</p>
 <p>Beje štai kaip atrodo naujasis diskas:</p>
-<div class="figure">
-<img alt="files/u1/wdmybook.jpg" src="files/u1/wdmybook.jpg"><p class="caption"><span class="caps">WD</span> My Book 500 <span class="caps">GB</span></p>
+<figure><img alt="files/u1/wdmybook.jpg" src="files/u1/wdmybook.jpg"><figcaption><p><span class="caps">WD</span> My Book 500 <span class="caps">GB</span></p>
+</figcaption></figure>
 </div>
-</div>
-    </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="../programos/" rel="prev" title="Kokias programas naudoju Ubuntu OS?">Previous post</a>

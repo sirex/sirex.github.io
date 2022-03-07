@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about ext4)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/ext4.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Jan 2021 11:56:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dell Inspiron 1501 + Ubuntu Jaunty + Ext4</title><link>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</link><dc:creator>Sirex</dc:creator><description>&lt;div&gt;&lt;p&gt;Nesenai pakeičiau darbo kompiuterį, gavau Dell Inspiron 1501. Deja diegimo ir
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log (Posts about ext4)</title><link>https://sirex.lt/</link><description></description><atom:link href="https://sirex.lt/tags/ext4.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Sun, 06 Mar 2022 07:59:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Dell Inspiron 1501 + Ubuntu Jaunty + Ext4</title><link>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Nesenai pakeičiau darbo kompiuterį, gavau Dell Inspiron 1501. Deja diegimo ir
 kompiuterio paruošimo darbui procedūra vyko ne itin sklandžiai...&lt;/p&gt;
 &lt;p&gt;Aprašysiu visas problemas, jei kas susidurs, gal ši informacija padės.&lt;/p&gt;
-&lt;div class="section" id="wifi"&gt;
+&lt;section id="wifi"&gt;
 &lt;h2&gt;WiFi&lt;/h2&gt;
 &lt;p&gt;Jei naudojate Linux, venkite Broadcom BCM4311 WLAN plokščių... Nes jos neveikia
 „out of the box“.&lt;/p&gt;
@@ -24,8 +24,8 @@ sudėtingas.&lt;/p&gt;
 $ sudo sh -c 'echo blacklist pcspkr &amp;gt;&amp;gt; /etc/modprobe.d/blacklist'&lt;/pre&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ext4-kol-kas-nerekomenduociau"&gt;
+&lt;/section&gt;
+&lt;section id="ext4-kol-kas-nerekomenduociau"&gt;
 &lt;h2&gt;Ext4 – kol kas nerekomenduočiau&lt;/h2&gt;
 &lt;p&gt;Kadangi kartu su Jaunty versija atsirado galimybė naudoti Ext4 failų sistemą,
 kuri buvo gausiai afišuota. Tai žinoma net nedvejodamas pasirinkau Ext4 visuose
@@ -54,4 +54,4 @@ pakankamai stabili, kad būtų galima ją naudoti darbo ar namų kompiuteryje,
 nekalbant apie serverius...&lt;/p&gt;
 &lt;p&gt;Kadangi Ext4 vis dar nėra tinkamas kasdieniam naudojimui, nusprendžiau
 paeksperimentuoti su JFS. Kol kas veikia gerai... :)&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>ext4</category><category>floss</category><category>ubuntu</category><guid>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</guid><pubDate>Tue, 02 Jun 2009 20:32:00 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>ext4</category><category>floss</category><category>ubuntu</category><guid>https://sirex.lt/posts/2009/dell-inspiron-1501-ubuntu-jaunty-ext4/</guid><pubDate>Tue, 02 Jun 2009 20:32:00 GMT</pubDate></item></channel></rss>
