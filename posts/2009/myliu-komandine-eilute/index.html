@@ -54,12 +54,12 @@ lentelių duomenis. Tuos duomenis perkelti į savo kompiutery, sukeisti
 išeksportuotų lentelių prefiksus ir galiausiai visą tai importuoti į savo
 lokalią MySQL duomenų bazę.</p>
 <p>Šiai užduočiai realizuojama man prireikė tik vienos komandos:</p>
-<div class="code"><pre class="code sh"><a id="rest_code_1e19befb789c4e32b80165233df8f747-1" name="rest_code_1e19befb789c4e32b80165233df8f747-1" href="#rest_code_1e19befb789c4e32b80165233df8f747-1"></a>mysql -u -p -h  <span class="se">\</span>
-<a id="rest_code_1e19befb789c4e32b80165233df8f747-2" name="rest_code_1e19befb789c4e32b80165233df8f747-2" href="#rest_code_1e19befb789c4e32b80165233df8f747-2"></a>      -e <span class="s1">'show tables like "some_table_fragment_%"'</span> <span class="p">|</span> <span class="se">\</span>
-<a id="rest_code_1e19befb789c4e32b80165233df8f747-3" name="rest_code_1e19befb789c4e32b80165233df8f747-3" href="#rest_code_1e19befb789c4e32b80165233df8f747-3"></a>  awk <span class="s1">'{ if (NR &gt; 1) print $1 }'</span> <span class="p">|</span> <span class="se">\</span>
-<a id="rest_code_1e19befb789c4e32b80165233df8f747-4" name="rest_code_1e19befb789c4e32b80165233df8f747-4" href="#rest_code_1e19befb789c4e32b80165233df8f747-4"></a>  xargs mysqldump -u -p -h  <span class="p">|</span> <span class="se">\</span>
-<a id="rest_code_1e19befb789c4e32b80165233df8f747-5" name="rest_code_1e19befb789c4e32b80165233df8f747-5" href="#rest_code_1e19befb789c4e32b80165233df8f747-5"></a>  sed <span class="s1">'s/prefix1/prefix2/g'</span> <span class="p">|</span> <span class="se">\</span>
-<a id="rest_code_1e19befb789c4e32b80165233df8f747-6" name="rest_code_1e19befb789c4e32b80165233df8f747-6" href="#rest_code_1e19befb789c4e32b80165233df8f747-6"></a>  mysql -u -p -hlocalhost
+<div class="code"><pre class="code sh"><a id="rest_code_636c88260db3426f841cb365cb61f1e6-1" name="rest_code_636c88260db3426f841cb365cb61f1e6-1" href="#rest_code_636c88260db3426f841cb365cb61f1e6-1"></a>mysql -u -p -h  <span class="se">\</span>
+<a id="rest_code_636c88260db3426f841cb365cb61f1e6-2" name="rest_code_636c88260db3426f841cb365cb61f1e6-2" href="#rest_code_636c88260db3426f841cb365cb61f1e6-2"></a>      -e <span class="s1">'show tables like "some_table_fragment_%"'</span> <span class="p">|</span> <span class="se">\</span>
+<a id="rest_code_636c88260db3426f841cb365cb61f1e6-3" name="rest_code_636c88260db3426f841cb365cb61f1e6-3" href="#rest_code_636c88260db3426f841cb365cb61f1e6-3"></a>  awk <span class="s1">'{ if (NR &gt; 1) print $1 }'</span> <span class="p">|</span> <span class="se">\</span>
+<a id="rest_code_636c88260db3426f841cb365cb61f1e6-4" name="rest_code_636c88260db3426f841cb365cb61f1e6-4" href="#rest_code_636c88260db3426f841cb365cb61f1e6-4"></a>  xargs mysqldump -u -p -h  <span class="p">|</span> <span class="se">\</span>
+<a id="rest_code_636c88260db3426f841cb365cb61f1e6-5" name="rest_code_636c88260db3426f841cb365cb61f1e6-5" href="#rest_code_636c88260db3426f841cb365cb61f1e6-5"></a>  sed <span class="s1">'s/prefix1/prefix2/g'</span> <span class="p">|</span> <span class="se">\</span>
+<a id="rest_code_636c88260db3426f841cb365cb61f1e6-6" name="rest_code_636c88260db3426f841cb365cb61f1e6-6" href="#rest_code_636c88260db3426f841cb365cb61f1e6-6"></a>  mysql -u -p -hlocalhost
 </pre></div>
 <p>Nors komanda iš pirmo žvilgsnio gal būt atrodo sudėtinga, tačiau įsigilinus į
 atskiras jos dalis matyti, kad nieko sudėtingo nėra. Kad parašyti šią komandą
