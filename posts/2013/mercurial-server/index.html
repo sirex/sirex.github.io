@@ -208,14 +208,14 @@ savo klonuotą šaką, kuri gali saugoti nebaigtus pakeitimus.</p>
 <pre class="literal-block">hg clone . ssh://hg@serveris/projektas/funkcija-x</pre>
 <p>Kad būtų paprasčiau dirbti su klonuotomis šakomis siūlau naudoti kelio
 trumpinius, kuriuos galite apsirašyti repozitorijos <code class="docutils literal">.hg/hgrc</code> faile:</p>
-<pre class="code cfg"><a id="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-1" name="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-1" href="#rest_code_f384a9f90ad04a58bb7eb8e16d53364a-1"></a><span class="k">[paths]</span><span class="w"></span>
-<a id="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-2" name="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-2" href="#rest_code_f384a9f90ad04a58bb7eb8e16d53364a-2"></a><span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas</span><span class="w"></span>
-<a id="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-3" name="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-3" href="#rest_code_f384a9f90ad04a58bb7eb8e16d53364a-3"></a><span class="na">production</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas/production</span><span class="w"></span>
-<a id="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-4" name="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-4" href="#rest_code_f384a9f90ad04a58bb7eb8e16d53364a-4"></a><span class="na">funkcija-x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas/funkcija-x</span><span class="w"></span>
-<a id="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-5" name="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-5" href="#rest_code_f384a9f90ad04a58bb7eb8e16d53364a-5"></a><span class="na">funkcija-y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas/funkcija-y</span><span class="w"></span>
-<a id="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-6" name="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-6" href="#rest_code_f384a9f90ad04a58bb7eb8e16d53364a-6"></a><span class="na">vardenis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas/vardenis</span><span class="w"></span>
-<a id="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-7" name="rest_code_f384a9f90ad04a58bb7eb8e16d53364a-7" href="#rest_code_f384a9f90ad04a58bb7eb8e16d53364a-7"></a><span class="na">jonas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas/jonas</span><span class="w"></span>
-</pre>
+<div class="code"><pre class="code cfg"><a id="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-1" name="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-1" href="#rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-1"></a><span class="k">[paths]</span><span class="w"></span>
+<a id="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-2" name="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-2" href="#rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-2"></a><span class="na">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas</span><span class="w"></span>
+<a id="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-3" name="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-3" href="#rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-3"></a><span class="na">production</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas/production</span><span class="w"></span>
+<a id="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-4" name="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-4" href="#rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-4"></a><span class="na">funkcija-x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas/funkcija-x</span><span class="w"></span>
+<a id="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-5" name="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-5" href="#rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-5"></a><span class="na">funkcija-y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas/funkcija-y</span><span class="w"></span>
+<a id="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-6" name="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-6" href="#rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-6"></a><span class="na">vardenis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas/vardenis</span><span class="w"></span>
+<a id="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-7" name="rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-7" href="#rest_code_ed4c61fb516c4b56bcc385561f5ce9ad-7"></a><span class="na">jonas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas/jonas</span><span class="w"></span>
+</pre></div>
 <p>Turin tokius aprašus, galite naudoti trumpuosius vardus (<code class="docutils literal">default</code> turi
 ypatingą prasmę ir šis kelias naudojamas tada, kai nenurodote nieko):</p>
 <pre class="literal-block">hg push
@@ -224,12 +224,12 @@ hg push funkcija-x
 hg pull jonas</pre>
 <p>Taip pat galite naudoti <a class="reference external" href="http://mercurial.selenic.com/wiki/SchemesExtension">Schemes</a> išplėtimą, kurį įjungsite savo <code class="docutils literal"><span class="pre">~/.hgrc</span></code>
 faile taip:</p>
-<pre class="code cfg"><a id="rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-1" name="rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-1" href="#rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-1"></a><span class="k">[extensions]</span><span class="w"></span>
-<a id="rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-2" name="rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-2" href="#rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-2"></a><span class="na">hgext.schemes</span><span class="o">=</span><span class="w"></span>
-<a id="rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-3" name="rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-3" href="#rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-3"></a>
-<a id="rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-4" name="rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-4" href="#rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-4"></a><span class="k">[schemes]</span><span class="w"></span>
-<a id="rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-5" name="rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-5" href="#rest_code_b59f8cf1ed4f4ae482d74b63a5ff5d88-5"></a><span class="na">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas</span><span class="w"></span>
-</pre>
+<div class="code"><pre class="code cfg"><a id="rest_code_60006d67dae24f069d340c148ac9f004-1" name="rest_code_60006d67dae24f069d340c148ac9f004-1" href="#rest_code_60006d67dae24f069d340c148ac9f004-1"></a><span class="k">[extensions]</span><span class="w"></span>
+<a id="rest_code_60006d67dae24f069d340c148ac9f004-2" name="rest_code_60006d67dae24f069d340c148ac9f004-2" href="#rest_code_60006d67dae24f069d340c148ac9f004-2"></a><span class="na">hgext.schemes</span><span class="o">=</span><span class="w"></span>
+<a id="rest_code_60006d67dae24f069d340c148ac9f004-3" name="rest_code_60006d67dae24f069d340c148ac9f004-3" href="#rest_code_60006d67dae24f069d340c148ac9f004-3"></a>
+<a id="rest_code_60006d67dae24f069d340c148ac9f004-4" name="rest_code_60006d67dae24f069d340c148ac9f004-4" href="#rest_code_60006d67dae24f069d340c148ac9f004-4"></a><span class="k">[schemes]</span><span class="w"></span>
+<a id="rest_code_60006d67dae24f069d340c148ac9f004-5" name="rest_code_60006d67dae24f069d340c148ac9f004-5" href="#rest_code_60006d67dae24f069d340c148ac9f004-5"></a><span class="na">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ssh://hg@serveris/projektas</span><span class="w"></span>
+</pre></div>
 <p>Tada dirbti galite taip:</p>
 <pre class="literal-block">hg push p://production
 hg push p://funkcija-x

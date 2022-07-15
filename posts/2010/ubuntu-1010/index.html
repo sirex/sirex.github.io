@@ -147,22 +147,22 @@ greičiau ir patogiau</p></li>
 <li><p>Konfigūracinių failų saugojimas Mercurial repozitoriume</p></li>
 <li>
 <p>Naudojamų programų sąrašo išsaugojimas ir atstatymas:</p>
-<pre class="code sh"><a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-1" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-1" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-2" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-2" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-2"></a>dpkg --get-selections &gt; old
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-3" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-3" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-3"></a>
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-4" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-4" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-4"></a><span class="c1"># Po įdiegimo</span>
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-5" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-5" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-5"></a>dpkg --get-selections &gt; new
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-6" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-6" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-6"></a>
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-7" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-7" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-8" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-8" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-8"></a>comm -23 old new &gt; sel
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-9" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-9" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-9"></a>
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-10" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-10" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-10"></a><span class="c1"># Peržiūrim ko reikia</span>
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-11" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-11" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-11"></a>vim sel
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-12" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-12" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-12"></a>
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-13" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-13" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-14" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-14" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
-<a id="rest_code_2722f0e2208f4606a9aeb5a853691b2a-15" name="rest_code_2722f0e2208f4606a9aeb5a853691b2a-15" href="#rest_code_2722f0e2208f4606a9aeb5a853691b2a-15"></a>sudo apt-get dselect-upgrade
-</pre>
+<div class="code"><pre class="code sh"><a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-1" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-1" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-1"></a><span class="c1"># Prieš naujai įdiegiant Ubuntu:</span>
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-2" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-2" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-2"></a>dpkg --get-selections &gt; old
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-3" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-3" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-3"></a>
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-4" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-4" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-4"></a><span class="c1"># Po įdiegimo</span>
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-5" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-5" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-5"></a>dpkg --get-selections &gt; new
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-6" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-6" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-6"></a>
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-7" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-7" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-7"></a><span class="c1"># Išrenkam paketus, kurių nėra</span>
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-8" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-8" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-8"></a>comm -23 old new &gt; sel
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-9" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-9" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-9"></a>
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-10" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-10" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-10"></a><span class="c1"># Peržiūrim ko reikia</span>
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-11" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-11" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-11"></a>vim sel
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-12" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-12" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-12"></a>
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-13" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-13" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-13"></a><span class="c1"># Įdiegima tai, kas atrinkta</span>
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-14" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-14" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-14"></a>sudo dpkg –set-selections &lt; mypackages.txt
+<a id="rest_code_7fa6e673674c4fadaf9b57a8976fc770-15" name="rest_code_7fa6e673674c4fadaf9b57a8976fc770-15" href="#rest_code_7fa6e673674c4fadaf9b57a8976fc770-15"></a>sudo apt-get dselect-upgrade
+</pre></div>
 <p>Idėja: <a class="reference external" href="http://brainstorm.ubuntu.com/idea/25839/">http://brainstorm.ubuntu.com/idea/25839/</a></p>
 </li>
 <li>

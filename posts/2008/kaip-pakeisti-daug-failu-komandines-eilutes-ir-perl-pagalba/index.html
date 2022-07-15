@@ -49,21 +49,21 @@ failus, kuriuose nėra aprašytas klasės parametras ir įrašytą tą trūkstam
 parametrą į klasės vidų.</p>
 <p>Pasinaudodamas komandine eilute ir nedideliu perl skriptu tai nesunkiai padariau.</p>
 <p>Perl skriptas atrodo taip:</p>
-<pre class="code perl"><a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-1" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-1" href="#rest_code_15409c81d5c24f1c909d082f6f7a0474-1"></a><span class="k">print</span><span class="p">;</span>
-<a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-2" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-2" href="#rest_code_15409c81d5c24f1c909d082f6f7a0474-2"></a>
-<a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-3" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-3" href="#rest_code_15409c81d5c24f1c909d082f6f7a0474-3"></a><span class="k">if</span> <span class="p">(</span><span class="sr">/^class/</span><span class="p">)</span> <span class="p">{</span>
-<a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-4" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-4" href="#rest_code_15409c81d5c24f1c909d082f6f7a0474-4"></a>    <span class="k">use</span> <span class="nn">File::Basename</span><span class="p">;</span>
-<a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-5" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-5" href="#rest_code_15409c81d5c24f1c909d082f6f7a0474-5"></a>    <span class="k">my</span> <span class="nv">$layout</span> <span class="o">=</span> <span class="n">basename</span><span class="p">(</span><span class="n">dirname</span><span class="p">(</span><span class="nv">$ARGV</span><span class="p">));</span>
-<a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-6" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-6" href="#rest_code_15409c81d5c24f1c909d082f6f7a0474-6"></a>    <span class="k">print</span> <span class="s">"\n   public \$layout = '$layout';\n"</span><span class="p">;</span>
-<a id="rest_code_15409c81d5c24f1c909d082f6f7a0474-7" name="rest_code_15409c81d5c24f1c909d082f6f7a0474-7" href="#rest_code_15409c81d5c24f1c909d082f6f7a0474-7"></a><span class="p">}</span>
-</pre>
+<div class="code"><pre class="code perl"><a id="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-1" name="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-1" href="#rest_code_1ea46a5c705e44ce866c07a1383a5f6c-1"></a><span class="k">print</span><span class="p">;</span>
+<a id="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-2" name="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-2" href="#rest_code_1ea46a5c705e44ce866c07a1383a5f6c-2"></a>
+<a id="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-3" name="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-3" href="#rest_code_1ea46a5c705e44ce866c07a1383a5f6c-3"></a><span class="k">if</span> <span class="p">(</span><span class="sr">/^class/</span><span class="p">)</span> <span class="p">{</span>
+<a id="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-4" name="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-4" href="#rest_code_1ea46a5c705e44ce866c07a1383a5f6c-4"></a>    <span class="k">use</span> <span class="nn">File::Basename</span><span class="p">;</span>
+<a id="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-5" name="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-5" href="#rest_code_1ea46a5c705e44ce866c07a1383a5f6c-5"></a>    <span class="k">my</span> <span class="nv">$layout</span> <span class="o">=</span> <span class="n">basename</span><span class="p">(</span><span class="n">dirname</span><span class="p">(</span><span class="nv">$ARGV</span><span class="p">));</span>
+<a id="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-6" name="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-6" href="#rest_code_1ea46a5c705e44ce866c07a1383a5f6c-6"></a>    <span class="k">print</span> <span class="s">"\n   public \$layout = '$layout';\n"</span><span class="p">;</span>
+<a id="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-7" name="rest_code_1ea46a5c705e44ce866c07a1383a5f6c-7" href="#rest_code_1ea46a5c705e44ce866c07a1383a5f6c-7"></a><span class="p">}</span>
+</pre></div>
 <p>O komanda atrodo taip:</p>
-<pre class="code bash"><a id="rest_code_0bb3a58f8cb4454cbd1a534380674737-1" name="rest_code_0bb3a58f8cb4454cbd1a534380674737-1" href="#rest_code_0bb3a58f8cb4454cbd1a534380674737-1"></a>find -wholename <span class="s2">"*/themes/*/layouts/*/config.php"</span> <span class="se">\</span>
-<a id="rest_code_0bb3a58f8cb4454cbd1a534380674737-2" name="rest_code_0bb3a58f8cb4454cbd1a534380674737-2" href="#rest_code_0bb3a58f8cb4454cbd1a534380674737-2"></a>    <span class="p">|</span> xargs grep -L <span class="s2">"public \$layout"</span> <span class="se">\</span>
-<a id="rest_code_0bb3a58f8cb4454cbd1a534380674737-3" name="rest_code_0bb3a58f8cb4454cbd1a534380674737-3" href="#rest_code_0bb3a58f8cb4454cbd1a534380674737-3"></a>    <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> f <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
-<a id="rest_code_0bb3a58f8cb4454cbd1a534380674737-4" name="rest_code_0bb3a58f8cb4454cbd1a534380674737-4" href="#rest_code_0bb3a58f8cb4454cbd1a534380674737-4"></a>        perl -ni /tmp/replace.pl <span class="nv">$f</span> <span class="p">;</span> <span class="se">\</span>
-<a id="rest_code_0bb3a58f8cb4454cbd1a534380674737-5" name="rest_code_0bb3a58f8cb4454cbd1a534380674737-5" href="#rest_code_0bb3a58f8cb4454cbd1a534380674737-5"></a>    <span class="k">done</span>
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-1" name="rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-1" href="#rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-1"></a>find -wholename <span class="s2">"*/themes/*/layouts/*/config.php"</span> <span class="se">\</span>
+<a id="rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-2" name="rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-2" href="#rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-2"></a>    <span class="p">|</span> xargs grep -L <span class="s2">"public \$layout"</span> <span class="se">\</span>
+<a id="rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-3" name="rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-3" href="#rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-3"></a>    <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> f <span class="p">;</span> <span class="k">do</span> <span class="se">\</span>
+<a id="rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-4" name="rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-4" href="#rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-4"></a>        perl -ni /tmp/replace.pl <span class="nv">$f</span> <span class="p">;</span> <span class="se">\</span>
+<a id="rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-5" name="rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-5" href="#rest_code_c145041ff7ea4afa94bb5e66ddb5dc5f-5"></a>    <span class="k">done</span>
+</pre></div>
 <p>Naudojantis komandine eilute, labai nesunkiai galima automatizuoti įvairiausias
 užduotis. Šiame pavyzdyje, vietoje to, kad keliaučiau per visus failus ir
 rankomis viską keisčiau, tiesiog pasinaudojau nedidele komanda :)</p>

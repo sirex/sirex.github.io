@@ -65,10 +65,10 @@ visa gausybė shell skriptų visiems gyvenimo atvejams. Šiuo metu ten yra:</p>
 65</pre>
 <p>65 skriptai.</p>
 <p>Štai paprastas shell skripto pavyzdys, kuris gali praversti kas dieną:</p>
-<pre class="code bash"><a id="rest_code_2637d8f777524ef487f387cdeebc39ec-1" name="rest_code_2637d8f777524ef487f387cdeebc39ec-1" href="#rest_code_2637d8f777524ef487f387cdeebc39ec-1"></a><span class="ch">#!/bin/bash</span>
-<a id="rest_code_2637d8f777524ef487f387cdeebc39ec-2" name="rest_code_2637d8f777524ef487f387cdeebc39ec-2" href="#rest_code_2637d8f777524ef487f387cdeebc39ec-2"></a><span class="nv">URL</span><span class="o">=</span><span class="s1">'http://translate.google.lt/translate_t?q='</span><span class="nv">$1</span><span class="s1">'#auto|lt'</span>
-<a id="rest_code_2637d8f777524ef487f387cdeebc39ec-3" name="rest_code_2637d8f777524ef487f387cdeebc39ec-3" href="#rest_code_2637d8f777524ef487f387cdeebc39ec-3"></a>w3m -dump <span class="nv">$URL</span> <span class="m">2</span>&gt;/dev/null <span class="p">|</span> egrep <span class="s1">'^Žodynas'</span> -A10
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_fae8830c80ad4f64ae9a1c9559f50b9f-1" name="rest_code_fae8830c80ad4f64ae9a1c9559f50b9f-1" href="#rest_code_fae8830c80ad4f64ae9a1c9559f50b9f-1"></a><span class="ch">#!/bin/bash</span>
+<a id="rest_code_fae8830c80ad4f64ae9a1c9559f50b9f-2" name="rest_code_fae8830c80ad4f64ae9a1c9559f50b9f-2" href="#rest_code_fae8830c80ad4f64ae9a1c9559f50b9f-2"></a><span class="nv">URL</span><span class="o">=</span><span class="s1">'http://translate.google.lt/translate_t?q='</span><span class="nv">$1</span><span class="s1">'#auto|lt'</span>
+<a id="rest_code_fae8830c80ad4f64ae9a1c9559f50b9f-3" name="rest_code_fae8830c80ad4f64ae9a1c9559f50b9f-3" href="#rest_code_fae8830c80ad4f64ae9a1c9559f50b9f-3"></a>w3m -dump <span class="nv">$URL</span> <span class="m">2</span>&gt;/dev/null <span class="p">|</span> egrep <span class="s1">'^Žodynas'</span> -A10
+</pre></div>
 <p>Rezultatas gaunasi toks:</p>
 <pre class="literal-block">test.sh shell
 Žodynas
@@ -105,16 +105,17 @@ awk, ne gana to, perl dirba labai greitai:</p>
 turėti kiek daugiau žinių, nei su sed.</p>
 <p>Perl gali puikiausiai apdoroti tekstinius duomenis, o rezultatą įrašyti į
 duomenų bazę ar panašiai, kaip tai padaryta šiame pavyzdyje:</p>
-<pre class="code perl"><a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-1"></a><span class="ch">#!/usr/bin/perl -nl</span>
-<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-2"></a>
-<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-3"></a><span class="k">BEGIN</span> <span class="p">{</span>
-<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-4"></a>    <span class="k">use</span> <span class="nn">DBI</span><span class="p">;</span>
-<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-5"></a>    <span class="k">our</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="nn">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span><span class="s">"dbi:SQLite:dbname=/tmp/lines.db"</span><span class="p">);</span>
-<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-6"></a>    <span class="k">our</span> <span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$dbh</span><span class="o">-&gt;</span><span class="n">prepare</span><span class="p">(</span><span class="s">"INSERT INTO lines VALUES (?)"</span><span class="p">);</span>
-<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-7"></a><span class="p">}</span>
-<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-8"></a>
-<a id="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9" name="rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9" href="#rest_code_9cdbe5cc16f64302bfe70480590ebcbc-9"></a><span class="nv">$sth</span><span class="o">-&gt;</span><span class="n">execute</span><span class="p">(</span><span class="nv">$_</span><span class="p">);</span>
-</pre></section>
+<div class="code"><pre class="code perl"><a id="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-1" name="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-1" href="#rest_code_58fa501c894d4a0fb0860fdba80b0ab5-1"></a><span class="ch">#!/usr/bin/perl -nl</span>
+<a id="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-2" name="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-2" href="#rest_code_58fa501c894d4a0fb0860fdba80b0ab5-2"></a>
+<a id="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-3" name="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-3" href="#rest_code_58fa501c894d4a0fb0860fdba80b0ab5-3"></a><span class="k">BEGIN</span> <span class="p">{</span>
+<a id="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-4" name="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-4" href="#rest_code_58fa501c894d4a0fb0860fdba80b0ab5-4"></a>    <span class="k">use</span> <span class="nn">DBI</span><span class="p">;</span>
+<a id="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-5" name="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-5" href="#rest_code_58fa501c894d4a0fb0860fdba80b0ab5-5"></a>    <span class="k">our</span> <span class="nv">$dbh</span> <span class="o">=</span> <span class="nn">DBI</span><span class="o">-&gt;</span><span class="nb">connect</span><span class="p">(</span><span class="s">"dbi:SQLite:dbname=/tmp/lines.db"</span><span class="p">);</span>
+<a id="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-6" name="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-6" href="#rest_code_58fa501c894d4a0fb0860fdba80b0ab5-6"></a>    <span class="k">our</span> <span class="nv">$sth</span> <span class="o">=</span> <span class="nv">$dbh</span><span class="o">-&gt;</span><span class="n">prepare</span><span class="p">(</span><span class="s">"INSERT INTO lines VALUES (?)"</span><span class="p">);</span>
+<a id="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-7" name="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-7" href="#rest_code_58fa501c894d4a0fb0860fdba80b0ab5-7"></a><span class="p">}</span>
+<a id="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-8" name="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-8" href="#rest_code_58fa501c894d4a0fb0860fdba80b0ab5-8"></a>
+<a id="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-9" name="rest_code_58fa501c894d4a0fb0860fdba80b0ab5-9" href="#rest_code_58fa501c894d4a0fb0860fdba80b0ab5-9"></a><span class="nv">$sth</span><span class="o">-&gt;</span><span class="n">execute</span><span class="p">(</span><span class="nv">$_</span><span class="p">);</span>
+</pre></div>
+</section>
 </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">

@@ -84,16 +84,17 @@ $ cd ~/.hgext
 $ hg clone http://bitbucket.org/misery/hgftp/</pre>
 <p>Po šių veiksmų, galite įjungti šį praplėtimą globaliai (<code class="docutils literal"><span class="pre">~/.hgrc</span></code>), arba tik
 konkrečiam repozitoriumui (<em>./.hg/hgrc</em>) į nurodytą failą įrašydami:</p>
-<pre class="code ini"><a id="rest_code_7ba1f9ba50304eb3b560971b8ad3566e-1" name="rest_code_7ba1f9ba50304eb3b560971b8ad3566e-1" href="#rest_code_7ba1f9ba50304eb3b560971b8ad3566e-1"></a><span class="k">[extensions]</span><span class="w"></span>
-<a id="rest_code_7ba1f9ba50304eb3b560971b8ad3566e-2" name="rest_code_7ba1f9ba50304eb3b560971b8ad3566e-2" href="#rest_code_7ba1f9ba50304eb3b560971b8ad3566e-2"></a><span class="na">hgext.ftp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">~/.hgext/hgftp/ftp.py</span><span class="w"></span>
-</pre></section><section id="ftpextension-konfiguravimas"><h2>FTPExtension konfigūravimas<a href="#ftpextension-konfiguravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<div class="code"><pre class="code ini"><a id="rest_code_f27b786d3ed74cd9b53609da811a40d8-1" name="rest_code_f27b786d3ed74cd9b53609da811a40d8-1" href="#rest_code_f27b786d3ed74cd9b53609da811a40d8-1"></a><span class="k">[extensions]</span><span class="w"></span>
+<a id="rest_code_f27b786d3ed74cd9b53609da811a40d8-2" name="rest_code_f27b786d3ed74cd9b53609da811a40d8-2" href="#rest_code_f27b786d3ed74cd9b53609da811a40d8-2"></a><span class="na">hgext.ftp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">~/.hgext/hgftp/ftp.py</span><span class="w"></span>
+</pre></div>
+</section><section id="ftpextension-konfiguravimas"><h2>FTPExtension konfigūravimas<a href="#ftpextension-konfiguravimas" class="headerlink" title="Permalink to this heading">¶</a></h2>
 <p>Kai jau turite veikiantį praplėtimą, konkrečiam Web projekto repozitoriumui
 galite nurodyti <span class="caps">FTP</span> prisijungimą, kur bus siunčiami duomenys. Tai galite
 padaryti repozitormiumo konfigūraciniame faile <code class="docutils literal"><span class="pre">./.hg/hgrc</span></code>, nurodydami:</p>
-<pre class="code ini"><a id="rest_code_fd0b019a88ab472db113049abe298b70-1" name="rest_code_fd0b019a88ab472db113049abe298b70-1" href="#rest_code_fd0b019a88ab472db113049abe298b70-1"></a><span class="k">[paths]</span><span class="w"></span>
-<a id="rest_code_fd0b019a88ab472db113049abe298b70-2" name="rest_code_fd0b019a88ab472db113049abe298b70-2" href="#rest_code_fd0b019a88ab472db113049abe298b70-2"></a><span class="na">ftp</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">ftp://[user[:pass]@]host[:port]/[path]</span><span class="w"></span>
-<a id="rest_code_fd0b019a88ab472db113049abe298b70-3" name="rest_code_fd0b019a88ab472db113049abe298b70-3" href="#rest_code_fd0b019a88ab472db113049abe298b70-3"></a><span class="na">myhost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ftp://andre@incubo.de/htdocs</span><span class="w"></span>
-</pre>
+<div class="code"><pre class="code ini"><a id="rest_code_6019f768f7194ef499671563f368ba16-1" name="rest_code_6019f768f7194ef499671563f368ba16-1" href="#rest_code_6019f768f7194ef499671563f368ba16-1"></a><span class="k">[paths]</span><span class="w"></span>
+<a id="rest_code_6019f768f7194ef499671563f368ba16-2" name="rest_code_6019f768f7194ef499671563f368ba16-2" href="#rest_code_6019f768f7194ef499671563f368ba16-2"></a><span class="na">ftp</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s">ftp://[user[:pass]@]host[:port]/[path]</span><span class="w"></span>
+<a id="rest_code_6019f768f7194ef499671563f368ba16-3" name="rest_code_6019f768f7194ef499671563f368ba16-3" href="#rest_code_6019f768f7194ef499671563f368ba16-3"></a><span class="na">myhost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">ftp://andre@incubo.de/htdocs</span><span class="w"></span>
+</pre></div>
 <p>Jei prisijungimo eilutę priskirsite specialią paskirtį turinčiam žodeliui
 ‘ftp’, tuomet šis <span class="caps">FTP</span> serveris bus naudojamas pagal nutylėjimą ir galėsite
 tiesiog naudoti <code class="docutils literal">hg ftp <span class="pre">-u</span></code>. Kitais atvejais, reikia nurodyti serverį taip:
