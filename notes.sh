@@ -1,4 +1,4 @@
-cd ~/devel/sirex.lt/nikola
+cd ~/dev/sirex.lt
 
 # Build everything
 make
