@@ -24,6 +24,7 @@ env/bin/nikola auto
 
 
 # Publish content
+env/bin/nikola build
 PATH=$PWD/env/bin:$PATH env/bin/nikola github_deploy
 
 
