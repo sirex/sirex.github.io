@@ -92,7 +92,12 @@ __ https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/7bc17c62d22a11ecb1b39d276e924a
 
     -- `Tvarkos aprašas <https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/7bc17c62d22a11ecb1b39d276e924a5d>`_
 
-Norint gauti atvirus duomenis, reikės sudaryti sutartį su Gis-Centru.
+Norint gauti atvirus duomenis ir toliau reikės sudaryti sutartį su Gis-Centru,
+atsakingu už geoportal.lt.
+
+Taip pat numatomas ribojimas, kad erdvinius duomenis būtų galima peržiūrėti ne
+mažesniu, nei 10 000 masteliu, norint gauti mažesnį mastelį, reikės prisijungti
+per el. valdžios vartus.
 
 
 
