@@ -9,7 +9,7 @@
 .. status: draft
 
 
-Šiais laikais, vedami nerimo atsiradusio dėl karo Ukrainoje, žmonės įmasi gan
+Šiais laikais, vedami nerimo atsiradusio dėl karo Ukrainoje, žmonės imasi gan
 keistų sprendimų.
 
    Nerimas yra laisvės apkvaitimas.
@@ -43,7 +43,7 @@ Konkrečiai, čia kalbama apie `Geodezijos ir kartografijos įstatymo keitimo pr
 __ https://e-seimas.lrs.lt/portal/legalAct/lt/TAP/437c07d0f1fb11ecbfe9c72e552dd5bd?jfwid=rqcaes3yb
 
 Sutinku, kad tam tikrus kritinius objektus būtina apsaugoti ir atveriant
-duomenis, visi konfidencialūs ar jaitrūs duomenys yra pašalinami. Tačiau šiuo
+duomenis, visi konfidencialūs ar jautrūs duomenys yra pašalinami. Tačiau šiuo
 atveju, siūloma iš esmės uždrausti visų erdvinių duomenų atvėrimą.
 
 Dabartiniame `Geodezijos ir kartografijos įstatyme`__ yra nurodyta:
@@ -92,7 +92,7 @@ __ https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/7bc17c62d22a11ecb1b39d276e924a
 
     -- `Tvarkos aprašas <https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/7bc17c62d22a11ecb1b39d276e924a5d>`_
 
-Noring gauti atvirus duomenis, reikės sudaryti sutartį su Gis-Centru.
+Norint gauti atvirus duomenis, reikės sudaryti sutartį su Gis-Centru.
 
 
 
@@ -101,7 +101,7 @@ Kokią įtaką tai gali turėti?
 
 Saugumo požiūriu, tai matyt neturės jokios įtakos, nes Lietuvos teritorija yra
 puikiai padengta ir laisvai prieinama tiek `OpenStreetMap`__ projekto
-žemėlapiouse, tiek komerciniuose `Google Maps`__ ar `Bing`__ žemėlapiuose.
+žemėlapiuose, tiek komerciniuose `Google Maps`__ ar `Bing`__ žemėlapiuose.
 
 __ https://www.openstreetmap.org/#map=7/55.544/23.758
 __ https://www.google.com/maps/@55.352994,23.9625493,8z
@@ -115,12 +115,14 @@ __ https://data.gov.lt/datasets?q=erdviniai
 Tačiau laisvės suvaržymo požiūriu, tai turės didžiulę neigiamą įtaką. Registrų
 centro pastabos dėl šio įstatymo projekto yra tokios:
 
-    [...] manome, kad Projektas pirmiausia turėtų būti suderintas su Teisės gauti
-    informaciją ir duomenų pakartotinio naudojimo įstatymu, įvertinant ir Europos
-    Komisijos parengtą įgyvendinimo reglamento dėl konkrečių didelės vertės duomenų
-    rinkinių projektą, nes, priešingu atveju, jei būtų priimtas tokio turinio
-    Projektas, Adresų registro ir Nekilnojamojo turto kadastro erdvinių duomenų
-    atvėrimas būtų negalimas.
+    [...] manome, kad Projektas pirmiausia turėtų būti suderintas su `Teisės
+    gauti informaciją ir duomenų pakartotinio naudojimo įstatymu`__, įvertinant
+    ir Europos Komisijos parengtą įgyvendinimo reglamento dėl konkrečių didelės
+    vertės duomenų rinkinių projektą, nes, priešingu atveju, jei būtų priimtas
+    tokio turinio Projektas, Adresų registro ir Nekilnojamojo turto kadastro
+    erdvinių duomenų atvėrimas būtų negalimas.
+
+    __ https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/77d2b640dd6711eb866fe2e083228059
 
     -- `Registrų centras <https://e-seimas.lrs.lt/portal/legalAct/lt/TAK/eb28bf71f2a311ecbfe9c72e552dd5bd>`_
 
@@ -141,12 +143,12 @@ __ https://eur-lex.europa.eu/legal-content/LT/TXT/?uri=CELEX:32019L1024
 Kaip apsisaugoti nuo agresoriaus?
 *********************************
 
-Manau, kad didžiausias dėmesys turi būti sutelktas ginybai ir kritinių
+Manau, kad didžiausias dėmesys turi būti sutelktas gynybai ir kritinių
 infrastruktūros objektų apsaugai.
 
 Tam tikri objektai gali būti saugomi ir pašalinti iš atveriamų duomenų, bet
-tikrai nėreikėtų iš vis uždrausti visų erdvinių duomenų atvėrimą, nes uždraudus
-atvirą prieigą prie tokių svarbių duomenų, pasidarysime saug daugiau žalos, nei
+tikrai nereikėtų iš vis uždrausti visų erdvinių duomenų atvėrimą, nes uždraudus
+atvirą prieigą prie tokių svarbių duomenų, pasidarysime sau daugiau žalos, nei
 naudos.
 
 Be to, erdviniai duomenys, tiek paveiksliukai, tiek palydovo nuotraukos, tiek
