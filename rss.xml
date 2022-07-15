@@ -1,5 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log</title><link>https://sirex.lt/</link><description>Tech blog about open data, programming, linux, python, vim and etc...</description><atom:link href="https://sirex.lt/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Fri, 15 Jul 2022 12:00:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Atvirų duomenų portalo plėtros viešasis pirkimas</title><link>https://sirex.lt/posts/2022/atviru-duomenu-portalo-pletros-viesasis-pirkimas/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Pagaliau paskelbtas atvirų duomenų portalo plėtros &lt;a class="reference external" href="https://cvpp.eviesiejipirkimai.lt/Notice/Details/2022-632840"&gt;viešasis pirkimas&lt;/a&gt;!&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sirex web log</title><link>https://sirex.lt/</link><description>Tech blog about open data, programming, linux, python, vim and etc...</description><atom:link href="https://sirex.lt/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:sirexas@gmail.com"&gt;Sirex&lt;/a&gt; </copyright><lastBuildDate>Fri, 15 Jul 2022 12:01:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Karo nerimo įtaka atviriems duomenims</title><link>https://sirex.lt/posts/2022/karo-nerimo-itaka-atviriems-duomenims/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Šiais laikais, vedami nerimo atsiradusio dėl karo Ukrainoje, žmonės imasi gan
+keistų sprendimų.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nerimas yra laisvės apkvaitimas.&lt;/p&gt;
+&lt;p class="attribution"&gt;—&lt;a class="reference external" href="https://www.goodreads.com/quotes/18485-anxiety-is-the-dizziness-of-freedom"&gt;Søren Kierkegaard&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Kitaip sakant, siekiant apsisaugoti nuo karo, imamasi įvairių veiksmų, kurie
+apriboja mūsų laisves, kartais tokie apribojimai yra gan radikalūs.&lt;/p&gt;
+&lt;p&gt;Žemės ūkio ministerija (ŽŪM) siūlo uždrausti laisvą prieigą prie visų Lietuvos
+erdvinių duomenų, kad šių duomenų negalėtų panaudoti Rusija, potencialaus karo
+prieš Lietuvą metu. Štai ką rašo ŽŪM:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2022 m. vasario 24 d. Rusijos Federacijai pradėjus vykdyti karinę agresiją
+prieš Ukrainą ir jos žmones, itin pasikeitė geopolitinė situacija regione.
+Šiuo metu turimi Lietuvos Respublikos teritorijos erdviniai duomenys yra
+vieši, jų prieiga nėra ribojama, todėl kyla grėsmė, kad jie gali būti
+panaudoti ir tai gali kenkti valstybės nacionaliniam saugumui.&lt;/p&gt;
+&lt;p&gt;Siūloma:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;nustatyti, kad duomenys bus teikiami &lt;strong&gt;sudarant sutartis&lt;/strong&gt; ir nustatoma,
+kad valstybiniai erdvinių duomenų rinkiniai ir žemėlapiai teikiami
+Europos Bendrijos ir Šiaurės Atlanto sutarties organizacijos šalių
+naudotojams;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p class="attribution"&gt;—&lt;a class="reference external" href="https://e-seimas.lrs.lt/portal/legalAct/lt/TAK/d8a1cfa000e411edbfe9c72e552dd5bd"&gt;Žemės ūkio ministerija&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Konkrečiai, čia kalbama apie &lt;a class="reference external" href="https://e-seimas.lrs.lt/portal/legalAct/lt/TAP/437c07d0f1fb11ecbfe9c72e552dd5bd?jfwid=rqcaes3yb"&gt;Geodezijos ir kartografijos įstatymo keitimo projektą&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sutinku, kad tam tikrus kritinius objektus būtina apsaugoti ir atveriant
+duomenis, visi konfidencialūs ar jautrūs duomenys yra pašalinami. Tačiau šiuo
+atveju, siūloma iš esmės uždrausti visų erdvinių duomenų atvėrimą.&lt;/p&gt;
+&lt;p&gt;Dabartiniame &lt;a class="reference external" href="https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/TAIS.143068/asr"&gt;Geodezijos ir kartografijos įstatyme&lt;/a&gt; yra nurodyta:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;31 straipsnis. Valstybinių erdvinių duomenų rinkinių ir žemėlapių
+naudojimo tvarka&lt;/strong&gt;&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;p&gt;Valstybiniai erdvinių duomenų rinkiniai ir žemėlapiai pagal tarptautinį
+„Creative Commons“ autorių teisių modelį priskiriami duomenų
+rinkinio pakartotinio naudojimo licencijos tipui.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;O dabar, siūloma iš vis panaikinti šį punktą, tokiu būdu iš esmės uždraudžiant
+erdvinių duomenų atvėrimą:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;31 straipsnis. Erdvinių duomenų rinkinių ir žemėlapių naudojimo tvarka&lt;/strong&gt;&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;p&gt;Valstybiniai erdvinių duomenų rinkiniai ir žemėlapiai Europos Bendrijos
+ir Šiaurės Atlanto sutarties organizacijos šalių naudotojams teikiami
+šio įstatymo 9 straipsnio 2 dalies 9 punkte nustatyta tvarka.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;9 straipsnis. Žemės ūkio ministerijos kompetencija geodezijos,
+kartografijos, erdvinių duomenų rinkinių tvarkymo ir Lietuvos erdvinės
+informacijos infrastruktūros plėtojimo srityse&lt;/strong&gt;&lt;/p&gt;
+&lt;ol class="arabic simple" start="2"&gt;
+&lt;li&gt;&lt;p&gt;Lietuvos Respublikos žemės ūkio ministras tvirtina:&lt;/p&gt;
+&lt;ol class="arabic simple" start="9"&gt;
+&lt;li&gt;&lt;p&gt;valstybinių erdvinių duomenų rinkinių ir žemėlapių naudojimo &lt;a class="reference external" href="https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/7bc17c62d22a11ecb1b39d276e924a5d"&gt;tvarkos
+aprašą&lt;/a&gt;;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;III Skyrius. Valstybinių erdvinių duomenų rinkinių ir žemėlapių naudojimo
+tvarkos aprašas&lt;/strong&gt;&lt;/p&gt;
+&lt;ol class="arabic simple" start="7"&gt;
+&lt;li&gt;&lt;p&gt;Duomenys naudotojui teikiami neatlygintinai sudarant Naudojimosi
+valstybiniais erdviniais duomenų rinkiniais ir žemėlapiais &lt;a class="reference external" href="https://www.geoportal.lt/geoportal/bendrosios-erdviniu-duomenu-naudojimo-salygos"&gt;sutartį&lt;/a&gt;
+(toliau – Sutartis).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p class="attribution"&gt;—&lt;a class="reference external" href="https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/7bc17c62d22a11ecb1b39d276e924a5d"&gt;Tvarkos aprašas&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Norint gauti atvirus duomenis ir toliau reikės sudaryti sutartį su Gis-Centru,
+atsakingu už geoportal.lt.&lt;/p&gt;
+&lt;p&gt;Taip pat numatomas ribojimas, kad erdvinius duomenis būtų galima peržiūrėti ne
+mažesniu, nei 10 000 masteliu, norint gauti mažesnį mastelį, reikės prisijungti
+per el. valdžios vartus.&lt;/p&gt;
+&lt;section id="kokia-itaka-tai-gali-tureti"&gt;
+&lt;h2&gt;Kokią įtaką tai gali turėti?&lt;/h2&gt;
+&lt;p&gt;Saugumo požiūriu, tai matyt neturės jokios įtakos, nes Lietuvos teritorija yra
+puikiai padengta ir laisvai prieinama tiek &lt;a class="reference external" href="https://www.openstreetmap.org/#map=7/55.544/23.758"&gt;OpenStreetMap&lt;/a&gt; projekto
+žemėlapiuose, tiek komerciniuose &lt;a class="reference external" href="https://www.google.com/maps/@55.352994,23.9625493,8z"&gt;Google Maps&lt;/a&gt; ar &lt;a class="reference external" href="https://www.bing.com/maps?cp=55.267065694058914~23.654878775495263&amp;amp;lvl=8"&gt;Bing&lt;/a&gt; žemėlapiuose.&lt;/p&gt;
+&lt;p&gt;Be to, nemaža dalis erdvinių duomenų jau yra &lt;a class="reference external" href="https://data.gov.lt/datasets?q=erdviniai"&gt;atverti ir prieinami viešai&lt;/a&gt;.
+Tai iš esmės, kelio atgal jau nebėra.&lt;/p&gt;
+&lt;p&gt;Tačiau laisvės suvaržymo požiūriu, tai turės didžiulę neigiamą įtaką. Registrų
+centro pastabos dėl šio įstatymo projekto yra tokios:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[...] manome, kad Projektas pirmiausia turėtų būti suderintas su &lt;a class="reference external" href="https://e-seimas.lrs.lt/portal/legalAct/lt/TAD/77d2b640dd6711eb866fe2e083228059"&gt;Teisės
+gauti informaciją ir duomenų pakartotinio naudojimo įstatymu&lt;/a&gt;, įvertinant
+ir Europos Komisijos parengtą įgyvendinimo reglamento dėl konkrečių didelės
+vertės duomenų rinkinių projektą, nes, priešingu atveju, jei būtų priimtas
+tokio turinio Projektas, Adresų registro ir Nekilnojamojo turto kadastro
+erdvinių duomenų atvėrimas būtų negalimas.&lt;/p&gt;
+&lt;p class="attribution"&gt;—&lt;a class="reference external" href="https://e-seimas.lrs.lt/portal/legalAct/lt/TAK/eb28bf71f2a311ecbfe9c72e552dd5bd"&gt;Registrų centras&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Erdviniai duomenys yra kritinis pagrindas atvirų duomenų ekosistemoje, be jo,
+atviriems duomenims bus padaryta didžiulė žala.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="ar-tai-teseta"&gt;
+&lt;h2&gt;Ar tai tesėta?&lt;/h2&gt;
+&lt;p&gt;Greičiausiai ne. Tai prieštarauja &lt;a class="reference external" href="https://eur-lex.europa.eu/legal-content/LT/TXT/?uri=CELEX:32019L1024"&gt;Europos Atvirų duomenų direktyvai&lt;/a&gt;,
+kadangi erdviniai duomenys patenka į didelės vertės duomenų sąrašą ir privalo
+būti atviri ir teikiami aukščiausiu brandos lygiu.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="kaip-apsisaugoti-nuo-agresoriaus"&gt;
+&lt;h2&gt;Kaip apsisaugoti nuo agresoriaus?&lt;/h2&gt;
+&lt;p&gt;Manau, kad didžiausias dėmesys turi būti sutelktas gynybai ir kritinių
+infrastruktūros objektų apsaugai.&lt;/p&gt;
+&lt;p&gt;Tam tikri objektai gali būti saugomi ir pašalinti iš atveriamų duomenų, bet
+tikrai nereikėtų iš vis uždrausti visų erdvinių duomenų atvėrimą, nes uždraudus
+atvirą prieigą prie tokių svarbių duomenų, pasidarysime sau daugiau žalos, nei
+naudos.&lt;/p&gt;
+&lt;p&gt;Be to, erdviniai duomenys, tiek paveiksliukai, tiek palydovo nuotraukos, tiek
+erdviniai duomenys jau seniausiai yra atviri ir viešai prieinami, tai uždrausti
+jau gerokai per vėlu.&lt;/p&gt;
+&lt;/section&gt;</description><guid>https://sirex.lt/posts/2022/karo-nerimo-itaka-atviriems-duomenims/</guid><pubDate>Fri, 15 Jul 2022 06:36:07 GMT</pubDate></item><item><title>Atvirų duomenų portalo plėtros viešasis pirkimas</title><link>https://sirex.lt/posts/2022/atviru-duomenu-portalo-pletros-viesasis-pirkimas/</link><dc:creator>Sirex</dc:creator><description>&lt;p&gt;Pagaliau paskelbtas atvirų duomenų portalo plėtros &lt;a class="reference external" href="https://cvpp.eviesiejipirkimai.lt/Notice/Details/2022-632840"&gt;viešasis pirkimas&lt;/a&gt;!&lt;/p&gt;
 &lt;aside class="admonition admonition-ispejimas"&gt;
 &lt;p class="admonition-title"&gt;Įspėjimas&lt;/p&gt;
 &lt;p&gt;Visa mano asmeniniame bloge pateikta nuomonė yra mano asmeninė subjektyvi
@@ -4910,219 +5028,4 @@ aiškus, bet šiuo metu tai yra vienintelė oficiali priemonė, kurios pagalba
 galima deklaruoti duomenų poreikį. Todėl kviečiu šią priemonę naudoti, nes
 anksčiau ar vėliau į ADK pateiktą duomenų poreikį bus atsižvelgta arba bent
 jau pateiktos priežastis, kodėl duomenys negali būti atverti.&lt;/p&gt;
-&lt;/section&gt;</description><guid>https://sirex.lt/posts/2020/duomenu-atverimo-technine-specifikacija/</guid><pubDate>Mon, 14 Dec 2020 14:46:58 GMT</pubDate></item><item><title>Duomenų atvėrimo vyriausiasis specialistas</title><link>https://sirex.lt/posts/2020/duomenu-atverimo-vyriausiasis-specialistas/</link><dc:creator>Sirex</dc:creator><description>&lt;aside class="admonition admonition-ispejimas"&gt;
-&lt;p class="admonition-title"&gt;Įspėjimas&lt;/p&gt;
-&lt;p&gt;Visa mano asmeniniame bloge pateikta nuomonė yra mano asmeninė subjektyvi
-nuomonė, o ne oficiali IVPK pozicija.&lt;/p&gt;
-&lt;/aside&gt;
-&lt;p&gt;Šią savaitę, nuo pirmadienio, pradėjau dirbti IVPK &lt;a class="reference external" href="https://ivpk.lrv.lt/lt/struktura-ir-kontaktai/kontaktai-1"&gt;Skaitmeninės aplinkos
-skyriaus&lt;/a&gt; duomenų atvėrimo vyriausiuoju specialistu.&lt;/p&gt;
-&lt;aside class="admonition admonition-pastebejimas"&gt;
-&lt;p class="admonition-title"&gt;Pastebėjimas&lt;/p&gt;
-&lt;p&gt;IVPK svetainėje, kontaktų puslapyje nėra galimybės gauti tiesioginę nuorodą
-į konkretų skyrių. Nepatogu. Ta pati problema yra ne tik kontaktų puslapyje,
-bet ir kituose puslapiuose, kuriuose naudojami suskleidžiamieji sąrašai.&lt;/p&gt;
-&lt;/aside&gt;
-&lt;p&gt;Su atvirais duomenimis ir kartu su IVPK jau dirbu gan seniai. Šią vasarą IVPK
-nusprendė papildyti atvirų duomenų komandą naujais žmonėmis ir paskelbė, kad
-ieško &lt;em&gt;duomenų atvėrimo vyriausiojo specialisto&lt;/em&gt;. Ilgai negalvojęs nusprendžiau
-pretenduoti į šią poziciją, kadangi ir taip labai daug laiko skiriu atviriems
-duomenimis, o čia dar ir pinigų kažkiek už tai gausiu. Aišku atlyginimas
-valstybinėje įstaigoje daugiau nei du kartus mažesnis lyginant su programuotojų
-rinkos atlyginimais, bet šiuo atveju man labiau įdomus pats projektas.&lt;/p&gt;
-&lt;p&gt;Ši darbo vieta yra terminuota ir termino pabaiga sutampa su atvirų duomenų II
-etapo projekto pabaiga 2023-08-31. Na bet manau, kad trys metai yra pakankamai
-daug laiko ir per tiek laiko galima gan daug pasistūmėti su atvirais duomenimis.
-Ypač dirbant prie to pilną darbo dieną ir skiriant didžiąją dalį laisvalaikio,
-ką dariau iki šiol.&lt;/p&gt;
-&lt;p&gt;Mano pagrindinis darbas bus duomenų atvėrimo proceso priežiūra. T.y. turėsiu
-užtikrinti, kad duomenys būtų atverti kokybiškai, būtų laikomasi vieningų
-standartų ir pan.&lt;/p&gt;
-&lt;p&gt;Pirmoji mano užduotis yra techninės specifikacijos paruošimas II etapo viešajam
-pirkimui. Deja viešuosiuose pirkimuose negalima aiškiai ir konkrečiai įvardinti
-technologijų ar priemonių kurių reikia. Vietoj to, tenka aprašyti ką įrankis
-turi daryti.&lt;/p&gt;
-&lt;p&gt;Antroji užduotis viešųjų pirkimų tarnybos (VPT) duomenų atvėrimas. VPT duomenis
-jau praktiškai esu atvėręs, tačiau liko dar keletas klaidų, kurias reikia
-pataisyti prieš publikuojant duomenis.&lt;/p&gt;
-&lt;p&gt;Kadangi dabar dirbu už mokesčių mokėtojų pinigus, tai jaučiu atsakomybę
-atsiskaityti už tai, kaip naudojami mokesčių mokėtojų pinigai. Todėl stengsiuosi
-rašyti savo bloge apie tai, ką darau. Tikiuosi IVPK vadovybė mano viešų
-ataskaitų labai necenzūruos.&lt;/p&gt;
-&lt;section id="ii-duomenu-atverimo-etapas"&gt;
-&lt;h2&gt;II duomenų atvėrimo etapas&lt;/h2&gt;
-&lt;p&gt;Prieš daugiau nei metus laiko prasidėjo &lt;a class="reference external" href="https://sirex.lt/posts/2019/paskelbtas-atviru-duomenu-portalo-viesasis-pirkimas/"&gt;pirmasis duomenų atvėrimo etapas&lt;/a&gt;, kuris jau yra
-baigtas. Pirmo etapo rezultatas, paleistas &lt;a class="reference external" href="https://data.gov.lt/"&gt;data.gov.lt&lt;/a&gt; atvirų duomenų
-katalogas &lt;a class="reference external" href="https://ckan.org/"&gt;CKAN&lt;/a&gt; pagrindu ir atverti 5 įstaigų duomenys, viso 300 duomenų
-rinkinių. Pats katalogas nėra skirtas duomenų saugojimui, nors galima įkelti
-ir nedidelės apimties duomenis. Kataloge pateikiama informacija apie duomenų
-rinkinius ir nuorodos į duomenų šaltinius.&lt;/p&gt;
-&lt;p&gt;Jei atsimenat, gal prieš metus laiko buvo pradėta ruoštis antrajam etapui,
-kur kartu su IVPK ir EIMIN organizavom &lt;a class="reference external" href="https://gitlab.com/atviriduomenys/manifest/-/issues"&gt;apklausą&lt;/a&gt; dėl duomenų poreikio.
-Remiantis šia apklausa buvo sudarytas 50 įstaigų sąrašas, kurių duomenis
-planuojama atverti antrajame etape.&lt;/p&gt;
-&lt;p&gt;Pats antrasis etapas jau įgauna pagreitį, mano naujieji kolegos aktyviai rengia
-sutartis su įstaigomis kurios atversi duomenis, ofise toks jausmas kaip
-skambučių centre. Įstaigos dažnai skambina, konsultuojasi ir ruošiasi duomenų
-atvėrimui.&lt;/p&gt;
-&lt;p&gt;Iš esmės valstybinių įstaigų duomenų atvėrimas nėra techninė problema, didele
-dalimi tai yra žmonių problema. Kadangi duomenų atvėrime dalyvauja daug
-įstaigų, tose įstaigose dirba daug žmonių, visi žmonės turi (arba neturi)
-skirtingą supratimą apie atvirus duomenis. Biurokratinis aparatas taip pat
-apsunkina reikalus, kadangi kiekvienas pajudėjimas turi turėti finansavimą,
-teisinį pagrindą ir pan.&lt;/p&gt;
-&lt;p&gt;Kiek žinau, visam antram etapui bus skirta apie 2.5 mln €. Visi šie pinigai bus
-paskirstyti institucijų duomenų atvėrimui, institucijoms ir joms talkinantiems
-paslaugų tiekėjams, institucijų darbuotojų mokymams ir nedidelė dalis - Atvirų
-duomenų katalogui tobulinti. Finansai įstaigoms skiriami pagal atveriamų duomenų
-kiekį ir reikalingų atlikti veiklų apimtį, nuo kelių šimtų iki keliasdešimt
-tūkstančių €. Manau skiriami finansai pakankamai neblogi ir duomenims atverti
-turėtų užtekti. Ne šiaip sau CSV failus eksportuoti, bet atverti duomenis aukštu
-brandos lygiu.&lt;/p&gt;
-&lt;p&gt;Vienintelė problema, kad visoje Lietuvoje valstybinių įstaigų yra apie 4000.
-Tai antrasis etapas dengia vos 1.25% viso valstybinio sektoriaus. Na bet
-žinoma, svarbu ne tik kiekybė, bet ir kokybė.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="kokiu-istaigu-duomenys-bus-atverti"&gt;
-&lt;h2&gt;Kokių įstaigų duomenys bus atverti?&lt;/h2&gt;
-&lt;p&gt;Kaip ir minėjau, viso bus atverta 50 įstaigų duomenys. Įstaigos bus skirstomos į
-tokias tris kategorijas:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;Atveriančios savo jėgomis.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Atveriančios savarankiškai per pasirinktą tiekėją.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Atveriančios per IVPK centralizuotą pirkimą.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Skirtingos įstaigos, turi skirtingus IT pajėgumus, todėl ir skirtingai atveria
-duomenis.&lt;/p&gt;
-&lt;p&gt;Pilnas įstaigų sąrašas, kurių duomenis planuojama atverti yra toks:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;Aplinkos apsaugos agentūra&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Aplinkos apsaugos departamentas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Aplinkos ministerija&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Audito, apskaitos, turto vertinimo ir nemokumo valdymo tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Automobilių kelių direkcija&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Bendrasis pagalbos centras&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Finansų ministerija&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;GIS-Centras&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Geologijos tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Hidrometeorologijos tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Higienos institutas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Informacinės visuomenės plėtros komitetas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Informatikos ir ryšių departamentas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Kalėjimų departamentas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Migracijos departamentas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Mokslo, inovacijų ir technologijų agentūra&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Muitinės departamentas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Muitinės informacinių sistemų centras&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Nacionalinis transplantacijos biuras&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Nacionalinis vėžio institutas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Nacionalinė teismų administracija&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Nacionalinė žemės tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Narkotikų, tabako ir alkoholio kontrolės departamentas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Neįgalumo ir darbingumo nustatymo tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Policijos departamentas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Radiacinės saugos centras&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Registrų centras&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Regitra&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Statistikos departamentas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Statybos produkcijos sertifikavimo centras&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Transporto saugos administracija&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Užkrečiamųjų ligų ir AIDS centras&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybinio socialinio draudimo fondo valdyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybinė akreditavimo sveikatos priežiūros veiklai tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybinė kultūros paveldo komisija&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybinė ligonių kasa&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybinė maisto ir veterinarijos tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybinė miškų tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybinė mokesčių inspekcija&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybinė saugomų teritorijų tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybės garantuojamos teisinės pagalbos tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybės kontrolė&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybės tarnybos departamentas&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Vilniaus universiteto ligoninė Santaros klinikos&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Vyriausioji rinkimų komisija&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Ryšių reguliavimo tarnyba&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Socialinės apsaugos ir darbo ministerija&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Užsienio reikalų ministerija&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Valstybinis patentų biuras&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Vidaus reikalų ministerija&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Manau sutiksite, kad sąrašas yra pakankamai solidus.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="atviru-duomenu-komanda"&gt;
-&lt;h2&gt;Atvirų duomenų komanda&lt;/h2&gt;
-&lt;p&gt;Komandoje atsakingoje už duomenų atvėrimo organizavimą dirba 5 žmonės. Projekto
-vadovas, trys žmonės atsakingi už projekto administravimo dalį ir vienas žmogus
-atsakingas už techninės dalies priežiūra.&lt;/p&gt;
-&lt;p&gt;IVPK atvirų duomenų komandos pagrindinė paskirtis, pačio projekto priežiūra, o
-ne duomenų atvėrimas. Duomenų atvėrimą darys pačios įstaigos arba įstaigoms
-duomenis atvers viešąjį pirkimą laimėję tiekėjai.&lt;/p&gt;
-&lt;p&gt;Kadangi pirkimas didelis, tai jis bus suskaidytas į dalis, dalių bus tiek kiek
-duomenis atveriančių įstaigų. Tai reiškia, kad kiekvieną dalį gali laimėti
-skirtingas tiekėjas, bet gali visas dalis laimėti ir vienas tiekėjas. Gali būti
-visaip.&lt;/p&gt;
-&lt;p&gt;Pirmame etape, atveriant 5 įstaigų duomenis, viešąjį pirkimą laimėjo 4 įmonių
-grupė iš kurių viena kūrė duomenų katalogą, kitos trys atvėrė duomenis.&lt;/p&gt;
-&lt;p&gt;Tiekėjai dažniausiai yra suinteresuoti už kuo didesnę sumą pinigų padaryti kuo
-mažiau darbo. Tai yra visai normalu, nes tiekėjai yra verslo įmonės siekiančios
-gauti pelną.&lt;/p&gt;
-&lt;p&gt;Todėl visos komandos pagrindinis tikslas padaryti atvirkščiai, kad tiekėjai už
-kuo mažesnę pinigų sumą padaryti kiek įmanoma daugiau darbo. Ką noriu pasakyti,
-kad paprasčiausias CSV failų eksportas nepraeis. Tiekėjams reikės įdėti daugiau
-pastangų.&lt;/p&gt;
-&lt;p&gt;Tikiuosi galutiniame rezultate gausis geras balansas.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="mano-vizija"&gt;
-&lt;h2&gt;Mano vizija&lt;/h2&gt;
-&lt;p&gt;Į įvairias atvirų duomenų veiklas esu įsitraukęs kažkur nuo 2012 metų. Per tiek
-laiko teko pamatyti gan daug. Per visą šį laiką turiu pakankamai aiškų matymą,
-kaip organizuoti duomenų atvėrimą, kad su mažiausiomis sąnaudomis būtų pasiektas
-didžiausias rezultatas.&lt;/p&gt;
-&lt;p&gt;Bandžiau įvairius variantus. Kažkuriuo metu buvau labai susižavėjęs &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Linked_data"&gt;Linked
-Data&lt;/a&gt;, daug apie tai skaičiau, domėjausi ir galiausiai pradėjau advokatauti ir
-siūlyti įstaigoms, kad tai yra teisingiausias variantas atveriant duomenis. Bet
-šis variantas nepasiteisino, nes &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Linked_data"&gt;Linked Data&lt;/a&gt; yra gan sudėtingas ir mažai
-žinomas dalykas. Bandant apie tai kalbėti su ne techniniais žmonėmis, likdavau
-absoliučiai nesuprastas, bet net ir kalbant apie tai su techniniais žmonėmis
-sulaukdavau neigiamos reakcijos, nes paprasčiausiai mažai kas yra apie tai
-girdėję.&lt;/p&gt;
-&lt;p&gt;Toliau bandžiau kiek įmanoma supaprastinti Linked Data principus, išreiškiant
-juos per visiems gerai žinomą reliacinį duomenų modelį, tačiau išlaikant
-esminius metaduomenis, kad duomenys lengvai konvertuotųsi į Linked Data. Duomenų
-struktūroms aprašyti pasidariau nesudėtingą schemą, o patiems aprašams
-pasirinkau YAML formatą. Tačiau ir tai nepasiteisino, nes vis dar buvo per daug
-sudėtinga.&lt;/p&gt;
-&lt;p&gt;Galiausiai priėjau išvados, kad visi labai gerai supranta ir moka naudotis
-skaičiuoklėmis (Excel ir pan.). Tada visą tą duomenų struktūros aprašų idėją
-perkėliau iš YAML failų į vieną gan nedidelę lentelę. Ir taip pagaliau pavyko
-pasiekti, kad žmonės tai suprastu. Vis tik toje lentelėje yra užkoduota labai
-daug logikos, bet bent jau esminiai principai daugumai yra gan aiškūs.&lt;/p&gt;
-&lt;p&gt;Tokios duomenų struktūros aprašo lentelės idėja kilo kažkur prieš du metus, per
-tą laiką lentelė nemažai keitėsi, kol galiausiai pavyko ištobulinti gan gerai
-veikiantį variantą, kuris su gan nedideliu metaduomenų praradimu konvertuojasi
-atgal į YAML failus ir į Linked Data, leidžia aprašyti įvairių duomenų
-šaltinių struktūrą.&lt;/p&gt;
-&lt;p&gt;Tokia struktūros aprašo lentelė yra visos mano idėjos pagrindas. Per paskutinius
-du metus įgyvendinau &lt;a class="reference external" href="https://gitlab.com/atviriduomenys/spinta/"&gt;atvirų duomenų automatizuoto atvėrimo priemonę&lt;/a&gt;, kurią
-praktiškai išbandžiau su VPT, LRS ir VRK duomenimis. Kurdamas tokią priemonę
-išbandžiau duomenų struktūros aprašų lentelę praktiškai su įvairiais duomenų
-šaltiniais.&lt;/p&gt;
-&lt;p&gt;Įstaigoms atveriančioms duomenis užtenka parengti tik duomenų struktūros aprašą
-(vieną Excel lentelę). O toliau visas duomenų atvėrimas pilnai automatizuojamas.
-Ne gana to, struktūros aprašas leidžia automatiškai generuoti API atvertiems
-duomenims, leidžia atvertus duomenis publikuoti įvairiais formatais įskaitant ir
-RDF, išlaikomi ryšiai tarp objektų, galimos įvairios duomenų modelio
-transformacijos, duomenų normalizacija ir pan.&lt;/p&gt;
-&lt;p&gt;Tokiu būdu atskiriamas pats duomenų atvėrimas, kuriam užtenka tik parengti
-šaltinio duomenų struktūros aprašą, nuo automatizuotos priemonės, kuri gali būti
-naudojama visose įstaigose atveriančiose duomenis. Tai turėtų maksimaliai
-optimizuoti duomenų atvėrimo darbus.&lt;/p&gt;
-&lt;p&gt;Kaip visa tai veikia esu gan išsamiai &lt;a class="reference external" href="https://atviriduomenys.readthedocs.io/lt/latest/"&gt;dokumentavęs&lt;/a&gt;. Analogiško duomenų
-struktūros aprašo specifikacija yra paskelbta IVPK &lt;a class="reference external" href="https://data.gov.lt/opening/learningmaterial/6"&gt;atvirų duomenų kataloge&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Ir galiausiai viso to pagrindu rengiu techninę specifikaciją tiekėjams, kurie
-atvers duomenis.&lt;/p&gt;
-&lt;p&gt;Planuoju daryti keletą nuotolinių vaizdo dirbtuvių, kurių metu žodžiu bandysiu
-paaiškinti, kaip rengti duomenų struktūros aprašus, atsakysiu į iškilusius
-klausimus. Tikiuosi tokia komunikacija padės visoms duomenų atvėrime
-dalyvaujančioms šalims geriau susikalbėti.&lt;/p&gt;
-&lt;/section&gt;</description><guid>https://sirex.lt/posts/2020/duomenu-atverimo-vyriausiasis-specialistas/</guid><pubDate>Sun, 25 Oct 2020 17:33:26 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><guid>https://sirex.lt/posts/2020/duomenu-atverimo-technine-specifikacija/</guid><pubDate>Mon, 14 Dec 2020 14:46:58 GMT</pubDate></item></channel></rss>

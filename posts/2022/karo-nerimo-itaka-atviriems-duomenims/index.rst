@@ -6,7 +6,6 @@
 .. link: 
 .. description: 
 .. type: text
-.. status: draft
 
 
 Šiais laikais, vedami nerimo atsiradusio dėl karo Ukrainoje, žmonės imasi gan
