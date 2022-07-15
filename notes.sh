@@ -23,6 +23,10 @@ env/bin/nikola new_post
 env/bin/nikola auto
 
 
+# Publish content
+PATH=$PWD/env/bin:$PATH env/bin/nikola github_deploy
+
+
 # 2022-03-06 09:56 Upgrade pip
 env/bin/pip install --upgrade pip
 
@@ -36,3 +40,21 @@ env/bin/pip install --upgrade pip
 env/bin/pip show pip
 #| Version: 22.1
 env/bin/pip install pip==22.0.4
+
+
+# 2022-07-15 11:46 ERROR: Nikola: install the "ghp-import"
+
+env/bin/nikola github_deploy
+#| ERROR: Nikola: In order to deploy the site to GitHub Pages, you must install the "ghp-import" Python package.
+#| ERROR: Nikola: Exiting due to missing dependencies.
+
+PATH=$PWD/env/bin:$PATH env/bin/nikola github_deploy
+#| subprocess.CalledProcessError: Command '['ghp-import', '-h']' returned non-zero exit status 1.
+
+env/bin/ghp-import -h
+#| ImportError: cannot import name 'main' from 'ghp_import' (env/lib/python3.10/site-packages/ghp_import/__init__.py)
+
+env/bin/pip uninstall ghp-import
+env/bin/pip install --force-reinstall ghp-import2
+
+PATH=$PWD/env/bin:$PATH env/bin/nikola github_deploy
